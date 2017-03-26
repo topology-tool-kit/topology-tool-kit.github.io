@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Topology ToolKit">
+    <meta name="author" content="The Topology ToolKit">
+    <meta name="keywords" content="TTK, Topology ToolKit, Topological Data 
+Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour 
+tree, persistence diagram, persistence curve, continuous scatterplot, fiber 
+surface, contour forests, jacobi set, mandatory critical points, topological 
+simplification, VTK, ParaView, Python" />
+
+    <title>TTK - the Topology ToolKit</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'
+);
+
+  ga('create', 'UA-88087813-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl =
+  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-88087813-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" 
+data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                TTK Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling 
+-->
+            <div class="collapse navbar-collapse" 
+id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="installation.html">Installation</a>
+                    </li>
+                    <li>
+                        <a href="tutorials.html">Tutorials</a>
+                    </li>
+                    <li>
+                        <a href="documentation.html">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="contribute.html">Contribute</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" 
+      style="background-image: url('img/builtinExample.png'">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Topology ToolKit</h1>
+                        <hr class="small">
+                        <span class="subheading">Tutorials</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Please find below a few video tutorials regarding:<br>
+                    &nbsp;&nbsp;<a 
+href="#installation">1. TTK installation</a><br>
+                    &nbsp;&nbsp;<a href="#usage">2. TTK in 
+action!</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#scalar">
+                    a) with scalar data</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#bivariate">
+                    b) with bivariate scalar data</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#uncertain">
+                    c) with uncertain scalar data</a><br>
+                    &nbsp;&nbsp;<a href="#development">
+                    3. TTK development</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#python">
+                    a) with Python</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#vtkc++">
+                    b) with VTK/C++</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#purec++">
+                    c) with pure C++</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#newModule">
+                    d) extending TTK with a new module</a><br>
+                </p>
+                <br>
+
+                <p>
+                <h3><a name="installation">1.</a> TTK installation</h3>
+This video shows how to install TTK on a fresh new install of Ubuntu Linux 
+16.10. Please our <href="installation.html" target="new">installation</a> page 
+to read the detailed instructions.
+<video width="100%" controls poster="img/gallery/ttk_install.png">
+  <source src="video/install_compressed1k.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<br><br><br>
+                </p>
+
+                <p>
+                <h3><a name="usage">2.</a> TTK in action!</h3>
+                In the following, we assume that you successfully installed TTK 
+(see the above <a href="#installation">video</a> and our <a 
+href="installation.html">installation</a> page). We will also assume that you 
+downloaded the TTK data tarball from our <a href="downloads.html">download</a> 
+page (for instance, into your <code>~/Downloads/</code> directory). From there, 
+enter the following commands under Linux (omit the <code>$</code> 
+character) to decompress the data tarball:<br><br>
+<code>$ mkdir ~/ttk</code><br>
+<code>$ mv ~/Downloads/ttk-data-0.9.tar.gz</code><br>
+<code>$ cd ~/ttk</code><br>
+<code>$ tar xvzf ttk-data-0.9.tar.gz</code><br>
+<code>$ rm ttk-data-0.9.tar.gz</code><br><br>
+
+You can now proceed with the following videos to see how to reproduce the 
+examples shown in the gallery section with the example data-sets you just 
+de-compressed. Let's see TTK in action!</p>
+
+
+<p>
+                  <h4><a name="scalar">a)</a> With scalar data</h4>
+<table>
+                <tr>
+                  
+                  <td >
+                    <h4>Dragon demo</h4>
+                    Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the Dragon demo by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9<br>
+<code>$ paraview --state=states/dragon.pvsm</code><br><br>
+<video width="100%" controls poster="img/gallery/dragon.png">
+  <source src="video/dragon_compressed1k.mp4" 
+    type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<!--                    <a href="img/gallery/dragon.png" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/dragon.png" >
+                    </a>-->
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  
+                  <td >
+                    <h4>Morse persistence demo</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the Morse persistence demo by entering the following commands (omit 
+the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9<br>
+<code>$ paraview --state=states/morsePersistence.pvsm</code><br><br>
+<video width="100%" controls poster="img/gallery/morsePersistence.png">
+  <source src="video/morsePersistence_compressed1k.mp4" 
+    type="video/mp4">
+Your browser does not support the video tag.
+</video>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4>Built-in Example 1</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the first built-in example demo by entering the following 
+commands (omit 
+the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9<br>
+<code>$ paraview --state=states/BuiltInExample1.pvsm</code><br><br>
+<video width="100%" controls poster="img/gallery/builtinExample1.png">
+  <source src="video/builtin1_compressed1k.mp4" 
+    type="video/mp4">
+Your browser does not support the video tag.
+</video>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4>Interaction site demo (video tutorial to come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the interaction site demo by entering the following 
+commands (omit 
+the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9<br>
+<code>$ paraview --state=states/interactionSites.pvsm</code><br><br>
+                    <a href="img/gallery/interactionSites.png" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/interactionSites.png" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4>Viscous fingering demo (video tutorial to come)</h4>
+                    Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the viscous fingering demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9<br>
+<code>$ paraview --state=states/viscousFingering.pvsm</code><br><br>
+                    <a href="img/gallery/viscousFingering.png" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/viscousFingering.png" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                  <tr>
+                  <td >
+                    <h4>Morse molecule demo</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the Morse molecule demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9<br>
+<code>$ paraview --state=states/morseMolecule.pvsm</code><br><br>
+<video width="100%" controls poster="img/gallery/morseMolecule.png">
+  <source src="video/morseMolecule_compressed1k.mp4" 
+    type="video/mp4">
+Your browser does not support the video tag.
+</video>
+                  </td>
+                </tr>
+              </table>
+</p>
+
+<p>
+                  <h4><a name="bivariate" >b)</a> With bivariate scalar 
+data</h4>
+<table>
+                  <td >
+                    <h4>Built-in Example 2</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the second built-in example
+by entering the following commands (omit the 
+<code>$ character):<br><br>
+$ cd ~/ttk/ttk-data-0.9<br>
+$ paraview --state=states/BuiltInExample2.pvsm</code><br><br>
+<h4>Note</h4>
+In order to execute this demo, you need to have patched the ParaView source 
+tree, as described in the <a href="installation.html" target="new">installation 
+instructions </a> (step 4).<br><br>
+<video width="100%" controls poster="img/gallery/builtinExample2.png">
+  <source src="video/builtin2_compressed1k.mp4" 
+    type="video/mp4">
+Your browser does not support the video tag.
+</video>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Bivariate toy demo (video tutorial to come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the bivariate toy demo 
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9<br>
+<code>$ paraview --state=states/bivariateToy.pvsm</code><br><br>
+                    <a href="img/gallery/bivariateToy.png" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/bivariateToy.png" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Bivariate toy CSP peeling demo (video tutorial to 
+come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the bivariate toy CSP peeling demo 
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9<br>
+<code>$ paraview --state=states/bivariateToyCspPeeling.pvsm</code><br><br>
+                    <a href="img/gallery/bivariateToyCspPeeling.png" 
+                      target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/bivariateToyCspPeeling.png" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Mechanical demo (video tutorial to come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the mechanical demo 
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9<br>
+<code>$ paraview --state=states/mechanical.pvsm</code><br><br>
+                    <a href="img/gallery/mechanical.png" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/mechanical.png" >
+                    </a>
+                  </td>
+                </tr>
+              </table>
+</p>
+
+<p>
+                  <h4><a name="uncertain">c)</a> With uncertain scalar data</h4>
+<table>
+                <tr>
+                  <td>
+                    <h4>Built-in Example 3 (video tutorial to come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the third built-in example demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9<br>
+<code>$ paraview --state=states/BuiltInExample3.pvsm</code><br><br>
+                    <a href="img/gallery/builtinExample3.png" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/builtinExample3.png" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Uncertain starting vortex demo</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the uncertain starting vortex demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9<br>
+<code>$ paraview --state=states/uncertainStartingVortex.pvsm</code><br><br>
+<video width="100%" controls poster="img/gallery/uncertainStartingVortex.png">
+  <source src="video/uncertainStartingVortex_compressed1k.mp4" 
+    type="video/mp4">
+Your browser does not support the video tag.
+</video>
+                  </td>
+                </tr>
+              </table>
+<br><br><br>
+                </p>
+
+
+                <p>
+                <h3><a name="development">3.</a> TTK development</h3>
+Please find below a few video tutorials showing how to use TTK from your own 
+code (in Python, VTK/C++ or pure C++) as well as how to extend TTK with a new 
+module.
+</p>
+
+<p>
+<h4><a name="python">a)</a> With Python</h4>
+<video width="100%" controls poster="img/gallery/ttk_python.png">
+  <source src="video/python_compressed1k.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</p>
+
+<p>
+<h4><a name="vtkc++">b)</a> With VTK/C++</h4>
+<video width="100%" controls poster="img/gallery/ttk_vtkc++.png">
+  <source src="video/vtkc++_compressed1k.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</p>
+
+<p>
+<h4><a name="purec++">c)</a> With pure C++</h4>
+<video width="100%" controls poster="img/gallery/ttk_purec++.png">
+  <source src="video/purec++_compressed1k.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</p>
+
+<p>
+<h4><a name="newModule">d)</a> Extending TTK with a new module</h4>
+<video width="100%" controls poster="img/gallery/ttk_newModule.png">
+  <source src="video/extendingTTK_compressed1k.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</p>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">
+                    Contact: <a href="mailto:topology.tool.kit@gmail.com">
+                    topology.tool.kit@gmail.com</a><br>
+                    Updated on March 13th, 2017.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
