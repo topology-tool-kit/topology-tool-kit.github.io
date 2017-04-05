@@ -39,6 +39,15 @@ a:focus {
   text-decoration: none;
   color: #478aac;
 }
+a.code{
+  font-weight: bold;
+  color: #478aac;
+}
+a.code:hover,
+a.code:focus{
+  text-decoration: none;
+  color: white;
+}
 a img:hover,
 a img:focus {
   cursor: zoom-in;
