@@ -162,13 +162,16 @@ The remainder of these notes
 describe 
 the installation of the 
 <a href="downloads.html" target="new">
-version 0.9 of 
+version 0.9.1 of 
 TTK</a> along with the <a 
 href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.2&type=source&os=all&downloadFile=ParaView-v5.2.0.tar.gz" 
+version=v5.3&type=source&os=all&downloadFile=ParaView-v5.3.0.tar.gz" 
 target="new">
-version 5.2.0 of ParaView</a>. Other versions of either software packages 
+version 5.3.0 of ParaView</a>. Other versions of either software packages 
 may require slight variations in the installation procedure.
+For earlier versions of both software packages, you may want to check out 
+previous versions of our installation notes: 
+<a href="installation-0.9.html">TTK 0.9 with ParaView 5.2.0</a>.
 
 <!--The following video also shows how to proceed on a 
 step-by-step basis:<br> <br>
@@ -184,7 +187,7 @@ target="new">ParaView</a> for its main user interface. Thus, you will first
 need to download 
 <a 
 href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.2&type=source&os=all&downloadFile=ParaView-v5.2.0.tar.gz" 
+version=v5.3&type=source&os=all&downloadFile=ParaView-v5.3.0.tar.gz" 
 target="new">
 ParaView's source code</a>.
 Note 
@@ -202,28 +205,34 @@ compile ParaView and TTK from source. Please enter the following command
 the documentation of your package manager if your operating system is not 
 Ubuntu Linux):<br><br>
 <code>$
-sudo apt-get install cmake-qt-gui libvtk6-dev 
-qt4-dev-tools 
+sudo apt-get install cmake-qt-gui 
+libvtk6-dev
+qt4-dev-tools
 </code><br><br>
 Note that this command will also trigger the installation of the (numerous) 
 dependencies of these components.</p>
+<h4>Note to non-Ubuntu users, including MacOS users</h4>
+We recommend in general to install the version 7 of the VTK library and the 
+version 5 of the Qt library, instead of the versions described above (which 
+are only recommended for Ubuntu users).
+
 
                   <p>
                   <h3>3. Preparing the sources</h3>
                   Move the tarballs to a working directory (for instance called 
-<code>~/code</code>) and decompress them by entering the following commands in 
+<code>~/ttk</code>) and decompress them by entering the following commands in 
 a terminal (this assumes that you downloaded the tarballs to the 
 <code>~/Downloads</code> directory):<br><br>
-<code>$ mkdir ~/code</code><br>
-<code>$ mv ~/Downloads/ParaView-v5.2.0.tar.gz ~/code/</code><br>
-<code>$ mv ~/Downloads/ttk-0.9.tar.gz ~/code/</code><br>
-<code>$ cd ~/code</code><br>
-<code>$ tar xvzf ParaView-v5.2.0.tar.gz</code><br>
-<code>$ tar xvzf ttk-0.9.tar.gz</code><br><br>
+<code>$ mkdir ~/ttk</code><br>
+<code>$ mv ~/Downloads/ParaView-v5.3.0.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ttk-0.9.1.tar.gz ~/ttk/</code><br>
+<code>$ cd ~/ttk</code><br>
+<code>$ tar xvzf ParaView-v5.3.0.tar.gz</code><br>
+<code>$ tar xvzf ttk-0.9.1.tar.gz</code><br><br>
 You can delete the tarballs after the source trees have been decompressed by 
 entering the following commands:<br><br>
-<code>$ rm ParaView-v5.2.0.tar.gz</code><br>
-<code>$ rm ttk-0.9.tar.gz</code><br><br></p>
+<code>$ rm ParaView-v5.3.0.tar.gz</code><br>
+<code>$ rm ttk-0.9.1.tar.gz</code><br><br></p>
                   
                   <p>
                   <h3>4. Patching the ParaView source tree</h3>
@@ -233,8 +242,9 @@ This step is
 optional. 
 To proceed, go to 
 the patch directory and apply it as follows:<br><br>
-<code>$ cd ~/code/ttk-0.9/paraview/patch</code><br>
-<code>$ ./patch.sh ~/code/ParaView-v5.2.0/</code><br><br></p>
+<code>$ cd ~/ttk/ttk-0.9.1/paraview/patch</code><br>
+<code>$ ./patch-paraview-5.3.0.sh
+ ~/ttk/ParaView-v5.3.0/</code><br><br></p>
 <!-- <code style="color: #ef2929; font-weight: bold;">root #</code> -->
 <!-- <code>emerge --ask&#160;--unmerge  -->
 <!-- sys-kernel/genkernel</code> -->
@@ -244,7 +254,7 @@ the patch directory and apply it as follows:<br><br>
                   <h4>a) Configuration</h4>
                   To enter the configuration menu of ParaView's build, enter 
 the following commands:<br><br>
-<code>$ cd ~/code/ParaView-v5.2.0/</code><br>
+<code>$ cd ~/ttk/ParaView-v5.3.0/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
@@ -256,7 +266,13 @@ follows (required for TTK's installation):<br><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_INSTALL_DEVELOPMENT_FILES=ON</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_QT_VERSION=4</code><br>
 <code>&nbsp;&middot;&nbsp;VTK_RENDERING_BACKEND=OpenGL2</code><br>
-<code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=OpenMP</code><br><br>
+<!-- <code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=OpenMP</code><br>-->
+<br> 
+
+<h4>Note to non-Ubuntu users, including MacOS users</h4>
+We recommend in general to use the version 5 of the Qt library, instead of the 
+version 4 as described above (which is only recommended for Ubuntu 
+users).<br><br>
 
 Optionally, you may want to turn on additional features. See the 
 <a 
@@ -291,7 +307,7 @@ located in the source tree).<br><br></p>
 <h4><a name="ttkConfig">a)</a> Configuration</h4>
 To enter the configuration menu of TTK's build, enter the following 
 commands:<br><br>
-<code>$ cd ~/code/ttk-0.9/</code><br>
+<code>$ cd ~/ttk/ttk-0.9.1/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
@@ -338,7 +354,7 @@ default TTK installation path, <code>/usr/local/</code>):<br><br>
 <p>
 If you wish to disable the build and installation of certain TTK components, 
 just comment the corresponding lines in the <code>CMakeLists.txt</code> file at 
-the root of the source tree (<code>~/code/ttk-0.9/CMakeLists.txt</code> in our 
+the root of the source tree (<code>~/ttk/ttk-0.9.1/CMakeLists.txt</code> in our 
 example) prior to entering the configuration step of TTK's build (<a 
 href="#ttkConfig">section 6.a</a>).
 </p>
@@ -415,7 +431,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on April 1st, 2017.</p>
+                    Updated on April 13th, 2017.</p>
                 </div>
             </div>
         </div>
