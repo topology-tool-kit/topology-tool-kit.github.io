@@ -442,3 +442,12 @@ body {
   /* don't know */
   -webkit-tap-highlight-color: #478aac;
 }
+
+div{
+}
+
+.news{
+       border-style: solid;
+       border-width: 0px; 
+       background-color: rgb(39,39,39);  
+}
