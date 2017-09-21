@@ -188,9 +188,9 @@ documentation of your package manager if your operating system is not Ubuntu Lin
 
 <p>
 <h4><a name="catalyst_sources">3.</a> Preparing the sources</h4>
-Move the tarballs to a working directory (for instance called <code>~/ttk</code>) and decompress them by
+Move the tarballs to a working directory (for instance called <code>~/ttk/</code>) and decompress them by
 entering the following commands in a terminal (this assumes that you downloaded the tarballs to the
-<code>~/Downloads</code> directory):<br>
+<code>~/Downloads/</code> directory):<br>
 <br>
 
 <code>$ mkdir ~/ttk</code><br>
@@ -198,7 +198,7 @@ entering the following commands in a terminal (this assumes that you downloaded 
 <code>$ mv ~/Downloads/ParaView-v5.4.0.tar.gz ~/ttk/</code><br>
 <code>$ mv ~/Downloads/ttk-0.9.2.tar.gz ~/ttk/</code><br>
 <br>
-<code>$ cd ~/ttk</code><br>
+<code>$ cd ~/ttk/</code><br>
 <code>$ tar xvzf mesa-17.2.0.tar.gz</code><br>
 <code>$ tar xvzf ParaView-v5.4.0.tar.gz</code><br>
 <code>$ tar xvzf ttk-0.9.2.tar.gz</code><br>
@@ -217,7 +217,7 @@ In order to enjoy the complete set of TTK features, we recommend at this stage t
 This step is optional. To proceed, go to the patch directory and apply it as follows:<br>
 <br>
 
-<code>$ cd ~/ttk/ttk-0.9.2/paraview/patch</code><br>
+<code>$ cd ~/ttk/ttk-0.9.2/paraview/patch/</code><br>
 <code>$ ./patch-paraview-5.4.0.sh ~/ttk/ParaView-v5.4.0/</code><br>
 </p>
 
@@ -231,7 +231,7 @@ compilation flags, see this <a href="https://blog.kitware.com/messing-with-mesa-
 
 <code>$ cd ~/ttk/mesa-17.2.0/</code><br>
 <code>$ mkdir build</code><br>
-<code>$ cd build</code><br>
+<code>$ cd build/</code><br>
 <code>$ ../configure \</code><br>
 <code>$   --disable-xvmc \</code><br>
 <code>$   --disable-glx \</code><br>
@@ -251,7 +251,7 @@ To enter the configuration menu of ParaView's build, enter the following command
 
 <code>$ cd ~/ttk/ParaView-v5.4.0/</code><br>
 <code>$ mkdir build</code><br>
-<code>$ cd build</code><br>
+<code>$ cd build/</code><br>
 <code>$ cmake-gui ../</code><br>
 <br>
 
@@ -304,7 +304,7 @@ To enter the configuration menu of TTK's build, enter the following commands:<br
 
 <code>$ cd ~/ttk/ttk-0.9.2/</code><br>
 <code>$ mkdir build</code><br>
-<code>$ cd build</code><br>
+<code>$ cd build/</code><br>
 <code>$ cmake-gui ../</code><br>
 <br>
 
@@ -350,13 +350,13 @@ code-saturne.org/cms/sites/default/files/file_attach/Tutorial/version-5.0/01_sim
 <br>
 
 <b>b) Preparing the sources (both systems, client and server)</b><br>
-Move the tarballs to a working directory (for instance called <code>~/ttk</code>) and decompress them
+Move the tarballs to a working directory (for instance called <code>~/ttk/</code>) and decompress them
 by entering the following commands in a terminal (this assumes that you downloaded the tarballs to the
-<code>~/Downloads</code> directory):<br>
+<code>~/Downloads/</code> directory):<br>
 <br>
 
 <code>$ mv ~/Downloads/code_saturne-5.0.4.tar.gz ~/ttk/</code><br>
-<code>$ cd ~/ttk</code><br>
+<code>$ cd ~/ttk/</code><br>
 <code>$ tar xvzf code_saturne-5.0.4.tar.gz</code><br>
 <code>$ rm code_saturne-5.0.4.tar.gz</code><br>
 <br>
@@ -367,7 +367,7 @@ To configure Code_Saturne’s source tree, enter the following commands:<br>
 
 <code>$ cd ~/ttk/code_saturne-5.0.4/</code><br>
 <code>$ mkdir build</code><br>
-<code>$ cd build</code><br>
+<code>$ cd build/</code><br>
 <code>$ ../configure \</code><br>
 <code>$   --with-catalyst=/usr/local/ \</code><br>
 <code>$   --disable-catalyst-as-plugin</code><br>
@@ -402,20 +402,20 @@ Create the study <code>simple_junction</code> and the calculation directory <cod
 the commands:<br>
 <br>
 
-<code>$ cd ~/ttk</code><br>
+<code>$ cd ~/ttk/</code><br>
 <code>$ code_saturne create -s simple_junction -c case1</code><br>
 <br>
 
 More details on how to change the parameters of the study can be found in the tutorial.
 In the following, we will use the pre-configured study located in Code_Saturne source
-files <code>~/ttk/code_saturne-5.0.4/examples/simple_junction</code> and launch the simulation.<br>
+files <code>~/ttk/code_saturne-5.0.4/examples/simple_junction/</code> and launch the simulation.<br>
 <br>
 
 <code>$ cd ~/ttk/simple_junction/case1/DATA/</code><br>
 <code>$ cp ~/ttk/code_saturne-5.0.4/examples/simple_junction/case1/case1.xml .</code><br>
 <code>$ cd ~/ttk/simple_junction/MESH/</code><br>
 <code>$ cp ~/ttk/code_saturne-5.0.4/examples/simple_junction/mesh/downcomer.des .</code><br>
-<code>$ cd ~/ttk/simple_junction/case1</code><br>
+<code>$ cd ~/ttk/simple_junction/case1/</code><br>
 <code>$ code_saturne run --param case1.xml</code><br>
 <br>
 
@@ -562,12 +562,13 @@ module. Configure the writer module with the following parameters (as shown by t
 <code>Directory: postprocessing</code><br>
 <br>
 
-You can also modify writing frequency to suit your needs, here is an example:<br>
+Then modify the writing frequency to suit your needs, here is an example:<br>
 <br>
 
-<code>Frequency: Output every ‘n’ time steps</code><br>
-<code class="tab3">1</code><br>
-<code class="tab3">Output at end of calculation</code><br>
+<code>Frequency:</code><br>
+<code class="tab1">&middot; Output every ‘n’ time steps</code><br>
+<code class="tab1">&middot; 1</code><br>
+<code class="tab1">&middot; Output at end of calculation</code><br>
 <br>
 
 <div class=caption>
@@ -604,7 +605,7 @@ Alternatively, jump to this paragraph to directly download a preconfigured mirro
 First, create a “mirror” project on the server system with the commands:<br>
 <br>
 
-<code>$ cd ~/ttk</code><br>
+<code>$ cd ~/ttk/</code><br>
 <code>$ code_saturne create -s simple_junction -c case1</code><br>
 <br>
 
@@ -619,11 +620,11 @@ recommended).<br>
 
 Alternatively, you can also simply download the following <a href="stuff/simple_junction.tar.gz">tarball</a>, which already contains a mirror
 of the client’s project. To decompress this tarball, enter the following commands (this assumes that
-you downloaded the tarballs to the <code>~/Downloads</code> directory):<br>
+you downloaded the tarballs to the <code>~/Downloads/</code> directory):<br>
 <br>
 
 <code>$ mv ~/Downloads/simple_junction.tar.gz ~/ttk/</code><br>
-<code>$ cd ~/ttk</code><br>
+<code>$ cd ~/ttk/</code><br>
 <code>$ tar xvzf simple_junction.tar.gz</code><br>
 <code>$ rm simple_junction.tar.gz</code><br>
 <br>
@@ -632,7 +633,7 @@ You are now ready to run your Code_Saturne simulation with an in-situ usage of T
 enter the following commands:<br>
 <br>
 
-<code>$ cd ~/ttk/simple_junction/case1</code><br>
+<code>$ cd ~/ttk/simple_junction/case1/</code><br>
 <code>$ code_saturne run --param case1.xml</code><br>
 <br>
 
