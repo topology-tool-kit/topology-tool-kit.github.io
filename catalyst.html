@@ -168,7 +168,7 @@ which already implements Catalyst interfacing features. See the
 </p>
 
 <p>
-<h4><a name="catalyst_downloads">a)</a> Downloads</h4>
+<h4><a name="catalyst_downloads">1.</a> Downloads</h4>
 The in-situ usage of TTK requires the installation of several third-party packages, <b>from source</b>:
 <a href="ftp://ftp.freedesktop.org/pub/mesa/mesa-17.2.0.tar.gz"> Mesa version 17.2.0</a>,
 <a href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.4&type=
@@ -178,7 +178,7 @@ ttk/tar.gz/v0.9.2">TTK version 0.9.2</a>.
 </p>
 
 <p>
-<h4><a name="catalyst_dependencies">b)</a> Installing the dependencies</h4>
+<h4><a name="catalyst_dependencies">2.</a> Installing the dependencies</h4>
 Several dependencies will need to be installed in order to compile the packages from source. Please enter
 the following command (omit the <code>$</code> character) in a terminal to install them (please see the
 documentation of your package manager if your operating system is not Ubuntu Linux):<br>
@@ -187,7 +187,7 @@ documentation of your package manager if your operating system is not Ubuntu Lin
 </p>
 
 <p>
-<h4><a name="catalyst_sources">c)</a> Preparing the sources</h4>
+<h4><a name="catalyst_sources">3.</a> Preparing the sources</h4>
 Move the tarballs to a working directory (for instance called <code>~/ttk</code>) and decompress them by
 entering the following commands in a terminal (this assumes that you downloaded the tarballs to the
 <code>~/Downloads</code> directory):<br>
@@ -212,7 +212,7 @@ Now , you can delete the tarballs after the source trees have been decompressed.
 </p>
 
 <p>
-<h4><a name="catalyst_patching">d)</a> Patching ParaView source tree</h4>
+<h4><a name="catalyst_patching">4.</a> Patching ParaView source tree</h4>
 In order to enjoy the complete set of TTK features, we recommend at this stage to patch the ParaView source tree.
 This step is optional. To proceed, go to the patch directory and apply it as follows:<br>
 <br>
@@ -222,8 +222,8 @@ This step is optional. To proceed, go to the patch directory and apply it as fol
 </p>
 
 <p>
-<h4><a name="catalyst_installing">e)</a> Configuring, building and installing</h4>
-<b>&bull; Mesa</b><br>
+<h4><a name="catalyst_installing">5.</a> Configuring, building and installing</h4>
+<b>a) Mesa</b><br>
 To configure Mesa’s source tree, enter the following command (for more details about the
 compilation flags, see this <a href="https://blog.kitware.com/messing-with-mesa-for-paraview-5-0vtk-7-0/">
   blog entry</a>) :<br>
@@ -245,7 +245,7 @@ compilation flags, see this <a href="https://blog.kitware.com/messing-with-mesa-
 <code>$   --enable-gallium-osmesa</code><br>
 <br>
 
-<b>&bull; ParaView</b><br>
+<b>b) ParaView</b><br>
 To enter the configuration menu of ParaView's build, enter the following commands:<br>
 <br>
 
@@ -298,7 +298,7 @@ Once the build is finished, enter the following command to install your build of
 <code>$ sudo make install</code><br>
 <br>
 
-<b><a name="catalyst_ttk_cmake">&bull; TTK</a></b><br>
+<b><a name="catalyst_ttk_cmake">c) TTK</a></b><br>
 To enter the configuration menu of TTK's build, enter the following commands:<br>
 <br>
 
@@ -328,7 +328,7 @@ Once the build is finished, enter the following command to install your build of
 </p>
 
 <p>
-<h4><a name="catalyst_usecase">f)</a> A computational fluid dynamics use-case: Code_Saturne</h4>
+<h4><a name="catalyst_usecase">6.</a> A computational fluid dynamics use-case: Code_Saturne</h4>
 In the remainder of this tutorial, we will switch to a concrete use-case of in-situ usage of TTK with Catalyst.
 For this, we will focus on a computational fluid dynamics simulation code, Code_Saturne, which already
 implements interfacing features with Catalyst.<br>
@@ -342,14 +342,14 @@ In particular, we will go through the following main steps:<br>
 &middot; integrate the Catalyst/TTK script into Code_Saturne [client, then server]<br>
 <br>
 
-<b>&bull; Downloads (both systems, client and server)</b><br>
+<b>a) Downloads (both systems, client and server)</b><br>
 The Code_Saturne source tree (version 5.0.4) can be downloaded <a href="http://code-saturne.org/cms/sites/
 default/files/releases/code_saturne-5.0.4.tar.gz">here</a>.<br>
 The Code_Saturne tutorial example that we will use in the remainder can be downloaded <a href="http://
 code-saturne.org/cms/sites/default/files/file_attach/Tutorial/version-5.0/01_simple_junction.pdf">there</a>.<br>
 <br>
 
-<b>&bull; Preparing the sources (both systems, client and server)</b><br>
+<b>b) Preparing the sources (both systems, client and server)</b><br>
 Move the tarballs to a working directory (for instance called <code>~/ttk</code>) and decompress them
 by entering the following commands in a terminal (this assumes that you downloaded the tarballs to the
 <code>~/Downloads</code> directory):<br>
@@ -361,7 +361,7 @@ by entering the following commands in a terminal (this assumes that you download
 <code>$ rm code_saturne-5.0.4.tar.gz</code><br>
 <br>
 
-<b>&bull; Configuring, building and installing Code_Saturne (both systems, client and server)</b><br>
+<b>c) Configuring, building and installing Code_Saturne (both systems, client and server)</b><br>
 To configure Code_Saturne’s source tree, enter the following commands:<br>
 <br>
 
@@ -386,7 +386,7 @@ Once the build is finished, enter the following command to install your build of
 <code>$ sudo make install</code><br>
 <br>
 
-<b>&bull; Post-installation configuration (both systems, client and server)</b><br>
+<b>d) Post-installation configuration (both systems, client and server)</b><br>
 Once Code_Saturne is installed, append the following lines in the file <code>~/.bashrc</code>:<br>
 <br>
 
@@ -395,7 +395,7 @@ Once Code_Saturne is installed, append the following lines in the file <code>~/.
 <br>
 
 
-<b>&bull; Creating the representative Code_Saturne data set (client system)</b><br>
+<b>e) Creating the representative Code_Saturne data set (client system)</b><br>
 Now, following the <a href="http://code-saturne.org/cms/sites/default/files/file_attach/Tutorial/version-5.0
 /01_simple_junction.pdf">Code_Saturne tutorial example</a>, we will prepare the computation directories.
 Create the study <code>simple_junction</code> and the calculation directory <code>case1</code> by entering
@@ -425,7 +425,7 @@ To visualize the representative data set, open in ParaView the file <code>RESULT
 directory <code>~/ttk/simple_junction/case1/RESU/&lt;date-time&gt;/postprocessing/</code><br>
 <br>
 
-<b>&bull; Generating the Catalyst script (client system)</b><br>
+<b>f) Generating the Catalyst script (client system)</b><br>
 We will describe here the general procedure to generate automatically a ParaView Catalyst pipeline, applied
 to a simple junction testcase but more details can be found in the <a href="https://www.paraview.org/files/
 catalyst/docs/ParaViewCatalystUsersGuide_v2.pdf">ParaView Catalyst User’s Guide</a>.<br>
@@ -479,8 +479,12 @@ For the rendering views, use the following parameters (screenshot below):<br>
 <br>
 
 <div class="flex-container">
-  <img class="flex-item" src="img/paraview_export1.png">
-  <img class="flex-item" src="img/paraview_export2.png">
+  <a href="img/paraview_export1.png">
+    <img class="flex-item" src="img/paraview_export1.png">
+  </a>
+  <a href="img/paraview_export2.png">
+    <img class="flex-item" src="img/paraview_export2.png">
+  </a>
 </div><br>
 
 For the rendering views of the persistence diagram and curve, check also the parameter
@@ -488,8 +492,12 @@ For the rendering views of the persistence diagram and curve, check also the par
 <br>
 
 <div class="flex-container">
-  <img class="flex-item" src="img/paraview_export3.png">
-  <img class="flex-item" src="img/paraview_export4.png">
+  <a href="img/paraview_export3.png">
+    <img class="flex-item" src="img/paraview_export3.png">
+  </a>
+  <a href="img/paraview_export4.png">
+    <img class="flex-item" src="img/paraview_export4.png">
+  </a>
 </div><br>
 
 The persistence diagram itself is configured to be written every 10 time-steps in the <code>Properties</code>
@@ -507,7 +515,7 @@ Finally, click on the <code>Finish</code> button to create the Python script and
 <b>ttk_pipeline.py</b>.<br>
 <br>
 
-<b>&bull; Patching the Catalyst script (client system)</b><br>
+<b>g) Patching the Catalyst script (client system)</b><br>
 To automatically load the TTK plugins, add these lines of code just below the two Python
 <code>import</code> lines in the pre-configured script <code>ttk_pipeline.py</code> like in the image below:<br>
 <br>
@@ -529,11 +537,11 @@ To automatically load the TTK plugins, add these lines of code just below the tw
 <br>
 
 Note that <code>/usr/local/lib/paraview-5.4/plugins/</code> is the default location where TTK plugins are
-installed. Please change this path according to the values set at <a href="#catalyst_ttk_cmake">step 4.e.</a>
+installed. Please change this path according to the values set at <a href="#catalyst_ttk_cmake">step 5.c</a>
 (cmake configuration of TTK).<br>
 <br>
 
-<b>&bull; Integrating the Catalyst script in the Code_Saturne project (client system)</b><br>
+<b>h) Integrating the Catalyst script in the Code_Saturne project (client system)</b><br>
 To configure the project to use Catalyst and execute the script in-situ, enter the commands:<br>
 <br>
 
@@ -588,7 +596,7 @@ this <a href="https://www.youtube.com/watch?v=G-D0SbORutU&feature=youtu.be">vide
 Finally, save the parameters by clicking on the <code>Save</code> wizard under the <code>File</code> menu.<br>
 <br>
 
-<b>&bull; Running TTK in-situ (server system)</b><br>
+<b>i) Running TTK in-situ (server system)</b><br>
 In the following, we describe how to configure a Code_Saturne / Catalyst project on the server side.
 Alternatively, jump to this paragraph to directly download a preconfigured mirror package.<br>
 <br>
@@ -609,7 +617,7 @@ based on the nature of their connection (for instance, on a TCP/IP network, the 
 recommended).<br>
 <br>
 
-Alternatively, you can also simply download the following tarball, which already contains a mirror
+Alternatively, you can also simply download the following <a href="stuff/simple_junction.tar.gz">tarball</a>, which already contains a mirror
 of the client’s project. To decompress this tarball, enter the following commands (this assumes that
 you downloaded the tarballs to the <code>~/Downloads</code> directory):<br>
 <br>
@@ -618,22 +626,39 @@ you downloaded the tarballs to the <code>~/Downloads</code> directory):<br>
 <code>$ cd ~/ttk</code><br>
 <code>$ tar xvzf simple_junction.tar.gz</code><br>
 <code>$ rm simple_junction.tar.gz</code><br>
+<br>
 
 You are now ready to run your Code_Saturne simulation with an in-situ usage of TTK. For this,
-enter the following commands:
+enter the following commands:<br>
+<br>
 
 <code>$ cd ~/ttk/simple_junction/case1</code><br>
 <code>$ code_saturne run --param case1.xml</code><br>
 <br>
 
-<b>&bull; In-situ outputs (on the server system)</b><br>
+<b>j) In-situ outputs (on the server system)</b><br>
 The calculation results are stored in <code>~/ttk/simple_junction/case1/RESU/&lt;date-time&gt;/</code><br>
 <br>
 
 Once the simulation has finished, you should have a sequence of image files (*.png), for each view
 configured in the Catalyst script, as well as persistence diagrams (*.vtu), computed every 10 iterations.
 To generate videos out of these image sequences, please see the <a href="http://ffmpeg.org/">
-ffmpeg</a> documentation.
+  ffmpeg</a> documentation.<br>
+<br>
+
+<div class="flex-container">
+  <iframe width="100%" height="420" src="https://www.youtube.com/embed/97xpyJRVQtg" 
+                                    frameborder="0" allowfullscreen></iframe>
+  <iframe width="100%" height="420" src="https://www.youtube.com/embed/5fdK_rcPERI"
+                                    frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="flex-container">
+  <iframe width="100%" height="420" src="https://www.youtube.com/embed/qfDhN60AxGo"
+                                    frameborder="0" allowfullscreen></iframe>
+  <iframe width="100%" height="420" src="https://www.youtube.com/embed/B3UYuejmOvs"
+                                    frameborder="0" allowfullscreen></iframe>
+</div>
 
 </p>
 

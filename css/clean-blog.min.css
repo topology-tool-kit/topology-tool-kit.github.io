@@ -425,9 +425,8 @@ form .row:first-child .floating-label-form-group {
 }
 .flex-item {
     background-color: cornflowerblue;
-    /*width: 100px;*/
-    /*height: 100px;*/
-    margin: 10px;
+    width: 370px;
+    height: 510px;
 }
 .tab1 {
     padding-left: 2em;
