@@ -183,7 +183,7 @@ Several dependencies will need to be installed in order to compile the packages 
 the following command (omit the <code>$</code> character) in a terminal to install them (please see the
 documentation of your package manager if your operating system is not Ubuntu Linux):<br>
 <br>
-<code>$ apt-get install cmake-qt-gui libvtk6-dev qt4-dev-tools pyqt4-dev-tools llvm</code>
+<code>$ sudo apt-get install cmake-qt-gui libvtk6-dev qt4-dev-tools llvm</code>
 </p>
 
 <p>
@@ -252,10 +252,10 @@ To enter the configuration menu of ParaView's build, enter the following command
 <code>$ cd ~/ttk/ParaView-v5.4.0/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build/</code><br>
-<code>$ cmake-gui ../</code><br>
+<code>$ ccmake ../</code><br>
 <br>
 
-The configuration window opens. Click on the Configure button to proceed. Once the configuration is finished,
+The configuration interface opens. Press <code>[c]</code> to configure. Once the configuration is finished,
 please set the following options as follows (required for TTK's installation):<br>
 <br>
 
@@ -285,6 +285,10 @@ ParaView/ParaView_And_Mesa_3D#Configuring_ParaView_for_use_with_OSMesa">document
 <code>VTK_USE_OFFSCREEN=OFF</code><br>
 <br>
 
+Next, press<code>[g]</code> to generate and press <code>[q]</code> to close the configuration
+interface when the generation is completed.<br>
+<br>
+
 Now you can start the compilation process by entering the following command, where N 
 is the number of available cores on your system (this will take a LONG time):<br>
 <br>
@@ -305,17 +309,17 @@ To enter the configuration menu of TTK's build, enter the following commands:<br
 <code>$ cd ~/ttk/ttk-0.9.2/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build/</code><br>
-<code>$ cmake-gui ../</code><br>
+<code>$ ccmake ../</code><br>
 <br>
 
-The configuration window opens. Click on the Configure button to proceed. At this stage, under Linux,
-TTK's build should be automatically configured correctly by default and Linux users can click on the
-Generate button.<br>
+The configuration interface opens. Press <code>[c]</code> to configure. At this stage, under Linux,
+TTK's build should be automatically configured correctly by default so you can press <code>[g]</code> to
+generate.<br>
 <br>
 
-Once the generation is completed, close the configuration window and start the compilation process by
-entering the following command, where N is the number of available cores on your system (this will
-take a LONG time):<br>
+Once the generation is completed, press <code>[q]</code> close the configuration window and start the
+compilation process by entering the following command, where N is the number of available cores on your system
+(this will take a LONG time):<br>
 <br>
 
 <code>$ make -jN</code><br>
@@ -349,7 +353,15 @@ The Code_Saturne tutorial example that we will use in the remainder can be downl
 code-saturne.org/cms/sites/default/files/file_attach/Tutorial/version-5.0/01_simple_junction.pdf">there</a>.<br>
 <br>
 
-<b>b) Preparing the sources (both systems, client and server)</b><br>
+<b>b) Installing the dependencies (both systems, client and server)</b><br>
+Several dependencies will need to be installed in order to compile the packages from source. Please enter
+the following command (omit the <code>$</code> character) in a terminal to install them (please see the
+documentation of your package manager if your operating system is not Ubuntu Linux):<br>
+<br>
+<code>$ sudo apt-get install pyqt4-dev-tools</code>
+</p>
+
+<b>c) Preparing the sources (both systems, client and server)</b><br>
 Move the tarballs to a working directory (for instance called <code>~/ttk/</code>) and decompress them
 by entering the following commands in a terminal (this assumes that you downloaded the tarballs to the
 <code>~/Downloads/</code> directory):<br>
@@ -361,7 +373,7 @@ by entering the following commands in a terminal (this assumes that you download
 <code>$ rm code_saturne-5.0.4.tar.gz</code><br>
 <br>
 
-<b>c) Configuring, building and installing Code_Saturne (both systems, client and server)</b><br>
+<b>d) Configuring, building and installing Code_Saturne (both systems, client and server)</b><br>
 To configure Code_Saturne’s source tree, enter the following commands:<br>
 <br>
 
@@ -386,7 +398,7 @@ Once the build is finished, enter the following command to install your build of
 <code>$ sudo make install</code><br>
 <br>
 
-<b>d) Post-installation configuration (both systems, client and server)</b><br>
+<b>e) Post-installation configuration (both systems, client and server)</b><br>
 Once Code_Saturne is installed, append the following lines in the file <code>~/.bashrc</code>:<br>
 <br>
 
@@ -394,8 +406,7 @@ Once Code_Saturne is installed, append the following lines in the file <code>~/.
 <code>export LD_LIBRARY_PATH=/usr/local/lib/paraview-5.4:$LD_LIBRARY_PATH</code><br>
 <br>
 
-
-<b>e) Creating the representative Code_Saturne data set (client system)</b><br>
+<b>f) Creating the representative Code_Saturne data set (client system)</b><br>
 Now, following the <a href="http://code-saturne.org/cms/sites/default/files/file_attach/Tutorial/version-5.0
 /01_simple_junction.pdf">Code_Saturne tutorial example</a>, we will prepare the computation directories.
 Create the study <code>simple_junction</code> and the calculation directory <code>case1</code> by entering
@@ -425,7 +436,7 @@ To visualize the representative data set, open in ParaView the file <code>RESULT
 directory <code>~/ttk/simple_junction/case1/RESU/&lt;date-time&gt;/postprocessing/</code><br>
 <br>
 
-<b>f) Generating the Catalyst script (client system)</b><br>
+<b>g) Generating the Catalyst script (client system)</b><br>
 We will describe here the general procedure to generate automatically a ParaView Catalyst pipeline, applied
 to a simple junction testcase but more details can be found in the <a href="https://www.paraview.org/files/
 catalyst/docs/ParaViewCatalystUsersGuide_v2.pdf">ParaView Catalyst User’s Guide</a>.<br>
@@ -515,7 +526,7 @@ Finally, click on the <code>Finish</code> button to create the Python script and
 <b>ttk_pipeline.py</b>.<br>
 <br>
 
-<b>g) Patching the Catalyst script (client system)</b><br>
+<b>h) Patching the Catalyst script (client system)</b><br>
 To automatically load the TTK plugins, add these lines of code just below the two Python
 <code>import</code> lines in the pre-configured script <code>ttk_pipeline.py</code> like in the image below:<br>
 <br>
@@ -541,7 +552,7 @@ installed. Please change this path according to the values set at <a href="#cata
 (cmake configuration of TTK).<br>
 <br>
 
-<b>h) Integrating the Catalyst script in the Code_Saturne project (client system)</b><br>
+<b>i) Integrating the Catalyst script in the Code_Saturne project (client system)</b><br>
 To configure the project to use Catalyst and execute the script in-situ, enter the commands:<br>
 <br>
 
@@ -597,7 +608,7 @@ this <a href="https://www.youtube.com/watch?v=G-D0SbORutU&feature=youtu.be">vide
 Finally, save the parameters by clicking on the <code>Save</code> wizard under the <code>File</code> menu.<br>
 <br>
 
-<b>i) Running TTK in-situ (server system)</b><br>
+<b>j) Running TTK in-situ (server system)</b><br>
 In the following, we describe how to configure a Code_Saturne / Catalyst project on the server side.
 Alternatively, jump to this paragraph to directly download a preconfigured mirror package.<br>
 <br>
@@ -637,7 +648,7 @@ enter the following commands:<br>
 <code>$ code_saturne run --param case1.xml</code><br>
 <br>
 
-<b>j) In-situ outputs (on the server system)</b><br>
+<b>k) In-situ outputs (on the server system)</b><br>
 The calculation results are stored in <code>~/ttk/simple_junction/case1/RESU/&lt;date-time&gt;/</code><br>
 <br>
 
