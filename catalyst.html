@@ -235,13 +235,13 @@ compilation flags, see this <a href="https://blog.kitware.com/messing-with-mesa-
 <code>$ ../configure \</code><br>
 <code>$   --disable-xvmc \</code><br>
 <code>$   --disable-glx \</code><br>
+<code>$   --disable-gbm \</code><br>
 <code>$   --disable-dri \</code><br>
 <code>$   --with-dri-drivers= \</code><br>
-<code>$   --with-gallium-drivers=swrast \</code><br>
-<code>$   --disable-gbm \</code><br>
-<code>$   --enable-texture-float \</code><br>
 <code>$   --disable-egl \</code><br>
 <code>$   --with-egl-platforms= \</code><br>
+<code>$   --with-gallium-drivers=swrast \</code><br>
+<code>$   --enable-texture-float \</code><br>
 <code>$   --enable-gallium-osmesa</code><br>
 <br>
 
@@ -268,8 +268,9 @@ To enter the configuration menu of ParaView's build, enter the following command
 <code>$ ccmake ../</code><br>
 <br>
 
-The configuration interface opens. Press <code>[c]</code> to configure. Once the configuration is finished,
-please set the following options as follows (required for TTK's installation):<br>
+The configuration interface opens. Press <code>[c]</code> to configure and <code>[t]</code> to access the
+advanced mode, use <code>/</code> to search a cmake option. Once the configuration is finished, please set
+the following options as follows (required for TTK's installation):<br>
 <br>
 
 <code>CMAKE_BUILD_TYPE=Release</code><br>
@@ -330,7 +331,7 @@ TTK's build should be automatically configured correctly by default so you can p
 generate.<br>
 <br>
 
-Once the generation is completed, press <code>[q]</code> close the configuration window and start the
+Once the generation is completed, press <code>[q]</code> to close the configuration window and start the
 compilation process by entering the following command, where N is the number of available cores on your system
 (this will take a LONG time):<br>
 <br>
