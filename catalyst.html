@@ -154,7 +154,8 @@ Note that for an in-situ usage with Catalyst, TTK must be installed <b>twice</b>
 &nbsp;&nbsp;&nbsp;&middot;&nbsp;
 In an interactive client mode, on a system dedicated to the interactive design of the data analysis
 and visualization pipeline, typically a workstation.
-For this purpose, see the <a href=installation.html>main installation of TTK</a>.<br>
+For this purpose, see the <a href=installation.html>main installation of TTK</a> and add
+<code>PARAVIEW_USE_MPI=ON</code> at the step 5.a. <br>
 &nbsp;&nbsp;&nbsp;&middot;&nbsp;
 In a batch server mode, on a system dedicated to the actual execution of the simulation code,
 typically a high-performance system.
@@ -420,6 +421,12 @@ Once Code_Saturne is installed, append the following lines in the file <code>~/.
 <code>export LD_LIBRARY_PATH=/usr/local/lib/paraview-5.4:$LD_LIBRARY_PATH</code><br>
 <br>
 
+And to apply these modifications on the current shell, enter:<br>
+<br>
+
+<code>$ source ~/.bashrc</code><br>
+<br>
+
 <b>f) Creating the representative Code_Saturne data set (client system)</b><br>
 Now, following the <a href="http://code-saturne.org/cms/sites/default/files/file_attach/Tutorial/version-5.0
 /01_simple_junction.pdf">Code_Saturne tutorial example</a>, we will prepare the computation directories.
@@ -437,9 +444,9 @@ files <code>~/ttk/code_saturne-5.0.4/examples/simple_junction/</code> and launch
 <br>
 
 <code>$ cd ~/ttk/simple_junction/case1/DATA/</code><br>
-<code>$ cp ~/ttk/code_saturne-5.0.4/examples/simple_junction/case1/case1.xml .</code><br>
+<code>$ cp ~/ttk/code_saturne-5.0.4/examples/1-simple_junction/case1/case1.xml .</code><br>
 <code>$ cd ~/ttk/simple_junction/MESH/</code><br>
-<code>$ cp ~/ttk/code_saturne-5.0.4/examples/simple_junction/mesh/downcomer.des .</code><br>
+<code>$ cp ~/ttk/code_saturne-5.0.4/examples/1-simple_junction/mesh/downcomer.des .</code><br>
 <code>$ cd ~/ttk/simple_junction/case1/</code><br>
 <code>$ code_saturne run --param case1.xml</code><br>
 <br>
@@ -624,7 +631,7 @@ Finally, save the parameters by clicking on the <code>Save</code> wizard under t
 
 <b>j) Running TTK in-situ (server system)</b><br>
 In the following, we describe how to configure a Code_Saturne / Catalyst project on the server side.
-Alternatively, jump to this paragraph to directly download a preconfigured mirror package.<br>
+Alternatively, jump to this <a href="#catalyst_package">paragraph</a> to directly download a preconfigured mirror package.<br>
 <br>
 
 First, create a “mirror” project on the server system with the commands:<br>
@@ -643,7 +650,7 @@ based on the nature of their connection (for instance, on a TCP/IP network, the 
 recommended).<br>
 <br>
 
-Alternatively, you can also simply download the following <a href="stuff/simple_junction.tar.gz">tarball</a>, which already contains a mirror
+<a name="catalyst_package">Alternatively</a>, you can also simply download the following <a href="stuff/simple_junction.tar.gz">tarball</a>, which already contains a mirror
 of the client’s project. To decompress this tarball, enter the following commands (this assumes that
 you downloaded the tarballs to the <code>~/Downloads/</code> directory):<br>
 <br>
