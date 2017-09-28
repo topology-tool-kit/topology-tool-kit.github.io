@@ -416,6 +416,33 @@ form .row:first-child .floating-label-form-group {
   background-color: #d9d6d3;
   cursor: not-allowed;
 }
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 768px;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.flex-item {
+    background-color: cornflowerblue;
+    width: 370px;
+    height: 510px;
+}
+.tab1 {
+    padding-left: 2em;
+}
+.tab2 {
+    padding-left: 4em;
+}
+.tab3 {
+    padding-left: 6em;
+}
+.tab4 {
+    padding-left: 8em;
+}
+.tab5 {
+    padding-left: 10em;
+}
 ::-moz-selection {
   /* don't know */
   color: white;
