@@ -287,7 +287,7 @@ THERE</a>.
 <h4>Exercise 1</h4>
 Open the skull data set in ParaView with the following command (omit 
 the <code>$</code> character):<br><br>
-<code>$ paraview ~/ttk/bettiData/skull.vtu</code><br>
+<code>$ paraview ~/ttk/bettiData/skull.vtu</code>
 <br><br>
 
 Next, try to reproduce the visualization shown in the first screenshot above, 
@@ -299,6 +299,27 @@ in transparent.
 
 <p>
 <h4><a name="betti_paraview">3.</a> Betti numbers of PL 3-manifolds</h4>
+In the following, you will write your first TTK module, dedicated to the 
+computation of Betti Numbers of PL 3-manifolds. For this, we will exploit the 
+result by Dey and Guha, published in their 1998 paper
+<a href="https://www.cs.ait.ac.th/~guha/papers/computingHomology.pdf"
+target="new">
+"Computing Homology Groups of Simplicial Complexes in R3"</a>.<br><br>
+
+Go ahead and create your TTK module by entering the following commands (omit 
+the <code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-0.9.2/</code><br>
+<code>$ scripts/createTTKmodule.sh BettiNumbers</code><br><br>
+The above script will create all the files and classes of your TTK module. This 
+module includes automatically generated standalone command line and GUI 
+programs, as well as a ParaView plugin. To load your module in ParaView, open 
+ParaView, go to the menu <code>Tools</code>, <code>Manage Plugins...</code>
+
+Next load it in paraview, the menu appears.
+Next put some hello world in there.
+
+Next pull the union find into the code.
+Next algorithm to compute connected components, that's B0.
 </p>
 
 
