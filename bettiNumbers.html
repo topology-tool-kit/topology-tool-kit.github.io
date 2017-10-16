@@ -213,7 +213,7 @@ visualization and analysis, also developed in open-source by Kitware.<br><br>
 
 
 <div class=caption>
-  <a href="img/bettiNumbers_intro.png">
+  <a href="img/bettiNumbers_intro.png" target="new">
     <img width="100%" src="img/bettiNumbers_intro.png">
   </a>
 </div>
@@ -242,7 +242,7 @@ The display properties of the output of a filter in the main central view can
 also be modified from this panel.<br><br>
 
 <div class=caption>
-  <a href="img/bettiNumbers_menu.png">
+  <a href="img/bettiNumbers_menu.png" target="new">
     <img width="100%" src="img/bettiNumbers_menu.png">
   </a>
 </div>
@@ -252,7 +252,7 @@ apply successively the required filters, by browsing the filter menu
 with the object currently selected in the pipeline are shaded. 
 
 <div class=caption>
-  <a href="img/bettiNumbers_search.png">
+  <a href="img/bettiNumbers_search.png" target="new">
     <img width="100%" src="img/bettiNumbers_search.png">
   </a>
 </div>
@@ -312,14 +312,232 @@ the <code>$</code> character):<br><br>
 <code>$ scripts/createTTKmodule.sh BettiNumbers</code><br><br>
 The above script will create all the files and classes of your TTK module. This 
 module includes automatically generated standalone command line and GUI 
-programs, as well as a ParaView plugin. To load your module in ParaView, open 
-ParaView, go to the menu <code>Tools</code>, <code>Manage Plugins...</code>
+programs, as well as a ParaView plugin. <br><br>
 
-Next load it in paraview, the menu appears.
-Next put some hello world in there.
+For this exercise, we will only need to build your TTK module, and not the 
+entire TTK collection. Thus, edit the file 
+<code>~/ttk/ttk-0.9.2/CMakeLists.txt</code> to remove all entries, except the 
+first line and all the lines containing the word <code>BettiNumbers</code>.<br>
 
-Next pull the union find into the code.
-Next algorithm to compute connected components, that's B0.
+Now, to build your TTK module, enter the following commands, where 
+<code>N</code> is the number of available cores on your system (omit 
+the <code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-0.9.2/</code><br>
+<code>$ mkdir build</code><br>
+<code>$ cd build</code><br>
+<code>$ cmake ../</code><br>
+<code>$ make -jN</code><br><br>
+Note that, in order to rebuild your module in the future, you'll only need to 
+enter the last command (<code>make -jN</code>).<br>
+
+<div class=caption>
+  <a href="img/bettiNumbers_plugin.png" target="new">
+    <img width="100%" src="img/bettiNumbers_plugin.png">
+  </a>
+</div>
+
+To load your module in ParaView, open 
+ParaView, go to the menu <code>Tools</code>, <code>Manage Plugins...</code>, 
+then click on the <code>Load New...</code> button. Next, from the file browser 
+dialog, select the library we've just built: 
+<code>~/ttk/ttk-0.9.2/build/paraview/BettiNumbers/libBettiNumbers.so</code>. 
+Next, you may want to check the checkbox <code>AutoLoad</code> as shown above 
+(available after expending your plugin entry) to force ParaView to 
+automatically load your plugin at startup.<br>
+At this point, if your plugin was successfully loaded, it should appear as the 
+entry <code>TTK BettiNumbers</code> under the menu <code>Filters</code> then 
+<code>TTK - Misc</code>, as shown below.
+
+<div class=caption>
+  <a href="img/bettiNumbers_pluginMenu.png" target="new">
+    <img width="100%" src="img/bettiNumbers_pluginMenu.png">
+  </a>
+</div>
+
+Now open the file 
+<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code>. In the 
+function <code>execute()</code>, add the line <code>cout << endl << 
+"Hello World!" << endl << endl;</code> before the <code>return</code> 
+statement. Now build your module again, load the skull data set in ParaView and 
+apply your BettiNumbers plugin. You should see your message "Hello World!" 
+appear in the terminal, as shown below.
+
+<div class=caption>
+  <a href="img/bettiNumbers_helloWorld.png" target="new">
+    <img width="100%" src="img/bettiNumbers_helloWorld.png">
+  </a>
+</div>
+
+If this is the case, congratulations! You've just written your first TTK module!
+<br><br>
+
+<h4>Exercise 2: B0 (~20 lines of code)</h4>
+The 0-th Betti number (noted <code>B0</code>) corresponds to the number of 
+connected component of the input manifold <code>M</code>. In the following, we 
+will compute this number and display it in the output of the terminal (next to 
+our "Hello World!" message).<br><br>
+
+Several algorithms exist to enumerate connected components in a triangulation, 
+the simplest being a simple
+<a href="https://en.wikipedia.org/wiki/Breadth-first_search" target="new">
+breadth-first search</a> traversal. Instead, we will use a <i>Union-Find</i> 
+data-structure, which makes the algorithm even simpler to implement.<br><br>
+
+The 
+<a href="https://en.wikipedia.org/wiki/Disjoint-set_data_structure" 
+target="new">
+Union-Find</a> (UF) data-structure is a simple, yet powerful data-structure 
+which tracks the connectivity of a graph over successive edge additions. It is 
+a fundamental object which plays a key role in many computational topology 
+algorithms.<br><br>
+
+Initially, a UF object is created for each vertex of the graph. The operation 
+<code>find()</code> on this object returns the parent of the UF, that is a 
+unique representative UF object belonging to the connected component of the 
+queried vertex. Thus, the <code>find()</code> operation returns a unique UF, 
+which is the representative of the connected component.<br><br>
+
+When adding an edge between two vertices <code>v0</code> and <code>v1</code>, 
+the <code>makeUnion()</code> operation is called between the UF objects of 
+<code>v0</code> and <code>v1</code>. This will have the effect of merging the 
+representatives of the corresponding connected components.<br><br>
+
+Thus, to enumerate the connected components of a PL manifold <code>M</code>, 
+one just needs to proceed as follows. First, one should iterate over the edges 
+of <code>M</code>, call the <code>makeUnion()</code> operation between the UF 
+objects of the vertices of each edge of <code>M</code>. Finally, one should 
+iterate over all the UF objects, call the <code>find()</code> operation and 
+enumerate the number of unique remaining representative (which corresponds to 
+the number of remaining connected components after all edges have been 
+added).<br><br>
+
+TTK provides a reference implementation of the Union-Find data structure (with 
+path compression and union by rank), which we will use in this exercise. Its 
+online documentation can be found 
+<a 
+href="https://topology-tool-kit.github.io/doc/html/classttk_1_1UnionFind.html"
+target="new">
+HERE</a>.<br><br>
+
+To use it in your module, edit the file 
+<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/bettiNumbers.cmake</code> and 
+add the line <code>ttk_add_baseCode_package(unionFind)</code> at the 
+top of the file. Next, in 
+<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code>, add the 
+line <code>#include <UnionFind.h></code> in the file preamble.<br><br>
+
+TTK provides an efficient data structure for fast triangulation traversal. Its 
+online documentation can be found 
+<a 
+href="https://topology-tool-kit.github.io/doc/html/classttk_1_1Triangulation.
+html"
+target="new">
+HERE</a>.<br><br>
+
+In <code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code>, a 
+pointer to an object of this class (<code>triangulation_</code>) is 
+readily available and correctly initialized to the triangulation passed on the 
+input of your module.<br><br>
+
+TTK's triangulation data-structure supports a cache based access. This means 
+the data-structure needs to be pre-conditioned depending on the type of 
+traversal it will undergo, before it gets actually traversed. For instance, if 
+you want to access the i-th vertex of the j-th edge of the triangulation (with 
+the function <code>getEdgeVertex()</code>), you will need, before the actual 
+traversal, to call the pre-conditioning function 
+<code>preprocessEdges()</code> in a pre-process, as explained in the 
+<a 
+href="https://topology-tool-kit.github.io/doc/html/classttk_1_1Triangulation.
+html#a0c7e36ed34696d0d26eb411272145880"
+target="new">documentation of the 
+<code>getEdgeVertex()</code> function</a>. 
+Note that each traversal function comes with its pre-conditioning function, to 
+be called in the pre-processing stage of your module.
+<br><br>
+
+Typically, in 
+<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code>, the 
+function <code>setupTriangulation()</code> is the right placeholder to put such 
+a pre-conditioning statement, while the actual traversal should happen in the 
+<code>execute()</code> function, next to our prior "Hello World!" 
+message.<br><br>
+
+Now go ahead and compute <code>B0</code>, the number of connected components of 
+<code>M</code>.<br><br>
+
+To do this, you'll need to allocate an array (typically an STL vector) of 
+<code>UnionFind</code> objects with as many entries as vertices in 
+<code>M</code>. Next, you'll need to iterate over the edges of <code>M</code> 
+and call the <code>makeUnion()</code> operation on the UF objects of each edge. 
+Finally, you'll need to iterate over your initial array of UF objects, 
+re-assign to each entry the result of its <code>find()</code> operation (to 
+obtain the latest representative) and enumerate the number of unique remaining 
+representatives.
+
+<br><br>
+<h4>Exercise 3: B2 (~30 lines of code)</h4>
+The 2-nd Betti number (noted <code>B2</code>) corresponds to the number of 
+voids of the input manifold <code>M</code>. To compute <code>B2</code>, we will 
+exploit one of the results by Dey and Guha, published in their 1998 paper
+<a href="https://www.cs.ait.ac.th/~guha/papers/computingHomology.pdf"
+target="new">
+"Computing Homology Groups of Simplicial Complexes in R3"</a>.<br><br>
+
+Parse the above paper and identify the expression of <code>B2</code>. From 
+there, edit the function <code>execute()</code> of 
+<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code> to also 
+compute and display <code>B2</code>.
+
+<br><br>
+<h4>Exercise 4: B1 (~20 lines of code)</h4>
+The 1-st Betti number (noted <code>B1</code>) corresponds to the number of 
+independent cycles 
+of the input manifold <code>M</code>.
+To compute <code>B1</code>, we will 
+exploit one of the results by Dey and Guha, published in their 1998 paper
+<a href="https://www.cs.ait.ac.th/~guha/papers/computingHomology.pdf"
+target="new">
+"Computing Homology Groups of Simplicial Complexes in R3"</a>.<br><br>
+
+Parse the above paper and identify the expression of <code>B1</code>.
+From there, edit the function <code>execute()</code> of 
+<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code> to also 
+compute and display <code>B1</code>.
+
+<br><br>
+<h4>Exercise 5: Euler characteristic and beyond (~3 lines of code)</h4>
+
+Compute and display the Euler characteristic <code>X</code> of <code>M</code>. 
+How does it relate to the Betti numbers of <code>M</code>?<br><br>
+
+<div class=caption>
+  <a href="img/bettiNumbers_thresholding.png" target="new">
+    <img width="100%" src="img/bettiNumbers_thresholding.png">
+  </a>
+</div>
+
+Now, in ParaView, use the <code>Threshold</code> filter on your input 
+triangulation and modify the <code>Maximum</code> parameter (the upper bound). 
+Since our test data sets come with an attached scalar field, this will have the 
+effect of selecting all the tetrahedra of <code>M</code> with vertices having a 
+default scalar value below the <code>Maximum</code> parameter.<br><br>
+
+Now use your module to compute the Betti number of this selection. Now adjust 
+the <code>Maximum</code> parameter again and click on <code>Apply</code>. The 
+Betti numbers should automatically be updated.<br><br>
+
+Keep on modifying the value <code>Maximum</code>. Where do the Betti numbers 
+change? What do these configurations correspond to?<br><br>
+
+Check your intuition with the other data-sets available in the 
+<code>~/ttk/bettiData/</code> directory. Note that for <code>at.vti</code>, you 
+will need to call the filter <code>Tetrahedralize</code> prior to any other 
+processing.<br><br>
+
+Now, instead of changing the <code>Maximum</code> parameter of the 
+<code>Threshold</code> filter, change the <code>Minimum</code> parameter 
+instead. What do you observe in terms of the changes of Betti numbers?
+
 </p>
 
 
@@ -340,7 +558,7 @@ Next algorithm to compute connected components, that's B0.
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on October 13th, 2017.</p>
+                    Updated on October 16th, 2017.</p>
                 </div>
             </div>
         </div>
