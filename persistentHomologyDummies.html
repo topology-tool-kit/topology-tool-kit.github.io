@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Topology ToolKit">
+    <meta name="author" content="The Topology ToolKit">
+    <meta name="keywords" content="TTK, Topology ToolKit, Topological Data 
+Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour 
+tree, persistence diagram, persistence curve, continuous scatterplot, fiber 
+surface, contour forests, jacobi set, mandatory critical points, topological 
+simplification, VTK, ParaView, Python" />
+
+    <title>TTK - the Topology ToolKit</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'
+);
+
+  ga('create', 'UA-88087813-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl =
+  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-88087813-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" 
+data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                TTK Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling 
+-->
+            <div class="collapse navbar-collapse" 
+id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="installation.html">Installation</a>
+                    </li>
+                    <li>
+                        <a href="tutorials.html">Tutorials</a>
+                    </li>
+                    <li>
+                        <a href="documentation.html">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="contribute.html">Contribute</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" 
+      style="background-image: url('img/builtinExample.png'">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Topology ToolKit</h1>
+                        <hr class="small">
+                        <span class="subheading">Tutorials</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+<p>
+<h3>
+Persistent Homology for Dummies</h3>
+<br>
+
+The purpose of this exercise tutorial is twofold:<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; Introduce you to the usage of TTK in 
+ParaView;<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; Introduce you to persistent homology from a 
+practical point of view.
+<br><br>
+
+This exercise requires some minor background of Python. <br>
+It should take no more than 2 hours of your time.
+
+<br><br>
+
+<p>
+<h4><a name="betti_downloads">1.</a> Downloads</h4>
+In the following, we will assume that TTK has been installed successfully on 
+your system. If not, please visit our installation page for detailed 
+instructions
+<a href="installation.html" target="new">
+HERE</a>.<br>
+
+Before starting the exercise, please download the data package 
+<a href="stuff/bettiData.tar.gz" target=new>
+HERE</a> as well as the latest TTK source tree 
+<a href="https://codeload.github.com/topology-tool-kit/ttk/tar.gz/v0.9.2"
+target="new">
+THERE</a>.<br>
+
+Move the tarballs to a working directory (for instance called 
+<code>~/ttk</code>) and decompress them by entering the following commands (omit 
+the <code>$</code> character)  in 
+a terminal (this assumes that you downloaded the tarballs to the 
+<code>~/Downloads</code> directory):<br><br>
+<code>$ mkdir ~/ttk</code><br>
+<code>$ mv ~/Downloads/ttk-0.9.2.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/bettiData.tar.gz ~/ttk/</code><br>
+<code>$ cd ~/ttk</code><br>
+<code>$ tar xvzf ttk-0.9.2.tar.gz</code><br>
+<code>$ tar xvzf bettiData.tar.gz</code><br><br>
+You can delete the tarballs after the source trees have been decompressed by 
+entering the following commands:<br><br>
+<code>$ rm ttk-0.9.2.tar.gz</code><br>
+<code>$ rm bettiData.tar.gz</code><br><br>
+
+
+</p>
+
+
+<p>
+<h4><a name="betti_paraview">2.</a> TTK/ParaView 101</h4>
+
+<a href="http://www.paraview.org" target="new">ParaView</a> is the leading 
+application for the interactive analysis and visualization of scientific data. 
+It is open-source (BSD license). It is developed by <a 
+href="http://www.kitware.com" target="new">Kitware</a>, a prominent company in 
+open-source software (<a href="http://www.cmake.org" target="new">CMake</a>,
+<a href="http://www.cdash.org" target="new">CDash</a>,
+<a href="http://www.vtk.org" target="new">VTK</a>,
+<a href="http://www.itk.org" target="new">ITK</a>, etc.).<br><br>
+ 
+ParaView is a graphical user interface to the <a href="http://www.vtk.org" 
+target="new">Visualization ToolKit</a>, a C++ library for data 
+visualization and analysis, also developed in open-source by Kitware.<br><br>
+
+
+
+<div class=caption>
+  <a href="img/bettiNumbers_intro.png" target="new">
+    <img width="100%" src="img/bettiNumbers_intro.png">
+  </a>
+</div>
+
+VTK and ParaView both implement a 
+pipeline model, where the data to analyze and visualize is passed on the input 
+of a (possibly complex) sequence of elementary processing units, called 
+<i>filters</i>. Each filter is implemented by a single C++ class in VTK. In 
+ParaView, users can design advanced processing pipelines
+by placing manually each filter in their
+pipelines. <br>
+In the above example, the active pipeline (shown in the "Pipeline Browser", 
+upper left panel) can be interpreted as a series of processing instructions and 
+reads similarly to some source code:
+first, the input PL 3-manifold is clipped (<code>Clip1</code>); second, the 
+boundary of the input PL 3-manifold is extracted 
+(<code>ExtractSurface1</code>), third the connected components of the boundary 
+are isolated and clipped with the same parameters as the rest of the volume 
+(<code>Clip2</code>).<br><br>
+ 
+The output of each filter can be visualized independently (by 
+toggling the eye icon, left column). The algorithmic parameters of each filter 
+can be tuned in the "Properties" panel (bottom left panel)  by selecting a 
+filter in the pipeline (in the above example 
+<code>GenerateSurfaceNormals1</code>).  
+The display properties of the output of a filter in the main central view can 
+also be modified from this panel.<br><br>
+
+<div class=caption>
+  <a href="img/bettiNumbers_menu.png" target="new">
+    <img width="100%" src="img/bettiNumbers_menu.png">
+  </a>
+</div>
+To create a pipeline from scratch, users typically load their input data and 
+apply successively the required filters, by browsing the filter menu 
+(exhaustive list shown above), where the filters which are not compatible 
+with the object currently selected in the pipeline are shaded. 
+
+<div class=caption>
+  <a href="img/bettiNumbers_search.png" target="new">
+    <img width="100%" src="img/bettiNumbers_search.png">
+  </a>
+</div>
+Alternatively to the filter menu, users can toggle a fast search dialog by 
+pressing the <code>Ctrl+space</code> keystroke (under Linux) and enter keywords 
+as shown above to quickly call filters.<br><br>
+
+Once users are satisfied with their analysis and visualization pipeline, they 
+can save it to disk for later re-use in the form of a Python script with the 
+menu <code>File</code>, <code>Save state...</code> and choosing the Python 
+state file type. In the Python script, each filter instance is modeled by an 
+independent Python object, for which attributes can be changed and functions 
+can be called.<br>
+Note that the output Python script can be run independently of ParaView (for 
+instance in batch mode) and its content can be included in any Python code (the 
+<code>pvpython</code> interpreter is then recommended). Thus, ParaView can be 
+viewed as an interactive designer of advanced analysis Python programs. 
+Then, writing up your own TTK module will not only expose your C++ code to 
+ParaView, but it will also make it readily available in Python.
+To 
+learn more about the available ParaView filters, please see the following 
+tutorials:
+<a href="http://www-pequan.lip6.fr/~tierny/visualizationExerciseParaView.html"
+target="new">
+HERE </a>
+and 
+<a href="http://www.paraview.org/Wiki/The_ParaView_Tutorial"
+target="new">
+THERE</a>.
+<br><br>
+
+<h4>Exercise 1</h4>
+
+- create some data set plane
+- python calculator + color map
+
+<h4>Exercise 2</h4>
+split view, 3 wrapping 
+compute sub-level set and level set 
+inspect level set in triangle
+
+<h4>Exercise 3</h4>
+animating the thing
+what values does it change it its number of connected component (B0), number of 
+independent cycles (B1)?
+
+<h4>Exercise 4</h4>
+display the critical point.
+sphere
+
+
+<h4>Exercise 5</h4>
+other view
+compute the persistence diagram.
+sphere and all
+
+
+<h4>Exercise 5</h4>
+simplified persistence diagram
+reconstruct simplified function (numerical perturbation)
+do the same thing:
+2D view, critical point, sublevel set + contour
+play with persistence threshold with only 1 maximum
+play the animation
+question about the shape of the sublevel set 
+
+<h4>Exercise 6</h4>
+spread sheet view to inspect the persistence of the missing pairs
+compute the Linfy distance
+play with persistence threshold?
+what the relation
+why?
+uncheck numerical perturbation
+
+<h4>Exercise 7</h4>
+what is the 2nd highest mountain in the world
+compute the merge tree (top)
+show it
+extract the region mapping to max arcs
+display them in color
+
+how about the area (triangle count of the highest mountain in the world)
+same thing on simplified data?
+how about its area?
+
+<h4>Exercise 8</h4>
+save the initial terrain (vtu file format)
+open new paraview session, reproduce the thing 
+save to python script
+save to vtu file format.
+execute (env +x, etc). open in paraview
+say it can be save in csv.
+
+<h4>Exercise 9</h4>
+do the same thing for the foot.
+
+
+Open the skull data set in ParaView with the following command (omit 
+the <code>$</code> character):<br><br>
+<code>$ paraview ~/ttk/bettiData/skull.vtu</code>
+<br><br>
+
+Next, try to reproduce the visualization shown in the first screenshot above, 
+which shows a clipped view of the PL 3-manifold, with the visible interior 
+triangles in white with dark edges, each boundary component displayed with 
+its edges with a distinct color and the rest of the (unclipped) boundary shown 
+in transparent. 
+</p>
+
+<p>
+<h4><a name="betti_paraview">3.</a> Betti numbers of PL 3-manifolds</h4>
+In the following, you will write your first TTK module, dedicated to the 
+computation of Betti numbers of PL 3-manifolds. For this, we will exploit the 
+results by Dey and Guha, published in their 1998 paper
+<a 
+href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.41.2252&rep=rep1&
+type=pdf"
+target="new">
+"Computing Homology Groups of Simplicial Complexes in R3"</a>.<br><br>
+
+Go ahead and create your TTK module by entering the following commands (omit 
+the <code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-0.9.2/</code><br>
+<code>$ scripts/createTTKmodule.sh BettiNumbers</code><br><br>
+The above script will create all the files and classes of your TTK module. This 
+module includes automatically generated standalone command line and GUI 
+programs, as well as a ParaView plugin. <br><br>
+
+For this exercise, we will only need to build your TTK module, and not the 
+entire TTK collection. Thus, edit the file 
+<code>~/ttk/ttk-0.9.2/CMakeLists.txt</code> to remove all entries, except the 
+first line and all the lines containing the word <code>BettiNumbers</code>.<br>
+
+Now, to build your TTK module, enter the following commands, where 
+<code>N</code> is the number of available cores on your system (omit 
+the <code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-0.9.2/</code><br>
+<code>$ mkdir build</code><br>
+<code>$ cd build</code><br>
+<code>$ cmake ../</code><br>
+<code>$ make -jN</code><br><br>
+Note that, in order to rebuild your module in the future, you'll only need to 
+enter the last command (<code>make -jN</code>).<br>
+
+<div class=caption>
+  <a href="img/bettiNumbers_plugin.png" target="new">
+    <img width="100%" src="img/bettiNumbers_plugin.png">
+  </a>
+</div>
+
+To load your module in ParaView, open 
+ParaView, go to the menu <code>Tools</code>, <code>Manage Plugins...</code>, 
+then click on the <code>Load New...</code> button. Next, from the file browser 
+dialog, select the library we've just built: 
+<code>~/ttk/ttk-0.9.2/build/paraview/BettiNumbers/libBettiNumbers.so</code>. 
+Next, you may want to check the checkbox <code>AutoLoad</code> as shown above 
+(available after expending your plugin entry) to force ParaView to 
+automatically load your plugin at startup.<br>
+At this point, if your plugin was successfully loaded, it should appear as the 
+entry <code>TTK BettiNumbers</code> under the menu <code>Filters</code> then 
+<code>TTK - Misc</code>, as shown below.
+
+<div class=caption>
+  <a href="img/bettiNumbers_pluginMenu.png" target="new">
+    <img width="100%" src="img/bettiNumbers_pluginMenu.png">
+  </a>
+</div>
+
+Now open the file 
+<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code>. In the 
+function <code>execute()</code>, add the line <code>cout << endl << 
+"Hello World!" << endl << endl;</code> before the <code>return</code> 
+statement. Now build your module again, load the skull data set in ParaView and 
+apply your BettiNumbers plugin. You should see your message "Hello World!" 
+appear in the terminal, as shown below.
+
+<div class=caption>
+  <a href="img/bettiNumbers_helloWorld.png" target="new">
+    <img width="100%" src="img/bettiNumbers_helloWorld.png">
+  </a>
+</div>
+
+If this is the case, congratulations! You've just written your first TTK module!
+<br><br>
+
+<h4>Exercise 2: B0 (~20 lines of code)</h4>
+The 0-th Betti number (noted <code>B0</code>) corresponds to the number of 
+connected component of the input manifold <code>M</code>. In the following, we 
+will compute this number and display it in the output of the terminal (next to 
+our "Hello World!" message).<br><br>
+
+Several algorithms exist to enumerate connected components in a triangulation, 
+the simplest being a simple
+<a href="https://en.wikipedia.org/wiki/Breadth-first_search" target="new">
+breadth-first search</a> traversal. Instead, we will use a <i>Union-Find</i> 
+data-structure, which will make the implementation even simpler.<br><br>
+
+The 
+<a href="https://en.wikipedia.org/wiki/Disjoint-set_data_structure" 
+target="new">
+Union-Find</a> (UF) data-structure is a simple, yet powerful data-structure 
+which tracks the connectivity of a graph over successive edge additions. It is 
+a fundamental object which plays a key role in many computational topology 
+algorithms.<br><br>
+
+Initially, a UF object is created for each vertex of the graph. The operation 
+<code>find()</code> on this object returns its <i>parent</i>, that is 
+a 
+unique representative UF object which <i>represents</i> the connected component 
+of the 
+queried vertex.<br><br>
+
+When adding an edge between two vertices <code>v0</code> and <code>v1</code>, 
+the <code>makeUnion()</code> operation is called between the UF objects of 
+<code>v0</code> and <code>v1</code>. This will have the effect of merging the 
+representatives of the corresponding connected components.<br><br>
+
+Thus, to enumerate the connected components of a PL manifold <code>M</code>, 
+one just needs to proceed as follows. First, one should iterate over the edges 
+of <code>M</code>, call the <code>makeUnion()</code> operation between the UF 
+objects of the vertices of each edge of <code>M</code>. Finally, one should 
+iterate over all the UF objects, call the <code>find()</code> operation and 
+enumerate the number of unique remaining representatives. This number 
+corresponds to the number of remaining connected components after all edges have 
+been added (initially, the number of connected components is equal to the 
+number of vertices in <code>M</code>).<br><br>
+
+TTK provides a reference implementation of the Union-Find data structure (with 
+path compression and union by rank), which we will use in this exercise. Its 
+online documentation can be found 
+<a 
+href="https://topology-tool-kit.github.io/doc/html/classttk_1_1UnionFind.html"
+target="new">
+HERE</a>.<br><br>
+
+To use it in your module, edit the file 
+<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/bettiNumbers.cmake</code> and 
+add the line <code>ttk_add_baseCode_package(unionFind)</code> at the 
+top of the file. Next, in 
+<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code>, add the 
+line <code>#include &lt;UnionFind.h&gt;</code> in the file preamble.<br><br>
+
+TTK provides an efficient data structure for fast triangulation traversal. Its 
+online documentation can be found 
+<a 
+href="https://topology-tool-kit.github.io/doc/html/classttk_1_1Triangulation.
+html"
+target="new">
+HERE</a>.<br><br>
+
+In <code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code>, a 
+pointer to an object of this class (<code>triangulation_</code>) is 
+readily available and correctly initialized to the triangulation passed on the 
+input of your module.<br><br>
+
+TTK's triangulation data-structure supports a cache based access. This means 
+the data-structure needs to be pre-conditioned depending on the type of 
+traversal it will undergo, before it gets actually traversed. For instance, if 
+you want to access the i-th vertex of the j-th edge of the triangulation (with 
+the function <code>getEdgeVertex()</code>), you will need, before the actual 
+traversal, to call the pre-conditioning function 
+<code>preprocessEdges()</code> in a pre-process, as explained in the 
+<a 
+href="https://topology-tool-kit.github.io/doc/html/classttk_1_1Triangulation.
+html#a0c7e36ed34696d0d26eb411272145880"
+target="new">documentation of the 
+<code>getEdgeVertex()</code> function</a>. 
+Note that each traversal function comes with its own pre-conditioning function, 
+to be called in the pre-processing stage of your module.
+<br><br>
+
+Typically, in 
+<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code>, the 
+function <code>setupTriangulation()</code> is the right placeholder to put such 
+a pre-conditioning statement, while the actual traversal should happen in the 
+<code>execute()</code> function, next to our prior "Hello World!" 
+message.<br><br>
+
+Now go ahead and compute <code>B0</code>, the number of connected components of 
+<code>M</code>.<br><br>
+
+To do this, you'll need to allocate an array (typically an STL vector) of 
+<code>UnionFind</code> objects with as many entries as vertices in 
+<code>M</code>. Next, you'll need to iterate over the edges of <code>M</code> 
+and call the <code>makeUnion()</code> operation on the UF objects of each edge. 
+Finally, you'll need to iterate over your initial array of UF objects, 
+re-assign to each entry the result of its <code>find()</code> operation (to 
+obtain the latest representative) and enumerate the number of unique remaining 
+representatives.
+
+<br><br>
+<h4>Exercise 3: B2 (~30 lines of code)</h4>
+The 2-nd Betti number (noted <code>B2</code>) corresponds to the number of 
+voids of the input manifold <code>M</code>. To compute <code>B2</code>, we will 
+exploit one of the results by Dey and Guha, published in their 1998 paper
+<a 
+href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.41.2252&rep=rep1&
+type=pdf"
+target="new">
+"Computing Homology Groups of Simplicial Complexes in R3"</a>.<br><br>
+
+Parse the above paper and identify the expression of <code>B2</code>. From 
+there, edit the function <code>execute()</code> of 
+<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code> to also 
+compute and display <code>B2</code>.
+
+<br><br>
+<h4>Exercise 4: B1 (~20 lines of code)</h4>
+The 1-st Betti number (noted <code>B1</code>) corresponds to the number of 
+independent cycles 
+of the input manifold <code>M</code>.
+To compute <code>B1</code>, we will 
+exploit one of the results by Dey and Guha, published in their 1998 paper
+<a 
+href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.41.2252&rep=rep1&
+type=pdf"
+target="new">
+"Computing Homology Groups of Simplicial Complexes in R3"</a>.<br><br>
+
+Parse the above paper and identify the expression of <code>B1</code>.
+From there, edit the function <code>execute()</code> of 
+<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code> to also 
+compute and display <code>B1</code>.
+
+<br><br>
+<h4>Exercise 5: Euler characteristic and beyond (~3 lines of code)</h4>
+
+Compute and display the Euler characteristic <code>X</code> of <code>M</code>. 
+How does it relate to the Betti numbers of <code>M</code>?<br><br>
+
+<div class=caption>
+  <a href="img/bettiNumbers_thresholding.png" target="new">
+    <img width="100%" src="img/bettiNumbers_thresholding.png">
+  </a>
+</div>
+
+Now, in ParaView, use the <code>Threshold</code> filter on your input 
+triangulation and modify the <code>Maximum</code> parameter (the upper bound). 
+Since our test data sets come with an attached scalar field, this will have the 
+effect of selecting all the tetrahedra of <code>M</code> with vertices having a 
+default scalar value below the <code>Maximum</code> parameter.<br><br>
+
+Now use your module to compute the Betti numbers of this selection. Now adjust 
+the <code>Maximum</code> parameter again and click on <code>Apply</code>. The 
+Betti numbers should be updated automatically.<br><br>
+
+Keep on modifying the value <code>Maximum</code>. Where do the Betti numbers 
+change? What do these configurations correspond to?<br><br>
+
+Check your intuition with the other data-sets available in the 
+<code>~/ttk/bettiData/</code> directory. Note that for <code>at.vti</code>, you 
+will need to call the filter <code>Tetrahedralize</code> prior to any other 
+processing.<br><br>
+
+Now, instead of changing the <code>Maximum</code> parameter of the 
+<code>Threshold</code> filter, change the <code>Minimum</code> parameter 
+instead. What do you observe in terms of the changes of Betti numbers?
+
+</p>
+
+
+
+</p>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">
+                    Contact: <a href="mailto:topology.tool.kit@gmail.com">
+                    topology.tool.kit@gmail.com</a><br>
+                    Updated on October 16th, 2017.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
