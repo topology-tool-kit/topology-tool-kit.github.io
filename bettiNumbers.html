@@ -208,7 +208,7 @@ open-source software (<a href="http://www.cmake.org" target="new">CMake</a>,
  
 ParaView is a graphical user interface to the <a href="http://www.vtk.org" 
 target="new">Visualization ToolKit</a>, a C++ library for data 
-visualization and analysis, also developed in open-source by Kitware.<br><br>
+visualization and analysis, also developed in open-source by Kitware.<br>
 
 
 
@@ -240,7 +240,7 @@ can be tuned in the "Properties" panel (bottom left panel)  by selecting a
 filter in the pipeline (in the above example 
 <code>GenerateSurfaceNormals1</code>).  
 The display properties of the output of a filter in the main central view can 
-also be modified from this panel.<br><br>
+also be modified from this panel.<br>
 
 <div class=caption>
   <a href="img/bettiNumbers_menu.png" target="new">
@@ -250,7 +250,7 @@ also be modified from this panel.<br><br>
 To create a pipeline from scratch, users typically load their input data and 
 apply successively the required filters, by browsing the filter menu 
 (exhaustive list shown above), where the filters which are not compatible 
-with the object currently selected in the pipeline are shaded. 
+with the object currently selected in the pipeline are shaded. <br>
 
 <div class=caption>
   <a href="img/bettiNumbers_search.png" target="new">
@@ -349,7 +349,7 @@ Next, you may want to check the checkbox <code>AutoLoad</code> as shown above
 automatically load your plugin at startup.<br>
 At this point, if your plugin was successfully loaded, it should appear as the 
 entry <code>TTK BettiNumbers</code> under the menu <code>Filters</code> then 
-<code>TTK - Misc</code>, as shown below.
+<code>TTK - Misc</code>, as shown below.<br>
 
 <div class=caption>
   <a href="img/bettiNumbers_pluginMenu.png" target="new">
@@ -363,7 +363,7 @@ function <code>execute()</code>, add the line <code>cout << endl <<
 "Hello World!" << endl << endl;</code> before the <code>return</code> 
 statement. Now build your module again, load the skull data set in ParaView and 
 apply your BettiNumbers plugin. You should see your message "Hello World!" 
-appear in the terminal, as shown below.
+appear in the terminal, as shown below.<br>
 
 <div class=caption>
   <a href="img/bettiNumbers_helloWorld.png" target="new">
@@ -517,7 +517,7 @@ compute and display <code>B1</code>.
 <h4>Exercise 5: Euler characteristic and beyond (~3 lines of code)</h4>
 
 Compute and display the Euler characteristic <code>X</code> of <code>M</code>. 
-How does it relate to the Betti numbers of <code>M</code>?<br><br>
+How does it relate to the Betti numbers of <code>M</code>?<br>
 
 <div class=caption>
   <a href="img/bettiNumbers_thresholding.png" target="new">
