@@ -146,14 +146,16 @@ id="bs-example-navbar-collapse-1">
 Persistent Homology for Dummies</h3>
 <br>
 
-The purpose of this exercise tutorial is twofold:<br>
+The purpose of this exercise tutorial is threefold:<br>
 &nbsp;&nbsp;&nbsp;&middot;&nbsp; Introduce you to the usage of TTK in 
-ParaView;<br>
+ParaView and Python;<br>
 &nbsp;&nbsp;&nbsp;&middot;&nbsp; Introduce you to persistent homology from a 
-practical point of view.
+practical point of view;<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; Introduce you to the applications of 
+persistent homology to medical data segmentation.
 <br><br>
 
-This exercise requires some minor background of Python. <br>
+This exercise requires some very mild background of Python. <br>
 It should take no more than 2 hours of your time.
 
 <br><br>
@@ -167,27 +169,22 @@ instructions
 HERE</a>.<br>
 
 Before starting the exercise, please download the data package 
-<a href="stuff/bettiData.tar.gz" target=new>
-HERE</a> as well as the latest TTK source tree 
-<a href="https://codeload.github.com/topology-tool-kit/ttk/tar.gz/v0.9.2"
-target="new">
-THERE</a>.<br>
+<a href="https://codeload.github.com/topology-tool-kit/ttk-data/tar.gz/v0.9.3" 
+target=new>
+HERE</a>.<br>
 
-Move the tarballs to a working directory (for instance called 
-<code>~/ttk</code>) and decompress them by entering the following commands (omit 
+Move the tarball to a working directory (for instance called 
+<code>~/ttk</code>) and decompress it by entering the following commands (omit 
 the <code>$</code> character)  in 
-a terminal (this assumes that you downloaded the tarballs to the 
+a terminal (this assumes that you downloaded the tarball to the 
 <code>~/Downloads</code> directory):<br><br>
 <code>$ mkdir ~/ttk</code><br>
-<code>$ mv ~/Downloads/ttk-0.9.2.tar.gz ~/ttk/</code><br>
-<code>$ mv ~/Downloads/bettiData.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ttk-data-0.9.3.tar.gz ~/ttk/</code><br>
 <code>$ cd ~/ttk</code><br>
-<code>$ tar xvzf ttk-0.9.2.tar.gz</code><br>
-<code>$ tar xvzf bettiData.tar.gz</code><br><br>
-You can delete the tarballs after the source trees have been decompressed by 
-entering the following commands:<br><br>
-<code>$ rm ttk-0.9.2.tar.gz</code><br>
-<code>$ rm bettiData.tar.gz</code><br><br>
+<code>$ tar xvzf ttk-data-0.9.3.tar.gz</code><br><br>
+You can delete the tarball after decompression by
+entering the following command:<br><br>
+<code>$ rm ttk-data-0.9.3.tar.gz</code><br>
 
 
 </p>
@@ -207,7 +204,7 @@ open-source software (<a href="http://www.cmake.org" target="new">CMake</a>,
  
 ParaView is a graphical user interface to the <a href="http://www.vtk.org" 
 target="new">Visualization ToolKit</a>, a C++ library for data 
-visualization and analysis, also developed in open-source by Kitware.<br><br>
+visualization and analysis, also developed in open-source by Kitware.<br>
 
 
 
@@ -239,7 +236,7 @@ can be tuned in the "Properties" panel (bottom left panel)  by selecting a
 filter in the pipeline (in the above example 
 <code>GenerateSurfaceNormals1</code>).  
 The display properties of the output of a filter in the main central view can 
-also be modified from this panel.<br><br>
+also be modified from this panel.<br>
 
 <div class=caption>
   <a href="img/bettiNumbers_menu.png" target="new">
@@ -249,7 +246,7 @@ also be modified from this panel.<br><br>
 To create a pipeline from scratch, users typically load their input data and 
 apply successively the required filters, by browsing the filter menu 
 (exhaustive list shown above), where the filters which are not compatible 
-with the object currently selected in the pipeline are shaded. 
+with the object currently selected in the pipeline are shaded. <br>
 
 <div class=caption>
   <a href="img/bettiNumbers_search.png" target="new">
@@ -259,6 +256,14 @@ with the object currently selected in the pipeline are shaded.
 Alternatively to the filter menu, users can toggle a fast search dialog by 
 pressing the <code>Ctrl+space</code> keystroke (under Linux) and enter keywords 
 as shown above to quickly call filters.<br><br>
+
+ParaView supports the rendering of multiple (possibly linked) views. To 
+generate a new view, users simply need to click on the vertical or horizontal 
+split buttons, located at the top right of the current render view. To 
+link two views together (i.e. to synchronize them in terms of view 
+point), users simply need to right-click in one of the two views, then 
+select the <code>Link Camera...</code> entry and finally click in the 
+other view they wish to link.<br><br>
 
 Once users are satisfied with their analysis and visualization pipeline, they 
 can save it to disk for later re-use in the form of a Python script with the 
@@ -270,8 +275,6 @@ Note that the output Python script can be run independently of ParaView (for
 instance in batch mode) and its content can be included in any Python code (the 
 <code>pvpython</code> interpreter is then recommended). Thus, ParaView can be 
 viewed as an interactive designer of advanced analysis Python programs. 
-Then, writing up your own TTK module will not only expose your C++ code to 
-ParaView, but it will also make it readily available in Python.
 To 
 learn more about the available ParaView filters, please see the following 
 tutorials:
@@ -285,11 +288,73 @@ THERE</a>.
 <br><br>
 
 <h4>Exercise 1</h4>
+In the first part of this tutorial, we will experiment with some toy 2D data 
+that we will synthesize ourselves. Open ParaView and simply call the 
+<code>Plane</code> filter (also available in the <code>Sources</code> menu). 
+Create a new plane with sufficient values for the 
+parameters <code>XResolution</code>  and <code>YResolution</code> (typically 
+100 each).<br><br>
 
-- create some data set plane
-- python calculator + color map
+ParaView supports real-time interfacing with the Python scripting language. 
+For instance, by calling the <code>Programmable Source</code> or the 
+<code>Programmable Filter</code>, users can directly type in Python commands to 
+either create or interact with data. We will make use of similar features to 
+create some 2D data to attach to our plane. 
+Specifically, we will use the 
+<code>Python Calculator</code>, which will enable us to provide, in Python, the
+analytic expression of a 2D function to be considered as the input to our 
+topological data analysis pipeline.<br><br>
+
+In particular, we will create a Gaussian function, given by the 
+expression:<br><br> 
+<code>f(p) = exp(-(((p - m)^2) / (2s^2)))</code><br><br>
+where 
+<code>p</code> is the current point where to evaluate the function, and where 
+<code>m</code> and <code>s</code> are the mean and standard deviation of the 
+Gaussian.<br><br>
+
+In ParaView, each filter can have multiple inputs. In Python, the first input 
+of our <code>Python Calculator</code> filter can be accessed by the variable 
+<code>inputs[0]</code>. The actual points attached to this input can be 
+accessed by its <code>Points</code> attribute: <code>inputs[0].Points[]</code>. 
+Therefore, in your <code>Python calculator</code>, accessing the <code>x</code> 
+and <code>y</code> components of your current point <code>p</code> can be done 
+by considering the following expressions respectively: 
+<code>inputs[0].Points[:,0]</code> (for x) and 
+<code>inputs[0].Points[:,1]</code> (for y).<br><br>
+
+Use these expressions of the coordinates of the input points to evaluate in 
+your <code>Python Calculator</code> the analytic expression of 
+<code>f(p)</code> given above, to generate a 2D Gaussian as shown in the 
+example below (do not forget to name your function with a specific string for 
+the <code>Array Name</code> parameter, typically <code>gaussian0</code>).<br>
+
+<div class=caption>
+  <a href="img/persistenceDummies_firstGaussian.png" target="new">
+    <img width="100%" src="img/persistenceDummies_firstGaussian.png">
+  </a>
+</div>
+
+Now, re-iterate this process successively twice to 
+create two other Gaussians, centered in other parts of the plane, with distinct 
+standard deviations. Finally, use the <code>Python Calculator</code> to blend 
+linearly the three Gaussians you generated into only one function, as 
+illustrated below:<br>
+
+<div class=caption>
+  <a href="img/persistenceDummies_multiGaussian.png" target="new">
+    <img width="100%" src="img/persistenceDummies_multiGaussian.png">
+  </a>
+</div>
 
 <h4>Exercise 2</h4>
+We will now inspect this toy data set as a 3D terrain. First, create a new 
+render view, by clicking on the <code>Split Horizontal</code> button, located 
+in the top right corner of the current render view (next to the string 
+<code>RenderView1</code>). Next, in the newly created view, click on the 
+<code>Render View</code> button.
+
+
 split view, 3 wrapping 
 compute sub-level set and level set 
 inspect level set in triangle
