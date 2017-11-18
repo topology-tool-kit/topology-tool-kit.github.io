@@ -351,6 +351,8 @@ linearly the three Gaussians you generated into only one function, called
   </a>
 </div>
 
+
+
 <h4>Exercise 2</h4>
 We will now inspect this toy data set as a 3D terrain. First, create a new 
 render view, by clicking on the <code>Split Horizontal</code> button, located 
@@ -418,12 +420,76 @@ output of your <code>Programmable Filter</code>, by enabling the eye icon on
 its left. Adjust its display properties (<code>Coloring</code>, 
 <code>Specular</code>, <code>Ambient</code> and <code>Diffuse</code>)
 to obtain a 
-visualization comparable to the above screenshot.
+visualization comparable to the above screenshot.<br><br>
+
+</p>
+<p>
+<h4><a name="betti_paraview">4.</a> Sub-level set homology</h4>
 
 <h4>Exercise 3</h4>
-We will now visualize and inspect the evolution of the topology (of the Betti 
-numbers) of the sub-level sets as we will sweep the data.
+We will now visualize and inspect the evolution of the <i>topology</i> (of the 
+homology groups)
+of the sub-level sets as we will sweep the data continuously.<br><br>
 
+In the pipeline browser, select your <code>Programmable Filter</code> and call 
+the <code>Threshold</code> filter, to only select the points below on certain 
+isovalue of <code>multiGaussian</code>. Trigger the display of the 
+<code>Threshold</code> in both views, to obtain the following visualization:
+<br>
+<div class=caption>
+  <a href="img/persistenceDummies_subLevelSet.png" target="new">
+    <img width="100%" src="img/persistenceDummies_subLevelSet.png">
+  </a>
+</div>
+
+We will additionally compute and display a level set at the same isovalue. For 
+this, in the pipeline browser, select your <code>Programmable Filter</code> and 
+call the <code>Contour</code> filter and extract a level set at the same 
+isovalue. Next call the <code>Tube</code> filter on the output of the 
+<code>Contour</code> filter, to represent the computed level set with a 
+collection of cylinder primitives, in both views, as illustrated below:
+<br>
+<div class=caption>
+  <a href="img/persistenceDummies_levelSet.png" target="new">
+    <img width="100%" src="img/persistenceDummies_levelSet.png">
+  </a>
+</div>
+
+<h4>Exercise 4</h4>
+We will now animate the sweeping of the data and visualize the corresponding 
+animation. 
+<br><br>
+In the <code>View</code> menu, check the <code>Animation View</code> check-box. 
+The <code>Animation View</code> panel appears at the bottom of the screen. We 
+will first setup the length of the animation by setting the 
+<code>EndTime</code> parameter to <code>10</code> (seconds). Next, we will set 
+the frame rate to an admissible value (25 fps) and therefore set the parameter 
+<code>No. Frames</code> to <code>250</code>.<br><br>
+We will now specify which parameters of our visualization should vary during 
+the animation. In particular, we want the isovalue (of the sub- and level sets) 
+to continuously increase with time. For this, at the bottom left of the 
+<code>Animation View</code>, next to the <code>+</code> icon, select your 
+<code>Threshold</code> filter in the scrolling menu and select its parameter 
+capturing the isovalue (<code>Threshold Range (1)</code>)  and click on the 
+<code>+</code> button. Next, also add the <code>Contour</code> filter to the 
+animation by selecting it 
+in the bottom left scrolling menu and 
+by clicking on the 
+<code>+</code> button (the default selected parameter <code>Isosurfaces</code> 
+is precisely the parameter we want to animate). <br><br>
+
+Your animation is now ready. You can go ahead and click on the 
+<code>Play</code> button at the top of the screen.If you got it right, you 
+should be visualizing 
+something like this:<br>
+<div class=caption>
+  <a href="img/persistenceDummies_animation.png" target="new">
+    <img width="100%" src="img/persistenceDummies_animation.png">
+  </a>
+</div>
+
+
+<br><br>
 animating the thing
 
 <br><br>
@@ -458,7 +524,7 @@ question about the shape of the sublevel set
 
 <h4>Exercise 6</h4>
 spread sheet view to inspect the persistence of the missing pairs
-compute the Linfy distance
+compute the Linfy distance (by hand, not in 0.9.2)
 play with persistence threshold?
 what the relation
 why?
