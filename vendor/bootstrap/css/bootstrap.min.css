@@ -1533,6 +1533,10 @@ pre,
 samp {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+myMath{
+	color: #478aac;
+	font-weight: bold;
+}
 code {
   padding: 2px 4px;
   font-size: 90%;

@@ -39,6 +39,10 @@ a:focus {
   text-decoration: none;
   color: #478aac;
 }
+a.myMath{
+	font-weight: bold;
+	color: #478aac;
+}
 a.code{
   font-weight: bold;
   color: #478aac;

@@ -67,7 +67,14 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })();
 </script>
 <!-- End Google Analytics -->
-
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  
+src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-
+MML_HTMLorMML">
+</script>
 </head>
 
 <body>
@@ -311,11 +318,11 @@ topological data analysis pipeline.<br><br>
 
 In particular, we will create a Gaussian function, given by the 
 expression:<br><br> 
-<code>f(p) = exp(-(((p - m)^2) / (2s^2)))</code><br><br>
+<myMath>$f(p) = exp(-{{(p - \mu)^2}\over{2\sigma^2}})$</myMath><br><br>
 where 
-<code>p</code> is the current point where to evaluate the function, and where 
-<code>m</code> and <code>s</code> are the mean and standard deviation of the 
-Gaussian.<br><br>
+<myMath>$p$</myMath> is the current point where to evaluate the function, and 
+where <myMath>$\mu$</myMath> and <myMath>$\sigma$</myMath> are the mean and 
+standard deviation of the Gaussian.<br><br>
 
 In ParaView, each filter can have multiple inputs. In Python, the first input 
 of our <code>Python Calculator</code> filter can be accessed by the variable 
@@ -329,7 +336,7 @@ by considering the following expressions respectively:
 
 Use these expressions of the coordinates of the input points to evaluate in 
 your <code>Python Calculator</code> the analytic expression of 
-<code>f(p)</code> given above, to generate a 2D Gaussian as shown in the 
+<myMath>$f(p)$</myMath> given above, to generate a 2D Gaussian as shown in the 
 example below (do not forget to name your function with a specific string for 
 the <code>Array Name</code> parameter, typically <code>gaussian0</code>).<br>
 
@@ -427,9 +434,20 @@ visualization comparable to the above screenshot.<br><br>
 <h4><a name="betti_paraview">4.</a> Sub-level set homology</h4>
 
 <h4>Exercise 3</h4>
-We will now visualize and inspect the evolution of the <i>topology</i> (of the 
-homology groups)
-of the sub-level sets as we will sweep the data continuously.<br><br>
+We will now visualize and inspect the evolution of the topology (of the
+<i>Betti numbers</i> <myMath>$\beta_0$</myMath> and <myMath>$\beta_1$</myMath>)
+of the sub-level sets <myMath> $f^{-1}_{-\infty}(i)$ </myMath>as 
+<myMath>$i$</myMath> continuously sweeps the data. For further readings on 
+persistent homology, see the following 
+	<a 
+href="http://www.ee.oulu.fi/research/imag/courses/Vaccarino/Edels_Book.pdf"
+target="new">
+reference text book</a> (page 190 of the PDF file) or the following 
+<a 
+href="http://www-pequan.lip6.fr/~tierny/stuff/teaching/
+tierny_topologicalDataAnalysis.pdf" target="new"> course notes
+</a>.
+<br><br>
 
 In the pipeline browser, select your <code>Programmable Filter</code> and call 
 the <code>Threshold</code> filter, to only select the points below on certain 
@@ -442,9 +460,10 @@ isovalue of <code>multiGaussian</code>. Trigger the display of the
   </a>
 </div>
 
-We will additionally compute and display a level set at the same isovalue. For 
-this, in the pipeline browser, select your <code>Programmable Filter</code> and 
-call the <code>Contour</code> filter and extract a level set at the same 
+We will additionally compute and display the level set at the same isovalue: 
+<myMath>$f^{-1}(i)$</myMath>. 
+For this, in the pipeline browser, select your <code>Programmable Filter</code> 
+and call the <code>Contour</code> filter and extract a level set at the same 
 isovalue. Next call the <code>Tube</code> filter on the output of the 
 <code>Contour</code> filter, to represent the computed level set with a 
 collection of cylinder primitives, in both views, as illustrated below:
@@ -478,8 +497,8 @@ by clicking on the
 <code>+</code> button (the default selected parameter <code>Isosurfaces</code> 
 is precisely the parameter we want to animate). <br><br>
 
-Your animation is now ready. You can go ahead and click on the 
-<code>Play</code> button at the top of the screen.If you got it right, you 
+Your animation is now ready to play!<br> Go ahead and click on the 
+<code>Play</code> button at the top of the screen. If you got it right, you 
 should be visualizing 
 something like this:<br>
 <div class=caption>
@@ -488,6 +507,15 @@ something like this:<br>
   </a>
 </div>
 
+For what isovalues <myMath>$i$</myMath>:<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; does 
+<myMath>$\beta_0(f^{-1}_{-\infty}(i))$</myMath> increase?<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; does 
+<myMath>$\beta_0(f^{-1}_{-\infty}(i))$</myMath> decrease?<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; does 
+<myMath>$\beta_1(f^{-1}_{-\infty}(i))$</myMath> increase?<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; does 
+<myMath>$\beta_1(f^{-1}_{-\infty}(i))$</myMath> decrease?<br>
 
 <br><br>
 animating the thing
