@@ -286,6 +286,10 @@ and
 target="new">
 THERE</a>.
 <br><br>
+</p>
+
+<p>
+<h4><a name="betti_paraview">3.</a> Generating some toy data</h4>
 
 <h4>Exercise 1</h4>
 In the first part of this tutorial, we will experiment with some toy 2D data 
@@ -338,8 +342,8 @@ the <code>Array Name</code> parameter, typically <code>gaussian0</code>).<br>
 Now, re-iterate this process successively twice to 
 create two other Gaussians, centered in other parts of the plane, with distinct 
 standard deviations. Finally, use the <code>Python Calculator</code> to blend 
-linearly the three Gaussians you generated into only one function, as 
-illustrated below:<br>
+linearly the three Gaussians you generated into only one function, called 
+<code>multiGaussian</code>, as illustrated below:<br>
 
 <div class=caption>
   <a href="img/persistenceDummies_multiGaussian.png" target="new">
@@ -352,9 +356,77 @@ We will now inspect this toy data set as a 3D terrain. First, create a new
 render view, by clicking on the <code>Split Horizontal</code> button, located 
 in the top right corner of the current render view (next to the string 
 <code>RenderView1</code>). Next, in the newly created view, click on the 
-<code>Render View</code> button.
+<code>Render View</code> button.<br><br>
 
+To generate a 3D terrain, we will first triangulate the plane, which is 
+currently represented as a 2D regular grid. For this, select the last 
+<code>Python Calculator</code> object in your pipeline and call the 
+<code>Tetrahedralize</code> filter on it. Next, we will modify the x, y and z 
+coordinates of the vertices of this mesh to create a terrain.<br><br>
 
+To do this, we will use the <code>Programmable Filter</code> and enter some 
+Python instructions to assign the previously define multi-gaussian function, 
+named <code>multiGaussian</code>, as a z coordinate. <code>Programmable 
+Filters</code> generate only one output, which is by default a copy of the input 
+geometry. Thus, to access the output of your <code>Programmable Filter</code>, 
+you need to use the Python expression <code>output</code>. Then, the z 
+coordinate of the output can be accessed, similarly as to the previous 
+exercise, by considering 
+the Python expression <code>output.Points[:, 2]</code>.
+The scalar data that we generated in the 
+previous exercise (<code>multiGaussian</code>) can be 
+accessed by considering the field <code>multiGaussian</code> on the point data 
+of the first input. This is achieved by considering the expression 
+<code>inputs[0].PointData["multiGaussian"]</code>. <br><br>
+
+Now enter the 
+correct Python instruction in the <code>Script</code> text-box of your 
+<code>Programmable Filter</code> to assign the <code>multiGaussian</code> value 
+to the z coordinate of each point of the data and click on the 
+<code>Apply</code> button. If you got it right, you should be visualizing 
+something like this:<br>
+<div class=caption>
+  <a href="img/persistenceDummies_terrain.png" target="new">
+    <img width="100%" src="img/persistenceDummies_terrain.png">
+  </a>
+</div>
+
+By default, the scalar fields attached to the input of our 
+<code>Programmable Filter</code> have not been copied over to the output of the 
+filter. We will now copy the field <code>multiGaussian</code>, in order to 
+apply further processing on it. To add some data array to your output object, 
+you need to use the function <code>append()</code> on your 
+<code>output.PointData</code> object. This function takes as a first argument 
+the actual data array (in our case 
+<code>inputs[0].PointData["multiGaussian"]</code>) and as a second argument a 
+string, used to name the created data array (in our case, let us name it 
+<code>multiGaussian</code> too).<br><br>
+
+Add a second instruction in the <code>Script</code> text-box of your 
+<code>Programmable Filter</code> to copy the field 
+<code>inputs[0].PointData["multiGaussian"]</code> over to your output and click 
+on the <code>Apply</code> button. If you got it right, you should be 
+visualizing something like this:<br>
+<div class=caption>
+  <a href="img/persistenceDummies_terrainScalar.png" target="new">
+    <img width="100%" src="img/persistenceDummies_terrainScalar.png">
+  </a>
+</div>
+Now, select the left render view (with the 2D version of your data), by 
+clicking in it. Next, in the pipeline browser, trigger the display of the 
+output of your <code>Programmable Filter</code>, by enabling the eye icon on 
+its left. Adjust its display properties (<code>Coloring</code>, 
+<code>Specular</code>, <code>Ambient</code> and <code>Diffuse</code>)
+to obtain a 
+visualization comparable to the above screenshot.
+
+<h4>Exercise 3</h4>
+We will now visualize and inspect the evolution of the topology (of the Betti 
+numbers) of the sub-level sets as we will sweep the data.
+
+animating the thing
+
+<br><br>
 split view, 3 wrapping 
 compute sub-level set and level set 
 inspect level set in triangle
@@ -696,7 +768,7 @@ instead. What do you observe in terms of the changes of Betti numbers?
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on October 16th, 2017.</p>
+                    Updated on November 18th, 2017.</p>
                 </div>
             </div>
         </div>
