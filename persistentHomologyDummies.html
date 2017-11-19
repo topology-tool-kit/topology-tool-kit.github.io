@@ -633,8 +633,10 @@ string <code>RenderView3</code> and click on the <code>Render View</code>
 button. In this view, display the diagonal of the persistence diagram as well 
 as the persistence pairs more persistent than the two pairs identified in the 
 previous question (use the <code>Threshold</code> filter on the 
-<code>Persistence</code> array to isolate those). Enhance the visualization, as 
-suggested in the previous question.  If you got it right, you should be 
+<code>Persistence</code> array to isolate those, as the pairs above a given 
+persistence threshold and below an arbitrarily high threshold, for instance 
+<code>9999</code>). Enhance the visualization, as suggested in the previous 
+question.  If you got it right, you should be 
 visualizing something like this:
 
 <br>
@@ -686,8 +688,26 @@ should be visualizing something like this:
   </a>
 </div>
 
+Similarly to the exercise 2, we will now modify the geometry of the terrain, 
+such that the z coordinate of each point becomes equal to the simplified 
+function <myMath>$g$</myMath>. For this, select the <code>TTK 
+TopologicalSimplification</code> filter in the pipeline browser and call a 
+<code>Programmable Filter</code> on it and apply the same processing as in 
+the exercise 2 (do not forget to copy the fields <code>multiGaussian</code> and 
+<code>originalGaussian</code>).<br><br>
+
+Now split the left view vertically, using the 
+<code>Split Vertical</code> bottom (top right corner, second button after the 
+string <code>RenderView1</code> and click on the <code>Render View</code> 
+button. Click now on the <code>3D</code> icon (top left corner of the view) to 
+switch it to <code>2D</code> and trigger the display of the output of the 
+second <code>Programmable Filter</code> in it. Adjust its display properties 
+
+
 
 <br><br>
+NEXT EXERCISE: L_intfy norm
+
 simplified persistence diagram
 reconstruct simplified function (numerical perturbation)
 do the same thing:
