@@ -488,7 +488,9 @@ We will now specify which parameters of our visualization should vary during
 the animation. In particular, we want the isovalue (of the sub- and level sets) 
 to continuously increase with time. For this, at the bottom left of the 
 <code>Animation View</code>, next to the <code>+</code> icon, select your 
-<code>Threshold</code> filter in the scrolling menu and select its parameter 
+<code>Threshold</code> filter in the left scrolling menu and then, within 
+the right scrolling menu, select  its 
+parameter 
 capturing the isovalue (<code>Threshold Range (1)</code>)  and click on the 
 <code>+</code> button. Next, also add the <code>Contour</code> filter to the 
 animation by selecting it 
@@ -517,23 +519,102 @@ For what isovalues <myMath>$i$</myMath>:<br>
 &nbsp;&nbsp;&nbsp;&middot;&nbsp; does 
 <myMath>$\beta_1(f^{-1}_{-\infty}(i))$</myMath> decrease?<br>
 
-<br><br>
-animating the thing
+<br>
 
-<br><br>
-split view, 3 wrapping 
-compute sub-level set and level set 
-inspect level set in triangle
+<h4>Exercise 5</h4>
+We will now identify the exact locations in the data where the Betti numbers of 
+<myMath>$f^{-1}_{-\infty}(i)$</myMath> change. <br><br>
+Select the view with the 3D terrain by clicking in it. In the pipeline browser, 
+select the output of your <code>Programmable Filter</code> and call the filter 
+<code>TTK ScalarFieldCriticalPoints</code> on it.<br>
+The output of this filter is a point cloud that may be difficult to visualize 
+by default. We will enhance this visualization by displaying a visual glyph for 
+each point, in particular, a sphere. Call the filter <code>TTK 
+SphereFromPoint</code> filter on the output of the <code>TTK 
+ScalarFieldCriticalPoints</code> filter and adjust the <code>Radius</code> 
+parameter. Next, change the coloring of these spheres, in order to use the 
+array <code>CriticalIndex</code>. Finally, select the 2D view on the left by 
+clicking in it and trigger the display of these spheres, with the same display 
+properties.
+If you got it right, you should be 
+visualizing something like this:
+<br>
+<div class=caption>
+  <a href="img/persistenceDummies_criticalPoints.png" target="new">
+    <img width="100%" src="img/persistenceDummies_criticalPoints.png">
+  </a>
+</div>
 
-<h4>Exercise 3</h4>
-animating the thing
-what values does it change it its number of connected component (B0), number of 
-independent cycles (B1)?
+How does the field <code>CriticalIndex</code> (color-coded on the spheres) 
+relate to:<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; the increase of
+<myMath>$\beta_0(f^{-1}_{-\infty}(i))$</myMath>?<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; the decrease of 
+<myMath>$\beta_0(f^{-1}_{-\infty}(i))$</myMath>?<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; the increase of
+<myMath>$\beta_1(f^{-1}_{-\infty}(i))$</myMath>?<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; the decrease of
+<myMath>$\beta_1(f^{-1}_{-\infty}(i))$</myMath>?<br>
 
-<h4>Exercise 4</h4>
-display the critical point.
-sphere
 
+</p>
+<p>
+<h4><a name="betti_paraview">5.</a> Persistent homology</h4>
+
+<h4>Exercise 6</h4>
+We will now inspect this data from the view point of persistent 
+homology.<br><br>
+
+Create a third view on the right by clicking on the <code>Split 
+Horizontal</code> button, located at the top right corner of the right render 
+view (next to the string <code>RenderView2</code>) and then click on the 
+<code>Render View</code> button.<br><br>
+
+In the pipeline browser, select the output of your <code>Programmable 
+Filter</code> and call the filter <code>TTK PersistenceDiagram</code> on it. A 
+persistence diagram should display in the newly created view.<br><br>
+
+The visualization of the persistence diagram can be improved in several ways. 
+First, in the display properties of the <code>TTK PersistenceDiagram</code> 
+filter, enable the display of the axes by checking the <code>Axes Grid</code> 
+check-box (you can tune its parameters, such as the name of the axes by 
+clicking on the <code>Edit</code> button next to it).<br><br>
+
+Next, we will improve the visualization of the diagram itself. By default, the 
+diagram embeds a virtual edge representing the diagonal. This virtual edge can 
+be filtered out to be removed from the visualization or to be visualized with a 
+distinct color. This virtual edge can be isolated from the others as it is the 
+only edge with a negative value for the field <code>PairIdentifier</code>. Use 
+the <code>Threshold</code> filter on the output of the <code>TTK 
+PersistenceDiagram</code> filter to isolate this edge. Next, convert your 
+selected edge to a polygonal surface representation by calling the 
+<code>Extract Surface</code> filter on it. Finally, represent this edge with a 
+cylinder primitive by calling the <code>Tube</code> filter (adjust the 
+<code>Radius</code> and coloring properties).<br><br>
+
+Next, we will also display the actual persistent pairs with cylinders. For 
+this, in the pipeline browser, select the output of the <code>TTK 
+PersistenceDiagram</code> filter and apply the <code>Threshold</code> filter on 
+it to only display these pairs with non-negative values for the field 
+<code>PairIdentifier</code>. Next, convert this selection into a polygonal 
+surface representation by calling the 
+<code>Extract Surface</code> filter and represent these edges with cylinder 
+primitives by calling the <code>Tube</code> filter (adjust the 
+<code>Radius</code> and coloring properties).<br><br>
+
+Finally, we will represent each extremity of a persistence pair by a visual 
+glyph, in particular, a sphere. For this, in the pipeline browser, select the 
+output of the <code>Threshold</code> filter which selected the pairs with 
+non-negative identifiers in the diagram and apply the <code>TTK 
+SphereFromPoint</code> filter on it. Adjust the radius and set the coloring to 
+use the field <code>NodeType</code>. If you got it right, you should be 
+visualizing something like this:
+<br>
+<div class=caption>
+  <a href="img/persistenceDummies_persistenceDiagram.png" target="new">
+    <img width="100%" src="img/persistenceDummies_persistenceDiagram.png">
+  </a>
+</div>
 
 <h4>Exercise 5</h4>
 other view
