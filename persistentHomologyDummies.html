@@ -616,13 +616,78 @@ visualizing something like this:
   </a>
 </div>
 
-<h4>Exercise 5</h4>
-other view
-compute the persistence diagram.
-sphere and all
+Given the persistence diagram on the right, identify in the original data 
+(on the left) the least persistent critical point pairs responsible for changes 
+in <myMath>$\beta_0(f^{-1}_{-\infty}(i))$</myMath> and 
+<myMath>$\beta_1(f^{-1}_{-\infty}(i))$</myMath> respectively.
+<br><br>
+
+<h4>Exercise 7</h4>
+We will now illustrate stability results on the persistence diagram and 
+experiment with persistence-sensitive function simplification.
+<br><br>
+
+Split the render view containing the persistent diagram using the 
+<code>Split Vertical</code> bottom (top right corner, second button after the 
+string <code>RenderView3</code> and click on the <code>Render View</code> 
+button. In this view, display the diagonal of the persistence diagram as well 
+as the persistence pairs more persistent than the two pairs identified in the 
+previous question (use the <code>Threshold</code> filter on the 
+<code>Persistence</code> array to isolate those). Enhance the visualization, as 
+suggested in the previous question.  If you got it right, you should be 
+visualizing something like this:
+
+<br>
+<div class=caption>
+  <a href="img/persistenceDummies_secondPersistenceDiagram.png" target="new">
+    <img width="100%" src="img/persistenceDummies_secondPersistenceDiagram.png">
+  </a>
+</div>
+
+We will now reconstruct a function <myMath>$g : \mathcal{M} 
+\rightarrow \mathbb{R}$</myMath> that admits this simplified persistence 
+diagram <myMath>$\mathcal{D}(g) \subset \mathcal{D}(f)$</myMath>. <br><br>
+
+Before reconstructing the function  <myMath>$g$</myMath>, we will first make a 
+backup of the original function. For this, in the pipeline browser, click on 
+your <code>Programmable Filter</code> and add a Python instruction in the 
+<code>Script</code> text-box to add a new field named 
+<code>originalGaussian</code> which is a copy of the field 
+<code>multiGaussian</code> (see exercise 2).<br><br>
+
+Next, select the render view with the 3D terrain by clicking in it and 
+split it vertically, 
+using the 
+<code>Split Vertical</code> bottom (top right corner, second button after the 
+string <code>RenderView2</code> and click on the <code>Render View</code> 
+button. Now, in the pipeline browser, select your <code>Programmable 
+Filter</code> and call the filter <code>TTK TopologicalSimplification</code> on 
+it. A dialog windows open to specify the two inputs of this filter. The first 
+input, named <code>Domain</code> (see the left ratio buttons), should already 
+be set properly to your <code>Programmable Filter</code>. The second input, 
+named <code>Constraints</code> (see the left ratio buttons), refers to the 
+persistent pairs which we want to keep in the reconstructed function  
+<myMath>$g$</myMath>. These correspond to the apparent edges in the simplified 
+persistence diagram <myMath>$\mathcal{D}(g) \subset \mathcal{D}(f)$</myMath>. 
+Therefore, for this input, you should select in your pipeline the 
+<code>Threshold</code> filter you used to select the most persistent pairs of 
+the first diagram <myMath>$\mathcal{D}(f)$</myMath>. Once this is done, click 
+on <code>Ok</code>. Now, before clicking on the green <code>Apply</code> 
+button, in the properties panel, check the <code>Numerical Perturbation</code> 
+check-box and click on <code>Apply</code> . Link this terrain view with the one 
+above by right clicking in the bottom view, selecting the entry <code>Link 
+Camera...</code> and then clicking on the top view. If you got it right, you 
+should be visualizing something like this:
+
+<br>
+<div class=caption>
+  <a href="img/persistenceDummies_reconstruction.png" target="new">
+    <img width="100%" src="img/persistenceDummies_reconstruction.png">
+  </a>
+</div>
 
 
-<h4>Exercise 5</h4>
+<br><br>
 simplified persistence diagram
 reconstruct simplified function (numerical perturbation)
 do the same thing:
