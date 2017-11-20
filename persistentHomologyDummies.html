@@ -293,6 +293,11 @@ and
 target="new">
 THERE</a>.
 <br><br>
+
+In the following, it is highly recommended to regularly save the current status 
+of your analysis, by saving a <code>.pvsm</code> state file with the menu 
+<code>File</code>, <code>Save state...</code> (ideally, on file per exercise).
+
 </p>
 
 <p>
@@ -820,7 +825,7 @@ call a <code>Python Calculator</code> on it. Now, enter the Python expression
 to evaluate <myMath>$|f(p)-g(p)|$</myMath> for each point 
 <myMath>$p$</myMath> and call the output function 
 <code>absoluteDifference</code>. 
-If you got it right so far, you 
+If you got it right, you 
 should be visualizing something like this:
 <br>
 <div class=caption>
@@ -856,309 +861,258 @@ How does its absolute difference value relate to the original persistence
 diagram?
 
 
+</p>
+<p>
+<h4><a name="betti_paraview">6.</a> Topological data segmentation</h4>
 
-<br><br>
-NEXT EXERCISE: L_intfy norm
+In our example, somehow, persistent homology helped us answer the following 
+question:<br><br> <i>What is the second highest mountain of my 
+terrain?</i><br><br> 
+We saw that the answer is not necessarily the second 
+highest <i>summit</i> (second highest local maximum) but the second most 
+persistent summit.<br><br>
 
-simplified persistence diagram
-reconstruct simplified function (numerical perturbation)
-do the same thing:
-2D view, critical point, sublevel set + contour
-play with persistence threshold with only 1 maximum
-play the animation
-question about the shape of the sublevel set 
-
-<h4>Exercise 6</h4>
-spread sheet view to inspect the persistence of the missing pairs
-compute the Linfy distance (by hand, not in 0.9.2)
-play with persistence threshold?
-what the relation
-why?
-uncheck numerical perturbation
-
-<h4>Exercise 7</h4>
-what is the 2nd highest mountain in the world
-compute the merge tree (top)
-show it
-extract the region mapping to max arcs
-display them in color
-
-how about the area (triangle count of the highest mountain in the world)
-same thing on simplified data?
-how about its area?
-
-<h4>Exercise 8</h4>
-save the initial terrain (vtu file format)
-open new paraview session, reproduce the thing 
-save to python script
-save to vtu file format.
-execute (env +x, etc). open in paraview
-say it can be save in csv.
+We will now combine persistent homology and split trees, in order to extract 
+precisely the geometry of the second highest mountain of our terrain.<br><br>
 
 <h4>Exercise 9</h4>
-do the same thing for the foot.
+Click in the top center view to activate it. Next, in the pipeline browser, 
+select the output of the first <code>Programmable Filter</code> and call the 
+filter <code>TTK Merge and Contour Tree (FTM)</code> on it (select 
+<code>Split Tree</code> as <code>Tree Type</code>). This filter generates 
+multiple outputs. Select the output <code>Segmentation</code> and change its 
+<code>Opacity</code> to <code>0.3</code>. Now, you should see an embedding of 
+the split tree of your data. In the following, we will slightly enhance this 
+embedding.<br><br>
 
+Modify the parameter <code>Arc Sampling </code> of your <code>TTK Merge and 
+Contour Tree (FTM)</code> filter to a reasonable value (typically 
+<code>10</code>). Next, select its output <code>Skeleton Arcs</code> and call 
+the filter <code>TTK GeometrySmoother</code> and check the box <code>Use Input 
+Mask Field</code>. At this point, you may want to edit the number of smoothing 
+iterations (typically to <code>30</code>), to obtain a smoother embedding of 
+the split tree. Next, we will display the arcs of the tree with cylinder 
+primitives. For this, call the <code>Extract Surface</code> filter (to convert 
+the arcs to a polygonal representation) and then the <code>Tube</code> filter.
+If you got it right, you 
+should be visualizing something like this:
+<br>
+<div class=caption>
+  <a href="img/persistenceDummies_reeb.png" target="new">
+    <img width="100%" src="img/persistenceDummies_reeb.png">
+  </a>
+</div>
 
-Open the skull data set in ParaView with the following command (omit 
-the <code>$</code> character):<br><br>
-<code>$ paraview ~/ttk/bettiData/skull.vtu</code>
-<br><br>
+Now, go ahead and do the same thing for the simplified function in the bottom 
+view. When calling the filter <code>TTK Merge and 
+Contour Tree (FTM)</code>, remember to use the <code>simplifiedGaussian</code> 
+field and to check the box <code>Use Input Offset Scalar Field</code>. At this 
+point, you may want to reduce the persistence threshold (beginning of exercise 
+7), to obtain a visualization like this one:
+<br>
+<div class=caption>
+  <a href="img/persistenceDummies_reebSimplified.png" target="new">
+    <img width="100%" src="img/persistenceDummies_reebSimplified.png">
+  </a>
+</div>
 
-Next, try to reproduce the visualization shown in the first screenshot above, 
-which shows a clipped view of the PL 3-manifold, with the visible interior 
-triangles in white with dark edges, each boundary component displayed with 
-its edges with a distinct color and the rest of the (unclipped) boundary shown 
-in transparent. 
+<h4>Exercise 10</h4>
+
+Thanks to the split tree, the geometry of each mountain can be extracted by 
+collecting the set of vertices of the domain which map to arcs in the split
+tree which are connected to local maxima. We will now extract these 
+regions.<br><br>
+
+Click on the top center view to activate it. Now, in the pipeline browser, 
+select the <code>Segmentation</code> output of the first <code>TTK Merge and 
+Contour Tree (FTM)</code> filter. Now, apply the <code>Threshold</code> filter, 
+in order to only show these vertices that have a <code>RegionType</code> value 
+of <code>1</code>. This will extract all vertices mapping to arcs connected to 
+local maxima. Change the display properties of these vertices to color them by 
+the field <code>SegmentationId</code> (you can edit the color map by clicking on 
+the <code>Edit</code> button). Trigger their visualization in the top left 
+view, with the same coloring scheme.
+<br>
+You 
+should now be visualizing something like this:
+<br>
+<div class=caption>
+  <a href="img/persistenceDummies_reebSegmentation.png" target="new">
+    <img width="100%" src="img/persistenceDummies_reebSegmentation.png">
+  </a>
+</div>
+Now, go ahead and do the same thing for the simplified data in the bottom views.
+
+<br>
+<div class=caption>
+  <a href="img/persistenceDummies_reebSegmentationSimplified.png" target="new">
+    <img width="100%" 
+src="img/persistenceDummies_reebSegmentationSimplified.png">
+  </a>
+</div>
+If you managed to get a visualization similar to the above screenshot, 
+congratulations!<br>
+You've just extracted the geometry of the two highest mountains of your terrain 
+(bottom views). You can now play with the persistence threshold (beginning 
+of exercise 7) to explore the hierarchy of your data segmentation.
+<br>
+
 </p>
-
 <p>
-<h4><a name="betti_paraview">3.</a> Betti numbers of PL 3-manifolds</h4>
-In the following, you will write your first TTK module, dedicated to the 
-computation of Betti numbers of PL 3-manifolds. For this, we will exploit the 
-results by Dey and Guha, published in their 1998 paper
-<a 
-href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.41.2252&rep=rep1&
-type=pdf"
-target="new">
-"Computing Homology Groups of Simplicial Complexes in R3"</a>.<br><br>
+<h4><a name="betti_paraview">6.</a> Topological data segmentation in Python</h4>
 
-Go ahead and create your TTK module by entering the following commands (omit 
-the <code>$</code> character):<br><br>
-<code>$ cd ~/ttk/ttk-0.9.2/</code><br>
-<code>$ scripts/createTTKmodule.sh BettiNumbers</code><br><br>
-The above script will create all the files and classes of your TTK module. This 
-module includes automatically generated standalone command line and GUI 
-programs, as well as a ParaView plugin. <br><br>
+We will now implement a similar analysis pipeline in Python, thanks to ParaView 
+Python export capabilities.
+<br><br>
 
-For this exercise, we will only need to build your TTK module, and not the 
-entire TTK collection. Thus, edit the file 
-<code>~/ttk/ttk-0.9.2/CMakeLists.txt</code> to remove all entries, except the 
-first line and all the lines containing the word <code>BettiNumbers</code>.<br>
+<h4>Exercise 11</h4>
 
-Now, to build your TTK module, enter the following commands, where 
-<code>N</code> is the number of available cores on your system (omit 
-the <code>$</code> character):<br><br>
-<code>$ cd ~/ttk/ttk-0.9.2/</code><br>
-<code>$ mkdir build</code><br>
-<code>$ cd build</code><br>
-<code>$ cmake ../</code><br>
-<code>$ make -jN</code><br><br>
-Note that, in order to rebuild your module in the future, you'll only need to 
-enter the last command (<code>make -jN</code>).<br>
+First, in your pipeline browser, select the output of your first 
+<code>Programmable Filter</code> (corresponding to the first, non-simplified 3D 
+terrain). Next, save this data to disk with the menu <code>File</code>, 
+<code>Save Data...</code> (select the <code>vtu</code> file extension). You can 
+now close ParaView.<br><br>
 
+Re-open now ParaView and load the file you have just saved. Split the current 
+view horizontally and compute and display the persistence diagram of your data 
+in this new view.<br><br>
+Now threshold your diagram to remove the diagonal and threshold again to remove 
+low persistence pairs (see exercise 7).
+
+Next, activate the left view by clicking in it and select your 3D terrain in 
+the pipeline browser and call the <code>TTK TopologicalSimplification</code> 
+filter on it, using as constraints the persistent pairs you selected 
+previously from the persistence diagram (see exercise 7).<br><br>
+
+Next, compute the split tree of the simplified data (see exercise 9, do not 
+forget to check the box <code>Use Input Offset Scalar Field</code>). Finally, 
+threshold the <code>Segmentation</code> output of the split tree, to only 
+visualize vertices with a <code>RegionType</code> value of 1.<br><br>
+
+At this point, you should be visualizing something like this:
+<br>
 <div class=caption>
-  <a href="img/bettiNumbers_plugin.png" target="new">
-    <img width="100%" src="img/bettiNumbers_plugin.png">
+  <a href="img/persistenceDummies_basicPipeline.png" target="new">
+    <img width="100%" 
+src="img/persistenceDummies_basicPipeline.png">
   </a>
 </div>
 
-To load your module in ParaView, open 
-ParaView, go to the menu <code>Tools</code>, <code>Manage Plugins...</code>, 
-then click on the <code>Load New...</code> button. Next, from the file browser 
-dialog, select the library we've just built: 
-<code>~/ttk/ttk-0.9.2/build/paraview/BettiNumbers/libBettiNumbers.so</code>. 
-Next, you may want to check the checkbox <code>AutoLoad</code> as shown above 
-(available after expending your plugin entry) to force ParaView to 
-automatically load your plugin at startup.<br>
-At this point, if your plugin was successfully loaded, it should appear as the 
-entry <code>TTK BettiNumbers</code> under the menu <code>Filters</code> then 
-<code>TTK - Misc</code>, as shown below.
+We will now convert this simple analysis pipeline into a Python script. For 
+this, enter the menu <code>File</code>, <code>Save state...</code> and choose 
+the Python state file type and save your file with the name 
+<code>pipeline.py</code>.<br><br>
 
+We will now turn the generated Python script into an independently executable 
+program. <br>This script relies on the Python layer of TTK and 
+ParaView. It should be interpreted with <code>pvpython</code>, which wraps 
+around the 
+traditional Python interpretor, in order to set the required environment 
+variables properly. To automatically run the script with the right interpretor, 
+we will add the following line at the very top of the generated script:
+<br><br>
+<code>
+#!/usr/bin/env pvpython
+</code><br><br>
+Next, we will make the script executable by setting its execution bit, by 
+entering the following command (omit the <code>$</code> character):<br><br>
+<code>
+$ chmod +x pipeline.py
+</code>
+<br><br>
+Your Python program can now be run by simply entering the following command  
+(omit the <code>$</code> character):<br><br>
+<code>
+$ ./pipeline.py
+</code>
+<br><br>
+
+By default, this program loads the input terrain, simplify the data, segment 
+the mountains with the split tree and simply exits. We will now modify this 
+script to store to disk the segmentation of the highest mountains.<br><br>
+
+For this, open the script with a text editor and identify the part of the 
+script which thresholds the segmentation according to the 
+<code>RegionType</code> field.
+After this paragraph, add a Python instruction to save the 
+<code>Threshold</code> object to disk, with the function 
+<code>SaveData()</code>, which takes as a first argument a filename 
+(for example 
+<code>segmentation.vtu</code>) 
+and as 
+a second argument a pipeline object (here the instance of 
+<code>Threshold</code> object). Save your file and execute your script. It 
+should have written to disk a file named <code>segmentation.vtu</code>. Open it 
+in ParaView. You should be visualizing something like this:
+
+<br>
 <div class=caption>
-  <a href="img/bettiNumbers_pluginMenu.png" target="new">
-    <img width="100%" src="img/bettiNumbers_pluginMenu.png">
+  <a href="img/persistenceDummies_scriptOutput.png" target="new">
+    <img width="100%" 
+src="img/persistenceDummies_scriptOutput.png">
   </a>
 </div>
 
-Now open the file 
-<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code>. In the 
-function <code>execute()</code>, add the line <code>cout << endl << 
-"Hello World!" << endl << endl;</code> before the <code>return</code> 
-statement. Now build your module again, load the skull data set in ParaView and 
-apply your BettiNumbers plugin. You should see your message "Hello World!" 
-appear in the terminal, as shown below.
+Note that other file formats are supported. Modify your script to save the 
+segmentation into the file <code>segmentation.csv</code> instead of 
+<code>segmentation.vtu</code> and run your script again. It should have 
+produced a plain ASCII file storing the segmentation, which can be opened and 
+parsed with any other software.<br><br>
 
+
+<h4>Exercise 12</h4>
+Note that, in our Python script,  the instructions located after the saving of 
+the segmentation deal with rendering parameters. Thus, these can be removed in 
+our context since we are using the script in batch mode. Other instructions 
+related to render views can also be removed for the same reason.<br>
+Remove all the Python instructions that are not 
+strictly necessary for the computation of the output segmentation. At this 
+point, your script should have less than 25 instructions and should therefore 
+be much easier to read.
+
+<br><br>
+<h4>Exercise 13</h4>
+Now edit your Python script in order to read the persistence threshold with 
+which the data should be simplified from the command line, as an argument of 
+your Python script.
+<br>
+
+</p>
+<p>
+<h4><a name="betti_paraview">7.</a> Topological segmentation of medical data</h4>
+
+We will now apply our topological data analysis pipeline to some real-life 
+medical data.<br>
+
+For this open with ParaView the following data set:
+<br><br>
+<code>~/ttk/ttk-data-0.9.3/ctBones.vti</code>
+<br><br>
+
+Now, deploy the topological data analysis pipeline we designed in this tutorial, 
+in order to segment the 5 <i>highest mountains</i> of this CT scan:<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; 
+Computation of the persistence diagram of the data;<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; 
+Selection of the 5 most persistent pairs;<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; 
+Topological simplification of the data according to the persistence selection;<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; 
+Computation of the split tree of the simplified data;<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp; 
+Segmentation of the regions mapping to branches of the split tree connected to maxima;<br><br>
+
+If you got it right, your pipeline should precisely isolate the bones of the foot and you 
+should be visualizing something like this:
+<br>
 <div class=caption>
-  <a href="img/bettiNumbers_helloWorld.png" target="new">
-    <img width="100%" src="img/bettiNumbers_helloWorld.png">
+  <a href="img/gallery/ctBones.jpg" target="new">
+    <img width="100%" 
+src="img/gallery/ctBones.jpg">
   </a>
 </div>
+If so, congratulations, you've just managed to segment medical data thanks to topological data analysis!
 
-If this is the case, congratulations! You've just written your first TTK module!
-<br><br>
-
-<h4>Exercise 2: B0 (~20 lines of code)</h4>
-The 0-th Betti number (noted <code>B0</code>) corresponds to the number of 
-connected component of the input manifold <code>M</code>. In the following, we 
-will compute this number and display it in the output of the terminal (next to 
-our "Hello World!" message).<br><br>
-
-Several algorithms exist to enumerate connected components in a triangulation, 
-the simplest being a simple
-<a href="https://en.wikipedia.org/wiki/Breadth-first_search" target="new">
-breadth-first search</a> traversal. Instead, we will use a <i>Union-Find</i> 
-data-structure, which will make the implementation even simpler.<br><br>
-
-The 
-<a href="https://en.wikipedia.org/wiki/Disjoint-set_data_structure" 
-target="new">
-Union-Find</a> (UF) data-structure is a simple, yet powerful data-structure 
-which tracks the connectivity of a graph over successive edge additions. It is 
-a fundamental object which plays a key role in many computational topology 
-algorithms.<br><br>
-
-Initially, a UF object is created for each vertex of the graph. The operation 
-<code>find()</code> on this object returns its <i>parent</i>, that is 
-a 
-unique representative UF object which <i>represents</i> the connected component 
-of the 
-queried vertex.<br><br>
-
-When adding an edge between two vertices <code>v0</code> and <code>v1</code>, 
-the <code>makeUnion()</code> operation is called between the UF objects of 
-<code>v0</code> and <code>v1</code>. This will have the effect of merging the 
-representatives of the corresponding connected components.<br><br>
-
-Thus, to enumerate the connected components of a PL manifold <code>M</code>, 
-one just needs to proceed as follows. First, one should iterate over the edges 
-of <code>M</code>, call the <code>makeUnion()</code> operation between the UF 
-objects of the vertices of each edge of <code>M</code>. Finally, one should 
-iterate over all the UF objects, call the <code>find()</code> operation and 
-enumerate the number of unique remaining representatives. This number 
-corresponds to the number of remaining connected components after all edges have 
-been added (initially, the number of connected components is equal to the 
-number of vertices in <code>M</code>).<br><br>
-
-TTK provides a reference implementation of the Union-Find data structure (with 
-path compression and union by rank), which we will use in this exercise. Its 
-online documentation can be found 
-<a 
-href="https://topology-tool-kit.github.io/doc/html/classttk_1_1UnionFind.html"
-target="new">
-HERE</a>.<br><br>
-
-To use it in your module, edit the file 
-<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/bettiNumbers.cmake</code> and 
-add the line <code>ttk_add_baseCode_package(unionFind)</code> at the 
-top of the file. Next, in 
-<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code>, add the 
-line <code>#include &lt;UnionFind.h&gt;</code> in the file preamble.<br><br>
-
-TTK provides an efficient data structure for fast triangulation traversal. Its 
-online documentation can be found 
-<a 
-href="https://topology-tool-kit.github.io/doc/html/classttk_1_1Triangulation.
-html"
-target="new">
-HERE</a>.<br><br>
-
-In <code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code>, a 
-pointer to an object of this class (<code>triangulation_</code>) is 
-readily available and correctly initialized to the triangulation passed on the 
-input of your module.<br><br>
-
-TTK's triangulation data-structure supports a cache based access. This means 
-the data-structure needs to be pre-conditioned depending on the type of 
-traversal it will undergo, before it gets actually traversed. For instance, if 
-you want to access the i-th vertex of the j-th edge of the triangulation (with 
-the function <code>getEdgeVertex()</code>), you will need, before the actual 
-traversal, to call the pre-conditioning function 
-<code>preprocessEdges()</code> in a pre-process, as explained in the 
-<a 
-href="https://topology-tool-kit.github.io/doc/html/classttk_1_1Triangulation.
-html#a0c7e36ed34696d0d26eb411272145880"
-target="new">documentation of the 
-<code>getEdgeVertex()</code> function</a>. 
-Note that each traversal function comes with its own pre-conditioning function, 
-to be called in the pre-processing stage of your module.
-<br><br>
-
-Typically, in 
-<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code>, the 
-function <code>setupTriangulation()</code> is the right placeholder to put such 
-a pre-conditioning statement, while the actual traversal should happen in the 
-<code>execute()</code> function, next to our prior "Hello World!" 
-message.<br><br>
-
-Now go ahead and compute <code>B0</code>, the number of connected components of 
-<code>M</code>.<br><br>
-
-To do this, you'll need to allocate an array (typically an STL vector) of 
-<code>UnionFind</code> objects with as many entries as vertices in 
-<code>M</code>. Next, you'll need to iterate over the edges of <code>M</code> 
-and call the <code>makeUnion()</code> operation on the UF objects of each edge. 
-Finally, you'll need to iterate over your initial array of UF objects, 
-re-assign to each entry the result of its <code>find()</code> operation (to 
-obtain the latest representative) and enumerate the number of unique remaining 
-representatives.
-
-<br><br>
-<h4>Exercise 3: B2 (~30 lines of code)</h4>
-The 2-nd Betti number (noted <code>B2</code>) corresponds to the number of 
-voids of the input manifold <code>M</code>. To compute <code>B2</code>, we will 
-exploit one of the results by Dey and Guha, published in their 1998 paper
-<a 
-href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.41.2252&rep=rep1&
-type=pdf"
-target="new">
-"Computing Homology Groups of Simplicial Complexes in R3"</a>.<br><br>
-
-Parse the above paper and identify the expression of <code>B2</code>. From 
-there, edit the function <code>execute()</code> of 
-<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code> to also 
-compute and display <code>B2</code>.
-
-<br><br>
-<h4>Exercise 4: B1 (~20 lines of code)</h4>
-The 1-st Betti number (noted <code>B1</code>) corresponds to the number of 
-independent cycles 
-of the input manifold <code>M</code>.
-To compute <code>B1</code>, we will 
-exploit one of the results by Dey and Guha, published in their 1998 paper
-<a 
-href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.41.2252&rep=rep1&
-type=pdf"
-target="new">
-"Computing Homology Groups of Simplicial Complexes in R3"</a>.<br><br>
-
-Parse the above paper and identify the expression of <code>B1</code>.
-From there, edit the function <code>execute()</code> of 
-<code>~/ttk/ttk-0.9.2/core/baseCode/bettiNumbers/BettiNumbers.h</code> to also 
-compute and display <code>B1</code>.
-
-<br><br>
-<h4>Exercise 5: Euler characteristic and beyond (~3 lines of code)</h4>
-
-Compute and display the Euler characteristic <code>X</code> of <code>M</code>. 
-How does it relate to the Betti numbers of <code>M</code>?<br><br>
-
-<div class=caption>
-  <a href="img/bettiNumbers_thresholding.png" target="new">
-    <img width="100%" src="img/bettiNumbers_thresholding.png">
-  </a>
-</div>
-
-Now, in ParaView, use the <code>Threshold</code> filter on your input 
-triangulation and modify the <code>Maximum</code> parameter (the upper bound). 
-Since our test data sets come with an attached scalar field, this will have the 
-effect of selecting all the tetrahedra of <code>M</code> with vertices having a 
-default scalar value below the <code>Maximum</code> parameter.<br><br>
-
-Now use your module to compute the Betti numbers of this selection. Now adjust 
-the <code>Maximum</code> parameter again and click on <code>Apply</code>. The 
-Betti numbers should be updated automatically.<br><br>
-
-Keep on modifying the value <code>Maximum</code>. Where do the Betti numbers 
-change? What do these configurations correspond to?<br><br>
-
-Check your intuition with the other data-sets available in the 
-<code>~/ttk/bettiData/</code> directory. Note that for <code>at.vti</code>, you 
-will need to call the filter <code>Tetrahedralize</code> prior to any other 
-processing.<br><br>
-
-Now, instead of changing the <code>Maximum</code> parameter of the 
-<code>Threshold</code> filter, change the <code>Minimum</code> parameter 
-instead. What do you observe in terms of the changes of Betti numbers?
 
 </p>
 
@@ -1180,7 +1134,7 @@ instead. What do you observe in terms of the changes of Betti numbers?
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on November 18th, 2017.</p>
+                    Updated on November 20th, 2017.</p>
                 </div>
             </div>
         </div>
