@@ -651,22 +651,29 @@ We will now reconstruct a function <myMath>$g : \mathcal{M}
 diagram <myMath>$\mathcal{D}(g) \subset \mathcal{D}(f)$</myMath>. <br><br>
 
 Before reconstructing the function  <myMath>$g$</myMath>, we will first make a 
-backup of the original function. For this, in the pipeline browser, click on 
+copy of the original function, that we will simplify. 
+For this, in the pipeline browser, click on 
 your <code>Programmable Filter</code> and add a Python instruction in the 
 <code>Script</code> text-box to add a new field named 
-<code>originalGaussian</code> which is a copy of the field 
-<code>multiGaussian</code> (see exercise 2).<br><br>
+<code>simplifiedGaussian</code> which is a copy of the field 
+<code>multiGaussian</code> (see exercise 2).
+Next, apply the filter <code>Clean to Grid</code> on the output of your 
+<code>Programmable Filter</code>, which will effectively perform the data copy.
+<br><br>
 
 Next, select the render view with the 3D terrain by clicking in it and 
 split it vertically, 
 using the 
 <code>Split Vertical</code> bottom (top right corner, second button after the 
 string <code>RenderView2</code> and click on the <code>Render View</code> 
-button. Now, in the pipeline browser, select your <code>Programmable 
-Filter</code> and call the filter <code>TTK TopologicalSimplification</code> on 
-it. A dialog windows open to specify the two inputs of this filter. The first 
+button. Now, in the pipeline browser, select the output of the <code>Clean 
+to Grid</code> filter
+and call the filter <code>TTK TopologicalSimplification</code> 
+on it. A dialog window opens to specify the two inputs of this filter. The 
+first 
 input, named <code>Domain</code> (see the left ratio buttons), should already 
-be set properly to your <code>Programmable Filter</code>. The second input, 
+be set properly to your <code>Clean 
+to Grid</code> filter. The second input, 
 named <code>Constraints</code> (see the left ratio buttons), refers to the 
 persistent pairs which we want to keep in the reconstructed function  
 <myMath>$g$</myMath>. These correspond to the apparent edges in the simplified 
@@ -676,7 +683,10 @@ Therefore, for this input, you should select in your pipeline the
 the first diagram <myMath>$\mathcal{D}(f)$</myMath>. Once this is done, click 
 on <code>Ok</code>. Now, before clicking on the green <code>Apply</code> 
 button, in the properties panel, check the <code>Numerical Perturbation</code> 
-check-box and click on <code>Apply</code> . Link this terrain view with the one 
+check-box, make sure that you are applying the simplification to the scalar 
+field <code>simplifiedGaussian</code> and
+click on <code>Apply</code> . Link this terrain view with the 
+one 
 above by right clicking in the bottom view, selecting the entry <code>Link 
 Camera...</code> and then clicking on the top view. If you got it right, you 
 should be visualizing something like this:
@@ -690,11 +700,19 @@ should be visualizing something like this:
 
 Similarly to the exercise 2, we will now modify the geometry of the terrain, 
 such that the z coordinate of each point becomes equal to the simplified 
-function <myMath>$g$</myMath>. For this, select the <code>TTK 
-TopologicalSimplification</code> filter in the pipeline browser and call a 
+function <myMath>$g$</myMath>, named <code>simplifiedGaussian</code>. For 
+this, select the filter <code>TTK 
+TopologicalSimplification</code> in the pipeline browser and call a 
 <code>Programmable Filter</code> on it and apply the same processing as in 
-the exercise 2 (do not forget to copy the fields <code>multiGaussian</code> and 
-<code>originalGaussian</code>).<br><br>
+the exercise 2 (but on our new field <code>simplifiedGaussian</code>). Do not 
+forget to copy the fields <code>simplifiedGaussian</code> and 
+<code>multiGaussian</code>.
+Also, the filter <code>TTK 
+TopologicalSimplification</code> generates an <i>offset</i> field (or 
+<i>tiebreak</i> field) named <code>OutputOffsetScalarField</code>. Make sure to 
+also copy this field, as it is necessary to further process the simplified data 
+properly.
+<br><br>
 
 Now split the left view vertically, using the 
 <code>Split Vertical</code> bottom (top right corner, second button after the 
@@ -702,6 +720,140 @@ string <code>RenderView1</code> and click on the <code>Render View</code>
 button. Click now on the <code>3D</code> icon (top left corner of the view) to 
 switch it to <code>2D</code> and trigger the display of the output of the 
 second <code>Programmable Filter</code> in it. Adjust its display properties 
+(<code>Coloring</code>, 
+<code>Specular</code>, <code>Ambient</code> and <code>Diffuse</code>)
+to obtain a visualization that is consistent with the above view. Link this 2D 
+bottom view with the above one (right click, <code>Link 
+Camera...</code>).<br><br>
+
+Next, we will extract the critical points of <myMath>$g$</myMath> and 
+visualize them in both bottom views (2D plane and 3D terrain). In the pipeline 
+browser, select the output of the 
+second <code>Programmable Filter</code> and call the filter <code>TTK 
+ScalarFieldCriticalPoints</code>. Before clicking on the <code>Apply</code> 
+button, check the check-box <code>Use Input Offset Field</code> and make sure 
+you are applying this filter to the scalar field 
+<code>simplifiedGaussian</code>. Finally, enhance this visualization by 
+displaying a sphere for each critical point, colored by its critical index, with 
+<code>TTK SphereFromPoint</code>, and display these spheres in both bottom views 
+(2D plane and 3D terrain).<br><br>
+
+Finally, we will extract and animate the sub-level sets 
+<myMath>$g^{-1}_{-\infty}(i)$</myMath> and level sets 
+<myMath>$g^{-1}(i)$</myMath> of <myMath>$g$</myMath>, to visually compare them 
+with these of <myMath>$f$</myMath>. In the pipeline browser, select the output 
+of the second <code>Programmable Filter</code> and, similarly to exercise 3, 
+call the <code>Threshold</code> filter on it to display 
+<myMath>$g^{-1}_{-\infty}(i)$</myMath> in both bottom views (2D plane and 3D 
+terrain) and adjust display properties in 2D. Next, in the pipeline browser, 
+select the output 
+of the second <code>Programmable Filter</code> again and call the 
+<code>Contour</code> filter on it to extract <myMath>$g^{-1}(i)$</myMath>, 
+followed by the <code>Tube</code> filter (to display it with cylinder 
+primitives) and trigger its display in both bottom views (2D plane and 3D 
+terrain). We will now complete the animation by animating the isovalue 
+<myMath>$i$</myMath> for both <myMath>$g^{-1}_{-\infty}(i)$</myMath> and 
+<myMath>$g^{-1}(i)$</myMath>. 
+In the <code>View</code> 
+menu, check the <code>Animation View</code> check-box and similarly to exercise 
+4, add <myMath>$g^{-1}_{-\infty}(i)$</myMath> and 
+<myMath>$g^{-1}(i)$</myMath> to the animation.<br><br>
+
+At this point, your animation is ready to play!<br>
+Go ahead and click on the <code>Play</code> button at the top of the screen.
+If you got it right so far, you 
+should be visualizing something like this:
+
+<br>
+<div class=caption>
+  <a href="img/persistenceDummies_simplified.png" target="new">
+    <img width="100%" src="img/persistenceDummies_simplified.png">
+  </a>
+</div>
+
+Now, in the pipeline browser, select the <code>Threshold</code> filter with 
+which you controlled the persistence threshold (beginning of exercise 7) and 
+increase that threshold until <myMath>$g$</myMath> admits only one maximum. 
+Play the animation and inspect the shape of 
+<myMath>$g^{-1}_{-\infty}(i)$</myMath> in the vicinity of the canceled maxima.
+You should be visualizing something like this:
+<br>
+<div class=caption>
+  <a href="img/persistenceDummies_artifact.png" target="new">
+    <img width="100%" src="img/persistenceDummies_artifact.png">
+  </a>
+</div>
+How can you explain this visual artifact?<br><br>
+In the <code>TTK TopologicalSimplification</code> filter, un-check the 
+check-box <code>Numerical Perturbation</code> and click on <code>Apply</code>. 
+How can you explain the disappearance of the artifact?
+<br><br>
+
+<h4>Exercise 8</h4>
+We will now inspect the stability of the persistence diagram.<br><br>
+
+Split vertically the top right view (containing the original persistence 
+diagram <myMath>$\mathcal{D}(f)$</myMath>) with the <code>Split Vertical</code> 
+button and click on <code>SpreadSheet View</code>. In the scrolling menu named 
+<code>Showing</code>, select from your pipeline the <code>TTK 
+PersistenceDiagram</code> and select in the <code>Attribute</code> scrolling 
+menu the entry <code>Cell Data</code>. This will display in a spreadsheet the 
+information associated with each pair of the persistence diagram, including its
+persistence (last column), as shown below.
+
+<br>
+<div class=caption>
+  <a href="img/persistenceDummies_spreadSheet.png" target="new">
+    <img width="100%" src="img/persistenceDummies_spreadSheet.png">
+  </a>
+</div>
+
+Sort the spreadsheet by persistence by clicking on the header of the 
+corresponding column.<br> Now, write down the persistence of the most 
+persistence pair which is absent from the bottom diagram below 
+(<myMath>$\mathcal{D}(g)$</myMath>).<br><br>
+
+We will now evaluate <myMath>$||f-g||_\infty$</myMath>.<br>
+First, click in the bottom left view to activate it. Next, in the pipeline 
+browser, select the output of the second <code>Programmable Filter</code> and 
+call a <code>Python Calculator</code> on it. Now, enter the Python expression 
+to evaluate <myMath>$|f(p)-g(p)|$</myMath> for each point 
+<myMath>$p$</myMath> and call the output function 
+<code>absoluteDifference</code>. 
+If you got it right so far, you 
+should be visualizing something like this:
+<br>
+<div class=caption>
+  <a href="img/persistenceDummies_difference.png" target="new">
+    <img width="100%" src="img/persistenceDummies_difference.png">
+  </a>
+</div>
+
+Now split the bottom left view vertically with the <code>Split Vertical</code> 
+button and click on <code>SpreadSheet View</code>. 
+In the scrolling menu named 
+<code>Showing</code>, select from your pipeline the last <code>Python 
+Calculator</code>.
+This will display in a spreadsheet the 
+information associated with each vertex of the domain, including its 
+<code>absoluteDifference</code> value, as shown below.
+
+<br>
+<div class=caption>
+  <a href="img/persistenceDummies_differenceSpreadSheet.png" target="new">
+    <img width="100%" src="img/persistenceDummies_differenceSpreadSheet.png">
+  </a>
+</div>
+
+Sort the spreadsheet by <code>absoluteDifference</code>
+by clicking on the header of the 
+corresponding column.
+Click on the spreadsheet entry that maximizes <code>absoluteDifference</code>. 
+You should see the corresponding point highlighted in the above view. <br><br>
+
+What does this point correspond to?<br>
+How does its absolute difference value relate to the original persistence 
+diagram?
 
 
 
