@@ -142,21 +142,60 @@ id="bs-example-navbar-collapse-1">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
   
 
-Some notes on installation for Windows, using Windows 10 x64 and Microsoft Visual Studio 2015.<br>
+Please find below detailed instructions for the installation of TTK under 
+Windows.<br><br>
 
-<p><h3>1. Downloads and installation applications</h3>
+These specific notes describe the installation procedure for a 
+Windows 10 operating system with Visual Studio 2015 (but the process should be 
+very similar for other version). 
+TTK is also supported on other operating systems:<br>
+&nbsp;&middot;&nbsp;
+<a href="installation.html">
+Linux installation instructions</a> (default target platform);
+<br>
+&nbsp;&middot;&nbsp;
+<a href="installation-osx.html">
+MacOS installation instructions</a>.<br>
+
+<p>
+                  <h3>1. Downloads</h3>
+                  TTK builds on top of <a href="http://www.paraview.org" 
+target="new">ParaView</a> for its main user interface. Thus, you will first 
+need to download 
+<a 
+href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
+version=v5.4&type=source&os=all&downloadFile=ParaView-v5.4.1.tar.gz" 
+target="new">
+ParaView's source code</a>.
+Note 
+that TTK plugins for ParaView will only work with a version of ParaView 
+compiled from source. Thus, if you already installed ParaView with a binary 
+copy, you may need to un-install it before proceeding.
+                  Next, download TTK from our <a 
+href="downloads.html">download page</a>.</p>
+
+
+
+<p><h3>2. Installing the dependencies</h3>
 <ul>
     <li> <a href="https://cmake.org/download" target="new">CMake</a> (tested with 3.10.0) </li>
     <li> <a href="https://git-scm.com/download" target="new">Git for Windows</a> (tested with 2.15.1) </li>
     <li> <a href="https://www.qt.io/download-qt-for-application-development" target="new">QT5</a> (tested with 5.9.3) </li>
-    <li> <a href="https://www.python.org/downloads/release/python-2713/" target="new">Python</a> (tested with 2.7.13) </li>    
+    <li> <a href="https://www.python.org/downloads/release/python-362/" 
+target="new">
+Python</a> (tested with 3.6.2) </li>    
     <li> <a href="http://www.boost.org/users/download" target="new">Boost</a> (tested with 1.65.1) </li>    
 </ul>
-Install applcations with default settings and unpack the boost in C:\.
+Please install all these applications with default settings and unpack Boost in 
+<code>C:\</code>.
 </p>
-<p><h3>2. Installing VTK</h3>
-    Open Command Prompt by pressing Windows+X to open the Power Users menu, and then click "Command Prompt (Admin).".<br><br>    
-    Run the commands for getting ParaView and VTK sources on C:\paraview,C:\paraview\VTK:<br>
+<p><h3>3. Installing VTK</h3>
+    Open the Command Prompt by pressing <code>Windows+X</code> to open the 
+Power Users menu, and then click on <code>Command Prompt 
+(Admin)</code>.<br><br>    
+    Run the following commands to download the source code for ParaView and VTK 
+(in the target locations <code>C:\paraview</code> and 
+<code>C:\paraview\VTK</code>):<br>
     <code>cd ../..</code><br>
     <code>git clone https://gitlab.kitware.com/paraview/paraview.git</code><br>
     <code>cd paraview</code><br>
@@ -174,18 +213,18 @@ Install applcations with default settings and unpack the boost in C:\.
     Make sure that INSTALL is the selected target. Build it and close CMake.<br>
     Change the environment variable PATH to include the path: C:\Program Files\VTK\bin
 </p>
-<p><h3>3. Download TTK</h3>
+<p><h3>4. Download TTK</h3>
     Run the commands for getting TTK sources on C:\ttk:<br>
     <code>cd ../../..</code><br>
     <code>git clone https://github.com/topology-tool-kit/ttk.git</code><br>
 </p>
-<p><h3>4. Patching ParaView</h3>
+<p><h3>5. Patching ParaView</h3>
     Run the commands for patching ParaView on x86 installation<br>
     <code>cd c:/ttk/paraview/patch</code><br>
     <code>patch-paraview-msvc-x86.cmd c:/paraview</code><br>
     <code>cd ../../..</code><br>
 </p>
-<p><h3>5. Installing ParaView</h3>
+<p><h3>6. Installing ParaView</h3>
     Run the commands for opening CMake with ParaView:<br>
     <code>cd paraview</code><br>
     <code>mkdir build</code><br>
@@ -199,7 +238,7 @@ Install applcations with default settings and unpack the boost in C:\.
     Generate and open project.<br> 
     Make sure that INSTALL is the selected target. Build it and close CMake.<br>
 </p>
-<p><h3>6. Installing TTK</h3>
+<p><h3>7. Installing TTK</h3>
     Run the commands for opening CMake with TTK:<br>
     <code>cd ../../ttk</code><br>
     <code>mkdir build</code><br>
