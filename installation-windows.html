@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Topology ToolKit">
+    <meta name="author" content="The Topology ToolKit">
+    <meta name="keywords" content="TTK, Topology ToolKit, Topological Data 
+Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour 
+tree, persistence diagram, persistence curve, continuous scatterplot, fiber 
+surface, contour forests, jacobi set, mandatory critical points, topological 
+simplification, VTK, ParaView, Python" />
+
+    <title>TTK - the Topology ToolKit</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'
+);
+
+  ga('create', 'UA-88087813-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl =
+  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-88087813-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" 
+data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                TTK Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling 
+-->
+            <div class="collapse navbar-collapse" 
+id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="installation.html">Installation</a>
+                    </li>
+                    <li>
+                        <a href="tutorials.html">Tutorials</a>
+                    </li>
+                    <li>
+                        <a href="documentation.html">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="contribute.html">Contribute</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" 
+      style="background-image: url('img/morseHills.png'">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Topology ToolKit</h1>
+                        <hr class="small">
+                        <span class="subheading">Windows Installation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+  
+
+Some notes on installation for Windows, using Windows 10 x64 and Microsoft Visual Studio 2015.<br>
+
+<p><h3>1. Downloads and installation applications</h3>
+<ul>
+    <li> <a href="https://cmake.org/download" target="new">CMake</a> (tested with 3.10.0) </li>
+    <li> <a href="https://git-scm.com/download" target="new">Git for Windows</a> (tested with 2.15.1) </li>
+    <li> <a href="https://www.qt.io/download-qt-for-application-development" target="new">QT5</a> (tested with 5.9.3) </li>
+    <li> <a href="https://www.python.org/downloads/release/python-2713/" target="new">Python</a> (tested with 2.7.13) </li>    
+    <li> <a href="http://www.boost.org/users/download" target="new">Boost</a> (tested with 1.65.1) </li>    
+</ul>
+Install applcations with default settings and unpack the boost in C:\.
+</p>
+<p><h3>2. Installing VTK</h3>
+    Open Command Prompt by pressing Windows+X to open the Power Users menu, and then click "Command Prompt (Admin).".<br><br>    
+    Run the commands for getting ParaView and VTK sources on C:\paraview,C:\paraview\VTK:<br>
+    <code>cd ../..</code><br>
+    <code>git clone https://gitlab.kitware.com/paraview/paraview.git</code><br>
+    <code>cd paraview</code><br>
+    <code>git submodule update --init --recursive</code><br>
+    <br>
+    Run the commands for opening CMake with VTK:<br>
+    <code>cd VTK</code><br>
+    <code>mkdir build</code><br>
+    <code>cd build</code><br>
+    <code>cmake-gui ../</code><br>
+    <br>
+    Configure VTK (select generator "Visual Studio 14 2015 Win64" for x64-bit application):<br> 
+    <code>&nbsp;&middot;&nbsp;CMAKE_CONFIGURATION_TYPES=Release</code><br>
+    Generate and open project.<br> 
+    Make sure that INSTALL is the selected target. Build it and close CMake.<br>
+    Change the environment variable PATH to include the path: C:\Program Files\VTK\bin
+</p>
+<p><h3>3. Download TTK</h3>
+    Run the commands for getting TTK sources on C:\ttk:<br>
+    <code>cd ../../..</code><br>
+    <code>git clone https://github.com/topology-tool-kit/ttk.git</code><br>
+</p>
+<p><h3>4. Patching ParaView</h3>
+    Run the commands for patching ParaView on x86 installation<br>
+    <code>cd c:/ttk/paraview/patch</code><br>
+    <code>patch-paraview-msvc-x86.cmd c:/paraview</code><br>
+    <code>cd ../../..</code><br>
+</p>
+<p><h3>5. Installing ParaView</h3>
+    Run the commands for opening CMake with ParaView:<br>
+    <code>cd paraview</code><br>
+    <code>mkdir build</code><br>
+    <code>cd build</code><br>
+    <code>cmake-gui ../</code><br>
+    <br>
+    Configure ParaView:<br> 
+    <code>&nbsp;&middot;&nbsp;CMAKE_CONFIGURATION_TYPES=Release</code><br>
+    <code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_PYTHON=ON</code><br>    
+    <code>&nbsp;&middot;&nbsp;Qt5_DIR=C:/Qt/5.9.3/msvc2015_64/lib/cmake/Qt5</code><br>    
+    Generate and open project.<br> 
+    Make sure that INSTALL is the selected target. Build it and close CMake.<br>
+</p>
+<p><h3>6. Installing TTK</h3>
+    Run the commands for opening CMake with TTK:<br>
+    <code>cd ../../ttk</code><br>
+    <code>mkdir build</code><br>
+    <code>cd build</code><br>
+    <code>cmake-gui ../</code><br>
+    <br>
+    Configure TTK:<br> 
+    <code>&nbsp;&middot;&nbsp;CMAKE_CONFIGURATION_TYPES=Release</code><br>
+    <code>&nbsp;&middot;&nbsp;ParaView_DIR=C:/paraview/build</code><br>    
+    <code>&nbsp;&middot;&nbsp;Qt5_DIR=C:/Qt/5.9.3/msvc2015_64/lib/cmake/Qt5</code><br>    
+    <code>&nbsp;&middot;&nbsp;TTK_INSTALL_PLUGIN_DIR=C:/Program Files/ParaView/bin/plugins</code><br>    
+    <code>&nbsp;&middot;&nbsp;TTK_ENABLE_OPENMP=OFF</code><br>    
+    <br>    
+    Add path entry BOOST_ROOT with value the boost root folder<br>    
+    <br>    
+    Generate and open project.<br> 
+    Make sure that INSTALL is the selected target. Build it, close CMake and Command Prompt.<br>
+    <br>        
+</p>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">
+                    Contact: <a href="mailto:topology.tool.kit@gmail.com">
+                    topology.tool.kit@gmail.com</a><br>
+                    Updated on June 27th, 2017.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
