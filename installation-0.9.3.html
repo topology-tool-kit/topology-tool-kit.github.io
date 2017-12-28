@@ -143,21 +143,17 @@ id="bs-example-navbar-collapse-1">
   
                 
                 Please find below detailed instructions for the 
-installation of TTK under Linux (default target platform). <br><br>
-TTK is also supported on other operating systems:<br>
-&nbsp;&middot;&nbsp;
-<a href="installation-windows.html">
-Windows installation instructions</a>;
-<br>
-&nbsp;&middot;&nbsp;
-<a href="installation-osx.html">
-MacOS installation instructions</a>.<br><br>
+installation of TTK. <br><br>
 These specific notes describe the installation procedure for a 
 <a 
 href="http://releases.ubuntu.com/17.10/ubuntu-17.10-desktop-amd64.iso"
 target="new">
 Ubuntu Linux 17.10</a> operating system (but the process should be very similar 
 for other Linux distributions).
+TTK is also <a href="installation-osx.html">supported  on 
+MacOS</a> and specific instructions can be found <a 
+href="installation-osx.html">here</a>.<br>
+Successful ports to Microsoft Windows have been reported.
 <br><a href="tutorials.html#installation" target="new">A video from our 
 tutorial page</a> 
 also shows how to proceed on a step-by-step basis.<br> <br>
@@ -167,7 +163,7 @@ The remainder of these notes
 describe 
 the installation of the 
 <a href="downloads.html" target="new">
-version 0.9.4 of 
+version 0.9.3 of 
 TTK</a> along with the <a 
 href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
 version=v5.4&type=source&os=all&downloadFile=ParaView-v5.4.1.tar.gz" 
@@ -176,8 +172,6 @@ version 5.4.1 of ParaView</a>. Other versions of either software packages
 may require slight variations in the installation procedure.
 For earlier versions of both software packages, you may want to check out 
 previous versions of our installation notes: <br>
-&nbsp;&middot;&nbsp;
-<a href="installation-0.9.3.html">TTK 0.9.3 with ParaView 5.4.1</a>,<br>
 &nbsp;&middot;&nbsp;
 <a href="installation-0.9.2.html">TTK 0.9.2 with ParaView 5.4.0</a>,<br>
 &nbsp;&middot;&nbsp;
@@ -237,14 +231,14 @@ a terminal (this assumes that you downloaded the tarballs to the
 <code>~/Downloads</code> directory):<br><br>
 <code>$ mkdir ~/ttk</code><br>
 <code>$ mv ~/Downloads/ParaView-v5.4.1.tar.gz ~/ttk/</code><br>
-<code>$ mv ~/Downloads/ttk-0.9.4.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ttk-0.9.3.tar.gz ~/ttk/</code><br>
 <code>$ cd ~/ttk</code><br>
 <code>$ tar xvzf ParaView-v5.4.1.tar.gz</code><br>
-<code>$ tar xvzf ttk-0.9.4.tar.gz</code><br><br>
+<code>$ tar xvzf ttk-0.9.3.tar.gz</code><br><br>
 You can delete the tarballs after the source trees have been decompressed by 
 entering the following commands:<br><br>
 <code>$ rm ParaView-v5.4.1.tar.gz</code><br>
-<code>$ rm ttk-0.9.4.tar.gz</code></p>
+<code>$ rm ttk-0.9.3.tar.gz</code></p>
                   
                   <p>
                   <h3>4. Patching the ParaView source tree</h3>
@@ -254,7 +248,7 @@ This step is
 optional. 
 To proceed, go to 
 the patch directory and apply it as follows:<br><br>
-<code>$ cd ~/ttk/ttk-0.9.4/paraview/patch</code><br>
+<code>$ cd ~/ttk/ttk-0.9.3/paraview/patch</code><br>
 <code>$ ./patch-paraview-5.4.1.sh
  ~/ttk/ParaView-v5.4.1/</code></p>
 <!-- <code style="color: #ef2929; font-weight: bold;">root #</code> -->
@@ -320,7 +314,7 @@ located in the source tree).<br><br>-->
 <h4><a name="ttkConfig">a)</a> Configuration</h4>
 To enter the configuration menu of TTK's build, enter the following 
 commands:<br><br>
-<code>$ cd ~/ttk/ttk-0.9.4/</code><br>
+<code>$ cd ~/ttk/ttk-0.9.3/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
@@ -369,7 +363,7 @@ default TTK installation path, <code>/usr/local/</code>):<br><br>
 <p>
 If you wish to disable the build and installation of certain TTK components, 
 just comment the corresponding lines in the <code>CMakeLists.txt</code> file at 
-the root of the source tree (<code>~/ttk/ttk-0.9.4/CMakeLists.txt</code> in our 
+the root of the source tree (<code>~/ttk/ttk-0.9.3/CMakeLists.txt</code> in our 
 example) prior to entering the configuration step of TTK's build (<a 
 href="#ttkConfig">section 6.a</a>).
 </p>
@@ -446,7 +440,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on December 28, 2017.</p>
+                    Updated on November 4, 2017.</p>
                 </div>
             </div>
         </div>
