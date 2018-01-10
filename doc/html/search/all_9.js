@@ -1,7 +1,7 @@
 var searchData=
 [
   ['id',['id',['../structttk_1_1vertex.html#aa057150636af88f785c22630ebca527c',1,'ttk::vertex']]],
-  ['id_5f',['Id_',['../classttk_1_1ReebSpace_1_1Sheet3.html#a3b984225fddd4de355bfed66d25ea0c4',1,'ttk::ReebSpace::Sheet3::Id_()'],['../structttk_1_1Cell.html#a4e23029a9e5bb530da4a1880377ae316',1,'ttk::Cell::id_()']]],
+  ['id_5f',['id_',['../structttk_1_1Cell.html#a4e23029a9e5bb530da4a1880377ae316',1,'ttk::Cell::id_()'],['../classttk_1_1ReebSpace_1_1Sheet3.html#a3b984225fddd4de355bfed66d25ea0c4',1,'ttk::ReebSpace::Sheet3::Id_()']]],
   ['idcell',['idCell',['../classttk.html#af3614ce0eca7a2945e2e642cc9d50540',1,'ttk::idCell()'],['../namespacettk_1_1ftm.html#ab806bdc328552476628117d287fb9002',1,'ttk::ftm::idCell()']]],
   ['idcorresp',['idCorresp',['../classttk.html#ab3f09d01e48dba4502a58212cd696524',1,'ttk::idCorresp()'],['../namespacettk_1_1ftm.html#a344ba877ae7fef0ffc244ed22a6be5ff',1,'ttk::ftm::idCorresp()']]],
   ['idedge',['idEdge',['../classttk.html#a7e9f6487e5cfd61cece07cb8e7edc6c0',1,'ttk::idEdge()'],['../namespacettk_1_1ftm.html#adc7c293c57f3e229b5a109fd22134778',1,'ttk::ftm::idEdge()']]],
@@ -58,7 +58,7 @@ var searchData=
   ['insertnode',['insertNode',['../classttk_1_1MergeTree.html#a133e801d39fc894eaa3e051c5e19b69b',1,'ttk::MergeTree::insertNode()'],['../classttk_1_1ftm_1_1FTMTree__MT.html#a5e722fca12bef60c5bb779f7e2af921e',1,'ttk::ftm::FTMTree_MT::insertNode()']]],
   ['insertnodeaboveseed',['insertNodeAboveSeed',['../classttk_1_1MergeTree.html#ae184eece659c89caf43de540592241d9',1,'ttk::MergeTree']]],
   ['insertnodes',['insertNodes',['../classttk_1_1ftm_1_1FTMTree__CT.html#a94b7b6510788e1ff15e2b01639834321',1,'ttk::ftm::FTMTree_CT']]],
-  ['int',['int',['../classttkBlank.html#addf698bc6b10631fdfcc17360469255b',1,'ttkBlank::int()'],['../classttkFieldSelector.html#ad0c13bb449ca00b7ceb51c25030debb9',1,'ttkFieldSelector::int()'],['../classttkIdentifierRandomizer.html#a35eee5415babbca90f1442bbcacda42f',1,'ttkIdentifierRandomizer::int()'],['../classttkTriangulationRequest.html#a5f83326c944e9db3f58c34ab9bc0f8d1',1,'ttkTriangulationRequest::int()']]],
+  ['int',['int',['../classttkBlank.html#addf698bc6b10631fdfcc17360469255b',1,'ttkBlank::int()'],['../classttkCellDataSelector.html#a6534a0e954cfa78b96de64db39208acf',1,'ttkCellDataSelector::int()'],['../classttkIdentifierRandomizer.html#a35eee5415babbca90f1442bbcacda42f',1,'ttkIdentifierRandomizer::int()'],['../classttkPointDataSelector.html#af74fe80fc6ac605f876abd74307c1ae7',1,'ttkPointDataSelector::int()'],['../classttkTriangulationRequest.html#a5f83326c944e9db3f58c34ab9bc0f8d1',1,'ttkTriangulationRequest::int()']]],
   ['integrallines',['IntegralLines',['../classttk_1_1IntegralLines.html',1,'ttk::IntegralLines'],['../classttk_1_1IntegralLines.html#afec9915fa97876a71cb85fc2384c7d2f',1,'ttk::IntegralLines::IntegralLines()']]],
   ['integrallines_2ecpp',['IntegralLines.cpp',['../IntegralLines_8cpp.html',1,'']]],
   ['integrallines_2eh',['IntegralLines.h',['../IntegralLines_8h.html',1,'']]],

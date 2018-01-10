@@ -31,6 +31,7 @@ var searchData=
   ['clearregularnodes',['clearRegularNodes',['../classttk_1_1SuperArc.html#acdf52eea9887e2a1b59ac7b6f2d092ec',1,'ttk::SuperArc']]],
   ['clearroot',['clearRoot',['../classttk_1_1SubLevelSetTree.html#a00e7ab2ff0762b896f7ee006ff2e1897',1,'ttk::SubLevelSetTree']]],
   ['clearsamples',['clearSamples',['../classttk_1_1SuperArc.html#a145dcb1879c7cf143abf667262d73227',1,'ttk::SuperArc']]],
+  ['clearscalarfields',['ClearScalarFields',['../classttkCellDataSelector.html#aa8e8eff1182d40f0fe0da919b6b69646',1,'ttkCellDataSelector::ClearScalarFields()'],['../classttkPointDataSelector.html#aac6510a81e25760057b08b860e1e925f',1,'ttkPointDataSelector::ClearScalarFields()']]],
   ['clearsegmentation',['clearSegmentation',['../classttk_1_1ftm_1_1SuperArc.html#aa103de471bbc725704a3f9204d19455d',1,'ttk::ftm::SuperArc::clearSegmentation()'],['../classttkContourForests.html#a443bed73c921ea9eb8bd1e743fb25804',1,'ttkContourForests::clearSegmentation()']]],
   ['clearskeleton',['clearSkeleton',['../classttk_1_1SubLevelSetTree.html#a424593be1e7ae6e9a1b5d0ed7aeafe48',1,'ttk::SubLevelSetTree::clearSkeleton()'],['../classttk_1_1ContourTree.html#ad9a1ac20b283dad201f38ab5a72cd75c',1,'ttk::ContourTree::clearSkeleton()'],['../classttkContourForests.html#a37b9f122326a2d846af341aa6b6b6441',1,'ttkContourForests::clearSkeleton()']]],
   ['cleartree',['clearTree',['../classttkContourForests.html#a5e862be8415029dc54864087eb100362',1,'ttkContourForests']]],

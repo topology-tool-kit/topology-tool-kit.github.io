@@ -1,7 +1,7 @@
 var searchData=
 [
   ['id',['id',['../structttk_1_1vertex.html#aa057150636af88f785c22630ebca527c',1,'ttk::vertex']]],
-  ['id_5f',['Id_',['../classttk_1_1ReebSpace_1_1Sheet3.html#a3b984225fddd4de355bfed66d25ea0c4',1,'ttk::ReebSpace::Sheet3::Id_()'],['../structttk_1_1Cell.html#a4e23029a9e5bb530da4a1880377ae316',1,'ttk::Cell::id_()']]],
+  ['id_5f',['id_',['../structttk_1_1Cell.html#a4e23029a9e5bb530da4a1880377ae316',1,'ttk::Cell::id_()'],['../classttk_1_1ReebSpace_1_1Sheet3.html#a3b984225fddd4de355bfed66d25ea0c4',1,'ttk::ReebSpace::Sheet3::Id_()']]],
   ['ids',['ids',['../structNodeData.html#ae38e8e3d227b1f50e1523518bf99b80f',1,'NodeData::ids()'],['../structVertData.html#ab34f0a154d1bcb90cac910231c8b66d8',1,'VertData::ids()']]],
   ['imagedatareaders_5f',['imageDataReaders_',['../classttkProgramBase.html#a1dffed9d188434fecc99a40602fa0d43',1,'ttkProgramBase']]],
   ['implicittriangulation_5f',['implicitTriangulation_',['../classttk_1_1Triangulation.html#ab514832bb78f73ff27fed79d26a68619',1,'ttk::Triangulation']]],
@@ -23,7 +23,7 @@ var searchData=
   ['inputscalars_5f',['inputScalars_',['../classttk_1_1PersistenceCurve.html#a3e9dd929654a3cd0ecd8b12ae2445c9b',1,'ttk::PersistenceCurve::inputScalars_()'],['../classttk_1_1PersistenceDiagram.html#aa7632751c6c2ed1a46757262019e11b7',1,'ttk::PersistenceDiagram::inputScalars_()']]],
   ['inputtriangulation_5f',['inputTriangulation_',['../classttk_1_1AbstractMorseSmaleComplex.html#a77d56e065c8836ab1acdc636f3e53a51',1,'ttk::AbstractMorseSmaleComplex::inputTriangulation_()'],['../classttk_1_1DiscreteGradient.html#a150dc58727fa86e9b6a0659bf5e23362',1,'ttk::DiscreteGradient::inputTriangulation_()']]],
   ['inputupperboundfield_5f',['inputUpperBoundField_',['../classttk_1_1MandatoryCriticalPoints.html#a2d2e3919a339824379b5c740dde07ce1',1,'ttk::MandatoryCriticalPoints']]],
-  ['int',['int',['../classttkBlank.html#addf698bc6b10631fdfcc17360469255b',1,'ttkBlank::int()'],['../classttkFieldSelector.html#ad0c13bb449ca00b7ceb51c25030debb9',1,'ttkFieldSelector::int()'],['../classttkIdentifierRandomizer.html#a35eee5415babbca90f1442bbcacda42f',1,'ttkIdentifierRandomizer::int()'],['../classttkTriangulationRequest.html#a5f83326c944e9db3f58c34ab9bc0f8d1',1,'ttkTriangulationRequest::int()']]],
+  ['int',['int',['../classttkBlank.html#addf698bc6b10631fdfcc17360469255b',1,'ttkBlank::int()'],['../classttkCellDataSelector.html#a6534a0e954cfa78b96de64db39208acf',1,'ttkCellDataSelector::int()'],['../classttkIdentifierRandomizer.html#a35eee5415babbca90f1442bbcacda42f',1,'ttkIdentifierRandomizer::int()'],['../classttkPointDataSelector.html#af74fe80fc6ac605f876abd74307c1ae7',1,'ttkPointDataSelector::int()'],['../classttkTriangulationRequest.html#a5f83326c944e9db3f58c34ab9bc0f8d1',1,'ttkTriangulationRequest::int()']]],
   ['interactor_5f',['interactor_',['../classttkUserInterfaceBase.html#a1e343a1152b04e4193da05f7ce5af121',1,'ttkUserInterfaceBase']]],
   ['interfaces',['interfaces',['../structttk_1_1ParallelData.html#af4da07fe4c357a979ffb0c5fd9c314f0',1,'ttk::ParallelData']]],
   ['intersection_5f',['intersection_',['../structttk_1_1FiberSurface_1_1__intersectionTriangle.html#a614fb6374e70fcf7582440efe2938df5',1,'ttk::FiberSurface::_intersectionTriangle']]],
