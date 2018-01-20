@@ -157,7 +157,7 @@ MacOS installation instructions</a>.<br><br>
 
 These specific notes describe the installation procedure for a 
 Windows 10 operating system with Visual Studio 2015 (but the process should be 
-very similar for other version).<br><br> 
+very similar for other versions).<br><br> 
 
 The remainder of these notes 
 describe 
@@ -234,20 +234,15 @@ the command prompt.<br><br>
     <code>&nbsp;&middot;&nbsp;C:\Program Files\VTK\bin</code>
 </p>
 <p><h3>3. Download TTK</h3>
-Open the command prompt by pressing <code>Windows+X</code> to open 
-the Power Users menu, and then click on <code>Command Prompt 
-(Admin)</code>.<br><br> 
-
-    Run the following commands to download TTK sources to the 
-target location <code>C:\ttk</code>:<br>
-    <code>cd ..\..\</code><br>
-    <code>git clone https://github.com/topology-tool-kit/ttk.git</code><br>
+Download TTK's source code archive <code>ttk-0.9.4.zip</code> from the 
+<a target="new" href="downloads.html">download page</a> and decompress it to 
+<code>C:\</code>.
 </p>
 <p><h3>4. Patching ParaView</h3>
 In order to enjoy the complete set of TTK features, we recommend at this stage 
 to patch the ParaView source tree. This step is optional. To proceed, go to the 
 patch directory: <br>
-    <code>cd C:\ttk\paraview\patch</code><br><br>
+    <code>cd C:\ttk-0.9.4\paraview\patch</code><br><br>
     Next, on x86 installations, run the following command:<br>
     <code>patch-paraview-msvc-x86.cmd C:\ParaView-v5.4.1</code><br><br>
     Otherwise, run the following command:<br>
@@ -287,7 +282,7 @@ the Power Users menu, and then click on <code>Command Prompt
 (Admin)</code>.<br><br> 
 
     Run the following commands to configure TTK with CMake:<br>
-    <code>cd ..\..\ttk</code><br>
+    <code>cd ..\..\ttk-0.9.4</code><br>
     <code>mkdir build</code><br>
     <code>cd build</code><br>
     <code>cmake-gui ..\</code><br>
@@ -331,7 +326,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on January 19, 2018.</p>
+                    Updated on January 20, 2018.</p>
                 </div>
             </div>
         </div>
