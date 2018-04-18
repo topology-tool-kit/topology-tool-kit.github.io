@@ -168,17 +168,15 @@ The remainder of these notes
 describe 
 the installation of the 
 <a href="downloads.html" target="new">
-version 0.9.5 of 
+version 0.9.4 of 
 TTK</a> along with the <a 
 href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.5&type=source&os=all&downloadFile=ParaView-v5.5.0.tar.gz" 
+version=v5.4&type=source&os=all&downloadFile=ParaView-v5.4.1.tar.gz" 
 target="new">
-version 5.5.0 of ParaView</a>. Other versions of either software packages 
+version 5.4.1 of ParaView</a>. Other versions of either software packages 
 may require slight variations in the installation procedure.
 For earlier versions of both software packages, you may want to check out 
 previous versions of our installation notes: <br>
-&nbsp;&middot;&nbsp;
-<a href="installation-0.9.4.html">TTK 0.9.4 with ParaView 5.4.1</a>,<br>
 &nbsp;&middot;&nbsp;
 <a href="installation-0.9.3.html">TTK 0.9.3 with ParaView 5.4.1</a>,<br>
 &nbsp;&middot;&nbsp;
@@ -202,7 +200,7 @@ target="new">ParaView</a> for its main user interface. Thus, you will first
 need to download 
 <a 
 href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.5&type=source&os=all&downloadFile=ParaView-v5.5.0.tar.gz" 
+version=v5.4&type=source&os=all&downloadFile=ParaView-v5.4.1.tar.gz" 
 target="new">
 ParaView's source code</a>.
 Note 
@@ -215,22 +213,21 @@ href="downloads.html">download page</a>.</p>
                   <p>
                   <h3>2. Installing the dependencies</h3>
                   Several dependencies will need to be installed in order to 
-compile ParaView and TTK from source. Please enter the following commands 
+compile ParaView and TTK from source. Please enter the following command 
 (omit the <code>$</code> character) in a terminal to install them (please see 
 the documentation of your package manager if your operating system is not 
-Ubuntu Linux):<br><code><br>
-$ sudo apt-get install cmake-qt-gui<br>
-$ sudo apt-get install libvtk6-dev<br>
-$ sudo apt-get install qt5-default qtbase5-dev libqt5x11extras5-dev
+Ubuntu Linux):<br><br>
+<code>$
+sudo apt-get install cmake-qt-gui 
+libvtk6-dev
+qt4-dev-tools
 </code><br><br>
-Note that these commands will also trigger the installation of the (numerous) 
+Note that this command will also trigger the installation of the (numerous) 
 dependencies of these components.</p>
 <h4>Note to non-Ubuntu users</h4>
-We recommend in general to install the version 7 of the VTK library 
-<!--and the 
-version 5 of the Qt library, -->
-instead of the version described above (which 
-is only recommended for Ubuntu users).
+We recommend in general to install the version 7 of the VTK library and the 
+version 5 of the Qt library, instead of the versions described above (which 
+are only recommended for Ubuntu users).
 <h4>Note to Fedora users</h4>
 It has been reported that the following packages should also be installed 
 under Fedora (as of version 27): 
@@ -247,15 +244,15 @@ under Fedora (as of version 27):
 a terminal (this assumes that you downloaded the tarballs to the 
 <code>~/Downloads</code> directory):<br><br>
 <code>$ mkdir ~/ttk</code><br>
-<code>$ mv ~/Downloads/ParaView-v5.5.0.tar.gz ~/ttk/</code><br>
-<code>$ mv ~/Downloads/ttk-0.9.5.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ParaView-v5.4.1.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ttk-0.9.4.tar.gz ~/ttk/</code><br>
 <code>$ cd ~/ttk</code><br>
-<code>$ tar xvzf ParaView-v5.5.0.tar.gz</code><br>
-<code>$ tar xvzf ttk-0.9.5.tar.gz</code><br><br>
+<code>$ tar xvzf ParaView-v5.4.1.tar.gz</code><br>
+<code>$ tar xvzf ttk-0.9.4.tar.gz</code><br><br>
 You can delete the tarballs after the source trees have been decompressed by 
 entering the following commands:<br><br>
-<code>$ rm ParaView-v5.5.0.tar.gz</code><br>
-<code>$ rm ttk-0.9.5.tar.gz</code></p>
+<code>$ rm ParaView-v5.4.1.tar.gz</code><br>
+<code>$ rm ttk-0.9.4.tar.gz</code></p>
                   
                   <p>
                   <h3>4. Patching the ParaView source tree</h3>
@@ -265,9 +262,9 @@ This step is
 optional. 
 To proceed, go to 
 the patch directory and apply it as follows:<br><br>
-<code>$ cd ~/ttk/ttk-0.9.5/paraview/patch</code><br>
-<code>$ ./patch-paraview-5.5.0.sh
- ~/ttk/ParaView-v5.5.0/</code></p>
+<code>$ cd ~/ttk/ttk-0.9.4/paraview/patch</code><br>
+<code>$ ./patch-paraview-5.4.1.sh
+ ~/ttk/ParaView-v5.4.1/</code></p>
 <!-- <code style="color: #ef2929; font-weight: bold;">root #</code> -->
 <!-- <code>emerge --ask&#160;--unmerge  -->
 <!-- sys-kernel/genkernel</code> -->
@@ -277,7 +274,7 @@ the patch directory and apply it as follows:<br><br>
                   <h4>a) Configuration</h4>
                   To enter the configuration menu of ParaView's build, enter 
 the following commands:<br><br>
-<code>$ cd ~/ttk/ParaView-v5.5.0/</code><br>
+<code>$ cd ~/ttk/ParaView-v5.4.1/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
@@ -287,15 +284,15 @@ follows (required for TTK's installation):<br><br>
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_PYTHON=ON</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_INSTALL_DEVELOPMENT_FILES=ON</code><br>
-<!-- <code>&nbsp;&middot;&nbsp;PARAVIEW_QT_VERSION=4</code><br> -->
-<!-- <code>&nbsp;&middot;&nbsp;VTK_RENDERING_BACKEND=OpenGL2</code><br> -->
+<code>&nbsp;&middot;&nbsp;PARAVIEW_QT_VERSION=4</code><br>
+<code>&nbsp;&middot;&nbsp;VTK_RENDERING_BACKEND=OpenGL2</code><br>
 <!-- <code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=OpenMP</code><br>-->
 <br> 
 
-<!--<h4>Note to non-Ubuntu users</h4>
+<h4>Note to non-Ubuntu users</h4>
 We recommend in general to use the version 5 of the Qt library, instead of the 
 version 4 as described above (which is only recommended for Ubuntu 
-users).<br><br>-->
+users).<br><br>
 
 Optionally, you may want to turn on additional features. See the 
 <a 
@@ -331,7 +328,7 @@ located in the source tree).<br><br>-->
 <h4><a name="ttkConfig">a)</a> Configuration</h4>
 To enter the configuration menu of TTK's build, enter the following 
 commands:<br><br>
-<code>$ cd ~/ttk/ttk-0.9.5/</code><br>
+<code>$ cd ~/ttk/ttk-0.9.4/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
@@ -377,13 +374,13 @@ default TTK installation path, <code>/usr/local/</code>):<br><br>
 <code>$ ls /usr/local/bin/*Gui</code>
 </p>
 
-<!--<p>
+<p>
 If you wish to disable the build and installation of certain TTK components, 
 just comment the corresponding lines in the <code>CMakeLists.txt</code> file at 
-the root of the source tree (<code>~/ttk/ttk-0.9.5/CMakeLists.txt</code> in our 
+the root of the source tree (<code>~/ttk/ttk-0.9.4/CMakeLists.txt</code> in our 
 example) prior to entering the configuration step of TTK's build (<a 
 href="#ttkConfig">section 6.a</a>).
-</p>-->
+</p>
 
 <p>
 <h3>7. Checking your TTK installation</h3>
@@ -457,7 +454,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on April 18, 2018.</p>
+                    Updated on March 8, 2018.</p>
                 </div>
             </div>
         </div>
