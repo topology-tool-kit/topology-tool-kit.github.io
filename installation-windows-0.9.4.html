@@ -163,27 +163,20 @@ The remainder of these notes
 describe 
 the installation of the 
 <a href="downloads.html" target="new">
-version 0.9.5 of 
+version 0.9.4 of 
 TTK</a> along with the <a 
 href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.5&type=source&os=all&downloadFile=ParaView-v5.5.0.tar.gz" 
+version=v5.4&type=source&os=all&downloadFile=ParaView-v5.4.1.tar.gz" 
 target="new">
-version 5.5.0 of ParaView</a>. Other versions of either software packages 
+version 5.4.1 of ParaView</a>. Other versions of either software packages 
 may require slight variations in the installation procedure.
-For earlier versions of both software packages, you may want to check out 
-previous versions of our installation notes for Windows: <br>
-&nbsp;&middot;&nbsp;
-<a href="installation-windows-0.9.4.html">TTK 0.9.4 with ParaView 5.4.1</a>.<br>
 
 
 <p><h3>1. Installing the dependencies</h3>
 <ul>
-    <li> <a href="https://cmake.org/download" target="new">CMake</a> (tested 
-with 3.10.0) </li>
-    <li> <a href="https://git-scm.com/download" target="new">Git for 
-Windows</a> (tested with 2.15.1) </li>
-    <li> <a href="https://www.qt.io/download-qt-for-application-development" 
-target="new">QT5</a> (tested with 5.9.3) </li>
+    <li> <a href="https://cmake.org/download" target="new">CMake</a> (tested with 3.10.0) </li>
+    <li> <a href="https://git-scm.com/download" target="new">Git for Windows</a> (tested with 2.15.1) </li>
+    <li> <a href="https://www.qt.io/download-qt-for-application-development" target="new">QT5</a> (tested with 5.9.3) </li>
     <li> <a href="https://www.python.org/downloads/release/python-362/" 
 target="new">
 Python</a> (tested with 3.6.2) </li>    
@@ -207,13 +200,13 @@ Files\Qt\5.9.3\msvc2015_64\lib\cmake\Qt5</code>
 </p>
 <p><h3>2. Building VTK</h3>
 
-Now, download the zip archive of ParaView's source tree, version 5.5.0, by 
+Now, download the zip archive of ParaView's source tree, version 5.4.1, by 
 following 
 <a 
 href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.5&type=binary&os=Sources&downloadFile=ParaView-v5.5.0.zip" 
+version=v5.4&type=binary&os=Sources&downloadFile=ParaView-v5.4.1.zip" 
 target="new">this link</a> and decompress the archive to <code>C:\</code> (this 
-will create the directory <code>C:\ParaView-v5.5.0</code>).<br><br>
+will create the directory <code>C:\ParaView-v5.4.1</code>).<br><br>
 
     Next, open the command prompt by pressing <code>Windows+X</code> to open 
 the 
@@ -221,7 +214,7 @@ Power Users menu, and then click on <code>Command Prompt
 (Admin)</code>.<br><br>    
     Run the following commands to configure VTK with CMake:<br>
     <code>cd ..\..\</code><br>
-    <code>cd C:\ParaView-v5.5.0</code><br>
+    <code>cd C:\ParaView-v5.4.1</code><br>
     <code>cd VTK</code><br>
     <code>mkdir build</code><br>
     <code>cd build</code><br>
@@ -241,7 +234,7 @@ the command prompt.<br><br>
     <code>&nbsp;&middot;&nbsp;C:\Program Files\VTK\bin</code>
 </p>
 <p><h3>3. Download TTK</h3>
-Download TTK's source code archive <code>ttk-0.9.5.zip</code> from the 
+Download TTK's source code archive <code>ttk-0.9.4.zip</code> from the 
 <a target="new" href="downloads.html">download page</a> and decompress it to 
 <code>C:\</code>.
 </p>
@@ -249,19 +242,19 @@ Download TTK's source code archive <code>ttk-0.9.5.zip</code> from the
 In order to enjoy the complete set of TTK features, we recommend at this stage 
 to patch the ParaView source tree. This step is optional. To proceed, go to the 
 patch directory: <br>
-    <code>cd C:\ttk-0.9.5\paraview\patch</code><br><br>
+    <code>cd C:\ttk-0.9.4\paraview\patch</code><br><br>
     Next, on x86 installations, run the following command:<br>
-    <code>patch-paraview-msvc-x86.cmd C:\ParaView-v5.5.0</code><br><br>
+    <code>patch-paraview-msvc-x86.cmd C:\ParaView-v5.4.1</code><br><br>
     Otherwise, run the following command:<br>
-    <code>patch-paraview-msvc.cmd C:\ParaView-v5.5.0</code><br><br>
+    <code>patch-paraview-msvc.cmd C:\ParaView-v5.4.1</code><br><br>
     Finally, run the following command to deploy the complete set of TTK 
 features:<br>
-    <code>patch-paraview-5.5.0.sh C:\ParaView-v5.5.0</code><br>
+    <code>patch-paraview-5.4.1.sh C:\ParaView-v5.4.1</code><br>
     <code>cd ..\..\..</code><br>
 </p>
 <p><h3>5. Installing ParaView</h3>
     Run the following commands to configure ParaView with CMake: <br>
-    <code>cd ParaView-v5.5.0</code><br>
+    <code>cd ParaView-v5.4.1</code><br>
     <code>mkdir build</code><br>
     <code>cd build</code><br>
     <code>cmake-gui ..\</code><br>
@@ -289,7 +282,7 @@ the Power Users menu, and then click on <code>Command Prompt
 (Admin)</code>.<br><br> 
 
     Run the following commands to configure TTK with CMake:<br>
-    <code>cd ..\..\ttk-0.9.5</code><br>
+    <code>cd ..\..\ttk-0.9.4</code><br>
     <code>mkdir build</code><br>
     <code>cd build</code><br>
     <code>cmake-gui ..\</code><br>
@@ -299,7 +292,7 @@ Click on the "Configure" button and select the appropriate generator
 Make sure to set the following 
 variable:<br>
     <code>&nbsp;&middot;&nbsp;CMAKE_CONFIGURATION_TYPES=Release</code><br>
-    <code>&nbsp;&middot;&nbsp;ParaView_DIR=C:\ParaView-v5.5.0\build</code><br>  
+    <code>&nbsp;&middot;&nbsp;ParaView_DIR=C:\ParaView-v5.4.1\build</code><br>  
  
     <code>&nbsp;&middot;&nbsp;TTK_ENABLE_OPENMP=OFF</code><br>    
     <br>   
@@ -333,7 +326,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on April 18, 2018.</p>
+                    Updated on January 20, 2018.</p>
                 </div>
             </div>
         </div>
