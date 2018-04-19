@@ -282,11 +282,13 @@ the following commands:<br><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
 The configuration window opens. Click on the "Configure" button to proceed.
-Once the configuration is finished, please set the following options as 
-follows (required for TTK's installation):<br><br>
+Once the configuration is finished, please tick the "Advanced" check box 
+and set the following options as follows (required for TTK's 
+installation):<br><br>
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_PYTHON=ON</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_INSTALL_DEVELOPMENT_FILES=ON</code><br>
+<code>&nbsp;&middot;&nbsp;VTK_USE_SYSTEM_PROTOBUF=ON</code><br>
 <!-- <code>&nbsp;&middot;&nbsp;PARAVIEW_QT_VERSION=4</code><br> -->
 <!-- <code>&nbsp;&middot;&nbsp;VTK_RENDERING_BACKEND=OpenGL2</code><br> -->
 <!-- <code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=OpenMP</code><br>-->
@@ -318,12 +320,18 @@ Once the build is finished,
 enter the following 
 command
 to install your build of ParaView on your system:<br><br>
-<code>$ sudo make install</code>
+<code>$ sudo make install</code><br><br>
 <!--<h4>Note to MacOS users</h4>
 It seems that the support of ParaView's development framework is currently not 
 as mature under MacOS than it is under Linux. We recommend MacOS users to omit 
 the above command (to use ParaView then, simply invoke the output binary 
 located in the source tree).<br><br>-->
+
+
+<h4>c) Post-installation</h4>
+Once the installation of ParaView is finished, 
+enter the following command to enable the build of TTK plugins:<br><br>
+<code>$ sudo chmod 777 -R /usr/local/lib/cmake/paraview-5.5</code>
 </p>
 
 <p>
@@ -457,7 +465,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on April 18, 2018.</p>
+                    Updated on April 19, 2018.</p>
                 </div>
             </div>
         </div>
