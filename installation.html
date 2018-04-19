@@ -221,12 +221,13 @@ the documentation of your package manager if your operating system is not
 Ubuntu Linux):<br><code><br>
 $ sudo apt-get install cmake-qt-gui<br>
 $ sudo apt-get install libvtk6-dev<br>
-$ sudo apt-get install qt5-default qtbase5-dev libqt5x11extras5-dev
+$ sudo apt-get install protobuf-compiler<br>
+$ sudo apt-get install qt5-default qttools5-dev libqt5x11extras5-dev
 </code><br><br>
 Note that these commands will also trigger the installation of the (numerous) 
 dependencies of these components.</p>
 <h4>Note to non-Ubuntu users</h4>
-We recommend in general to install the version 7 of the VTK library 
+We recommend in general to install the version 8 of the VTK library 
 <!--and the 
 version 5 of the Qt library, -->
 instead of the version described above (which 
@@ -286,6 +287,7 @@ Once the configuration is finished, please tick the "Advanced" check box
 and set the following options as follows (required for TTK's 
 installation):<br><br>
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
+<code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=/usr/local/</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_PYTHON=ON</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_INSTALL_DEVELOPMENT_FILES=ON</code><br>
 <code>&nbsp;&middot;&nbsp;VTK_USE_SYSTEM_PROTOBUF=ON</code><br>
