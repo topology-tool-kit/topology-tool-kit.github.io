@@ -155,9 +155,9 @@ Windows installation instructions</a>;
 MacOS installation instructions</a>.<br><br>
 These specific notes describe the installation procedure for a 
 <a 
-href="http://releases.ubuntu.com/17.10.1/ubuntu-17.10.1-desktop-amd64.iso"
+href="http://releases.ubuntu.com/18.04/ubuntu-18.04-desktop-amd64.iso"
 target="new">
-Ubuntu Linux 17.10.1</a> operating system (but the process should be very similar 
+Ubuntu Linux 18.04</a> operating system (but the process should be very similar 
 for other Linux distributions).
 <br><a href="tutorials.html#installation" target="new">A video from our 
 tutorial page</a> 
@@ -220,8 +220,8 @@ compile ParaView and TTK from source. Please enter the following commands
 the documentation of your package manager if your operating system is not 
 Ubuntu Linux):<br><code><br>
 $ sudo apt-get install cmake-qt-gui<br>
-$ sudo apt-get install libvtk6-dev<br>
-$ sudo apt-get install protobuf-compiler<br>
+$ sudo apt-get install libvtk7-dev<br>
+<!-- $ sudo apt-get install protobuf-compiler<br> -->
 $ sudo apt-get install qt5-default qttools5-dev libqt5x11extras5-dev
 </code><br><br>
 Note that these commands will also trigger the installation of the (numerous) 
@@ -283,14 +283,16 @@ the following commands:<br><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
 The configuration window opens. Click on the "Configure" button to proceed.
-Once the configuration is finished, please tick the "Advanced" check box 
-and set the following options as follows (required for TTK's 
+Once the configuration is finished, please 
+<!-- tick the "Advanced" check box and  -->
+set the following options as follows (required 
+for TTK's 
 installation):<br><br>
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
 <code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=/usr/local/</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_PYTHON=ON</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_INSTALL_DEVELOPMENT_FILES=ON</code><br>
-<code>&nbsp;&middot;&nbsp;VTK_USE_SYSTEM_PROTOBUF=ON</code><br>
+<!-- <code>&nbsp;&middot;&nbsp;VTK_USE_SYSTEM_PROTOBUF=ON</code><br> -->
 <!-- <code>&nbsp;&middot;&nbsp;PARAVIEW_QT_VERSION=4</code><br> -->
 <!-- <code>&nbsp;&middot;&nbsp;VTK_RENDERING_BACKEND=OpenGL2</code><br> -->
 <!-- <code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=OpenMP</code><br>-->
@@ -467,7 +469,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on April 19, 2018.</p>
+                    Updated on May 12, 2018.</p>
                 </div>
             </div>
         </div>
