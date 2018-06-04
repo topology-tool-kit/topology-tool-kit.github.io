@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['wasserstein_5f',['wasserstein_',['../classttk_1_1BottleneckDistance.html#a75cfeaea331a18c0ebde88a9ddc5920a',1,'ttk::BottleneckDistance']]],
+  ['wasserstein_5f',['wasserstein_',['../classttk_1_1BottleneckDistance.html#a0bc3ebe6ce3aa6626c4f8dd684fef6c0',1,'ttk::BottleneckDistance']]],
   ['welcomemsg_5f',['welcomeMsg_',['../classttk.html#a8a47c9c51ba69fa020b28099305c3e69',1,'ttk']]],
   ['withdummyvalue_5f',['withDummyValue_',['../classttk_1_1ContinuousScatterPlot.html#a051c6198d735c727c2c393b89266d8d3',1,'ttk::ContinuousScatterPlot']]],
   ['withrangedrivenoctree_5f',['withRangeDrivenOctree_',['../classttk_1_1ReebSpace.html#a89a73f090b214b7d15e6a62ec9bc5546',1,'ttk::ReebSpace']]],

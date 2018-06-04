@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['haschangedconnectivity',['hasChangedConnectivity',['../classttkTriangulation.html#a001eeb24fa30e445b89812ec9cb86431',1,'ttkTriangulation']]],
+  ['haschangedconnectivity',['hasChangedConnectivity',['../classttkTriangulation.html#a2003fc85532c6e783430be9c3a44f3e3',1,'ttkTriangulation']]],
   ['hasduplicatedvertices',['hasDuplicatedVertices',['../classttk_1_1FiberSurface.html#a874c23273590d552b76da0a0cb8eda16',1,'ttk::FiberSurface']]],
-  ['haspoint',['hasPoint',['../structArcData.html#aaf1a08305b6c519aea9d25905d9da0ab',1,'ArcData']]],
+  ['haspoint',['hasPoint',['../structArcData.html#a7af4ce22f6e4c3c38647e148f9bd3c85',1,'ArcData']]],
   ['haspreprocessedboundaryedges',['hasPreprocessedBoundaryEdges',['../classttk_1_1AbstractTriangulation.html#afb7a2bb18409e1db2668db2902981a4a',1,'ttk::AbstractTriangulation::hasPreprocessedBoundaryEdges()'],['../classttk_1_1ExplicitTriangulation.html#a5bfd591c66f309d59b64f7e8cf9f350c',1,'ttk::ExplicitTriangulation::hasPreprocessedBoundaryEdges()']]],
   ['haspreprocessedboundarytriangles',['hasPreprocessedBoundaryTriangles',['../classttk_1_1AbstractTriangulation.html#aa9246375eda78878491a4da11f48da34',1,'ttk::AbstractTriangulation::hasPreprocessedBoundaryTriangles()'],['../classttk_1_1ExplicitTriangulation.html#a2b7c8551f66e9c363065e8fb3894f1f0',1,'ttk::ExplicitTriangulation::hasPreprocessedBoundaryTriangles()']]],
   ['haspreprocessedboundaryvertices',['hasPreprocessedBoundaryVertices',['../classttk_1_1AbstractTriangulation.html#af58fb4d60225a2440321e288b1ce1eb9',1,'ttk::AbstractTriangulation::hasPreprocessedBoundaryVertices()'],['../classttk_1_1ExplicitTriangulation.html#a687f45a7ef437a1f3f0cc1212485f6e5',1,'ttk::ExplicitTriangulation::hasPreprocessedBoundaryVertices()']]],
@@ -28,5 +28,5 @@ var searchData=
   ['hideandclearleadingto',['hideAndClearLeadingTo',['../classttk_1_1MergeTree.html#a410a117f1bdffbae49a31daa092de66f',1,'ttk::MergeTree']]],
   ['hidearc',['hideArc',['../classttk_1_1MergeTree.html#a01eb8bbc2b2b9f1419f23db74b01d72c',1,'ttk::MergeTree']]],
   ['hidenode',['hideNode',['../classttk_1_1MergeTree.html#ab15f19cf3ba30c00e7c4a20281167505',1,'ttk::MergeTree']]],
-  ['hideoutputs',['hideOutputs',['../classttkUserInterfaceBase.html#a146f7185d2cd63e62051f25960b8daf8',1,'ttkUserInterfaceBase']]]
+  ['hideoutputs',['hideOutputs',['../classttkUserInterfaceBase.html#af232e7f463f5c4b85ac5eeaaac600951',1,'ttkUserInterfaceBase']]]
 ];

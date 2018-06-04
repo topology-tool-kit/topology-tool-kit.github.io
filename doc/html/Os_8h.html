@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /home/julien/Pro/svn/lip6/github/tierny/private/ttk-tierny/core/base/common/Os.h File Reference</title>
+<title>TTK: /home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/common/Os.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,10 +70,13 @@ $(function() {
 <div class="title">Os.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;algorithm&gt;</code><br />
-<code>#include &lt;sstream&gt;</code><br />
-<code>#include &lt;<a class="el" href="Debug_8h_source.html">Debug.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;climits&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;cfloat&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
 </div>
 <p><a href="Os_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -95,6 +98,8 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a8950a37c18d5c98ad967d1fde528a77c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Os_8h.html#a8950a37c18d5c98ad967d1fde528a77c">pow10</a>(x)&#160;&#160;&#160;pow(10, x)</td></tr>
+<tr class="separator:a8950a37c18d5c98ad967d1fde528a77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7db5e8ee7c27e6fb5c9caf9d674ea949"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Os_8h.html#a7db5e8ee7c27e6fb5c9caf9d674ea949">REAL_TYPE</a>&#160;&#160;&#160;double</td></tr>
 <tr class="separator:a7db5e8ee7c27e6fb5c9caf9d674ea949"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e053fd2ac5137e85ec829cc253d95f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Os_8h.html#a5e053fd2ac5137e85ec829cc253d95f8">REAL_TYPE_STRING</a>&#160;&#160;&#160;&quot;double&quot;</td></tr>
@@ -123,7 +128,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Os_8h_source.html#l00078">78</a> of file <a class="el" href="Os_8h_source.html">Os.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Os_8h_source.html#l00046">46</a> of file <a class="el" href="Os_8h_source.html">Os.h</a>.</p>
 
 </div>
 </div>
@@ -139,7 +144,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Os_8h_source.html#l00079">79</a> of file <a class="el" href="Os_8h_source.html">Os.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Os_8h_source.html#l00047">47</a> of file <a class="el" href="Os_8h_source.html">Os.h</a>.</p>
 
 </div>
 </div>
@@ -155,7 +160,27 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Os_8h_source.html#l00088">88</a> of file <a class="el" href="Os_8h_source.html">Os.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Os_8h_source.html#l00056">56</a> of file <a class="el" href="Os_8h_source.html">Os.h</a>.</p>
+
+</div>
+</div>
+<a id="a8950a37c18d5c98ad967d1fde528a77c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8950a37c18d5c98ad967d1fde528a77c">&#9670;&nbsp;</a></span>pow10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define pow10</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;pow(10, x)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Os_8h_source.html#l00032">32</a> of file <a class="el" href="Os_8h_source.html">Os.h</a>.</p>
 
 </div>
 </div>
@@ -171,7 +196,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Os_8h_source.html#l00075">75</a> of file <a class="el" href="Os_8h_source.html">Os.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Os_8h_source.html#l00043">43</a> of file <a class="el" href="Os_8h_source.html">Os.h</a>.</p>
 
 </div>
 </div>
@@ -187,7 +212,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Os_8h_source.html#l00084">84</a> of file <a class="el" href="Os_8h_source.html">Os.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Os_8h_source.html#l00052">52</a> of file <a class="el" href="Os_8h_source.html">Os.h</a>.</p>
 
 </div>
 </div>
@@ -203,7 +228,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Os_8h_source.html#l00073">73</a> of file <a class="el" href="Os_8h_source.html">Os.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Os_8h_source.html#l00041">41</a> of file <a class="el" href="Os_8h_source.html">Os.h</a>.</p>
 
 </div>
 </div>
@@ -219,14 +244,14 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Os_8h_source.html#l00074">74</a> of file <a class="el" href="Os_8h_source.html">Os.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Os_8h_source.html#l00042">42</a> of file <a class="el" href="Os_8h_source.html">Os.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 10 2018 09:24:46 for TTK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 4 2018 09:30:05 for TTK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

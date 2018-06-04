@@ -1,10 +1,10 @@
 var searchData=
 [
   ['hasallocated_5f',['hasAllocated_',['../classttkTriangulation.html#a6bc5d20969793772ac36f4f2ad65f85f',1,'ttkTriangulation']]],
-  ['haschangedconnectivity',['hasChangedConnectivity',['../classttkTriangulation.html#a001eeb24fa30e445b89812ec9cb86431',1,'ttkTriangulation']]],
+  ['haschangedconnectivity',['hasChangedConnectivity',['../classttkTriangulation.html#a2003fc85532c6e783430be9c3a44f3e3',1,'ttkTriangulation']]],
   ['hasconnectedsheets_5f',['hasConnectedSheets_',['../classttk_1_1ReebSpace.html#a9c18300cf741b78b665ca77ab3b64391',1,'ttk::ReebSpace']]],
   ['hasduplicatedvertices',['hasDuplicatedVertices',['../classttk_1_1FiberSurface.html#a874c23273590d552b76da0a0cb8eda16',1,'ttk::FiberSurface']]],
-  ['haspoint',['hasPoint',['../structArcData.html#aaf1a08305b6c519aea9d25905d9da0ab',1,'ArcData']]],
+  ['haspoint',['hasPoint',['../structArcData.html#a7af4ce22f6e4c3c38647e148f9bd3c85',1,'ArcData']]],
   ['haspreprocessedboundaryedges',['hasPreprocessedBoundaryEdges',['../classttk_1_1AbstractTriangulation.html#afb7a2bb18409e1db2668db2902981a4a',1,'ttk::AbstractTriangulation::hasPreprocessedBoundaryEdges()'],['../classttk_1_1ExplicitTriangulation.html#a5bfd591c66f309d59b64f7e8cf9f350c',1,'ttk::ExplicitTriangulation::hasPreprocessedBoundaryEdges()']]],
   ['haspreprocessedboundaryedges_5f',['hasPreprocessedBoundaryEdges_',['../classttk_1_1AbstractTriangulation.html#a02c358cf411626c93c97da70bac3e500',1,'ttk::AbstractTriangulation']]],
   ['haspreprocessedboundarytriangles',['hasPreprocessedBoundaryTriangles',['../classttk_1_1AbstractTriangulation.html#aa9246375eda78878491a4da11f48da34',1,'ttk::AbstractTriangulation::hasPreprocessedBoundaryTriangles()'],['../classttk_1_1ExplicitTriangulation.html#a2b7c8551f66e9c363065e8fb3894f1f0',1,'ttk::ExplicitTriangulation::hasPreprocessedBoundaryTriangles()']]],
@@ -46,14 +46,15 @@ var searchData=
   ['hassaddleedges_5f',['hasSaddleEdges_',['../classttk_1_1ReebSpace_1_1Sheet1.html#a1e045f190ed8ce57e09e01483cc78be9',1,'ttk::ReebSpace::Sheet1']]],
   ['hastexture_5f',['hasTexture_',['../classttkUserInterfaceBase.html#acf35755501365d996ac1beaeaf78b84a',1,'ttkUserInterfaceBase']]],
   ['hidden',['Hidden',['../classttk.html#a99656e357617bcc0d896b87e085c9ac3aa8b2e21e37e9caa5a220a326db4cdc1a',1,'ttk::Hidden()'],['../namespacettk_1_1ftm.html#a9acfb4b623c1ba16422384c20622f5c6a785fb235501e697e911150b512c05d90',1,'ttk::ftm::Hidden()']]],
-  ['hiddenoutputs_5f',['hiddenOutputs_',['../classttkUserInterfaceBase.html#ab5a79bc00a80d5442e51901dec70ed3f',1,'ttkUserInterfaceBase']]],
+  ['hiddenoutputs_5f',['hiddenOutputs_',['../classttkUserInterfaceBase.html#a914da60c90e8eadd36e0e00b826fbf9e',1,'ttkUserInterfaceBase']]],
   ['hide',['hide',['../classttk_1_1Node.html#ab35591cba21652798a0df643b07bef27',1,'ttk::Node::hide()'],['../classttk_1_1SuperArc.html#a64a41c468661288809816b368f8b7cc4',1,'ttk::SuperArc::hide()']]],
   ['hideandcleararcsabove',['hideAndClearArcsAbove',['../classttk_1_1MergeTree.html#ac8d538072530def722ac6f1619624d3c',1,'ttk::MergeTree']]],
   ['hideandcleararcsbelow',['hideAndClearArcsBelow',['../classttk_1_1MergeTree.html#abaf084f4a742d47fa1acc8101331ccc4',1,'ttk::MergeTree']]],
   ['hideandclearleadingto',['hideAndClearLeadingTo',['../classttk_1_1MergeTree.html#a410a117f1bdffbae49a31daa092de66f',1,'ttk::MergeTree']]],
   ['hidearc',['hideArc',['../classttk_1_1MergeTree.html#a01eb8bbc2b2b9f1419f23db74b01d72c',1,'ttk::MergeTree']]],
   ['hidenode',['hideNode',['../classttk_1_1MergeTree.html#ab15f19cf3ba30c00e7c4a20281167505',1,'ttk::MergeTree']]],
-  ['hideoutputs',['hideOutputs',['../classttkUserInterfaceBase.html#a146f7185d2cd63e62051f25960b8daf8',1,'ttkUserInterfaceBase']]],
+  ['hideoutputs',['hideOutputs',['../classttkUserInterfaceBase.html#af232e7f463f5c4b85ac5eeaaac600951',1,'ttkUserInterfaceBase']]],
+  ['higher',['HIGHER',['../FTMTree__MT_8cpp.html#a4c48324c04ea9396e387804b3525b64b',1,'FTMTree_MT.cpp']]],
   ['hypervolume',['hyperVolume',['../classttk_1_1ReebSpace.html#aabfa2a3992fe0b2b1ad851588eb1b1baa4f0a5433eb4d07f7f60efd28cbc4f513',1,'ttk::ReebSpace']]],
   ['hypervolume_5f',['hyperVolume_',['../classttk_1_1ReebSpace_1_1Sheet3.html#a2c31686b72aa1f6845ea062febde4b4c',1,'ttk::ReebSpace::Sheet3']]]
 ];

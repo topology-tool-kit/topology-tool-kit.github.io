@@ -2,6 +2,7 @@ var searchData=
 [
   ['mandatorycriticalpoints',['MandatoryCriticalPoints',['../classttk_1_1MandatoryCriticalPoints.html',1,'ttk']]],
   ['mandatorysaddlecomparaison',['mandatorySaddleComparaison',['../structttk_1_1mandatorySaddleComparaison.html',1,'ttk']]],
+  ['manifoldcheck',['ManifoldCheck',['../classttk_1_1ManifoldCheck.html',1,'ttk']]],
   ['memory',['Memory',['../classttk_1_1Memory.html',1,'ttk']]],
   ['mergetree',['MergeTree',['../classttk_1_1MergeTree.html',1,'ttk']]],
   ['morsesmalecomplex',['MorseSmaleComplex',['../classttk_1_1MorseSmaleComplex.html',1,'ttk']]],
