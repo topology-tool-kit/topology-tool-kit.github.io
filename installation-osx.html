@@ -154,7 +154,7 @@ Linux installation instructions</a> (default target platform);
 <a href="installation-windows.html">
 Windows installation instructions</a>.<br><br>
 
-This page describes installing TTK 0.9.5 on OSX, using High Sierra 10.13.2 and 
+This page describes installing TTK 0.9.5 on OSX, using High Sierra 10.13.4 and 
 ParaView 5.5.0.  The key differences from the linux installation involve how 
 ParaView is compiled, installing certain dependencies, and setting up some of 
 the paths for OSX.  The following assumes that the target is to compile with 
@@ -164,10 +164,8 @@ Other versions of earlier software packages
 may require slight variations in the installation procedure.
 For earlier versions of both software packages, you may want to check out 
 previous versions of our installation notes for OSX: <br>
-&nbsp;&middot;&nbsp;
-<a href="installation-osx-0.9.4.html">TTK 0.9.3 with ParaView 5.4.1</a>.<br>
-&nbsp;&middot;&nbsp;
-<a href="installation-osx-0.9.2.html">TTK 0.9.2 with ParaView 5.4.0</a>.<br>
+&nbsp;&middot;&nbsp;<a href="installation-osx-0.9.4.html">TTK 0.9.3 (and 0.9.4) with ParaView 5.4.1</a>.<br>
+&nbsp;&middot;&nbsp;<a href="installation-osx-0.9.2.html">TTK 0.9.2 with ParaView 5.4.0</a>.<br>
 
 <p><h3>1. Downloads</h3>
 Note: The instructions for this step are identical to those on linux:<br><br>
@@ -176,8 +174,7 @@ TTK builds on top of <a href="http://www.paraview.org"
 target="new">ParaView</a> for its main user interface. Thus, you will first 
 need to download 
 <a 
-href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.5&type=binary&os=Sources&downloadFile=ParaView-v5.5.0.tar.gz"
+href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.5&type=binary&os=Sources&downloadFile=ParaView-v5.5.0.tar.gz"
 target="new">
 ParaView 5.5.0's source code</a>.
 Note 
@@ -193,10 +190,10 @@ href="downloads.html">download page</a>.
 <p><h3>2. Installing the dependencies</h3>
 Using <a href="https://brew.sh/">homebrew</a>, install:
 <ul>
-<li> cmake (tested with 3.10.0) </li>
-<li> qt5 (tested with 5.10.0) </li>
-<li> python (tested with 2.7.14) </li>
-<li> vtk (tested with 8.0.1_1) </li>
+<li> cmake (tested with 3.11.2) </li>
+<li> qt5 (tested with 5.10.1) </li>
+<li> python (tested with 2.7.15) </li>
+<li> vtk (tested with 8.1.1) </li>
 </ul>
 Using the command: <br><br>
 <code>$ brew install cmake qt5 python vtk</code><br><br>
@@ -205,38 +202,25 @@ Using the command: <br><br>
 
 Using homebrew, one can install:
 <ul>
-<li> ffmpeg (tested with 3.4.1) </li>
-<li> hdf5 (tested with 1.10.1_2) </li>
-<li> tbb (tested with 2018_U1) -- needed for OSPRay </li>
-<li> mpich (tested with 3.2_3) -- needed for OSPRay's execution </li>
+<li> ffmpeg (tested with 4.0) </li>
+<li> hdf5 (tested with 1.10.2_1) </li>
+<li> tbb (tested with 2018_U3) -- needed for OSPRay </li>
+<li> mpich (tested with 3.2.1_2) -- needed for OSPRay's execution </li>
+<li> libomp (tested with 5.0.1) -- needed for OpenMP support </li>
 </ul>
-Using the command (or only parts of it): <code>$ brew install ffmpeg hdf5 tbb 
-mpich</code><br><br>
+Using the command (or only parts of it): <code>$ brew install ffmpeg hdf5 tbb mpich</code><br><br>
 
 And, in addition, one can install OSPRay and it's dependencies using:
 
 <ul>
-<li>Download and unpack ospray-1.4.2.x86_64.dmg from <a 
-href="http://www.ospray.org/getting_ospray.html">http://www.ospray.org/
-getting_ospray.html</a> (this installs in /opt/local/lib).</li>
+<li>Download and unpack ospray-1.6.0.x86_64.dmg from <a href="http://www.ospray.org/getting_ospray.html">http://www.ospray.org/getting_ospray.html</a> (this installs in /opt/local/lib).</li>
 
-<li>Download and unpack embree-2.17.1.x86_64.dmg from <a 
-href="https://embree.github.io/downloads.html">https://embree.github.io/
-downloads.html</a> (this installs in /opt/local/lib).</li>
+<li>Download and unpack embree-3.2.0.x86_64.dmg from <a href="https://embree.github.io/downloads.html">https://embree.github.io/downloads.html</a> (this installs in /opt/local/lib).</li>
 
-<li>Download and unpack tbb2018_20170919oss_mac.tgz from <a 
-href="https://github.com/01org/tbb/releases">https://github.com/01org/tbb/
-releases</a>.  After expanding the .tar, I created a directory 
-/opt/local/include/tbb and moved the headers there, while I also created a 
-directory /opt/local/lib/tbb and moved the library files there.  Why?  The 
-homebrew install for tbb doesn't created the *_debug.dylib's.  One could also 
-just install TBB entirely from the website and skip the homebrew install, but 
-in theory these versions match</li>
+<li>Download and unpack tbb2018_20180312oss_mac.tgz from <a href="https://github.com/01org/tbb/releases">https://github.com/01org/tbb/releases</a>.  After expanding the .tar, I created a directory /opt/local/include/tbb and copied the headers there, while I also copied the library files to /opt/local/lib/.  Why?  The homebrew install for tbb doesn't created the *_debug.dylib's.  One could also just install TBB entirely from the website and skip the homebrew install, but in theory these versions match</li>
 </ul><br>
 
-After doing so, you'll likely want to make sure that your commandline knows 
-about ospray/embree/tbb, the easy fix for this is to add <code>export 
-DYLD_LIBRARY_PATH="/opt/local/lib"</code> to your <code>~/.bashrc</code>.
+After doing so, you'll likely want to make sure that your commandline knows about ospray/embree/tbb, the easy fix for this is to add <code>export DYLD_LIBRARY_PATH="/opt/local/lib"</code> to your <code>~/.bashrc</code>.
 </p>
 
 
@@ -273,8 +257,7 @@ optional.
 To proceed, go to 
 the patch directory and apply it as follows:<br><br>
 <code>$ cd ~/ttk/ttk-0.9.5/paraview/patch</code><br>
-<code>$ ./patch-paraview-5.5.0.sh
- ~/ttk/ParaView-v5.5.0/</code><br><br>
+<code>$ ./patch-paraview-5.5.0.sh ~/ttk/ParaView-v5.5.0/</code><br><br>
 </p>
 
 
@@ -285,76 +268,98 @@ the patch directory and apply it as follows:<br><br>
 
 <p><h3>5. Configuring, building and installing ParaView</h3>
 <h4>a) Configuration</h4>
-To enter the configuration menu of ParaView's build, enter the following 
-commands:<br><br>
+To enter the configuration menu of ParaView's build, enter the following commands:<br><br>
 <code>$ cd ~/ttk/ParaView-v5.5.0/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
-<code>$ ccmake ..</code> (on OSX there is no <code>cmake-gui</code>)<br><br>
+<code>$ ccmake ..</code> (on homebrew cmake there is no <code>cmake-gui</code>, although you can install this separately from <a href="https://cmake.org/download/">https://cmake.org/download/</a>)<br><br>
 
 Then, press 'c' to configure and we'll edit some CMake flags:<br><br>
 
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_PYTHON=ON</code><br>
-<!--<code>&nbsp;&middot;&nbsp;PARAVIEW_INSTALL_DEVELOPMENT_FILES=OFF</code> (this 
-is unused, should be default)<br>-->
-<!--<code>&nbsp;&middot;&nbsp;PARAVIEW_QT_VERSION=5</code> (Qt4 is deprecated on 
-homebrew, should be default)<br>-->
-<!--<code>&nbsp;&middot;&nbsp;VTK_RENDERING_BACKEND=OpenGL2</code> (should be 
-default)<br>-->
 <code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=Sequential</code><br>
 <br>
 
-You can also enable optional pieces, e.g. ffmpeg.  I also had hdf5 installed 
-through homebrew, but I don't think it was necessary to change anything in 
-cmake.<br><br>
+You can also enable optional pieces, including:
 
-Note, if you've correctly installed OSPRay for OSX, you can use the 
-following:<br><br>
+<h5>(i) ffmpeg:</h5>
+
+<code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_FFMPEG=ON</code><br>
+<br>
+
+<h5>(ii) hdf5:</h5>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;Should be enabled by default if you installed it with homebrew<br>
+<br>
+
+<h5>(iii) OSPRay (which requires TBB):</h5>
 
 <code>&nbsp;&middot;&nbsp;PARAVIEW_USE_OSPRAY=ON</code><br>
+<code>&nbsp;&middot;&nbsp;OSPRAY_INSTALL_DIR=/opt/local/lib</code><br>
+<code>&nbsp;&middot;&nbsp;TBB_ROOT=/opt/local</code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(You may also have to manually set the paths for the TBB debug *.dylibs stored in /opt/local/lib (TBB_LIBRARY_DEBUG, TBB_LIBRARY_MALLOC_DEBUG, TBB_MALLOC_LIBRARY_DEBUG, and/or TBB_MALLOC_PROXY_LIBRARY_DEBUG).  Occasionally, they would default to /usr/local/lib.)<br>
+<br>
+
+<h5>(iv) TBB as the SMP implementation (which isn't necessary, but makes sense to do if you're using OSPRay):</h5>
+
 <code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=TBB</code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(changed from the default "Sequential")<br>
+<code>&nbsp;&middot;&nbsp;TBB_VERSION=""</code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(It seems the autodetected version is wrong, so we clear this out to prevent a conflict with VTK-m)<br>
+<code>&nbsp;&middot;&nbsp;VTKm_ENABLE_TBB=ON</code><br>
 <br>
 
-Then, press 'c' to configure (wait a minute) and then press 't' for advanced 
-mode and we'll edit some more CMake flags:<br><br>
+<h5>(v) OpenMP as the SMP implementation (this is experimental, but useful since TTK can take advantage of it too.  OSPRay will still use TBB, which is why we set TBB_ROOT in (iii)):</h5>
 
-<code>&nbsp;&middot;&nbsp;PYTHON_INCLUDE_DIR=/usr/local/Frameworks/Python.
-framework/Versions/Current/include/python2.7 </code><br>
-<code>&nbsp;&middot;&nbsp;PYTHON_LIBRARY=/usr/local/Frameworks/Python.framework/
-Versions/Current/lib/libpython2.7.dylib </code><br><br>
-
-And if you're doing the optional OSPRay build, also set:<br><br>
-
-<code>&nbsp;&middot;&nbsp;OSPRAY_INSTALL_DIR=/opt/local/lib</code><br><br>
-
-You may also have to set up the paths for the TBB debug *.dylibs stored
-in /opt/local/lib (TBB_LIBRARY_DEBUG, TBB_LIBRARY_MALLOC_DEBUG, 
-TBB_MALLOC_LIBRARY_DEBUG, and/or TBB_MALLOC_PROXY_LIBRARY_DEBUG), but on my 
-environment it found those automatically.<br>
-
+<code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=OpenMP</code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(changed from the default "Sequential")<br>
+<code>&nbsp;&middot;&nbsp;OpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include"</code><br>
+<code>&nbsp;&middot;&nbsp;OpenMP_CXX_LIBRARY=omp</code><br>
+<code>&nbsp;&middot;&nbsp;OpenMP_C_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include"</code><br>
+<code>&nbsp;&middot;&nbsp;OpenMP_C_LIBRARY=omp</code><br>
 <br>
 
 
-Press 'c' again, which fills in some more paths, and then press 'c' one more 
-time and things should be ready to press 'g' to generate and exit.<br><br>
+
+Then, press 'c' to configure (wait a minute) and then press 't' for advanced mode to double check the above paths and/or fill in any flags that did not appear the first time.  
+
+
+Press 'c' again, which fills in some more paths, and then press 'c' one more time and things should be ready to press 'g' to generate and exit.<br><br>
+
+If you prefer to just run <code>cmake</code> as opposed to <code>ccmake</code> or <code>cmake-gui</code>, the following summarizes three possible installations:
+
+<h5>(i) Sequential / Basic</h5>
+<code>$ cmake -&#65279;DCMAKE_BUILD_TYPE=Release -&#65279;DPARAVIEW_ENABLE_PYTHON=ON
+-&#65279;DVTK_SMP_IMPLEMENTATION_TYPE=Sequential 
+-&#65279;DPARAVIEW_ENABLE_FFMPEG=ON ..
+</code><br>
+
+<h5>(ii) OSPRay + TBB</h5>
+<code>$ cmake -&#65279;DCMAKE_BUILD_TYPE=Release -&#65279;DPARAVIEW_ENABLE_PYTHON=ON 
+-&#65279;DVTK_SMP_IMPLEMENTATION_TYPE=TBB -&#65279;DTBB_VERSION="" -&#65279;DVTKm_ENABLE_TBB=ON 
+-&#65279;DPARAVIEW_USE_OSPRAY=ON -&#65279;DOSPRAY_INSTALL_DIR=/opt/local/lib -&#65279;DTBB_ROOT=/opt/local 
+-&#65279;DPARAVIEW_ENABLE_FFMPEG=ON ..
+</code><br>
+
+<h5>(ii) OSPRay + OpenMP</h5>
+<code>$ cmake -&#65279;DCMAKE_BUILD_TYPE=Release -&#65279;DPARAVIEW_ENABLE_PYTHON=ON
+-&#65279;DVTK_SMP_IMPLEMENTATION_TYPE=OpenMP -&#65279;DOpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include" -&#65279;DOpenMP_CXX_LIBRARY=omp -&#65279;DOpenMP_C_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include" -&#65279;DOpenMP_C_LIBRARY=omp 
+-&#65279;DPARAVIEW_USE_OSPRAY=ON -&#65279;DOSPRAY_INSTALL_DIR=/opt/local/lib -&#65279;DTBB_ROOT=/opt/local 
+-&#65279;DPARAVIEW_ENABLE_FFMPEG=ON ..
+</code><br>
+
+<br><br>
 
 
 <h4>b) Build</h4>
-Now you can start the compilation process by entering the following command, 
-where <code>N</code> is the number of available cores on your system (this will 
-take a <b>LONG</b> time):<br><br>
+Now you can start the compilation process by entering the following command, where <code>N</code> is the number of available cores on your system (this will take a <b>LONG</b> time):<br><br>
 <code>$ make -jN</code><br><br>
 
 <h4>c) Installation</h4>
-Once the build is finished, we recommend that you do <strong>not</strong> use 
-<code>make install</code>.  We will work directly in the build directory for 
-the source tree instead of trying to package up a MacOS .app file in 
-<code>/Applications</code>.  We'll need to manually make a directory for 
-this:<br><br>
+Once the build is finished, we recommend that you do <strong>not</strong> use <code>make install</code>.  We will work directly in the build directory for the source tree instead of trying to package up a MacOS .app file in <code>/Applications</code>.  We'll need to manually make a directory for this:<br><br>
 
-<code>$ mkdir 
-~/ttk/ParaView-v5.5.0/build/bin/paraview.app/Contents/MacOS/plugins</code><br>
+<code>$ mkdir ~/ttk/ParaView-v5.5.0/build/bin/paraview.app/Contents/MacOS/plugins</code><br>
 
 </p>
 
@@ -363,67 +368,75 @@ this:<br><br>
 <p>
 <h3>6. Configuring, building and installing TTK</h3>
 <h4><a name="ttkConfig">a)</a> Configuration</h4>
-To enter the configuration menu of TTK's build, enter the following 
-commands:<br><br>
+To enter the configuration menu of TTK's build, enter the following commands:<br><br>
 <code>$ cd ~/ttk/ttk-0.9.5/</code><br>
 <code>$ mkdir ttk_install</code> (for installing standalone apps)<br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ ccmake ..</code><br><br>
 
-The configuration window opens.  Press 'c' to configure, and you'll see that it 
-cannot yet find ParaView.  First, we'll fix this:<br><br>
+The configuration window opens.  Press 'c' to configure, and you'll see that it cannot yet find ParaView.  First, we'll fix this:<br><br>
 
-<code>&nbsp;&middot;&nbsp;
-ParaView_DIR=~/ttk/ParaView-v5.5.0/build/</code><br><br>
+<code>&nbsp;&middot;&nbsp;ParaView_DIR=~/ttk/ParaView-v5.5.0/build/</code><br><br>
 
-Press 'c' again to configure (you can ignore the warnings).  Also note that 
-<code>VTK_DIR</code> should automatically be set to the homebrew installation 
-of VTK (<code>/usr/local/lib/cmake/vtk-7.1</code>).  Next, change:<br><br>
+Press 'c' again to configure (you can ignore the warnings).  Also note that <code>VTK_DIR</code> should automatically be set to the homebrew installation of VTK (<code>/usr/local/lib/cmake/vtk-8.1</code>).  Next, change:<br><br>
 
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
-<code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.5/ttk_install
-</code> (this is where 
-standalone apps and other TTK componentns are installed)<br>
-<code>&nbsp;&middot;&nbsp;TTK_PLUGIN_INSTALL_DIR=<br>~/ttk/ParaView-v5.5.0/build
-/bin/paraview.app/Contents/MacOS/plugins"</code> (this is where ParaView 
-plugins are installed)<br>
+<code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.5/ttk_install</code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this is where standalone apps and other TTK components are installed)<br>
+<code>&nbsp;&middot;&nbsp;TTK_INSTALL_PLUGIN_DIR=<br>~/ttk/ParaView-v5.5.0/build/bin/paraview.app/Contents/MacOS/plugins</code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this is where ParaView plugins are installed)<br>
 <br>
 
-Note that you can enable building certian portions of TTK at this time
-as well by switching the flags associated with each (e.g. 
-TTK_BUILD_PARAVIEW_PLUGINS, TTK_BUILD_STANDALONE_APPS, etc.). 
+Note that you can enable building certain portions of TTK at this time
+as well by switching the flags associated with each (e.g. TTK_BUILD_PARAVIEW_PLUGINS, TTK_BUILD_STANDALONE_APPS, etc.). 
 
-Press 'c' to reconfigure (again takes a few seconds) and then press 'g' to 
-generate.<br><br>
+Finally, if you'd like to try out OpenMP (again, experimental), you would add:<br>
+
+<code>&nbsp;&middot;&nbsp;TTK_ENABLE_OPENMP=ON</code><br>
+<code>&nbsp;&middot;&nbsp;OpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include"</code><br>
+<code>&nbsp;&middot;&nbsp;OpenMP_CXX_LIB_NAMES=omp</code><br>
+<code>&nbsp;&middot;&nbsp;OpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib</code><br>
+<br>
+
+Press 'c' to reconfigure (again takes a few seconds) and then press 'g' to generate.<br><br>
+
+If you prefer to just run <code>cmake</code> as opposed to <code>ccmake</code> or <code>cmake-gui</code>, the following summarizes the two possible installations:
+
+<h5>(i) Basic TTK</h5>
+<code>$ cmake 
+-&#65279;DParaView_DIR=~/ttk/ParaView-v5.5.0/build/
+-&#65279;DCMAKE_BUILD_TYPE=Release -&#65279;DCMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.5/ttk_install -&#65279;DTTK_INSTALL_PLUGIN_DIR=~/ttk/ParaView-v5.5.0/build/bin/paraview.app/Contents/MacOS/plugins
+..
+</code><br>
+
+<h5>(ii) TTK + OpenMP</h5>
+<code>$ cmake 
+-&#65279;DParaView_DIR=~/ttk/ParaView-v5.5.0/build/
+-&#65279;DCMAKE_BUILD_TYPE=Release -&#65279;DCMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.5/ttk_install -&#65279;DTTK_INSTALL_PLUGIN_DIR=~/ttk/ParaView-v5.5.0/build/bin/paraview.app/Contents/MacOS/plugins
+-&#65279;DTTK_ENABLE_OPENMP=ON -&#65279;DOpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include" -&#65279;DOpenMP_CXX_LIB_NAMES=omp -&#65279;DOpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib
+..
+</code><br>
+
+<br><br>
 
 <h4>b) Build</h4>
-Now you can start the compilation process by entering the following command, 
-where <code>N</code> is the number of available cores on your system:<br><br>
+Now you can start the compilation process by entering the following command, where <code>N</code> is the number of available cores on your system:<br><br>
 <code>$ make -jN</code><br><br>
 
 <h4>c) Installation</h4>
-Once the build is finished, enter the following command to install your build 
-of TTK into your ParaView installation:<br><br>
+Once the build is finished, enter the following command to install your build of TTK into your ParaView installation:<br><br>
 <code>$ make install</code><br><br>
 
-Note that in addition to copying the TTK plugins to your ParaView installation 
-(<code>TTK_PLUGIN_INSTALL_DIR</code>), the above command also installed a 
-collection of standalone TTK programs to <code>CMAKE_INSTALL_PREFIX</code>.  
-These can be used outside of ParaView, either as command line tools or 
-VTK-based graphical user interfaces. To list them:<br><br>
+Note that in addition to copying the TTK plugins to your ParaView installation (<code>TTK_INSTALL_PLUGIN_DIR</code>), the above command also installed a collection of standalone TTK programs to <code>CMAKE_INSTALL_PREFIX</code>.  These can be used outside of ParaView, either as command line tools or VTK-based graphical user interfaces. To list them:<br><br>
 <code>$ ls CMAKE_INSTALL_PREFIX/bin/*Cmd</code><br>
 <code>$ ls CMAKE_INSTALL_PREFIX/bin/*Gui</code><br><br>
 Replacing <code>CMAKE_INSTALL_PREFIX</code> with what we used above.<br><br>
 
-Finally, to make sure the example data files are included in the right path, 
-you have to manually copy the example data into the ParaView .app as 
-well:<br><br>
+Finally, to make sure the example data files are included in the right path, you have to manually copy the example data into the ParaView .app as well:<br><br>
 <code>$ cd ~/ttk/ttk-0.9.5/paraview/patch/data</code><br>
-<code>$ mkdir 
-~/ttk/ParaView-v5.5.0/build/bin/paraview.app/Contents/data</code><br>
-<code>$ cp * 
-~/ttk/ParaView-v5.5.0/build/bin/paraview.app/Contents/data</code><br>
+<code>$ mkdir ~/ttk/ParaView-v5.5.0/build/bin/paraview.app/data</code><br>
+<code>$ cp * ~/ttk/ParaView-v5.5.0/build/bin/paraview.app/data</code><br>
 <br>
 </p>
 
@@ -432,15 +445,11 @@ well:<br><br>
 
 <p>
 <h3>7. Checking your TTK installation</h3>
-If you applied all the above steps successfully (including step 4), you can now 
-open a terminal and type the following command to load your TTK-patched 
-ParaView:<br><br>
-<code>$ cd 
-~/ttk/ParaView-v5.5.0/build/bin/paraview.app/Contents/MacOS/</code><br><br>
+If you applied all the above steps successfully (including step 4), you can now open a terminal and type the following command to load your TTK-patched ParaView:<br><br>
+<code>$ cd ~/ttk/ParaView-v5.5.0/build/bin/paraview.app/Contents/MacOS/</code><br><br>
 <code>$ ./paraview</code><br><br>
 
-At this point, everything from the standard installation procedure should be 
-accessible.  Congrats!
+At this point, everything from the standard installation procedure should be accessible.  Congrats!
 </p>
 
 <p>
@@ -465,7 +474,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on April 18, 2018.</p>
+                    Updated on June 9, 2018.</p>
                 </div>
             </div>
         </div>
