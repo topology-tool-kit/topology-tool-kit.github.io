@@ -723,6 +723,10 @@ TopologicalSimplification</code> generates an <i>offset</i> field (or
 <i>tiebreak</i> field) named <code>OutputOffsetScalarField</code>. Make sure to 
 also copy this field, as it is necessary to further process the simplified data 
 properly.
+<br>
+<b>Update:</b>
+as of version 0.9.6, this field is name <code>ttkOffsetScalarField</code> by 
+default.
 <br><br>
 
 Now split the left view vertically, using the 
@@ -747,7 +751,15 @@ you are applying this filter to the scalar field
 <code>simplifiedGaussian</code>. Finally, enhance this visualization by 
 displaying a sphere for each critical point, colored by its critical index, with 
 <code>TTK SphereFromPoint</code>, and display these spheres in both bottom views 
-(2D plane and 3D terrain).<br><br>
+(2D plane and 3D terrain).
+<br>
+<b>Update:</b>
+as of version 0.9.6, there is no need to check the box 
+<code>UseInputOffsetField</code>. 
+Input offsets are now automatically retrieved from the data, if present. To 
+force the usage of a specific field as vertex offset (advanced usage), check 
+the box <code>ForceInputOffsetField</code>.
+<br><br>
 
 Finally, we will extract and animate the sub-level sets 
 <myMath>$g^{-1}_{-\infty}(i)$</myMath> and level sets 
@@ -921,6 +933,13 @@ point, you may want to reduce the persistence threshold (beginning of exercise
     <img width="100%" src="img/persistenceDummies_reebSimplified.png">
   </a>
 </div>
+<b>Update:</b>
+as of version 0.9.6, there is no need to check the box 
+<code>UseInputOffsetField</code>. 
+Input offsets are now automatically retrieved from the data, if present. To 
+force the usage of a specific field as vertex offset (advanced usage), check 
+the box <code>ForceInputOffsetField</code>.
+<br><br>
 
 <h4>Exercise 10</h4>
 
@@ -993,7 +1012,15 @@ previously from the persistence diagram (see exercise 7).<br><br>
 Next, compute the split tree of the simplified data (see exercise 9, do not 
 forget to check the box <code>Use Input Offset Scalar Field</code>). Finally, 
 threshold the <code>Segmentation</code> output of the split tree, to only 
-visualize vertices with a <code>RegionType</code> value of 1.<br><br>
+visualize vertices with a <code>RegionType</code> value of 1.
+<br>
+<b>Update:</b>
+as of version 0.9.6, there is no need to check the box 
+<code>UseInputOffsetField</code>. 
+Input offsets are now automatically retrieved from the data, if present. To 
+force the usage of a specific field as vertex offset (advanced usage), check 
+the box <code>ForceInputOffsetField</code>.
+<br><br>
 
 At this point, you should be visualizing something like this:
 <br>
@@ -1139,7 +1166,7 @@ If so, congratulations, you've just managed to segment medical data thanks to to
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on November 20, 2017.</p>
+                    Updated on July 30, 2018.</p>
                 </div>
             </div>
         </div>
