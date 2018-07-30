@@ -168,17 +168,15 @@ The remainder of these notes
 describe 
 the installation of the 
 <a href="downloads.html" target="new">
-version 0.9.6 of 
+version 0.9.5 of 
 TTK</a> along with the <a 
 href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.5&type=source&os=all&downloadFile=ParaView-v5.5.2.tar.gz" 
+version=v5.5&type=source&os=all&downloadFile=ParaView-v5.5.0.tar.gz" 
 target="new">
-version 5.5.2 of ParaView</a>. Other versions of either software packages 
+version 5.5.0 of ParaView</a>. Other versions of either software packages 
 may require slight variations in the installation procedure.
 For earlier versions of both software packages, you may want to check out 
 previous versions of our installation notes: <br>
-&nbsp;&middot;&nbsp;
-<a href="installation-0.9.6.html">TTK 0.9.6 with ParaView 5.5.2</a>,<br>
 &nbsp;&middot;&nbsp;
 <a href="installation-0.9.4.html">TTK 0.9.4 with ParaView 5.4.1</a>,<br>
 &nbsp;&middot;&nbsp;
@@ -204,7 +202,7 @@ target="new">ParaView</a> for its main user interface. Thus, you will first
 need to download 
 <a 
 href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.5&type=source&os=all&downloadFile=ParaView-v5.5.2.tar.gz" 
+version=v5.5&type=source&os=all&downloadFile=ParaView-v5.5.0.tar.gz" 
 target="new">
 ParaView's source code</a>.
 Note 
@@ -228,16 +226,6 @@ $ sudo apt-get install qt5-default qttools5-dev libqt5x11extras5-dev
 </code><br><br>
 Note that these commands will also trigger the installation of the (numerous) 
 dependencies of these components.</p>
-
-<h4>Optional dependencies</h4>
-In order to enjoy the complete set of TTK features, we also recommend to 
-install the following, optional dependencies:<br>
-&nbsp;&middot;&nbsp;
-<a href="https://github.com/LLNL/zfp" target="new">ZFP</a><br>
-<!--&nbsp;&middot;&nbsp;
-<a href="https://github.com/LLNL/zfp" target="new">ZLib</a> (Zlib should be 
-already installed if you installed vtk, as recommended above).<br>-->
-
 <h4>Note to non-Ubuntu users</h4>
 We recommend in general to install the version 8 of the VTK library 
 <!--and the 
@@ -260,15 +248,15 @@ under Fedora (as of version 27):
 a terminal (this assumes that you downloaded the tarballs to the 
 <code>~/Downloads</code> directory):<br><br>
 <code>$ mkdir ~/ttk</code><br>
-<code>$ mv ~/Downloads/ParaView-v5.5.2.tar.gz ~/ttk/</code><br>
-<code>$ mv ~/Downloads/ttk-0.9.6.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ParaView-v5.5.0.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ttk-0.9.5.tar.gz ~/ttk/</code><br>
 <code>$ cd ~/ttk</code><br>
-<code>$ tar xvzf ParaView-v5.5.2.tar.gz</code><br>
-<code>$ tar xvzf ttk-0.9.6.tar.gz</code><br><br>
+<code>$ tar xvzf ParaView-v5.5.0.tar.gz</code><br>
+<code>$ tar xvzf ttk-0.9.5.tar.gz</code><br><br>
 You can delete the tarballs after the source trees have been decompressed by 
 entering the following commands:<br><br>
-<code>$ rm ParaView-v5.5.2.tar.gz</code><br>
-<code>$ rm ttk-0.9.6.tar.gz</code></p>
+<code>$ rm ParaView-v5.5.0.tar.gz</code><br>
+<code>$ rm ttk-0.9.5.tar.gz</code></p>
                   
                   <p>
                   <h3>4. Patching the ParaView source tree</h3>
@@ -278,9 +266,9 @@ This step is
 optional. 
 To proceed, go to 
 the patch directory and apply it as follows:<br><br>
-<code>$ cd ~/ttk/ttk-0.9.6/paraview/patch</code><br>
-<code>$ ./patch-paraview-5.5.2.sh
- ~/ttk/ParaView-v5.5.2/</code></p>
+<code>$ cd ~/ttk/ttk-0.9.5/paraview/patch</code><br>
+<code>$ ./patch-paraview-5.5.0.sh
+ ~/ttk/ParaView-v5.5.0/</code></p>
 <!-- <code style="color: #ef2929; font-weight: bold;">root #</code> -->
 <!-- <code>emerge --ask&#160;--unmerge  -->
 <!-- sys-kernel/genkernel</code> -->
@@ -290,7 +278,7 @@ the patch directory and apply it as follows:<br><br>
                   <h4>a) Configuration</h4>
                   To enter the configuration menu of ParaView's build, enter 
 the following commands:<br><br>
-<code>$ cd ~/ttk/ParaView-v5.5.2/</code><br>
+<code>$ cd ~/ttk/ParaView-v5.5.0/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
@@ -355,7 +343,7 @@ enter the following command to enable the build of TTK plugins:<br><br>
 <h4><a name="ttkConfig">a)</a> Configuration</h4>
 To enter the configuration menu of TTK's build, enter the following 
 commands:<br><br>
-<code>$ cd ~/ttk/ttk-0.9.6/</code><br>
+<code>$ cd ~/ttk/ttk-0.9.5/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
@@ -404,7 +392,7 @@ default TTK installation path, <code>/usr/local/</code>):<br><br>
 <!--<p>
 If you wish to disable the build and installation of certain TTK components, 
 just comment the corresponding lines in the <code>CMakeLists.txt</code> file at 
-the root of the source tree (<code>~/ttk/ttk-0.9.6/CMakeLists.txt</code> in our 
+the root of the source tree (<code>~/ttk/ttk-0.9.5/CMakeLists.txt</code> in our 
 example) prior to entering the configuration step of TTK's build (<a 
 href="#ttkConfig">section 6.a</a>).
 </p>-->
@@ -481,7 +469,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on July 30, 2018.</p>
+                    Updated on May 12, 2018.</p>
                 </div>
             </div>
         </div>
