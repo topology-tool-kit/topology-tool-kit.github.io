@@ -154,7 +154,7 @@ Linux installation instructions</a> (default target platform);
 <a href="installation-windows.html">
 Windows installation instructions</a>.<br><br>
 
-This page describes installing TTK 0.9.6 on OSX, using High Sierra 10.13.4 and 
+This page describes installing TTK 0.9.6 on OSX, using High Sierra 10.13.6 and 
 ParaView 5.5.2.  The key differences from the linux installation involve how 
 ParaView is compiled, installing certain dependencies, and setting up some of 
 the paths for OSX.  The following assumes that the target is to compile with 
@@ -195,23 +195,23 @@ href="downloads.html">download page</a>.
 <p><h3>2. Installing the dependencies</h3>
 Using <a href="https://brew.sh/">homebrew</a>, install:
 <ul>
-<li> cmake (tested with 3.11.2) </li>
-<li> qt5 (tested with 5.10.1) </li>
-<li> python (tested with 2.7.15) </li>
+<li> cmake (tested with 3.12.1) </li>
+<li> qt5 (tested with 5.11.1) </li>
+<li> python2 (tested with 2.7.15_1) </li>
 <li> vtk (tested with 8.1.1) </li>
 </ul>
 Using the command: <br><br>
-<code>$ brew install cmake qt5 python vtk</code><br><br>
+<code>$ brew install cmake qt5 python2 vtk</code><br><br>
 
 <h4>a) Optional Dependencies</h4>
 
 Using homebrew, one can install:
 <ul>
-<li> ffmpeg (tested with 4.0) </li>
+<li> ffmpeg (tested with 4.0.2) </li>
 <li> hdf5 (tested with 1.10.2_1) </li>
-<li> tbb (tested with 2018_U3) -- needed for OSPRay </li>
+<li> tbb (tested with 2018_U5) -- needed for OSPRay </li>
 <li> mpich (tested with 3.2.1_2) -- needed for OSPRay's execution </li>
-<li> libomp (tested with 5.0.1) -- needed for OpenMP support </li>
+<li> libomp (tested with 6.0.1) -- needed for OpenMP support </li>
 </ul>
 Using the command (or only parts of it): <code>$ brew install ffmpeg hdf5 tbb 
 mpich</code><br><br>
@@ -227,7 +227,7 @@ already installed if you installed vtk, as recommended above).<br>-->
 And, in addition, one can install OSPRay and it's dependencies using:
 
 <ul>
-<li>Download and unpack ospray-1.6.0.x86_64.dmg from <a 
+<li>Download and unpack ospray-1.6.1.x86_64.dmg from <a 
 href="http://www.ospray.org/getting_ospray.html">http://www.ospray.org/
 getting_ospray.html</a> (this installs in /opt/local/lib).</li>
 
@@ -235,7 +235,7 @@ getting_ospray.html</a> (this installs in /opt/local/lib).</li>
 href="https://embree.github.io/downloads.html">https://embree.github.io/
 downloads.html</a> (this installs in /opt/local/lib).</li>
 
-<li>Download and unpack tbb2018_20180312oss_mac.tgz from <a 
+<li>Download and unpack tbb2018_20180618oss_mac.tgz from <a 
 href="https://github.com/01org/tbb/releases">https://github.com/01org/tbb/
 releases</a>.  After expanding the .tar, I created a directory 
 /opt/local/include/tbb and copied the headers there, while I also copied the 
@@ -377,33 +377,42 @@ or <code>cmake-gui</code>, the following summarizes three possible
 installations:
 
 <h5>(i) Sequential / Basic</h5>
-<code>$ cmake -&#65279;DCMAKE_BUILD_TYPE=Release 
--&#65279;DPARAVIEW_ENABLE_PYTHON=ON
--&#65279;DVTK_SMP_IMPLEMENTATION_TYPE=Sequential 
--&#65279;DPARAVIEW_ENABLE_FFMPEG=ON ..
+<code>$ cmake \<br>
+-DCMAKE_BUILD_TYPE=Release \<br>
+-DPARAVIEW_ENABLE_PYTHON=ON \<br>
+-DVTK_SMP_IMPLEMENTATION_TYPE=Sequential \<br>
+-DPARAVIEW_ENABLE_FFMPEG=ON \<br>
+..
 </code><br>
 
 <h5>(ii) OSPRay + TBB</h5>
-<code>$ cmake -&#65279;DCMAKE_BUILD_TYPE=Release 
--&#65279;DPARAVIEW_ENABLE_PYTHON=ON 
--&#65279;DVTK_SMP_IMPLEMENTATION_TYPE=TBB -&#65279;DTBB_VERSION="" 
--&#65279;DVTKm_ENABLE_TBB=ON 
--&#65279;DPARAVIEW_USE_OSPRAY=ON -&#65279;DOSPRAY_INSTALL_DIR=/opt/local/lib 
--&#65279;DTBB_ROOT=/opt/local 
--&#65279;DPARAVIEW_ENABLE_FFMPEG=ON ..
+<code>$ cmake \<br>
+-DCMAKE_BUILD_TYPE=Release \<br>
+-DPARAVIEW_ENABLE_PYTHON=ON \<br>
+-DVTK_SMP_IMPLEMENTATION_TYPE=TBB \<br>
+-DTBB_VERSION="" \<br>
+-DVTKm_ENABLE_TBB=ON \<br>
+-DPARAVIEW_USE_OSPRAY=ON \<br>
+-DOSPRAY_INSTALL_DIR=/opt/local/lib \<br>
+-DTBB_ROOT=/opt/local \<br>
+-DPARAVIEW_ENABLE_FFMPEG=ON \<br>
+..
 </code><br>
 
 <h5>(ii) OSPRay + OpenMP</h5>
-<code>$ cmake -&#65279;DCMAKE_BUILD_TYPE=Release 
--&#65279;DPARAVIEW_ENABLE_PYTHON=ON
--&#65279;DVTK_SMP_IMPLEMENTATION_TYPE=OpenMP 
--&#65279;DOpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp 
--I/usr/local/opt/libomp/include" -&#65279;DOpenMP_CXX_LIBRARY=omp 
--&#65279;DOpenMP_C_FLAGS="-Xpreprocessor -fopenmp 
--I/usr/local/opt/libomp/include" -&#65279;DOpenMP_C_LIBRARY=omp 
--&#65279;DPARAVIEW_USE_OSPRAY=ON -&#65279;DOSPRAY_INSTALL_DIR=/opt/local/lib 
--&#65279;DTBB_ROOT=/opt/local 
--&#65279;DPARAVIEW_ENABLE_FFMPEG=ON ..
+<code>$ cmake \<br>
+-DCMAKE_BUILD_TYPE=Release \<br>
+-DPARAVIEW_ENABLE_PYTHON=ON \<br>
+-DVTK_SMP_IMPLEMENTATION_TYPE=OpenMP \<br>
+-DOpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include" \<br>
+-DOpenMP_CXX_LIBRARY=omp \<br>
+-DOpenMP_C_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include" \<br>
+-DOpenMP_C_LIBRARY=omp \<br>
+-DPARAVIEW_USE_OSPRAY=ON \<br>
+-DOSPRAY_INSTALL_DIR=/opt/local/lib \<br>
+-DTBB_ROOT=/opt/local \<br>
+-DPARAVIEW_ENABLE_FFMPEG=ON \<br>
+..
 </code><br>
 
 <br><br>
@@ -484,25 +493,24 @@ or <code>cmake-gui</code>, the following summarizes the two possible
 installations:
 
 <h5>(i) Basic TTK</h5>
-<code>$ cmake 
--&#65279;DParaView_DIR=~/ttk/ParaView-v5.5.2/build/
--&#65279;DCMAKE_BUILD_TYPE=Release 
--&#65279;DCMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.6/ttk_install 
--&#65279;DTTK_INSTALL_PLUGIN_DIR=~/ttk/ParaView-v5.5.2/build/bin/paraview.app/
-Contents/MacOS/plugins
+<code>$ cmake \<br>
+-DParaView_DIR=~/ttk/ParaView-v5.5.2/build/ \<br>
+-DCMAKE_BUILD_TYPE=Release \<br>
+-DCMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.6/ttk_install \<br>
+-DTTK_INSTALL_PLUGIN_DIR=~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/MacOS/plugins \<br>
 ..
 </code><br>
 
 <h5>(ii) TTK + OpenMP</h5>
-<code>$ cmake 
--&#65279;DParaView_DIR=~/ttk/ParaView-v5.5.2/build/
--&#65279;DCMAKE_BUILD_TYPE=Release 
--&#65279;DCMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.6/ttk_install 
--&#65279;DTTK_INSTALL_PLUGIN_DIR=~/ttk/ParaView-v5.5.2/build/bin/paraview.app/
-Contents/MacOS/plugins
--&#65279;DTTK_ENABLE_OPENMP=ON -&#65279;DOpenMP_CXX_FLAGS="-Xpreprocessor 
--fopenmp -I/usr/local/opt/libomp/include" -&#65279;DOpenMP_CXX_LIB_NAMES=omp 
--&#65279;DOpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib
+<code>$ cmake \<br>
+-DParaView_DIR=~/ttk/ParaView-v5.5.2/build/ \<br>
+-DCMAKE_BUILD_TYPE=Release \<br>
+-DCMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.6/ttk_install \<br>
+-DTTK_INSTALL_PLUGIN_DIR=~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/MacOS/plugins \<br>
+-DTTK_ENABLE_OPENMP=ON \<br>
+-DOpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include" \<br>
+-DOpenMP_CXX_LIB_NAMES=omp \<br>
+-DOpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib \<br>
 ..
 </code><br>
 
