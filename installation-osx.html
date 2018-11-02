@@ -464,8 +464,7 @@ of VTK (<code>/usr/local/lib/cmake/vtk-8.1</code>).  Next, change:<br><br>
 ><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this is where standalone apps and 
 other TTK components are installed)<br>
-<code>&nbsp;&middot;&nbsp;TTK_INSTALL_PLUGIN_DIR=<br>~/ttk/ParaView-v5.5.2/build
-/bin/paraview.app/Contents/MacOS/plugins</code><br>
+<code>&nbsp;&middot;&nbsp;TTK_INSTALL_PLUGIN_DIR=<br>~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/MacOS/plugins</code><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this is where ParaView plugins are 
 installed)<br>
 <br>
@@ -539,8 +538,8 @@ Finally, to make sure the example data files are included in the right path,
 you have to manually copy the example data into the ParaView .app as 
 well:<br><br>
 <code>$ cd ~/ttk/ttk-0.9.6/paraview/patch/data</code><br>
-<code>$ mkdir ~/ttk/ParaView-v5.5.2/build/bin/paraview.app/data</code><br>
-<code>$ cp * ~/ttk/ParaView-v5.5.2/build/bin/paraview.app/data</code><br>
+<code>$ mkdir -p ~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/share/paraview-5.5/data</code><br>
+<code>$ cp * ~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/share/paraview-5.5/data</code><br>
 <br>
 </p>
 
