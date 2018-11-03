@@ -2,8 +2,10 @@ var searchData=
 [
   ['nbinterfaces',['nbInterfaces',['../structttk_1_1ParallelParams.html#a222a1136139d232a0b850bd07ba04398',1,'ttk::ParallelParams']]],
   ['nbpartitions',['nbPartitions',['../structttk_1_1ParallelParams.html#a6fce302257cfb10b065d2dbadbd72f18',1,'ttk::ParallelParams']]],
+  ['nbsegments',['nbSegments',['../classttk_1_1TopologicalCompression.html#a34859fe5e9e607feee884918962de058',1,'ttk::TopologicalCompression']]],
   ['nbthreads',['nbThreads',['../structttk_1_1ParallelParams.html#a168cf2136a829c24d0a835a7c9fd5da2',1,'ttk::ParallelParams']]],
-  ['nbvoxels_5f',['nbvoxels_',['../classttk_1_1ImplicitTriangulation.html#a8abb2dff32a617778f77d8108a869dfc',1,'ttk::ImplicitTriangulation']]],
+  ['nbvertices',['nbVertices',['../classttk_1_1TopologicalCompression.html#a35dade68aca17756d93901242ed23995',1,'ttk::TopologicalCompression']]],
+  ['nbvoxels_5f',['nbvoxels_',['../classttk_1_1ImplicitTriangulation.html#a53fcd682a04e1d11a047f986cb64d053',1,'ttk::ImplicitTriangulation']]],
   ['node_5f',['node_',['../classttk_1_1LowestCommonAncestor.html#a5bd33bb489146c38ebb33eb5bdb66ec5',1,'ttk::LowestCommonAncestor']]],
   ['nodedepth_5f',['nodeDepth_',['../classttk_1_1LowestCommonAncestor.html#a33297d5c596ae5fb422e0a394ebaaf33',1,'ttk::LowestCommonAncestor']]],
   ['nodefirstappearence_5f',['nodeFirstAppearence_',['../classttk_1_1LowestCommonAncestor.html#a420dc3b524bf1d86cc955bc5d4b5840b',1,'ttk::LowestCommonAncestor']]],
@@ -20,10 +22,14 @@ var searchData=
   ['nullsegment',['nullSegment',['../classttk.html#a4ba652474d70157f2d7c88556e538631',1,'ttk']]],
   ['nullsuperarc',['nullSuperArc',['../classttk.html#a26d97e6e4fd684135cbba8a43c6ffaa7',1,'ttk']]],
   ['nullufdata',['nullUfData',['../classttk.html#a21d8303cf8ff09dcb85cde0a4b6479d1',1,'ttk']]],
-  ['nullvertex',['nullVertex',['../classttk.html#ad490b46516fd05005a3cb8193470b840',1,'ttk']]],
-  ['numberofbins_5f',['numberOfBins_',['../classttk_1_1PDFHistograms.html#a878cb49ae7094abdb056c52742fc780e',1,'ttk::PDFHistograms']]],
-  ['numberofinputs_5f',['numberOfInputs_',['../classttk_1_1PDFHistograms.html#a06f232dabe67b5a4b354fa088e2ba0db',1,'ttk::PDFHistograms::numberOfInputs_()'],['../classttk_1_1UncertainDataEstimator.html#ae1b4d7bced32ace00517b4b714c19c74',1,'ttk::UncertainDataEstimator::numberOfInputs_()']]],
-  ['numberofpoints_5f',['numberOfPoints_',['../classttk_1_1LDistance.html#ae9335a0915e9ce7261e98af93d3da495',1,'ttk::LDistance']]],
-  ['numberofslots_5f',['numberOfSlots_',['../structttk_1_1CriticalPoint.html#a498a8d973e388b2e8b0dfb31fb35c12d',1,'ttk::CriticalPoint']]],
-  ['numberofvertices_5f',['numberOfVertices_',['../classttk_1_1DiscreteGradient.html#aa7f7bbc952971a39ad626c882d6caad7',1,'ttk::DiscreteGradient::numberOfVertices_()'],['../classttk_1_1PDFBounds.html#aaab44bed9856394be637cd956e857691',1,'ttk::PDFBounds::numberOfVertices_()'],['../classttk_1_1PDFHistograms.html#a42eaac824450d6caea0c9a65fd048775',1,'ttk::PDFHistograms::numberOfVertices_()']]]
+  ['nullvertex',['nullVertex',['../classttk.html#ac83bc549e2576de4b8161a36408ab391',1,'ttk']]],
+  ['numberofbins_5f',['numberOfBins_',['../classttk_1_1PDFHistograms.html#a7b461bc66cfb6a7ee1be42e448d563db',1,'ttk::PDFHistograms']]],
+  ['numberofcolumns_5f',['numberOfColumns_',['../classttk_1_1DimensionReduction.html#a84e292a56dd97c8ea39cce41ef13510b',1,'ttk::DimensionReduction']]],
+  ['numberofcomponents_5f',['numberOfComponents_',['../classttk_1_1DimensionReduction.html#af1a91640a65b3bdebc318d17184f0248',1,'ttk::DimensionReduction']]],
+  ['numberofinputs_5f',['numberOfInputs_',['../classttk_1_1TrackingFromFields.html#af72f8e10134789ad4e7990437e92c7f0',1,'ttk::TrackingFromFields::numberOfInputs_()'],['../classttk_1_1TrackingFromPersistenceDiagrams.html#a32a01ed0594b43d03e56851d37927899',1,'ttk::TrackingFromPersistenceDiagrams::numberOfInputs_()'],['../classttk_1_1PDFHistograms.html#a566ae878dcb3f9858f580ae793c10512',1,'ttk::PDFHistograms::numberOfInputs_()'],['../classttk_1_1UncertainDataEstimator.html#ae1b4d7bced32ace00517b4b714c19c74',1,'ttk::UncertainDataEstimator::numberOfInputs_()']]],
+  ['numberofneighbors_5f',['numberOfNeighbors_',['../classttk_1_1DimensionReduction.html#a5f8357fe09410ef2be100e4e111ae147',1,'ttk::DimensionReduction']]],
+  ['numberofpoints_5f',['numberOfPoints_',['../classttk_1_1LDistance.html#a377999b36d039821751f23aaf5be2e6e',1,'ttk::LDistance']]],
+  ['numberofrows_5f',['numberOfRows_',['../classttk_1_1DimensionReduction.html#a20ab89734e2b2c5a64a716b09cc28b1b',1,'ttk::DimensionReduction']]],
+  ['numberofslots_5f',['numberOfSlots_',['../structttk_1_1dcg_1_1CriticalPoint.html#a165db5a5a042bd0402089b3b1e582028',1,'ttk::dcg::CriticalPoint']]],
+  ['numberofvertices_5f',['numberOfVertices_',['../classttk_1_1dcg_1_1DiscreteGradient.html#a63e2e5405551ae45157b9d5092608b2c',1,'ttk::dcg::DiscreteGradient::numberOfVertices_()'],['../classttk_1_1PDFBounds.html#a93005feeaecfbb6d6ede70b37c38ce43',1,'ttk::PDFBounds::numberOfVertices_()'],['../classttk_1_1PDFHistograms.html#abe1f5402cca748a42f5daf89100b46eb',1,'ttk::PDFHistograms::numberOfVertices_()']]]
 ];

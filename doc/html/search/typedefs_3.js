@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['real',['real',['../classttk.html#a867286284f66b3e34281a3443526b99a',1,'ttk']]],
-  ['riterator',['riterator',['../classttk_1_1AtomicVector.html#a9218689b3ead7329ca2e75076fbf2c35',1,'ttk::AtomicVector']]]
+  ['numthread',['numThread',['../classttk.html#a17d5bede3abcc086dfecbcdf962d10b0',1,'ttk::numThread()'],['../namespacettk_1_1ftm.html#a5a71d757d75ccbdcbe6933b893d73922',1,'ttk::ftm::numThread()']]]
 ];

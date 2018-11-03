@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['saddlemaximumvpathcomparator',['SaddleMaximumVPathComparator',['../structttk_1_1SaddleMaximumVPathComparator.html',1,'ttk']]],
-  ['saddlesaddlevpathcomparator',['SaddleSaddleVPathComparator',['../structttk_1_1SaddleSaddleVPathComparator.html',1,'ttk']]],
+  ['saddlemaximumvpathcomparator',['SaddleMaximumVPathComparator',['../structttk_1_1dcg_1_1SaddleMaximumVPathComparator.html',1,'ttk::dcg']]],
+  ['saddlesaddlevpathcomparator',['SaddleSaddleVPathComparator',['../structttk_1_1dcg_1_1SaddleSaddleVPathComparator.html',1,'ttk::dcg']]],
   ['scalarfieldcriticalpoints',['ScalarFieldCriticalPoints',['../classttk_1_1ScalarFieldCriticalPoints.html',1,'ttk']]],
   ['scalarfieldsmoother',['ScalarFieldSmoother',['../classttk_1_1ScalarFieldSmoother.html',1,'ttk']]],
-  ['scalars',['Scalars',['../structttk_1_1ftm_1_1Scalars.html',1,'ttk::ftm::Scalars'],['../structttk_1_1Scalars.html',1,'ttk::Scalars']]],
-  ['segment',['Segment',['../classttk_1_1ftm_1_1Segment.html',1,'ttk::ftm::Segment'],['../classttk_1_1Segment.html',1,'ttk::Segment']]],
+  ['scalars',['Scalars',['../structttk_1_1Scalars.html',1,'ttk::Scalars'],['../structttk_1_1ftm_1_1Scalars.html',1,'ttk::ftm::Scalars']]],
+  ['segment',['Segment',['../classttk_1_1ftm_1_1Segment.html',1,'ttk::ftm::Segment'],['../structttk_1_1dcg_1_1Segment.html',1,'ttk::dcg::Segment'],['../classttk_1_1Segment.html',1,'ttk::Segment']]],
   ['segments',['Segments',['../classttk_1_1ftm_1_1Segments.html',1,'ttk::ftm::Segments'],['../classttk_1_1Segments.html',1,'ttk::Segments']]],
   ['separatrix',['Separatrix',['../structttk_1_1Separatrix.html',1,'ttk']]],
   ['shareddata',['SharedData',['../structttk_1_1ftm_1_1SharedData.html',1,'ttk::ftm']]],

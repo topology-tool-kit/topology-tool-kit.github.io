@@ -4,6 +4,7 @@ var searchData=
   ['mandatorycriticalpoints_2eh',['MandatoryCriticalPoints.h',['../MandatoryCriticalPoints_8h.html',1,'']]],
   ['manifoldcheck_2ecpp',['ManifoldCheck.cpp',['../ManifoldCheck_8cpp.html',1,'']]],
   ['manifoldcheck_2eh',['ManifoldCheck.h',['../ManifoldCheck_8h.html',1,'']]],
+  ['matchinggraph_2eh',['MatchingGraph.h',['../MatchingGraph_8h.html',1,'']]],
   ['mergetree_2ecpp',['MergeTree.cpp',['../MergeTree_8cpp.html',1,'']]],
   ['mergetree_2eh',['MergeTree.h',['../MergeTree_8h.html',1,'']]],
   ['mergetreetemplate_2eh',['MergeTreeTemplate.h',['../MergeTreeTemplate_8h.html',1,'']]],
@@ -13,7 +14,6 @@ var searchData=
   ['morsesmalecomplex2d_2eh',['MorseSmaleComplex2D.h',['../MorseSmaleComplex2D_8h.html',1,'']]],
   ['morsesmalecomplex3d_2ecpp',['MorseSmaleComplex3D.cpp',['../MorseSmaleComplex3D_8cpp.html',1,'']]],
   ['morsesmalecomplex3d_2eh',['MorseSmaleComplex3D.h',['../MorseSmaleComplex3D_8h.html',1,'']]],
-  ['munkres_2ecpp',['Munkres.cpp',['../Munkres_8cpp.html',1,'']]],
   ['munkres_2eh',['Munkres.h',['../Munkres_8h.html',1,'']]],
   ['munkresimpl_2eh',['MunkresImpl.h',['../MunkresImpl_8h.html',1,'']]]
 ];
