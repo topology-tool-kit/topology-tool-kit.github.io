@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['edge',['Edge',['../classEdge.html#a5ac6767bb2cb47ca18f98f5bb3bce803',1,'Edge::Edge()'],['../classttk_1_1Graph_1_1Edge.html#a2300a45e3e57c0abc429ee4af7392612',1,'ttk::Graph::Edge::Edge()']]],
+  ['edge',['Edge',['../classEdge.html#a5ac6767bb2cb47ca18f98f5bb3bce803',1,'Edge::Edge()'],['../classttk_1_1Graph_1_1Edge.html#a2300a45e3e57c0abc429ee4af7392612',1,'ttk::Graph::Edge::Edge()'],['../classEdge.html#a242fbebf31ea3f0553b7c0003f9bfe40',1,'Edge::Edge()']]],
   ['edgemanifoldcheck',['edgeManifoldCheck',['../classttk_1_1ManifoldCheck.html#aef860404572561989e9371f84c99cfaa',1,'ttk::ManifoldCheck']]],
   ['emplace_5fback',['emplace_back',['../classttk_1_1Segment.html#afd4a92da34388498f48295325c43bf25',1,'ttk::Segment']]],
   ['empty',['empty',['../classttk_1_1AtomicVector.html#a4c9ad7aa5173681180a15d7259983ff2',1,'ttk::AtomicVector::empty()'],['../structttk_1_1ftm_1_1CurrentState.html#aec5a40c9703b996810eb91c4e17c6924',1,'ttk::ftm::CurrentState::empty()'],['../classttk_1_1RangeDrivenOctree.html#a539784ef08878060dcdfde1a5a3a9a48',1,'ttk::RangeDrivenOctree::empty()'],['../classttk_1_1ReebSpace.html#a62a499de2baedbbc210540aa88c5af31',1,'ttk::ReebSpace::empty()']]],

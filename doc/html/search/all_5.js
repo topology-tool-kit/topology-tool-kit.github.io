@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['edge',['Edge',['../classttk_1_1Graph_1_1Edge.html',1,'ttk::Graph::Edge'],['../classEdge.html',1,'Edge'],['../classttkTriangulationRequest.html#a40e175723d22d28fee900a27ca264328acb10b4d5fbdd0bd83752fee3d6c10c37',1,'ttkTriangulationRequest::Edge()'],['../classEdge.html#a5ac6767bb2cb47ca18f98f5bb3bce803',1,'Edge::Edge()'],['../classttk_1_1Graph_1_1Edge.html#a2300a45e3e57c0abc429ee4af7392612',1,'ttk::Graph::Edge::Edge()']]],
+  ['edge',['Edge',['../classttk_1_1Graph_1_1Edge.html',1,'ttk::Graph::Edge'],['../classEdge.html',1,'Edge'],['../classttkTriangulationRequest.html#a40e175723d22d28fee900a27ca264328acb10b4d5fbdd0bd83752fee3d6c10c37',1,'ttkTriangulationRequest::Edge()'],['../classEdge.html#a5ac6767bb2cb47ca18f98f5bb3bce803',1,'Edge::Edge()'],['../classttk_1_1Graph_1_1Edge.html#a2300a45e3e57c0abc429ee4af7392612',1,'ttk::Graph::Edge::Edge()'],['../classEdge.html#a242fbebf31ea3f0553b7c0003f9bfe40',1,'Edge::Edge()']]],
   ['edge2sheet1_5f',['edge2sheet1_',['../classttk_1_1ReebSpace_1_1ReebSpaceData.html#a5085dc3c9d3332ebba8cd8c7b6dec0bd',1,'ttk::ReebSpace::ReebSpaceData']]],
   ['edgecollapsethreshold_5f',['edgeCollapseThreshold_',['../classttk_1_1FiberSurface.html#a2378d8afafa51d90e672a32404e80616',1,'ttk::FiberSurface']]],
   ['edgefanlinkedgelists_5f',['edgeFanLinkEdgeLists_',['../classttk_1_1JacobiSet.html#a140df710ae05854c9261a61b1ba0f47f',1,'ttk::JacobiSet']]],
@@ -15,6 +15,7 @@ var searchData=
   ['edgestarlist_5f',['edgeStarList_',['../classttk_1_1AbstractTriangulation.html#ab2c74a31d7e98278f2afa80aaae2d63f',1,'ttk::AbstractTriangulation']]],
   ['edgetrianglelist_5f',['edgeTriangleList_',['../classttk_1_1AbstractTriangulation.html#afad1f741c757cf79324b42159ddb266b',1,'ttk::AbstractTriangulation']]],
   ['edgetypes_5f',['edgeTypes_',['../classttk_1_1ReebSpace_1_1ReebSpaceData.html#abe708e29861ba92275b378c9fdf22954',1,'ttk::ReebSpace::ReebSpaceData']]],
+  ['edgevertexmap',['EdgeVertexMap',['../IcoSphere_8cpp.html#a8c28d34219976807da5395b3ca68ad2b',1,'IcoSphere.cpp']]],
   ['embedding_5f',['embedding_',['../classttk_1_1DimensionReduction.html#a58626e82a5c412a49ceaf77a64915c5f',1,'ttk::DimensionReduction']]],
   ['emplace_5fback',['emplace_back',['../classttk_1_1Segment.html#afd4a92da34388498f48295325c43bf25',1,'ttk::Segment']]],
   ['empty',['empty',['../classttk_1_1AtomicVector.html#a4c9ad7aa5173681180a15d7259983ff2',1,'ttk::AtomicVector::empty()'],['../structttk_1_1ftm_1_1CurrentState.html#aec5a40c9703b996810eb91c4e17c6924',1,'ttk::ftm::CurrentState::empty()'],['../classttk_1_1RangeDrivenOctree.html#a539784ef08878060dcdfde1a5a3a9a48',1,'ttk::RangeDrivenOctree::empty()'],['../classttk_1_1ReebSpace.html#a62a499de2baedbbc210540aa88c5af31',1,'ttk::ReebSpace::empty()']]],

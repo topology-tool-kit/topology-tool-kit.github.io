@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['icosphere',['IcoSphere',['../classttk_1_1IcoSphere.html#a5831b813d75fcfa9c8aba53ae9d4369c',1,'ttk::IcoSphere']]],
   ['identify',['identify',['../classttkFTMTree.html#adf1e773550b234eb21d6a70090f5adb0',1,'ttkFTMTree']]],
   ['idnode2corr',['idNode2corr',['../classttk_1_1MergeTree.html#ae62aa80eb889943bca8db3c42a77da46',1,'ttk::MergeTree::idNode2corr()'],['../classttk_1_1ftm_1_1FTMTree__MT.html#a0dc6073cd2ed20869c79c142bab6e682',1,'ttk::ftm::FTMTree_MT::idNode2corr()']]],
   ['implicittriangulation',['ImplicitTriangulation',['../classttk_1_1ImplicitTriangulation.html#a9b391b8baa97fc79aca990972aab3ad7',1,'ttk::ImplicitTriangulation']]],

@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['camfocus',['CamFocus',['../classttkCinemaImaging.html#a3aa30d80e7c007415b8a2a7a4ed7fa1a',1,'ttkCinemaImaging']]],
+  ['camheight',['CamHeight',['../classttkCinemaImaging.html#a59be78d6e3346941ea2ca54a97b48f8f',1,'ttkCinemaImaging']]],
+  ['camnearfar',['CamNearFar',['../classttkCinemaImaging.html#a8a6a25072ffce657e45879fd2c76d686',1,'ttkCinemaImaging']]],
   ['caseid_5f',['caseId_',['../classttk_1_1FiberSurface_1_1Triangle.html#a6595b68c36a8404e00321309ffcffda0',1,'ttk::FiberSurface::Triangle::caseId_()'],['../structttk_1_1FiberSurface_1_1__intersectionTriangle.html#a65c9f3d4091f2baa9f5e14dd5dce3a16',1,'ttk::FiberSurface::_intersectionTriangle::caseId_()']]],
   ['cell_5f',['cell_',['../structttk_1_1dcg_1_1CriticalPoint.html#a27cc74a3670aa4d847926e2e6c7c2339',1,'ttk::dcg::CriticalPoint']]],
   ['cell_5fdownnode',['cell_downNode',['../structArcData.html#ada15d4d63285ab11e3412ec5b5850ea5',1,'ArcData']]],
@@ -16,7 +19,9 @@ var searchData=
   ['cellrangebox_5f',['cellRangeBox_',['../classttk_1_1RangeDrivenOctree.html#add9ff66499a71a3bed057a7cafa25263',1,'ttk::RangeDrivenOctree']]],
   ['cells_5f',['cells_',['../structttk_1_1dcg_1_1Segment.html#a55538eade21aedba3d9536db1470374a',1,'ttk::dcg::Segment']]],
   ['celltrianglelist_5f',['cellTriangleList_',['../classttk_1_1AbstractTriangulation.html#a1d5709c6cc230f7fac0e322c9748ca5c',1,'ttk::AbstractTriangulation']]],
+  ['center',['Center',['../classttkIcoSphere.html#a0c7b04eed7f0278c84ecb88798d93f82',1,'ttkIcoSphere']]],
   ['childlist_5f',['childList_',['../classttk_1_1RangeDrivenOctree_1_1OctreeNode.html#ab97be85b8ea46b15b620bbaa7c72dc6d',1,'ttk::RangeDrivenOctree::OctreeNode']]],
+  ['cinemaquery',['cinemaQuery',['../classttkCinemaQuery.html#a995ce1c1042b402587a7af6dafb08c8d',1,'ttkCinemaQuery']]],
   ['collectpersistencepairs',['CollectPersistencePairs',['../classttk_1_1dcg_1_1DiscreteGradient.html#a5da30f7a90c906de70aca43cefaf863f',1,'ttk::dcg::DiscreteGradient']]],
   ['comp_5f',['comp_',['../classttk_1_1ftm_1_1FTMTree__MT.html#af8c51e0eb46197870dde8f7baa3667fa',1,'ttk::ftm::FTMTree_MT']]],
   ['compressedoffsets_5f',['compressedOffsets_',['../classttk_1_1TopologicalCompression.html#a2d6590b09eaba37d2cb54606c74ae53f',1,'ttk::TopologicalCompression']]],
@@ -30,6 +35,7 @@ var searchData=
   ['computeupperbound_5f',['computeUpperBound_',['../classttk_1_1UncertainDataEstimator.html#a42f7f87d0038e3441816c6e7873725d2',1,'ttk::UncertainDataEstimator']]],
   ['consideridentifierasblacklist_5f',['considerIdentifierAsBlackList_',['../classttk_1_1TopologicalSimplification.html#aa7cf9a320ce88b1e94cd34bf44826088',1,'ttk::TopologicalSimplification']]],
   ['constraintnumber_5f',['constraintNumber_',['../classttk_1_1TopologicalSimplification.html#a1b8ca1c6470a69777ba4889eacaf9530',1,'ttk::TopologicalSimplification']]],
+  ['coords',['coords',['../structCoordinateComparator.html#aefac74c1d05f9a559fdbb1ceb1c2fe3f',1,'CoordinateComparator']]],
   ['criticalconstraints_5f',['criticalConstraints_',['../classttk_1_1TopologicalCompression.html#ab8e1ded13df7f8996ab76cd82f4c6f4b',1,'ttk::TopologicalCompression']]],
   ['criticalpoints_5f',['criticalPoints_',['../classttk_1_1ScalarFieldCriticalPoints.html#a17e571af21634239ea159908a3cb4855',1,'ttk::ScalarFieldCriticalPoints']]],
   ['ctarc',['ctArc',['../structttk_1_1vertex.html#a1326a4f904fe04a586a6c84313ea6fb5',1,'ttk::vertex']]],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['radius',['Radius',['../classttkIcoSphere.html#a79abf24e19c6a5f25ca9e5a54013af19',1,'ttkIcoSphere']]],
   ['randomstate_5f',['randomState_',['../classttk_1_1DimensionReduction.html#a6a20a138b9a60154c9172ed718b6339a',1,'ttk::DimensionReduction']]],
   ['rangearea_5f',['rangeArea_',['../classttk_1_1RangeDrivenOctree.html#a420a174767dfa2143a46ffc334dd85e2',1,'ttk::RangeDrivenOctree::rangeArea_()'],['../classttk_1_1ReebSpace_1_1Sheet3.html#a58eea3a1777020effed36089b1ed29b4',1,'ttk::ReebSpace::Sheet3::rangeArea_()']]],
   ['rangebox_5f',['rangeBox_',['../classttk_1_1RangeDrivenOctree_1_1OctreeNode.html#a1ca337da6a931500b82f93588f4420be',1,'ttk::RangeDrivenOctree::OctreeNode']]],
@@ -13,6 +14,7 @@ var searchData=
   ['renderer_5f',['renderer_',['../classttkUserInterfaceBase.html#a426b1629f4f4d4f81dc11877591f1b60',1,'ttkUserInterfaceBase']]],
   ['renderwindow_5f',['renderWindow_',['../classttkUserInterfaceBase.html#a5b5366e2b2618da8fbd86d44faff2474',1,'ttkUserInterfaceBase']]],
   ['repeat_5f',['repeat_',['../classttkUserInterfaceBase.html#aba924ddb5ec0d2df1e78e02a9b10eed7',1,'ttkUserInterfaceBase']]],
+  ['resolution',['Resolution',['../classttkCinemaImaging.html#a812389ba4c34d920f343c1db93017b74',1,'ttkCinemaImaging']]],
   ['resolutions_5f',['resolutions_',['../classttk_1_1ContinuousScatterPlot.html#a9b0258bef91d2f0a9b2a02a9ec7c0db1',1,'ttk::ContinuousScatterPlot']]],
   ['result',['result',['../classttk_1_1LDistance.html#a61d37f4ee19ac03fac6217e4d616c0ef',1,'ttk::LDistance']]],
   ['returnsaddleconnectors',['ReturnSaddleConnectors',['../classttk_1_1AbstractMorseSmaleComplex.html#a18ff8edccb6ea90b0acddf59597d2e64',1,'ttk::AbstractMorseSmaleComplex::ReturnSaddleConnectors()'],['../classttk_1_1dcg_1_1DiscreteGradient.html#a394ae0b0aeba645339e99f16abec3328',1,'ttk::dcg::DiscreteGradient::ReturnSaddleConnectors()']]],

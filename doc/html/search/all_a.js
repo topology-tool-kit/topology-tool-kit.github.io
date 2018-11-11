@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['j',['j',['../classEdge.html#aa69758990d746021ed8b31fe58375390',1,'Edge']]],
   ['jacobi2edges_5f',['jacobi2edges_',['../classttk_1_1ReebSpace.html#a11aafd2b1a2c9e762fc9f4adba57fbd9',1,'ttk::ReebSpace']]],
   ['jacobiset',['JacobiSet',['../classttk_1_1JacobiSet.html',1,'ttk::JacobiSet&lt; dataTypeU, dataTypeV &gt;'],['../classttk_1_1JacobiSet.html#aefb32efe5cddf4b6a0fa88a05a2fe7af',1,'ttk::JacobiSet::JacobiSet()']]],
   ['jacobiset_2eh',['JacobiSet.h',['../JacobiSet_8h.html',1,'']]],

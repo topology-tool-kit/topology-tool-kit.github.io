@@ -10,6 +10,7 @@ var searchData=
   ['contourforeststree',['ContourForestsTree',['../classttk_1_1ContourForestsTree.html',1,'ttk']]],
   ['contourtree',['ContourTree',['../classttk_1_1ContourTree.html',1,'ttk']]],
   ['contourtreesimplificationmetric',['ContourTreeSimplificationMetric',['../classttk_1_1ContourTreeSimplificationMetric.html',1,'ttk']]],
+  ['coordinatecomparator',['CoordinateComparator',['../structCoordinateComparator.html',1,'']]],
   ['criticalpoint',['CriticalPoint',['../structttk_1_1dcg_1_1CriticalPoint.html',1,'ttk::dcg']]],
   ['criticalpointpaircomparaison',['criticalPointPairComparaison',['../structttk_1_1criticalPointPairComparaison.html',1,'ttk']]],
   ['currentstate',['CurrentState',['../structttk_1_1ftm_1_1CurrentState.html',1,'ttk::ftm']]]
