@@ -244,11 +244,31 @@ href="http://releases.ubuntu.com/18.04.1/ubuntu-18.04.1-desktop-amd64.iso"
 target="new">
 Ubuntu Linux 18.04.1</a>, enter the following command:
 <code><br><br>
-$ sudo apt-get install scikits_learn
+$ sudo apt-get install python3-numpy python3-scipy python-scikits-learn
 </code><br><br>
 &nbsp;&middot;&nbsp;
-<a href="https://github.com/LLNL/zfp" target="new">ZFP</a> (for advanced 
-compression support)<br><br>
+<a href="https://github.com/LLNL/zfp/archive/master.zip" target="new">ZFP</a> 
+(for advanced compression support). See the 
+<a target=="new" href="https://github.com/LLNL/zfp">
+following page</a> for installation 
+instructions.<br><br>
+
+
+
+NOTE:
+it seems scikits-learn on ubuntu only works with python2
+error: [dimension reduction] python 3+ is required
+=> go through pip
+sudo apt-get install python3-pip
+sudo pip3 install scikit-learn
+
+sudo apt-get install python3-sklearn (pull all python3 deps, including numpy 
+and scipy)
+
+set VTK_PYTHON_VERSION to 3 and the advanced variables get correctly set.
+
+it works!
+
 <!--&nbsp;&middot;&nbsp;
 <a href="https://github.com/LLNL/zfp" target="new">ZLib</a> (Zlib should be 
 already installed if you installed vtk, as recommended above).<br>-->
@@ -316,7 +336,6 @@ set the following options as follows (required
 for TTK's 
 installation):<br><br>
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
-<code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=/usr/local/</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_PYTHON=ON</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_INSTALL_DEVELOPMENT_FILES=ON</code><br>
 <!-- <code>&nbsp;&middot;&nbsp;VTK_USE_SYSTEM_PROTOBUF=ON</code><br> -->
@@ -330,13 +349,32 @@ We recommend in general to use the version 5 of the Qt library, instead of the
 version 4 as described above (which is only recommended for Ubuntu 
 users).<br><br>-->
 
+If you want to enable the 
+<a target="new"
+href="https://scikit-learn.org/stable/index.html">scikit-learn
+</a>support in TTK (for dimension reduction), you will need to configure 
+ParaView's build to make it use the version 3 of Python. Under Ubuntu Linux 
+18.04.1, this can be achieved by 
+clicking on the <code>Advanced</code> checkbox of the CMake window (to make 
+advanced variables appear) and by setting the following variables as 
+follows:<br><br>
+<code>&nbsp;&middot;&nbsp;PYTHON_EXECUTABLE=/usr/bin/python3.6m</code><br>
+<code>&nbsp;&middot;&nbsp;PYTHON_INCLUDE_DIR=/usr/include/python3.6m/</code><br>
+<code>&nbsp;&middot;&nbsp;PYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.6m
+.so</code><br>
+<!-- <code>&nbsp;&middot;&nbsp;VTK_USE_SYSTEM_PROTOBUF=ON</code><br> -->
+<!-- <code>&nbsp;&middot;&nbsp;PARAVIEW_QT_VERSION=4</code><br> -->
+<!-- <code>&nbsp;&middot;&nbsp;VTK_RENDERING_BACKEND=OpenGL2</code><br> -->
+<!-- <code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=OpenMP</code><br>-->
+<br> 
+
 Optionally, you may want to turn on additional features. See the 
 <a 
 href="http://www.paraview.org/Wiki/ParaView:
 Build_And_Install#Configure_ParaView_With_CMake"
 target="new">
 ParaView 
-build documentation</a> for further details if needed.<br>
+build documentation</a> for further details if needed.<br><br>
 Next, click on the "Generate" button and close the configuration window when 
 the generation is completed.<br><br>
 
@@ -359,11 +397,11 @@ the above command (to use ParaView then, simply invoke the output binary
 located in the source tree).<br><br>-->
 
 
-<h4>c) Post-installation</h4>
+<!--<h4>c) Post-installation</h4>
 Once the installation of ParaView is finished, 
 enter the following command to enable the build of TTK plugins:<br><br>
 <code>$ sudo chmod 777 -R /usr/local/lib/cmake/paraview-5.5</code>
-</p>
+</p>-->
 
 <p>
 <h3>6. Configuring, building and installing TTK</h3>
