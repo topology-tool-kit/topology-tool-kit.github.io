@@ -154,8 +154,8 @@ Linux installation instructions</a> (default target platform);
 <a href="installation-windows.html">
 Windows installation instructions</a>.<br><br>
 
-This page describes installing TTK 0.9.7 on OSX, using High Sierra 10.13.6 and 
-ParaView 5.6.0.  The key differences from the linux installation involve how 
+This page describes installing TTK 0.9.6 on OSX, using High Sierra 10.13.6 and 
+ParaView 5.5.2.  The key differences from the linux installation involve how 
 ParaView is compiled, installing certain dependencies, and setting up some of 
 the paths for OSX.  The following assumes that the target is to compile with 
 OSX clang and uses homebrew for dependencies.<br><br>
@@ -164,8 +164,6 @@ Other versions of earlier software packages
 may require slight variations in the installation procedure.
 For earlier versions of both software packages, you may want to check out 
 previous versions of our installation notes for OSX: <br>
-&nbsp;&middot;&nbsp;<a href="installation-osx-0.9.6.html">TTK 0.9.6
-with ParaView 5.5.2</a>.<br>
 &nbsp;&middot;&nbsp;<a href="installation-osx-0.9.5.html">TTK 0.9.5 
 with ParaView 5.5.0</a>.<br>
 &nbsp;&middot;&nbsp;<a href="installation-osx-0.9.4.html">TTK 0.9.3 (and 0.9.4) 
@@ -180,10 +178,10 @@ TTK builds on top of <a href="http://www.paraview.org"
 target="new">ParaView</a> for its main user interface. Thus, you will first 
 need to download 
 <a 
-href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.6&type=source&os=all&downloadFile=ParaView-v5.6.0.tar.gz" 
+href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&
+version=v5.5&type=binary&os=Sources&downloadFile=ParaView-v5.5.2.tar.gz"
 target="new">
-ParaView 5.6.0's source code</a>.
+ParaView 5.5.2's source code</a>.
 Note 
 that TTK plugins for ParaView will only work with a version of ParaView 
 compiled from source. Thus, if you already installed ParaView with a binary 
@@ -203,7 +201,7 @@ Using <a href="https://brew.sh/">homebrew</a>, install:
 <li> vtk (tested with 8.1.1) </li>
 </ul>
 Using the command: <br><br>
-<code>$ brew install cmake qt5 python3 vtk</code><br><br>
+<code>$ brew install cmake qt5 python2 vtk</code><br><br>
 
 <h4>a) Optional Dependencies</h4>
 
@@ -219,14 +217,9 @@ Using the command (or only parts of it): <code>$ brew install ffmpeg hdf5 tbb
 mpich</code><br><br>
 
 In order to enjoy the complete set of TTK features, we also recommend to 
-install the following, <i>optional</i> dependencies:<br>
+install the following, optional dependencies:<br>
 &nbsp;&middot;&nbsp;
-<a target="new" 
-href="https://scikit-learn.org/stable/index.html">scikit-learn</a> for Python3 (for data 
-reduction features).<br> 
-&nbsp;&middot;&nbsp;
-<a href="https://github.com/LLNL/zfp" target="new">ZFP</a> 
-(for advanced compression support).<br><br> 
+<a href="https://github.com/LLNL/zfp" target="new">ZFP</a><br><br>
 <!--&nbsp;&middot;&nbsp;
 <a href="https://github.com/LLNL/zfp" target="new">ZLib</a> (Zlib should be 
 already installed if you installed vtk, as recommended above).<br>-->
@@ -269,15 +262,15 @@ Move the tarballs to a working directory (for instance called
 a terminal (this assumes that you downloaded the tarballs to the 
 <code>~/Downloads</code> directory):<br><br>
 <code>$ mkdir ~/ttk</code><br>
-<code>$ mv ~/Downloads/ParaView-v5.6.0.tar.gz ~/ttk/</code><br>
-<code>$ mv ~/Downloads/ttk-0.9.7.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ParaView-v5.5.2.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ttk-0.9.6.tar.gz ~/ttk/</code><br>
 <code>$ cd ~/ttk</code><br>
-<code>$ tar xvzf ParaView-v5.6.0.tar.gz</code><br>
-<code>$ tar xvzf ttk-0.9.7.tar.gz</code><br><br>
+<code>$ tar xvzf ParaView-v5.5.2.tar.gz</code><br>
+<code>$ tar xvzf ttk-0.9.6.tar.gz</code><br><br>
 You can delete the tarballs after the source trees have been decompressed by 
 entering the following commands:<br><br>
-<code>$ rm ParaView-v5.6.0.tar.gz</code><br>
-<code>$ rm ttk-0.9.7.tar.gz</code><br><br>
+<code>$ rm ParaView-v5.5.2.tar.gz</code><br>
+<code>$ rm ttk-0.9.6.tar.gz</code><br><br>
 </p>
 
 <p><h3>4. Patching the ParaView source tree</h3>
@@ -289,8 +282,8 @@ This step is
 optional. 
 To proceed, go to 
 the patch directory and apply it as follows:<br><br>
-<code>$ cd ~/ttk/ttk-0.9.7/paraview/patch</code><br>
-<code>$ ./patch-paraview-5.6.0.sh ~/ttk/ParaView-v5.6.0/</code><br><br>
+<code>$ cd ~/ttk/ttk-0.9.6/paraview/patch</code><br>
+<code>$ ./patch-paraview-5.5.2.sh ~/ttk/ParaView-v5.5.2/</code><br><br>
 </p>
 
 
@@ -303,7 +296,7 @@ the patch directory and apply it as follows:<br><br>
 <h4>a) Configuration</h4>
 To enter the configuration menu of ParaView's build, enter the following 
 commands:<br><br>
-<code>$ cd ~/ttk/ParaView-v5.6.0/</code><br>
+<code>$ cd ~/ttk/ParaView-v5.5.2/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ ccmake ..</code> (on homebrew cmake there is no <code>cmake-gui</code>, 
@@ -439,7 +432,7 @@ the source tree instead of trying to package up a MacOS .app file in
 this:<br><br>
 
 <code>$ mkdir 
-~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/MacOS/plugins</code><br>
+~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/MacOS/plugins</code><br>
 
 </p>
 
@@ -450,7 +443,7 @@ this:<br><br>
 <h4><a name="ttkConfig">a)</a> Configuration</h4>
 To enter the configuration menu of TTK's build, enter the following 
 commands:<br><br>
-<code>$ cd ~/ttk/ttk-0.9.7/</code><br>
+<code>$ cd ~/ttk/ttk-0.9.6/</code><br>
 <code>$ mkdir ttk_install</code> (for installing standalone apps)<br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
@@ -459,7 +452,7 @@ commands:<br><br>
 The configuration window opens.  Press 'c' to configure, and you'll see that it 
 cannot yet find ParaView.  First, we'll fix this:<br><br>
 
-<code>&nbsp;&middot;&nbsp;ParaView_DIR=~/ttk/ParaView-v5.6.0/build/</code><br><
+<code>&nbsp;&middot;&nbsp;ParaView_DIR=~/ttk/ParaView-v5.5.2/build/</code><br><
 br>
 
 Press 'c' again to configure (you can ignore the warnings).  Also note that 
@@ -467,11 +460,11 @@ Press 'c' again to configure (you can ignore the warnings).  Also note that
 of VTK (<code>/usr/local/lib/cmake/vtk-8.1</code>).  Next, change:<br><br>
 
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
-<code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.7/ttk_install</code
+<code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.6/ttk_install</code
 ><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this is where standalone apps and 
 other TTK components are installed)<br>
-<code>&nbsp;&middot;&nbsp;TTK_INSTALL_PLUGIN_DIR=<br>~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/MacOS/plugins</code><br>
+<code>&nbsp;&middot;&nbsp;TTK_INSTALL_PLUGIN_DIR=<br>~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/MacOS/plugins</code><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this is where ParaView plugins are 
 installed)<br>
 <br>
@@ -500,19 +493,19 @@ installations:
 
 <h5>(i) Basic TTK</h5>
 <code>$ cmake \<br>
--DParaView_DIR=~/ttk/ParaView-v5.6.0/build/ \<br>
+-DParaView_DIR=~/ttk/ParaView-v5.5.2/build/ \<br>
 -DCMAKE_BUILD_TYPE=Release \<br>
--DCMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.7/ttk_install \<br>
--DTTK_INSTALL_PLUGIN_DIR=~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/MacOS/plugins \<br>
+-DCMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.6/ttk_install \<br>
+-DTTK_INSTALL_PLUGIN_DIR=~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/MacOS/plugins \<br>
 ..
 </code><br>
 
 <h5>(ii) TTK + OpenMP</h5>
 <code>$ cmake \<br>
--DParaView_DIR=~/ttk/ParaView-v5.6.0/build/ \<br>
+-DParaView_DIR=~/ttk/ParaView-v5.5.2/build/ \<br>
 -DCMAKE_BUILD_TYPE=Release \<br>
--DCMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.7/ttk_install \<br>
--DTTK_INSTALL_PLUGIN_DIR=~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/MacOS/plugins \<br>
+-DCMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.6/ttk_install \<br>
+-DTTK_INSTALL_PLUGIN_DIR=~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/MacOS/plugins \<br>
 -DTTK_ENABLE_OPENMP=ON \<br>
 -DOpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include" \<br>
 -DOpenMP_CXX_LIB_NAMES=omp \<br>
@@ -544,9 +537,9 @@ Replacing <code>CMAKE_INSTALL_PREFIX</code> with what we used above.<br><br>
 Finally, to make sure the example data files are included in the right path, 
 you have to manually copy the example data into the ParaView .app as 
 well:<br><br>
-<code>$ cd ~/ttk/ttk-0.9.7/paraview/patch/data</code><br>
-<code>$ mkdir -p ~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/share/paraview-5.5/data</code><br>
-<code>$ cp * ~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/share/paraview-5.5/data</code><br>
+<code>$ cd ~/ttk/ttk-0.9.6/paraview/patch/data</code><br>
+<code>$ mkdir -p ~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/share/paraview-5.5/data</code><br>
+<code>$ cp * ~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/share/paraview-5.5/data</code><br>
 <br>
 </p>
 
@@ -559,7 +552,7 @@ If you applied all the above steps successfully (including step 4), you can now
 open a terminal and type the following command to load your TTK-patched 
 ParaView:<br><br>
 <code>$ cd 
-~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/MacOS/</code><br><br>
+~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/MacOS/</code><br><br>
 <code>$ ./paraview</code><br><br>
 
 At this point, everything from the standard installation procedure should be accessible.  Congrats!
@@ -587,7 +580,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on November 13, 2018.</p>
+                    Updated on July 30, 2018.</p>
                 </div>
             </div>
         </div>
