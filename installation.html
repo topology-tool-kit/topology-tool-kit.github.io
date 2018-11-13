@@ -234,7 +234,7 @@ dependencies of these components.</p>
 
 <h4>Optional dependencies</h4>
 In order to enjoy the complete set of TTK features, we also recommend to 
-install the following, optional dependencies:<br><br>
+install the following, <i>optional</i> dependencies:<br><br>
 &nbsp;&middot;&nbsp;
 <a target="new" 
 href="https://scikit-learn.org/stable/index.html">scikit-learn</a> (for data 
@@ -244,7 +244,7 @@ href="http://releases.ubuntu.com/18.04.1/ubuntu-18.04.1-desktop-amd64.iso"
 target="new">
 Ubuntu Linux 18.04.1</a>, enter the following command:
 <code><br><br>
-$ sudo apt-get install python3-numpy python3-scipy python-scikits-learn
+$ sudo apt-get install python3-sklearn
 </code><br><br>
 &nbsp;&middot;&nbsp;
 <a href="https://github.com/LLNL/zfp/archive/master.zip" target="new">ZFP</a> 
@@ -253,25 +253,6 @@ $ sudo apt-get install python3-numpy python3-scipy python-scikits-learn
 following page</a> for installation 
 instructions.<br><br>
 
-
-
-NOTE:
-it seems scikits-learn on ubuntu only works with python2
-error: [dimension reduction] python 3+ is required
-=> go through pip
-sudo apt-get install python3-pip
-sudo pip3 install scikit-learn
-
-sudo apt-get install python3-sklearn (pull all python3 deps, including numpy 
-and scipy)
-
-set VTK_PYTHON_VERSION to 3 and the advanced variables get correctly set.
-
-it works!
-
-<!--&nbsp;&middot;&nbsp;
-<a href="https://github.com/LLNL/zfp" target="new">ZLib</a> (Zlib should be 
-already installed if you installed vtk, as recommended above).<br>-->
 
 <h4>Note to non-Ubuntu users</h4>
 We recommend in general to install the version 8 of the VTK library 
@@ -295,15 +276,15 @@ under Fedora (as of version 27):
 a terminal (this assumes that you downloaded the tarballs to the 
 <code>~/Downloads</code> directory):<br><br>
 <code>$ mkdir ~/ttk</code><br>
-<code>$ mv ~/Downloads/ParaView-v5.5.2.tar.gz ~/ttk/</code><br>
-<code>$ mv ~/Downloads/ttk-0.9.6.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ParaView-v5.6.0.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ttk-0.9.7.tar.gz ~/ttk/</code><br>
 <code>$ cd ~/ttk</code><br>
-<code>$ tar xvzf ParaView-v5.5.2.tar.gz</code><br>
-<code>$ tar xvzf ttk-0.9.6.tar.gz</code><br><br>
+<code>$ tar xvzf ParaView-v5.6.0.tar.gz</code><br>
+<code>$ tar xvzf ttk-0.9.7.tar.gz</code><br><br>
 You can delete the tarballs after the source trees have been decompressed by 
 entering the following commands:<br><br>
-<code>$ rm ParaView-v5.5.2.tar.gz</code><br>
-<code>$ rm ttk-0.9.6.tar.gz</code></p>
+<code>$ rm ParaView-v5.6.0.tar.gz</code><br>
+<code>$ rm ttk-0.9.7.tar.gz</code></p>
                   
                   <p>
                   <h3>4. Patching the ParaView source tree</h3>
@@ -313,9 +294,9 @@ This step is
 optional. 
 To proceed, go to 
 the patch directory and apply it as follows:<br><br>
-<code>$ cd ~/ttk/ttk-0.9.6/paraview/patch</code><br>
-<code>$ ./patch-paraview-5.5.2.sh
- ~/ttk/ParaView-v5.5.2/</code></p>
+<code>$ cd ~/ttk/ttk-0.9.7/paraview/patch</code><br>
+<code>$ ./patch-paraview-5.6.0.sh
+ ~/ttk/ParaView-v5.6.0/</code></p>
 <!-- <code style="color: #ef2929; font-weight: bold;">root #</code> -->
 <!-- <code>emerge --ask&#160;--unmerge  -->
 <!-- sys-kernel/genkernel</code> -->
@@ -325,14 +306,14 @@ the patch directory and apply it as follows:<br><br>
                   <h4>a) Configuration</h4>
                   To enter the configuration menu of ParaView's build, enter 
 the following commands:<br><br>
-<code>$ cd ~/ttk/ParaView-v5.5.2/</code><br>
+<code>$ cd ~/ttk/ParaView-v5.6.0/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
 The configuration window opens. Click on the "Configure" button to proceed.
 Once the configuration is finished, please 
 <!-- tick the "Advanced" check box and  -->
-set the following options as follows (required 
+set the following variables as follows (required 
 for TTK's 
 installation):<br><br>
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
@@ -348,25 +329,6 @@ installation):<br><br>
 We recommend in general to use the version 5 of the Qt library, instead of the 
 version 4 as described above (which is only recommended for Ubuntu 
 users).<br><br>-->
-
-If you want to enable the 
-<a target="new"
-href="https://scikit-learn.org/stable/index.html">scikit-learn
-</a>support in TTK (for dimension reduction), you will need to configure 
-ParaView's build to make it use the version 3 of Python. Under Ubuntu Linux 
-18.04.1, this can be achieved by 
-clicking on the <code>Advanced</code> checkbox of the CMake window (to make 
-advanced variables appear) and by setting the following variables as 
-follows:<br><br>
-<code>&nbsp;&middot;&nbsp;PYTHON_EXECUTABLE=/usr/bin/python3.6m</code><br>
-<code>&nbsp;&middot;&nbsp;PYTHON_INCLUDE_DIR=/usr/include/python3.6m/</code><br>
-<code>&nbsp;&middot;&nbsp;PYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.6m
-.so</code><br>
-<!-- <code>&nbsp;&middot;&nbsp;VTK_USE_SYSTEM_PROTOBUF=ON</code><br> -->
-<!-- <code>&nbsp;&middot;&nbsp;PARAVIEW_QT_VERSION=4</code><br> -->
-<!-- <code>&nbsp;&middot;&nbsp;VTK_RENDERING_BACKEND=OpenGL2</code><br> -->
-<!-- <code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=OpenMP</code><br>-->
-<br> 
 
 Optionally, you may want to turn on additional features. See the 
 <a 
@@ -408,7 +370,7 @@ enter the following command to enable the build of TTK plugins:<br><br>
 <h4><a name="ttkConfig">a)</a> Configuration</h4>
 To enter the configuration menu of TTK's build, enter the following 
 commands:<br><br>
-<code>$ cd ~/ttk/ttk-0.9.6/</code><br>
+<code>$ cd ~/ttk/ttk-0.9.7/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
@@ -457,7 +419,7 @@ default TTK installation path, <code>/usr/local/</code>):<br><br>
 <!--<p>
 If you wish to disable the build and installation of certain TTK components, 
 just comment the corresponding lines in the <code>CMakeLists.txt</code> file at 
-the root of the source tree (<code>~/ttk/ttk-0.9.6/CMakeLists.txt</code> in our 
+the root of the source tree (<code>~/ttk/ttk-0.9.7/CMakeLists.txt</code> in our 
 example) prior to entering the configuration step of TTK's build (<a 
 href="#ttkConfig">section 6.a</a>).
 </p>-->
@@ -534,7 +496,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on November 11, 2018.</p>
+                    Updated on November 13, 2018.</p>
                 </div>
             </div>
         </div>
