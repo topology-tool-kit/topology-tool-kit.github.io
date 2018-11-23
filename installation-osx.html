@@ -200,24 +200,24 @@ href="downloads.html">download page</a>.
 
 Using <a href="https://brew.sh/">homebrew</a>, install:
 <ul>
-<li> cmake (tested with 3.12.4) </li>
+<li> cmake (tested with 3.13.0) </li>
 <li> qt5 (tested with 5.11.2) </li>
 <li> python (tested with 3.7.1)<br/>
 Note: For this installation, we have switched to python3 instead of python2.  To map the default executable for python, please add <code>export PATH="/usr/local/opt/python/libexec/bin/:$PATH"</code> to either your <code>~/.bashrc</code>, <code>~/.bash_profile</code>, or other shell startup script.</li>
-<li> vtk (tested with HEAD version HEAD-e7f5a61_2)<br/>
+<li> vtk (tested with 8.1.2)<br/>
 Note: we excluded building python2 with vtk so as to not have to install both python2 and python3.  This required installing certain vtk dependencies separately that also excluded python2, including:
 <ul>
 <li>sip (tested with version 4.19.8)</li>
 <li>pyqt (tested with version 5.10.1</li>
 </ul>
-To accomodate this, the current version in homebrew of vtk (8.1.1) does not build, so we used the HEAD version.  Installing vtk will also install hdf5 as a dependency (that ParaView can make use of).
+Installing vtk will also install hdf5 as a dependency (that ParaView can make use of).
 </ul>
 Altogether, this required the following sequence of commands:<br><br>
 <code>$ brew install cmake qt5 python</code><br>
 <code>$ export PATH="/usr/local/opt/python/libexec/bin/:$PATH"</code><br>
 <code>$ brew install sip --without-python@2</code><br>
 <code>$ brew install pyqt --without-python@2</code><br>
-<code>$ brew install vtk --HEAD --with-python --with-qt --without-python@2</code><br><br>
+<code>$ brew install vtk --with-python --with-qt --without-python@2</code><br><br>
 
 <h4>b) Optional Dependencies</h4>
 
