@@ -158,7 +158,7 @@ This page describes installing TTK 0.9.7 on OSX, using High Sierra 10.13.6 and
 ParaView 5.6.0.  The key differences from the linux installation involve how 
 ParaView is compiled, installing certain dependencies, and setting up some of 
 the paths for OSX.  The following assumes that the target is to compile with 
-OSX clang and uses homebrew for dependencies.<br><br>
+OSX clang and uses homebrew for dependencies, including python3<br><br>
 
 Other versions of earlier software packages 
 may require slight variations in the installation procedure.
@@ -195,68 +195,96 @@ href="downloads.html">download page</a>.
 
 
 <p><h3>2. Installing the dependencies</h3>
+
+<h4>a) Required Dependencies</h4>
+
 Using <a href="https://brew.sh/">homebrew</a>, install:
 <ul>
-<li> cmake (tested with 3.12.1) </li>
-<li> qt5 (tested with 5.11.1) </li>
-<li> python2 (tested with 2.7.15_1) </li>
-<li> vtk (tested with 8.1.1) </li>
-</ul>
-Using the command: <br><br>
-<code>$ brew install cmake qt5 python2 vtk</code><br><br>
-
-<h4>a) Optional Dependencies</h4>
-
-Using homebrew, one can install:
+<li> cmake (tested with 3.12.4) </li>
+<li> qt5 (tested with 5.11.2) </li>
+<li> python (tested with 3.7.1)<br/>
+Note: For this installation, we have switched to python3 instead of python2.  To map the default executable for python, please add <code>export PATH="/usr/local/opt/python/libexec/bin/:$PATH"</code> to either your <code>~/.bashrc</code>, <code>~/.bash_profile</code>, or other shell startup script.</li>
+<li> vtk (tested with HEAD version HEAD-e7f5a61_2)<br/>
+Note: we excluded building python2 with vtk so as to not have to install both python2 and python3.  This required installing certain vtk dependencies separately that also excluded python2, including:
 <ul>
-<li> ffmpeg (tested with 4.0.2) </li>
-<li> hdf5 (tested with 1.10.2_1) </li>
-<li> tbb (tested with 2018_U5) -- needed for OSPRay </li>
-<li> mpich (tested with 3.2.1_2) -- needed for OSPRay's execution </li>
-<li> libomp (tested with 6.0.1) -- needed for OpenMP support </li>
+<li>sip (tested with version 4.19.8)</li>
+<li>pyqt (tested with version 5.10.1</li>
 </ul>
-Using the command (or only parts of it): <code>$ brew install ffmpeg hdf5 tbb 
-mpich</code><br><br>
+To accomodate this, the current version in homebrew of vtk (8.1.1) does not build, so we used the HEAD version.  Installing vtk will also install hdf5 as a dependency (that ParaView can make use of).
+</ul>
+Altogether, this required the following sequence of commands:<br><br>
+<code>$ brew install cmake qt5 python</code><br>
+<code>$ export PATH="/usr/local/opt/python/libexec/bin/:$PATH"</code><br>
+<code>$ brew install sip --without-python@2</code><br>
+<code>$ brew install pyqt --without-python@2</code><br>
+<code>$ brew install vtk --HEAD --with-python --with-qt --without-python@2</code><br><br>
 
-In order to enjoy the complete set of TTK features, we also recommend to 
-install the following, <i>optional</i> dependencies:<br>
-<!--&nbsp;&middot;&nbsp;
-<a target="new" 
-href="https://scikit-learn.org/stable/index.html">scikit-learn</a> for Python3 (for data 
-reduction features).<br> -->
-&nbsp;&middot;&nbsp;
-<a href="https://github.com/LLNL/zfp" target="new">ZFP</a> 
-(for advanced compression support).<br><br> 
-<!--&nbsp;&middot;&nbsp;
-<a href="https://github.com/LLNL/zfp" target="new">ZLib</a> (Zlib should be 
-already installed if you installed vtk, as recommended above).<br>-->
+<h4>b) Optional Dependencies</h4>
+
+<h5>(i) ffmpeg:</h5>
+
+Using homebrew, one can install optional packages for ParaView features with homebrew:
+<ul>
+<li> ffmpeg (tested with 4.1) </li>
+</ul>
+Using the command: <code>$ brew install ffmpeg</code><br><br>
+
+
+
+<h5>(ii) OpenMP:</h5>
+
+Using homebrew, one can also install OpenMP support for ParaView and TTK with homebrew:
+<ul>
+<li> libomp (tested with 6.0.1)</li>
+</ul>
+Using the command: <code>$ brew install libomp</code><br><br>
+
+
+
+
+<h5>(iii) OSPRay:</h5>
 
 And, in addition, one can install OSPRay and it's dependencies using:
 
 <ul>
-<li>Download and unpack ospray-1.6.1.x86_64.dmg from <a 
-href="http://www.ospray.org/getting_ospray.html">http://www.ospray.org/
-getting_ospray.html</a> (this installs in /opt/local/lib).</li>
+<li> mpich (tested with 3.2.1_2):<br>
+<code>$ brew install mpich</code> </li>
 
-<li>Download and unpack embree-3.2.0.x86_64.dmg from <a 
-href="https://embree.github.io/downloads.html">https://embree.github.io/
-downloads.html</a> (this installs in /opt/local/lib).</li>
+<li>Download and expand ospray-1.7.2.x86_64.macosx.tar.gz from <a href="http://www.ospray.org/getting_ospray.html">http://www.ospray.org/ getting_ospray.html</a>, to install:
+<ul>
+<li>Copy lib/cmake and lib/libospray* to /opt/local/lib</li>
+<li>Copy include/* to /opt/local/include</li>
+<li>Copy scripts to /opt/local/share/OSPRay-1.7.2</li>
+<li>Copy bin and doc to /Applications/OSPRay</li>
+</ul>
+You may need to create some of the destination directories before copying.  The above steps manually do the work that the *.dmg used to (but, such file is currently missing). 
+</li>
 
-<li>Download and unpack tbb2018_20180618oss_mac.tgz from <a 
+<li>Download and unpack embree-3.2.4.x86_64.dmg from <a href="https://embree.github.io/downloads.html">https://embree.github.io/ downloads.html</a> (this installs in /opt/local and /Applications/Embree2).</li>
+
+<li>Download and unpack tbb2019_20181010oss_mac.tgz from <a 
 href="https://github.com/01org/tbb/releases">https://github.com/01org/tbb/
-releases</a>.  After expanding the .tar, I created a directory 
-/opt/local/include/tbb and copied the headers there, while I also copied the 
-library files to /opt/local/lib/.  Why?  The homebrew install for tbb doesn't 
-created the *_debug.dylib's.  One could also just install TBB entirely from the 
-website and skip the homebrew install, but in theory these versions match</li>
-</ul><br>
+releases</a>.  After expanding the .tgz, to install:
+<ul>
+<li>Copy lib/libtbb* to /opt/local/lib</li>
+<li>Copy cmake/* to /opt/local/lib/cmake/tbb</li>
+<li>Copy include/tbb to /opt/local/include</li>
+</ul>
+You may need to create some of the destination directories before copying.</li>
+</ul>
+After doing all of the above, you'll likely want to make sure that your commandline knows about ospray/embree/tbb, the easy fix for this is to add <code>export DYLD_LIBRARY_PATH="/opt/local/lib"</code> to your <code>~/.bashrc</code>.<br><br>
 
-After doing so, you'll likely want to make sure that your commandline knows 
-about ospray/embree/tbb, the easy fix for this is to add <code>export 
-DYLD_LIBRARY_PATH="/opt/local/lib"</code> to your <code>~/.bashrc</code>.
+<h5>(iv) Scikit-Learn and ZFP:</h5>
+
+Finally, in order to enjoy the complete set of TTK features, we also recommend installing the following, optional TTK dependencies:
+<ul>
+<li><a target="new" href="https://scikit-learn.org/stable/index.html">scikit-learn</a> for Python3 (for data 
+reduction features).  You can install this for python3 with pip:<br>
+<code>$ pip install -U scikit-learn</code></li>
+<li><a href="https://github.com/LLNL/zfp" target="new">ZFP</a> 
+(for advanced compression support), installed from source.</li>
+</ul>
 </p>
-
-
 
 
 
@@ -310,11 +338,10 @@ commands:<br><br>
 although you can install this separately from <a 
 href="https://cmake.org/download/">https://cmake.org/download/</a>)<br><br>
 
-Then, press 'c' to configure and we'll edit some CMake flags:<br><br>
-
+Then, press 'c' to configure and we'll edit some CMake flags:<br>
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_PYTHON=ON</code><br>
-<code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=Sequential</code><br>
+<code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=Sequential</code> (the default)<br>
 <br>
 
 You can also enable optional pieces, including:
@@ -324,101 +351,79 @@ You can also enable optional pieces, including:
 <code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_FFMPEG=ON</code><br>
 <br>
 
-<h5>(ii) hdf5:</h5>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;Should be enabled by default if you 
-installed it with homebrew<br>
+<h5>(ii) OpenMP as the SMP implementation (support is experimental, but
+both ParaView and TTK can use it):</h5>
+
+<code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=OpenMP</code> (changed from the default 
+"Sequential")<br>
+Note, after hitting 'c' to configure, cmake will now set a number of variables for you, including <code>OpenMP_CXX_FLAGS</code>, <code>OpenMP_CXX_LIBRARY</code>, <code>OpenMP_C_FLAGS</code>, <code>OpenMP_C_LIBRARY</code><br>
 <br>
+
 
 <h5>(iii) OSPRay (which requires TBB):</h5>
 
 <code>&nbsp;&middot;&nbsp;PARAVIEW_USE_OSPRAY=ON</code><br>
-<code>&nbsp;&middot;&nbsp;OSPRAY_INSTALL_DIR=/opt/local/lib</code><br>
-<code>&nbsp;&middot;&nbsp;TBB_ROOT=/opt/local</code><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(You may also have to manually set 
-the paths for the TBB debug *.dylibs stored in /opt/local/lib 
-(TBB_LIBRARY_DEBUG, TBB_LIBRARY_MALLOC_DEBUG, TBB_MALLOC_LIBRARY_DEBUG, and/or 
-TBB_MALLOC_PROXY_LIBRARY_DEBUG).  Occasionally, they would default to 
-/usr/local/lib.)<br>
+<code>&nbsp;&middot;&nbsp;OSPRAY_INSTALL_DIR=/opt/local/lib</code> (this variable will show up and need to be set after setting <code>PARAVIEW_USE_OSPRAY=ON</code> and hitting 'c' to reconfigure.)<br>
 <br>
 
-<h5>(iv) TBB as the SMP implementation (which isn't necessary, but makes sense 
-to do if you're using OSPRay):</h5>
 
-<code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=TBB</code><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(changed from the default 
+<h5>(iv) TBB as the SMP implementation (which isn't necessary, but if you do not want to use OpenMP and you've installed OSPRay, then you have TBB too):</h5>
+
+<code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=TBB</code> (changed from the default 
 "Sequential")<br>
-<code>&nbsp;&middot;&nbsp;TBB_VERSION=""</code><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(It seems the autodetected version is 
-wrong, so we clear this out to prevent a conflict with VTK-m)<br>
-<code>&nbsp;&middot;&nbsp;VTKm_ENABLE_TBB=ON</code><br>
+Note, hitting 'c' to configure, cmake will also set <code>VTKm_ENABLE_TBB=ON</code> and should find all include dirs and libraries for TBB in /opt/local if you've installed it correctly.<br>
 <br>
 
-<h5>(v) OpenMP as the SMP implementation (this is experimental, but useful 
-since TTK can take advantage of it too.  OSPRay will still use TBB, which is why 
-we set TBB_ROOT in (iii)):</h5>
+After specifying the above options, press 'c' to configure (wait a minute) and then press 't' for advanced mode to double check the above paths and/or fill in any flags that did not appear the first time.  You may need to press 'c' again, which fills in some more paths.  Once cmake is finished configuring, you should finalize everything by pressing 'g' to generate and exit.<br><br>
 
-<code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=OpenMP</code><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(changed from the default 
-"Sequential")<br>
-<code>&nbsp;&middot;&nbsp;OpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp 
--I/usr/local/opt/libomp/include"</code><br>
-<code>&nbsp;&middot;&nbsp;OpenMP_CXX_LIBRARY=omp</code><br>
-<code>&nbsp;&middot;&nbsp;OpenMP_C_FLAGS="-Xpreprocessor -fopenmp 
--I/usr/local/opt/libomp/include"</code><br>
-<code>&nbsp;&middot;&nbsp;OpenMP_C_LIBRARY=omp</code><br>
-<br>
+If you prefer to just run <code>cmake</code> as opposed to <code>ccmake</code> or <code>cmake-gui</code>, the following summarizes five possible installations:
 
-
-
-Then, press 'c' to configure (wait a minute) and then press 't' for advanced 
-mode to double check the above paths and/or fill in any flags that did not 
-appear the first time.  
-
-
-Press 'c' again, which fills in some more paths, and then press 'c' one more 
-time and things should be ready to press 'g' to generate and exit.<br><br>
-
-If you prefer to just run <code>cmake</code> as opposed to <code>ccmake</code> 
-or <code>cmake-gui</code>, the following summarizes three possible 
-installations:
-
-<h5>(i) Sequential / Basic</h5>
+<h5>(i) Basic </h5>
 <code>$ cmake \<br>
 -DCMAKE_BUILD_TYPE=Release \<br>
 -DPARAVIEW_ENABLE_PYTHON=ON \<br>
+..
+</code><br>
+
+<h5>(ii) Sequential + ffmpeg</h5>
+<code>$ cmake \<br>
+-DCMAKE_BUILD_TYPE=Release \<br>
+-DPARAVIEW_ENABLE_PYTHON=ON \<br>
+-DPARAVIEW_ENABLE_FFMPEG=ON \<br>
 -DVTK_SMP_IMPLEMENTATION_TYPE=Sequential \<br>
--DPARAVIEW_ENABLE_FFMPEG=ON \<br>
 ..
 </code><br>
 
-<h5>(ii) OSPRay + TBB</h5>
+<h5>(iii) OpenMP + ffmpeg</h5>
 <code>$ cmake \<br>
 -DCMAKE_BUILD_TYPE=Release \<br>
 -DPARAVIEW_ENABLE_PYTHON=ON \<br>
--DVTK_SMP_IMPLEMENTATION_TYPE=TBB \<br>
--DTBB_VERSION="" \<br>
--DVTKm_ENABLE_TBB=ON \<br>
--DPARAVIEW_USE_OSPRAY=ON \<br>
--DOSPRAY_INSTALL_DIR=/opt/local/lib \<br>
--DTBB_ROOT=/opt/local \<br>
 -DPARAVIEW_ENABLE_FFMPEG=ON \<br>
-..
-</code><br>
-
-<h5>(ii) OSPRay + OpenMP</h5>
-<code>$ cmake \<br>
--DCMAKE_BUILD_TYPE=Release \<br>
--DPARAVIEW_ENABLE_PYTHON=ON \<br>
 -DVTK_SMP_IMPLEMENTATION_TYPE=OpenMP \<br>
--DOpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include" \<br>
--DOpenMP_CXX_LIBRARY=omp \<br>
--DOpenMP_C_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include" \<br>
--DOpenMP_C_LIBRARY=omp \<br>
+..
+</code><br>
+
+
+<h5>(iv) OSPRay + TBB + ffmpeg</h5>
+<code>$ cmake \<br>
+-DCMAKE_BUILD_TYPE=Release \<br>
+-DPARAVIEW_ENABLE_PYTHON=ON \<br>
+-DPARAVIEW_ENABLE_FFMPEG=ON \<br>
+-DVTK_SMP_IMPLEMENTATION_TYPE=TBB \<br>
 -DPARAVIEW_USE_OSPRAY=ON \<br>
 -DOSPRAY_INSTALL_DIR=/opt/local/lib \<br>
--DTBB_ROOT=/opt/local \<br>
+..
+</code><br>
+
+<h5>(v) OSPRay + OpenMP + ffmpeg</h5>
+<code>$ cmake \<br>
+-DCMAKE_BUILD_TYPE=Release \<br>
+-DPARAVIEW_ENABLE_PYTHON=ON \<br>
 -DPARAVIEW_ENABLE_FFMPEG=ON \<br>
+-DVTK_SMP_IMPLEMENTATION_TYPE=OpenMP \<br>
+-DPARAVIEW_USE_OSPRAY=ON \<br>
+-DOSPRAY_INSTALL_DIR=/opt/local/lib \<br>
 ..
 </code><br>
 
@@ -459,8 +464,7 @@ commands:<br><br>
 The configuration window opens.  Press 'c' to configure, and you'll see that it 
 cannot yet find ParaView.  First, we'll fix this:<br><br>
 
-<code>&nbsp;&middot;&nbsp;ParaView_DIR=~/ttk/ParaView-v5.6.0/build/</code><br><
-br>
+<code>&nbsp;&middot;&nbsp;ParaView_DIR=~/ttk/ParaView-v5.6.0/build/</code><br><br>
 
 Press 'c' again to configure (you can ignore the warnings).  Also note that 
 <code>VTK_DIR</code> should automatically be set to the homebrew installation 
@@ -484,11 +488,9 @@ Finally, if you'd like to try out OpenMP (again, experimental), you would
 add:<br>
 
 <code>&nbsp;&middot;&nbsp;TTK_ENABLE_OPENMP=ON</code><br>
-<code>&nbsp;&middot;&nbsp;OpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp 
--I/usr/local/opt/libomp/include"</code><br>
+<code>&nbsp;&middot;&nbsp;OpenMP_CXX_FLAGS="-Xclang -fopenmp -I/usr/local/opt/libomp/include"</code><br>
 <code>&nbsp;&middot;&nbsp;OpenMP_CXX_LIB_NAMES=omp</code><br>
-<code>&nbsp;&middot;&nbsp;OpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.
-dylib</code><br>
+<code>&nbsp;&middot;&nbsp;OpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib</code><br>
 <br>
 
 Press 'c' to reconfigure (again takes a few seconds) and then press 'g' to 
@@ -514,7 +516,7 @@ installations:
 -DCMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.7/ttk_install \<br>
 -DTTK_INSTALL_PLUGIN_DIR=~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/MacOS/plugins \<br>
 -DTTK_ENABLE_OPENMP=ON \<br>
--DOpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include" \<br>
+-DOpenMP_CXX_FLAGS="-Xclang -fopenmp -I/usr/local/opt/libomp/include" \<br>
 -DOpenMP_CXX_LIB_NAMES=omp \<br>
 -DOpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib \<br>
 ..
@@ -545,8 +547,8 @@ Finally, to make sure the example data files are included in the right path,
 you have to manually copy the example data into the ParaView .app as 
 well:<br><br>
 <code>$ cd ~/ttk/ttk-0.9.7/paraview/patch/data</code><br>
-<code>$ mkdir -p ~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/share/paraview-5.5/data</code><br>
-<code>$ cp * ~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/share/paraview-5.5/data</code><br>
+<code>$ mkdir -p ~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/share/paraview-5.6/examples</code><br>
+<code>$ cp * ~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/share/paraview-5.6/examples</code><br>
 <br>
 </p>
 
