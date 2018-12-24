@@ -200,8 +200,8 @@ href="downloads.html">download page</a>.
 
 Using <a href="https://brew.sh/">homebrew</a>, install:
 <ul>
-<li> cmake (tested with 3.13.0) </li>
-<li> qt5 (tested with 5.11.2) </li>
+<li> cmake (tested with 3.13.2) </li>
+<li> qt5 (tested with 5.12.0) </li>
 <li> python (tested with 3.7.1)<br/>
 Note: For this installation, we have switched to python3 instead of python2.  To map the default executable for python, please add <code>export PATH="/usr/local/opt/python/libexec/bin/:$PATH"</code> to either your <code>~/.bashrc</code>, <code>~/.bash_profile</code>, or other shell startup script.</li>
 <li> vtk (tested with 8.1.2)<br/>
@@ -235,7 +235,7 @@ Using the command: <code>$ brew install ffmpeg</code><br><br>
 
 Using homebrew, one can also install OpenMP support for ParaView and TTK with homebrew:
 <ul>
-<li> libomp (tested with 6.0.1)</li>
+<li> libomp (tested with 7.0.0)</li>
 </ul>
 Using the command: <code>$ brew install libomp</code><br><br>
 
@@ -247,24 +247,23 @@ Using the command: <code>$ brew install libomp</code><br><br>
 And, in addition, one can install OSPRay and it's dependencies using:
 
 <ul>
-<li> mpich (tested with 3.2.1_2):<br>
+<li> mpich (tested with 3.3):<br>
 <code>$ brew install mpich</code> </li>
 
-<li>Download and expand ospray-1.7.2.x86_64.macosx.tar.gz from <a href="http://www.ospray.org/getting_ospray.html">http://www.ospray.org/ getting_ospray.html</a>, to install:
+<li>Download and expand ospray-1.7.3.x86_64.macosx.tar.gz from <a href="http://www.ospray.org/getting_ospray.html">http://www.ospray.org/getting_ospray.html</a>, to install:
 <ul>
 <li>Copy lib/cmake and lib/libospray* to /opt/local/lib</li>
 <li>Copy include/* to /opt/local/include</li>
 <li>Copy scripts to /opt/local/share/OSPRay-1.7.2</li>
 <li>Copy bin and doc to /Applications/OSPRay</li>
 </ul>
-You may need to create some of the destination directories before copying.  The above steps manually do the work that the *.dmg used to (but, such file is currently missing). 
+You may need to create some of the destination directories before copying.  The above steps manually do the work that the *.dmg used to (but, this file is currently missing). 
 </li>
 
-<li>Download and unpack embree-3.2.4.x86_64.dmg from <a href="https://embree.github.io/downloads.html">https://embree.github.io/ downloads.html</a> (this installs in /opt/local and /Applications/Embree2).</li>
+<li>Download and unpack embree-3.3.0.x86_64.pkg from <a href="https://embree.github.io/downloads.html">https://embree.github.io/downloads.html</a> (this installs in /opt/local and /Applications/Embree2).</li>
 
-<li>Download and unpack tbb2019_20181010oss_mac.tgz from <a 
-href="https://github.com/01org/tbb/releases">https://github.com/01org/tbb/
-releases</a>.  After expanding the .tgz, to install:
+<li>Download and unpack tbb2019_20181203oss_mac.tgz from <a 
+href="https://github.com/01org/tbb/releases">https://github.com/01org/tbb/releases</a>.  After expanding the .tgz, to install:
 <ul>
 <li>Copy lib/libtbb* to /opt/local/lib</li>
 <li>Copy cmake/* to /opt/local/lib/cmake/tbb</li>
@@ -276,29 +275,17 @@ After doing all of the above, you'll likely want to make sure that your commandl
 
 <h5>(iv) TTK optional dependencies:</h5>
 
-Finally, in order to enjoy the complete set of TTK features, we also recommend 
-installing the following, optional TTK dependencies:
+Finally, in order to enjoy the complete set of TTK features, we also recommend installing the following, optional TTK dependencies:
 <ul>
-<li><a target="new" 
-href="https://www.graphviz.org/">graphviz</a> (for graph 
-drawing features, version 2.40.1 or later).</li>
-<li><a target="new" 
-href="https://scikit-learn.org/stable/index.html">scikit-learn</a> for Python3 
-(for data 
-reduction features, version 0.19.0 or later).  You can install this for python3 
-with pip:<br>
+<li><a target="new" href="https://www.graphviz.org/">graphviz</a> (for graph drawing features) tested with version 2.40.1 on homebrew:<br>
+<code>$ brew install graphviz</code></li>
+<li><a target="new" href="https://scikit-learn.org/stable/index.html">scikit-learn</a> for Python3 (for data reduction features, version 0.19.0 or later).  You can install this for python3 with pip:<br>
 <code>$ pip install -U scikit-learn</code></li>
-<li>
-<a href="https://www.sqlite.org/" target="new">sqlite</a> (for cinema query 
-features, version 3.24.0 or later);</li>
-<li><a href="https://github.com/LLNL/zfp" target="new">ZFP</a> 
-(for advanced compression support, version 0.5.4 or later), installed from 
-source.</li>
-<li>
-<a href="https://zlib.net/" target="new">
-zlib</a> (for further compression support, version 1.2.11 or later)</li>
-
-
+<li><a href="https://www.sqlite.org/" target="new">sqlite</a> (for cinema query features), tested with version 3.26.0 on homebrew:<br>
+<code>$ brew install sqlite</code></li>
+<li><a href="https://github.com/LLNL/zfp" target="new">ZFP</a> (for advanced compression support, version 0.5.4 or later), installed from source.</li>
+<li><a href="https://zlib.net/" target="new">zlib</a> (for further compression support) tested with version 1.2.11 on homebrew:<br>
+<code>$ brew install zlib</code></li>
 </ul>
 </p>
 
