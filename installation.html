@@ -164,6 +164,39 @@ for other Linux distributions).
 tutorial page</a> 
 also shows how to proceed on a step-by-step basis.<br> <br>
 
+If you are an advanced user and you do not wish to install ParaView (TTK's 
+main user interface), you 
+still 
+have the possibility to install TTK without ParaView support (although we 
+highly recommend to activate it).<br>
+In that case, simply 
+download TTK as describded in Section 1, install the dependencies as detailed 
+in 
+section 2 and finally, directly jump to section 6 (<i>"Configuring, building 
+and installing TTK"</i>). <br>
+Examples showing how to use TTK libraries from your 
+own VTK code can be found 
+<a target="new"
+href="https://github.com/topology-tool-kit/ttk/tree/master/examples/vtk-c%2B%2B"
+>on this page</a>.<br><br>
+
+If you are an advanced user and you do not even wish to install VTK, you still 
+have the possibility to install TTK without VTK support (although we 
+highly recommend to activate it).<br>
+In that case, simply download TTK as describded in Section 1, install the 
+<b>optional</b> dependencies as detailed in 
+section 2 and finally, directly jump to section 6 (<i>"Configuring, building 
+and 
+installing TTK"</i>). <br>
+Examples showing how to use TTK libraries from your own 
+C++ code can be found 
+<a target="new"
+href="https://github.com/topology-tool-kit/ttk/tree/master/examples/c%2B%2B"
+>on this page</a>.<br>
+<br>
+
+<b>Most users will want to activate TTK's ParaView support.</b><br><br>
+
 
 The remainder of these notes 
 describe 
@@ -192,7 +225,9 @@ previous versions of our installation notes: <br>
 &nbsp;&middot;&nbsp;
 <a href="installation-0.9.1.html">TTK 0.9.1 with ParaView 5.3.0</a>,<br>
 &nbsp;&middot;&nbsp;
-<a href="installation-0.9.html">TTK 0.9 with ParaView 5.2.0</a>.
+<a href="installation-0.9.html">TTK 0.9 with ParaView 5.2.0</a>.<br><br>
+
+
 
 <!--The following video also shows how to proceed on a 
 step-by-step basis:<br> <br>
@@ -410,6 +445,28 @@ adjusted prior to clicking the "Generate" button. In particular, this variable
 needs to be set to the path to the 
 directory containing the file <code>ParaViewConfig.cmake</code>.-->
 Once the generation is completed, close the configuration window.<br><br>
+
+If you are an advanced user and you do not wish to activate TTK's ParaView 
+support, set the CMake variable <code>TTK_BUILD_PARAVIEW_PLUGINS</code> to 
+<code>OFF</code>.
+Examples showing how to use TTK libraries from your 
+own VTK code can be found 
+<a target="new"
+href="https://github.com/topology-tool-kit/ttk/tree/master/examples/vtk-c%2B%2B"
+>on this page</a>.<br><br>
+
+If you are an advanced user and you do not even wish  to activate TTK's VTK 
+support, set the CMake variables 
+<!-- NOT NEEDED AFTER RELEASE 0.9.7 -->
+<code>TTK_BUILD_STANDALONE_APPS</code> and 
+<!-- END OF NOT NEEDED -->
+<code>TTK_BUILD_VTK_WRAPPERS</code> to <code>OFF</code>.
+Examples showing how to use TTK libraries from your own 
+C++ code can be found 
+<a target="new"
+href="https://github.com/topology-tool-kit/ttk/tree/master/examples/c%2B%2B"
+>on this page</a>.<br><br>
+
 <h4>b) Build</h4>
 Now you can start the compilation process by entering the following command, 
 where <code>N</code> is the number of available cores on your system (this will 
@@ -523,7 +580,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on December 8, 2018.</p>
+                    Updated on January 25, 2019.</p>
                 </div>
             </div>
         </div>
