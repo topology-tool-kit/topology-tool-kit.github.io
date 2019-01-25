@@ -159,6 +159,39 @@ These specific notes describe the installation procedure for a
 Windows 10 operating system with Visual Studio 2015 (but the process should be 
 very similar for other versions).<br><br> 
 
+If you are an advanced user and you do not wish to install ParaView (TTK's 
+main user interface), you 
+still 
+have the possibility to install TTK without ParaView support (although we 
+highly recommend to activate it).<br>
+In that case, simply 
+download TTK as describded in section 1, install the dependencies as detailed 
+in 
+section 2 and finally, directly jump to section 6 (<i>"Installing 
+TTK"</i>). <br>
+Examples showing how to use TTK libraries from your 
+own VTK code can be found 
+<a target="new"
+href="https://github.com/topology-tool-kit/ttk/tree/master/examples/vtk-c%2B%2B"
+>on this page</a>.<br><br>
+
+If you are an advanced user and you do not even wish to install VTK, you still 
+have the possibility to install TTK without VTK support (although we 
+highly recommend to activate it).<br>
+In that case, simply download TTK as describded in section 1, install the 
+<b>optional</b> dependencies as detailed in 
+section 2 and finally, directly jump to section 6 (<i>"Installing 
+TTK"</i>). <br>
+Examples showing how to use TTK libraries from your own 
+C++ code can be found 
+<a target="new"
+href="https://github.com/topology-tool-kit/ttk/tree/master/examples/c%2B%2B"
+>on this page</a>.<br>
+<br>
+
+<b>Most users will want to activate TTK's ParaView support.</b> 
+<br><br>
+
 The remainder of these notes 
 describe 
 the installation of the 
@@ -350,6 +383,28 @@ variable:<br>
  
     <code>&nbsp;&middot;&nbsp;TTK_ENABLE_OPENMP=OFF</code><br>    
     <br>   
+    
+    If you are an advanced user and you do not wish to activate TTK's ParaView 
+support, set the CMake variable <code>TTK_BUILD_PARAVIEW_PLUGINS</code> to 
+<code>OFF</code>.
+Examples showing how to use TTK libraries from your 
+own VTK code can be found 
+<a target="new"
+href="https://github.com/topology-tool-kit/ttk/tree/master/examples/vtk-c%2B%2B"
+>on this page</a>.<br><br>
+
+If you are an advanced user and you do not even wish  to activate TTK's VTK 
+support, set the CMake variables 
+<!-- NOT NEEDED AFTER RELEASE 0.9.7 -->
+<code>TTK_BUILD_STANDALONE_APPS</code> and 
+<!-- END OF NOT NEEDED -->
+<code>TTK_BUILD_VTK_WRAPPERS</code> to <code>OFF</code>.
+Examples showing how to use TTK libraries from your own 
+C++ code can be found 
+<a target="new"
+href="https://github.com/topology-tool-kit/ttk/tree/master/examples/c%2B%2B"
+>on this page</a>.<br><br>
+    
 Click on the "Generate" button. Next, click on the "Open project" 
 button.<br>
     Under Visual Studio, make sure to select the target named 
@@ -380,7 +435,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on December 8, 2018.</p>
+                    Updated on January 25, 2019.</p>
                 </div>
             </div>
         </div>
