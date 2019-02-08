@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="The Topology ToolKit">
     <meta name="author" content="The Topology ToolKit">
-    <meta name="keywords" content="TTK, Topology ToolKit, Topological Data 
-Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour 
-tree, persistence diagram, persistence curve, continuous scatterplot, fiber 
-surface, contour forests, jacobi set, mandatory critical points, topological 
+    <meta name="keywords" content="TTK, Topology ToolKit, Topological Data
+Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour
+tree, persistence diagram, persistence curve, continuous scatterplot, fiber
+surface, contour forests, jacobi set, mandatory critical points, topological
 simplification, VTK, ParaView, Python" />
 
-    <title>TTK - the Topology ToolKit - Topological Data Analysis and 
+    <title>TTK - the Topology ToolKit - Topological Data Analysis and
 Visualization</title>
 
     <!-- Bootstrap Core CSS -->
@@ -39,9 +39,9 @@ Visualization</title>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  
+
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  
+
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'
 );
 
@@ -78,7 +78,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" 
+                <button type="button" class="navbar-toggle"
 data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
@@ -87,9 +87,9 @@ data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 TTK Home</a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling 
+            <!-- Collect the nav links, forms, and other content for toggling
 -->
-            <div class="collapse navbar-collapse" 
+            <div class="collapse navbar-collapse"
 id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -122,7 +122,7 @@ id="bs-example-navbar-collapse-1">
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" 
+    <header class="intro-header"
       style="background-image: url('img/builtinExample.png'">
         <div class="container">
             <div class="row">
@@ -144,8 +144,8 @@ id="bs-example-navbar-collapse-1">
 
 <p>
 
-<iframe width="100%" height="420" 
-src="https://www.youtube.com/embed/CQrXCw1YJHY" frameborder="0" 
+<iframe width="100%" height="420"
+src="https://www.youtube.com/embed/CQrXCw1YJHY" frameborder="0"
 allowfullscreen></iframe>
 
 <h3>TTK in-situ with Catalyst</h3>
@@ -153,7 +153,7 @@ These notes describe the installation procedure of TTK for an in-situ usage with
 <a href="https://www.paraview.org/in-situ/" target="new">Catalyst</a>.
 In particular, this specific version of the notes describe the procedure for a
 <a target="new"
-href="http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso">Ubuntu 
+href="http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso">Ubuntu
 Linux 17.04</a>
 operating system.<br>
 <br>
@@ -170,10 +170,10 @@ typically a high-performance system.
 The remainder of these notes describe the installation for this batch server mode.<br>
 <br>
 For illustration purposes, the in-situ features of TTK will be showcased from within an existing
-computational fluid dynamic simulation code, <a 
+computational fluid dynamic simulation code, <a
 href="http://code-saturne.org/cms/" target=new>Code_Saturne</a>,
 which already implements Catalyst interfacing features. See the
-<a  
+<a
 target="new" href="https://www.paraview.org/files/catalyst/docs/
 ParaViewCatalystUsersGuide_v2.pdf">
   Catalyst documentation</a> to interface your own simulation code with Catalyst.
@@ -182,11 +182,11 @@ ParaViewCatalystUsersGuide_v2.pdf">
 <p>
 <h4><a name="catalyst_downloads">1.</a> Downloads</h4>
 The in-situ usage of TTK requires the installation of several third-party packages, <b>from source</b>:
-<a  target="new" href="ftp://ftp.freedesktop.org/pub/mesa/mesa-17.2.0.tar.gz"> 
+<a  target="new" href="ftp://ftp.freedesktop.org/pub/mesa/mesa-17.2.0.tar.gz">
 Mesa version 17.2.0</a>,
-<a  
-target="new" 
-href="http://www.paraview.org/paraview-downloads/download.php?submit 
+<a
+target="new"
+href="http://www.paraview.org/paraview-downloads/download.php?submit
 =Download&version=v5.4&type=
 source&os=all&downloadFile=ParaView-v5.4.0.tar.gz">
 ParaView version 5.4.0</a> and obviously <a
@@ -243,7 +243,7 @@ This step is optional. To proceed, go to the patch directory and apply it as fol
 <h4><a name="catalyst_installing">5.</a> Configuring, building and installing</h4>
 <b>a) Mesa</b><br>
 To configure Mesa’s source tree, enter the following command (for more details about the
-compilation flags, see this <a 
+compilation flags, see this <a
 target="new"
 href="https://blog.kitware.com/messing-with-mesa-for-paraview-5-0vtk-7-0/">
   blog entry</a>) :<br>
@@ -300,8 +300,8 @@ the following options as follows (required for TTK's installation):<br>
 <code>VTK_RENDERING_BACKEND=OpenGL2</code><br>
 <br>
 
-Additionally, to enable the in-situ usage of ParaView, please set the following 
-additional options (for further details, see this <a 
+Additionally, to enable the in-situ usage of ParaView, please set the following
+additional options (for further details, see this <a
 target="new"
 href="https://www.paraview.org/Wiki/
 ParaView/ParaView_And_Mesa_3D#Configuring_ParaView_for_use_with_OSMesa">documentation</a>):<br>
@@ -321,12 +321,12 @@ ParaView/ParaView_And_Mesa_3D#Configuring_ParaView_for_use_with_OSMesa">document
 <code>VTK_USE_OFFSCREEN=OFF</code><br>
 <br>
 
-Next, press<code>[g]</code> to generate 
+Next, press<code>[g]</code> to generate
 and close the configuration
 interface when the generation is completed.<br>
 <br>
 
-Now you can start the compilation process by entering the following command, where N 
+Now you can start the compilation process by entering the following command, where N
 is the number of available cores on your system (this will take a LONG time):<br>
 <br>
 
@@ -354,7 +354,7 @@ TTK's build should be automatically configured correctly by default so you can p
 generate.<br>
 <br>
 
-Once the generation is completed, 
+Once the generation is completed,
 start the
 compilation process by entering the following command, where N is the number of available cores on your system
 (this will take a LONG time):<br>
@@ -385,11 +385,11 @@ In particular, we will go through the following main steps:<br>
 <br>
 
 <b>a) Downloads (both systems, client and server)</b><br>
-The Code_Saturne source tree (version 5.0.4) can be downloaded <a 
+The Code_Saturne source tree (version 5.0.4) can be downloaded <a
 target="new"
 href="http://code-saturne.org/cms/sites/
 default/files/releases/code_saturne-5.0.4.tar.gz">here</a>.<br>
-The Code_Saturne tutorial example that we will use in the remainder can be 
+The Code_Saturne tutorial example that we will use in the remainder can be
 downloaded <a
 target="new"
 href="http://
@@ -656,9 +656,9 @@ normally ttk_pipeline will appear as the new one. You should obtain something li
 <br>
 
 If you want more details about the configuration of a Code_Saturne study with Catalyst, you can follow
-this <a 
+this <a
 target="new"
-href="https://www.youtube.com/watch?v=G-D0SbORutU&feature=youtu.be">video 
+href="https://www.youtube.com/watch?v=G-D0SbORutU&feature=youtu.be">video
 tutorial</a>.<br>
 <br>
 
@@ -711,13 +711,13 @@ The calculation results are stored in <code>~/ttk/simple_junction/case1/RESU/&lt
 
 Once the simulation has finished, you should have a sequence of image files (*.png), for each view
 configured in the Catalyst script, as well as persistence diagrams (*.vtu), computed every 10 iterations.
-To generate videos out of these image sequences, please see the <a 
+To generate videos out of these image sequences, please see the <a
 target="new" href="http://ffmpeg.org/">
   ffmpeg</a> documentation.<br>
 <br>
 
 <div class="flex-container">
-  <iframe width="100%" height="420" src="https://www.youtube.com/embed/97xpyJRVQtg" 
+  <iframe width="100%" height="420" src="https://www.youtube.com/embed/97xpyJRVQtg"
                                     frameborder="0" allowfullscreen></iframe>
   <iframe width="100%" height="420" src="https://www.youtube.com/embed/5fdK_rcPERI"
                                     frameborder="0" allowfullscreen></iframe>
