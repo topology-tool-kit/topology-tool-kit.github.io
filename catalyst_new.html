@@ -525,7 +525,7 @@ and visualization pipeline, we provide a ParaView state file that
 reproduces the first default built-in example of TTK (critical points,
 warped view, persistence curve and persistence diagram). Download it
 <a href="stuff/paraview_pipeline.pvsm">here</a>. In ParaView, click on
-the <code>Load State…</code> wizard under the <code>File</code>
+the <code>Load State…</code> entry in the <code>File</code>
 menu. Select <code>Choose Files Names</code> in the drop-down menu,
 then modify the <code>Case File Name</code> to match the location of
 the file <code>RESULTS_ENSIGHT.case</code>. Click on
@@ -552,7 +552,7 @@ should obtain something similar to the screenshot below:<br>
 
 Once the full pipeline has been created, a Python script must be
 exported from ParaView. This is done by choosing the <code>Generate
-Script -deprecated</code> wizard under the <code>Catalyst</code> menu.
+Script -deprecated</code> entry in the <code>Catalyst</code> menu.
 Exporting Catalyst scripts should be done in a different way in newer
 versions of ParaView, but some options are only available by using this
 deprecated way.<br>
@@ -568,9 +568,15 @@ right column, before confirming by using <code>Next</code>.
 In the next page, the simulation name should be rename
 from <code>RESULTS_ENSIGHT.case</code> to <code>input</code>. This
 particular name is expected by Code_Saturne to correctly call any
-ParaView pipeline. Double-click on the text field to modify it.
+ParaView pipeline. Double-click on the text field to modify it.<br>
 
 <br>
+
+<div class="caption">
+  <a href="img/paraview_export0.png">
+    <img class="flex-item" src="img/paraview_export0.png">
+  </a>
+</div><br>
 
 The next page in the wizard offers several rendering options, select
 <code>Output rendering components i.e. views</code>, you will be able
@@ -619,7 +625,7 @@ the <code>ParallelUnstructuredGridWriter1</code> filter in the
 pipeline (screenshot below).<br>
 <br>
 
-<div class=caption>
+<div class="caption">
   <a href="img/paraview_parallel_writer.png">
     <img width="60%" src="img/paraview_parallel_writer.png">
   </a>
@@ -654,8 +660,8 @@ for x in glob.glob(
 </code></pre>
 
 <div class=caption>
-  <a href="img/catalyst_script_patch.png">
-    <img width="90%" src="img/catalyst_script_patch.png">
+  <a href="img/catalyst_script_patch_new.png">
+    <img width="90%" src="img/catalyst_script_patch_new.png">
   </a>
 </div>
 <br>
@@ -728,7 +734,7 @@ tutorial</a>.<br>
 <br>
 
 Finally, save the parameters by clicking on the <code>Save</code>
-wizard under the <code>File</code> menu.<br>
+entry in the <code>File</code> menu.<br>
 <br>
 
 <b>j) Running TTK in-situ (server system)</b><br>
