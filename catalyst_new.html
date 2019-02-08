@@ -142,7 +142,7 @@ id="bs-example-navbar-collapse-1">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<p>
+<p></p>
 
 <iframe width="100%" height="420"
 src="https://www.youtube.com/embed/CQrXCw1YJHY" frameborder="0"
@@ -375,142 +375,161 @@ your build of TTK on your system:
 
 <pre><code>$ sudo make install</code></pre>
 
-<p>
+<p></p>
+
 <h4><a name="catalyst_usecase">6.</a> A computational fluid dynamics use-case: Code_Saturne</h4>
-In the remainder of this tutorial, we will switch to a concrete use-case of in-situ usage of TTK with Catalyst.
-For this, we will focus on a computational fluid dynamics simulation code, Code_Saturne, which already
-implements interfacing features with Catalyst.<br>
+
+In the remainder of this tutorial, we will switch to a concrete
+use-case of in-situ usage of TTK with Catalyst.  For this, we will
+focus on a computational fluid dynamics simulation code, Code_Saturne,
+which already implements interfacing features with Catalyst.<br>
 <br>
 
-In particular, we will go through the following main steps:<br>
-&middot; install all the required software packages [client and server]<br>
-&middot; generate a first representative data set with Code_Saturne [client]<br>
-&middot; create an analysis and visualization pipeline for the representative data set with TTK [client]<br>
-&middot; export the analysis and visualization pipeline with Catalyst [client]<br>
-&middot; integrate the Catalyst/TTK script into Code_Saturne [client, then server]<br>
-<br>
+In particular, we will go through the following steps:
+<ol>
+  <li> install all the required software packages [client and server] </li>
+  <li> generate a first representative data set with Code_Saturne [client] </li>
+  <li> create an analysis and visualization pipeline for the
+    representative data set with TTK [client] </li>
+  <li> export the analysis and visualization pipeline with Catalyst [client] </li>
+  <li> integrate the Catalyst/TTK script into Code_Saturne [client, then server] </li>
+</ol>
 
 <b>a) Downloads (both systems, client and server)</b><br>
-The Code_Saturne source tree (version 5.0.4) can be downloaded <a
-target="new"
-href="http://code-saturne.org/cms/sites/
-default/files/releases/code_saturne-5.0.4.tar.gz">here</a>.<br>
-The Code_Saturne tutorial example that we will use in the remainder can be
-downloaded <a
-target="new"
-href="http://
-code-saturne.org/cms/sites/default/files/file_attach/Tutorial/version-5.0/01_simple_junction.pdf">there</a>.<br>
+
+The Code_Saturne source tree (version 5.0.9, released in September
+2018) can be downloaded <a target="new"
+href="http://code-saturne.org/cms/sites/default/files/releases/code_saturne-5.0.9.tar.gz">here</a>.
+<br>
+The Code_Saturne tutorial example that we will use in the remainder
+can be downloaded <a target="new"
+href="http://code-saturne.org/cms/sites/default/files/file_attach/Tutorial/version-5.0/01_simple_junction.pdf">there</a>.
+<br>
 <br>
 
 <b>b) Installing the dependencies (both systems, client and server)</b><br>
-Several dependencies will need to be installed in order to compile the packages from source. Please enter
-the following command (omit the <code>$</code> character) in a terminal to install them (please see the
-documentation of your package manager if your operating system is not Ubuntu Linux):<br>
-<br>
-<code>$ sudo apt-get install pyqt4-dev-tools</code>
-</p>
+
+Several dependencies will need to be installed in order to compile the
+packages from source. Please enter the following command (omit
+the <code>$</code> character) in a terminal to install them (please
+see the documentation of your package manager if your operating system
+is not Ubuntu Linux):
+
+<pre><code>$ sudo apt-get install pyqt5-dev-tools</code></pre>
 
 <b>c) Preparing the sources (both systems, client and server)</b><br>
-Move the tarballs to a working directory (for instance called <code>~/ttk/</code>) and decompress them
-by entering the following commands in a terminal (this assumes that you downloaded the tarballs to the
-<code>~/Downloads/</code> directory):<br>
-<br>
 
-<code>$ mv ~/Downloads/code_saturne-5.0.4.tar.gz ~/ttk/</code><br>
-<code>$ cd ~/ttk/</code><br>
-<code>$ tar xvzf code_saturne-5.0.4.tar.gz</code><br>
-<code>$ rm code_saturne-5.0.4.tar.gz</code><br>
-<br>
+Move the tarballs to a working directory (for instance
+called <code>~/ttk/</code>) and decompress them by entering the
+following commands in a terminal (this assumes that you downloaded the
+tarballs to the <code>~/Downloads/</code> directory):
+
+<pre><code>
+$ mv ~/Downloads/code_saturne-5.0.9.tar.gz ~/ttk/
+$ cd ~/ttk/
+$ tar xvzf code_saturne-5.0.9.tar.gz
+$ rm code_saturne-5.0.9.tar.gz
+</code></pre>
 
 <b>d) Configuring, building and installing Code_Saturne (both systems, client and server)</b><br>
-To configure Code_Saturne’s source tree, enter the following commands:<br>
-<br>
 
-<code>$ cd ~/ttk/code_saturne-5.0.4/</code><br>
-<code>$ mkdir build</code><br>
-<code>$ cd build/</code><br>
-<code>$ ../configure \</code><br>
-<code>$   --with-catalyst=/usr/local/ \</code><br>
-<code>$   --disable-catalyst-as-plugin</code><br>
-<br>
+To configure Code_Saturne’s source tree, enter the following
+commands:
 
-Now you can start the compilation process by entering the following command, where N is the number
-of available cores on your system (this will take a LONG time):<br>
-<br>
+<pre><code>
+$ cd ~/ttk/code_saturne-5.0.9/
+$ mkdir build
+$ cd build/
+$ PYTHON=/usr/bin/python3        \
+  ../configure                   \
+      --with-catalyst=/usr/local \
+      --disable-catalyst-as-plugin
+</code></pre>
 
-<code>$ make -jN</code><br>
-<br>
+Now you can start the compilation process by entering the following
+command, where <code>&lt;N&gt;</code> is the number of available cores
+on your system (this will take a LONG time):
 
-Once the build is finished, enter the following command to install your build of Code_Saturne on your system:<br>
-<br>
+<pre><code>$ make -j&lt;N&gt;</code></pre>
 
-<code>$ sudo make install</code><br>
-<br>
+Once the build is finished, enter the following command to install
+your build of Code_Saturne on your system:
+
+<pre><code>$ sudo make install</code></pre>
 
 <b>e) Post-installation configuration (both systems, client and server)</b><br>
-Once Code_Saturne is installed, append the following lines in the file <code>~/.bashrc</code>:<br>
-<br>
 
-<code>export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH</code><br>
-<code>export LD_LIBRARY_PATH=/usr/local/lib/paraview-5.4:$LD_LIBRARY_PATH</code><br>
-<br>
+Once Code_Saturne is installed, use the following command to set
+environment variables in the <code>~/.bashrc</code> configuration file:
 
-And to apply these modifications on the current shell, enter:<br>
-<br>
+<pre><code>
+$ cat >> ~/.bashrc <<"EOF"
+  # ParaView Catalyst environnment variables
+  # (ParaView version 5.6)
+  export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+  export LD_LIBRARY_PATH=/usr/local/lib/paraview-5.6:$LD_LIBRARY_PATH
+  EOF
+</code></pre>
 
-<code>$ source ~/.bashrc</code><br>
-<br>
+And to apply these modifications on the current shell, enter:
+
+<pre><code>$ source ~/.bashrc</code></pre>
 
 <b>f) Creating the representative Code_Saturne data set (client system)</b><br>
-Now, following the <a
-target="new"
-href="http://code-saturne.org/cms/sites/default/files/file_attach/Tutorial/
-version-5.0
-/01_simple_junction.pdf">Code_Saturne tutorial example</a>, we will prepare the computation directories.
-Create the study <code>simple_junction</code> and the calculation directory <code>case1</code> by entering
-the commands:<br>
-<br>
 
-<code>$ cd ~/ttk/</code><br>
-<code>$ code_saturne create -s simple_junction -c case1</code><br>
-<br>
+Now, following the <a target="new"
+href="http://code-saturne.org/cms/sites/default/files/file_attach/Tutorial/version-5.0/01_simple_junction.pdf">Code_Saturne
+tutorial example</a>, we will prepare the computation
+directories.Create the study <code>simple_junction</code> and the
+calculation directory <code>case1</code> by entering the commands:
 
-More details on how to change the parameters of the study can be found in the tutorial.
-In the following, we will use the pre-configured study located in Code_Saturne source
-files <code>~/ttk/code_saturne-5.0.4/examples/simple_junction/</code> and launch the simulation.<br>
-<br>
+<pre><code>
+$ cd ~/ttk/
+$ code_saturne create -s simple_junction -c case1
+</code></pre>
 
-<code>$ cd ~/ttk/simple_junction/case1/DATA/</code><br>
-<code>$ cp ~/ttk/code_saturne-5.0.4/examples/1-simple_junction/case1/case1.xml .</code><br>
-<code>$ cd ~/ttk/simple_junction/MESH/</code><br>
-<code>$ cp ~/ttk/code_saturne-5.0.4/examples/1-simple_junction/mesh/downcomer.des .</code><br>
-<code>$ cd ~/ttk/simple_junction/case1/</code><br>
-<code>$ code_saturne run --param case1.xml</code><br>
-<br>
+More details on how to change the parameters of the study can be found
+in the tutorial. In the following, we will use the pre-configured
+study located in Code_Saturne source
+files <code>~/ttk/code_saturne-5.0.9/examples/simple_junction/</code>
+and launch the simulation.
 
-Once this step is finished, a representative Code_Saturne data set is generated. We will use this data
-set next to design our analysis and visualization pipeline with TTK.<br>
-To visualize the representative data set, open in ParaView the file <code>RESULTS_ENSIGHT.case</code> in the
+<pre><code>
+$ cp ~/ttk/code_saturne-5.0.9/examples/1-simple_junction/case1/case1.xml \
+     ~/ttk/simple_junction/case1/DATA/
+$ cp ~/ttk/code_saturne-5.0.9/examples/1-simple_junction/mesh/downcomer.des \
+     ~/ttk/simple_junction/MESH/
+$ cd ~/ttk/simple_junction/case1/
+$ code_saturne run --param case1.xml
+</code></pre>
+
+Once this step is finished, a representative Code_Saturne data set is
+generated. We will use this data set next to design our analysis and
+visualization pipeline with TTK.<br> To visualize the representative
+data set, open in ParaView the file <code>RESULTS_ENSIGHT.case</code>
+in the
 directory <code>~/ttk/simple_junction/case1/RESU/&lt;date-time&gt;/postprocessing/</code><br>
 <br>
 
 <b>g) Generating the Catalyst script (client system)</b><br>
-We will describe here the general procedure to generate automatically a ParaView Catalyst pipeline, applied
-to a simple junction testcase but more details can be found in the <a
-target="new"
-href="https://www.paraview.org/files/
-catalyst/docs/ParaViewCatalystUsersGuide_v2.pdf">ParaView Catalyst User’s Guide</a>.<br>
+
+We will describe here the general procedure to generate automatically
+a ParaView Catalyst pipeline, applied to a simple junction testcase.
+
+<br>
 <br>
 
-The first step is to start the interactive ParaView <b>on the client system</b> (typically a workstation) and
-load the <code>CatalystScriptGenerator</code> plugin in the <code>Manage Plugins</code> wizard under the
-<code>Tools</code> menu. Next, in order to create an analysis and visualization pipeline, we provide a
-ParaView state file that reproduces the first default built-in example of TTK (critical points, warped
-view, persistence curve and persistence diagram), download it
-<a href="stuff/paraview_pipeline.pvsm">here</a>. In ParaView, click on the
-<code>Load State…</code> wizard under the <code>File</code> menu. Then modify the <code>Case File
-Name</code> to match the location of the file <code>RESULTS_ENSIGHT.case</code> and click on the
-<code>OK</code> button.<br>
+The first step is to start the interactive ParaView <b>on the client
+system</b> (typically a workstation). In order to create an analysis
+and visualization pipeline, we provide a ParaView state file that
+reproduces the first default built-in example of TTK (critical points,
+warped view, persistence curve and persistence diagram). Download it
+<a href="stuff/paraview_pipeline.pvsm">here</a>. In ParaView, click on
+the <code>Load State…</code> wizard under the <code>File</code>
+menu. Select <code>Choose Files Names</code> in the drop-down menu,
+then modify the <code>Case File Name</code> to match the location of
+the file <code>RESULTS_ENSIGHT.case</code>. Click on
+the <code>OK</code> button to confirm.<br>
 <br>
 
 <div class=caption>
@@ -520,8 +539,8 @@ Name</code> to match the location of the file <code>RESULTS_ENSIGHT.case</code> 
 </div>
 <br>
 
-ParaView will apply the visualization pipeline on the dataset and you should obtain something similar to
-the screenshot below:<br>
+ParaView will apply the visualization pipeline on the dataset and you
+should obtain something similar to the screenshot below:<br>
 <br>
 
 <div class=caption>
@@ -531,20 +550,43 @@ the screenshot below:<br>
 </div>
 <br>
 
-Once the full pipeline has been created, a Python script must be exported from ParaView. This is done by
-choosing the <code>Export State</code> wizard under the <code>CoProcessing</code> menu. After that, you
-must select the sources (i.e. pipeline objects without any input connections, in this example:
-<code>RESULTS_ENSIGHT.case</code>) and click on <code>Next</code>. The next page in the wizard offers
-several rendering options, select Output rendering components i.e. views, you will be able to modify a
-few other options such as the type and the name of the output images or the write frequency, ...etc.<br>
-You can iterate through the rendering views with the buttons <code>Previous View</code> and
-<code>Next View</code>.<br>
+Once the full pipeline has been created, a Python script must be
+exported from ParaView. This is done by choosing the <code>Generate
+Script -deprecated</code> wizard under the <code>Catalyst</code> menu.
+Exporting Catalyst scripts should be done in a different way in newer
+versions of ParaView, but some options are only available by using this
+deprecated way.<br>
 <br>
 
-<code>Image Type: png</code><br>
-<code>Write Frequency: 1</code><br>
-<code>Magnification: 1</code><br>
+In the form, you must first select the sources (i.e. pipeline objects
+without any input connections, in this example:
+<code>RESULTS_ENSIGHT.case</code>) by <code>Add</code>ing them to the
+right column, before confirming by using <code>Next</code>.
+
 <br>
+
+In the next page, the simulation name should be rename
+from <code>RESULTS_ENSIGHT.case</code> to <code>input</code>. This
+particular name is expected by Code_Saturne to correctly call any
+ParaView pipeline. Double-click on the text field to modify it.
+
+<br>
+
+The next page in the wizard offers several rendering options, select
+<code>Output rendering components i.e. views</code>, you will be able
+to modify a few other options such as the type and the name of the
+output images or the write frequency, etc.
+
+<br>
+
+You can iterate through the rendering views with the
+buttons <code>Previous View</code> and <code>Next View</code>.
+
+<pre><code>
+Image Type: png
+Write Frequency: 1
+Magnification: 1
+</code></pre>
 
 For the rendering views, use the following parameters (screenshot below):<br>
 <br>
@@ -571,8 +613,10 @@ For the rendering views of the persistence diagram and curve, check also the par
   </a>
 </div><br>
 
-The persistence diagram itself is configured to be written every 10 time-steps in the <code>Properties</code>
-panel of the <code>ParallelUnstructuredGridWriter1</code> filter in the pipeline (screenshot below).<br>
+The persistence diagram itself is configured to be written every 10
+time-steps in the <code>Properties</code> panel of
+the <code>ParallelUnstructuredGridWriter1</code> filter in the
+pipeline (screenshot below).<br>
 <br>
 
 <div class=caption>
@@ -587,18 +631,27 @@ Finally, click on the <code>Finish</code> button to create the Python script and
 <br>
 
 <b>h) Patching the Catalyst script (client system)</b><br>
-To automatically load the TTK plugins, add these lines of code just below the two Python
-<code>import</code> lines in the pre-configured script <code>ttk_pipeline.py</code> like in the image below:<br>
-<br>
 
-<code>import glob</code><br>
-<code>import os</code><br>
-<code>from os.path import join as ttk_path_join</code><br>
-<code>ttk_plugins_path = "/usr/local/lib/paraview-5.4/plugins/"</code><br>
-<code>for x in glob.glob(ttk_path_join(</code><br>
-<code class="tab2">ttk_plugins_path,'*.so' if os.name=='posix' else '*.dll')):</code><br>
-<code class="tab1">LoadPlugin(x, ns=globals())</code><br>
-<br>
+To automatically load the TTK plugins, add these lines of code
+just <em>below</em> the two Python
+<code>from paraview[] import []</code> lines in the pre-configured
+script <code>ttk_pipeline.py</code> like in the image below:
+
+<pre><code>
+# --------------------------------------------------------------
+# The following loads TTK's plugins.
+# Topology Toolkit 0.9.7
+# --------------------------------------------------------------
+import glob
+import os
+from os.path import join as ttk_path_join
+
+ttk_plugins_path = "/usr/local/lib/plugins/"
+for x in glob.glob(
+    ttk_path_join(ttk_plugins_path, "*.so" if os.name == "posix" else "*.dll")
+):
+    LoadPlugin(x, ns=globals())
+</code></pre>
 
 <div class=caption>
   <a href="img/catalyst_script_patch.png">
@@ -607,40 +660,44 @@ To automatically load the TTK plugins, add these lines of code just below the tw
 </div>
 <br>
 
-Note that <code>/usr/local/lib/paraview-5.4/plugins/</code> is the default location where TTK plugins are
-installed. Please change this path according to the values set at <a href="#catalyst_ttk_cmake">step 5.c</a>
-(cmake configuration of TTK).<br>
+Note that <code>/usr/local/lib/plugins/</code> is the default location
+where TTK plugins are installed.<br>
 <br>
 
 <b>i) Integrating the Catalyst script in the Code_Saturne project (client system)</b><br>
-To configure the project to use Catalyst and execute the script in-situ, enter the commands:<br>
-<br>
 
-<code>$ cd ~/ttk/simple_junction/case1/DATA/</code><br>
-<code>$ ./SaturneGUI case1.xml &amp;</code><br>
-<br>
+To configure the project to use Catalyst and execute the script
+in-situ, enter the commands:
 
-The study configuration tool of Code_Saturne opens. In the left panel, click on
-<code>Calculation control</code> then in the drop-down menu click on <code>Output control</code>, this
-will update the central part of the window and show the options related to the generation of the results.
-Select the <code>Writer</code> tab and click on the <code>+</code> button at the bottom to add a new writer
-module. Configure the writer module with the following parameters (as shown by the screenshot image below):<br>
-<br>
+<pre><code>
+$ cd ~/ttk/simple_junction/case1/DATA/
+$ ./SaturneGUI case1.xml
+</code></pre>
 
-<code>Name: ttk_pipeline</code><br>
-<code>Id: 1</code><br>
-<code>Format: Catalyst</code><br>
-<code>Directory: postprocessing</code><br>
-<br>
+The study configuration tool of Code_Saturne opens. In the left panel,
+click on <code>Calculation control</code> then in the drop-down menu
+on <code>Output control</code>. This will update the central part of
+the window and show the options related to the generation of the
+results. Select the <code>Writer</code> tab and click on
+the <code>+</code> button at the bottom to add a new writer
+module. Configure the writer module with the following parameters (as
+shown by the screenshot image below):
 
-Then modify the writing frequency to suit your needs, here is an example:<br>
-<br>
+<pre><code>
+Name: ttk_pipeline
+Id: 1
+Format: Catalyst
+Directory: postprocessing
+</code></pre>
 
-<code>Frequency:</code><br>
-<code class="tab1">&middot; Output every ‘n’ time steps</code><br>
-<code class="tab1">&middot; 1</code><br>
-<code class="tab1">&middot; Output at end of calculation</code><br>
-<br>
+Then modify the writing frequency to suit your needs, here is an example:
+
+<pre><code>
+Frequency:
+    &middot; Output every ‘n’ time steps
+    &middot; 1
+    &middot; Output at end of calculation
+</code></pre>
 
 <div class=caption>
   <a href="img/code_saturne_writer.png">
@@ -649,9 +706,12 @@ Then modify the writing frequency to suit your needs, here is an example:<br>
 </div>
 <br>
 
-Now to associate the Catalyst writer with the mesh, click on the <code>Mesh</code> tab and select the mesh
-part named Fluid domain. Then click on the <code>+</code> button in the section <code>Associated writers</code>,
-normally ttk_pipeline will appear as the new one. You should obtain something like the screenshot image below:<br>
+Now to associate the Catalyst writer with the mesh, click on
+the <code>Mesh</code> tab and select the mesh part named Fluid
+domain. Then click on the <code>+</code> button in the
+section <code>Associated writers</code>, normally ttk_pipeline will
+appear as the new one. You should obtain something like the screenshot
+image below:<br>
 <br>
 
 <div class=caption>
@@ -661,65 +721,79 @@ normally ttk_pipeline will appear as the new one. You should obtain something li
 </div>
 <br>
 
-If you want more details about the configuration of a Code_Saturne study with Catalyst, you can follow
-this <a
-target="new"
+If you want more details about the configuration of a Code_Saturne
+study with Catalyst, you can follow this <a target="new"
 href="https://www.youtube.com/watch?v=G-D0SbORutU&feature=youtu.be">video
 tutorial</a>.<br>
 <br>
 
-Finally, save the parameters by clicking on the <code>Save</code> wizard under the <code>File</code> menu.<br>
+Finally, save the parameters by clicking on the <code>Save</code>
+wizard under the <code>File</code> menu.<br>
 <br>
 
 <b>j) Running TTK in-situ (server system)</b><br>
-In the following, we describe how to configure a Code_Saturne / Catalyst project on the server side.
-Alternatively, jump to this <a href="#catalyst_package">paragraph</a> to directly download a preconfigured mirror package.<br>
+
+In the following, we describe how to configure a Code_Saturne /
+Catalyst project on the server side. Alternatively, jump to
+this <a href="#catalyst_package">paragraph</a> to directly download a
+preconfigured mirror package.<br>
 <br>
 
-First, create a “mirror” project on the server system with the commands:<br>
+First, create a “mirror” project on the server system with the
+commands:
+
+<pre><code>
+$ cd ~/ttk/
+$ code_saturne create -s simple_junction -c case1
+</code></pre>
+
+Now, copy the Catalyst script <code>ttk_pipeline.py</code> (section
+6.f) and the parameters file <code>case1.xml</code> from the client
+system (see the
+directory <code>~/ttk/simple_junction/case1/DATA/</code>) to
+the <b>same</b> mirror directory on the server system (same absolute
+path). Copy also the mesh <code>downcomer.des</code> located
+in <code>~/ttk/simple_junction/MESH/</code> the same way. Here, please
+choose the appropriate transfer method between your client and server
+systems based on the nature of their connection (for instance, on a
+TCP/IP network, the command scp may be recommended).<br>
 <br>
 
-<code>$ cd ~/ttk/</code><br>
-<code>$ code_saturne create -s simple_junction -c case1</code><br>
-<br>
+<a name="catalyst_package">Alternatively</a>, you can also simply
+download the
+following <a href="stuff/simple_junction.tar.gz">tarball</a>, which
+already contains a mirror of the client’s project. To decompress this
+tarball, enter the following commands (this assumes that you
+downloaded the tarballs to the <code>~/Downloads/</code>
+directory):
 
-Now, copy the Catalyst script <code>ttk_pipeline.py</code>  (section 6.f) and the parameters file
-<code>case1.xml</code> from the client system (see the directory
-<code>~/ttk/simple_junction/case1/DATA/</code>) to the <b>same</b> mirror directory on the server system
-(same absolute path). Copy also the mesh downcomer.des located in <code>~/ttk/simple_junction/MESH/</code>
-the same way. Here, please choose the appropriate transfer method between your client and server systems
-based on the nature of their connection (for instance, on a TCP/IP network, the command scp may be
-recommended).<br>
-<br>
+<pre><code>
+$ mv ~/Downloads/simple_junction.tar.gz ~/ttk/
+$ cd ~/ttk/
+$ tar xvzf simple_junction.tar.gz
+$ rm simple_junction.tar.gz
+</code></pre>
 
-<a name="catalyst_package">Alternatively</a>, you can also simply download the following <a href="stuff/simple_junction.tar.gz">tarball</a>, which already contains a mirror
-of the client’s project. To decompress this tarball, enter the following commands (this assumes that
-you downloaded the tarballs to the <code>~/Downloads/</code> directory):<br>
-<br>
+You are now ready to run your Code_Saturne simulation with an in-situ
+usage of TTK. For this, enter the following commands:
 
-<code>$ mv ~/Downloads/simple_junction.tar.gz ~/ttk/</code><br>
-<code>$ cd ~/ttk/</code><br>
-<code>$ tar xvzf simple_junction.tar.gz</code><br>
-<code>$ rm simple_junction.tar.gz</code><br>
-<br>
-
-You are now ready to run your Code_Saturne simulation with an in-situ usage of TTK. For this,
-enter the following commands:<br>
-<br>
-
-<code>$ cd ~/ttk/simple_junction/case1/</code><br>
-<code>$ code_saturne run --param case1.xml</code><br>
-<br>
+<pre><code>
+$ cd ~/ttk/simple_junction/case1/
+$ code_saturne run --param case1.xml
+</code></pre>
 
 <b>k) In-situ outputs (on the server system)</b><br>
-The calculation results are stored in <code>~/ttk/simple_junction/case1/RESU/&lt;date-time&gt;/</code><br>
+
+The calculation results are stored
+in <code>~/ttk/simple_junction/case1/RESU/&lt;date-time&gt;/</code><br>
 <br>
 
-Once the simulation has finished, you should have a sequence of image files (*.png), for each view
-configured in the Catalyst script, as well as persistence diagrams (*.vtu), computed every 10 iterations.
-To generate videos out of these image sequences, please see the <a
-target="new" href="http://ffmpeg.org/">
-  ffmpeg</a> documentation.<br>
+Once the simulation has finished, you should have a sequence of image
+files (*.png), for each view configured in the Catalyst script, as
+well as persistence diagrams (*.vtu), computed every 10 iterations.
+To generate videos out of these image sequences, please see
+the <a target="new" href="http://ffmpeg.org/"> ffmpeg</a>
+documentation.<br>
 <br>
 
 <div class="flex-container">
@@ -736,9 +810,8 @@ target="new" href="http://ffmpeg.org/">
                                     frameborder="0" allowfullscreen></iframe>
 </div>
 
-</p>
+<p></p>
 
-</p>
 
             </div>
         </div>
