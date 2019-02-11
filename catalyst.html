@@ -470,11 +470,11 @@ environment variables in the <code>~/.bashrc</code> configuration file:
 
 <pre><code>
 $ cat >> ~/.bashrc <<"EOF"
-  # ParaView Catalyst environnment variables
-  # (ParaView version 5.6)
-  export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-  export LD_LIBRARY_PATH=/usr/local/lib/paraview-5.6:$LD_LIBRARY_PATH
-  EOF
+# ParaView Catalyst environnment variables
+# (ParaView version 5.6)
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/lib/paraview-5.6:$LD_LIBRARY_PATH
+EOF
 </code></pre>
 
 And to apply these modifications on the current shell, enter:
