@@ -358,15 +358,17 @@ commands:
 $ cd ~/ttk/ttk-0.9.7/
 $ mkdir build
 $ cd build/
-$ cmake ../
+$ cmake                                                     \
+      -DCMAKE_PREFIX_PATH=/usr/local/lib/cmake/paraview-5.6 \
+  ..
 </code></pre>
 
-At this stage, under Linux, TTK's build should be automatically
-configured correctly by default, and generate directly relevant build
-commands. Once the generation is completed, start the compilation
-process by entering the following command,
-where <code>&lt;N&gt;</code> is the number of available cores on your
-system (this will take a LONG time):
+At this stage, under Linux, TTK's build should be automatically and
+correctly configured, and generate build commands directly. Once the
+generation is completed, start the compilation process by entering the
+following command, where <code>&lt;N&gt;</code> is the number of
+available cores on your system (this will take a LONG time, and a lot
+of memory):
 
 <pre><code>$ make -j&lt;N&gt;</code></pre>
 
