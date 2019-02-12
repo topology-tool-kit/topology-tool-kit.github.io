@@ -148,9 +148,9 @@ id="bs-example-navbar-collapse-1">
 src="https://www.youtube.com/embed/CQrXCw1YJHY" frameborder="0"
 allowfullscreen></iframe>
 
-<em>Disclaimer:</em> this video tutorial use an older version of our
+<em>Disclaimer:</em> this video tutorial uses an older version of our
 software stack. Apart from updated software (as of February 2019), a
-few instructions have been modified. These modification mostly occur
+few instructions have been modified. These modifications mostly occur
 when exporting a ParaView pipeline as a Catalyst Python script
 (c.f. <a href="#catalyst_usecase">section 6</a>).
 
@@ -161,7 +161,7 @@ These notes describe the installation procedure of TTK for an in-situ usage with
 In particular, this specific version of the notes describe the procedure for a
 <a target="new"
 href="http://releases.ubuntu.com/18.04/ubuntu-18.04.1-desktop-amd64.iso">Ubuntu
-Linux 18.04</a> operating system.
+Linux 18.04.1</a> operating system.
 
 <br>
 <br>
@@ -228,7 +228,7 @@ Several dependencies will need to be installed in order to compile the
 packages from source. Please enter the following command (omit
 the <code>$</code> character) in a terminal to install them (please
 see the documentation of your package manager if your operating system
-is not Ubuntu Linux 18.04):<br>
+is not Ubuntu Linux 18.04.1):<br>
 <br>
 <pre><code>$ sudo apt install build-essential cmake-curses-gui llvm \
       mpich libboost-all-dev</code></pre>
@@ -376,12 +376,11 @@ At this stage, under Linux, TTK's build should be automatically and
 correctly configured, and generate build commands directly. Once the
 generation is completed, start the compilation process by entering the
 following command, where <code>&lt;N&gt;</code> is the number of
-available cores on your system (this will take a LONG time, and a lot
-of memory):
+available cores on your system (this will take a LONG time):
 
 <pre><code>$ make -j&lt;N&gt;</code></pre>
 
-If the build process exhaust your system memory, reduce the number of
+If the build process exhausts your system memory, reduce the number of
 cores used with a lower <code>&lt;N&gt;</code>.
 
 <br><br>
