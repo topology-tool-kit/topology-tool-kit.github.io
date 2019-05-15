@@ -402,6 +402,12 @@ build documentation</a> for further details if needed.<br><br>
 Next, click on the "Generate" button and close the configuration window when 
 the generation is completed.<br><br>
 
+<h4>Note to Linux Mint users</h4>
+It has been reported that the following CMake variables need to be updated as follows (as of version 19):
+<code>&nbsp;&middot;&nbsp;CMAKE_C_FLAGS=-luuid</code><br>
+<code>&nbsp;&middot;&nbsp;CMAKE_CXX_FLAGS=-luuid</code>
+<br><br>
+
 <h4>b) Build</h4>
 Now you can start the compilation process by entering the following command, 
 where <code>N</code> is the number of available cores on your system (this will 
@@ -580,7 +586,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on January 25, 2019.</p>
+                    Updated on May 15, 2019.</p>
                 </div>
             </div>
         </div>
