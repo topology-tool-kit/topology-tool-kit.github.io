@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Topology ToolKit">
+    <meta name="author" content="The Topology ToolKit">
+    <meta name="keywords" content="TTK, Topology ToolKit, Topological Data 
+Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour 
+tree, persistence diagram, persistence curve, continuous scatterplot, fiber 
+surface, contour forests, jacobi set, mandatory critical points, topological 
+simplification, VTK, ParaView, Python, tutorial, IEEE VIS 2019" />
+
+    <title>TTK - the Topology ToolKit - Topological Data Analysis and 
+Visualization</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'
+);
+
+  ga('create', 'UA-88087813-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl =
+  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-88087813-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" 
+data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                TTK Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling 
+-->
+            <div class="collapse navbar-collapse" 
+id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="installation.html">Installation</a>
+                    </li>
+                    <li>
+                        <a href="tutorials.html">Tutorials</a>
+                    </li>
+                    <li>
+                        <a href="documentation.html">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="contribute.html">Contribute</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" 
+      style="background-image: url('img/builtinExample.png'">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Topology ToolKit</h1>
+                        <hr class="small">
+                        <span class="subheading">IEEE VIS Tutorials</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+            <p>
+            <h1>Topological Data Analysis Made Easy with the Topology 
+ToolKit, A Sequel</h1>
+                        <h3>
+                        <a target="new" 
+                        href="http://ieeevis.org/year/2019/info/tutorials">
+                        IEEE VIS 2019 Tutorial</a><br>
+                        Date/Time TBA<br>
+                        Location TBA, IEEE VIS, Vancouver, BC, Canada.
+                        </h3></p>
+                        
+                        <br>
+
+Please see our <a href="ieeeVisTutorial.html">IEEE VIS Tutorials</a>
+page for all tutorials in this series.
+
+                        <br>
+                        <br>
+                        <p><font color="#ff3d3d"><h3>Note to 
+attendees</h3></font> 
+
+&nbsp;&middot;&nbsp;
+We kindly ask potential attendees to optionally pre-register at <a href="https://forms.gle/gn7yn3JwzdBN4Mgr7">https://forms.gle/gn7yn3JwzdBN4Mgr7</a> in order for us to reach out to them ahead of the tutorial with information updates (for instance, last minute updates, instructions for the download of the tutorial material package, etc.)<br>
+
+&nbsp;&middot;&nbsp;
+If you plan to attend this tutorial, we invite you to bring your own 
+laptop, on which you would have downloaded the tutorial 
+data package available below.<br>
+
+&nbsp;&middot;&nbsp;
+Moreover, we also invite you to install <b><font 
+color="#ff3d3d">before the tutorial</font></b> the 
+<a href="https://github.com/topology-tool-kit/ttk/archive/master.zip" 
+target="new">
+git master version of TTK</a> (see the instructions on the <a 
+href="installation.html">installation page</a>). This installation procedure 
+takes approximately 1 hour.<br>
+Alternatively, you can choose the easier option of downloading
+a pre-installed Linux virtual machine 
+containing all the necessary software and data packages (link
+forthcoming).
+                        </p>
+                        
+                        <p><h3><a name="resources">Resources and 
+Materials</a></h3>
+
+
+
+<!--
+&nbsp;&middot;&nbsp;
+<a href="stuff/ttk_tutorial_data.zip" target="new"
+onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_data.zip']);"
+>
+Tutorial data package</a><br>
+
+&nbsp;&middot;&nbsp;
+<a
+href="http://sci.utah.edu/~jtierny/ttk.ova"
+target="new"
+onClick="javascript:_gaq.push(['_trackPageview','stuff/ttk_vm.pdf']);"
+>
+Pre-installed virtual machine</a> 
+(Ubuntu 18.04, requires
+<a href="http://www.virtualbox.org"
+target="new"
+>VirtualBox</a>, password: <code>ttk</code>)
+<br>
+-->
+
+&nbsp;&middot;&nbsp;
+<a href="stuff/ttk_tutorial_vis19.pdf" target="new"
+onClick="javascript:_gaq.push(['_trackPageview','stuff/ttk_tutorial_vis18.pdf']);"
+>
+Detailed tutorial submission document</a><br>
+
+</p>
+            
+<p><h3><a name="abstract">Abstract</a></h3>
+This tutorial presents topological methods for the analysis and
+visualization of scientific data from a user's perspective, with the
+Topology ToolKit (TTK), a recently released open-source library for
+topological data analysis. Topological methods have gained considerably
+in popularity and maturity over the last twenty years and success
+stories of established methods have been documented in a wide range of
+applications (combustion, chemistry, astrophysics, material sciences,
+etc.) with both acquired and simulated data, in both post-hoc and
+in-situ contexts. Last year, we held the first iteration of this
+tutorial, that aimed to cover this area at a software level and from a
+user's point-of-view. This tutorial aims to continue to fill a gap by
+providing a beginner's introduction to topological methods for
+practitioners, researchers, students, and lecturers. In particular,
+instead of focusing on theoretical aspects and algorithmic details, this
+tutorial focuses on how topological methods can be useful in practice
+for concrete data analysis tasks such as segmentation, feature
+extraction or tracking. The tutorial describes in detail how to achieve
+these tasks with TTK. First, after an introduction to topological
+methods and their application in data analysis, a brief overview of
+TTK's main entry point for end users, namely ParaView, will be
+presented. Second, an overview of TTK's main features will be given. A
+running example will be described in detail, showcasing how to access
+TTK's features via ParaView, Python, VTK/C++, and C++. Third, hands-on
+sessions will concretely show how to use TTK in ParaView for multiple,
+representative data analysis tasks. Fourth, the usage of TTK will be
+presented for developers, in particular by describing several examples
+of visualization and data analysis projects that were built on top of
+TTK. Finally, some feedback regarding the usage of TTK as a teaching
+platform for topological analysis will be given. Presenters of this
+tutorial include experts in topological methods, core authors of TTK as
+well as active users, coming from academia, labs, or industry. A large
+part of the tutorial will be dedicated to hands-on exercises and a rich
+material package (including TTK pre-installs in virtual machines, code,
+data, demos, video tutorials, etc. see last year's tutorial website
+[11]) will be provided to the participants. This tutorial mostly targets
+students, practitioners and researchers who are not necessarily experts
+in topological methods but who are interested in using them in their
+daily tasks. We also target researchers already familiar to topological
+methods and who are interested in using or contributing to TTK. We
+kindly ask potential attendees to optionally pre-register at the
+following address, in order for us to reach out to them ahead of the
+tutorial with information updates (for instance, last minute updates,
+instructions for the download of the tutorial material package, etc.):
+<a href="https://forms.gle/gn7yn3JwzdBN4Mgr7">https://forms.gle/gn7yn3JwzdBN4Mgr7</a>
+</p>
+
+<p><h3><a name="organizers">Organizers (Complete List TBA)</a></h3>
+<ul>
+<li><a href="http://scivis.itn.liu.se/members/martin-falk">Martin Falk</a>, Link&ouml;ping University</li>
+<li><a href="http://gueunetcharles.com/">Charles Gueunet</a>, Kitware, Sorbonne Universite</li>
+<li><a href="http://www.cs.arizona.edu/~josh">Joshua A. Levine</a>, University of Arizona</li>
+<li><a href="https://www.jluk.de/">Jonas Lukasczyk</a>, TU Kaiserslautern</li>
+<li><a href="https://www-pequan.lip6.fr/~tierny/">Julien Tierny</a>, CNRS, Sorbonne Universite</li>
+</ul>
+</p>
+
+
+<p><h3><a name="schedule">Tentative Schedule</a></h3>
+<ol>
+<li>X:XXxm Preliminaries (60 minutes)
+<ul>
+<li>X:XXxm General introduction: Julien Tierny, 5 minutes</li>
+<li>X:XXxm Introduction to topological methods for data analysis: Joshua Levine, 30 minutes</li>
+<li>X:XXxm Quick introduction to ParaView's user interface: Charles Gueunet, 
+25 
+minutes</li>
+</ul>
+</li>
+
+<li>X:XXxm Hands-on Exercises (70 minutes)
+<ul>
+<li>X:XXxm General usage of TTK: Julien Tierny, 10 minutes</li>
+<li>X:XXxm Segmenting medical data with merge trees: Charles Gueunet, 20 
+minutes</li>
+<li>X:XXxm Extracting filament structures with the Morse-Smale complex: 
+Julien Tierny, 20 minutes</li>
+<li>X:XXxm Topology-aware data compression: Charles Gueunet, 20 minutes</li>
+</ul>
+</li>
+
+
+<li>X:XXxm Advanced Usage (80 minutes)
+<ul>
+<li>X:XXxm TTK's architecture and core data structures: Julien Tierny, 10 
+minutes</li>
+<li>X:XXxm Post Hoc Analysis with TTK: Jonas Lukasczyk, 20 minutes</li>
+<li>X:XXxm TTK Integration into InViwo: Martin Falk, 20 minutes</li>
+<li>X:XXxm TTK as a teaching platform: Joshua Levine, 15 minutes</li>
+<li>X:XXxm Concluding remarks: Julien Tierny, 5 minutes</li>
+</ul>
+</li>
+
+</ol>
+</p>
+
+
+<p><h3><a name="talks">Talks</a></h3>
+
+<h4>Preliminaries</h4>
+
+TBA
+
+<!--
+
+<h5>&nbsp;&middot;&nbsp;General introduction (Julien Tierny)  - <a 
+onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_intro_tierny_vis18']);"
+href="https://docs.google.com/presentation/d/1fVoMkSo0GiyrqV8mrAaPOC1l_EFoqM607_XnlnH3dng/edit?usp=sharing"
+target="new">Slides</a></h5>
+
+<h5>&nbsp;&middot;&nbsp;Introduction to topological methods for data analysis 
+(Attila Gyulassy) 
+ - <a target="new"
+ onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_course_gyulassy_vis18']);"
+ href="stuff/ttk_tutorial_course_gyulassy_vis18_v2.pdf">Slides</a></h5>
+
+This talk will present the core tools in topological data analysis (the Persistence diagram, the Reeb graph and its variants, annd the Morse-Smale complex ). In particular, it will detail how these tools can be used for data segmentation and feature extraction.<br/>
+
+
+<h5>&nbsp;&middot;&nbsp;Quick introduction to ParaView's user interface (Charles 
+Gueunet)  - <a 
+onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_paraview_gueunet_vis18']);"
+href="https://docs.google.com/presentation/d/14Wdb4fV6T_UPJUhh-Mijv43F7eLemdrrk0qnHKdZjWQ/edit?usp=sharing" target="new">Slides</a></h5>
+
+This talk will provide a brief description of ParaView's main interface, in order to support its usage for beginners in the subsequent hands-on session. This will cover the usage of filters, pipeline design and view manipulation, state files backups and Python exports.<br/>
+-->
+
+<br/>
+<h4>Hands-on Exercises</h4>
+
+TBA
+
+<!--
+
+<h5>&nbsp;&middot;&nbsp;General usage of TTK (Julien Tierny) - <a 
+onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_usage_tierny_vis18']);"
+href="https://docs.google.com/presentation/d/1oBbYmjsweZ6hHDlwV2tvguIEWsRrgnl_pLSlerzaYIc/edit?usp=sharing"
+target="new">Slides</a></h5>
+This talk will briefly describe TTK's usage philosophy. It will briefly present 
+how TTK can be used from ParaView, Python, VTK/C++ or C++.<br/>
+
+
+<h5>&nbsp;&middot;&nbsp;Segmenting medical data with merge trees (Charles 
+Gueunet)  - <a 
+onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_merge_gueunet_vis18']);"
+href="https://docs.google.com/presentation/d/10PqkXboHBudsRArg17JBz4hgo8zYbnmQ6LgHpbo9pLY/edit?usp=sharing" 
+target="new">Slides</a></h5>
+This hands-on TTK/ParaView exercise will be a step-by-step tutorial showing how 
+to extract individual bones in a medical CT scan interactively with merge 
+trees.
+<br>
+
+<h5>&nbsp;&middot;&nbsp;Extracting filament structures with the Morse-Smale 
+complex
+(Guillaume Favelier)  - <a 
+onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_filament_favelier_vis18']);"
+target="new"
+href="https://drive.google.com/open?id=1qAny8Z5feJ76LBEbzhHMkPUVpTDgSzaM2B6E99aV5NY">Slides</a></h5>
+
+This hands-on TTK/ParaView exercise will show step-by-step how to extract filament structures with the Morse-Smale complex on chemistry data.<br/>
+
+
+<h5>&nbsp;&middot;&nbsp;Topology-aware data compression (Maxime Soler)  - 
+<a onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_compression_soler_vis18']);"
+href="stuff/ttk_tutorial_compression_soler_vis18.pdf"
+target="new">Slides</a></h5>
+
+This hands-on TTK/ParaView exercise will show step-by-step how to compress data while guaranteeing feature preservation.<br/>
+
+-->
+
+<br/>
+<h4>Advanced Usage</h4>
+
+TBA
+
+<!--
+
+<h5>&nbsp;&middot;&nbsp;TTK's architecture and core data structures (Will Usher) 
+ - <a 
+onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_core_usher_vis18']);"
+href="stuff/ttk_tutorial_core_usher_vis18.pdf">Slides</a></h5>
+This talk will present TTK's architecture.<br/>
+
+
+<h5>&nbsp;&middot;&nbsp;Topology driven volume rendering with TTK (Qi Wu) - <a 
+onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_topovol_wu_vis18']);"
+href="stuff/ttk_tutorial_topovol_wu_vis18.pdf">Slides</a></h5>
+This talk will present topo-vol, an implementation of topology-driven volume 
+rendering built on top of TTK.<br/>
+
+
+<h5>&nbsp;&middot;&nbsp;Advanced data analysis with TTK (Jonas Lukasczyk) - <a 
+onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_advanced_lukasczyk_vis18']);"
+href="stuff/ttk_tutorial_advanced_lukasczyk_vis18.pdf">Slides</a></h5>
+This talk will describe the processing of the SciVis 2018 contest data with 
+TTK.<br/>
+
+
+<h5>&nbsp;&middot;&nbsp;Bivariate data analysis with TTK (Daisuke Sakurai) - <a 
+onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_bivariate_sakurai_vis18']);"
+href="stuff/ttk_tutorial_bivariate_sakurai_vis18.pdf">Slides</a></h5>
+This talk will describe a user interface for bivariate data exploration built on 
+top of TTK.<br/>
+
+
+<h5>&nbsp;&middot;&nbsp;TTK as a teaching platform (Joshua Levine) - <a 
+onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_teaching_levine_vis18']);"
+href="stuff/ttk_tutorial_teaching_levine_vis18.pdf">Slides</a></h5>
+This talk will provide feedback about our experience in using TTK in our 
+topological data analysis classes. <br/>
+
+
+<h5>&nbsp;&middot;&nbsp;Concluding remarks (Julien Tierny) - <a 
+onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_conclusion_tierny_vis18']);"
+href="https://docs.google.com/presentation/d/1H2Ag610vaKVf9wvsYwyjp9khB-BqtWlE5pbGrg66rIU/edit?usp=sharing"
+target="new">Slides</a></h5>
+
+-->
+
+
+</p>
+
+<!--
+
+<p><h3>Pictures of the tutorial</h3></p>
+ <a href="https://photos.app.goo.gl/m3NPBnH4jBMCL8mAA" target="new">
+  <img align='center'width="95%" 
+   src="stuff/ieeevis2018_tutorial.jpg" >
+</a>
+
+-->
+
+
+
+<p><h3><a name="extra">Additional Material</a></h3>
+&nbsp;&middot;&nbsp;
+<a
+href="https://vimeo.com/238314372"
+target="new">
+TTK Technical presentation at IEEE VIS 2017 (for advanced users)</a><br>
+
+&nbsp;&middot;&nbsp;
+<a
+href="stuff/ttk.pdf"
+target="new">
+TTK Technical report (for advanced users)</a><br>
+
+&nbsp;&middot;&nbsp;
+<a 
+href="https://groups.google.com/forum/#!forum/ttk-users" target="new">
+TTK user forum</a><br>
+
+&nbsp;&middot;&nbsp;Using TTK in-situ with Catalyst:
+<a href="catalyst.html" target ="new"> 
+                Online tutorial</a><br>
+                
+&nbsp;&middot;&nbsp;Using TTK with Python:
+                <a 
+href="https://github.com/topology-tool-kit/ttk/tree/master/examples/python"
+target="new">
+                Online example</a>
+                -
+                <a 
+href="persistentHomologyDummies.html"
+target="new">
+                Online tutorial</a><br>
+                
+&nbsp;&middot;&nbsp;Using TTK with VTK/C++:
+<a 
+href="https://github.com/topology-tool-kit/ttk/tree/master/examples/vtk-c++"
+target="new">
+                Online example</a><br>
+                
+&nbsp;&middot;&nbsp;Using TTK with pure C++:
+<a 
+href="https://github.com/topology-tool-kit/ttk/tree/master/examples/c++"
+target="new">
+                Online example</a><br>
+                
+                &nbsp;&middot;&nbsp;Extending TTK with a new module:
+<a href="bettiNumbers.html" target="new">
+                Online tutorial (computation of Betti numbers)</a><br>
+                
+                <a href="doc/html/index.html" target="new">
+                  &nbsp;&middot;&nbsp;TTK developer documentation<br>
+                </a>
+</p>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">
+                    Contact: <a href="mailto:topology.tool.kit@gmail.com">
+                    topology.tool.kit@gmail.com</a><br>
+                    Updated on June 5, 2019.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
