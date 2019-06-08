@@ -161,7 +161,7 @@ still
 have the possibility to install TTK without ParaView support (although we 
 highly recommend to activate it).<br>
 In that case, simply 
-download TTK as described in section 1, install the dependencies as detailed 
+download TTK as describded in section 1, install the dependencies as detailed 
 in 
 section 2 and finally, directly jump to section 6 (<i>"Configuring, building 
 and installing TTK"</i>). <br>
@@ -174,7 +174,7 @@ href="https://github.com/topology-tool-kit/ttk/tree/master/examples/vtk-c%2B%2B"
 If you are an advanced user and you do not even wish to install VTK, you still 
 have the possibility to install TTK without VTK support (although we 
 highly recommend to activate it).<br>
-In that case, simply download TTK as described in section 1, install the 
+In that case, simply download TTK as describded in section 1, install the 
 <b>optional</b> dependencies as detailed in 
 section 2 and finally, directly jump to section 6 (<i>"Configuring, building 
 and 
@@ -188,18 +188,18 @@ href="https://github.com/topology-tool-kit/ttk/tree/master/examples/c%2B%2B"
 
 <b>Most users will want to activate TTK's ParaView support.</b><br><br>
 
-This page describes installing TTK 0.9.7 on OSX, using Mojave 10.14.5 and 
+This page describes installing TTK 0.9.7 on OSX, using High Sierra 10.13.6 and 
 ParaView 5.6.0.  The key differences from the linux installation involve how 
 ParaView is compiled, installing certain dependencies, and setting up some of 
 the paths for OSX.  The following assumes that the target is to compile with 
 OSX clang and uses homebrew for dependencies, including python3<br><br>
 
+Note that these instructions are maintained for legacy purposes -- some
+of the library versions may have changed as MacOS moved to Mojave.  
 Other versions of earlier software packages 
 may require slight variations in the installation procedure.
 For earlier versions of both software packages, you may want to check out 
 previous versions of our installation notes for OSX: <br>
-&nbsp;&middot;&nbsp;<a href="installation-osx-0.9.7-highsierra.html">TTK 0.9.7
-with ParaView 5.6.0 on OSX High Sierra</a>.<br>
 &nbsp;&middot;&nbsp;<a href="installation-osx-0.9.6.html">TTK 0.9.6
 with ParaView 5.5.2</a>.<br>
 &nbsp;&middot;&nbsp;<a href="installation-osx-0.9.5.html">TTK 0.9.5 
@@ -236,21 +236,24 @@ href="downloads.html">download page</a>.
 
 Using <a href="https://brew.sh/">homebrew</a>, install:
 <ul>
-<li> cmake (tested with 3.14.5) </li>
-<li> qt (tested with 5.12.3) </li>
-<li> python (tested with 3.7.3)<br/>
+<li> cmake (tested with 3.13.2) </li>
+<li> qt5 (tested with 5.12.0) </li>
+<li> python (tested with 3.7.1)<br/>
 Note: For this installation, we have switched to python3 instead of python2.  To map the default executable for python, please add <code>export PATH="/usr/local/opt/python/libexec/bin/:$PATH"</code> to either your <code>~/.bashrc</code>, <code>~/.bash_profile</code>, or other shell startup script.</li>
-<li> vtk (tested with 8.2.0)<br/>
-This required installing certain vtk dependencies, which do install
-python2 (so take care), including:
+<li> vtk (tested with 8.1.2)<br/>
+Note: we excluded building python2 with vtk so as to not have to install both python2 and python3.  This required installing certain vtk dependencies separately that also excluded python2, including:
 <ul>
-<li>pyqt (tested with version 5.10.1_1</li>
-<li>sip (tested with version 4.19.8_11)</li>
+<li>sip (tested with version 4.19.8)</li>
+<li>pyqt (tested with version 5.10.1</li>
 </ul>
 Installing vtk will also install hdf5 as a dependency (that ParaView can make use of).
 </ul>
 Altogether, this required the following sequence of commands:<br><br>
-<code>$ brew install cmake qt python vtk</code><br><br>
+<code>$ brew install cmake qt5 python</code><br>
+<code>$ export PATH="/usr/local/opt/python/libexec/bin/:$PATH"</code><br>
+<code>$ brew install sip --without-python@2</code><br>
+<code>$ brew install pyqt --without-python@2</code><br>
+<code>$ brew install vtk --with-python --with-qt --without-python@2</code><br><br>
 
 <h4>b) Optional Dependencies</h4>
 
@@ -258,7 +261,7 @@ Altogether, this required the following sequence of commands:<br><br>
 
 Using homebrew, one can install optional packages for ParaView features with homebrew:
 <ul>
-<li> ffmpeg (tested with 4.1.3_1) </li>
+<li> ffmpeg (tested with 4.1) </li>
 </ul>
 Using the command: <code>$ brew install ffmpeg</code><br><br>
 
@@ -266,9 +269,9 @@ Using the command: <code>$ brew install ffmpeg</code><br><br>
 
 <h5>(ii) OpenMP:</h5>
 
-Using homebrew, one can also install OpenMP support for TTK with homebrew:
+Using homebrew, one can also install OpenMP support for ParaView and TTK with homebrew:
 <ul>
-<li> libomp (tested with 8.0.0)</li>
+<li> libomp (tested with 7.0.0)</li>
 </ul>
 Using the command: <code>$ brew install libomp</code><br><br>
 
@@ -280,34 +283,22 @@ Using the command: <code>$ brew install libomp</code><br><br>
 And, in addition, one can install OSPRay and it's dependencies using:
 
 <ul>
-<li> open-mpi (tested with 4.0.1_1):<br>
-<code>$ brew install open-mpi</code> </li>
+<li> mpich (tested with 3.3):<br>
+<code>$ brew install mpich</code> </li>
 
-
-<li>Download and expand ospray-1.7.3.x86_64.macosx.tar.gz from <a href="http://www.ospray.org/getting_ospray.html">http://www.ospray.org/getting_ospray.html</a> (you will find it under <a href="https://github.com/ospray/OSPRay/releases">Old Releases</a>.  Newer versions of ospray are not yet compatible with TTK 0.9.7's CMake structure), to install:
+<li>Download and expand ospray-1.7.3.x86_64.macosx.tar.gz from <a href="http://www.ospray.org/getting_ospray.html">http://www.ospray.org/getting_ospray.html</a>, to install:
 <ul>
 <li>Copy lib/cmake and lib/libospray* to /opt/local/lib</li>
 <li>Copy include/* to /opt/local/include</li>
-<li>Copy scripts to /opt/local/share/OSPRay-1.7.3</li>
+<li>Copy scripts to /opt/local/share/OSPRay-1.7.2</li>
 <li>Copy bin and doc to /Applications/OSPRay</li>
 </ul>
 You may need to create some of the destination directories before copying.  The above steps manually do the work that the *.dmg used to (but, this file is currently missing). 
 </li>
 
-<!--
-<li>Download and expand ospray-1.8.5.x86_64 from <a href="http://www.ospray.org/getting_ospray.html">http://www.ospray.org/getting_ospray.html</a>, to install:
-<ul>
-<li>Copy the files in Applications to /Applications</li>
-<li>Copy the files in opt to /opt, including local/include, local/lib, and local/share</li>
-</ul>
-This .dmg file does not manually copy anything, but rather just presents you with the files to copy on your own.
-</li>
+<li>Download and unpack embree-3.3.0.x86_64.pkg from <a href="https://embree.github.io/downloads.html">https://embree.github.io/downloads.html</a> (this installs in /opt/local and /Applications/Embree2).</li>
 
--->
-
-<li>Download and unpack embree-3.5.2.x86_64.pkg from <a href="https://embree.github.io/downloads.html">https://embree.github.io/downloads.html</a> (this installs in /opt/local and /Applications).</li>
-
-<li>Download and unpack tbb2019_20190522oss_mac.tgz from <a 
+<li>Download and unpack tbb2019_20181203oss_mac.tgz from <a 
 href="https://github.com/01org/tbb/releases">https://github.com/01org/tbb/releases</a>.  After expanding the .tgz, to install:
 <ul>
 <li>Copy lib/libtbb* to /opt/local/lib</li>
@@ -316,7 +307,7 @@ href="https://github.com/01org/tbb/releases">https://github.com/01org/tbb/releas
 </ul>
 You may need to create some of the destination directories before copying.</li>
 </ul>
-After doing all of the above, you'll likely want to make sure that your command line knows about ospray/embree/tbb, the easy fix for this is to add <code>export DYLD_LIBRARY_PATH="/opt/local/lib"</code> to your <code>~/.bashrc</code>.<br><br>
+After doing all of the above, you'll likely want to make sure that your commandline knows about ospray/embree/tbb, the easy fix for this is to add <code>export DYLD_LIBRARY_PATH="/opt/local/lib"</code> to your <code>~/.bashrc</code>.<br><br>
 
 <h5>(iv) TTK optional dependencies:</h5>
 
@@ -326,7 +317,7 @@ Finally, in order to enjoy the complete set of TTK features, we also recommend i
 <code>$ brew install graphviz</code></li>
 <li><a target="new" href="https://scikit-learn.org/stable/index.html">scikit-learn</a> for Python3 (for data reduction features, version 0.19.0 or later).  You can install this for python3 with pip:<br>
 <code>$ pip install -U scikit-learn</code></li>
-<li><a href="https://www.sqlite.org/" target="new">sqlite</a> (for cinema query features), tested with version 3.28.0 on homebrew:<br>
+<li><a href="https://www.sqlite.org/" target="new">sqlite</a> (for cinema query features), tested with version 3.26.0 on homebrew:<br>
 <code>$ brew install sqlite</code></li>
 <li><a href="https://github.com/LLNL/zfp" target="new">ZFP</a> (for advanced compression support, version 0.5.4 or later), installed from source.</li>
 <li><a href="https://zlib.net/" target="new">zlib</a> (for further compression support) tested with version 1.2.11 on homebrew:<br>
@@ -386,8 +377,7 @@ commands:<br><br>
 although you can install this separately from <a 
 href="https://cmake.org/download/">https://cmake.org/download/</a>)<br><br>
 
-Then, press 'c' to configure and we'll edit some CMake flags (you may
-have to press 't' to find them):<br>
+Then, press 'c' to configure and we'll edit some CMake flags:<br>
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_PYTHON=ON</code><br>
 <code>&nbsp;&middot;&nbsp;VTK_PYTHON_VERSION=3</code><br>
@@ -402,20 +392,13 @@ You can also enable optional pieces, including:
 <br>
 
 
-<h5>(ii) OpenMP as the SMP implementation:</h5>
-
-At this time, we do not recommend building ParaView 5.6.0 with OpenMP,
-even though TTK can take advantage of OpenMP for some of its features.
-For parallelism in ParaView, please use TBB.
-
-<!-- 
+<h5>(ii) OpenMP as the SMP implementation (support is experimental, but
+both ParaView and TTK can use it):</h5>
 
 <code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=OpenMP</code> (changed from the default 
 "Sequential")<br>
-Note, after hitting 'c' to configure, cmake will require you to set additional flags, e.g. <code>OpenMP_CXX_FLAGS</code>, <code>OpenMP_CXX_LIBRARY</code>, <code>OpenMP_C_FLAGS</code>, <code>OpenMP_C_LIBRARY</code>.  If you are interested in using OpenMP, we do not recommend using ccmake, but instead use the cmake command below.<br>
+Note, after hitting 'c' to configure, cmake will now set a number of variables for you, including <code>OpenMP_CXX_FLAGS</code>, <code>OpenMP_CXX_LIBRARY</code>, <code>OpenMP_C_FLAGS</code>, <code>OpenMP_C_LIBRARY</code><br>
 <br>
-
--->
 
 
 <h5>(iii) OSPRay (which requires TBB):</h5>
@@ -454,26 +437,18 @@ If you prefer to just run <code>cmake</code> as opposed to <code>ccmake</code> o
 ..
 </code><br>
 
-
-<!-- 
 <h5>(iii) OpenMP + ffmpeg</h5>
 <code>$ cmake \<br>
 -DCMAKE_BUILD_TYPE=Release \<br>
 -DPARAVIEW_ENABLE_PYTHON=ON \<br>
+-DVTK_PYTHON_VERSION=3 \<br>
 -DPARAVIEW_ENABLE_FFMPEG=ON \<br>
 -DVTK_SMP_IMPLEMENTATION_TYPE=OpenMP \<br>
--DOpenMP_CXX_FLAGS="-Xclang -fopenmp -I/usr/local/opt/libomp/include" \<br>
--DOpenMP_CXX_LIB_NAMES=omp \<br>
--DOpenMP_C_FLAGS="-Xclang -fopenmp -I/usr/local/opt/libomp/include" \<br>
--DOpenMP_C_LIB_NAMES=omp \<br>
--DOpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib \<br>
 ..
 </code><br>
 
--->
 
-
-<h5>(iii) TBB + ffmpeg + OSPRay</h5>
+<h5>(iv) OSPRay + TBB + ffmpeg</h5>
 <code>$ cmake \<br>
 -DCMAKE_BUILD_TYPE=Release \<br>
 -DPARAVIEW_ENABLE_PYTHON=ON \<br>
@@ -485,25 +460,17 @@ If you prefer to just run <code>cmake</code> as opposed to <code>ccmake</code> o
 ..
 </code><br>
 
-<!--
-
-<h5>(v) OpenMP + ffmpeg + OSPRay</h5>
+<h5>(v) OSPRay + OpenMP + ffmpeg</h5>
 <code>$ cmake \<br>
 -DCMAKE_BUILD_TYPE=Release \<br>
 -DPARAVIEW_ENABLE_PYTHON=ON \<br>
+-DVTK_PYTHON_VERSION=3 \<br>
 -DPARAVIEW_ENABLE_FFMPEG=ON \<br>
 -DVTK_SMP_IMPLEMENTATION_TYPE=OpenMP \<br>
--DOpenMP_CXX_FLAGS="-Xclang -fopenmp -I/usr/local/opt/libomp/include" \<br>
--DOpenMP_CXX_LIB_NAMES=omp \<br>
--DOpenMP_C_FLAGS="-Xclang -fopenmp -I/usr/local/opt/libomp/include" \<br>
--DOpenMP_C_LIB_NAMES=omp \<br>
--DOpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib \<br>
 -DPARAVIEW_USE_OSPRAY=ON \<br>
 -DOSPRAY_INSTALL_DIR=/opt/local/lib \<br>
 ..
 </code><br>
-
--->
 
 <br><br>
 
@@ -546,7 +513,7 @@ cannot yet find ParaView.  First, we'll fix this:<br><br>
 
 Press 'c' again to configure (you can ignore the warnings).  Also note that 
 <code>VTK_DIR</code> should automatically be set to the homebrew installation 
-of VTK (<code>/usr/local/lib/cmake/vtk-8.2</code>).  Next, change:<br><br>
+of VTK (<code>/usr/local/lib/cmake/vtk-8.1</code>).  Next, change:<br><br>
 
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
 <code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.7/ttk_install</code
@@ -555,11 +522,11 @@ of VTK (<code>/usr/local/lib/cmake/vtk-8.2</code>).  Next, change:<br><br>
 other TTK components are installed)<br>
 <code>&nbsp;&middot;&nbsp;TTK_INSTALL_PLUGIN_DIR=<br>~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/MacOS/plugins</code><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this is where ParaView plugins are 
+installed)<br>
 <code>&nbsp;&middot;&nbsp;PYTHON_NUMPY_INCLUDE_DIR=<br>/usr/local/lib/python3.7/site-packages/numpy/core/include</code><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this should be where
 homebrew's python3 installs numpy, which our CMake script does not yet
 detect)<br>
--D=
 <br>
 
 If you are an advanced user and you do not wish to activate TTK's ParaView 
