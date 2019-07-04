@@ -515,14 +515,17 @@ take a <b>LONG</b> time):<br><br>
 <code>$ make -jN</code><br><br>
 
 <h4>c) Installation</h4>
-Once the build is finished, we recommend that you do <strong>not</strong> use 
-<code>make install</code>.  We will work directly in the build directory for 
-the source tree instead of trying to package up a MacOS .app file in 
-<code>/Applications</code>.  We'll need to manually make a directory for 
-this:<br><br>
+Once the build is finished, we recommend that you do <strong>not</strong> use <code>make install</code>.  We will work directly in the build directory for the source tree instead of trying to package up a MacOS .app file in <code>/Applications</code>. <br><br>
 
-<code>$ mkdir 
-~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/MacOS/plugins</code><br>
+Finally, to enable ParaView and pvpython to find the TTK plugins we will build, we recommend setting the environment variable <code>PV_PLUGIN_PATH</code> to be the location where you choose to install TTK.  Note that this is different from past installations where we manually installed TTK in the build directory.  Instead, these instructions will assume that you will install TTK's plugins in <code>/usr/local/lib/plugins</code> (the cmake variable <code>TTK_INSTALL_PLUGIN_DIR</code> will be set accordingly in the next step).<br><br>  
+
+To set this environment variable permanently, we recommend editing whatever file you normally configure these in (e.g. <code>~/.bash_profile</code>) and adding the line:<br><br>
+
+<code>export PV_PLUGIN_PATH="/usr/local/lib/plugins"</code><br><br>
+
+Note that, by default, our installation of ParaView will search for plugins in <code>~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/MacOS/plugins</code>.  And, by default, our installation of pvpython will search fo plugins in <code>~/ttk/ParaView-v5.6.0/build/bin/plugins</code>.  Setting <code>PV_PLUGIN_PATH</code> overrides this so that both can search for TTK in a common location.  Users may want to choose to use a different location that <code>/usr/local/lib/plugins</code>, although this path is consistent with where the Linux installation of TTK installs them.<br><br>
+
+For more information, see <a href="https://www.paraview.org/Wiki/ParaView/Plugin_HowTo#Using_Plugins">https://www.paraview.org/Wiki/ParaView/Plugin_HowTo#Using_Plugins</a>.
 
 </p>
 
@@ -553,9 +556,9 @@ of VTK (<code>/usr/local/lib/cmake/vtk-8.2</code>).  Next, change:<br><br>
 ><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this is where standalone apps and 
 other TTK components are installed)<br>
-<code>&nbsp;&middot;&nbsp;TTK_INSTALL_PLUGIN_DIR=<br>~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/MacOS/plugins</code><br>
+<code>&nbsp;&middot;&nbsp;TTK_INSTALL_PLUGIN_DIR=/usr/local/lib/plugins</code><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this is where ParaView plugins are installed)<br>
-<code>&nbsp;&middot;&nbsp;PYTHON_NUMPY_INCLUDE_DIR=<br>/usr/local/lib/python3.7/site-packages/numpy/core/include</code><br>
+<code>&nbsp;&middot;&nbsp;PYTHON_NUMPY_INCLUDE_DIR=/usr/local/lib/python3.7/site-packages/numpy/core/include</code><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this should be where
 homebrew's python3 installs numpy, which our CMake script does not yet
 detect)<br>
@@ -611,7 +614,7 @@ installations:
 -DParaView_DIR=~/ttk/ParaView-v5.6.0/build/ \<br>
 -DCMAKE_BUILD_TYPE=Release \<br>
 -DCMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.7/ttk_install \<br>
--DTTK_INSTALL_PLUGIN_DIR=~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/MacOS/plugins \<br>
+-DTTK_INSTALL_PLUGIN_DIR=/usr/local/lib/plugins \<br>
 -DPYTHON_NUMPY_INCLUDE_DIR=/usr/local/lib/python3.7/site-packages/numpy/core/include \<br>
 ..
 </code><br>
@@ -621,7 +624,7 @@ installations:
 -DParaView_DIR=~/ttk/ParaView-v5.6.0/build/ \<br>
 -DCMAKE_BUILD_TYPE=Release \<br>
 -DCMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.7/ttk_install \<br>
--DTTK_INSTALL_PLUGIN_DIR=~/ttk/ParaView-v5.6.0/build/bin/paraview.app/Contents/MacOS/plugins \<br>
+-DTTK_INSTALL_PLUGIN_DIR=/usr/local/lib/plugins \<br>
 -DPYTHON_NUMPY_INCLUDE_DIR=/usr/local/lib/python3.7/site-packages/numpy/core/include \<br>
 -DTTK_ENABLE_OPENMP=ON \<br>
 -DOpenMP_CXX_FLAGS="-Xclang -fopenmp -I/usr/local/opt/libomp/include" \<br>
@@ -697,7 +700,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on June 6, 2019.</p>
+                    Updated on July 3, 2019.</p>
                 </div>
             </div>
         </div>
