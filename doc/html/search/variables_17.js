@@ -2,6 +2,7 @@ var searchData=
 [
   ['wasserstein_5f',['wasserstein_',['../classttk_1_1BottleneckDistance.html#a0bc3ebe6ce3aa6626c4f8dd684fef6c0',1,'ttk::BottleneckDistance']]],
   ['weight',['weight',['../classEdge.html#a6d0148402e635354c03a151c77fcbdd8',1,'Edge']]],
+  ['weight_5f',['weight_',['../structttk_1_1ftr_1_1DynGraphNode.html#a2949cf59d46a6a811f9a694b37def0e0',1,'ttk::ftr::DynGraphNode']]],
   ['welcomemsg_5f',['welcomeMsg_',['../classttk.html#a8a47c9c51ba69fa020b28099305c3e69',1,'ttk']]],
   ['withdummyvalue_5f',['withDummyValue_',['../classttk_1_1ContinuousScatterPlot.html#a051c6198d735c727c2c393b89266d8d3',1,'ttk::ContinuousScatterPlot']]],
   ['withrangedrivenoctree_5f',['withRangeDrivenOctree_',['../classttk_1_1ReebSpace.html#a89a73f090b214b7d15e6a62ec9bc5546',1,'ttk::ReebSpace']]],

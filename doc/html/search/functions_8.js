@@ -1,8 +1,10 @@
 var searchData=
 [
+  ['harmonicfield',['HarmonicField',['../classttk_1_1HarmonicField.html#a455496d73df1058253a693229a1970b9',1,'ttk::HarmonicField::HarmonicField()=default'],['../classttk_1_1HarmonicField.html#a5a289de5f24dfb0a03bb65511491a6a1',1,'ttk::HarmonicField::HarmonicField(const HarmonicField &amp;)=default'],['../classttk_1_1HarmonicField.html#a1d860a067c2dcfe2f02126279df40509',1,'ttk::HarmonicField::HarmonicField(HarmonicField &amp;&amp;)=default']]],
   ['haschangedconnectivity',['hasChangedConnectivity',['../classttkTriangulation.html#a2003fc85532c6e783430be9c3a44f3e3',1,'ttkTriangulation']]],
   ['hasduplicatedvertices',['hasDuplicatedVertices',['../classttk_1_1FiberSurface.html#a874c23273590d552b76da0a0cb8eda16',1,'ttk::FiberSurface']]],
-  ['haspoint',['hasPoint',['../structArcData.html#a44f240389952af3b5d633236dfb6be00',1,'ArcData']]],
+  ['hasparent',['hasParent',['../structttk_1_1ftr_1_1DynGraphNode.html#abf5a7bb33e7902066ff4630523536e76',1,'ttk::ftr::DynGraphNode']]],
+  ['haspoint',['hasPoint',['../structttk_1_1ftm_1_1ArcData.html#a42aea7c9420f0f474472add16c01939d',1,'ttk::ftm::ArcData']]],
   ['haspreprocessedboundaryedges',['hasPreprocessedBoundaryEdges',['../classttk_1_1AbstractTriangulation.html#afb7a2bb18409e1db2668db2902981a4a',1,'ttk::AbstractTriangulation::hasPreprocessedBoundaryEdges()'],['../classttk_1_1ExplicitTriangulation.html#a5bfd591c66f309d59b64f7e8cf9f350c',1,'ttk::ExplicitTriangulation::hasPreprocessedBoundaryEdges()']]],
   ['haspreprocessedboundarytriangles',['hasPreprocessedBoundaryTriangles',['../classttk_1_1AbstractTriangulation.html#aa9246375eda78878491a4da11f48da34',1,'ttk::AbstractTriangulation::hasPreprocessedBoundaryTriangles()'],['../classttk_1_1ExplicitTriangulation.html#a2b7c8551f66e9c363065e8fb3894f1f0',1,'ttk::ExplicitTriangulation::hasPreprocessedBoundaryTriangles()']]],
   ['haspreprocessedboundaryvertices',['hasPreprocessedBoundaryVertices',['../classttk_1_1AbstractTriangulation.html#af58fb4d60225a2440321e288b1ce1eb9',1,'ttk::AbstractTriangulation::hasPreprocessedBoundaryVertices()'],['../classttk_1_1ExplicitTriangulation.html#a687f45a7ef437a1f3f0cc1212485f6e5',1,'ttk::ExplicitTriangulation::hasPreprocessedBoundaryVertices()']]],
@@ -22,12 +24,14 @@ var searchData=
   ['haspreprocessedvertexneighbors',['hasPreprocessedVertexNeighbors',['../classttk_1_1AbstractTriangulation.html#a6cb14fc15f998e4d5d6fc5a911fda23a',1,'ttk::AbstractTriangulation::hasPreprocessedVertexNeighbors()'],['../classttk_1_1ExplicitTriangulation.html#aec9e7eb8ecd1739e62b17827bb559e1f',1,'ttk::ExplicitTriangulation::hasPreprocessedVertexNeighbors()']]],
   ['haspreprocessedvertexstars',['hasPreprocessedVertexStars',['../classttk_1_1AbstractTriangulation.html#a39d39762518494456d5fa5f97353387c',1,'ttk::AbstractTriangulation::hasPreprocessedVertexStars()'],['../classttk_1_1ExplicitTriangulation.html#a41c4bcd180233035554bd0231fbb81f7',1,'ttk::ExplicitTriangulation::hasPreprocessedVertexStars()']]],
   ['haspreprocessedvertextriangles',['hasPreprocessedVertexTriangles',['../classttk_1_1AbstractTriangulation.html#aec14a66ccd3de1b7254e8c01ee9e19a4',1,'ttk::AbstractTriangulation::hasPreprocessedVertexTriangles()'],['../classttk_1_1ExplicitTriangulation.html#ab0f214167a63241c06b16534c56c6ee3',1,'ttk::ExplicitTriangulation::hasPreprocessedVertexTriangles()']]],
-  ['hide',['hide',['../classttk_1_1Node.html#ab35591cba21652798a0df643b07bef27',1,'ttk::Node::hide()'],['../classttk_1_1SuperArc.html#a64a41c468661288809816b368f8b7cc4',1,'ttk::SuperArc::hide()']]],
-  ['hideandcleararcsabove',['hideAndClearArcsAbove',['../classttk_1_1MergeTree.html#ac8d538072530def722ac6f1619624d3c',1,'ttk::MergeTree']]],
-  ['hideandcleararcsbelow',['hideAndClearArcsBelow',['../classttk_1_1MergeTree.html#a00aaf3c83d673f12f58df8b31a8615b7',1,'ttk::MergeTree']]],
-  ['hideandclearleadingto',['hideAndClearLeadingTo',['../classttk_1_1MergeTree.html#acec2e9a7b019d87239a4de13ce964fde',1,'ttk::MergeTree']]],
-  ['hidearc',['hideArc',['../classttk_1_1MergeTree.html#a01eb8bbc2b2b9f1419f23db74b01d72c',1,'ttk::MergeTree']]],
-  ['hidenode',['hideNode',['../classttk_1_1MergeTree.html#ab15f19cf3ba30c00e7c4a20281167505',1,'ttk::MergeTree']]],
+  ['hasvisited',['hasVisited',['../classttk_1_1ftr_1_1Propagations.html#ad7f4a7bfff1f9db6a86f6cf31ebefd25',1,'ttk::ftr::Propagations']]],
+  ['hasvisitedopposite',['hasVisitedOpposite',['../classttk_1_1ftr_1_1Propagations.html#a6aa13f2aed7871e8b5021bec4d2def08',1,'ttk::ftr::Propagations']]],
+  ['hide',['hide',['../classttk_1_1cf_1_1Node.html#a3d5b826b88e86d48b7344c6cca8efb35',1,'ttk::cf::Node::hide()'],['../classttk_1_1cf_1_1SuperArc.html#a1281fe9bed58ff32a7dbd925ac335d32',1,'ttk::cf::SuperArc::hide()'],['../classttk_1_1ftr_1_1SuperArc.html#a4118ba58989105005187c11eaa047d29',1,'ttk::ftr::SuperArc::hide()']]],
+  ['hideandcleararcsabove',['hideAndClearArcsAbove',['../classttk_1_1cf_1_1MergeTree.html#ac8d538072530def722ac6f1619624d3c',1,'ttk::cf::MergeTree']]],
+  ['hideandcleararcsbelow',['hideAndClearArcsBelow',['../classttk_1_1cf_1_1MergeTree.html#a00aaf3c83d673f12f58df8b31a8615b7',1,'ttk::cf::MergeTree']]],
+  ['hideandclearleadingto',['hideAndClearLeadingTo',['../classttk_1_1cf_1_1MergeTree.html#acec2e9a7b019d87239a4de13ce964fde',1,'ttk::cf::MergeTree']]],
+  ['hidearc',['hideArc',['../classttk_1_1cf_1_1MergeTree.html#a01eb8bbc2b2b9f1419f23db74b01d72c',1,'ttk::cf::MergeTree']]],
+  ['hidenode',['hideNode',['../classttk_1_1cf_1_1MergeTree.html#ab15f19cf3ba30c00e7c4a20281167505',1,'ttk::cf::MergeTree']]],
   ['hideoutputs',['hideOutputs',['../classttkUserInterfaceBase.html#af232e7f463f5c4b85ac5eeaaac600951',1,'ttkUserInterfaceBase']]],
   ['hopcroftkarp',['HopcroftKarp',['../classttk_1_1GabowTarjan.html#a07ffce0e26ff28f6face35b66c0532fa',1,'ttk::GabowTarjan']]]
 ];

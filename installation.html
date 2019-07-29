@@ -155,9 +155,9 @@ Windows installation instructions</a>;
 MacOS installation instructions</a>.<br><br>
 These specific notes describe the installation procedure for a 
 <a 
-href="http://releases.ubuntu.com/18.04.1/ubuntu-18.04.1-desktop-amd64.iso"
+href="http://releases.ubuntu.com/18.04.2/ubuntu-18.04.2-desktop-amd64.iso"
 target="new">
-Ubuntu Linux 18.04.1</a> operating system (but the process should be very 
+Ubuntu Linux 18.04.2</a> operating system (but the process should be very 
 similar 
 for other Linux distributions).
 <br><a href="tutorials.html#installation" target="new">A video from our 
@@ -206,16 +206,17 @@ The remainder of these notes
 describe 
 the installation of the 
 <a href="downloads.html" target="new">
-version 0.9.7 of 
+version 0.9.8 of 
 TTK</a> along with the 
 <a 
-href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.6&type=source&os=all&downloadFile=ParaView-v5.6.0.tar.gz" 
+href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.6&type=source&os=all&downloadFile=ParaView-v5.6.1.tar.xz" 
 target="new">
-version 5.6.0 of ParaView</a>. Other versions of either software packages 
+version 5.6.1 of ParaView</a>. Other versions of either software packages 
 may require slight variations in the installation procedure.
 For earlier versions of both software packages, you may want to check out 
 previous versions of our installation notes: <br>
+&nbsp;&middot;&nbsp;
+<a href="installation-0.9.7.html">TTK 0.9.7 with ParaView 5.6.0</a>,<br>
 &nbsp;&middot;&nbsp;
 <a href="installation-0.9.6.html">TTK 0.9.6 with ParaView 5.5.2</a>,<br>
 &nbsp;&middot;&nbsp;
@@ -246,8 +247,7 @@ Your browser does not support the video tag.
 target="new">ParaView</a> for its main user interface. Thus, you will first 
 need to download 
 <a 
-href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.6&type=source&os=all&downloadFile=ParaView-v5.6.0.tar.gz" 
+href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.6&type=source&os=Sources&downloadFile=ParaView-v5.6.1.tar.xz"
 target="new">
 ParaView's source code</a>.
 Note 
@@ -280,9 +280,9 @@ install the following, <i>optional</i> dependencies:<br><br>
 href="https://www.graphviz.org/">graphviz</a> (for graph 
 drawing features, version 2.40.1 or later). Under 
 <a
-href="http://releases.ubuntu.com/18.04.1/ubuntu-18.04.1-desktop-amd64.iso"
+href="http://releases.ubuntu.com/18.04.2/ubuntu-18.04.2-desktop-amd64.iso"
 target="new">
-Ubuntu Linux 18.04.1</a>, enter the following command:
+Ubuntu Linux 18.04.2</a>, enter the following command:
 <code><br><br>
 $ sudo apt-get install graphviz-dev
 </code><br><br>
@@ -291,12 +291,18 @@ $ sudo apt-get install graphviz-dev
 href="https://scikit-learn.org/stable/index.html">scikit-learn</a> (for data 
 reduction features, version 0.19.0 or later). Under 
 <a
-href="http://releases.ubuntu.com/18.04.1/ubuntu-18.04.1-desktop-amd64.iso"
+href="http://releases.ubuntu.com/18.04.2/ubuntu-18.04.2-desktop-amd64.iso"
 target="new">
-Ubuntu Linux 18.04.1</a>, enter the following command:
+Ubuntu Linux 18.04.2</a>, enter the following command:
 <code><br><br>
 $ sudo apt-get install python3-sklearn
 </code><br><br>
+&nbsp;&middot;&nbsp;
+<a href="https://github.com/yixuan/spectra/archive/v0.8.1.tar.gz" target="new">Spectra</a> 
+(for the computation of the eigenfunctions of the Laplace-Beltrami operator, version 0.8.1 or later). See the 
+<a target=="new" href="https://spectralib.org/">
+following page</a> for installation 
+instructions.<br><br>
 &nbsp;&middot;&nbsp;
 <a href="https://github.com/LLNL/zfp/archive/master.zip" target="new">ZFP</a> 
 (for advanced compression support, version 0.5.4 or later). See the 
@@ -306,7 +312,7 @@ instructions.<br><br>
 
 &nbsp;&middot;&nbsp;Other optional dependencies should already be installed by 
 default under <a
-href="http://releases.ubuntu.com/18.04.1/ubuntu-18.04.1-desktop-amd64.iso"
+href="http://releases.ubuntu.com/18.04.2/ubuntu-18.04.2-desktop-amd64.iso"
 target="new">
 Ubuntu Linux</a>, such as:<br>
 &nbsp;&nbsp;&nbsp;&middot;&nbsp;
@@ -340,15 +346,15 @@ under Fedora (as of version 27):
 a terminal (this assumes that you downloaded the tarballs to the 
 <code>~/Downloads</code> directory):<br><br>
 <code>$ mkdir ~/ttk</code><br>
-<code>$ mv ~/Downloads/ParaView-v5.6.0.tar.gz ~/ttk/</code><br>
-<code>$ mv ~/Downloads/ttk-0.9.7.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ParaView-v5.6.1.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ttk-0.9.8.tar.gz ~/ttk/</code><br>
 <code>$ cd ~/ttk</code><br>
-<code>$ tar xvzf ParaView-v5.6.0.tar.gz</code><br>
-<code>$ tar xvzf ttk-0.9.7.tar.gz</code><br><br>
+<code>$ tar xvzf ParaView-v5.6.1.tar.gz</code><br>
+<code>$ tar xvzf ttk-0.9.8.tar.gz</code><br><br>
 You can delete the tarballs after the source trees have been decompressed by 
 entering the following commands:<br><br>
-<code>$ rm ParaView-v5.6.0.tar.gz</code><br>
-<code>$ rm ttk-0.9.7.tar.gz</code></p>
+<code>$ rm ParaView-v5.6.1.tar.gz</code><br>
+<code>$ rm ttk-0.9.8.tar.gz</code></p>
                   
                   <p>
                   <h3>4. Patching the ParaView source tree</h3>
@@ -358,9 +364,9 @@ This step is
 optional. 
 To proceed, go to 
 the patch directory and apply it as follows:<br><br>
-<code>$ cd ~/ttk/ttk-0.9.7/paraview/patch</code><br>
-<code>$ ./patch-paraview-5.6.0.sh
- ~/ttk/ParaView-v5.6.0/</code></p>
+<code>$ cd ~/ttk/ttk-0.9.8/paraview/patch</code><br>
+<code>$ ./patch-paraview-5.6.1.sh
+ ~/ttk/ParaView-v5.6.1/</code></p>
 <!-- <code style="color: #ef2929; font-weight: bold;">root #</code> -->
 <!-- <code>emerge --ask&#160;--unmerge  -->
 <!-- sys-kernel/genkernel</code> -->
@@ -371,7 +377,7 @@ the patch directory and apply it as follows:<br><br>
                   <h4>a) Configuration</h4>
                   To enter the configuration menu of ParaView's build, enter 
 the following commands:<br><br>
-<code>$ cd ~/ttk/ParaView-v5.6.0/</code><br>
+<code>$ cd ~/ttk/ParaView-v5.6.1/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
@@ -443,7 +449,7 @@ enter the following command to enable the build of TTK plugins:<br><br>
 <h4>a) Configuration</h4>
 To enter the configuration menu of TTK's build, enter the following 
 commands:<br><br>
-<code>$ cd ~/ttk/ttk-0.9.7/</code><br>
+<code>$ cd ~/ttk/ttk-0.9.8/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
@@ -468,7 +474,7 @@ href="https://github.com/topology-tool-kit/ttk/tree/master/examples/vtk-c%2B%2B"
 
 If you are an advanced user and you do not even wish  to activate TTK's VTK 
 support, set the CMake variables 
-<!-- NOT NEEDED AFTER RELEASE 0.9.7 -->
+<!-- NOT NEEDED AFTER RELEASE 0.9.8 -->
 <code>TTK_BUILD_STANDALONE_APPS</code> and 
 <!-- END OF NOT NEEDED -->
 <code>TTK_BUILD_VTK_WRAPPERS</code> to <code>OFF</code>.
@@ -514,7 +520,7 @@ default TTK installation path, <code>/usr/local/</code>):<br><br>
 <!--<p>
 If you wish to disable the build and installation of certain TTK components, 
 just comment the corresponding lines in the <code>CMakeLists.txt</code> file at 
-the root of the source tree (<code>~/ttk/ttk-0.9.7/CMakeLists.txt</code> in our 
+the root of the source tree (<code>~/ttk/ttk-0.9.8/CMakeLists.txt</code> in our 
 example) prior to entering the configuration step of TTK's build (<a 
 href="#ttkConfig">section 6.a</a>).
 </p>-->
@@ -591,7 +597,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on July 1, 2019.</p>
+                    Updated on July 29, 2019.</p>
                 </div>
             </div>
         </div>

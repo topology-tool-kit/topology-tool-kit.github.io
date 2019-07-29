@@ -1,12 +1,13 @@
 var searchData=
 [
   ['debug',['Debug',['../classttk_1_1Debug.html#a5b453c195c4cfffed2702c3330f53a64',1,'ttk::Debug']]],
-  ['decdownvalence',['decDownValence',['../classttk_1_1Node.html#a483d23184635844e41bcad7ba55b74cb',1,'ttk::Node']]],
+  ['decdownvalence',['decDownValence',['../classttk_1_1cf_1_1Node.html#ae1ad13f0b3beb88c42cd6d45034287ca',1,'ttk::cf::Node']]],
   ['decrnbseen',['decrNbSeen',['../classttk_1_1ftm_1_1SuperArc.html#a47365cf8a2d0525c6e94603c16ad1e3e',1,'ttk::ftm::SuperArc']]],
-  ['decupvalence',['decUpValence',['../classttk_1_1Node.html#a397b4bd0312d690a3b64271f3b10935f',1,'ttk::Node']]],
+  ['decupvalence',['decUpValence',['../classttk_1_1cf_1_1Node.html#af0d21d22ba0c07659d03d26790f9edb1',1,'ttk::cf::Node']]],
   ['deepcopy',['deepCopy',['../classttkTriangulation.html#aaa4b33a714c5db5cf1fb70fa1508c36c',1,'ttkTriangulation::deepCopy()'],['../classttkUnstructuredGrid.html#a8d1244ef02b14b5c8a4f44539f79669e',1,'ttkUnstructuredGrid::DeepCopy()'],['../classttkImageData.html#aed786bbb3dfa93e712ed132beb1b47a5',1,'ttkImageData::DeepCopy()'],['../classttkPolyData.html#a3c831c3ca1678878df19290bd7059490',1,'ttkPolyData::DeepCopy()']]],
+  ['delemplace',['delEmplace',['../classttk_1_1ftr_1_1Lazy.html#a67ed68de7e1cceb88f04f403cf12b285',1,'ttk::ftr::Lazy']]],
   ['deletediagram',['deleteDiagram',['../classttkPersistenceDiagram.html#a7a523d00bc857b52dd87235169563a85',1,'ttkPersistenceDiagram']]],
-  ['delnode',['delNode',['../classttk_1_1MergeTree.html#ac059cf4f1587ebec92650acc0e59a5d4',1,'ttk::MergeTree::delNode()'],['../classttk_1_1ftm_1_1FTMTree__MT.html#a49a63edccafff3188f68b97738eedf25',1,'ttk::ftm::FTMTree_MT::delNode()']]],
+  ['delnode',['delNode',['../classttk_1_1cf_1_1MergeTree.html#ac059cf4f1587ebec92650acc0e59a5d4',1,'ttk::cf::MergeTree::delNode()'],['../classttk_1_1ftm_1_1FTMTree__MT.html#a49a63edccafff3188f68b97738eedf25',1,'ttk::ftm::FTMTree_MT::delNode()']]],
   ['depthimagebasedgeometryapproximation',['DepthImageBasedGeometryApproximation',['../classttk_1_1DepthImageBasedGeometryApproximation.html#a960e1b08ca595ee00980beb4bf7a0bc4',1,'ttk::DepthImageBasedGeometryApproximation']]],
   ['dfs',['DFS',['../classttk_1_1GabowTarjan.html#a3a875eb64ca48a782c3792a6d1258c15',1,'ttk::GabowTarjan']]],
   ['dimensionreduction',['DimensionReduction',['../classttk_1_1DimensionReduction.html#a3d5690f9f01705f8ea3131561ce26d52',1,'ttk::DimensionReduction']]],
@@ -16,11 +17,16 @@ var searchData=
   ['disconnect3sheetfrom2sheet',['disconnect3sheetFrom2sheet',['../classttk_1_1ReebSpace.html#a91c1540dd5a90352b0b2ec2c8cd75c66',1,'ttk::ReebSpace']]],
   ['disconnect3sheetfrom3sheet',['disconnect3sheetFrom3sheet',['../classttk_1_1ReebSpace.html#a5333f89bb7585cde70aa799f14b1c3c7',1,'ttk::ReebSpace']]],
   ['discretegradient',['DiscreteGradient',['../classttk_1_1dcg_1_1DiscreteGradient.html#ae0abfca9cd10c331c19154b8ee2504f4',1,'ttk::dcg::DiscreteGradient']]],
-  ['distance',['Distance',['../classttk_1_1GabowTarjan.html#a678667729705e6b8179124f2bd373095',1,'ttk::GabowTarjan::Distance(dataType maxLevel)'],['../classttk_1_1GabowTarjan.html#a678667729705e6b8179124f2bd373095',1,'ttk::GabowTarjan::Distance(dataType maxLevel)'],['../classttk_1_1Geometry.html#ad201ddc1057dfce1d321f59332d616da',1,'ttk::Geometry::distance(const double *p0, const double *p1, const int &amp;dimension=3)'],['../classttk_1_1Geometry.html#a3d472b9d4b45ad2bc4d984f11606362d',1,'ttk::Geometry::distance(const float *p0, const float *p1, const int &amp;dimension=3)']]],
+  ['discretelaplacian',['discreteLaplacian',['../namespacettk_1_1Laplacian.html#ac389fb3f61639b7b9518406622189147',1,'ttk::Laplacian']]],
+  ['distance',['Distance',['../classttk_1_1GabowTarjan.html#a678667729705e6b8179124f2bd373095',1,'ttk::GabowTarjan::Distance(dataType maxLevel)'],['../classttk_1_1GabowTarjan.html#a678667729705e6b8179124f2bd373095',1,'ttk::GabowTarjan::Distance(dataType maxLevel)'],['../namespacettk_1_1Geometry.html#ae19d42f035364b21ec88cb65747fe599',1,'ttk::Geometry::distance()']]],
   ['distancefield',['DistanceField',['../classttk_1_1DistanceField.html#ad956a8c6831d6ca5f8db41da8ae8b7cc',1,'ttk::DistanceField']]],
-  ['dmsg',['dMsg',['../classttk_1_1Debug.html#a249ecdec884408f56356eb4559933887',1,'ttk::Debug']]],
+  ['dmsg',['dMsg',['../classttk_1_1Debug.html#a249ecdec884408f56356eb4559933887',1,'ttk::Debug::dMsg()'],['../classttk_1_1ContourAroundPoint.html#a8cf314aadb4e8dddf7b33ba387c100cd',1,'ttk::ContourAroundPoint::dMsg()'],['../classttkContourAroundPoint.html#ae60dde1056d5a00a59fe588deebbe338',1,'ttkContourAroundPoint::dMsg()']]],
   ['dobenchmark',['doBenchmark',['../classttkBottleneckDistance.html#af4373f08072c5f150ac705a1763da72d',1,'ttkBottleneckDistance']]],
   ['doit',['doIt',['../classttkContourForests.html#ad0d025e8f80f8a867e15a3ebd14fd7f4',1,'ttkContourForests::doIt()'],['../namespacedimensionReduction.html#aa587a2e1ad4e671d53b94f28bbb4da6d',1,'dimensionReduction.doIt()']]],
-  ['doswap',['doSwap',['../classttk_1_1MergeTree.html#a3d80958ac205e9fe934d78119454247e',1,'ttk::MergeTree']]],
-  ['dotproduct',['dotProduct',['../classttk_1_1Geometry.html#aecf068b431f0a189530b7e5cff59feee',1,'ttk::Geometry::dotProduct(const double *vA0, const double *vA1, const double *vB0, const double *vB1)'],['../classttk_1_1Geometry.html#aa889dec15708cb3361826ef542989d54',1,'ttk::Geometry::dotProduct(const double *vA, const double *vB)']]]
+  ['doswap',['doSwap',['../classttk_1_1cf_1_1MergeTree.html#a3d80958ac205e9fe934d78119454247e',1,'ttk::cf::MergeTree']]],
+  ['dotproduct',['dotProduct',['../namespacettk_1_1Geometry.html#a301d5085752cc97050c25225517cc541',1,'ttk::Geometry::dotProduct(const T *vA0, const T *vA1, const T *vB0, const T *vB1)'],['../namespacettk_1_1Geometry.html#a947540092f380f8c5c32636ddbf0f4d9',1,'ttk::Geometry::dotProduct(const T *vA, const T *vB)']]],
+  ['dynamicgraph',['DynamicGraph',['../classttk_1_1ftr_1_1DynamicGraph.html#a50cf42ee74cfe69b4137c5d751ab20ec',1,'ttk::ftr::DynamicGraph']]],
+  ['dyngraph',['dynGraph',['../classttk_1_1ftr_1_1FTRGraph.html#a041be6c06b7e41e910e8127a32d2f2f1',1,'ttk::ftr::FTRGraph::dynGraph(const Propagation *const lp)'],['../classttk_1_1ftr_1_1FTRGraph.html#a34f5f98cad500286881a8615c002fca7',1,'ttk::ftr::FTRGraph::dynGraph(const bool goUp)']]],
+  ['dyngraphnode',['DynGraphNode',['../structttk_1_1ftr_1_1DynGraphNode.html#a63703e853db336ba9991b56d2ae6f14d',1,'ttk::ftr::DynGraphNode::DynGraphNode()'],['../structttk_1_1ftr_1_1DynGraphNode.html#af94679494979e1f2921e6279efd4e224',1,'ttk::ftr::DynGraphNode::DynGraphNode(const DynGraphNode &amp;other)']]],
+  ['dyngraphopposite',['dynGraphOpposite',['../classttk_1_1ftr_1_1FTRGraph.html#a4532e20936d5a42987808b0a239d99e8',1,'ttk::ftr::FTRGraph']]]
 ];

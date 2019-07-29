@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pointtype',['PointType',['../classttk_1_1MandatoryCriticalPoints.html#ab2cf29184e67a40532222ae2a99a2a0e',1,'ttk::MandatoryCriticalPoints']]]
+  ['graphcomponent',['GraphComponent',['../namespacettk_1_1ftr.html#a53a5f77c278677828a9808e7fb5cf8f6',1,'ttk::ftr']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['wrapper',['Wrapper',['../classttk_1_1Wrapper.html',1,'ttk']]],
-  ['wrapperdata',['WrapperData',['../structWrapperData.html',1,'']]]
+  ['uncertaindataestimator',['UncertainDataEstimator',['../classttk_1_1UncertainDataEstimator.html',1,'ttk']]],
+  ['unionfind',['UnionFind',['../classttk_1_1UnionFind.html',1,'ttk']]]
 ];

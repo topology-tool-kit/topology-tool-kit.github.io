@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['method',['Method',['../classttkDimensionReduction.html#aa89531fd4d90ca5d7aa02d60681d7b25',1,'ttkDimensionReduction']]]
+  ['eigenfieldtype',['EigenFieldType',['../ttkEigenField_8h.html#a23f0f91c4995e32a675425219c53054c',1,'ttkEigenField.h']]]
 ];

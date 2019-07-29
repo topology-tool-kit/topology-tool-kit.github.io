@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['radius',['Radius',['../classttkIcoSphere.html#a79abf24e19c6a5f25ca9e5a54013af19',1,'ttkIcoSphere']]],
   ['randomstate_5f',['randomState_',['../classttk_1_1DimensionReduction.html#a6a20a138b9a60154c9172ed718b6339a',1,'ttk::DimensionReduction']]],
   ['rangearea_5f',['rangeArea_',['../classttk_1_1RangeDrivenOctree.html#a420a174767dfa2143a46ffc334dd85e2',1,'ttk::RangeDrivenOctree::rangeArea_()'],['../classttk_1_1ReebSpace_1_1Sheet3.html#a58eea3a1777020effed36089b1ed29b4',1,'ttk::ReebSpace::Sheet3::rangeArea_()']]],
   ['rangebox_5f',['rangeBox_',['../classttk_1_1RangeDrivenOctree_1_1OctreeNode.html#a1ca337da6a931500b82f93588f4420be',1,'ttk::RangeDrivenOctree::OctreeNode']]],
@@ -8,8 +7,10 @@ var searchData=
   ['rangemin_5f',['rangeMin_',['../classttk_1_1PDFHistograms.html#a1a0372252f3b380d38a7187ba7e848d1',1,'ttk::PDFHistograms']]],
   ['rank_5f',['rank_',['../classttk_1_1UnionFind.html#a1082d141e9cb474fccb5792e310a12d6',1,'ttk::UnionFind']]],
   ['rawfilelength',['rawFileLength',['../classttk_1_1TopologicalCompression.html#a257e291050741e3acbd5aa37a66cb65b',1,'ttk::TopologicalCompression']]],
-  ['regionsize',['regionSize',['../structNodeData.html#a72109b6e18e95ca34c3b8a1446d5abb6',1,'NodeData']]],
-  ['regionspan',['regionSpan',['../structNodeData.html#a25ddb7e82edb8a8f0906ec213f310821',1,'NodeData']]],
+  ['reg',['reg',['../structttk_1_1ftr_1_1ArcData.html#a7a7f3c0ff13bab1e2f2dc562bc0525be',1,'ttk::ftr::ArcData']]],
+  ['regionsize',['regionSize',['../structttk_1_1ftm_1_1NodeData.html#a12a1dcd9f7f7d3dab7f68010f46c282c',1,'ttk::ftm::NodeData']]],
+  ['regionspan',['regionSpan',['../structttk_1_1ftm_1_1NodeData.html#a28e910561fe5daecec7cf7ff7860a2bb',1,'ttk::ftm::NodeData']]],
+  ['regiontype',['regionType',['../structttk_1_1ftr_1_1VertData.html#abf8a39b17f0a5c0eaeae949c0df93eb9',1,'ttk::ftr::VertData']]],
   ['regularnodelist_5f',['regularNodeList_',['../classttk_1_1SuperArc.html#a8a6d3e3029d2c3cbcdbbf4f8c4d5f04b',1,'ttk::SuperArc']]],
   ['renderer_5f',['renderer_',['../classttkUserInterfaceBase.html#a426b1629f4f4d4f81dc11877591f1b60',1,'ttkUserInterfaceBase']]],
   ['renderwindow_5f',['renderWindow_',['../classttkUserInterfaceBase.html#a5b5366e2b2618da8fbd86d44faff2474',1,'ttkUserInterfaceBase']]],
@@ -23,5 +24,7 @@ var searchData=
   ['revervesaddlemaximumconnection',['ReverveSaddleMaximumConnection',['../classttk_1_1AbstractMorseSmaleComplex.html#a8a4387a079aa48ccc4b3e0f28a002d26',1,'ttk::AbstractMorseSmaleComplex']]],
   ['revervesaddlesaddleconnection',['ReverveSaddleSaddleConnection',['../classttk_1_1AbstractMorseSmaleComplex.html#aa568c1313335fbd2775155509a17a776',1,'ttk::AbstractMorseSmaleComplex']]],
   ['rootid_5f',['rootId_',['../classttk_1_1RangeDrivenOctree.html#a042373b4af905e220bfcbdb7279d6a5f',1,'ttk::RangeDrivenOctree']]],
-  ['roots',['roots',['../structttk_1_1TreeData.html#a5dd3a01f54efff70c2db4dc7bb69dbb4',1,'ttk::TreeData::roots()'],['../structttk_1_1ftm_1_1TreeData.html#aeb74bc7cd8e58f0165dc35f204a250f3',1,'ttk::ftm::TreeData::roots()']]]
+  ['roots',['roots',['../structttk_1_1cf_1_1TreeData.html#aaca7865fb8bccab4c32133a4305cb628',1,'ttk::cf::TreeData::roots()'],['../structttk_1_1ftm_1_1TreeData.html#aeb74bc7cd8e58f0165dc35f204a250f3',1,'ttk::ftm::TreeData::roots()']]],
+  ['rowaxis',['RowAxis',['../classttkCinemaLayout.html#a8f62acc51217cf8cd0256e818affc048',1,'ttkCinemaLayout']]],
+  ['rowgap',['RowGap',['../classttkCinemaLayout.html#aa0eb17c396aa20c0fe4e3ea230a77e3f',1,'ttkCinemaLayout']]]
 ];

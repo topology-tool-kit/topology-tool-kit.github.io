@@ -11,6 +11,8 @@ var searchData=
   ['deprecatedsuperarc_2eh',['DeprecatedSuperArc.h',['../DeprecatedSuperArc_8h.html',1,'']]],
   ['depthimagebasedgeometryapproximation_2ecpp',['DepthImageBasedGeometryApproximation.cpp',['../DepthImageBasedGeometryApproximation_8cpp.html',1,'']]],
   ['depthimagebasedgeometryapproximation_2eh',['DepthImageBasedGeometryApproximation.h',['../DepthImageBasedGeometryApproximation_8h.html',1,'']]],
+  ['dijkstra_2ecpp',['Dijkstra.cpp',['../Dijkstra_8cpp.html',1,'']]],
+  ['dijkstra_2eh',['Dijkstra.h',['../Dijkstra_8h.html',1,'']]],
   ['dimensionreduction_2ecpp',['DimensionReduction.cpp',['../DimensionReduction_8cpp.html',1,'']]],
   ['dimensionreduction_2eh',['DimensionReduction.h',['../DimensionReduction_8h.html',1,'']]],
   ['dimensionreduction_2epy',['dimensionReduction.py',['../dimensionReduction_8py.html',1,'']]],
@@ -18,5 +20,7 @@ var searchData=
   ['discretegradient_2eh',['DiscreteGradient.h',['../DiscreteGradient_8h.html',1,'']]],
   ['discretegradient_5ftemplate_2eh',['DiscreteGradient_Template.h',['../DiscreteGradient__Template_8h.html',1,'']]],
   ['distancefield_2ecpp',['DistanceField.cpp',['../DistanceField_8cpp.html',1,'']]],
-  ['distancefield_2eh',['DistanceField.h',['../DistanceField_8h.html',1,'']]]
+  ['distancefield_2eh',['DistanceField.h',['../DistanceField_8h.html',1,'']]],
+  ['dynamicgraph_2eh',['DynamicGraph.h',['../DynamicGraph_8h.html',1,'']]],
+  ['dynamicgraph_5ftemplate_2eh',['DynamicGraph_Template.h',['../DynamicGraph__Template_8h.html',1,'']]]
 ];

@@ -3,17 +3,19 @@ var searchData=
   ['barycenterlist_5f',['barycenterList_',['../classttk_1_1SuperArc.html#a536258010b594ba85931606f45a3e681',1,'ttk::SuperArc']]],
   ['bincount_5f',['binCount_',['../classttk_1_1UncertainDataEstimator.html#a9343fa6fce8312b9962b1b5b0c01ad9f',1,'ttk::UncertainDataEstimator']]],
   ['binvalue_5f',['binValue_',['../classttk_1_1PDFHistograms.html#a1e26a7bc641b54e6b2278fc4af45aacd',1,'ttk::PDFHistograms']]],
-  ['binvalues_5f',['binValues_',['../classttk_1_1UncertainDataEstimator.html#ab265ccfaffded1cad806c08ee9aa9834',1,'ttk::UncertainDataEstimator']]],
+  ['binvalues_5f',['binValues_',['../classttk_1_1UncertainDataEstimator.html#ae698ed0c4d19ab775f1ae78863c99747',1,'ttk::UncertainDataEstimator']]],
   ['blocminimumposition_5f',['blocMinimumPosition_',['../classttk_1_1LowestCommonAncestor.html#a7772ed9cfdcd3df161043d53f1444858',1,'ttk::LowestCommonAncestor']]],
   ['blocminimumvalue_5f',['blocMinimumValue_',['../classttk_1_1LowestCommonAncestor.html#a5fd4054489db3dcba159f7bd050822c5',1,'ttk::LowestCommonAncestor']]],
   ['blocminimumvaluermq_5f',['blocMinimumValueRMQ_',['../classttk_1_1LowestCommonAncestor.html#ab63de1297c9d6da91c55a34e29d81de1',1,'ttk::LowestCommonAncestor']]],
-  ['blocpartition_5f',['blocPartition_',['../classttk_1_1LowestCommonAncestor.html#a6fb2d7ce178798eb67a822a5bee45c0d',1,'ttk::LowestCommonAncestor']]],
+  ['blocpartition_5f',['blocPartition_',['../classttk_1_1LowestCommonAncestor.html#a62a2237dce0caa70c80ce98b191b5df2',1,'ttk::LowestCommonAncestor']]],
   ['blocsize_5f',['blocSize_',['../classttk_1_1LowestCommonAncestor.html#a87f52052867b71e054345d88e2cbc70b',1,'ttk::LowestCommonAncestor']]],
   ['bloctonormalizedbloc_5f',['blocToNormalizedBloc_',['../classttk_1_1LowestCommonAncestor.html#af6e4830d4a72a7fbd61d811112a0681d',1,'ttk::LowestCommonAncestor']]],
+  ['bool',['bool',['../classttkBlockAggregator.html#a4ab5d0983b59eb6382e0d902ac554553',1,'ttkBlockAggregator::bool()'],['../classttkMeshGraph.html#aa895972c976de5d904ac515a5ff9e6a3',1,'ttkMeshGraph::bool()'],['../classttkPlanarGraphLayout.html#a2dba9f56699bb5ca245b8d58aa020ce6',1,'ttkPlanarGraphLayout::bool()']]],
   ['boolvalue_5f',['boolValue_',['../classttk_1_1CommandLineParser_1_1CommandLineArgument.html#aa31623bc88377fbad77dd66b2af3135f',1,'ttk::CommandLineParser::CommandLineArgument']]],
   ['boundaryedges_5f',['boundaryEdges_',['../classttk_1_1AbstractTriangulation.html#a4c76b72276b284d09d802dce5d58ddcb',1,'ttk::AbstractTriangulation']]],
   ['boundaryfilters_5f',['boundaryFilters_',['../classttkUserInterfaceBase.html#a5dfb661946810000e0a2861c67127bd8',1,'ttkUserInterfaceBase']]],
   ['boundarymappers_5f',['boundaryMappers_',['../classttkUserInterfaceBase.html#ad3629441f38e46faa18c0e0f928e6701',1,'ttkUserInterfaceBase']]],
   ['boundarytriangles_5f',['boundaryTriangles_',['../classttk_1_1AbstractTriangulation.html#a54a7f20a1829ea4e6954f4f735cfc34c',1,'ttk::AbstractTriangulation']]],
-  ['boundaryvertices_5f',['boundaryVertices_',['../classttk_1_1AbstractTriangulation.html#a79183fd62fb4c12f41c48110c0deecbf',1,'ttk::AbstractTriangulation']]]
+  ['boundaryvertices_5f',['boundaryVertices_',['../classttk_1_1AbstractTriangulation.html#a79183fd62fb4c12f41c48110c0deecbf',1,'ttk::AbstractTriangulation']]],
+  ['branchid',['branchID',['../structNode.html#a21aaaa75301265075872835b89ddefe2',1,'Node']]]
 ];

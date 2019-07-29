@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['trackingtuple',['trackingTuple',['../BottleneckDistance_8h.html#a93b3b89b628e19a55485b01a9f565990',1,'BottleneckDistance.h']]],
-  ['ttktypemacro',['ttkTypeMacro',['../ttkTriangulation_8h.html#a6d731b08f2668fe96bff0ce1cfdd9174',1,'ttkTriangulation.h']]]
+  ['scalarfieldcriticalpoints_5finl',['SCALARFIELDCRITICALPOINTS_INL',['../ScalarFieldCriticalPoints_8inl.html#a65b2f9a080d2f1a7c9d738f8f50a806c',1,'ScalarFieldCriticalPoints.inl']]]
 ];

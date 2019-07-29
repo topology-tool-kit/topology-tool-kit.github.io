@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['offset',['offset',['../structLocalFTM.html#a0147b5807744b38f1a218d8523d963b9',1,'LocalFTM']]],
+  ['offset',['offset',['../structttk_1_1ftr_1_1Vert.html#a22218bfa8f95efa4cfe0bf4f72e4ae7d',1,'ttk::ftr::Vert::offset()'],['../structttk_1_1ftm_1_1LocalFTM.html#afbd68f8d4c5cef09af143719a0cc9956',1,'ttk::ftm::LocalFTM::offset()']]],
   ['offsetfielduname',['OffsetFieldUName',['../classttk.html#a722fb3a714770f590f78586dc7e43eb3',1,'ttk']]],
   ['offsetfieldvname',['OffsetFieldVName',['../classttk.html#a0fb4a6bf1124bc3e651a66e2f5cada8a',1,'ttk']]],
   ['offsets',['offsets',['../structttk_1_1ftm_1_1Scalars.html#afa929ee6a06614a14f1d897d3950bedc',1,'ttk::ftm::Scalars']]],
@@ -13,6 +13,7 @@ var searchData=
   ['originalnodelist_5f',['originalNodeList_',['../classttk_1_1SubLevelSetTree.html#a1a22bd8a60f4a0a99a00dcb6db79747e',1,'ttk::SubLevelSetTree']]],
   ['originalsuperarclist_5f',['originalSuperArcList_',['../classttk_1_1SubLevelSetTree.html#a6d78cc1dd2038508b229dda07191329a',1,'ttk::SubLevelSetTree']]],
   ['outputascendingmanifold_5f',['outputAscendingManifold_',['../classttk_1_1AbstractMorseSmaleComplex.html#a794ebd3987c71c2d761e17eb095b4dc7',1,'ttk::AbstractMorseSmaleComplex']]],
+  ['outputcells_5f',['outputCells_',['../classttk_1_1MorseSmaleQuadrangulation.html#afd19c7a080b174eebb918675113f3cae',1,'ttk::MorseSmaleQuadrangulation']]],
   ['outputcriticalpoints_5fnumberofpoints_5f',['outputCriticalPoints_numberOfPoints_',['../classttk_1_1AbstractMorseSmaleComplex.html#a514782bf513b97bf38142d81274369cb',1,'ttk::AbstractMorseSmaleComplex::outputCriticalPoints_numberOfPoints_()'],['../classttk_1_1dcg_1_1DiscreteGradient.html#a455fef7398fb7ccacf5d7167b8eca43d',1,'ttk::dcg::DiscreteGradient::outputCriticalPoints_numberOfPoints_()']]],
   ['outputcriticalpoints_5fpoints_5f',['outputCriticalPoints_points_',['../classttk_1_1AbstractMorseSmaleComplex.html#a1748bb3f2e8885a13a03980b37db9e12',1,'ttk::AbstractMorseSmaleComplex::outputCriticalPoints_points_()'],['../classttk_1_1dcg_1_1DiscreteGradient.html#a2a0712716515baf55f5dd86e372ae572',1,'ttk::dcg::DiscreteGradient::outputCriticalPoints_points_()']]],
   ['outputcriticalpoints_5fpoints_5fcelldimensions_5f',['outputCriticalPoints_points_cellDimensions_',['../classttk_1_1AbstractMorseSmaleComplex.html#acb96bf0963a70c36989ce304fd2b192a',1,'ttk::AbstractMorseSmaleComplex::outputCriticalPoints_points_cellDimensions_()'],['../classttk_1_1dcg_1_1DiscreteGradient.html#a4010760746df472639510429ecb3e57f',1,'ttk::dcg::DiscreteGradient::outputCriticalPoints_points_cellDimensions_()']]],
@@ -23,7 +24,7 @@ var searchData=
   ['outputcriticalpoints_5fpoints_5fplvertexidentifiers_5f',['outputCriticalPoints_points_PLVertexIdentifiers_',['../classttk_1_1AbstractMorseSmaleComplex.html#a9f5b15c4238ce1a7d46d96688d7a85e9',1,'ttk::AbstractMorseSmaleComplex::outputCriticalPoints_points_PLVertexIdentifiers_()'],['../classttk_1_1dcg_1_1DiscreteGradient.html#ae8e853487f6baa9914c5294c8892aaf0',1,'ttk::dcg::DiscreteGradient::outputCriticalPoints_points_PLVertexIdentifiers_()']]],
   ['outputct1_5f',['outputCT1_',['../classttk_1_1BottleneckDistance.html#af5a9ef732496f4a33063415ee952dbb6',1,'ttk::BottleneckDistance']]],
   ['outputct2_5f',['outputCT2_',['../classttk_1_1BottleneckDistance.html#aa647475cf3d93dd9299ac6e56f1987d4',1,'ttk::BottleneckDistance']]],
-  ['outputdata_5f',['outputData_',['../classttk_1_1Blank.html#a9d22f0a42690afd591e7fd183d02a8a8',1,'ttk::Blank::outputData_()'],['../classttk_1_1LDistance.html#a1278f3d81a9cee79213ebbd0cb0bb736',1,'ttk::LDistance::outputData_()'],['../classttk_1_1ScalarFieldSmoother.html#a571c31e67c3941a17f249e6bb7a7b451',1,'ttk::ScalarFieldSmoother::outputData_()'],['../classttk_1_1TopologicalCompression.html#a2d46a654d6eae39db4038d4087a178ec',1,'ttk::TopologicalCompression::outputData_()']]],
+  ['outputdata_5f',['outputData_',['../classttk_1_1blank_1_1Blank.html#a4a62ca93d90430cd94a8ccab83193e40',1,'ttk::blank::Blank::outputData_()'],['../classttk_1_1LDistance.html#a1278f3d81a9cee79213ebbd0cb0bb736',1,'ttk::LDistance::outputData_()'],['../classttk_1_1ScalarFieldSmoother.html#a571c31e67c3941a17f249e6bb7a7b451',1,'ttk::ScalarFieldSmoother::outputData_()'],['../classttk_1_1TopologicalCompression.html#a2d46a654d6eae39db4038d4087a178ec',1,'ttk::TopologicalCompression::outputData_()']]],
   ['outputdescendingmanifold_5f',['outputDescendingManifold_',['../classttk_1_1AbstractMorseSmaleComplex.html#abd4caea1c1f54306d4354fb21e934335',1,'ttk::AbstractMorseSmaleComplex']]],
   ['outputgradientglyphs_5fcells_5f',['outputGradientGlyphs_cells_',['../classttk_1_1dcg_1_1DiscreteGradient.html#a402c6de76c14295cb10e34a9eec456e8',1,'ttk::dcg::DiscreteGradient']]],
   ['outputgradientglyphs_5fcells_5fpairtypes_5f',['outputGradientGlyphs_cells_pairTypes_',['../classttk_1_1dcg_1_1DiscreteGradient.html#a041241856689e01d3695cdea074ce3ae',1,'ttk::dcg::DiscreteGradient']]],
@@ -42,7 +43,11 @@ var searchData=
   ['outputoffsetscalarfieldpointer_5f',['outputOffsetScalarFieldPointer_',['../classttk_1_1TopologicalSimplification.html#ac4afbfd6ac111c60083a56920523689b',1,'ttk::TopologicalSimplification']]],
   ['outputpath_5f',['outputPath_',['../classttk_1_1ProgramBase.html#adccbc2095d5808fe8e09ab9b896484a6',1,'ttk::ProgramBase']]],
   ['outputpersistencepairs_5f',['outputPersistencePairs_',['../classttk_1_1dcg_1_1DiscreteGradient.html#a6855c9661230c62b2fe39bdf52ac29cf',1,'ttk::dcg::DiscreteGradient']]],
-  ['outputprobability_5f',['outputProbability_',['../classttk_1_1UncertainDataEstimator.html#a721d1debbbba1d4b510f2e681497e60c',1,'ttk::UncertainDataEstimator']]],
+  ['outputpoints_5f',['outputPoints_',['../classttk_1_1MorseSmaleQuadrangulation.html#a052c0bc782d89587b41de4b34207fe0c',1,'ttk::MorseSmaleQuadrangulation']]],
+  ['outputpointscells_5f',['outputPointsCells_',['../classttk_1_1MorseSmaleQuadrangulation.html#a5ca643ab5f30618b1c2e772e82422e44',1,'ttk::MorseSmaleQuadrangulation']]],
+  ['outputpointsids_5f',['outputPointsIds_',['../classttk_1_1MorseSmaleQuadrangulation.html#a71147689b2c0d5f5d3fbd516107cdd60',1,'ttk::MorseSmaleQuadrangulation']]],
+  ['outputpointstypes_5f',['outputPointsTypes_',['../classttk_1_1MorseSmaleQuadrangulation.html#aaa798b448679e602b4c7e13c979e7ebb',1,'ttk::MorseSmaleQuadrangulation']]],
+  ['outputprobability_5f',['outputProbability_',['../classttk_1_1UncertainDataEstimator.html#a108fb66ef49f1d33c28051d564281fe6',1,'ttk::UncertainDataEstimator']]],
   ['outputscalarfieldpointer_5f',['outputScalarFieldPointer_',['../classttk_1_1DistanceField.html#a5f4ba4d7e1cda7c78a624cfccd9405a7',1,'ttk::DistanceField::outputScalarFieldPointer_()'],['../classttk_1_1TopologicalSimplification.html#a09f97b4443fa46c885dd18b87c216127',1,'ttk::TopologicalSimplification::outputScalarFieldPointer_()']]],
   ['outputsegmentation_5f',['outputSegmentation_',['../classttk_1_1DistanceField.html#aab3c31da4e04488843390061330172e6',1,'ttk::DistanceField']]],
   ['outputseparatrices1_5fcells_5f',['outputSeparatrices1_cells_',['../classttk_1_1AbstractMorseSmaleComplex.html#a20c37fe34e38641e53cc0ff6ac46cee1',1,'ttk::AbstractMorseSmaleComplex']]],
@@ -71,8 +76,10 @@ var searchData=
   ['outputseparatrices2_5fnumberofcells_5f',['outputSeparatrices2_numberOfCells_',['../classttk_1_1AbstractMorseSmaleComplex.html#aa913b639e250300e7cf67689f0296d86',1,'ttk::AbstractMorseSmaleComplex']]],
   ['outputseparatrices2_5fnumberofpoints_5f',['outputSeparatrices2_numberOfPoints_',['../classttk_1_1AbstractMorseSmaleComplex.html#a258f8a219143f71e0ef585f0c7fda7a8',1,'ttk::AbstractMorseSmaleComplex']]],
   ['outputseparatrices2_5fpoints_5f',['outputSeparatrices2_points_',['../classttk_1_1AbstractMorseSmaleComplex.html#a30e3481b8fe0a27c3e65ac9780785191',1,'ttk::AbstractMorseSmaleComplex']]],
+  ['outputsubdivision_5f',['outputSubdivision_',['../classttk_1_1QuadrangulationSubdivision.html#aea0370dab2ea836574dae09c6ba65d13',1,'ttk::QuadrangulationSubdivision']]],
   ['outputtrajectories_5f',['outputTrajectories_',['../classttk_1_1IntegralLines.html#ac5bb4ea50bb0dd83e80575a9bc729e3b',1,'ttk::IntegralLines']]],
+  ['outputtriangl_5f',['outputTriangl_',['../classttk_1_1BarycentricSubdivision.html#a241c8ee56c6efd193a4738b44373abda',1,'ttk::BarycentricSubdivision']]],
   ['outputupperboundfield_5f',['outputUpperBoundField_',['../classttk_1_1UncertainDataEstimator.html#affb19bc67e9f21d493b24bc6c0ab1af0',1,'ttk::UncertainDataEstimator']]],
-  ['overlap',['overlap',['../classEdge.html#a63bb0fb8783dea73e89e632f8d81815d',1,'Edge']]],
-  ['overridedatabase',['OverrideDatabase',['../classttkCinemaWriter.html#aa866b6cd519245f4a33c2b8a4efda658',1,'ttkCinemaWriter']]]
+  ['outputvalences_5f',['outputValences_',['../classttk_1_1QuadrangulationSubdivision.html#ad886d2018533be5a4bfe8348fdc54c99',1,'ttk::QuadrangulationSubdivision']]],
+  ['outputverttype_5f',['outputVertType_',['../classttk_1_1QuadrangulationSubdivision.html#aaf0f9690e299f680460bdc52d532fe54',1,'ttk::QuadrangulationSubdivision']]]
 ];
