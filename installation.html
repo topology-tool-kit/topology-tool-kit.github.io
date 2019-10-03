@@ -277,6 +277,17 @@ In order to enjoy the complete set of TTK features, we also recommend to
 install the following, <i>optional</i> dependencies:<br><br>
 &nbsp;&middot;&nbsp;
 <a target="new" 
+href="http://eigen.tuxfamily.org/">eigen</a> (for scalar field design, version 3.3.7 or later). 
+Under 
+<a
+href="http://releases.ubuntu.com/18.04.2/ubuntu-18.04.2-desktop-amd64.iso"
+target="new">
+Ubuntu Linux 18.04.2</a>, enter the following command:
+<code><br><br>
+$ sudo apt-get install libeigen3-dev
+</code><br><br>
+&nbsp;&middot;&nbsp;
+<a target="new" 
 href="https://www.graphviz.org/">graphviz</a> (for graph 
 drawing features, version 2.40.1 or later). Under 
 <a
@@ -346,14 +357,14 @@ under Fedora (as of version 27):
 a terminal (this assumes that you downloaded the tarballs to the 
 <code>~/Downloads</code> directory):<br><br>
 <code>$ mkdir ~/ttk</code><br>
-<code>$ mv ~/Downloads/ParaView-v5.6.1.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ParaView-v5.6.1.tar.xz ~/ttk/</code><br>
 <code>$ mv ~/Downloads/ttk-0.9.8.tar.gz ~/ttk/</code><br>
 <code>$ cd ~/ttk</code><br>
-<code>$ tar xvzf ParaView-v5.6.1.tar.gz</code><br>
+<code>$ tar xvJf ParaView-v5.6.1.tar.xz</code><br>
 <code>$ tar xvzf ttk-0.9.8.tar.gz</code><br><br>
 You can delete the tarballs after the source trees have been decompressed by 
 entering the following commands:<br><br>
-<code>$ rm ParaView-v5.6.1.tar.gz</code><br>
+<code>$ rm ParaView-v5.6.1.tar.xz</code><br>
 <code>$ rm ttk-0.9.8.tar.gz</code></p>
                   
                   <p>
@@ -415,6 +426,7 @@ the generation is completed.<br><br>
 
 <h4>Note to Linux Mint users</h4>
 It has been reported that the following CMake variables need to be updated as follows (as of version 19):
+<br>
 <code>&nbsp;&middot;&nbsp;CMAKE_C_FLAGS=-luuid</code><br>
 <code>&nbsp;&middot;&nbsp;CMAKE_CXX_FLAGS=-luuid</code>
 <br><br>
@@ -597,7 +609,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on July 29, 2019.</p>
+                    Updated on August 20, 2019.</p>
                 </div>
             </div>
         </div>
