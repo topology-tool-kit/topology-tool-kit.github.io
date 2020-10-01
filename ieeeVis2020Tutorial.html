@@ -12,7 +12,7 @@
 Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour 
 tree, persistence diagram, persistence curve, continuous scatterplot, fiber 
 surface, contour forests, jacobi set, mandatory critical points, topological 
-simplification, VTK, ParaView, Python, tutorial, IEEE VIS 2019" />
+simplification, VTK, ParaView, Python, tutorial, IEEE VIS 2020" />
 
     <title>TTK - the Topology ToolKit - Topological Data Analysis and 
 Visualization</title>
@@ -151,14 +151,16 @@ id="bs-example-navbar-collapse-1">
 
             <p>
             <h1>Topological Data Analysis Made Easy with the Topology 
-ToolKit, A Sequel</h1>
+ToolKit, What is New?</h1>
                         <h3>
                         <a target="new" 
-                        href="http://ieeevis.org/year/2019/info/tutorials">
-                        IEEE VIS 2019 Tutorial</a><br>
-                        Sunday, October 20: 9:00am-12:20pm<br>
-                        Room 2, Vancouver Convention Centre East,<br>
-                        IEEE VIS, Vancouver, BC, Canada.
+                        href="http://ieeevis.org/year/2020/info/tutorials">
+                        IEEE VIS 2020 Tutorial</a><br>
+                        Monday, October 26: 8:00am-11:25am<br>
+                        IEEE VIS, Salt Lake City, UT, USA. (online event)<br>
+                        <b><font color="#ff3d3d">Free registration:</font></b><br>
+                        &nbsp;&middot;&nbsp;<a href="https://forms.gle/CvrY3oWZB9hWSQJb9" target="new">Tutorial pre-registration</a><br>
+                        &nbsp;&middot;&nbsp;<a href="http://ieeevis.org/year/2020/info/registration/conference-registration" target="new">IEEE VIS 2020 registration</a>
                         </h3></p>
                         
                         <br>
@@ -172,22 +174,18 @@ page for all tutorials in this series.
 attendees</h3></font> 
 
 &nbsp;&middot;&nbsp;
-We kindly ask potential attendees to optionally <b><font color="#ff3d3d">pre-register</font></b> at <a href="https://forms.gle/gn7yn3JwzdBN4Mgr7">https://forms.gle/gn7yn3JwzdBN4Mgr7</a> in order for us to reach out to them ahead of the tutorial with information updates (for instance, last minute updates, instructions for the download of the tutorial material package, etc.)<br>
+We kindly ask potential attendees to optionally <b><font color="#ff3d3d">pre-register</font></b> at 
+<a href="https://forms.gle/CvrY3oWZB9hWSQJb9" target="new">https://forms.gle/CvrY3oWZB9hWSQJb9</a> 
+in order for us to reach out to them ahead of the tutorial with information updates (for instance, last minute updates, instructions for the download of 
+the tutorial material package, etc.)<br>
 
 &nbsp;&middot;&nbsp;
-If you plan to attend this tutorial, we invite you to <b><font color="#ff3d3d">bring your own 
-laptop</font></b>, on which you would have downloaded the tutorial 
-data package available below.<br>
-
-&nbsp;&middot;&nbsp;
-Moreover, we also invite you to install <b><font 
-color="#ff3d3d">before the tutorial</font></b> the 
-<a href="https://github.com/topology-tool-kit/ttk/archive/master.zip" 
-target="new">
-git master version of TTK</a> (link below).
-This installation procedure 
-takes approximately 1 hour.<br>
-Alternatively, you can choose the easier options of:<br>
+If you plan to attend this tutorial, we 
+invite you to install TTK on your system <b><font 
+color="#ff3d3d">before the tutorial</font></b>.
+Several installation alternatives are available:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;building TTK from source (default, link below, takes approximately 1 hour);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;installing TTK binary packages for Ubuntu (link below);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;downloading a pre-installed Linux virtual machine containing all the necessary software (link below);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;installing our TTK docker image (link below);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;installing our TTK anaconda package (link below, for a python usage only).
@@ -221,16 +219,33 @@ target="new"
 
 &nbsp;&middot;&nbsp;
 <a href="installation.html" target="new"
->TTK installation instructions</a><br>
+>Instructions for building TTK from source</a><br>
+
+&nbsp;&middot;&nbsp;
+Binary packages for Ubuntu:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;ttk-paraview-ubuntu:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;
+<a href="https://github.com/topology-tool-kit/ttk-paraview/releases/download/v5.8.1/ttk-paraview-ubuntu-20.04.deb" target="new">20.04</a> 
+(ex: <code>sudo apt-get install ~/Downloads/ttk-paraview-ubuntu-20.04.deb</code>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;
+<a href="https://github.com/topology-tool-kit/ttk-paraview/releases/download/v5.8.1/ttk-paraview-ubuntu-18.04.deb" target="new">18.04</a> 
+(ex: <code>sudo apt-get install ~/Downloads/ttk-paraview-ubuntu-18.04.deb</code>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;ttk-ubuntu:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;
+<a href="https://github.com/topology-tool-kit/ttk/releases/download/dev09252020/ttk-ubuntu-20.04.deb" target="new">20.04</a> 
+(ex: <code>sudo apt-get install ~/Downloads/ttk-ubuntu-20.04.deb</code>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;
+<a href="https://github.com/topology-tool-kit/ttk/releases/download/dev09252020/ttk-ubuntu-18.04.deb" target="new">18.04</a> 
+(ex: <code>sudo apt-get install ~/Downloads/ttk-ubuntu-18.04.deb</code>)<br>
 
 &nbsp;&middot;&nbsp;
 <a
-href="http://sci.utah.edu/~jtierny/ttk.ova"
+href="https://www-apr.lip6.fr/~tierny/stuff/teaching/ttk2020.ova"
 target="new"
 onClick="javascript:_gaq.push(['_trackPageview','stuff/ttk_vm.pdf']);"
 >
 Pre-installed virtual machine</a> 
-(Ubuntu 18.04, requires
+(Ubuntu 20.04, requires
 <a href="http://www.virtualbox.org"
 target="new"
 >VirtualBox</a>, password: <code>ttk</code>)
@@ -251,70 +266,31 @@ onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_data.zip'])
 Tutorial data package</a><br>
 
 &nbsp;&middot;&nbsp;
-<a href="stuff/ttk_tutorial_vis19.pdf" target="new"
-onClick="javascript:_gaq.push(['_trackPageview','stuff/ttk_tutorial_vis19.pdf']);"
+<a href="stuff/ttk_tutorial_vis20.pdf" target="new"
+onClick="javascript:_gaq.push(['_trackPageview','stuff/ttk_tutorial_vis20.pdf']);"
 >
 Detailed tutorial submission document</a><br>
 
 </p>
             
 <p><h3><a name="abstract">Abstract</a></h3>
-This tutorial presents topological methods for the analysis and
-visualization of scientific data from a user's perspective, with the
-Topology ToolKit (TTK), a recently released open-source library for
-topological data analysis. Topological methods have gained considerably
-in popularity and maturity over the last twenty years and success
-stories of established methods have been documented in a wide range of
-applications (combustion, chemistry, astrophysics, material sciences,
-etc.) with both acquired and simulated data, in both post-hoc and
-in-situ contexts. Last year, we held the first iteration of this
-tutorial, that aimed to cover this area at a software level and from a
-user's point-of-view. This tutorial aims to continue to fill a gap by
-providing a beginner's introduction to topological methods for
-practitioners, researchers, students, and lecturers. In particular,
-instead of focusing on theoretical aspects and algorithmic details, this
-tutorial focuses on how topological methods can be useful in practice
-for concrete data analysis tasks such as segmentation, feature
-extraction or tracking. The tutorial describes in detail how to achieve
-these tasks with TTK. First, after an introduction to topological
-methods and their application in data analysis, a brief overview of
-TTK's main entry point for end users, namely ParaView, will be
-presented. Second, an overview of TTK's main features will be given. A
-running example will be described in detail, showcasing how to access
-TTK's features via ParaView, Python, VTK/C++, and C++. Third, hands-on
-sessions will concretely show how to use TTK in ParaView for multiple,
-representative data analysis tasks. Fourth, the usage of TTK will be
-presented for developers, in particular by describing several examples
-of visualization and data analysis projects that were built on top of
-TTK. Finally, some feedback regarding the usage of TTK as a teaching
-platform for topological analysis will be given. Presenters of this
-tutorial include experts in topological methods, core authors of TTK as
-well as active users, coming from academia, labs, or industry. A large
-part of the tutorial will be dedicated to hands-on exercises and a rich
-material package (including TTK pre-installs in virtual machines, code,
-data, demos, video tutorials, etc. see last year's tutorial website
-[11]) will be provided to the participants. This tutorial mostly targets
-students, practitioners and researchers who are not necessarily experts
-in topological methods but who are interested in using them in their
-daily tasks. We also target researchers already familiar to topological
-methods and who are interested in using or contributing to TTK. We
-kindly ask potential attendees to optionally pre-register at the
-following address, in order for us to reach out to them ahead of the
-tutorial with information updates (for instance, last minute updates,
-instructions for the download of the tutorial material package, etc.):
-<a href="https://forms.gle/gn7yn3JwzdBN4Mgr7">https://forms.gle/gn7yn3JwzdBN4Mgr7</a>
+This tutorial presents topological methods for the analysis and visualization of scientific data from a user’s perspective, with the Topology ToolKit (TTK), an open-source library for topological data analysis. Topological methods have gained considerably in popularity and maturity over the last twenty years and success stories of established methods have been documented in a wide range of applications (combustion, chemistry, astrophysics, material sciences, etc.) with both acquired and simulated data, in both post-hoc and in-situ contexts. This tutorial aims to fill a gap by providing a beginner’s introduction to topological methods for practitioners, researchers, students, and lecturers. In particular, instead of focusing on theoretical aspects and algorithmic details, this tutorial focuses on how topological methods can be useful in practice for concrete data analysis tasks such as segmentation, feature extraction or tracking. The tutorial describes in detail how to achieve these tasks with TTK. In comparison to the last two iterations of this tutorial, this iteration emphasizes the features of TTK which now appear to be the most popular, as well as the latest additions to the library. First, we provide a general introduction to topological methods and their application in data analysis, and a brief overview of TTK’s main entry point for end users, namely ParaView, will be presented. Second, we will proceed to a hands-on session demoing the main features of TTK as well as its most recent additions. Third, we will present advanced usages of TTK, including the usage of TTK with Python, the development of a new module for TTK as well as the integration of TTK into a pre-existing system. Presenters of this tutorial include experts in topological methods, core authors of TTK as well as active users, coming from academia and industry. A large part of the tutorial will be dedicated to hands-on exercises and a rich material package will be provided to the participants. This tutorial mostly targets students, practitioners and researchers who are not necessarily experts in topological methods but who are interested in using them in their daily tasks. We also target researchers already familiar to topological methods and who are interested in using or contributing to TTK. We kindly ask potential attendees to optionally pre-register at the following address, in order for us to reach out to them ahead of the tutorial with information updates (for instance, last minute updates, instructions for the download of the tutorial material package, etc.): 
+<a href="https://forms.gle/CvrY3oWZB9hWSQJb9 " target="new">https://forms.gle/CvrY3oWZB9hWSQJb9 </a>.
 </p>
 
 <p><h3><a name="organizers">Organizers</a></h3>
 <ul>
 <li><a href="http://scivis.itn.liu.se/members/martin-falk">Martin Falk</a>, Link&ouml;ping University</li>
 <li><a href="https://vis.uni-kl.de/people/garth/">Christoph Garth</a>, TU Kaiserslautern</li>
-<li><a href="http://gueunetcharles.com/">Charles Gueunet</a>, Kitware, Sorbonne Universite</li>
+<li><a href="http://gueunetcharles.com/">Charles Gueunet</a>, Kitware</li>
+<li><a href="https://www.lip6.fr/actualite/personnes-fiche.php?ident=D2289">Pierre Guillou</a>, Sorbonne Universite</li>
+<li><a href="https://www.sci.utah.edu/people/jediati.html">Attila Gyulassy</a>, SCI Institute, University of Utah</li>
+<li><a href="https://vcg.iwr.uni-heidelberg.de/people/hofmann/">Lutz Hofmann</a>, Heidelberg University</li>
+<li><a href="https://github.com/kappe-c">Christopher Kappe</a>, TU Kaiserslautern</li>
 <li><a href="http://www.cs.arizona.edu/~josh">Joshua A. Levine</a>, University of Arizona</li>
 <li><a href="https://www.jluk.de/">Jonas Lukasczyk</a>, Arizona State University</li>
 <li><a href="https://julien-tierny.github.io/">Julien Tierny</a>, CNRS, Sorbonne Universite</li>
-<li><a href="https://www.willusher.io/">Will Usher</a>, SCI Institute, University of Utah</li>
-<li><a href="https://www.lip6.fr/actualite/personnes-fiche.php?ident=D2285">Jules Vidal</a>, Sorbonne Universite</li>
+<li><a href="https://www-apr.lip6.fr/~vidal/">Jules Vidal</a>, Sorbonne Universite</li>
 </ul>
 </p>
 
@@ -559,7 +535,7 @@ target="new">
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on October 16, 2019.</p>
+                    Updated on October 1, 2020.</p>
                 </div>
             </div>
         </div>
