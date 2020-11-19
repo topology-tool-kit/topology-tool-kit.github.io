@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Topology ToolKit">
+    <meta name="author" content="The Topology ToolKit">
+    <meta name="keywords" content="TTK, Topology ToolKit, Topological Data 
+Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour 
+tree, persistence diagram, persistence curve, continuous scatterplot, fiber 
+surface, contour forests, jacobi set, mandatory critical points, topological 
+simplification, VTK, ParaView, Python" />
+
+    <title>TTK - the Topology ToolKit - Topological Data Analysis and 
+Visualization</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'
+);
+
+  ga('create', 'UA-88087813-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl =
+  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-88087813-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                TTK Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="installation.html">Installation</a>
+                    </li>
+                    <li>
+                        <a href="tutorials.html">Tutorials</a>
+                    </li>
+                    <li>
+                        <a href="documentation.html">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="contribute.html">Contribute</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" 
+      style="background-image: url('img/viscousFingering.png')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Topology ToolKit</h1>
+                        <hr class="small">
+                        <span class="subheading">
+                        Efficient, generic and easy<br>
+                        Topological data analysis and visualization
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+
+
+
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+<div class="news">
+<table width="98.5%" align="center">
+
+<tr><td>
+<h4>&nbsp;&nbsp;&nbsp;News</h4></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                We had an awesome 
+                tutorial at 
+                <a
+                target="new"
+                href="http://ieeevis.org/year/2020/info/tutorials">
+                IEEE VIS 2020</a>.
+                Videos are
+                <a href="ieeeVis2020Tutorial.html#talks"
+                target="new">
+                now available here</a>!
+                </td>
+                <td align="right">
+                [Oct. 27, 2019]
+                </td>
+                </tr>
+<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                Join us online at 
+                <a
+                target="new"
+                href="http://ieeevis.org/year/2020/info/tutorials">
+                IEEE VIS 2020</a> (October 26)
+                for a half-day  
+                <a href="ieeeVis2020Tutorial.html"
+                target="new">TTK tutorial</a>!
+                </td>
+                <td align="right">
+                [Oct. 7, 2019]
+                </td>
+                </tr>
+<tr>
+          <td align="left">
+          &nbsp;&middot;&nbsp;
+          Check out our introduction to 
+            TTK 
+            on the 
+            <a target="new"
+            href="https://youtu.be/5m5sZ3DFtmA">Applied Algebraic Topology Network </a>!
+          </td>
+          <td align="right">
+            [May 21, 2020]
+          </td>
+        </tr>
+<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                TTK is now available as an
+                <a
+                target="new"
+                href="https://anaconda.org/conda-forge/topologytoolkit"
+                > Anaconda package</a>! 
+                (usage example 
+                <a href="https://github.com/topology-tool-kit/ttk/tree/stable/examples/python" target="new">here</a>)
+                </td>
+                <td align="right">
+                [Nov. 1, 2019]
+                </td>
+                </tr>
+<!--<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                Join us on Sunday morning at 
+                <a
+                target="new"
+                href="http://ieeevis.org/year/2019/info/tutorials"
+                >IEEE VIS 2019</a> for our
+                <a href="ieeeVis2019Tutorial.html"
+                target="new">TTK tutorial</a>!
+                </td>
+                <td align="right">
+                [Oct. 16, 2019]
+                </td>
+                </tr>-->
+<!--<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                New TTK release! Checkout the 
+                <a 
+href="https://github.com/topology-tool-kit/ttk/releases/tag/v0.9.8"
+target="new">ChangeLog</a
+>.
+                </td>
+                <td align="right">
+                [Jul. 29, 2019]
+                </td>
+                </tr>
+
+<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                We had a great  
+                <a 
+href="http://scivis.itn.liu.se/topoinvis2019/ttk-hackathon/"
+target="new">TTK Hackathon</a>
+                at 
+                <a href="http://scivis.itn.liu.se/topoinvis2019/" 
+                target="new">TopoInVis 2019!</a> Thanks everybody!
+                <div align="center">
+                <a href="img/topoInVisHackathon2019.jpg" target="new" align="center">
+                      <img align='center' width="400px" 
+                        src="img/topoInVisHackathon2019_mini.jpg" >
+                    </a></div>
+                </td>
+                <td align="right" valign="top">
+                [Jun. 16, 2019]
+                </td>
+                </tr>
+
+<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                TTK will be presented in a 
+                <a href="ieeeVisTutorial.html"
+                target="new">tutorial at IEEE VIS 2019</a>!
+                </td>
+                <td align="right">
+                [June 5, 2019]
+                </td>
+                </tr>-->
+
+
+<!--<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                Join us at 
+                <a href="http://scivis.itn.liu.se/topoinvis2019/"  target="new">              TopoInVis</a> in Sweden for a 
+                <a 
+href="http://scivis.itn.liu.se/topoinvis2019/ttk-hackathon/"
+target="new">TTK Hackathon</a
+>!
+                </td>
+                <td align="right">
+                [May 4, 2019]
+                </td>
+                </tr>-->
+
+<!--<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                New TTK release! Checkout the 
+                <a 
+href="https://github.com/topology-tool-kit/ttk/releases/tag/v0.9.7"
+target="new">ChangeLog</a
+>.
+                </td>
+                <td align="right">
+                [Nov. 13, 2018]
+                </td>
+                </tr>-->
+
+<!--<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                Join us on Sunday afternoon at 
+                <a
+                target="new"
+                href="http://ieeevis.org/year/2018/info/tutorials"
+                >IEEE VIS 2018</a> for our
+                <a href="ieeeVis2018Tutorial.html"
+                target="new">TTK tutorial</a>!
+                </td>
+                <td align="right">
+                [Oct. 19, 2018]
+                </td>
+                </tr>
+
+<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                New TTK release! Checkout the 
+                <a 
+href="https://github.com/topology-tool-kit/ttk/releases/tag/v0.9.6"
+target="new">ChangeLog</a
+>.
+                </td>
+                <td align="right">
+                [Jul. 30, 2018]
+                </td>
+                </tr>
+<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                TTK will be presented in an invited session at 
+                <a 
+href="https://s2018.siggraph.org/session/?sess=sess311"                
+target="new">ACM SIGGRAPH 2018</a
+>.
+                </td>
+                <td align="right">
+                [Jul. 30, 2018]
+                </td>
+                </tr>-->
+<!--<tr>
+                <td>
+                &nbsp;&middot;&nbsp;
+                New TTK release! Checkout the 
+                <a 
+href="https://github.com/topology-tool-kit/ttk/releases/tag/v0.9.5"
+target="new">ChangeLog</a
+>.
+                </td>
+                <td align="right">
+                [Jun. 5, 2018]
+                </td>
+                </tr>
+
+<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                TTK will be presented in a 
+                <a href="ieeeVisTutorial.html"
+                target="new">tutorial at IEEE VIS 2018</a>!
+                </td>
+                <td align="right">
+                [May 30, 2018]
+                </td>
+                </tr>-->
+<!--<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                TTK is now supported under Windows thanks to 
+                <a href="https://www.caboma.com/" target="new">
+                Caboma Inc.!</a>
+                (<a 
+href="installation-windows.html"
+target="new">installation</a
+>).
+                </td>
+                <td align="right">
+                [Dec. 28, 2017]
+                </td>
+                </tr>-->
+<!--<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                New TTK release! Checkout the 
+                <a 
+href="https://github.com/topology-tool-kit/ttk/releases/tag/v0.9.3"
+target="new">ChangeLog</a
+>.
+                </td>
+                <td align="right">
+                [Nov. 4, 2017]
+                </td>
+                </tr>-->
+
+<!--<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                TTK was awarded the 
+                <a href="img/honorableMention_vis2017.jpg"
+                target="new">
+                Best Paper Honorable Mention Award
+                </a>
+                at IEEE VIS 2017!
+                </td>
+                <td align="right">
+                [Jul. 14, 2017]
+                </td>
+                </tr>-->
+
+<!--<tr>
+<td>
+                &nbsp;&middot;&nbsp;
+                O'Reilly selected TTK among its daily 
+                <a 
+href="https://www.oreilly.com/ideas/four-short-links-3-april-2017" 
+target="new">
+                Four short links!</a></td>
+                <td align="right">
+                [Apr. 3, 2017]
+                </td>
+                </tr>
+<tr height="10pt" /> -->
+              </table>
+</div>
+
+
+
+
+<!--             Some text here -->
+            <p>
+            The Topology ToolKit (TTK) is an open-source library and software 
+collection for topological data analysis and visualization.
+            </p>
+
+            <p>TTK can handle scalar data defined either on regular grids or 
+triangulations, in 2D, 3D, or more. It provides a substantial collection of 
+generic, efficient and robust implementations of key algorithms in 
+topological data analysis. It includes:<br>
+&nbsp;&middot;&nbsp;<i>For scalar data:</i> critical points, integral lines, 
+persistence diagrams, 
+Bottleneck and Wasserstein distances (exact Munkres-based computation or fast Auction-based approximation), Wasserstein barycenters, 
+persistence curves, merge trees, contour trees, Reeb graphs,
+Morse-Smale complexes, topological simplification, topology-aware compression, harmonic design;<br>
+&nbsp;&middot;&nbsp;<i>For bivariate scalar data:</i> fibers, fiber surfaces, 
+continuous scatterplots, Jacobi sets, Reeb spaces;<br>
+&nbsp;&middot;&nbsp;<i>For uncertain scalar data:</i> mandatory critical points;<br>
+&nbsp;&middot;&nbsp;<i>For time-varying scalar data:</i> critical point tracking, nested tracking graphs;<br>
+&nbsp;&middot;&nbsp;<i>For high-dimensional / point cloud data:</i> dimension reduction, 
+persistence-based clustering;<br>
+&nbsp;&middot;&nbsp;and more!<br>
+If you need to robustly analyze your 
+data, you may want to use TTK.<br>
+<a algin="right" href="gallery.html">> Check out our gallery page for some TTK 
+eye candy!</a>
+</p>
+
+<p>TTK makes topological data analysis accessible to end users 
+thanks to easy-to-use plugins for the visualization front end
+ParaView. Thanks to ParaView, TTK supports a variety of input data 
+formats.<br>
+<a href="tutorials.html">> Check out our video tutorials to see TTK in 
+action!</a>
+</p>
+
+
+            <p>TTK is written in C++ but comes with a variety of bindings
+(VTK/C++, Python)  and standalone command-line programs. It is modular and easy 
+to extend. 
+We have specifically developed it such that you can easily write your own data 
+analysis tools as TTK modules.
+<br>
+<a href="documentation.html">> Check out our developer documentation</a>
+</p>
+
+            
+
+            <p>TTK is open-source (BSD license). You can use it at your 
+convenience, for open-source or proprietary projects. You are also welcome to 
+contribute.<br>
+<a href="contribute.html">> Check out our contribution page</a>
+</p>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">
+                    Contact: <a href="mailto:topology.tool.kit@gmail.com">
+                    topology.tool.kit@gmail.com</a><br>
+                    Updated on October 27, 2020.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

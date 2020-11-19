@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Topology ToolKit">
+    <meta name="author" content="The Topology ToolKit">
+    <meta name="keywords" content="TTK, Topology ToolKit, Topological Data 
+Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour 
+tree, persistence diagram, persistence curve, continuous scatterplot, fiber 
+surface, contour forests, jacobi set, mandatory critical points, topological 
+simplification, VTK, ParaView, Python" />
+
+    <title>TTK - the Topology ToolKit - Topological Data Analysis and 
+Visualization</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'
+);
+
+  ga('create', 'UA-88087813-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl =
+  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-88087813-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" 
+data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                TTK Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling 
+-->
+            <div class="collapse navbar-collapse" 
+id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="installation.html">Installation</a>
+                    </li>
+                    <li>
+                        <a href="tutorials.html">Tutorials</a>
+                    </li>
+                    <li>
+                        <a href="documentation.html">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="contribute.html">Contribute</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" 
+      style="background-image: url('img/morseHills.png'">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Topology ToolKit</h1>
+                        <hr class="small">
+                        <span class="subheading">OSX Installation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+  
+Please find below detailed instructions for the installation of TTK under 
+MacOS.<br><br>
+
+TTK is also supported on other operating systems:<br>
+&nbsp;&middot;&nbsp;
+<a href="installation.html">
+Linux installation instructions</a> (default target platform);
+<br>
+&nbsp;&middot;&nbsp;
+<a href="installation-windows.html">
+Windows installation instructions</a>.<br><br>
+
+This page describes installing TTK 0.9.6 on OSX, using High Sierra 10.13.6 and 
+ParaView 5.5.2.  The key differences from the linux installation involve how 
+ParaView is compiled, installing certain dependencies, and setting up some of 
+the paths for OSX.  The following assumes that the target is to compile with 
+OSX clang and uses homebrew for dependencies.<br><br>
+
+Other versions of earlier software packages 
+may require slight variations in the installation procedure.
+For earlier versions of both software packages, you may want to check out 
+previous versions of our installation notes for OSX: <br>
+&nbsp;&middot;&nbsp;<a href="installation-osx-0.9.5.html">TTK 0.9.5 
+with ParaView 5.5.0</a>.<br>
+&nbsp;&middot;&nbsp;<a href="installation-osx-0.9.4.html">TTK 0.9.3 (and 0.9.4) 
+with ParaView 5.4.1</a>.<br>
+&nbsp;&middot;&nbsp;<a href="installation-osx-0.9.2.html">TTK 0.9.2 with 
+ParaView 5.4.0</a>.<br>
+
+<p><h3>1. Downloads</h3>
+Note: The instructions for this step are identical to those on linux:<br><br>
+
+TTK builds on top of <a href="http://www.paraview.org" 
+target="new">ParaView</a> for its main user interface. Thus, you will first 
+need to download 
+<a 
+href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&
+version=v5.5&type=binary&os=Sources&downloadFile=ParaView-v5.5.2.tar.gz"
+target="new">
+ParaView 5.5.2's source code</a>.
+Note 
+that TTK plugins for ParaView will only work with a version of ParaView 
+compiled from source. Thus, if you already installed ParaView with a binary 
+copy, you may need to un-install it before proceeding.
+                  Next, download TTK from our <a 
+href="downloads.html">download page</a>.
+</p>
+
+
+
+<p><h3>2. Installing the dependencies</h3>
+Using <a href="https://brew.sh/">homebrew</a>, install:
+<ul>
+<li> cmake (tested with 3.12.1) </li>
+<li> qt5 (tested with 5.11.1) </li>
+<li> python2 (tested with 2.7.15_1) </li>
+<li> vtk (tested with 8.1.1) </li>
+</ul>
+Using the command: <br><br>
+<code>$ brew install cmake qt5 python2 vtk</code><br><br>
+
+<h4>a) Optional Dependencies</h4>
+
+Using homebrew, one can install:
+<ul>
+<li> ffmpeg (tested with 4.0.2) </li>
+<li> hdf5 (tested with 1.10.2_1) </li>
+<li> tbb (tested with 2018_U5) -- needed for OSPRay </li>
+<li> mpich (tested with 3.2.1_2) -- needed for OSPRay's execution </li>
+<li> libomp (tested with 6.0.1) -- needed for OpenMP support </li>
+</ul>
+Using the command (or only parts of it): <code>$ brew install ffmpeg hdf5 tbb 
+mpich</code><br><br>
+
+In order to enjoy the complete set of TTK features, we also recommend to 
+install the following, optional dependencies:<br>
+&nbsp;&middot;&nbsp;
+<a href="https://github.com/LLNL/zfp" target="new">ZFP</a><br><br>
+<!--&nbsp;&middot;&nbsp;
+<a href="https://github.com/LLNL/zfp" target="new">ZLib</a> (Zlib should be 
+already installed if you installed vtk, as recommended above).<br>-->
+
+And, in addition, one can install OSPRay and it's dependencies using:
+
+<ul>
+<li>Download and unpack ospray-1.6.1.x86_64.dmg from <a 
+href="http://www.ospray.org/getting_ospray.html">http://www.ospray.org/
+getting_ospray.html</a> (this installs in /opt/local/lib).</li>
+
+<li>Download and unpack embree-3.2.0.x86_64.dmg from <a 
+href="https://embree.github.io/downloads.html">https://embree.github.io/
+downloads.html</a> (this installs in /opt/local/lib).</li>
+
+<li>Download and unpack tbb2018_20180618oss_mac.tgz from <a 
+href="https://github.com/01org/tbb/releases">https://github.com/01org/tbb/
+releases</a>.  After expanding the .tar, I created a directory 
+/opt/local/include/tbb and copied the headers there, while I also copied the 
+library files to /opt/local/lib/.  Why?  The homebrew install for tbb doesn't 
+created the *_debug.dylib's.  One could also just install TBB entirely from the 
+website and skip the homebrew install, but in theory these versions match</li>
+</ul><br>
+
+After doing so, you'll likely want to make sure that your commandline knows 
+about ospray/embree/tbb, the easy fix for this is to add <code>export 
+DYLD_LIBRARY_PATH="/opt/local/lib"</code> to your <code>~/.bashrc</code>.
+</p>
+
+
+
+
+
+
+<p><h3>3. Preparing the sources</h3>
+Note: The instructions for this step are identical to those on linux:<br><br>
+
+Move the tarballs to a working directory (for instance called 
+<code>~/ttk</code>) and decompress them by entering the following commands in 
+a terminal (this assumes that you downloaded the tarballs to the 
+<code>~/Downloads</code> directory):<br><br>
+<code>$ mkdir ~/ttk</code><br>
+<code>$ mv ~/Downloads/ParaView-v5.5.2.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ttk-0.9.6.tar.gz ~/ttk/</code><br>
+<code>$ cd ~/ttk</code><br>
+<code>$ tar xvzf ParaView-v5.5.2.tar.gz</code><br>
+<code>$ tar xvzf ttk-0.9.6.tar.gz</code><br><br>
+You can delete the tarballs after the source trees have been decompressed by 
+entering the following commands:<br><br>
+<code>$ rm ParaView-v5.5.2.tar.gz</code><br>
+<code>$ rm ttk-0.9.6.tar.gz</code><br><br>
+</p>
+
+<p><h3>4. Patching the ParaView source tree</h3>
+Note: The instructions for this step are identical to those on linux:<br><br>
+
+In order to enjoy the complete set of TTK features, we 
+recommend at this stage to patch the ParaView source tree. 
+This step is 
+optional. 
+To proceed, go to 
+the patch directory and apply it as follows:<br><br>
+<code>$ cd ~/ttk/ttk-0.9.6/paraview/patch</code><br>
+<code>$ ./patch-paraview-5.5.2.sh ~/ttk/ParaView-v5.5.2/</code><br><br>
+</p>
+
+
+
+
+
+
+
+<p><h3>5. Configuring, building and installing ParaView</h3>
+<h4>a) Configuration</h4>
+To enter the configuration menu of ParaView's build, enter the following 
+commands:<br><br>
+<code>$ cd ~/ttk/ParaView-v5.5.2/</code><br>
+<code>$ mkdir build</code><br>
+<code>$ cd build</code><br>
+<code>$ ccmake ..</code> (on homebrew cmake there is no <code>cmake-gui</code>, 
+although you can install this separately from <a 
+href="https://cmake.org/download/">https://cmake.org/download/</a>)<br><br>
+
+Then, press 'c' to configure and we'll edit some CMake flags:<br><br>
+
+<code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
+<code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_PYTHON=ON</code><br>
+<code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=Sequential</code><br>
+<br>
+
+You can also enable optional pieces, including:
+
+<h5>(i) ffmpeg:</h5>
+
+<code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_FFMPEG=ON</code><br>
+<br>
+
+<h5>(ii) hdf5:</h5>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;Should be enabled by default if you 
+installed it with homebrew<br>
+<br>
+
+<h5>(iii) OSPRay (which requires TBB):</h5>
+
+<code>&nbsp;&middot;&nbsp;PARAVIEW_USE_OSPRAY=ON</code><br>
+<code>&nbsp;&middot;&nbsp;OSPRAY_INSTALL_DIR=/opt/local/lib</code><br>
+<code>&nbsp;&middot;&nbsp;TBB_ROOT=/opt/local</code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(You may also have to manually set 
+the paths for the TBB debug *.dylibs stored in /opt/local/lib 
+(TBB_LIBRARY_DEBUG, TBB_LIBRARY_MALLOC_DEBUG, TBB_MALLOC_LIBRARY_DEBUG, and/or 
+TBB_MALLOC_PROXY_LIBRARY_DEBUG).  Occasionally, they would default to 
+/usr/local/lib.)<br>
+<br>
+
+<h5>(iv) TBB as the SMP implementation (which isn't necessary, but makes sense 
+to do if you're using OSPRay):</h5>
+
+<code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=TBB</code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(changed from the default 
+"Sequential")<br>
+<code>&nbsp;&middot;&nbsp;TBB_VERSION=""</code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(It seems the autodetected version is 
+wrong, so we clear this out to prevent a conflict with VTK-m)<br>
+<code>&nbsp;&middot;&nbsp;VTKm_ENABLE_TBB=ON</code><br>
+<br>
+
+<h5>(v) OpenMP as the SMP implementation (this is experimental, but useful 
+since TTK can take advantage of it too.  OSPRay will still use TBB, which is why 
+we set TBB_ROOT in (iii)):</h5>
+
+<code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=OpenMP</code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(changed from the default 
+"Sequential")<br>
+<code>&nbsp;&middot;&nbsp;OpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp 
+-I/usr/local/opt/libomp/include"</code><br>
+<code>&nbsp;&middot;&nbsp;OpenMP_CXX_LIBRARY=omp</code><br>
+<code>&nbsp;&middot;&nbsp;OpenMP_C_FLAGS="-Xpreprocessor -fopenmp 
+-I/usr/local/opt/libomp/include"</code><br>
+<code>&nbsp;&middot;&nbsp;OpenMP_C_LIBRARY=omp</code><br>
+<br>
+
+
+
+Then, press 'c' to configure (wait a minute) and then press 't' for advanced 
+mode to double check the above paths and/or fill in any flags that did not 
+appear the first time.  
+
+
+Press 'c' again, which fills in some more paths, and then press 'c' one more 
+time and things should be ready to press 'g' to generate and exit.<br><br>
+
+If you prefer to just run <code>cmake</code> as opposed to <code>ccmake</code> 
+or <code>cmake-gui</code>, the following summarizes three possible 
+installations:
+
+<h5>(i) Sequential / Basic</h5>
+<code>$ cmake \<br>
+-DCMAKE_BUILD_TYPE=Release \<br>
+-DPARAVIEW_ENABLE_PYTHON=ON \<br>
+-DVTK_SMP_IMPLEMENTATION_TYPE=Sequential \<br>
+-DPARAVIEW_ENABLE_FFMPEG=ON \<br>
+..
+</code><br>
+
+<h5>(ii) OSPRay + TBB</h5>
+<code>$ cmake \<br>
+-DCMAKE_BUILD_TYPE=Release \<br>
+-DPARAVIEW_ENABLE_PYTHON=ON \<br>
+-DVTK_SMP_IMPLEMENTATION_TYPE=TBB \<br>
+-DTBB_VERSION="" \<br>
+-DVTKm_ENABLE_TBB=ON \<br>
+-DPARAVIEW_USE_OSPRAY=ON \<br>
+-DOSPRAY_INSTALL_DIR=/opt/local/lib \<br>
+-DTBB_ROOT=/opt/local \<br>
+-DPARAVIEW_ENABLE_FFMPEG=ON \<br>
+..
+</code><br>
+
+<h5>(ii) OSPRay + OpenMP</h5>
+<code>$ cmake \<br>
+-DCMAKE_BUILD_TYPE=Release \<br>
+-DPARAVIEW_ENABLE_PYTHON=ON \<br>
+-DVTK_SMP_IMPLEMENTATION_TYPE=OpenMP \<br>
+-DOpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include" \<br>
+-DOpenMP_CXX_LIBRARY=omp \<br>
+-DOpenMP_C_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include" \<br>
+-DOpenMP_C_LIBRARY=omp \<br>
+-DPARAVIEW_USE_OSPRAY=ON \<br>
+-DOSPRAY_INSTALL_DIR=/opt/local/lib \<br>
+-DTBB_ROOT=/opt/local \<br>
+-DPARAVIEW_ENABLE_FFMPEG=ON \<br>
+..
+</code><br>
+
+<br><br>
+
+
+<h4>b) Build</h4>
+Now you can start the compilation process by entering the following command, 
+where <code>N</code> is the number of available cores on your system (this will 
+take a <b>LONG</b> time):<br><br>
+<code>$ make -jN</code><br><br>
+
+<h4>c) Installation</h4>
+Once the build is finished, we recommend that you do <strong>not</strong> use 
+<code>make install</code>.  We will work directly in the build directory for 
+the source tree instead of trying to package up a MacOS .app file in 
+<code>/Applications</code>.  We'll need to manually make a directory for 
+this:<br><br>
+
+<code>$ mkdir 
+~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/MacOS/plugins</code><br>
+
+</p>
+
+
+
+<p>
+<h3>6. Configuring, building and installing TTK</h3>
+<h4><a name="ttkConfig">a)</a> Configuration</h4>
+To enter the configuration menu of TTK's build, enter the following 
+commands:<br><br>
+<code>$ cd ~/ttk/ttk-0.9.6/</code><br>
+<code>$ mkdir ttk_install</code> (for installing standalone apps)<br>
+<code>$ mkdir build</code><br>
+<code>$ cd build</code><br>
+<code>$ ccmake ..</code><br><br>
+
+The configuration window opens.  Press 'c' to configure, and you'll see that it 
+cannot yet find ParaView.  First, we'll fix this:<br><br>
+
+<code>&nbsp;&middot;&nbsp;ParaView_DIR=~/ttk/ParaView-v5.5.2/build/</code><br><
+br>
+
+Press 'c' again to configure (you can ignore the warnings).  Also note that 
+<code>VTK_DIR</code> should automatically be set to the homebrew installation 
+of VTK (<code>/usr/local/lib/cmake/vtk-8.1</code>).  Next, change:<br><br>
+
+<code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
+<code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.6/ttk_install</code
+><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this is where standalone apps and 
+other TTK components are installed)<br>
+<code>&nbsp;&middot;&nbsp;TTK_INSTALL_PLUGIN_DIR=<br>~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/MacOS/plugins</code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this is where ParaView plugins are 
+installed)<br>
+<br>
+
+Note that you can enable building certain portions of TTK at this time
+as well by switching the flags associated with each (e.g. 
+TTK_BUILD_PARAVIEW_PLUGINS, TTK_BUILD_STANDALONE_APPS, etc.). 
+
+Finally, if you'd like to try out OpenMP (again, experimental), you would 
+add:<br>
+
+<code>&nbsp;&middot;&nbsp;TTK_ENABLE_OPENMP=ON</code><br>
+<code>&nbsp;&middot;&nbsp;OpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp 
+-I/usr/local/opt/libomp/include"</code><br>
+<code>&nbsp;&middot;&nbsp;OpenMP_CXX_LIB_NAMES=omp</code><br>
+<code>&nbsp;&middot;&nbsp;OpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.
+dylib</code><br>
+<br>
+
+Press 'c' to reconfigure (again takes a few seconds) and then press 'g' to 
+generate.<br><br>
+
+If you prefer to just run <code>cmake</code> as opposed to <code>ccmake</code> 
+or <code>cmake-gui</code>, the following summarizes the two possible 
+installations:
+
+<h5>(i) Basic TTK</h5>
+<code>$ cmake \<br>
+-DParaView_DIR=~/ttk/ParaView-v5.5.2/build/ \<br>
+-DCMAKE_BUILD_TYPE=Release \<br>
+-DCMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.6/ttk_install \<br>
+-DTTK_INSTALL_PLUGIN_DIR=~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/MacOS/plugins \<br>
+..
+</code><br>
+
+<h5>(ii) TTK + OpenMP</h5>
+<code>$ cmake \<br>
+-DParaView_DIR=~/ttk/ParaView-v5.5.2/build/ \<br>
+-DCMAKE_BUILD_TYPE=Release \<br>
+-DCMAKE_INSTALL_PREFIX=~/ttk/ttk-0.9.6/ttk_install \<br>
+-DTTK_INSTALL_PLUGIN_DIR=~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/MacOS/plugins \<br>
+-DTTK_ENABLE_OPENMP=ON \<br>
+-DOpenMP_CXX_FLAGS="-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include" \<br>
+-DOpenMP_CXX_LIB_NAMES=omp \<br>
+-DOpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib \<br>
+..
+</code><br>
+
+<br><br>
+
+<h4>b) Build</h4>
+Now you can start the compilation process by entering the following command, 
+where <code>N</code> is the number of available cores on your system:<br><br>
+<code>$ make -jN</code><br><br>
+
+<h4>c) Installation</h4>
+Once the build is finished, enter the following command to install your build 
+of TTK into your ParaView installation:<br><br>
+<code>$ make install</code><br><br>
+
+Note that in addition to copying the TTK plugins to your ParaView installation 
+(<code>TTK_INSTALL_PLUGIN_DIR</code>), the above command also installed a 
+collection of standalone TTK programs to <code>CMAKE_INSTALL_PREFIX</code>.  
+These can be used outside of ParaView, either as command line tools or 
+VTK-based graphical user interfaces. To list them:<br><br>
+<code>$ ls CMAKE_INSTALL_PREFIX/bin/*Cmd</code><br>
+<code>$ ls CMAKE_INSTALL_PREFIX/bin/*Gui</code><br><br>
+Replacing <code>CMAKE_INSTALL_PREFIX</code> with what we used above.<br><br>
+
+Finally, to make sure the example data files are included in the right path, 
+you have to manually copy the example data into the ParaView .app as 
+well:<br><br>
+<code>$ cd ~/ttk/ttk-0.9.6/paraview/patch/data</code><br>
+<code>$ mkdir -p ~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/share/paraview-5.5/data</code><br>
+<code>$ cp * ~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/share/paraview-5.5/data</code><br>
+<br>
+</p>
+
+
+
+
+<p>
+<h3>7. Checking your TTK installation</h3>
+If you applied all the above steps successfully (including step 4), you can now 
+open a terminal and type the following command to load your TTK-patched 
+ParaView:<br><br>
+<code>$ cd 
+~/ttk/ParaView-v5.5.2/build/bin/paraview.app/Contents/MacOS/</code><br><br>
+<code>$ ./paraview</code><br><br>
+
+At this point, everything from the standard installation procedure should be accessible.  Congrats!
+</p>
+
+<p>
+Now, please visit our <a href="tutorials.html">tutorial</a> page to watch video 
+tutorials showing how to use TTK with ParaView with concrete examples and how 
+to 
+use it from your own Python or C++ code or how to extend TTK by writing up your 
+own module!
+</p>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">
+                    Contact: <a href="mailto:topology.tool.kit@gmail.com">
+                    topology.tool.kit@gmail.com</a><br>
+                    Updated on July 30, 2018.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

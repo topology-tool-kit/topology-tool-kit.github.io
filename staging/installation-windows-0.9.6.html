@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Topology ToolKit">
+    <meta name="author" content="The Topology ToolKit">
+    <meta name="keywords" content="TTK, Topology ToolKit, Topological Data 
+Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour 
+tree, persistence diagram, persistence curve, continuous scatterplot, fiber 
+surface, contour forests, jacobi set, mandatory critical points, topological 
+simplification, VTK, ParaView, Python" />
+
+    <title>TTK - the Topology ToolKit - Topological Data Analysis and 
+Visualization</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'
+);
+
+  ga('create', 'UA-88087813-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl =
+  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-88087813-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" 
+data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                TTK Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling 
+-->
+            <div class="collapse navbar-collapse" 
+id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="installation.html">Installation</a>
+                    </li>
+                    <li>
+                        <a href="tutorials.html">Tutorials</a>
+                    </li>
+                    <li>
+                        <a href="documentation.html">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="contribute.html">Contribute</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" 
+      style="background-image: url('img/morseHills.png'">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Topology ToolKit</h1>
+                        <hr class="small">
+                        <span class="subheading">Windows Installation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+  
+
+Please find below detailed instructions for the installation of TTK under 
+Windows.<br><br>
+
+TTK is also supported on other operating systems:<br>
+&nbsp;&middot;&nbsp;
+<a href="installation.html">
+Linux installation instructions</a> (default target platform);
+<br>
+&nbsp;&middot;&nbsp;
+<a href="installation-osx.html">
+MacOS installation instructions</a>.<br><br>
+
+These specific notes describe the installation procedure for a 
+Windows 10 operating system with Visual Studio 2015 (but the process should be 
+very similar for other versions).<br><br> 
+
+The remainder of these notes 
+describe 
+the installation of the 
+<a href="downloads.html" target="new">
+version 0.9.6 of 
+TTK</a> along with the <a 
+href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.5&type=source&os=Sources&downloadFile=ParaView-v5.5.2.zip"
+target="new">
+version 5.5.2 of ParaView</a>. Other versions of either software packages 
+may require slight variations in the installation procedure.
+For earlier versions of both software packages, you may want to check out 
+previous versions of our installation notes for Windows: <br>
+&nbsp;&middot;&nbsp;
+<a href="installation-windows-0.9.5.html">TTK 0.9.5 with ParaView 5.5.0</a>.<br>
+&nbsp;&middot;&nbsp;
+<a href="installation-windows-0.9.4.html">TTK 0.9.4 with ParaView 5.4.1</a>.<br>
+
+
+<p><h3>1. Installing the dependencies</h3>
+<ul>
+    <li> <a href="https://cmake.org/download" target="new">CMake</a> (tested 
+with 3.10.0) </li>
+    <li> <a href="https://git-scm.com/download" target="new">Git for 
+Windows</a> (tested with 2.15.1) </li>
+    <li> <a href="https://www.qt.io/download-qt-for-application-development" 
+target="new">QT5</a> (tested with 5.9.3) </li>
+    <li> <a href="https://www.python.org/downloads/release/python-362/" 
+target="new">
+Python</a> (tested with 3.6.2) </li>    
+    <li> <a href="http://www.boost.org/users/download" target="new">Boost</a> 
+(tested with 1.66.0) </li>    
+</ul>
+Please install all these applications with default settings and unpack Boost in 
+<code>C:\</code>.
+Change the environment variable PATH to include the following paths:<br>
+<code>
+&nbsp;&middot;&nbsp;C:\Program Files\Qt\5.9.3\msvc2015_64\bin</code><br>
+<code>&nbsp;&middot;&nbsp;C:\Program Files\Python36<br>
+</code>
+<br>
+Next, create the following environment variables:<br>
+<code>
+&nbsp;&middot;&nbsp;BOOST_ROOT = C:\boost_1_66_0\</code><br>
+<code>
+&nbsp;&middot;&nbsp;Qt5_DIR = C:\Program 
+Files\Qt\5.9.3\msvc2015_64\lib\cmake\Qt5</code>
+</p>
+
+<h4>Optional dependencies</h4>
+In order to enjoy the complete set of TTK features, we also recommend to 
+install the following, optional dependencies:<br>
+&nbsp;&middot;&nbsp;
+<a href="https://github.com/LLNL/zfp" target="new">ZFP</a><br>
+<!--&nbsp;&middot;&nbsp;
+<a href="https://github.com/LLNL/zfp" target="new">ZLib</a> (Zlib should be 
+already installed if you installed vtk, as recommended above).<br>-->
+
+<p><h3>2. Building VTK</h3>
+
+Now, download the zip archive of ParaView's source tree, version 5.5.2, by 
+following 
+<a 
+href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.5&type=source&os=Sources&downloadFile=ParaView-v5.5.2.zip"
+target="new">this link</a> and decompress the archive to <code>C:\</code> (this 
+will create the directory <code>C:\ParaView-v5.5.2</code>).<br><br>
+
+    Next, open the command prompt by pressing <code>Windows+X</code> to open 
+the 
+Power Users menu, and then click on <code>Command Prompt 
+(Admin)</code>.<br><br>    
+    Run the following commands to configure VTK with CMake:<br>
+    <code>cd ..\..\</code><br>
+    <code>cd C:\ParaView-v5.5.2</code><br>
+    <code>cd VTK</code><br>
+    <code>mkdir build</code><br>
+    <code>cd build</code><br>
+    <code>cmake-gui ..\</code><br>
+    <br>
+    Click on the "Configure" button and select the appropriate generator 
+(in these notes, "Visual Studio 14 2015 Win64" for x64-bit applications).
+Make sure to set the following 
+variable:<br> 
+    <code>&nbsp;&middot;&nbsp;CMAKE_CONFIGURATION_TYPES=Release</code><br>
+    <code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=C:/Program Files/VTK/</code>
+    <br><br>
+    Click on the "Generate" button. Next, click on the "Open project" 
+button.<br>
+    Under Visual Studio, make sure to select the target named 
+<code>INSTALL</code>.<br>Build it and close Visual Studio, CMake and 
+the command prompt.<br><br>
+    Change the environment variable <code>PATH</code> to include the path:<br>
+    <code>&nbsp;&middot;&nbsp;C:\Program Files\VTK\bin</code>
+</p>
+<p><h3>3. Download TTK</h3>
+Download TTK's source code archive <code>ttk-0.9.6.zip</code> from the 
+<a target="new" href="downloads.html">download page</a> and decompress it to 
+<code>C:\</code>.
+</p>
+<p><h3>4. Patching ParaView</h3>
+In order to enjoy the complete set of TTK features, we recommend at this stage 
+to patch the ParaView source tree. This step is optional. To proceed, go to the 
+patch directory: <br>
+    <code>cd C:\ttk-0.9.6\paraview\patch</code><br><br>
+    Next, on 64-bit installations, run the following command:<br>
+    <code>patch-paraview-msvc.cmd C:\ParaView-v5.5.2</code><br><br>
+    Otherwise, for 32-bit installations, run the following command:<br>
+    <code>patch-paraview-msvc-x86.cmd C:\ParaView-v5.5.2</code><br><br>
+<!--    Next, on x86 installations, run the following command:<br>
+    <code>patch-paraview-msvc-x86.cmd C:\ParaView-v5.5.2</code><br><br>
+    Otherwise, run the following command:<br>
+    <code>patch-paraview-msvc.cmd C:\ParaView-v5.5.2</code><br><br>-->
+    Finally, run the following command to deploy the complete set of TTK 
+features:<br>
+    <code>patch-paraview-5.5.2.sh C:\ParaView-v5.5.2</code><br>
+    <code>cd ..\..\..</code><br>
+</p>
+<p><h3>5. Installing ParaView</h3>
+    Run the following commands to configure ParaView with CMake: <br>
+    <code>cd ParaView-v5.5.2</code><br>
+    <code>mkdir build</code><br>
+    <code>cd build</code><br>
+    <code>cmake-gui ..\</code><br>
+    <br>
+Click on the "Configure" button and select the appropriate generator 
+(in these notes, "Visual Studio 14 2015 Win64" for x64-bit applications).
+Make sure to set the following 
+variable:<br>
+    <code>&nbsp;&middot;&nbsp;CMAKE_CONFIGURATION_TYPES=Release</code><br>
+    <code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=C:/Program 
+Files/ParaView/</code><br>
+    <code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_PYTHON=ON</code><br><br>
+Click on the "Generate" button. Next, click on the "Open project" 
+button.<br>
+    Under Visual Studio, make sure to select the target named 
+<code>INSTALL</code>.<br>Build it and close Visual Studio, CMake and 
+the command prompt.<br><br>
+    Change the environment variable <code>PATH</code> to include the path:<br>
+    <code>&nbsp;&middot;&nbsp;C:\Program Files\ParaView\bin</code><br><br>
+Next, create the following environment variable:<br>
+<code><br>
+  &nbsp;&middot;&nbsp;PARAVIEW_BIN = C:\Program Files\ParaView\bin</code><br>
+<br>
+Optionally, for an advanced Python support in ParaView, Numpy can be installed.
+For this, open the command prompt by pressing <code>Windows+X</code> to open 
+the Power Users menu, and then click on <code>Command Prompt 
+(Admin)</code> and enter the following command:<br>
+<code>pip install numpy</code><br>
+</p>
+
+<p><h3>6. Installing TTK</h3>
+Open the command prompt by pressing <code>Windows+X</code> to open 
+the Power Users menu, and then click on <code>Command Prompt 
+(Admin)</code>.<br><br> 
+
+    Run the following commands to configure TTK with CMake:<br>
+    <code>cd ..\..\ttk-0.9.6</code><br>
+    <code>mkdir build</code><br>
+    <code>cd build</code><br>
+    <code>cmake-gui ..\</code><br>
+    <br>
+Click on the "Configure" button and select the appropriate generator 
+(in these notes, "Visual Studio 14 2015 Win64" for x64-bit applications).
+Make sure to set the following 
+variable:<br>
+    <code>&nbsp;&middot;&nbsp;CMAKE_CONFIGURATION_TYPES=Release</code><br>
+    <code>&nbsp;&middot;&nbsp;ParaView_DIR=C:\ParaView-v5.5.2\build</code><br>  
+ 
+    <code>&nbsp;&middot;&nbsp;TTK_ENABLE_OPENMP=OFF</code><br>    
+    <br>   
+Click on the "Generate" button. Next, click on the "Open project" 
+button.<br>
+    Under Visual Studio, make sure to select the target named 
+<code>INSTALL</code>.<br>Build it and close Visual Studio and CMake.<br><br>
+If you got to this point without (too many) errors, then congratulations!<br>
+You have just successfully installed TTK on your Windows system!
+</p>
+
+<p>
+Now, please visit our <a href="tutorials.html">tutorial</a> page to watch video 
+tutorials showing how to use TTK with ParaView with concrete examples and how 
+to 
+use it from your own Python or C++ code or how to extend TTK by writing up your 
+own module!
+</p>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">
+                    Contact: <a href="mailto:topology.tool.kit@gmail.com">
+                    topology.tool.kit@gmail.com</a><br>
+                    Updated on July 30, 2018.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

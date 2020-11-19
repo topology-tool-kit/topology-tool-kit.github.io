@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Topology ToolKit">
+    <meta name="author" content="The Topology ToolKit">
+    <meta name="keywords" content="TTK, Topology ToolKit, Topological Data 
+Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour 
+tree, persistence diagram, persistence curve, continuous scatterplot, fiber 
+surface, contour forests, jacobi set, mandatory critical points, topological 
+simplification, VTK, ParaView, Python" />
+
+    <title>TTK - the Topology ToolKit - Topological Data Analysis and 
+Visualization</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'
+);
+
+  ga('create', 'UA-88087813-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl =
+  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-88087813-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                TTK Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="installation.html">Installation</a>
+                    </li>
+                    <li>
+                        <a href="tutorials.html">Tutorials</a>
+                    </li>
+                    <li>
+                        <a href="documentation.html">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="contribute.html">Contribute</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" 
+      style="background-image: url('img/interactionSite.png'">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Topology ToolKit</h1>
+                        <hr class="small">
+                        <span class="subheading">Gallery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>
+                  Enjoy our TTK eye candy with this gallery of screen-shots
+                  showing TTK features in action. Please visit our
+                  <a href="tutorials.html">tutorial</a> page for videos showing
+                  how to reproduce these visualizations with the example
+                  data-sets available from the
+                  <a href="downloads.html">download</a> page.
+                </p>
+                <p>
+                  A list of third-party projects using TTK is available
+                  <a href="#third-party-projects">here</a>.
+                </p>
+                <table>
+                <tr>
+                  <td>
+                    <h3>Scalar data</h3>
+                  </td>
+                </tr>
+                <tr>
+                  
+                  <td >
+                    <h4><a id="DragonDemo">Dragon demo</a></h4>
+                    TTK features in action: 
+                    ContourTree (FTM),
+                    GeometrySmoother,
+                    PersistenceCurve,
+                    PersistenceDiagram,
+                    ScalarFieldCriticalPoints,
+                    SphereFromPoint,
+                    TopologicalSimplification.<br> <br>
+                    <a href="img/gallery/dragon.jpg" target="new">
+                      <img align='center'width="95%" 
+                        src="img/gallery/dragon.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  
+                  <td >
+                    <h4><a id="MorsePersistenceDemo">Morse persistence demo</a></h4>
+                    TTK features in action:
+                    MorseSmaleComplex,
+                    PersistenceCurve,
+                    PersistenceDiagram,
+                    ScalarFieldSmoother,
+                    SphereFromPoint,
+                    TopologicalSimplification.<br> <br>
+                    <a align="center"
+                      href="img/gallery/morsePersistence.jpg" target="new">
+                      <img align='center'width="95%" 
+                        src="img/gallery/morsePersistence.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="BuiltInExample1">Built-in example 1</a></h4>
+                    TTK features in action:
+                    PersistenceCurve, 
+                    PersistenceDiagram, 
+                    ScalarFieldCriticalPoints, 
+                    ScalarFieldNormalizer, 
+                    SphereFromPoint, 
+                    TopologicalSimplification.<br> <br>
+                    <a href="img/gallery/builtinExample1.jpg" target="new">
+                      <img align='center'width="95%" 
+                        src="img/gallery/builtinExample1.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="InteractionSiteDemo">Interaction site demo</a></h4>
+                    TTK features in action:
+                    ContourTree (FTM),
+                    GeometrySmoother,
+                    PersistenceCurve,
+                    PersistenceDiagram,
+                    ScalarFieldCriticalPoints,
+                    ScalarFieldNormalizer,
+                    SphereFromPoint,
+                    TopologicalSimplification. <br> <br>
+                    <a href="img/gallery/interactionSites.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/interactionSites.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="ViscousFingeringDemo">Viscous fingering demo</a></h4>
+                    TTK features in action:
+                    ComponentSize,
+                    DistanceField,
+                    GeometrySmoother,
+                    Identifiers,
+                    IntegralLines,
+                    PersistenceCurve,
+                    PersistenceDiagram,
+                    ScalarFieldCriticalPoints,
+                    SphereFromPoint. <br> <br>
+                    <a href="img/gallery/viscousFingering.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/viscousFingering.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="MorseMoleculeDemo">Morse molecule demo</a></h4>
+                    TTK features in action:
+                    GeometrySmoother,
+                    MorseSmaleComplex,
+                    SphereFromPoint. <br> <br>
+                    <a href="img/gallery/morseMolecule.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/morseMolecule.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="TectonicPuzzleDemo">Tectonic puzzle demo</a></h4>
+                    TTK features in action:
+                    IdentifierRandomizer,
+                    MorseSmaleComplex, PersistenceDiagram,
+                    SphereFromPoint, TopologicalSimplification.<br> <br>
+                    <a href="img/gallery/geology.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/geology.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="OceanVorticesDemo">Ocean vortices demo</a></h4>
+                    TTK features in action:
+                    ComponentSize,
+                    DistanceField,
+                    IdentifierRandomizer,
+                    MergeTree, PersistenceDiagram,
+                    PointDataConvertor,
+                    SphereFromPoint, TopologicalSimplification.<br> <br>
+                    <a href="img/gallery/climate.jpg" target="new">
+                      <img align='center'width="95%"
+                        src="img/gallery/climate.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="ContourAroundPointDemo">Contour around point demo</a></h4>
+                    TTK features in action:
+                    ContourAroundPoint
+                    MergeTree,
+                    PersistenceDiagram,
+                    TopologicalSimplification.<br> <br>
+                    <a href="img/gallery/contourAroundPoint.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/contourAroundPoint.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="CTBonesDemo">CT bones demo</a></h4>
+                    TTK features in action:
+                    GeometrySmoother,
+                    MergeTree,
+                    PersistenceDiagram,
+                    SphereFromPoint,
+                    TopologicalSimplification.<br> <br>
+                    <a href="img/gallery/ctBones.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/ctBones.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="TributeToEdelsbrunner">Tribute to Edelsbrunner &amp; Harer's book (p. 217)</a></h4>
+                    TTK features in action:
+                    IdentifierRandomizer,
+                    MorseSmaleComplex,
+                    PersistenceDiagram,
+                    SphereFromPoint,
+                    TopologicalSimplification.<br> <br>
+                    <a href="img/gallery/tribute.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/tribute.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="ImageProcessingDemo">Image processing demo</a></h4>
+                    TTK features in action:
+                    IdentifierRandomizer,
+                    MorseSmaleComplex,
+                    PersistenceDiagram,
+                    SphereFromPoint,
+                    TopologicalSimplification.<br> <br>
+                    <a href="img/gallery/imageProcessing.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/imageProcessing.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="PersistenceDrivenCompressionDemo">Persistence driven compression demo</a></h4>
+                    TTK features in action:
+                    Persistence driven compression (file format: *.ttk).
+                    <br> <br>
+                    <a href="img/gallery/persistenceDrivenCompression.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/persistenceDrivenCompression.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="HarmonicSkeletonDemo">Harmonic skeleton demo</a></h4>
+                    TTK features in action:
+                    GeometrySmoother,
+                    HarmonicField,
+                    Identifiers,
+                    PersistenceDiagram,
+                    Reeb graph (FTR),
+                    ScalarFieldNormalizer,
+                    SphereFromPoint,
+                    TextureMapFromField,
+                    TopologicalSimplification.<br> <br>
+                    <a href="img/gallery/harmonicSkeleton.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/harmonicSkeleton.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="MorseSmaleQuadrangulationDemo">Morse-Smale quadrangulation demo</a></h4>
+                    TTK features in action:
+                    GeometrySmoother,
+                    IdentifierRandomizer,
+                    MorseSmaleComplex,
+                    MorseSmaleQuadrangulation,
+                    PersistenceDiagram,
+                    QuadrangulationSubdivision,
+                    ScalarFieldNormalizer,
+                    SphereFromPoint,
+                    TopologicalSimplification.<br> <br>
+                    <a href="img/gallery/morseSmaleQuadrangulation.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/morseSmaleQuadrangulation.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="PersistenceDiagramDistanceDemo">Persistence diagram distance demo</a></h4>
+                    TTK features in action:
+                    PersistenceDiagram,
+                    PersistenceDiagramClustering (for fast Wasserstein distances),
+                    SphereFromPoint.<br> <br>
+                    <a href="img/gallery/persistenceDiagramDistance.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/persistenceDiagramDistance.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="PersistenceDiagramClusteringDemo">Persistence diagram clustering demo</a></h4>
+                    TTK features in action:
+                    PersistenceDiagram,
+                    PersistenceDiagramClustering (for fast Wasserstein barycenters and clustering),
+                    SphereFromPoint.<br> <br>
+                    <a href="img/gallery/persistenceDiagramClustering.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/persistenceDiagramClustering.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h3>Bivariate scalar data</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td >
+                    <h4><a id="BuiltInExample2">Built-in example 2</a></h4>
+                    TTK features in action:
+                    ContinuousScatterplot,
+                    FiberSurface,
+                    JacobiSet,
+                    ProjectionFromField,
+                    RangePolygon. <br> <br>
+                    <a href="img/gallery/builtinExample2.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/builtinExample2.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4><a id="BivariateToyDemo">Bivariate toy demo</a></h4>
+                    TTK features in action:
+                    ContourTree (FTM),
+                    Fiber,
+                    GeometrySmoother,
+                    JacobiSet,
+                    ProjectionFromField,
+                    ReebSpace,
+                    ScalarFieldCriticalPoints,
+                    SphereFromPoint,
+                    TextureMapFromField.<br> <br>
+                    <a href="img/gallery/bivariateToy.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/bivariateToy.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4><a id="BivariateToyCSPPeelingDemo">Bivariate toy CSP peeling demo</a></h4>
+                    TTK features in action:
+                    ContinuousScatterplot,
+                    GeometrySmoother,
+                    ProjectionFromField,
+                    ReebSpace.<br> <br>
+                    <a href="img/gallery/bivariateToyCspPeeling.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/bivariateToyCspPeeling.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4><a id="MechanicalDemo">Mechanical demo</a></h4>
+                    TTK features in action:
+                    ContinuousScatterplot,
+                    GeometrySmoother,
+                    ProjectionFromField,
+                    ReebSpace. <br> <br>
+                    <a href="img/gallery/mechanical.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/mechanical.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h3>Uncertain scalar data</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4><a id="BuiltInExample3">Built-in Example 3</a></h4>
+                    TTK features in action:
+                    MandatoryCriticalPoints,
+                    PeristenceDiagram,
+                    ScalarFieldCriticalPoints,
+                    SphereFromPoint,
+                    TopologicalSimplification.
+                    <br> <br>
+                    <a href="img/gallery/builtinExample3.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/builtinExample3.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4><a id="UncertainStartingVortexDemo">Uncertain starting vortex demo</a></h4>
+                    TTK features in action:
+                    MandatoryCriticalPoints,
+                    PeristenceDiagram,
+                    ScalarFieldCriticalPoints,
+                    SphereFromPoint,
+                    TopologicalSimplification.
+                    <br> <br>
+                    <a href="img/gallery/uncertainStartingVortex.jpg"
+                      target="new">
+                      <img align='center'width="95%" src="img/gallery/uncertainStartingVortex.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h3>Time-varying scalar data</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td >
+                    <h4><a id="TimeTrackingDemo">Time tracking demo</a></h4>
+                    TTK features in action:
+                    PersistenceDiagram,
+                    PointDataSelector,
+                    SphereFromPoint,
+                    TrackingFromFields.
+                    <br> <br>
+                    <a href="img/gallery/timeTracking.jpeg" target="new">
+                      <img align='center'width="95%" src="img/gallery/timeTracking.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="NestedTrackingGraphDemo">Nested tracking graph demo</a></h4>
+                    TTK features in action:
+                    AddFieldData,
+                    BlockAggregator,
+                    CinemaProductReader,
+                    CinemaQuery,
+                    CinemaReader,
+                    EndFor,
+                    ForEachRow,
+                    MeshGraph,
+                    PlanarGraphLayout,
+                    TrackingFromOverlap.
+                    <br> <br>
+                    <a href="img/gallery/nestedTrackingGraph.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/nestedTrackingGraph.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+                
+                
+                <tr>
+                  <td>
+                    <h3>Ensemble scalar data</h3>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td >
+                    <h4><a id="PersistenceDiagramDistanceDemo">Persistence diagram distance demo</a></h4>
+                    TTK features in action:
+                    PersistenceDiagram,
+                    PersistenceDiagramClustering (for fast Wasserstein distances),
+                    SphereFromPoint.<br> <br>
+                    <a href="img/gallery/persistenceDiagramDistance.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/persistenceDiagramDistance.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="PersistenceDiagramClusteringDemo">Persistence diagram clustering demo</a></h4>
+                    TTK features in action:
+                    PersistenceDiagram,
+                    PersistenceDiagramClustering (for fast Wasserstein barycenters and clustering),
+                    SphereFromPoint.<br> <br>
+                    <a href="img/gallery/persistenceDiagramClustering.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/persistenceDiagramClustering.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+                
+                
+                <tr>
+                  <td >
+                    <h4><a id="ContourTreeAlignmentDemo">
+                    Contour tree alignment demo</a></h4>
+                    TTK features in action:
+                    ArrayEditor,
+                    BlockAggregator,
+                    CinemaProductReader,
+                    CinemaReader,
+                    CinemaQuery,
+                    ContourTreeAlignment,
+                    Extract
+                    ForEach/EndFor,
+                    GridLayout
+                    PlanarGraphLayout.
+                    <br> <br>
+                    <a href="img/gallery/contourTreeAlignment.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/contourTreeAlignment.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+                
+                
+                
+
+                <tr>
+                  <td>
+                    <h3>High-dimensional / point cloud data</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td >
+                    <h4><a id="PersistenceClusteringGalleryDemo">Persistence clustering gallery demo</a></h4>
+                    TTK features in action:
+                    DataSetInterpolator,
+                    GeometrySmoother,
+                    MorseSmaleComplex,
+                    PersistenceDiagram,
+                    SphereFromPoint,
+                    TopologicalSimplification.
+                    <br> <br>
+                    <a href="img/gallery/persistenceClusteringGallery.jpeg" target="new">
+                      <img align='center'width="95%" src="img/gallery/persistenceClusteringGallery.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="PersistenceClustering0Demo">Persistence clustering0 demo</a></h4>
+                    TTK features in action:
+                    DataSetInterpolator,
+                    GeometrySmoother,
+                    MorseSmaleComplex,
+                    PersistenceDiagram,
+                    SphereFromPoint,
+                    TopologicalSimplification.
+                    <br> <br>
+                    <a href="img/gallery/persistenceClustering0.jpeg" target="new">
+                      <img align='center'width="95%" src="img/gallery/persistenceClustering0.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="PersistenceClustering1Demo">Persistence clustering1 demo</a></h4>
+                    TTK features in action:
+                    DataSetInterpolator,
+                    GeometrySmoother,
+                    MorseSmaleComplex,
+                    PersistenceDiagram,
+                    SphereFromPoint,
+                    TopologicalSimplification.
+                    <br> <br>
+                    <a href="img/gallery/persistenceClustering1.jpeg" target="new">
+                      <img align='center'width="95%" src="img/gallery/persistenceClustering1.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="PersistenceClustering2Demo">Persistence clustering2 demo</a></h4>
+                    TTK features in action:
+                    DataSetInterpolator,
+                    GeometrySmoother,
+                    MorseSmaleComplex,
+                    PersistenceDiagram,
+                    SphereFromPoint,
+                    TopologicalSimplification.
+                    <br> <br>
+                    <a href="img/gallery/persistenceClustering2.jpeg" target="new">
+                      <img align='center'width="95%" src="img/gallery/persistenceClustering2.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="PersistenceClustering3Demo">Persistence clustering3 demo</a></h4>
+                    TTK features in action:
+                    DataSetInterpolator,
+                    GeometrySmoother,
+                    MorseSmaleComplex,
+                    PersistenceDiagram,
+                    SphereFromPoint,
+                    TopologicalSimplification.
+                    <br> <br>
+                    <a href="img/gallery/persistenceClustering3.jpeg" target="new">
+                      <img align='center'width="95%" src="img/gallery/persistenceClustering3.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="PersistenceClustering4Demo">Persistence clustering4 demo</a></h4>
+                    TTK features in action:
+                    DataSetInterpolator,
+                    GeometrySmoother,
+                    MorseSmaleComplex,
+                    PersistenceDiagram,
+                    SphereFromPoint,
+                    TopologicalSimplification.
+                    <br> <br>
+                    <a href="img/gallery/persistenceClustering4.jpeg" target="new">
+                      <img align='center'width="95%" src="img/gallery/persistenceClustering4.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="KarhunenLoveDigits64DimensionsDemo">Karhunen-Love Digits 64-Dimensions demo</a></h4>
+                    TTK features in action:
+                    DimensionReduction,
+                    GeometrySmoother,
+                    IdentifierRandomizer,
+                    MorseSmaleComplex,
+                    PersistenceDiagram,
+                    SphereFromPoint,
+                    TopologicalSimplification.
+                    <br> <br>
+                    <a href="img/gallery/karhunenLoveDigits64Dimensions.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/karhunenLoveDigits64Dimensions.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="1ManifoldLearningDemo">1-manifold learning demo</a></h4>
+                    TTK features in action:
+                    DimensionReduction,
+                    GeometrySmoother,
+                    MorseSmaleComplex,
+                    PersistenceDiagram,
+                    SphereFromPoint,
+                    TopologicalSimplification.
+                    <br> <br>
+                    <a href="img/gallery/1manifoldLearning.jpeg" target="new">
+                      <img align='center'width="95%" src="img/gallery/1manifoldLearning.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="1ManifoldLearningCirclesDemo">1-manifold learning circles demo</a></h4>
+                    TTK features in action:
+                    DataSetInterpolator,
+                    GeometrySmoother,
+                    MorseSmaleComplex,
+                    PersistenceDiagram,
+                    SphereFromPoint,
+                    TopologicalSimplification.
+                    <br> <br>
+                    <a href="img/gallery/1manifoldLearningCircles.jpeg" target="new">
+                      <img align='center'width="95%" src="img/gallery/1manifoldLearningCircles.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4><a id="2ManifoldLearningDemo">2-manifold learning demo</a></h4>
+                    TTK features in action:
+                    GeometrySmoother,
+                    MorseSmaleComplex,
+                    PersistenceDiagram,
+                    SphereFromPoint,
+                    TopologicalSimplification.
+                    <br> <br>
+                    <a href="img/gallery/2manifoldLearning.jpeg" target="new">
+                      <img align='center'width="95%" src="img/gallery/2manifoldLearning.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h3>Misc features</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4><a id="ManifoldChecks">Manifold checks</a></h4>
+                    TTK features in action:
+                    Identifiers,
+                    ManifoldCheck,
+                    SphereFromPoint.
+                    <br> <br>
+                    <a href="img/gallery/manifoldCheck.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/manifoldCheck.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h3>In-situ features</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4><a id="GeometryApproximation">GeometryApproximation</a></h4>
+                    TTK features in action:
+                    CinemaImaging,
+                    CinemaLayout,
+                    DepthImageBasedGeometryApproximation,
+                    IcoSphere,
+                    SphereFromPoint.
+                    <br> <br>
+                    <a href="img/gallery/geometryApproximation.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/geometryApproximation.jpg" >
+                    </a>
+                  </td>
+                </tr>
+                
+                <tr height="30px" />
+                
+                <tr>
+                  <td>
+                    <h4><a id="CinemaDarkroom">Cinema Darkroom</a></h4>
+                    TTK features in action:
+                    CinemaImaging,
+                    CinemaProductReader,
+                    CinemaReader,
+                    CinemaQuery,
+                    DarkroomCamera,
+                    DarkroomColorMapping,
+                    DarkroomCompositing,
+                    DarkroomFXAA,
+                    DarkroomIBS,
+                    DarkroomSSAO,
+                    DarkroomSSDoF,
+                    DarkroomSSSAO.
+                    Extract,
+                    <br> <br>
+                    <a href="img/gallery/cinemaDarkroom.jpg" target="new">
+                      <img align='center'width="95%" src="img/gallery/cinemaDarkroom.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+              </table>
+
+              <br>
+
+              <p>
+                <h3><a name="third-party-projects">Third-party projects  using TTK</a></h3><br>
+                &nbsp;&middot;&nbsp;
+                <a href="https://github.com/kamakshidasan/cricket-topology" target="new">
+                cricket-topology
+                </a> - Topological analysis of cricket players' positional  data,
+                by Adhitya Kamakshidasan.
+                <br><br>
+                &nbsp;&middot;&nbsp;
+                <a href="https://inviwo.org/" target="new">
+                inviwo
+                </a> - Free configurable visualizations for scientific data
+                (<a href="https://github.com/inviwo/modules/blob/master/topovis/readme.md" target="new">TTK modules</a>), by the
+                <a href="https://github.com/inviwo/inviwo/graphs/contributors" target="new">Inviwo team</a>.
+                <br><br>
+                <a href="img/inviwo.png" target="new">
+                      <img align='center'width="95%" src="img/inviwo.png" >
+                </a>
+                <br><br>
+                &nbsp;&middot;&nbsp;
+                <a href="https://github.com/Twinklebear/topo-vol" target="new">
+                topo-vol
+                </a> - Topology-driven transfer function design for volume 
+                rendering, by Will Usher and Qi Wu.
+                <br><br>
+                <a href="http://i.imgur.com/0geW8ma.png" target="new">
+                      <img align='center'width="95%" src="http://i.imgur.com/0geW8ma.png" >
+                    </a>
+              </p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">
+                    Contact: <a href="mailto:topology.tool.kit@gmail.com">
+                    topology.tool.kit@gmail.com</a><br>
+                    Updated on November 19, 2020.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

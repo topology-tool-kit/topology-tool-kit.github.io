@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Topology ToolKit">
+    <meta name="author" content="The Topology ToolKit">
+    <meta name="keywords" content="TTK, Topology ToolKit, Topological Data 
+Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour 
+tree, persistence diagram, persistence curve, continuous scatterplot, fiber 
+surface, contour forests, jacobi set, mandatory critical points, topological 
+simplification, VTK, ParaView, Python" />
+
+    <title>TTK - the Topology ToolKit - Topological Data Analysis and 
+Visualization</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'
+);
+
+  ga('create', 'UA-88087813-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl =
+  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-88087813-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" 
+data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                TTK Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling 
+-->
+            <div class="collapse navbar-collapse" 
+id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="installation.html">Installation</a>
+                    </li>
+                    <li>
+                        <a href="tutorials.html">Tutorials</a>
+                    </li>
+                    <li>
+                        <a href="documentation.html">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="contribute.html">Contribute</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" 
+      style="background-image: url('img/builtinExample.png'">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Topology ToolKit</h1>
+                        <hr class="small">
+                        <span class="subheading">Tutorials</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <p>
+            For the IEEE VIS TTK Tutorial series, please visit our 
+            <a href="events.html">Events</a>
+page.
+</p>
+            
+                <p>Please find below a few video tutorials regarding:<br>
+                    &nbsp;&nbsp;<a 
+href="#overview">1. Global overview of TTK</a><br>
+                    &nbsp;&nbsp;<a 
+href="#installation">2. TTK installation</a><br>
+                    &nbsp;&nbsp;<a href="#usage">3. TTK in 
+action!</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#scalar">
+                    a) with scalar data</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#bivariate">
+                    b) with bivariate scalar data</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#uncertain">
+                    c) with uncertain scalar data</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#time">
+                    d) with time-varying scalar data</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#ensemble">
+                    e) with ensemble scalar data</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#high">
+                    f) with high-dimensional / point cloud data</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#misc">
+                    g) misc features</a><br>
+                    &nbsp;&nbsp;<a href="#insitu">
+                    4. TTK in-situ</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#cinema">
+                    a) 
+                    Cinema features</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#catalyst">
+                    b) 
+                    TTK with Catalyst</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#compression">
+                    c) Compression</a><br>
+                    &nbsp;&nbsp;<a href="#development">
+                    5. TTK development</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#python">
+                    a) 
+                    with Python</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#vtkc++">
+                    b) with VTK/C++</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#purec++">
+                    c) with pure C++</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#newModule">
+                    d) extending TTK with a new module</a><br>
+                    &nbsp;&nbsp;&nbsp;&middot;&nbsp;
+                    <a href="#newModuleBettiNumbers">
+                    e) extending TTK with a new module: an introduction 
+with Betti numbers</a><br>
+                    
+                
+                
+                <br><br>
+              TTK's user forum: <a 
+href="https://groups.google.com/forum/#!forum/ttk-users" 
+target="new">ENTER</a>.<br><br>
+                  </p>
+
+                  <p>
+                <h3><a name="overview">1.</a> Global overview of TTK</h3>
+This talk gives a global overview of TTK.
+After introducing the main concepts behind TTK's usage, we demo how to use it with simple examples in ParaView and Python. Then, we present an overview of TTK's capabilities, going from simple critical point extraction to more advanced features (Reeb graphs, Morse-Smale complexes, distances and barycenters of persistence diagrams, etc) as well as TTK's current capabilities for processing point cloud data.<br><br>
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/5m5sZ3DFtmA" frameborder="0" 
+allowfullscreen></iframe>
+<!-- <video width="100%" controls poster="img/gallery/ttk_install.jpg"> -->
+<!--   <source src="http://lip6.fr/Julien.Tierny/stuff/videos/install_compressed1k.mp4" type="video/mp4"> -->
+<!-- Your browser does not support the video tag. -->
+<!-- </video> -->
+<br><br><br>
+                </p>
+                  
+                <p>
+                <h3><a name="installation">2.</a> TTK installation</h3>
+This video shows how to install TTK on a fresh new install of Ubuntu Linux 
+16.10. Please see our <href="installation.html" target="new">installation</a> 
+page 
+to read the detailed instructions.<br><br>
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/etAe13KEWsk" frameborder="0" 
+allowfullscreen></iframe>
+<!-- <video width="100%" controls poster="img/gallery/ttk_install.jpg"> -->
+<!--   <source src="http://lip6.fr/Julien.Tierny/stuff/videos/install_compressed1k.mp4" type="video/mp4"> -->
+<!-- Your browser does not support the video tag. -->
+<!-- </video> -->
+<br><br><br>
+                </p>
+
+                <p>
+                <h3><a name="usage">3.</a> TTK in action!</h3>
+                In the following, we assume that you successfully installed TTK 
+(see the above <a href="#installation">video</a> and our <a 
+href="installation.html">installation</a> page). We will also assume that you 
+downloaded the TTK data tarball from our <a href="downloads.html">download</a> 
+page (for instance, into your <code>~/Downloads/</code> directory). From there, 
+enter the following commands under Linux (omit the <code>$</code> 
+character) to decompress the data tarball:<br><br>
+<code>$ mkdir ~/ttk</code><br>
+<code>$ mv ~/Downloads/ttk-data-0.9.8.tar.gz</code><br>
+<code>$ cd ~/ttk</code><br>
+<code>$ tar xvzf ttk-data-0.9.8.tar.gz</code><br>
+<code>$ rm ttk-data-0.9.8.tar.gz</code><br><br>
+
+
+
+
+
+You can now proceed with the following videos to see how to reproduce the 
+examples shown in the gallery section with the example data-sets you just 
+de-compressed. 
+<br><br>
+Now, let's see TTK in action!</p>
+
+
+
+<p>
+                  <h4><a name="scalar">a)</a> With scalar data</h4>
+<table>
+                <tr>
+                  
+                  <td >
+                    <h4>Dragon demo</h4>
+                    Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the Dragon demo by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+$ paraview states/dragon.pvsm</code><br><br>
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/YVk9vRKIEX8" frameborder="0" 
+allowfullscreen></iframe>
+<b>Update:</b>
+as of version 0.9.6, there is no need to check the box "UseInputOffsetField". 
+Input offsets are now automatically retrieved from the data, if present. To 
+force the usage of a specific field as vertex offset (advanced usage), check 
+the box "ForceInputOffsetField".
+<br>
+<b>Update:</b>
+as of version 0.9.3, the TTK module "Contour Forests" is marked as 
+deprecated, in favor of a newer module, "Merge and Contour Tree (FTM)", 
+implementing a recently introduced algorithm using 
+task-based Fibonacci heaps. Performances should be greatly improved. 
+When using this module, to smooth 
+the contour tree skeleton, please use the "Geometry Smoother" module on the 
+"Skeleton Arcs" output and check the box "Use Input Mask Field" to constrain 
+the location of the skeleton critical nodes.
+<!--<video width="100%" controls poster="img/gallery/dragon.jpg">
+  <source 
+src="http://lip6.fr/Julien.Tierny/stuff/videos/dragon_compressed1k.mp4" 
+    type="video/mp4">
+Your browser does not support the video tag.
+</video>-->
+
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  
+                  <td >
+                    <h4>Morse persistence demo</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the Morse persistence demo by entering the following commands (omit 
+the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+$ paraview states/morsePersistence.pvsm</code><br><br>
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/xjKh6YTq5RA" frameborder="0" 
+allowfullscreen></iframe>
+<b>Update:</b>
+as of version 0.9.6, there is no need to check the box "UseInputOffsetField". 
+Input offsets are now automatically retrieved from the data, if present. To 
+force the usage of a specific field as vertex offset (advanced usage), check 
+the box "ForceInputOffsetField".
+<!--<video width="100%" controls poster="img/gallery/morsePersistence.jpg">
+  <source 
+src="http://lip6.fr/Julien.Tierny/stuff/videos/morsePersistence_compressed1k.
+mp4" 
+    type="video/mp4">
+Your browser does not support the video tag.
+</video>-->
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4>Built-in example 1</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the first built-in example demo by entering the following 
+commands (omit 
+the 
+<code>$</code> character):<br><br>
+<code>
+$ cd ~/ttk/ttk-data-0.9.8<br>
+$ paraview states/BuiltInExample1.pvsm</code><br><br>
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/A2pzpU4Onf4" frameborder="0" 
+allowfullscreen></iframe>
+<b>Update:</b>
+as of version 0.9.6, there is no need to check the box "UseInputOffsetField". 
+Input offsets are now automatically retrieved from the data, if present. To 
+force the usage of a specific field as vertex offset (advanced usage), check 
+the box "ForceInputOffsetField".
+<!--<video width="100%" controls poster="img/gallery/builtinExample1.jpg">
+  <source 
+src="http://lip6.fr/Julien.Tierny/stuff/videos/builtin1_compressed1k.mp4" 
+    type="video/mp4">
+Your browser does not support the video tag.
+</video>-->
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4>Interaction site demo </h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the interaction site demo by entering the following 
+commands (omit 
+the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/interactionSites.pvsm</code><br><br>
+                    <a href="img/gallery/interactionSites.jpg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/interactionSites.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4>Viscous fingering demo </h4>
+                    Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the viscous fingering demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/viscousFingering.pvsm</code><br><br>
+                    <a href="img/gallery/viscousFingering.jpg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/viscousFingering.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                  <tr>
+                  <td >
+                    <h4>Morse molecule demo</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the Morse molecule demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/morseMolecule.pvsm</code><br><br>
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/Rdsfkb6SpK8" frameborder="0" 
+allowfullscreen></iframe>
+<!--<video width="100%" controls poster="img/gallery/morseMolecule.jpg">
+  <source 
+src="http://lip6.fr/Julien.Tierny/stuff/videos/morseMolecule_compressed1k.mp4" 
+    type="video/mp4">
+Your browser does not support the video tag.
+</video>-->
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4>Tectonic puzzle demo (video to come)</h4>
+                    Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the tectonic puzzle demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8</code><br>
+<code>$ paraview states/tectonicPuzzle.pvsm</code><br><br>
+                    <a href="img/gallery/geology.jpg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/geology.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                
+
+<tr>
+                  <td >
+                    <h4>Ocean vortices demo (video to come)</h4>
+                    Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the ocean vortices
+demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8</code><br>
+<code>$ paraview states/oceanVortices.pvsm</code><br><br>
+                    <a href="img/gallery/climate.jpg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/climate.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+<tr>
+                  <td >
+                    <h4>Contour around point demo</h4>
+                    Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the Contour around point 
+demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8</code><br>
+<code>$ paraview states/contourAroundPoint.pvsm</code><br><br>
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/ZY_sYzycEVA" frameborder="0" 
+allowfullscreen></iframe>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4>CT bones demo (video to come)</h4>
+                    Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the CT bones
+demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8</code><br>
+<code>$ paraview states/ctBones.pvsm</code><br><br>
+                    <a href="img/gallery/ctBones.jpg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/ctBones.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4>Tribute to Edelsbrunner and Harer's book (video to 
+come)</h4>
+                    Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the tribute to Edelsbrunner and Harer's book 
+demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8</code><br>
+<code>$ paraview states/tribute.pvsm</code><br><br>
+                    <a href="img/gallery/tribute.jpg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/tribute.jpg" >
+                    </a>
+                  </td>
+                </tr>
+                
+                <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4>Image processing demo</h4>
+                    Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the image processing demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8</code><br>
+<code>$ paraview states/imageProcessing.pvsm</code><br><br>
+                    <a href="img/gallery/imageProcessing.jpg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/imageProcessing.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+               <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4>Harmonic skeleton demo</h4>
+                    Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the Harmonic skeleton demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8</code><br>
+<code>$ paraview states/harmonicSkeleton.pvsm</code><br><br>
+                    <a href="img/gallery/harmonicSkeleton.jpg" 
+target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/harmonicSkeleton.jpg" >
+                    </a>
+                  </td>
+                </tr>                   
+                
+               <tr height="30px" />
+
+                <tr>
+                  <td >
+                    <h4>Morse-Smale quadrangulation demo</h4>
+                    Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the Morse-Smale quadrangulation demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8</code><br>
+<code>$ paraview states/morseSmaleQuadrangulation.pvsm</code><br><br>
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/eNW8l5PlgpU" frameborder="0" 
+allowfullscreen></iframe>
+<!--                    <a href="img/gallery/morseSmaleQuadrangulation.jpg" 
+target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/morseSmaleQuadrangulation.jpg" >
+                    </a>-->
+                  </td>
+                </tr>   
+                <tr height="30px" />
+
+
+
+
+
+              </table>
+</p>
+
+<p>
+                  <h4><a name="bivariate" >b)</a> With bivariate scalar 
+data</h4>
+<table>
+                  <td >
+                    <h4>Built-in example 2</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the second built-in example
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>
+$ cd ~/ttk/ttk-data-0.9.8<br>
+$ paraview states/BuiltInExample2.pvsm</code><br><br>
+<h4>Note</h4>
+In order to execute this demo, you need to have patched the ParaView source 
+tree, as described in the <a href="installation.html" target="new">installation 
+instructions </a> (step 4).<br><br>
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/7mlUzUJKA78" frameborder="0" 
+allowfullscreen></iframe>
+<!--<video width="100%" controls poster="img/gallery/builtinExample2.jpg">
+  <source 
+src="http://lip6.fr/Julien.Tierny/stuff/videos/builtin2_compressed1k.mp4" 
+    type="video/mp4">
+Your browser does not support the video tag.
+</video>-->
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Bivariate toy demo </h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the bivariate toy demo 
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/bivariateToy.pvsm</code><br><br>
+                    <a href="img/gallery/bivariateToy.jpg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/bivariateToy.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Bivariate toy CSP peeling demo (video tutorial to 
+come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the bivariate toy CSP peeling demo 
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/bivariateToyCspPeeling.pvsm</code><br><br>
+                    <a href="img/gallery/bivariateToyCspPeeling.jpg" 
+                      target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/bivariateToyCspPeeling.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Mechanical demo </h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the mechanical demo 
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/mechanical.pvsm</code><br><br>
+                    <a href="img/gallery/mechanical.jpg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/mechanical.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+              </table>
+</p>
+
+<p>
+                  <h4><a name="uncertain">c)</a> With uncertain scalar data</h4>
+<table>
+                <tr>
+                  <td>
+                    <h4>Built-in example 3 </h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the third built-in example demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/BuiltInExample3.pvsm</code><br><br>
+                    <a href="img/gallery/builtinExample3.jpg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/builtinExample3.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Uncertain starting vortex demo</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the uncertain starting vortex demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/uncertainStartingVortex.pvsm</code><br><br>
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/18sxV6A5REA" frameborder="0" 
+allowfullscreen></iframe>
+<!--<video width="100%" controls 
+poster="img/gallery/uncertainStartingVortex.jpg">
+  <source 
+src="http://lip6.fr/Julien.Tierny/stuff/videos/
+uncertainStartingVortex_compressed1k.mp4" 
+    type="video/mp4">
+Your browser does not support the video tag.
+</video>-->
+                  </td>
+                </tr>
+              </table>
+<br><br><br>
+                </p>
+                
+                <p>
+                  <h4><a name="time">d)</a> With time-varying scalar data</h4>
+<table>
+                <tr>
+                  <td>
+                    <h4>Time tracking demo </h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the
+time tracking
+demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/timeTracking.pvsm</code><br><br>
+                    <a href="img/gallery/timeTracking.jpeg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/timeTracking.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+ 
+                                <tr>
+                  <td>
+                    <h4>Nested tracking graph demo </h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the
+nested tracking graph
+demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/nestedTrackingGraph.pvsm</code><br><br>
+                    <a href="img/gallery/nestedTrackingGraph.jpg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/nestedTrackingGraph.jpg" >
+                    </a>
+                  </td>
+                </tr>
+                
+              </table>
+<br><br><br>
+                </p>
+               
+               <p>
+                  <h4><a name="ensemble">e)</a> With ensemble scalar data</h4>
+<table>
+                <tr>
+                  <td >
+                    <h4>Persistence diagram distance demo</h4>
+                    Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the persistence diagram distance demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8</code><br>
+<code>$ paraview states/persistenceDiagramDistance.pvsm</code><br><br>
+                    <a href="img/gallery/persistenceDiagramDistance.jpg" 
+target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/persistenceDiagramDistance.jpg" >
+                    </a>
+                  </td>
+                </tr> 
+                 <tr height="30px" />
+
+                                 <tr>
+                  <td >
+                    <h4>Persistence diagram clustering demo</h4>
+                    Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the persistence diagram clustering demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8</code><br>
+<code>$ paraview states/persistenceDiagramClustering.pvsm</code><br><br>
+                    <a href="img/gallery/persistenceDiagramClustering.jpg" 
+target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/persistenceDiagramClustering.jpg" >
+                    </a>
+                  </td>
+                </tr> 
+                
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Contour tree alignment demo </h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the
+contour tree alignment
+demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/contourTreeAlignment.pvsm</code><br><br>
+                    <a href="img/gallery/contourTreeAlignment.jpg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/contourTreeAlignment.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+              </table>
+<br><br><br>
+                </p>
+               
+               
+                <p>
+                  <h4><a name="high">f)</a> With high-dimensional / point cloud 
+data</h4>
+<table>
+                <tr>
+                  <td>
+                    <h4>Persistence clustering gallery demo (video tutorial to 
+come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the persistence clustering gallery demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/persistenceClusteringGallery.pvsm</code><br><br>
+                    <a href="img/gallery/persistenceClusteringGallery.jpeg" 
+target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/persistenceClusteringGallery.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Persistence clustering0 demo  (video tutorial to 
+come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the persistence clustering0 demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/persistenceClustering0.pvsm</code><br><br>
+                    <a href="img/gallery/persistenceClustering0.jpeg" 
+target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/persistenceClustering0.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Persistence clustering1 demo  (video tutorial to 
+come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the persistence clustering1 demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/persistenceClustering1.pvsm</code><br><br>
+                    <a href="img/gallery/persistenceClustering1.jpeg" 
+target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/persistenceClustering1.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Persistence clustering2 demo  (video tutorial to 
+come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the persistence clustering2 demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/persistenceClustering2.pvsm</code><br><br>
+                    <a href="img/gallery/persistenceClustering2.jpeg" 
+target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/persistenceClustering2.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Persistence clustering3 demo  (video tutorial to 
+come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the persistence clustering3 demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/persistenceClustering3.pvsm</code><br><br>
+                    <a href="img/gallery/persistenceClustering3.jpeg" 
+target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/persistenceClustering3.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Persistence clustering4 demo  (video tutorial to 
+come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the persistence clustering4 demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/persistenceClustering4.pvsm</code><br><br>
+                    <a href="img/gallery/persistenceClustering4.jpeg" 
+target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/persistenceClustering4.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+                
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Karhunen-Love Digits 64-Dimensions demo  (video tutorial to 
+come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the Karhunen-Love Digits 64-Dimensions demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/karhunenLoveDigits64Dimensions.pvsm</code><br><br>
+                    <a href="img/gallery/karhunenLoveDigits64Dimensions.jpg" 
+target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/karhunenLoveDigits64Dimensions.jpg" >
+                    </a>
+                  </td>
+                </tr>
+
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>One-manifold learning demo  (video tutorial to 
+come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the one-manifold learning demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/1manifoldLearning.pvsm</code><br><br>
+                    <a href="img/gallery/1manifoldLearning.jpeg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/1manifoldLearning.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+                <tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>One-manifold learning circles demo  (video tutorial to 
+come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the 1-manifold learning circles demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/1manifoldLearningCircles.pvsm</code><br><br>
+                    <a href="img/gallery/1manifoldLearningCircles.jpeg" 
+target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/1manifoldLearningCircles.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+                
+<tr height="30px" />
+
+                <tr>
+                  <td>
+                    <h4>Two-manifold learning demo  (video tutorial to 
+come)</h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the two-manifold learning demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/2manifoldLearning.pvsm</code><br><br>
+                    <a href="img/gallery/2manifoldLearning.jpeg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/2manifoldLearning.jpeg" >
+                    </a>
+                  </td>
+                </tr>
+
+              </table>
+<br><br><br>
+                </p>
+                
+                <p>
+                  <h4><a name="misc">g)</a> Misc features</h4>
+<table>
+                <tr>
+                  <td>
+                    <h4>Manifold checks </h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the manifold check example demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/manifoldChecks.pvsm</code><br><br>
+                    <a href="img/gallery/manifoldCheck.jpg" target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/manifoldCheck.jpg" >
+                    </a>
+                  </td>
+                </tr>
+              </table>
+<br><br><br>
+                </p>
+
+<p>
+<h3></a><a name="insitu">4.</a> TTK in-situ</h3>
+
+<p>
+<h4><a name="cinema">a)</a> Cinema features</h4>
+
+This series of tutorials describes the usage of the Cinema features available 
+in 
+TTK.
+<br>
+<br>
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/EuTuIRiNPLU" frameborder="0" 
+allowfullscreen></iframe>
+
+<br>
+<br>
+<iframe 
+ width="100%" height="420" 
+src="https://www.youtube.com/embed/yKyiRzPbs0U" 
+frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; 
+picture-in-picture" allowfullscreen></iframe>
+
+<table>
+<tr height="30px" />
+                <tr>
+                  <td>
+                    <h4>Geometry approximation </h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the geometry approximation example demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/geometryApproximation.pvsm</code><br><br>
+                    <a href="img/gallery/geometryApproximation.jpg" 
+target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/geometryApproximation.jpg" >
+                    </a>
+                  </td>
+                </tr>
+                <tr height="30px" />
+                <tr>
+                  <td>
+                    <h4>Cinema Darkroom </h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the 
+cinema darkroom
+demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview --state=states/cinemaDarkroom.py</code><br><br>
+                    <a href="img/gallery/cinemaDarkroom.jpg" 
+target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/cinemaDarkroom.jpg" >
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+<!--<video width="100%" controls poster="img/gallery/ttk_python.jpg">
+  <source 
+src="http://lip6.fr/Julien.Tierny/stuff/videos/python_compressed1k.mp4" 
+type="video/mp4">
+Your browser does not support the video tag.
+</video>-->
+
+<br><br><br>
+
+<h4><a name="catalyst">b)</a> TTK with Catalyst</h4>
+This tutorial describes 
+how to install, configure and use TTK in-situ with Catalyst. 
+In particular, it details 
+a computational fluid dynamics use-case with 
+<a target="new"
+href="https://www.code-saturne.org/cms/">
+Code_Saturne</a>.
+<br>
+<a href="catalyst.html"> > TTK in-situ with Catalyst tutorial</a><br><br>
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/CQrXCw1YJHY" frameborder="0" 
+allowfullscreen></iframe>
+
+
+<h4><a name="compression">c)</a> Compression</h4>
+<table>
+                <tr>
+                  <td>
+                    <h4>Persistence driven compression demo </h4>
+Assuming you properly installed TTK and decompressed the 
+TTK data tarball as described at the beginning of this section, you can now 
+reproduce the 
+persistence driven compression 
+demo
+by entering the following commands (omit the 
+<code>$</code> character):<br><br>
+<code>$ cd ~/ttk/ttk-data-0.9.8<br>
+<code>$ paraview states/persistenceDrivenCompression.pvsm</code><br><br>
+                    <a href="img/gallery/persistenceDrivenCompression.jpg" 
+target="new">
+                      <img align='center'width="100%" 
+                        src="img/gallery/persistenceDrivenCompression.jpg" >
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+<!--<iframe width="100%" height="420" -->
+<!--src="https://www.youtube.com/embed/etAe13KEWsk" frameborder="0" -->
+<!--allowfullscreen></iframe>-->
+</p>
+</p>
+                
+<br><br><br>
+                <p>
+                <h3><a name="development">5.</a> TTK development</h3>
+Please find below a few video tutorials showing how to use TTK from your own 
+code (in Python, VTK/C++ or pure C++) as well as how to extend TTK with a new 
+module.
+</p>
+
+<p>
+<h4><a name="python">a)</a> With Python</h4>
+See the following <a 
+href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/python"
+target="new">online example</a> for a simple illustration of TTK's usage 
+with Python.<br>
+See also this 
+<a href="persistentHomologyDummies.html" target="new">
+detailed tutorial</a> for a more advanced illustration of TTK's usage with 
+Python.<br><br>
+
+Also, note that each of the above demos (*pvsm state files) can be turned into 
+an independent Python script. Once in ParaView, enter the following menus: 
+<code>File</code>, <code>Save state...</code> and in the dialog window, 
+select the entry <code>Python state file (*.py)</code> for the field
+<code>Files of type</code>.
+<br><br>
+<!--See also the following
+<a 
+href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/python"
+target="new">
+                Online example</a>.-->
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/UaXu4EuZKgI" frameborder="0" 
+allowfullscreen></iframe>
+
+<!--<video width="100%" controls poster="img/gallery/ttk_python.jpg">
+  <source 
+src="http://lip6.fr/Julien.Tierny/stuff/videos/python_compressed1k.mp4" 
+type="video/mp4">
+Your browser does not support the video tag.
+</video>-->
+</p>
+
+<p>
+<h4><a name="vtkc++">b)</a> With VTK/C++</h4>
+<b>Update:</b> as of version 0.9.3, TTK's usage from third party code has 
+been made even simpler. Now developers can simply use the CMake call 
+<code>find_package</code> to leverage all of TTK's features!<br>
+See the following 
+<a 
+href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/vtk-c++"
+target="new">
+                Online example</a>.<br><br>
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/wtepp72rc54" frameborder="0" 
+allowfullscreen></iframe>
+
+
+<!--<video width="100%" controls poster="img/gallery/ttk_vtkc++.jpg">
+  <source 
+src="http://lip6.fr/Julien.Tierny/stuff/videos/vtkc++_compressed1k.mp4" 
+type="video/mp4">
+Your browser does not support the video tag.
+</video>-->
+</p>
+
+<p>
+<h4><a name="purec++">c)</a> With pure C++</h4>
+<b>Update:</b> as of version 0.9.3, TTK's usage from third party code has 
+been made even simpler. Now developers can simply use the CMake call 
+<code>find_package</code> to leverage all of TTK's features!<br>
+See the following 
+<a 
+href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/c++"
+target="new">
+                Online example</a>.<br><br>
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/lPfPkcUwD1M" frameborder="0" 
+allowfullscreen></iframe>
+<!--<video width="100%" controls poster="img/gallery/ttk_purec++.jpg">
+  <source 
+src="http://lip6.fr/Julien.Tierny/stuff/videos/purec++_compressed1k.mp4" 
+type="video/mp4">
+Your browser does not support the video tag.
+</video>-->
+</p>
+
+<p>
+<h4><a name="newModule">d)</a> Extending TTK with a new module</h4>
+<b>Update:</b> as of version 0.9.1, TTK's module management scripts are located 
+in the directory <code>scripts/</code> of the source tree. These scripts, to be 
+run from the root of the source tree, will now directly create, delete or 
+release custom TTK modules within the main source tree. Your custom TTK
+modules will then also be compiled during the main build of TTK (see the top 
+<code>CMakeLists.txt</code>).
+For example, to create a new module named "HelloWorld" (as 
+showcased in the video below), you should now enter the following command from 
+the root of the TTK source tree:
+<br>
+<br>
+<!-- <code>$ cd ~/ttk</code><br> -->
+<code>$ scripts/createTTKmodule.sh HelloWorld</code><br>
+<br>
+
+<iframe width="100%" height="420" 
+src="https://www.youtube.com/embed/CcU84gs_XcQ" frameborder="0" 
+allowfullscreen></iframe>
+<!--<video width="100%" controls poster="img/gallery/ttk_newModule.jpg">
+  <source src="http://lip6.fr/Julien.Tierny/stuff/videos/extendingTTK_compressed1k.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>-->
+<br>
+For further information about new modules in TTK, please see our 
+<a target="new"
+href="https://github.com/topology-tool-kit/ttk/wiki/Guidelines-for-Developing-a-New-TTK-Module">detailed
+development guidelines</a>.
+</p>
+
+<p>
+<h4><a name="newModuleBettiNumbers">e)</a> Extending TTK with a new module: 
+an introduction with Betti numbers</h4>
+This tutorial provides a brief introduction to TTK/ParaView, a step by step 
+introduction for the write-up of TTK modules and some cool exercises about
+the homology groups of PL 3-manifolds in R3.
+<br>
+<a href="bettiNumbers.html"> > Extending TTK with a new module: 
+an introduction with Betti numbers</a>
+<br>
+For further information about new modules in TTK, please see our 
+<a target="new"
+href="https://github.com/topology-tool-kit/ttk/wiki/Guidelines-for-Developing-a-New-TTK-Module">detailed
+development guidelines</a>.
+
+</p>
+
+
+
+</p>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">
+                    Contact: <a href="mailto:topology.tool.kit@gmail.com">
+                    topology.tool.kit@gmail.com</a><br>
+                    Updated on November 19, 2020.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

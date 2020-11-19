@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Topology ToolKit">
+    <meta name="author" content="The Topology ToolKit">
+    <meta name="keywords" content="TTK, Topology ToolKit, Topological Data 
+Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour 
+tree, persistence diagram, persistence curve, continuous scatterplot, fiber 
+surface, contour forests, jacobi set, mandatory critical points, topological 
+simplification, VTK, ParaView, Python" />
+
+    <title>TTK - the Topology ToolKit - Topological Data Analysis and 
+Visualization</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'
+);
+
+  ga('create', 'UA-88087813-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl =
+  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-88087813-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" 
+data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                TTK Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling 
+-->
+            <div class="collapse navbar-collapse" 
+id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="installation.html">Installation</a>
+                    </li>
+                    <li>
+                        <a href="tutorials.html">Tutorials</a>
+                    </li>
+                    <li>
+                        <a href="documentation.html">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="contribute.html">Contribute</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" 
+      style="background-image: url('img/uncertainVortex.png'">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Topology ToolKit</h1>
+                        <hr class="small">
+                        <span class="subheading">Documentation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+<!--            <p>TTK tutorials at IEEE VIS: 
+            <a href="ieeeVisTutorial.html">online material</a>
+            </p>-->
+            
+            <p>TTK overview tutorial:<br>
+            &nbsp;&middot;&nbsp;<a href="https://youtu.be/5m5sZ3DFtmA" target="new">Video webinar</a> on the <a href="https://www.youtube.com/channel/UCYOcatH32zeOTnqjag0fNkw" target="">Applied Algebraic Topology Network YouTube channel</a>.
+            </p>
+            
+            <p>
+              Please find below a few useful documentation links for 
+              developers:<br>
+                 &nbsp;&middot;&nbsp;Using TTK in-situ with Catalyst:
+                <a href="catalyst.html" target ="new"> 
+                Online tutorial</a>
+                -
+                <a href="tutorials.html#catalyst" target ="new"> 
+                Video tutorial</a>
+                <br>
+                &nbsp;&middot;&nbsp;Using TTK with Python:
+                <a 
+href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/python"
+target="new">
+                Online example</a>
+                -
+                <a 
+href="persistentHomologyDummies.html"
+target="new">
+                Online tutorial</a>
+                -
+                <a href="tutorials.html#python" target="new">
+                Video tutorial</a>
+                <br>
+                &nbsp;&middot;&nbsp;Using TTK with VTK/C++:
+<a 
+href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/vtk-c++"
+target="new">
+                Online example</a>
+                -
+                <a href="tutorials.html#vtkc++" target="new">
+                Video tutorial</a>
+                <br>
+                &nbsp;&middot;&nbsp;Using TTK with pure C++:
+<a 
+href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/c++"
+target="new">
+                Online example</a>
+                -
+                <a href="tutorials.html#purec++" target="new">
+                Video tutorial</a>
+                <br>
+                &nbsp;&middot;&nbsp;Extending TTK with a new module:
+<a href="bettiNumbers.html" target="new">
+                Online tutorial (computation of Betti numbers)</a>
+                -
+                <a href="tutorials.html#newModule" target="new">
+                Video tutorial</a>
+                <br>
+                <a href="stuff/ttk.pdf" target="new"
+                onClick="javascript:_gaq.push(['_trackPageview',
+                          'stuff/ttk.pdf']);_gaq.push(['_trackPageview',
+                          'stuff/ttk.pdf_documentation']);"
+                >
+                  &nbsp;&middot;&nbsp;TTK description technical report</a>
+                 - <a
+href="https://vimeo.com/238314372"
+target="new">Presentation at IEEE VIS 
+2017 (video)</a> 
+                 - <a href="stuff/ttk.bib" target="new">Bibtex entry</a>
+<br>
+                <a href="stuff/ttkOverview.pdf" target="new"
+                onClick="javascript:_gaq.push(['_trackPageview',
+                          'stuff/ttkOverview.pdf']);_gaq.push(['_trackPageview',
+                          'stuff/ttkOverview.pdf_documentation']);"
+                >
+                  &nbsp;&middot;&nbsp;TTK overview technical report</a>
+                 - <a href="stuff/ttkOverview.bib" target="new">Bibtex entry</a>
+<br>
+                <a href="doc/html/index.html" target="new">
+                  &nbsp;&middot;&nbsp;TTK developer documentation<br>
+                </a>
+                <a href="https://github.com/topology-tool-kit/ttk/wiki/Guidelines-for-Developing-a-New-TTK-Module" target="new">
+                  &nbsp;&middot;&nbsp;Guidelines for creating a new module</a>
+                  (<a target="new" href="https://github.com/topology-tool-kit/ttk/wiki">TTK developer wiki</a>)<br>
+                <a target="new" href="https://github.com/topology-tool-kit/ttk/blob/dev/CONTRIBUTING.md">
+&nbsp;&middot;&nbsp;Contributing instructions</a><br>
+            </p>
+            <p>
+              Extra useful links regarding third-party components can be 
+found there:
+              <br>
+              <a href="http://www.vtk.org/doc/nightly/html/" target="new">
+                  &nbsp;&middot;&nbsp;VTK developer documentation<br>
+              </a>
+              <a href="http://www.paraview.org/Wiki/ParaView/Plugin_HowTo" 
+                target="new">
+                  &nbsp;&middot;&nbsp;ParaView plugin HowTo<br>
+              </a>
+              <a href="http://www.paraview.org/Wiki/ServerManager_XML_Hints" 
+                target="new">
+                  &nbsp;&middot;&nbsp;ParaView server plugin extra hints<br>
+              </a>
+            </p>
+            <p>
+                Third-party projects using TTK:<br>
+                <a name="#third-party-projects">&nbsp;&middot;&nbsp;</a>
+                <a href="https://github.com/kamakshidasan/cricket-topology" 
+target="new">
+                cricket-topology
+                </a> - Topological analysis of cricket players' positional 
+data,
+                by Adhitya Kamakshidasan.
+                <br>
+                &nbsp;&middot;&nbsp;
+                <a href="https://inviwo.org/" target="new">
+                inviwo
+                </a> - Free configurable visualizations for scientific data 
+                (<a href="https://github.com/inviwo/modules/blob/master/topovis/readme.md" target="new">TTK modules</a>), by the 
+                <a href="https://github.com/inviwo/inviwo/graphs/contributors" target="new">Inviwo team</a>.
+                <br>
+                &nbsp;&middot;&nbsp;
+                <a href="https://github.com/Twinklebear/topo-vol" target="new">
+                topo-vol
+                </a> - Topology-driven transfer function design for volume 
+                rendering, by Will Usher and Qi Wu.
+              </p>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">
+                    Contact: <a href="mailto:topology.tool.kit@gmail.com">
+                    topology.tool.kit@gmail.com</a><br>
+                    Updated on May 21, 2020.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
