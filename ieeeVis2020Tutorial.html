@@ -115,6 +115,9 @@ id="bs-example-navbar-collapse-1">
                         <a href="documentation.html">Documentation</a>
                     </li>
                     <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
                         <a href="contribute.html">Contribute</a>
                     </li>
                     <li>
@@ -161,7 +164,19 @@ ToolKit, What is New?</h1>
                         (<b><font color="#ff3d3d">online event</font></b>)<br>
                         <b><font color="#ff3d3d">Free registration:</font></b><br>
                         &nbsp;&middot;&nbsp;<a href="https://forms.gle/CvrY3oWZB9hWSQJb9" target="new">Tutorial pre-registration</a><br>
-                        &nbsp;&middot;&nbsp;<a href="http://ieeevis.org/year/2020/info/registration/conference-registration" target="new">IEEE VIS 2020 registration</a>
+                        &nbsp;&middot;&nbsp;<a href="http://ieeevis.org/year/2020/info/registration/conference-registration" target="new">IEEE VIS 2020 registration</a><br><br>
+                        <b><font color="#ff3d3d">Online resources:</font></b><br>
+                        &nbsp;&middot;&nbsp;<a href="https://virtual.ieeevis.org/" target="new">
+                        IEEE VIS Virtual conference site</a><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;Free 
+                        <a href="http://ieeevis.org/year/2020/info/registration/conference-registration" target="new">
+                        registration to IEEE VIS</a> required<br>
+                        &nbsp;&middot;&nbsp;<a href="https://youtu.be/l5CjWChCVbM" target="new">
+                        Youtube live stream</a><br>
+                        &nbsp;&middot;&nbsp;<a href="https://discord.gg/dxy2Uxp" target="new">
+                        IEEE VIS discord server</a><br>
+                        &nbsp;&middot;&nbsp;<a href="https://ieeevis.b-cdn.net/vis_2020/ics/t-ttk.ics" target="new">
+                        Add to calendar</a>
                         </h3></p>
                         
                         <br>
@@ -173,7 +188,38 @@ page for all tutorials in this series.
                         <br>
                         <p><font color="#ff3d3d"><h3>Note to 
 attendees</h3></font> 
-
+&nbsp;&middot;&nbsp;
+Our online TTK tutorial will be available at the following 
+<a href="https://youtu.be/l5CjWChCVbM" target="new">
+Youtube live stream</a>.<br>
+&nbsp;&middot;&nbsp;
+During the tutorial, the organizing team will be available for live discussions on 
+<a href="https://youtu.be/l5CjWChCVbM" target="new">
+Youtube's live stream chat window</a> as well as on the 
+<a href="https://discord.gg/dxy2Uxp" target="new">
+IEEE VIS discord server</a>
+(the two chats will be automatically synchronized). 
+These chats will be the main interaction media between the tutorial organizers and the attendees. Please do not hesitate to send us questions!<br>
+&nbsp;&middot;&nbsp;
+The tutorial will be organized in 3 sessions (program below). 
+Slots of 15 minutes will be available for informal discussions in between sessions.<br>
+&nbsp;&middot;&nbsp;
+The tutorial will take place on October 26, at 8:00 am (Mountain Standard Time). To avoid timezone confusion, 
+<a href="https://ieeevis.b-cdn.net/vis_2020/ics/t-ttk.ics" target="new">
+add our tutorial to your calendar!
+</a>
+<br>
+&nbsp;&middot;&nbsp;
+We view our tutorial as a social event for the entire TTK community, which we try to capture in pictures 
+(<a href="https://photos.app.goo.gl/m3NPBnH4jBMCL8mAA" target="new">2018 gallery</a>, 
+<a href="https://photos.app.goo.gl/fgN9s4st29kp1iNC6" target="new">
+2019 gallery</a>). To keep this social tradition going despite the pandemic restrictions, we kindly ask you to take a picture of yourself in front of your screen during the tutorial (with a webcam capture or a smartphone selfie) and to post it to the tutorial 
+<a href="https://photos.app.goo.gl/xk9o44zzwTLouoxB9" target="new">
+Google photo album</a>
+or to 
+<a href="mailto:ttk-tutorial-ieee-vis@googlegroups.com" target="new">
+send it to us by email</a>. Thanks!
+<br>
 &nbsp;&middot;&nbsp;
 We kindly ask potential attendees to optionally <b><font color="#ff3d3d">pre-register</font></b> at 
 <a href="https://forms.gle/CvrY3oWZB9hWSQJb9" target="new">https://forms.gle/CvrY3oWZB9hWSQJb9</a> 
@@ -187,9 +233,16 @@ color="#ff3d3d">before the tutorial</font></b>.
 Several installation alternatives are available:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;building TTK from source (default, link below, takes approximately 1 hour);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;installing TTK binary packages for Ubuntu (link below);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;downloading a pre-installed Linux virtual machine containing all the necessary software (link below);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;downloading a pre-installed Linux virtual machine containing all the necessary software packages (link below);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;installing our TTK docker image (link below);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;installing our TTK anaconda package (link below, for a python usage only).
+&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;installing our TTK anaconda package (link below, for a python usage only).<br>
+&nbsp;&middot;&nbsp;
+Please do not hesitate to 
+reach out ahead of the tutorial if you experience any issue installing TTK:
+<a href="mailto:ttk-users@googlegroups.com" target="new">
+ttk-users@googlegroups.com
+</a>
+
                         </p>
                         
                         <p><h3><a name="resources">Resources and 
@@ -238,7 +291,17 @@ TTK binary packages for Ubuntu:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;
 <a href="https://github.com/topology-tool-kit/ttk/releases/download/dev09252020/ttk-ubuntu-18.04.deb" target="new">18.04</a> 
 (ex: <code>sudo apt-get install ~/Downloads/ttk-ubuntu-18.04.deb</code>)<br>
-
+&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;Then add the following lines to your <code>~/.bashrc</code> file:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;
+<code>
+export PV_PLUGIN_PATH="/usr/lib/paraview-5.8/plugins/TopologyToolKit/"
+</code>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;
+<code>
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH};/usr/lib/x86_64-linux-gnu/ttk/"
+</code>
+<br>
 &nbsp;&middot;&nbsp;
 <a
 href="https://www-apr.lip6.fr/~tierny/stuff/teaching/ttk2020.ova"
@@ -318,26 +381,25 @@ href="https://www-apr.lip6.fr/~vidal/">Jules Vidal</a>, Sorbonne Universite</li>
 </p>
 
 
-<p><h3><a name="schedule">Tentative Schedule</a></h3>
+<p><h3><a name="schedule">Schedule</a></h3>
 <ol>
 <li>8:00am Preliminaries
 <ul>
-<li>8:00am General introduction: Julien Tierny</li>
-<li>8:05am Introduction to topological methods for data analysis: Attila Gyulassy</li>
-<li>8:35am Quick introduction to ParaView's user interface: Charles Gueunet</li>
+<li>8:00am <a href="#intro">General introduction: Julien Tierny</a></li>
+<li>8:05am <a href="#topology">Introduction to topological methods for data analysis: Attila Gyulassy</a></li>
+<li>8:35am <a href="#paraview">Quick introduction to ParaView's user interface: Charles Gueunet</a></li>
 </ul>
 </li>
 
 <li>9:15am Hands-on Exercises
 <ul>
-<li>9:15am General usage of TTK: Julien Tierny</li>
-<li>9:25am Running TTK with Docker: Christoph Garth</li>
-<li>9:35am Segmenting medical data with merge trees: Charles Gueunet</li>
-<li>9:45am Extracting filament structures with the Morse-Smale complex: 
-Pierre Guillou</li>
-<li>9:55am 
-Extracting Contours Associated with Critical Points: Christopher Kappe</li>
-<li>10:05am Distances, barycenters and clusters: Jules Vidal</li>
+<li>9:15am <a href="#usage">General usage of TTK: Julien Tierny</a></li>
+<li>9:25am <a href="#docker">Running TTK with Docker: Christoph Garth</a></li>
+<li>9:35am <a href="#mergeTrees">Segmenting medical data with merge trees: Charles Gueunet</a></li>
+<li>9:45am <a href="#morseSmaleComplex">Extracting filament structures with the Morse-Smale complex: 
+Pierre Guillou</a></li>
+<li>9:55am <a href="#criticalContours">Extracting Contours Associated with Critical Points: Christopher Kappe</a></li>
+<li>10:05am <a href="#distances">Distances, barycenters and clusters: Jules Vidal</a></li>
 </ul>
 </li>
 
@@ -345,13 +407,20 @@ Extracting Contours Associated with Critical Points: Christopher Kappe</li>
 <li>10:30am Advanced Usage 
 <ul>
 <li>10:30am 
-Using TTK with Python: Lutz Hofmann</li>
+<a href="#python">Using TTK with Python: Lutz Hofmann</a></li>
 <li>10:40am 
-Developing a New Module for TTK: Jonas Lukasczyk</li>
-<li>10:50am TTK Integration into Inviwo: Martin Falk</li>
-<li>11:05am TTK as a teaching platform: Joshua Levine</li>
+<a href="#newModule">
+Developing a New Module for TTK: Jonas Lukasczyk</a></li>
+<li>10:50am 
+<a href="#inviwo">
+TTK Integration into Inviwo: Martin Falk</a></li>
+<li>11:05am 
+<a href="#teaching">
+TTK as a teaching platform: Joshua Levine</a></li>
 <!-- <li>12:15pm Panel Discussion: Multiple Speakers, 10 minutes</li> -->
-<li>11:15am Concluding remarks: Julien Tierny</li>
+<li>11:15am 
+<a href="#conclusion">
+Concluding remarks: Julien Tierny</a></li>
 </ul>
 </li>
 
@@ -361,130 +430,151 @@ Developing a New Module for TTK: Jonas Lukasczyk</li>
 
 <p><h3><a name="talks">Talks</a></h3>
 
-<!--<h4>Preliminaries</h4>
+<h4>Preliminaries</h4>
 
-<h5>&nbsp;&middot;&nbsp;General introduction (Julien Tierny)  - <a 
-onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_intro_tierny_vis19']);"
-href="https://docs.google.com/presentation/d/1Q6XhqAV2fDae43iEX0E637VrOSqFwCXxLCY53v2u9EY/edit?usp=sharing"
-target="new">Slides</a></h5>
+<h5>&nbsp;&middot;&nbsp;
+<a name="intro">General introduction (Julien Tierny)</a>
+<br><br>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=108" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</h5>
 
-<h5>&nbsp;&middot;&nbsp;Introduction to topological methods for data analysis 
-(Joshua Levine) 
- - <a target="new"
- onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_topointro_levine_vis19']);"
- href="https://drive.google.com/open?id=1CHto6ctDSZaO0XlAZjeEddQ5gkuduS2W">Slides</a></h5>
+<h5>&nbsp;&middot;&nbsp;
+<a name="topology">Introduction to topological methods for data analysis 
+(Attila Gyulassy) </a>
+ </h5>
 
-This talk will present the core tools in topological data analysis (the Persistence diagram, the Reeb graph and its variants, annd the Morse-Smale complex ). In particular, it will detail how these tools can be used for data segmentation and feature extraction.<br/>
+This talk will present the core tools in topological data analysis (the Persistence diagram, the Reeb graph and its variants, annd the Morse-Smale complex ). In particular, it will detail how these tools can be used for data segmentation and feature extraction.<br>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=416" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-<h5>&nbsp;&middot;&nbsp;Quick introduction to ParaView's user interface (Charles 
-Gueunet)  - <a 
-onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_paraview_gueunet_vis19']);"
-target="new"
-href="https://docs.google.com/presentation/d/1aZkYSFVZxco0csXWkiwGhFoZ9ygtttFMxwqWeonSA-k/edit?usp=sharing">
-Slides</a></h5>
+<h5>&nbsp;&middot;&nbsp;
+<a name="paraview">
+Quick introduction to ParaView's user interface (Charles 
+Gueunet) </a>
+</h5>
 
 This talk will provide a brief description of ParaView's main interface, in order to support its usage for beginners in the subsequent hands-on session. This will cover the usage of filters, pipeline design and view manipulation, state files backups and Python exports.<br/>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=2259" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<br/>
 <br/>
 <h4>Hands-on Exercises</h4>
 
-<h5>&nbsp;&middot;&nbsp;General usage of TTK (Julien Tierny) - <a 
-onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_usage_tierny_vis19']);"
-href="https://docs.google.com/presentation/d/1O2uxGpDSNRmcFLUVT4lyNT-zQxYqKrxyN0hLA8fRrro/edit?usp=sharing"
-target="new">Slides</a></h5>
+<h5>&nbsp;&middot;&nbsp;
+<a name="usage">
+General usage of TTK (Julien Tierny) 
+</a>
+</h5>
 This talk will briefly describe TTK's usage philosophy. It will briefly present 
 how TTK can be used from ParaView, Python, VTK/C++ or C++.<br/>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=4665" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h5>&nbsp;&middot;&nbsp;Running TTK with Docker (Christoph Garth) - <a 
-onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_garth_vis19']);"
-href="stuff/ttk_tutorial_garth_vis19.pdf"
-target="new">Slides</a></h5>
+<h5>&nbsp;&middot;&nbsp;
+<a name="docker">
+Running TTK with Docker (Christoph Garth) 
+</a></h5>
 This talk will introduce TTK's usage with Docker.<br>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=5330" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h5>&nbsp;&middot;&nbsp;Segmenting medical data with merge trees (Charles 
-Gueunet)  - <a 
-onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_merge_gueunet_vis19']);"
-href="https://docs.google.com/presentation/d/1A-y8MxKdwE34a66gWT0h-UwOkxNYB8OWDA8hagAc3vo/edit?usp=sharing" 
-target="new">Slides</a></h5>
+<h5>&nbsp;&middot;&nbsp;
+<a name="mergeTrees">
+Segmenting medical data with merge trees (Charles 
+Gueunet)
+</a></h5>
 This hands-on TTK/ParaView exercise will be a step-by-step tutorial showing how 
 to extract individual bones in a medical CT scan interactively with merge 
 trees.
 <br>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=5927" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h5>&nbsp;&middot;&nbsp;Extracting filament structures with the Morse-Smale 
+<h5>&nbsp;&middot;&nbsp;
+<a name="morseSmaleComplex">
+Extracting filament structures with the Morse-Smale 
 complex
-(Julien Tierny)  - <a 
-onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_filament_favelier_vis19']);"
-target="new"
-href="https://docs.google.com/presentation/d/1_fBdMGqHDZ_G4Kr7xRDwMc-73d1hTKxSG91PeAUoIQU/edit?usp=sharing">Slides</a></h5>
+(Pierre Guillou)
+</a></h5>
 
 This hands-on TTK/ParaView exercise will show step-by-step how to extract filament structures with the Morse-Smale complex on chemistry data.<br/>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=6371" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-<h5>&nbsp;&middot;&nbsp;Topology-aware data compression (Charles Gueunet)  - 
-<a onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_compression_soler_vis19']);"
-href="https://docs.google.com/presentation/d/1L9ev4iD7n43P_flzt8fvI2EOu1qEHAPooxuysg736N8/edit?usp=sharing"
-target="new">Slides</a></h5>
+<h5>&nbsp;&middot;&nbsp;
+<a name="criticalContours">
+Extracting contours associated with critical points (Christopher Kappe)
+</a></h5>
+This hands-on TTK/ParaView exercise will
+show step-by-step how to extract relevant contours in the visualization, based on the extraction of salient critical points in the data.
+<br/>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=6943" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-This hands-on TTK/ParaView exercise will show step-by-step how to compress data while guaranteeing feature preservation.<br/>
-
-<h5>&nbsp;&middot;&nbsp;Distances, barycenters and clusters of Persistence diagrams (Jules Vidal)  - 
-<a onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_compression_soler_vis19']);"
-href="https://docs.google.com/presentation/d/1kKFHVKQGo0Urhbtl4qPEGWBHi8WdrXsAXmYcCovpW20/edit?usp=sharing"
-target="new">Slides</a></h5>
+<h5>&nbsp;&middot;&nbsp;
+<a name="distances">
+Distances, barycenters and clusters of Persistence diagrams (Jules Vidal)  
+</a></h5>
 
 This hands-on TTK/ParaView exercise will show step-by-step how to 
 efficiently compare and cluster data sets based on their persistence diagram.
 <br/>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=7523" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<br/>
 <br/>
 <h4>Advanced Usage</h4>
 
-<h5>&nbsp;&middot;&nbsp;TTK's architecture and core data structures (Will Usher) 
- - <a target="new"
-onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_core_usher_vis19']);"
-href="stuff/ttk_tutorial_core_usher_vis19.pdf">Slides</a></h5>
-This talk will present TTK's architecture.<br/>
+<h5>&nbsp;&middot;&nbsp;
+<a name="python">
+Using TTK with Python (Lutz Hofmann)
+</a></h5>
+This talk
+will present how to deploy (with its Anaconda package) and use
+TTK in a Python environment with simple examples.
+<br/>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=9105" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h5>&nbsp;&middot;&nbsp;Post Hoc Analysis with TTK (Jonas Lukasczyk) - <a 
-onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_lukasczyk_vis19']);"
-href="stuff/ttk_tutorial_lukasczyk_vis19.pdf">Slides</a></h5>
-This talk will show how to use the TTK modules which support 
-the in situ generation of data products (value and depth images, meta-graphs, 
-contour trees, etc.) that can be used post hoc to interactively generate nested tracking graphs,
-and approximate 3D views of the simulation data.<br/>
+<h5>&nbsp;&middot;&nbsp;
+<a name="newModule">
+Developing a new module for TTK (Jonas Lukasczyk) 
+</a></h5>
+This hands-on will present how to create in 2 minutes a
+new, running module in TTK. This presentation will also cover the
+main steps of a module creation.
+<br/>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=9601" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h5>&nbsp;&middot;&nbsp;TTK integration into Inviwo (Martin Falk) - <a 
-onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_falk_inviwo_vis19']);"
-href="stuff/ttk_tutorial_falk_inviwo_vis19.pdf">Slides</a></h5>
+<h5>&nbsp;&middot;&nbsp;
+<a name="inviwo">
+TTK integration into Inviwo (Martin Falk)
+</a></h5>
 This talk will provide a brief introduction on the concepts utilized in Inviwo like its network editor and the associated data flow paradigm. We then detail our approach of integrating TTK into the data flow within Inviwo, which involves transforming data structures from Inviwo to TTK and back. The
 seamless integration is demonstrated with a number of examples.<br/>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=10249" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-<h5>&nbsp;&middot;&nbsp;TTK as a teaching platform (Joshua Levine) - <a 
-onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_teaching_levine_vis19']);"
-href="https://drive.google.com/open?id=1caE4D2eqGNWLlhp6STujShxzUsq7A7ej">Slides</a></h5>
+<h5>&nbsp;&middot;&nbsp;
+<a name="teaching">
+TTK as a teaching platform (Joshua Levine)
+</a></h5>
 This talk will provide feedback about our experience in using TTK in our 
 topological data analysis classes. <br/>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=10998" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-<h5>&nbsp;&middot;&nbsp;Concluding remarks (Julien Tierny) - <a 
-onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_conclusion_tierny_vis19']);"
-href="https://docs.google.com/presentation/d/1Sx5jkNcRLdyBiMlmxXs-Niomi-WKy3RZCZpg0E00UcE/edit?usp=sharing"
-target="new">Slides</a></h5>-->
-Videos of the online tutorial will be available after the event.
+<h5>&nbsp;&middot;&nbsp;
+<a name="conclusion">
+Concluding remarks (Julien Tierny)
+</a></h5>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=11620" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
-<!--
+
 
 <p><h3>Pictures of the tutorial</h3></p>
- <a href="https://photos.app.goo.gl/m3NPBnH4jBMCL8mAA" target="new">
+ <a href="https://photos.app.goo.gl/xk9o44zzwTLouoxB9" target="new">
   <img align='center'width="95%" 
-   src="stuff/ieeevis2018_tutorial.jpg" >
+   src="stuff/ieeevis2020_tutorial.jpg" >
 </a>
 
--->
+
 
 
 
@@ -572,7 +662,7 @@ target="new">
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on October 2, 2020.</p>
+                    Updated on October 27, 2020.</p>
                 </div>
             </div>
         </div>
