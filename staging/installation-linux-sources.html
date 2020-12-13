@@ -280,6 +280,7 @@ $ sudo apt-get install cmake-qt-gui<br>
 $ sudo apt-get install libvtk7-dev<br>
 <!-- $ sudo apt-get install protobuf-compiler<br> -->
 $ sudo apt-get install qt5-default qttools5-dev libqt5x11extras5-dev
+libqt5svg5-dev
 </code><br><br>
 Note that these commands will also trigger the installation of the (numerous) 
 dependencies of these components.</p>
@@ -428,9 +429,9 @@ set the following variables as follows (required
 for TTK's 
 installation):<br><br>
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
-<code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_PYTHON=ON</code><br>
+<code>&nbsp;&middot;&nbsp;PARAVIEW_USE_PYTHON=ON</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_INSTALL_DEVELOPMENT_FILES=ON</code><br>
-<code>&nbsp;&middot;&nbsp;VTK_PYTHON_VERSION=3</code>
+<code>&nbsp;&middot;&nbsp;PARAVIEW_PYTHON_VERSION=3</code>
 <br>
 <!-- <code>&nbsp;&middot;&nbsp;VTK_USE_SYSTEM_PROTOBUF=ON</code><br> -->
 <!-- <code>&nbsp;&middot;&nbsp;PARAVIEW_QT_VERSION=4</code><br> -->
