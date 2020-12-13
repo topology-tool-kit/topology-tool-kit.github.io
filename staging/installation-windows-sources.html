@@ -150,16 +150,16 @@ id="bs-example-navbar-collapse-1">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
   
 
-Please find below detailed instructions for the installation of TTK under 
+Please find below detailed instructions for the installation of TTK from sources, under 
 Windows.<br><br>
 
 TTK is also supported on other operating systems:<br>
 &nbsp;&middot;&nbsp;
-<a href="installation.html">
+<a href="installation-sources.html">
 Linux installation instructions</a> (default target platform);
 <br>
 &nbsp;&middot;&nbsp;
-<a href="installation-osx.html">
+<a href="installation-osx-sources.html">
 MacOS installation instructions</a>.<br><br>
 
 These specific notes describe the installation procedure for a 
@@ -203,13 +203,12 @@ The remainder of these notes
 describe 
 the installation of the 
 <a href="downloads.html" target="new">
-version 0.9.7 of 
+version 0.9.9 of 
 TTK</a> along with the 
 <a 
-href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.6&type=source&os=all&downloadFile=ParaView-v5.6.0.tar.gz" 
+href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.8&type=source&os=Sources&downloadFile=ParaView-v5.8.1.zip" 
 target="new">
-version 5.6.0 of ParaView</a>. Other versions of either software packages 
+version 5.8.1 of ParaView</a>. Other versions of either software packages 
 may require slight variations in the installation procedure.
 For earlier versions of both software packages, you may want to check out 
 previous versions of our installation notes for Windows: <br>
@@ -287,14 +286,14 @@ already installed if you installed vtk, as recommended above).<br>-->
 
 <p><h3>2. Building VTK</h3>
 
-Now, download the zip archive of ParaView's source tree, version 5.6.0, by 
+Now, download the zip archive of ParaView's source tree, version 5.8.1, by 
 following 
 <a 
 href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.6&type=source&os=all&downloadFile=ParaView-v5.6.0.tar.gz" 
+version=v5.6&type=source&os=all&downloadFile=ParaView-v5.8.1.tar.gz" 
 target="new">
 this link</a> and decompress the archive to <code>C:\</code> (this 
-will create the directory <code>C:\ParaView-v5.6.0</code>).<br><br>
+will create the directory <code>C:\ParaView-v5.8.1</code>).<br><br>
 
     Next, open the command prompt by pressing <code>Windows+X</code> to open 
 the 
@@ -302,7 +301,7 @@ Power Users menu, and then click on <code>Command Prompt
 (Admin)</code>.<br><br>    
     Run the following commands to configure VTK with CMake:<br>
     <code>cd ..\..\</code><br>
-    <code>cd C:\ParaView-v5.6.0</code><br>
+    <code>cd C:\ParaView-v5.8.1</code><br>
     <code>cd VTK</code><br>
     <code>mkdir build</code><br>
     <code>cd build</code><br>
@@ -324,7 +323,7 @@ the command prompt.<br><br>
     <code>&nbsp;&middot;&nbsp;C:\Program Files\VTK\bin</code>
 </p>
 <p><h3>3. Download TTK</h3>
-Download TTK's source code archive <code>ttk-0.9.7.zip</code> from the 
+Download TTK's source code archive <code>ttk-0.9.9.zip</code> from the 
 <a target="new" href="downloads.html">download page</a> and decompress it to 
 <code>C:\</code>.
 </p>
@@ -332,23 +331,23 @@ Download TTK's source code archive <code>ttk-0.9.7.zip</code> from the
 In order to enjoy the complete set of TTK features, we recommend at this stage 
 to patch the ParaView source tree. This step is optional. To proceed, go to the 
 patch directory: <br>
-    <code>cd C:\ttk-0.9.7\paraview\patch</code><br><br>
+    <code>cd C:\ttk-0.9.9\paraview\patch</code><br><br>
     Next, on 64-bit installations, run the following command:<br>
-    <code>patch-paraview-msvc.cmd C:\ParaView-v5.6.0</code><br><br>
+    <code>patch-paraview-msvc.cmd C:\ParaView-v5.8.1</code><br><br>
     Otherwise, for 32-bit installations, run the following command:<br>
-    <code>patch-paraview-msvc-x86.cmd C:\ParaView-v5.6.0</code><br><br>
+    <code>patch-paraview-msvc-x86.cmd C:\ParaView-v5.8.1</code><br><br>
 <!--    Next, on x86 installations, run the following command:<br>
-    <code>patch-paraview-msvc-x86.cmd C:\ParaView-v5.6.0</code><br><br>
+    <code>patch-paraview-msvc-x86.cmd C:\ParaView-v5.8.1</code><br><br>
     Otherwise, run the following command:<br>
-    <code>patch-paraview-msvc.cmd C:\ParaView-v5.6.0</code><br><br>-->
+    <code>patch-paraview-msvc.cmd C:\ParaView-v5.8.1</code><br><br>-->
     Finally, run the following command to deploy the complete set of TTK 
 features:<br>
-    <code>patch-paraview-5.6.0.sh C:\ParaView-v5.6.0</code><br>
+    <code>patch-paraview-5.8.1.sh C:\ParaView-v5.8.1</code><br>
     <code>cd ..\..\..</code><br>
 </p>
 <p><h3>5. Installing ParaView</h3>
     Run the following commands to configure ParaView with CMake: <br>
-    <code>cd ParaView-v5.6.0</code><br>
+    <code>cd ParaView-v5.8.1</code><br>
     <code>mkdir build</code><br>
     <code>cd build</code><br>
     <code>cmake-gui ..\</code><br>
@@ -385,7 +384,7 @@ the Power Users menu, and then click on <code>Command Prompt
 (Admin)</code>.<br><br> 
 
     Run the following commands to configure TTK with CMake:<br>
-    <code>cd ..\..\ttk-0.9.7</code><br>
+    <code>cd ..\..\ttk-0.9.9</code><br>
     <code>mkdir build</code><br>
     <code>cd build</code><br>
     <code>cmake-gui ..\</code><br>
@@ -395,7 +394,7 @@ Click on the "Configure" button and select the appropriate generator
 Make sure to set the following 
 variable:<br>
     <code>&nbsp;&middot;&nbsp;CMAKE_CONFIGURATION_TYPES=Release</code><br>
-    <code>&nbsp;&middot;&nbsp;ParaView_DIR=C:\ParaView-v5.6.0\build</code><br>  
+    <code>&nbsp;&middot;&nbsp;ParaView_DIR=C:\ParaView-v5.8.1\build</code><br>  
  
     <code>&nbsp;&middot;&nbsp;TTK_ENABLE_OPENMP=OFF</code><br>    
     <br>   
@@ -411,7 +410,7 @@ href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/vtk-c%2B%2B"
 
 If you are an advanced user and you do not even wish  to activate TTK's VTK 
 support, set the CMake variables 
-<!-- NOT NEEDED AFTER RELEASE 0.9.7 -->
+<!-- NOT NEEDED AFTER RELEASE 0.9.9 -->
 <code>TTK_BUILD_STANDALONE_APPS</code> and 
 <!-- END OF NOT NEEDED -->
 <code>TTK_BUILD_VTK_WRAPPERS</code> to <code>OFF</code>.
@@ -451,7 +450,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on August 17, 2019.</p>
+                    Updated on December 13, 2020.</p>
                 </div>
             </div>
         </div>
