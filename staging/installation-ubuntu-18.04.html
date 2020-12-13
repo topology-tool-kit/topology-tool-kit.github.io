@@ -152,57 +152,90 @@ id="bs-example-navbar-collapse-1">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
   
-TTK is supported under Linux (default development platform), Windows and MacOS.<br>
-TTK can be installed from source or from pre-built binary packages.<br><br>
-Please see the instructions for your specific operating system below.<br><br>
-&nbsp;&middot;&nbsp;
-Linux:<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="installation-linux-sources.html">
-From sources</a>;<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="installation-ubuntu-20.04.html">
-Binary packages (Ubuntu 20.04)</a>;<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="installation-ubuntu-18.04.html">
-Binary packages (Ubuntu 18.04)</a>;<br><br>
+                
+                Please find below detailed instructions for the 
+installation of TTK under Ubuntu Linux.<br><br>
+These specific notes describe the installation procedure for a 
+<a 
+href="http://releases.ubuntu.com/18.04.5/ubuntu-18.04.5-desktop-amd64.iso"
+target="new">
+Ubuntu Linux 18.04.5</a> operating system (but the process should be very 
+similar 
+for other versions).
 
-&nbsp;&middot;&nbsp;
-Windows:<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="installation-windows-sources.html">
-From sources</a>;<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="installation-windows-sources.html">
-Binary packages (experimental)</a>;<br><br>
 
-&nbsp;&middot;&nbsp;
-MacOS:<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="installation-osx-sources.html">
-From sources</a>;<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="installation-osx-sources.html">
-Binary packages (experimental)</a>;<br><br>
+<p>
+<h3>1. Downloading the packages</h3>
+Please checkout and review our <a href="downloads.html" target="new">download page</a> and download the following packages:<br>
+&nbsp;&middot;&nbsp;<code>ttk-paraview-ubuntu-18.04.deb</code><br>
+&nbsp;&middot;&nbsp;<code>ttk-0.9.9-ubuntu-18.04.deb</code><br>
 
-&nbsp;&middot;&nbsp;
-Anaconda (no ParaView support):<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="https://anaconda.org/conda-forge/topologytoolkit" target="new">
-Conda install</a>;<br><br>
+<p>
+<h3>2. ParaView installation</h3>
+Assuming you downloaded the above packages in the <code>~/Downloads/</code> directory, open a terminal and enter the following commands (omit the <code>$</code> character):<br>
+<code>
+$ sudo apt-get install ~/Downloads/ttk-paraview-ubuntu-18.04.deb
+</code>
 
-&nbsp;&middot;&nbsp;
-Docker image:<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/python" target="new">
-Installation instructions</a>;<br><br>
+<p>
+<h3>3. TTK installation</h3>
+Assuming you downloaded the above packages in the <code>~/Downloads/</code> directory, open a terminal and enter the following commands (omit the <code>$</code> character):<br>
+<code>
+$ sudo apt-get install ~/Downloads/ttk-0.9.9-ubuntu-18.04.deb
+</code>
 
-&nbsp;&middot;&nbsp;
-VirtualBox image (pre-installed Linux system, password: <code>ttk</code>):<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="https://www-apr.lip6.fr/~tierny/stuff/teaching/ttk2020.ova" target="new">
-Image file</a>;<br><br>
+<p>
+<h3>4. Checking your TTK installation</h3>
+If you applied all the above steps successfully, you 
+can now open a terminal and type the following command to load your
+TTK-patched ParaView:<br><br>
+<code>$ paraview</code><br><br>
 
+<!--MacOS users will need to launch the built ParaView 
+binary from the ParaView source tree and load all the TTK plugins with the 
+<a href="http://www.paraview.org/Wiki/ParaView/Plugin_HowTo#Using_Plugins" 
+target="new">ParaView Plugin Manager</a> before continuing.<br>-->
+At this point, you should see the following TTK startup screen:<br> <br>
+<a href="img/ttkStartup.jpg" target="new">
+  <img align='center'width="95%" src="img/ttkStartup.jpg">
+</a>
+<br><br>
+
+On this screen, clicking on the "Example Visualizations" link should bring you 
+to the TTK built-in example screen:
+<br> <br>
+
+<a href="img/ttkExamples.jpg" target="new">
+  <img align='center'width="95%" src="img/ttkExamples.jpg">
+</a>
+<br><br>
+From there, clicking on one of the three buttons should generate one of the 
+following three visualizations:<br><br>
+
+<a href="img/gallery/builtinExample1.jpg" target="new">
+  <img align='center'width="95%" src="img/gallery/builtinExample1.jpg" >
+</a>
+<br><br>
+
+<a href="img/gallery/builtinExample2.jpg" target="new">
+  <img align='center'width="95%" src="img/gallery/builtinExample2.jpg" >
+</a>
+<br><br>
+
+<a href="img/gallery/builtinExample3.jpg" target="new">
+  <img align='center'width="95%" src="img/gallery/builtinExample3.jpg" >
+</a>
+<br><br>
+
+If this is the case, congratulations!<br> You have just successfully installed 
+TTK on your system!</p>
+
+<p>
+Now, please visit our <a href="tutorials.html">tutorial</a> page to watch video 
+tutorials showing how to use TTK with ParaView with concrete examples and how to 
+use it from your own Python or C++ code or how to extend TTK by writing up your 
+own module!
+</p>
             </div>
         </div>
     </div>
