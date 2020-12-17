@@ -197,24 +197,26 @@ Optionally, the following optional dependence can be installed with <code>pip</c
 <h3>2. ParaView installation</h3>
 To install TTK's version of ParaView, open a terminal and enter 
 the following command (omit the <code>$</code> character):<br><br>
-<code>$ sudo installer -pkg ttk-paraview.pkg -target</code><br>
+<code>$ sudo installer -pkg ttk-paraview.pkg -target /</code><br>
 
 <p>
 <h3>3. TTK installation</h3>
 To install TTK, open a terminal and enter 
 the following command (omit the <code>$</code> character):<br><br>
-<code>$ sudo installer -pkg ttk.pkg -target</code><br>
+<code>$ sudo installer -pkg ttk.pkg -target /</code><br>
 
 <p>
 <h3>4. Setting up environment variables</h3>
 
 At this point, for an optimal user experience, we recommend users to define the following environment variables (in particular, when using TTK with python).
 This can be done by entering the following commands (omit the <code>$</code> character):<br><br>
-<code>$ echo "export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib" >> ~/.bashrc</code><br>
-<code>$ echo "export PV_PLUGIN_PATH=${PV_PLUGIN_PATH}:/usr/local/bin/plugins/" 
- >> ~/.bashrc</code><br>
-<code>$ echo "export PYTHONPATH=${PYTHONPATH}:/usr/local/lib/python3.8/site-packages/" >> ~/.bashrc</code><br>
-<code>$ source ~/.bashrc</code><br><br>
+<code>$ echo "export CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Applications/lib/cmake/" >> ~/.zshrc</code><br>
+<code>$ echo "export DYLD_LIBRARY_PATH=${DYLD_LIBRARY_PATH}:/Applications/lib/" >> ~/.zshrc</code><br>
+<code>$ echo "export PATH=${PATH}:/Applications/bin/" >> ~/.zshrc</code><br>
+<code>$ echo "export PV_PLUGIN_PATH=${PV_PLUGIN_PATH}:/Applications/bin/plugins/" 
+ >> ~/.zshrc</code><br>
+<code>$ echo "export PYTHONPATH=${PYTHONPATH}:/Applications/lib/python3.8/site-packages/" >> ~/.zshrc</code><br>
+<code>$ source ~/.zshrc</code><br><br>
 <!-- Note that if you decided to change the default installation path of ParaView and TTK, you will need in the above commands to replace <code>/usr/local</code> by your custom installation path.  -->
 </p>
 
