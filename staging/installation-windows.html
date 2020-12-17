@@ -152,57 +152,120 @@ id="bs-example-navbar-collapse-1">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
   
-TTK is supported under Linux (default development platform), Windows and MacOS.<br>
-TTK can be installed from source or from pre-built binary packages.<br><br>
-Please see the instructions for your specific operating system below.<br><br>
-&nbsp;&middot;&nbsp;
-Linux:<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="installation-linux-sources.html">
-From sources</a>;<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="installation-ubuntu-20.04.html">
-Binary packages (Ubuntu 20.04)</a>;<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="installation-ubuntu-18.04.html">
-Binary packages (Ubuntu 18.04)</a>;<br><br>
+                
+                Please find below detailed instructions for the 
+installation of TTK under Windows.<br><br>
+These specific notes describe the installation procedure for Windows 7
+but the process should be very identical for other versions.
 
-&nbsp;&middot;&nbsp;
-Windows:<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="installation-windows-sources.html">
-From sources</a>;<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="installation-windows.html">
-Binary packages</a>;<br><br>
 
-&nbsp;&middot;&nbsp;
-MacOS:<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="installation-osx-sources.html">
-From sources</a>;<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="installation-osx-sources.html">
-Binary packages (experimental)</a>;<br><br>
+<p>
+<h3>1. Downloading the packages</h3>
+Please checkout and review our <a href="downloads.html" target="new">download page</a> and download the following packages:<br>
+&nbsp;&middot;&nbsp;<code>ttk-paraview.exe</code><br>
+&nbsp;&middot;&nbsp;<code>ttk-0.9.9.exe</code><br>
 
-&nbsp;&middot;&nbsp;
-Anaconda (no ParaView support):<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="https://anaconda.org/conda-forge/topologytoolkit" target="new">
-Conda install</a>;<br><br>
+<p>
+<h3>2. Installing dependencies with Anaconda</h3>
+To install TTK's dependencies, we recommand to Windows users to use the 
+<a href="https://anaconda.org/" target="new">
+Anaconda package manager</a>. Please checkout 
+<a href=https://www.anaconda.com/products/individual target="new">
+Anaconda's download page</a> to download and install Anaconda.<br><br>
 
-&nbsp;&middot;&nbsp;
-Docker image:<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/python" target="new">
-Installation instructions</a>;<br><br>
+When installing Anaconda, please make sure to check the box <code>Add Python to Environment variables</code> from the installation wizard. If you have already installed Anaconda previously and you do not remember if you checked that box, you will need to make sure to go through our section 
+<a href="#post-installation">Post-installation</a> at the bottom of this page.<br><br>
 
-&nbsp;&middot;&nbsp;
-VirtualBox image (pre-installed Linux system, password: <code>ttk</code>):<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="https://www-apr.lip6.fr/~tierny/stuff/teaching/ttk2020.ova" target="new">
-Image file</a>;<br><br>
+We will assume in the remainder that you installed Anaconda on your system successfully, under the directory <code>C:\ProgramData\Anaconda3</code>.
+If you have already installed Anaconda previously and you do not remember in which directory you installed it, 
+you will need to make sure to go through our section 
+<a href="#post-installation">Post-installation</a> at the bottom of this page.
+<br><br>
 
+To install TTK's and ParaView's dependencies, open the Anaconda terminal (<code>Anaconda Prompt</code>) and enter the following commands (omit the <code>></code> character):<br><br>
+<code>> conda install -c anaconda qt boost</code><br>
+<code>> conda install -c conda-forge eigen spectralib zfp scikit-learn openmp embree3</code><br>
+
+<p>
+<h3>2. ParaView installation</h3>
+In the file explorer, double-click on the <code>ttk-paraview.exe</code> file to launch TTK-ParaView's installation wizard (and click on the <i>Continue</i> buttons to proceed).
+
+<p>
+<h3>3. TTK installation</h3>
+In the file explorer, double-click on the <code>ttk-0.9.9.exe</code> file to launch TTK's installation wizard (and click on the <i>Continue</i> buttons to proceed).
+
+<p>
+<h3><a name="post-installation"></a>4. Post-installation custom paths</h3>
+If you have not installed Anaconda, ParaView or TTK into their default directories, you will need to edit a few environment variables (<code>Control Panel</code>, <code>Edit environment variables for your account</code>).
+First, add the following environment variables:
+<br>
+<code>&nbsp;&middot;&nbsp;CONDA_DIR=[Anaconda custom installation directory]</code><br>
+<code>&nbsp;&middot;&nbsp;PV_DIR=[ParaView custom installation directory]</code><br>
+<code>&nbsp;&middot;&nbsp;TTK_DIR=[TTK custom installation directory]</code><br><br>
+Next, append the following strings to the content of the following environment variables:
+<br>
+&nbsp;&middot;&nbsp;Add <code>%TTK_DIR%\lib\cmake;%PV_DIR%\lib\cmake</code> to the variable <code>CMAKE_PREFIX_PATH</code><br>
+&nbsp;&middot;&nbsp;Add <code>%TTK_DIR%\bin;%PV_DIR%\bin</code> to the variable <code>PATH</code><br>
+&nbsp;&middot;&nbsp;Add <code>%TTK_DIR%\bin\plugins</code> to the variable <code>PV_PLUGIN_PATH</code><br>
+&nbsp;&middot;&nbsp;Add <code>%CONDA_DIR%\Lib;%TTK_DIR%\bin\Lib\site-packages;%PV_DIR%\bin\Lib\site-packages</code> to the variable <code>PYTHONPATH</code><br>
+&nbsp;&middot;&nbsp;Add <code>%CONDA_DIR%\Library\plugins</code> to the variable <code>QT_PLUGIN_PATH</code><br>
+
+
+
+
+
+<p>
+<h3>5. Checking your TTK installation</h3>
+If you applied all the above steps successfully, you can now type <code>ParaView</code> in the startup menu or in a command prompt.
+<!-- can now open a terminal and type the following command to load your -->
+<!-- TTK-patched ParaView:<br><br> -->
+<!-- <code>$ paraview</code><br><br> -->
+
+<!--MacOS users will need to launch the built ParaView 
+binary from the ParaView source tree and load all the TTK plugins with the 
+<a href="http://www.paraview.org/Wiki/ParaView/Plugin_HowTo#Using_Plugins" 
+target="new">ParaView Plugin Manager</a> before continuing.<br>-->
+At this point, you should see the following TTK startup screen:<br> <br>
+<a href="img/ttkStartup.jpg" target="new">
+  <img align='center'width="95%" src="img/ttkStartup.jpg">
+</a>
+<br><br>
+
+On this screen, clicking on the "Example Visualizations" link should bring you 
+to the TTK built-in example screen:
+<br> <br>
+
+<a href="img/ttkExamples.jpg" target="new">
+  <img align='center'width="95%" src="img/ttkExamples.jpg">
+</a>
+<br><br>
+From there, clicking on one of the three buttons should generate one of the 
+following three visualizations:<br><br>
+
+<a href="img/gallery/builtinExample1.jpg" target="new">
+  <img align='center'width="95%" src="img/gallery/builtinExample1.jpg" >
+</a>
+<br><br>
+
+<a href="img/gallery/builtinExample2.jpg" target="new">
+  <img align='center'width="95%" src="img/gallery/builtinExample2.jpg" >
+</a>
+<br><br>
+
+<a href="img/gallery/builtinExample3.jpg" target="new">
+  <img align='center'width="95%" src="img/gallery/builtinExample3.jpg" >
+</a>
+<br><br>
+
+If this is the case, congratulations!<br> You have just successfully installed 
+TTK on your system!</p>
+
+<p>
+Now, please visit our <a href="tutorials.html">tutorial</a> page to watch video 
+tutorials showing how to use TTK with ParaView with concrete examples and how to 
+use it from your own Python or C++ code or how to extend TTK by writing up your 
+own module!
+</p>
             </div>
         </div>
     </div>
@@ -217,7 +280,7 @@ Image file</a>;<br><br>
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on December 17, 2020.</p>
+                    Updated on December 13, 2020.</p>
                 </div>
             </div>
         </div>
