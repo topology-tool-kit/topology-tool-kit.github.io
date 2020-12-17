@@ -285,7 +285,6 @@ libqt5svg5-dev qtxmlpatterns5-dev-tools
 Note that these commands will also trigger the installation of the (numerous) 
 dependencies of these components.</p>
 
-<!-- export PATH=$PATH:/usr/lib -->qtxml
 
 <h4>Optional dependencies</h4>
 In order to enjoy the complete set of TTK features, we also recommend to 
@@ -341,6 +340,18 @@ instructions.<br><br>
 <a target=="new" href="https://github.com/LLNL/zfp">
 following page</a> for installation 
 instructions.<br><br>
+&nbsp;&middot;&nbsp;
+<a href="https://zlib.net/" target="new">
+zlib</a> (for further compression support, version 1.2.11 or later).
+Under 
+<a
+href="http://releases.ubuntu.com/20.04.1/ubuntu-20.04.1-desktop-amd64.iso"
+target="new">
+Ubuntu Linux 20.04.1</a>, enter the following command:
+<code><br><br>
+$ sudo apt-get install zlib1g-dev
+</code><br><br>
+
 
 &nbsp;&middot;&nbsp;Other optional dependencies should already be installed by 
 default under <a
@@ -349,11 +360,8 @@ target="new">
 Ubuntu Linux</a>, such as:<br>
 &nbsp;&nbsp;&nbsp;&middot;&nbsp;
 <a href="https://www.sqlite.org/" target="new">sqlite</a> (for cinema query 
-features, version 3.24.0 or later);<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
-<a href="https://zlib.net/" target="new">
-zlib</a> (for further compression support, version 1.2.11 or later)<br>
-<br>
+features, version 3.24.0 or later);<br><br>
+
 
 
 <h4>Note to non-Ubuntu users</h4>
@@ -576,7 +584,19 @@ href="#ttkConfig">section 6.a</a>).
 </p>-->
 
 <p>
-<h3>7. Checking your TTK installation</h3>
+<h3>7. Setting up environment variables</h3>
+At this point, you will need to set the following environment variables. Under Ubuntu, this can be done by entering the following commands (omit the <code>$</code> character):<br><br>
+<code>$ echo "LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib" >> ~/.bashrc</code><br>
+<code>$ echo "PV_PLUGIN_PATH=${PV_PLUGIN_PATH}:/usr/local/bin/plugins/" 
+ >> ~/.bashrc</code><br>
+<code>$ echo "PYTHONPATH=${PYTHONPATH}:/usr/local/lib/python3.8/site-packages/" >> ~/.bashrc</code><br>
+<code>$ source ~/.bashrc</code><br><br>
+Note that if you decided to change the default installation path of ParaView and TTK, you will need in the above commands to replace <code>/usr/local</code> by your specific installation path.
+</p>
+
+
+<p>
+<h3>8. Checking your TTK installation</h3>
 If you applied all the above steps successfully (including step 4), you 
 can now open a terminal and type the following command to load your
 TTK-patched ParaView:<br><br>
@@ -647,7 +667,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on December 13, 2020.</p>
+                    Updated on December 17, 2020.</p>
                 </div>
             </div>
         </div>
