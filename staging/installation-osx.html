@@ -210,7 +210,7 @@ the following command (omit the <code>$</code> character):<br><br>
 
 At this point, for an optimal user experience, we recommend users to define the following environment variables (in particular, when using TTK with python).
 This can be done by entering the following commands (omit the <code>$</code> character):<br><br>
-<code>$ echo "export CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Applications/lib/cmake/" >> ~/.zshrc</code><br>
+<code>$ echo "export CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:$(brew --prefix qt)/lib/cmake:/Applications/lib/cmake/" >> ~/.zshrc</code><br>
 <code>$ echo "export DYLD_LIBRARY_PATH=${DYLD_LIBRARY_PATH}:/Applications/lib/" >> ~/.zshrc</code><br>
 <code>$ echo "export PATH=${PATH}:/Applications/bin/" >> ~/.zshrc</code><br>
 <code>$ echo "export PV_PLUGIN_PATH=${PV_PLUGIN_PATH}:/Applications/bin/plugins/" 
