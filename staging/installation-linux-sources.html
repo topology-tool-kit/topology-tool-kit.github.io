@@ -586,10 +586,10 @@ href="#ttkConfig">section 6.a</a>).
 <p>
 <h3>7. Setting up environment variables</h3>
 At this point, you will need to set the following environment variables. Under Ubuntu, this can be done by entering the following commands (omit the <code>$</code> character):<br><br>
-<code>$ echo "LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib" >> ~/.bashrc</code><br>
-<code>$ echo "PV_PLUGIN_PATH=${PV_PLUGIN_PATH}:/usr/local/bin/plugins/" 
+<code>$ echo "export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib" >> ~/.bashrc</code><br>
+<code>$ echo "export PV_PLUGIN_PATH=${PV_PLUGIN_PATH}:/usr/local/bin/plugins/" 
  >> ~/.bashrc</code><br>
-<code>$ echo "PYTHONPATH=${PYTHONPATH}:/usr/local/lib/python3.8/site-packages/" >> ~/.bashrc</code><br>
+<code>$ echo "export PYTHONPATH=${PYTHONPATH}:/usr/local/lib/python3.8/site-packages/" >> ~/.bashrc</code><br>
 <code>$ source ~/.bashrc</code><br><br>
 Note that if you decided to change the default installation path of ParaView and TTK, you will need in the above commands to replace <code>/usr/local</code> by your specific installation path.
 </p>
