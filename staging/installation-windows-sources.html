@@ -267,98 +267,54 @@ with Anaconda. Open an Anaconda Prompt and use this command:
 conda install -c conda-forge eigen=3.3.8 spectralib zfp scikit-learn
 </code></pre>
 
-<p><h3>2. Building VTK</h3>
-
-Now, download the zip archive of ParaView's source tree, version 5.8.1, by
-following
-<a
-href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.8&type=source&os=all&downloadFile=ParaView-v5.8.1.tar.gz"
-target="new">
-this link</a> and decompress the archive to <code>C:\</code> (this
-will create the directory <code>C:\ParaView-v5.8.1</code>).<br><br>
-
-    Next, open the command prompt by pressing <code>Windows+X</code> to open
-the
-Power Users menu, and then click on <code>Command Prompt
-(Admin)</code>.<br><br>
-    Run the following commands to configure VTK with CMake:<br>
-    <code>cd ..\..\</code><br>
-    <code>cd C:\ParaView-v5.8.1</code><br>
-    <code>cd VTK</code><br>
-    <code>mkdir build</code><br>
-    <code>cd build</code><br>
-    <code>cmake-gui ..\</code><br>
-    <br>
-    Click on the "Configure" button and select the appropriate generator
-(in these notes, "Visual Studio 14 2015 Win64" for x64-bit applications).
-Make sure to set the following
-variable:<br>
-    <code>&nbsp;&middot;&nbsp;CMAKE_CONFIGURATION_TYPES=Release</code><br>
-    <code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=C:/Program Files/VTK/</code>
-    <br><br>
-    Click on the "Generate" button. Next, click on the "Open project"
-button.<br>
-    Under Visual Studio, make sure to select the target named
-<code>INSTALL</code>.<br>Build it and close Visual Studio, CMake and
-the command prompt.<br><br>
-    Change the environment variable <code>PATH</code> to include the path:<br>
-    <code>&nbsp;&middot;&nbsp;C:\Program Files\VTK\bin</code>
-</p>
 <p><h3>3. Download TTK</h3>
 Download TTK's source code archive <code>ttk-0.9.9.zip</code> from the
-<a target="new" href="downloads.html">download page</a> and decompress it to
-<code>C:\</code>.
+<a target="new" href="downloads.html">download page</a> and decompress
+it.
 </p>
-<p><h3>4. Patching ParaView</h3>
-In order to enjoy the complete set of TTK features, we recommend at this stage
-to patch the ParaView source tree. This step is optional. To proceed, go to the
-patch directory: <br>
-    <code>cd C:\ttk-0.9.9\paraview\patch</code><br><br>
-    Next, on 64-bit installations, run the following command:<br>
-    <code>patch-paraview-msvc.cmd C:\ParaView-v5.8.1</code><br><br>
-    Otherwise, for 32-bit installations, run the following command:<br>
-    <code>patch-paraview-msvc-x86.cmd C:\ParaView-v5.8.1</code><br><br>
-<!--    Next, on x86 installations, run the following command:<br>
-    <code>patch-paraview-msvc-x86.cmd C:\ParaView-v5.8.1</code><br><br>
-    Otherwise, run the following command:<br>
-    <code>patch-paraview-msvc.cmd C:\ParaView-v5.8.1</code><br><br>-->
-    Finally, run the following command to deploy the complete set of TTK
-features:<br>
-    <code>patch-paraview-5.8.1.sh C:\ParaView-v5.8.1</code><br>
-    <code>cd ..\..\..</code><br>
+
+<p><h3>4. Download ParaView</h3>
+Download ParaView's source code archive <code>ttk-paraview-5.8.1.zip</code> from
+<a target="new"
+href="https://github.com/topology-tool-kit/ttk-paraview/archive/v5.8.1.zip">GitHub</a>
+and decompress it.
 </p>
+
 <p><h3>5. Installing ParaView</h3>
-    Run the following commands to configure ParaView with CMake: <br>
-    <code>cd ParaView-v5.8.1</code><br>
-    <code>mkdir build</code><br>
-    <code>cd build</code><br>
-    <code>cmake-gui ..\</code><br>
-    <br>
-Click on the "Configure" button and select the appropriate generator
-(in these notes, "Visual Studio 14 2015 Win64" for x64-bit applications).
-Make sure to set the following
-variable:<br>
-    <code>&nbsp;&middot;&nbsp;CMAKE_CONFIGURATION_TYPES=Release</code><br>
-    <code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=C:/Program
-Files/ParaView/</code><br>
-    <code>&nbsp;&middot;&nbsp;PARAVIEW_USE_PYTHON=ON</code><br><br>
-Click on the "Generate" button. Next, click on the "Open project"
-button.<br>
-    Under Visual Studio, make sure to select the target named
-<code>INSTALL</code>.<br>Build it and close Visual Studio, CMake and
-the command prompt.<br><br>
-    Change the environment variable <code>PATH</code> to include the path:<br>
-    <code>&nbsp;&middot;&nbsp;C:\Program Files\ParaView\bin</code><br><br>
-Next, create the following environment variable:<br>
-<code><br>
-  &nbsp;&middot;&nbsp;PARAVIEW_BIN = C:\Program Files\ParaView\bin</code><br>
+
+Open a "x64 Native Tools Command Prompt for VS 2019" in the Windows
+Startup menu and run the following commands to configure ParaView with
+CMake:
 <br>
-Optionally, for an advanced Python support in ParaView, Numpy can be installed.
-For this, open the command prompt by pressing <code>Windows+X</code> to open
-the Power Users menu, and then click on <code>Command Prompt
-(Admin)</code> and enter the following command:<br>
-<code>pip install numpy</code><br>
+
+<pre><code>
+cd ttk-paraview-5.8.1
+mkdir build
+cd build
+cmake-gui ..
+</code></pre>
+
+Click on the "Configure" button and select the appropriate generator
+(in these notes, "Visual Studio 16 2019 Win64" for x64-bit
+applications). Click on the "Generate" button. Next, click on the
+"Open project" button.
+<br>
+Under Visual Studio, make sure to select the target named
+<code>ALL_BUILD</code> and change the global configuration from
+"Debug" to "Release".
+<br>
+Build it and close Visual Studio. Re-open it with administrator rights
+and select the <code>INSTALL</code> target to install the binaries.
+<br><br>
+Change the <code>PATH</code> environment variable to
+include:
+<code>C:\Program Files (x86)\ParaView\bin</code>,
+<br>
+<code>CMAKE_PREFIX_PATH</code> to include
+<code>C:\Program Files (x86)\ParaView\lib\cmake</code>,
+<br>
+and <code>PYTHONPATH</code> to include
+<code>C:\Program Files (x86)\ParaView\bin\Lib\site-packages</code>,
 </p>
 
 <p><h3>6. Installing TTK</h3>
