@@ -130,7 +130,7 @@ id="bs-example-navbar-collapse-1">
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
     <header class="intro-header"
-      style="background-image: url('img/morseHills.png'">
+      style="background-image: url('img/morseHills.png')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -318,27 +318,26 @@ and <code>PYTHONPATH</code> to include
 </p>
 
 <p><h3>6. Installing TTK</h3>
-Open the command prompt by pressing <code>Windows+X</code> to open
-the Power Users menu, and then click on <code>Command Prompt
-(Admin)</code>.<br><br>
 
-    Run the following commands to configure TTK with CMake:<br>
-    <code>cd ..\..\ttk-0.9.9</code><br>
-    <code>mkdir build</code><br>
-    <code>cd build</code><br>
-    <code>cmake-gui ..\</code><br>
-    <br>
+Open a new "x64 Native Tools Command Prompt for VS 2019" in the
+Windows Startup menu and run the following commands to configure TTK
+with CMake:
+<br><br>
+
+Run the following commands to configure TTK with CMake:
+<br>
+<pre><code>
+cd ttk-0.9.9
+mkdir build
+cd build
+cmake-gui ..
+</code></pre>
+<br>
+
 Click on the "Configure" button and select the appropriate generator
-(in these notes, "Visual Studio 14 2015 Win64" for x64-bit applications).
-Make sure to set the following
-variable:<br>
-    <code>&nbsp;&middot;&nbsp;CMAKE_CONFIGURATION_TYPES=Release</code><br>
-    <code>&nbsp;&middot;&nbsp;ParaView_DIR=C:\ParaView-v5.8.1\build</code><br>
+(in these notes, "Visual Studio 16 2019 Win64" for x64-bit applications).
 
-    <code>&nbsp;&middot;&nbsp;TTK_ENABLE_OPENMP=OFF</code><br>
-    <br>
-
-    If you are an advanced user and you do not wish to activate TTK's ParaView
+If you are an advanced user and you do not wish to activate TTK's ParaView
 support, set the CMake variable <code>TTK_BUILD_PARAVIEW_PLUGINS</code> to
 <code>OFF</code>.
 Examples showing how to use TTK libraries from your
@@ -360,11 +359,36 @@ href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/c%2B%2B"
 >on this page</a>.<br><br>
 
 Click on the "Generate" button. Next, click on the "Open project"
-button.<br>
-    Under Visual Studio, make sure to select the target named
-<code>INSTALL</code>.<br>Build it and close Visual Studio and CMake.<br><br>
-If you got to this point without (too many) errors, then congratulations!<br>
-You have just successfully installed TTK on your Windows system!
+button.
+<br>
+Under Visual Studio, make sure to select the target named
+<code>ALL_BUILD</code>and change the global configuration from "Debug"
+to "Release".
+<br>
+Build it and close Visual Studio. Re-open it with administrator rights
+and select the <code>INSTALL</code> target to install the binaries.
+<br>
+<br>
+Change the <code>PATH</code> environment variable to
+include <code>C:\Program Files (x86)\ttk\bin</code>,
+<br>
+<code>CMAKE_PREFIX_PATH</code> to include
+<code>C:\Program Files (x86)\ttk\lib\cmake</code>,
+<br>
+<code>PV_PLUGIN_PATH</code> to include
+<code>C:\Program Files (x86)\ttk\bin\plugins</code>,
+<br>
+and <code>PYTHONPATH</code> to include
+<code>C:\Program Files (x86)\ttk\bin\Lib\site-packages</code>,
+<br>
+<br>
+If you got to this point without (too many) errors, then
+congratulations!<br>  You have just successfully installed TTK on your
+Windows system!
+<br>
+The simplest way to test it is to open ParaView with
+a <code>cmd.exe</code> command-line prompt and
+type <code>paraview</code> in it.
 </p>
 
 <p>
