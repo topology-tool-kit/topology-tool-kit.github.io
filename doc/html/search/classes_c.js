@@ -1,16 +1,12 @@
 var searchData=
 [
-  ['mandatorycriticalpoints',['MandatoryCriticalPoints',['../classttk_1_1MandatoryCriticalPoints.html',1,'ttk']]],
-  ['mandatorysaddlecomparaison',['mandatorySaddleComparaison',['../structttk_1_1mandatorySaddleComparaison.html',1,'ttk']]],
-  ['manifoldcheck',['ManifoldCheck',['../classttk_1_1ManifoldCheck.html',1,'ttk']]],
-  ['memory',['Memory',['../classttk_1_1Memory.html',1,'ttk']]],
-  ['mergetree',['MergeTree',['../classttk_1_1MergeTree.html',1,'ttk::MergeTree'],['../classttk_1_1cf_1_1MergeTree.html',1,'ttk::cf::MergeTree']]],
-  ['mesh',['Mesh',['../classttk_1_1ftr_1_1Mesh.html',1,'ttk::ftr']]],
-  ['meshgraph',['MeshGraph',['../classttk_1_1MeshGraph.html',1,'ttk']]],
-  ['morsesmalecomplex',['MorseSmaleComplex',['../classttk_1_1MorseSmaleComplex.html',1,'ttk']]],
-  ['morsesmalecomplex2d',['MorseSmaleComplex2D',['../classttk_1_1MorseSmaleComplex2D.html',1,'ttk']]],
-  ['morsesmalecomplex3d',['MorseSmaleComplex3D',['../classttk_1_1MorseSmaleComplex3D.html',1,'ttk']]],
-  ['morsesmalequadrangulation',['MorseSmaleQuadrangulation',['../classttk_1_1MorseSmaleQuadrangulation.html',1,'ttk']]],
-  ['munkres',['Munkres',['../classttk_1_1Munkres.html',1,'ttk']]],
-  ['mycmp',['MyCmp',['../structMyCmp.html',1,'']]]
+  ['lazy_4053',['Lazy',['../classttk_1_1ftr_1_1Lazy.html',1,'ttk::ftr']]],
+  ['ldistance_4054',['LDistance',['../classttk_1_1LDistance.html',1,'ttk']]],
+  ['ldistancematrix_4055',['LDistanceMatrix',['../classttk_1_1LDistanceMatrix.html',1,'ttk']]],
+  ['localforest_4056',['LocalForest',['../classttk_1_1ftr_1_1LocalForest.html',1,'ttk::ftr']]],
+  ['localforest_3c_20idvertex_20_3e_4057',['LocalForest&lt; idVertex &gt;',['../classttk_1_1ftr_1_1LocalForest.html',1,'ttk::ftr']]],
+  ['localforests_4058',['LocalForests',['../structttk_1_1ftr_1_1LocalForests.html',1,'ttk::ftr']]],
+  ['localftm_4059',['LocalFTM',['../structttk_1_1ftm_1_1LocalFTM.html',1,'ttk::ftm']]],
+  ['localizedtopologicalsimplification_4060',['LocalizedTopologicalSimplification',['../classttk_1_1LocalizedTopologicalSimplification.html',1,'ttk']]],
+  ['lowestcommonancestor_4061',['LowestCommonAncestor',['../classttk_1_1LowestCommonAncestor.html',1,'ttk']]]
 ];

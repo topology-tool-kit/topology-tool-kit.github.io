@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['scalarfieldcriticalpoints_5finl',['SCALARFIELDCRITICALPOINTS_INL',['../ScalarFieldCriticalPoints_8inl.html#a65b2f9a080d2f1a7c9d738f8f50a806c',1,'ScalarFieldCriticalPoints.inl']]]
+  ['m_5fpi_8154',['M_PI',['../Os_8h.html#ae71449b1cc6e6250b91f539153a7a0d3',1,'Os.h']]],
+  ['matchingtuple_8155',['matchingTuple',['../Auction_8h.html#a5d82f45db0f4b05eb8fb047c46326a32',1,'matchingTuple():&#160;Auction.h'],['../AuctionImpl_8h.html#a5d82f45db0f4b05eb8fb047c46326a32',1,'matchingTuple():&#160;AuctionImpl.h'],['../BottleneckDistance_8h.html#a5d82f45db0f4b05eb8fb047c46326a32',1,'matchingTuple():&#160;BottleneckDistance.h']]],
+  ['msquad_5fexplicit_5fcalls_8156',['MSQUAD_EXPLICIT_CALLS',['../ttkMorseSmaleQuadrangulation_8cpp.html#ac26fed1612e1864181ab4cda52fe523a',1,'ttkMorseSmaleQuadrangulation.cpp']]]
 ];

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['edgecompfn',['EdgeCompFN',['../namespacettk_1_1ftr.html#a91c809ce064610b62f88eef95c344746',1,'ttk::ftr']]],
-  ['edges',['Edges',['../TrackingFromOverlap_8h.html#aef8b7b6dbda4f76c383047ea4456b1b4',1,'TrackingFromOverlap.h']]],
-  ['edgescheme',['edgeScheme',['../namespacettk_1_1ftr.html#a6885dcdae3a3c74ba36fd8443f3b12e9',1,'ttk::ftr']]],
-  ['edgevertexmap',['EdgeVertexMap',['../IcoSphere_8cpp.html#a8fa9ee2c45a2378f86af180fdfd5b46d',1,'IcoSphere.cpp']]]
+  ['diagram_7857',['Diagram',['../classttk.html#aa138bbe61c397d05086b6f31a7187df4',1,'ttk']]],
+  ['diagramtuple_7858',['DiagramTuple',['../classttk.html#a4cfacd9e39eb52a5268c4efb92a648d0',1,'ttk']]],
+  ['diagramtype_7859',['diagramType',['../classttkPersistenceDiagramClustering.html#a4ed2c4e8d5d0f08843f3c05dadae059d',1,'ttkPersistenceDiagramClustering']]]
 ];

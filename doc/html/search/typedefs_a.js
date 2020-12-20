@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['valence',['valence',['../namespacettk_1_1ftm.html#a83de730e6ef20f9aec861a2f5d6ac179',1,'ttk::ftm::valence()'],['../namespacettk_1_1ftr.html#ab4b9c81cabc70c790dabf443c80c9355',1,'ttk::ftr::valence()']]],
-  ['vertcompfn',['VertCompFN',['../namespacettk_1_1ftm.html#a3e053f000e062e447dc4a8b3381958e8',1,'ttk::ftm::VertCompFN()'],['../namespacettk_1_1ftr.html#a255be96fb6d9a2bab40408a573744249',1,'ttk::ftr::VertCompFN()']]],
-  ['vertex',['Vertex',['../IcoSphere_8cpp.html#a485636e5c1a135aac0e3403ce6780d4d',1,'IcoSphere.cpp']]],
-  ['vertexlist',['VertexList',['../IcoSphere_8cpp.html#a971d39ed76d942b5ac76e42a9d7cdd79',1,'IcoSphere.cpp']]]
+  ['real_7893',['real',['../classttk.html#adcc69773a0e876d7c174d8e28d23644d',1,'ttk']]],
+  ['registry_7894',['Registry',['../ttkTriangulationFactory_8h.html#a226fc302f0bbdf87636842ffc828f5f5',1,'ttkTriangulationFactory.h']]],
+  ['registrykey_7895',['RegistryKey',['../ttkTriangulationFactory_8h.html#a98a670194bff9fa7821e9db7cd4a6c0e',1,'ttkTriangulationFactory.h']]],
+  ['registrytriangulation_7896',['RegistryTriangulation',['../ttkTriangulationFactory_8h.html#ad08ddd25089072963bd922fd7980ec98',1,'ttkTriangulationFactory.h']]],
+  ['riterator_7897',['riterator',['../classttk_1_1FTMAtomicVector.html#ada8c10465cfe413ba54315c5243477a3',1,'ttk::FTMAtomicVector::riterator()'],['../classttk_1_1FTRAtomicVector.html#acd147d515b9f9bc49064b03c319dc1de',1,'ttk::FTRAtomicVector::riterator()']]]
 ];

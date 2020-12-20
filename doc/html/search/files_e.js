@@ -1,5 +1,23 @@
 var searchData=
 [
-  ['quadrangulationsubdivision_2ecpp',['QuadrangulationSubdivision.cpp',['../QuadrangulationSubdivision_8cpp.html',1,'']]],
-  ['quadrangulationsubdivision_2eh',['QuadrangulationSubdivision.h',['../QuadrangulationSubdivision_8h.html',1,'']]]
+  ['pdbarycenter_2eh_4483',['PDBarycenter.h',['../PDBarycenter_8h.html',1,'']]],
+  ['pdbarycenterimpl_2eh_4484',['PDBarycenterImpl.h',['../PDBarycenterImpl_8h.html',1,'']]],
+  ['pdclustering_2eh_4485',['PDClustering.h',['../PDClustering_8h.html',1,'']]],
+  ['pdclusteringimpl_2eh_4486',['PDClusteringImpl.h',['../PDClusteringImpl_8h.html',1,'']]],
+  ['periodicimplicittriangulation_2ecpp_4487',['PeriodicImplicitTriangulation.cpp',['../PeriodicImplicitTriangulation_8cpp.html',1,'']]],
+  ['periodicimplicittriangulation_2eh_4488',['PeriodicImplicitTriangulation.h',['../PeriodicImplicitTriangulation_8h.html',1,'']]],
+  ['persistencecurve_2ecpp_4489',['PersistenceCurve.cpp',['../PersistenceCurve_8cpp.html',1,'']]],
+  ['persistencecurve_2eh_4490',['PersistenceCurve.h',['../PersistenceCurve_8h.html',1,'']]],
+  ['persistencediagram_2ecpp_4491',['PersistenceDiagram.cpp',['../PersistenceDiagram_8cpp.html',1,'']]],
+  ['persistencediagram_2eh_4492',['PersistenceDiagram.h',['../PersistenceDiagram_8h.html',1,'']]],
+  ['persistencediagrambarycenter_2ecpp_4493',['PersistenceDiagramBarycenter.cpp',['../PersistenceDiagramBarycenter_8cpp.html',1,'']]],
+  ['persistencediagrambarycenter_2eh_4494',['PersistenceDiagramBarycenter.h',['../PersistenceDiagramBarycenter_8h.html',1,'']]],
+  ['persistencediagramclustering_2ecpp_4495',['PersistenceDiagramClustering.cpp',['../PersistenceDiagramClustering_8cpp.html',1,'']]],
+  ['persistencediagramclustering_2eh_4496',['PersistenceDiagramClustering.h',['../PersistenceDiagramClustering_8h.html',1,'']]],
+  ['persistencediagramcompression_2eh_4497',['PersistenceDiagramCompression.h',['../PersistenceDiagramCompression_8h.html',1,'']]],
+  ['persistencediagramdistancematrix_2ecpp_4498',['PersistenceDiagramDistanceMatrix.cpp',['../PersistenceDiagramDistanceMatrix_8cpp.html',1,'']]],
+  ['persistencediagramdistancematrix_2eh_4499',['PersistenceDiagramDistanceMatrix.h',['../PersistenceDiagramDistanceMatrix_8h.html',1,'']]],
+  ['planargraphlayout_2ecpp_4500',['PlanarGraphLayout.cpp',['../PlanarGraphLayout_8cpp.html',1,'']]],
+  ['planargraphlayout_2eh_4501',['PlanarGraphLayout.h',['../PlanarGraphLayout_8h.html',1,'']]],
+  ['programbase_2eh_4502',['ProgramBase.h',['../ProgramBase_8h.html',1,'']]]
 ];

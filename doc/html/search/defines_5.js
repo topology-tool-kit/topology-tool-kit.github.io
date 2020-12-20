@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['optional_5fpriority',['OPTIONAL_PRIORITY',['../FTMTree__MT_8cpp.html#ad7a9e15ee14f256de5f40f5f9c9dd8c1',1,'OPTIONAL_PRIORITY():&#160;FTMTree_MT.cpp'],['../FTRGraph__Template_8h.html#ad7a9e15ee14f256de5f40f5f9c9dd8c1',1,'OPTIONAL_PRIORITY():&#160;FTRGraph_Template.h']]]
+  ['flt_5fsignificant_5fdigits_8150',['FLT_SIGNIFICANT_DIGITS',['../Os_8h.html#a483e8427bc753aa48b8c08e3b0ad3748',1,'Os.h']]]
 ];

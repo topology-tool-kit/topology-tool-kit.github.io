@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['z',['z',['../structNode.html#ab0676d1ca50996c875aad2e6773d758c',1,'Node']]],
-  ['zerothreshold_5f',['zeroThreshold_',['../classttk_1_1BottleneckDistance.html#abda6eb8a321ef1022535e6555c306038',1,'ttk::BottleneckDistance']]],
-  ['zfpbitbudget_5f',['zfpBitBudget_',['../classttk_1_1TopologicalCompression.html#ae5f071f69d0b533af23f688773ef0fa5',1,'ttk::TopologicalCompression']]],
-  ['zfponly_5f',['zfpOnly_',['../classttk_1_1TopologicalCompression.html#ae139c88bb1bfa134728af5390ab2896f',1,'ttk::TopologicalCompression']]]
+  ['z_7850',['z',['../structNode.html#ab0676d1ca50996c875aad2e6773d758c',1,'Node']]],
+  ['zerothreshold_5f_7851',['zeroThreshold_',['../classttk_1_1BottleneckDistance.html#abda6eb8a321ef1022535e6555c306038',1,'ttk::BottleneckDistance']]],
+  ['zfpbitbudget_7852',['ZFPBitBudget',['../classttk_1_1TopologicalCompression.html#a584848d246febf81864c8ea3a7a91005',1,'ttk::TopologicalCompression']]],
+  ['zfponly_7853',['ZFPOnly',['../classttk_1_1TopologicalCompression.html#a03c77addf5c2dfd83b9981e15661c904',1,'ttk::TopologicalCompression']]]
 ];

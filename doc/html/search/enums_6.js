@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['method',['Method',['../classttkDimensionReduction.html#aa89531fd4d90ca5d7aa02d60681d7b25',1,'ttkDimensionReduction']]]
+  ['mode_5farcmatch_7928',['Mode_ArcMatch',['../ContourTreeAlignment_8h.html#a275d2d09f357553d6d27e979f5407092',1,'ContourTreeAlignment.h']]]
 ];

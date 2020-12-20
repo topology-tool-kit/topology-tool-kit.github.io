@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['uf',['UF',['../namespacettk_1_1ftm.html#ab7cd30efcb2417782df7d413efb3df89',1,'ttk::ftm']]],
-  ['ufdatatype',['ufDataType',['../namespacettk_1_1cf.html#ab2e2a20342ed9d1ab82007a001472255',1,'ttk::cf::ufDataType()'],['../namespacettk_1_1ftm.html#aa183a35760a5d6dc4dd84900e9668c03',1,'ttk::ftm::ufDataType()']]]
+  ['orderededge_7891',['orderedEdge',['../namespacettk_1_1ftr.html#a22e0aa72fb4f4ae7665607eb367609de',1,'ttk::ftr']]],
+  ['orderedtriangle_7892',['orderedTriangle',['../namespacettk_1_1ftr.html#a26e8706511bc29db623cf867ba736565',1,'ttk::ftr']]]
 ];
