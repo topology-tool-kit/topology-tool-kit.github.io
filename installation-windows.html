@@ -115,6 +115,9 @@ id="bs-example-navbar-collapse-1">
                         <a href="documentation.html">Documentation</a>
                     </li>
                     <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
                         <a href="contribute.html">Contribute</a>
                     </li>
                     <li>
@@ -137,7 +140,7 @@ id="bs-example-navbar-collapse-1">
                     <div class="page-heading">
                         <h1>Topology ToolKit</h1>
                         <hr class="small">
-                        <span class="subheading">Windows Installation</span>
+                        <span class="subheading">Installation</span>
                     </div>
                 </div>
             </div>
@@ -149,292 +152,126 @@ id="bs-example-navbar-collapse-1">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
   
+                
+                Please find below detailed instructions for the 
+installation of TTK under Windows.<br><br>
+These specific notes describe the installation procedure for Windows 10
+but the process should be  identical for other versions.
 
-Please find below detailed instructions for the installation of TTK under 
-Windows.<br><br>
 
-TTK is also supported on other operating systems:<br>
-&nbsp;&middot;&nbsp;
-<a href="installation.html">
-Linux installation instructions</a> (default target platform);
-<br>
-&nbsp;&middot;&nbsp;
-<a href="installation-osx.html">
-MacOS installation instructions</a>.<br><br>
+<p>
+<h3>1. Downloading the packages</h3>
+Please checkout and review our <a href="downloads.html" target="new">download page</a> and download the following packages:<br>
+&nbsp;&middot;&nbsp;<code>ttk-paraview.exe</code><br>
+&nbsp;&middot;&nbsp;<code>ttk-0.9.9.exe</code><br>
 
-These specific notes describe the installation procedure for a 
-Windows 10 operating system with Visual Studio 2015 (but the process should be 
-very similar for other versions).<br><br> 
+<p>
+<h3>2. Installing dependencies with Anaconda</h3>
+To install TTK's dependencies, we recommand to Windows users to use the 
+<a href="https://anaconda.org/" target="new">
+Anaconda package manager</a>. Please checkout 
+<a href=https://www.anaconda.com/products/individual target="new">
+Anaconda's download page</a> to download and install Anaconda.<br><br>
 
-If you are an advanced user and you do not wish to install ParaView (TTK's 
-main user interface), you 
-still 
-have the possibility to install TTK without ParaView support (although we 
-highly recommend to activate it).<br>
-In that case, simply 
-download TTK as describded in section 1, install the dependencies as detailed 
-in 
-section 2 and finally, directly jump to section 6 (<i>"Installing 
-TTK"</i>). <br>
-Examples showing how to use TTK libraries from your 
-own VTK code can be found 
-<a target="new"
-href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/vtk-c%2B%2B"
->on this page</a>.<br><br>
+When installing Anaconda, please make sure 
+<!-- to perform a system wide installation (<code>All Users (requires admin privileges)</code>) and  -->
+to check the box 
+<code>Add Anaconda3 to my PATH environment variable</code> from the installation wizard. If you have already installed Anaconda previously and you do not remember if you checked that box, you will need to make sure to go through our section 
+<a href="#post-installation">Post-installation</a> at the bottom of this page.<br><br>
 
-If you are an advanced user and you do not even wish to install VTK, you still 
-have the possibility to install TTK without VTK support (although we 
-highly recommend to activate it).<br>
-In that case, simply download TTK as describded in section 1, install the 
-<b>optional</b> dependencies as detailed in 
-section 2 and finally, directly jump to section 6 (<i>"Installing 
-TTK"</i>). <br>
-Examples showing how to use TTK libraries from your own 
-C++ code can be found 
-<a target="new"
-href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/c%2B%2B"
->on this page</a>.<br>
-<br>
-
-<b>Most users will want to activate TTK's ParaView support.</b> 
+We will assume in the remainder that you installed Anaconda on your system successfully, under the default directories.
+<!-- <code>C:\ProgramData\Anaconda3</code>. -->
+If you have already installed Anaconda previously and you do not remember in which directory you installed it, 
+you will need to make sure to go through our section 
+<a href="#post-installation">Post-installation</a> at the bottom of this page.
 <br><br>
 
-The remainder of these notes 
-describe 
-the installation of the 
-<a href="downloads.html" target="new">
-version 0.9.7 of 
-TTK</a> along with the 
-<a 
-href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.6&type=source&os=all&downloadFile=ParaView-v5.6.0.tar.gz" 
-target="new">
-version 5.6.0 of ParaView</a>. Other versions of either software packages 
-may require slight variations in the installation procedure.
-For earlier versions of both software packages, you may want to check out 
-previous versions of our installation notes for Windows: <br>
-&nbsp;&middot;&nbsp;
-<a href="installation-windows-0.9.6.html">TTK 0.9.6 with ParaView 5.5.2</a>.<br>
-&nbsp;&middot;&nbsp;
-<a href="installation-windows-0.9.5.html">TTK 0.9.5 with ParaView 5.5.0</a>.<br>
-&nbsp;&middot;&nbsp;
-<a href="installation-windows-0.9.4.html">TTK 0.9.4 with ParaView 5.4.1</a>.<br>
+To install TTK's and ParaView's dependencies, open the Anaconda terminal (<code>Anaconda Prompt</code>) and enter the following commands (omit the <code>></code> character):<br><br>
+<code>> conda install -c anaconda qt boost</code><br>
+<code>> conda install -c conda-forge eigen=3.3.8 spectralib zfp scikit-learn openmp embree3</code><br>
 
+<p>
+<h3>2. ParaView installation</h3>
+In the file explorer, double-click on the <code>ttk-paraview.exe</code> file to launch TTK-ParaView's installation wizard (and click on the <i>Next</i> buttons to proceed).
 
-<p><h3>1. Installing the dependencies</h3>
-<ul>
-    <li> <a href="https://cmake.org/download" target="new">CMake</a> (tested 
-with 3.10.0) </li>
-    <li> <a href="https://git-scm.com/download" target="new">Git for 
-Windows</a> (tested with 2.15.1) </li>
-    <li> <a href="https://www.qt.io/download-qt-for-application-development" 
-target="new">QT5</a> (tested with 5.9.3) </li>
-    <li> <a href="https://www.python.org/downloads/release/python-362/" 
-target="new">
-Python</a> (tested with 3.6.2) </li>    
-    <li> <a href="http://www.boost.org/users/download" target="new">Boost</a> 
-(tested with 1.66.0) </li>    
-</ul>
-Please install all these applications with default settings and unpack Boost in 
-<code>C:\</code>.
-Change the environment variable PATH to include the following paths:<br>
-<code>
-&nbsp;&middot;&nbsp;C:\Program Files\Qt\5.9.3\msvc2015_64\bin</code><br>
-<code>&nbsp;&middot;&nbsp;C:\Program Files\Python36<br>
-</code>
+<p>
+<h3>3. TTK installation</h3>
+In the file explorer, double-click on the <code>ttk-0.9.9.exe</code> file to launch TTK's installation wizard (and click on the <i>Next</i> buttons to proceed).
+
+<p>
+<h3><a name="post-installation"></a>4. Post-installation custom paths</h3>
+If you have installed Anaconda, ParaView and TTK into their default directories, you can jump directly to the next section.<br><br>
+
+If you have not installed Anaconda, ParaView or TTK into their default directories, you will need to edit a few environment variables (<code>Control Panel</code>, <code>Edit environment variables for your account</code>).
+First, add the following environment variables:
 <br>
-Next, create the following environment variables:<br>
-<code>
-&nbsp;&middot;&nbsp;BOOST_ROOT = C:\boost_1_66_0\</code><br>
-<code>
-&nbsp;&middot;&nbsp;Qt5_DIR = C:\Program 
-Files\Qt\5.9.3\msvc2015_64\lib\cmake\Qt5</code>
-</p>
-
-<h4>Optional dependencies</h4>
-In order to enjoy the complete set of TTK features, we also recommend to 
-install the following, <i>optional</i> dependencies:<br>
-&nbsp;&middot;&nbsp;
-<a target="new" 
-href="http://eigen.tuxfamily.org/">eigen</a> (for scalar field design, version 3.3.7 or later).<br>
-&nbsp;&middot;&nbsp;
-<a target="new" 
-href="https://www.graphviz.org/">graphviz</a> (for graph 
-drawing features, version 2.40.1 or later). <br>
-&nbsp;&middot;&nbsp;
-<a target="new" 
-href="https://scikit-learn.org/stable/index.html">scikit-learn</a> for Python3 (for data 
-reduction features, version 0.19.0 or later).<br> 
-&nbsp;&middot;&nbsp;
-<a href="https://github.com/yixuan/spectra/archive/v0.8.1.tar.gz" target="new">Spectra</a> 
-(for the computation of the eigenfunctions of the Laplace-Beltrami operator, version 0.8.1 or later).
+<code>&nbsp;&middot;&nbsp;CONDA_DIR=[Anaconda custom installation directory]</code><br>
+<code>&nbsp;&middot;&nbsp;PV_DIR=[ParaView custom installation directory]</code><br>
+<code>&nbsp;&middot;&nbsp;TTK_DIR=[TTK custom installation directory]</code><br><br>
+Next, append the following strings to the content of the following environment variables:
 <br>
-&nbsp;&middot;&nbsp;
-<a href="https://www.sqlite.org/" target="new">sqlite</a> (for cinema query 
-features, version 3.24.0 or later);<br>
-&nbsp;&middot;&nbsp;
-<a href="https://github.com/LLNL/zfp" target="new">ZFP</a> 
-(for advanced compression support, version 0.5.4 or later).<br>
-&nbsp;&middot;&nbsp;
-<a href="https://zlib.net/" target="new">
-zlib</a> (for further compression support, version 1.2.11 or later)<br>
-<br> 
-<!--&nbsp;&middot;&nbsp;
-<a href="https://github.com/LLNL/zfp" target="new">ZLib</a> (Zlib should be 
-already installed if you installed vtk, as recommended above).<br>-->
+&nbsp;&middot;&nbsp;Add <code>%TTK_DIR%\lib\cmake;%PV_DIR%\lib\cmake</code> to the variable <code>CMAKE_PREFIX_PATH</code><br>
+&nbsp;&middot;&nbsp;Add <code>%TTK_DIR%\bin;%PV_DIR%\bin</code> to the variable <code>PATH</code><br>
+&nbsp;&middot;&nbsp;Add <code>%TTK_DIR%\bin\plugins</code> to the variable <code>PV_PLUGIN_PATH</code><br>
+&nbsp;&middot;&nbsp;Add <code>%CONDA_DIR%\Lib;%TTK_DIR%\bin\Lib\site-packages;%PV_DIR%\bin\Lib\site-packages</code> to the variable <code>PYTHONPATH</code><br>
+&nbsp;&middot;&nbsp;Add <code>%CONDA_DIR%\Library\plugins</code> to the variable <code>QT_PLUGIN_PATH</code><br>
 
-<p><h3>2. Building VTK</h3>
 
-Now, download the zip archive of ParaView's source tree, version 5.6.0, by 
-following 
-<a 
-href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&
-version=v5.6&type=source&os=all&downloadFile=ParaView-v5.6.0.tar.gz" 
-target="new">
-this link</a> and decompress the archive to <code>C:\</code> (this 
-will create the directory <code>C:\ParaView-v5.6.0</code>).<br><br>
 
-    Next, open the command prompt by pressing <code>Windows+X</code> to open 
-the 
-Power Users menu, and then click on <code>Command Prompt 
-(Admin)</code>.<br><br>    
-    Run the following commands to configure VTK with CMake:<br>
-    <code>cd ..\..\</code><br>
-    <code>cd C:\ParaView-v5.6.0</code><br>
-    <code>cd VTK</code><br>
-    <code>mkdir build</code><br>
-    <code>cd build</code><br>
-    <code>cmake-gui ..\</code><br>
-    <br>
-    Click on the "Configure" button and select the appropriate generator 
-(in these notes, "Visual Studio 14 2015 Win64" for x64-bit applications).
-Make sure to set the following 
-variable:<br> 
-    <code>&nbsp;&middot;&nbsp;CMAKE_CONFIGURATION_TYPES=Release</code><br>
-    <code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=C:/Program Files/VTK/</code>
-    <br><br>
-    Click on the "Generate" button. Next, click on the "Open project" 
-button.<br>
-    Under Visual Studio, make sure to select the target named 
-<code>INSTALL</code>.<br>Build it and close Visual Studio, CMake and 
-the command prompt.<br><br>
-    Change the environment variable <code>PATH</code> to include the path:<br>
-    <code>&nbsp;&middot;&nbsp;C:\Program Files\VTK\bin</code>
-</p>
-<p><h3>3. Download TTK</h3>
-Download TTK's source code archive <code>ttk-0.9.7.zip</code> from the 
-<a target="new" href="downloads.html">download page</a> and decompress it to 
-<code>C:\</code>.
-</p>
-<p><h3>4. Patching ParaView</h3>
-In order to enjoy the complete set of TTK features, we recommend at this stage 
-to patch the ParaView source tree. This step is optional. To proceed, go to the 
-patch directory: <br>
-    <code>cd C:\ttk-0.9.7\paraview\patch</code><br><br>
-    Next, on 64-bit installations, run the following command:<br>
-    <code>patch-paraview-msvc.cmd C:\ParaView-v5.6.0</code><br><br>
-    Otherwise, for 32-bit installations, run the following command:<br>
-    <code>patch-paraview-msvc-x86.cmd C:\ParaView-v5.6.0</code><br><br>
-<!--    Next, on x86 installations, run the following command:<br>
-    <code>patch-paraview-msvc-x86.cmd C:\ParaView-v5.6.0</code><br><br>
-    Otherwise, run the following command:<br>
-    <code>patch-paraview-msvc.cmd C:\ParaView-v5.6.0</code><br><br>-->
-    Finally, run the following command to deploy the complete set of TTK 
-features:<br>
-    <code>patch-paraview-5.6.0.sh C:\ParaView-v5.6.0</code><br>
-    <code>cd ..\..\..</code><br>
-</p>
-<p><h3>5. Installing ParaView</h3>
-    Run the following commands to configure ParaView with CMake: <br>
-    <code>cd ParaView-v5.6.0</code><br>
-    <code>mkdir build</code><br>
-    <code>cd build</code><br>
-    <code>cmake-gui ..\</code><br>
-    <br>
-Click on the "Configure" button and select the appropriate generator 
-(in these notes, "Visual Studio 14 2015 Win64" for x64-bit applications).
-Make sure to set the following 
-variable:<br>
-    <code>&nbsp;&middot;&nbsp;CMAKE_CONFIGURATION_TYPES=Release</code><br>
-    <code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=C:/Program 
-Files/ParaView/</code><br>
-    <code>&nbsp;&middot;&nbsp;PARAVIEW_ENABLE_PYTHON=ON</code><br><br>
-Click on the "Generate" button. Next, click on the "Open project" 
-button.<br>
-    Under Visual Studio, make sure to select the target named 
-<code>INSTALL</code>.<br>Build it and close Visual Studio, CMake and 
-the command prompt.<br><br>
-    Change the environment variable <code>PATH</code> to include the path:<br>
-    <code>&nbsp;&middot;&nbsp;C:\Program Files\ParaView\bin</code><br><br>
-Next, create the following environment variable:<br>
-<code><br>
-  &nbsp;&middot;&nbsp;PARAVIEW_BIN = C:\Program Files\ParaView\bin</code><br>
-<br>
-Optionally, for an advanced Python support in ParaView, Numpy can be installed.
-For this, open the command prompt by pressing <code>Windows+X</code> to open 
-the Power Users menu, and then click on <code>Command Prompt 
-(Admin)</code> and enter the following command:<br>
-<code>pip install numpy</code><br>
-</p>
 
-<p><h3>6. Installing TTK</h3>
-Open the command prompt by pressing <code>Windows+X</code> to open 
-the Power Users menu, and then click on <code>Command Prompt 
-(Admin)</code>.<br><br> 
 
-    Run the following commands to configure TTK with CMake:<br>
-    <code>cd ..\..\ttk-0.9.7</code><br>
-    <code>mkdir build</code><br>
-    <code>cd build</code><br>
-    <code>cmake-gui ..\</code><br>
-    <br>
-Click on the "Configure" button and select the appropriate generator 
-(in these notes, "Visual Studio 14 2015 Win64" for x64-bit applications).
-Make sure to set the following 
-variable:<br>
-    <code>&nbsp;&middot;&nbsp;CMAKE_CONFIGURATION_TYPES=Release</code><br>
-    <code>&nbsp;&middot;&nbsp;ParaView_DIR=C:\ParaView-v5.6.0\build</code><br>  
- 
-    <code>&nbsp;&middot;&nbsp;TTK_ENABLE_OPENMP=OFF</code><br>    
-    <br>   
-    
-    If you are an advanced user and you do not wish to activate TTK's ParaView 
-support, set the CMake variable <code>TTK_BUILD_PARAVIEW_PLUGINS</code> to 
-<code>OFF</code>.
-Examples showing how to use TTK libraries from your 
-own VTK code can be found 
-<a target="new"
-href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/vtk-c%2B%2B"
->on this page</a>.<br><br>
+<p>
+<h3>5. Checking your TTK installation</h3>
+If you applied all the above steps successfully, you can now open an <code>Anaconda Prompt</code> and type
+ the following command to load your 
+TTK-patched ParaView:<br><br>
+<code>> paraview</code><br><br> 
 
-If you are an advanced user and you do not even wish  to activate TTK's VTK 
-support, set the CMake variables 
-<!-- NOT NEEDED AFTER RELEASE 0.9.7 -->
-<code>TTK_BUILD_STANDALONE_APPS</code> and 
-<!-- END OF NOT NEEDED -->
-<code>TTK_BUILD_VTK_WRAPPERS</code> to <code>OFF</code>.
-Examples showing how to use TTK libraries from your own 
-C++ code can be found 
-<a target="new"
-href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/c%2B%2B"
->on this page</a>.<br><br>
-    
-Click on the "Generate" button. Next, click on the "Open project" 
-button.<br>
-    Under Visual Studio, make sure to select the target named 
-<code>INSTALL</code>.<br>Build it and close Visual Studio and CMake.<br><br>
-If you got to this point without (too many) errors, then congratulations!<br>
-You have just successfully installed TTK on your Windows system!
-</p>
+<!--MacOS users will need to launch the built ParaView 
+binary from the ParaView source tree and load all the TTK plugins with the 
+<a href="http://www.paraview.org/Wiki/ParaView/Plugin_HowTo#Using_Plugins" 
+target="new">ParaView Plugin Manager</a> before continuing.<br>-->
+At this point, you should see the following TTK startup screen:<br> <br>
+<a href="img/ttkStartup.jpg" target="new">
+  <img align='center'width="95%" src="img/ttkStartup.jpg">
+</a>
+<br><br>
+
+On this screen, clicking on the "Example Visualizations" link should bring you 
+to the TTK built-in example screen:
+<br> <br>
+
+<a href="img/ttkExamples.jpg" target="new">
+  <img align='center'width="95%" src="img/ttkExamples.jpg">
+</a>
+<br><br>
+From there, clicking on one of the three buttons should generate one of the 
+following three visualizations:<br><br>
+
+<a href="img/gallery/builtinExample1.jpg" target="new">
+  <img align='center'width="95%" src="img/gallery/builtinExample1.jpg" >
+</a>
+<br><br>
+
+<a href="img/gallery/builtinExample2.jpg" target="new">
+  <img align='center'width="95%" src="img/gallery/builtinExample2.jpg" >
+</a>
+<br><br>
+
+<a href="img/gallery/builtinExample3.jpg" target="new">
+  <img align='center'width="95%" src="img/gallery/builtinExample3.jpg" >
+</a>
+<br><br>
+
+If this is the case, congratulations!<br> You have just successfully installed 
+TTK on your system!</p>
 
 <p>
 Now, please visit our <a href="tutorials.html">tutorial</a> page to watch video 
-tutorials showing how to use TTK with ParaView with concrete examples and how 
-to 
+tutorials showing how to use TTK with ParaView with concrete examples and how to 
 use it from your own Python or C++ code or how to extend TTK by writing up your 
 own module!
 </p>
-
             </div>
         </div>
     </div>
@@ -449,7 +286,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on August 17, 2019.</p>
+                    Updated on December 20, 2020.</p>
                 </div>
             </div>
         </div>
