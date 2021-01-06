@@ -186,10 +186,18 @@ From sources</a>;<br>
 Binary packages (experimental)</a>;<br><br>
 
 &nbsp;&middot;&nbsp;
-Anaconda (no ParaView support):<br>
-&nbsp;&nbsp;&nbsp;&middot;&nbsp;
 <a href="https://anaconda.org/conda-forge/topologytoolkit" target="new">
-Conda install</a>;<br><br>
+Anaconda package</a>:<br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp;With ParaView support:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;
+<code>
+conda create -n ttk -c conda-forge topologytoolkit
+</code><br>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp;With VTK-only support:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;
+<code>
+conda create -n ttk -c conda-forge topologytoolkit *no_paraview*
+</code><br><br>
 
 &nbsp;&middot;&nbsp;
 Docker image:<br>
@@ -217,7 +225,7 @@ Image file</a>;<br><br>
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on December 17, 2020.</p>
+                    Updated on January 6, 2021.</p>
                 </div>
             </div>
         </div>
