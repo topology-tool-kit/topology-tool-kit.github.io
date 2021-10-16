@@ -1,9 +1,13 @@
 var searchData=
 [
-  ['taskid_7908',['TaskId',['../classttk.html#aaf9247ba40fcea90977fb7779eb1093a',1,'ttk']]],
-  ['threadid_7909',['ThreadId',['../classttk.html#a7349dc0a9fa210641b017949576200dc',1,'ttk']]],
-  ['topologytype_7910',['topologyType',['../TrackingFromOverlap_8h.html#a8b3a76e7065d06662e406bfced566382',1,'TrackingFromOverlap.h']]],
-  ['trackingtuple_7911',['trackingTuple',['../classttk.html#a60cce39e2e2ccfccaa4e3e4d1b8d2441',1,'ttk::trackingTuple()'],['../classttkTrackingFromPersistenceDiagrams.html#a74dcaf4cc7af3c8b64136f6742feb531',1,'ttkTrackingFromPersistenceDiagrams::trackingTuple()']]],
-  ['ttkidx_7912',['ttkIdx',['../ContourAroundPoint_8cpp.html#ab1bca5bf81971c5d3057f085045ae3e0',1,'ContourAroundPoint.cpp']]],
-  ['ttksimplexidtypearray_7913',['ttkSimplexIdTypeArray',['../ttkMacros_8h.html#ab8fecb61ee699261dc1bf47969ac9cf4',1,'ttkSimplexIdTypeArray():&#160;ttkMacros.h'],['../macro_8h.html#ab8fecb61ee699261dc1bf47969ac9cf4',1,'ttkSimplexIdTypeArray():&#160;macro.h']]]
+  ['segm_5fconst_5fit_9657',['segm_const_it',['../namespacettk_1_1ftm.html#ac4754c6c3fbed07b86a72114f105eaca',1,'ttk::ftm::segm_const_it()'],['../namespacettk_1_1ftr.html#a0ae1d0e2d954090dfcaea973a8bba6fa',1,'ttk::ftr::segm_const_it()']]],
+  ['segm_5fconst_5frev_5fit_9658',['segm_const_rev_it',['../namespacettk_1_1ftm.html#af96fd297b74cc8bf92cf76bde786e88d',1,'ttk::ftm::segm_const_rev_it()'],['../namespacettk_1_1ftr.html#ab966c4a26a4f4a72bd00414f3008aa77',1,'ttk::ftr::segm_const_rev_it()']]],
+  ['segm_5fit_9659',['segm_it',['../namespacettk_1_1ftm.html#a32f3f4de585993accf29e8349378aec7',1,'ttk::ftm::segm_it()'],['../namespacettk_1_1ftr.html#a7654136aec817d29c07acf34cf60f253',1,'ttk::ftr::segm_it()']]],
+  ['segm_5frev_5fit_9660',['segm_rev_it',['../namespacettk_1_1ftm.html#a9cc4d36eda27cf164fb841e3d260a438',1,'ttk::ftm::segm_rev_it()'],['../namespacettk_1_1ftr.html#a0b7be7393d5b4428f1766d3ade9e7223',1,'ttk::ftr::segm_rev_it()']]],
+  ['segmentiterator_9661',['segmentIterator',['../namespacettk_1_1cf.html#a7e23ac278697a73fb5b46f2c509bb79d',1,'ttk::cf']]],
+  ['segmentreviterator_9662',['segmentRevIterator',['../namespacettk_1_1cf.html#adaffea1dbe73430789f324db427de913',1,'ttk::cf']]],
+  ['setcompfn_9663',['SetCompFN',['../namespacettk_1_1ftm.html#af79e8a5722bfa53f277f997cecb8028a',1,'ttk::ftm']]],
+  ['setpropagation_9664',['SetPropagation',['../namespacettk_1_1ftm.html#a6102eeb0ba3ce3419984cacc1755324d',1,'ttk::ftm']]],
+  ['simplexid_9665',['SimplexId',['../classttk.html#a105fd2ab023d1d8d27bd736a4cdc5abf',1,'ttk']]],
+  ['sizetype_9666',['sizeType',['../TrackingFromOverlap_8h.html#a5c50c98b5879036fa6ea96fd2e84a54e',1,'TrackingFromOverlap.h']]]
 ];

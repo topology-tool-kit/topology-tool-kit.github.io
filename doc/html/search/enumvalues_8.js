@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['join_8024',['Join',['../namespacettk_1_1cf.html#a1e3e9f613b8aa03fe90650f087d34f06a9a1afb5df3d74145d53a2b31f13e81be',1,'ttk::cf::Join()'],['../namespacettk_1_1ftm.html#a50fb2f892ab92b84f0d827e3993b5a2ba3d53424dfb8a37b529993c8c98042f4e',1,'ttk::ftm::Join()']]],
-  ['join_5fsplit_8025',['Join_Split',['../namespacettk_1_1ftm.html#a50fb2f892ab92b84f0d827e3993b5a2ba10deb6520dd5a916547d41d67c161e4b',1,'ttk::ftm']]],
-  ['joinandsplit_8026',['JoinAndSplit',['../namespacettk_1_1cf.html#a1e3e9f613b8aa03fe90650f087d34f06a2fd10193c197ad4b4d9882f0d9b28ad9',1,'ttk::cf']]],
-  ['joinsaddle_8027',['JoinSaddle',['../classttk_1_1MandatoryCriticalPoints.html#ab2cf29184e67a40532222ae2a99a2a0ea5d4df710b6fe718f177b15bd92b0bed2',1,'ttk::MandatoryCriticalPoints']]],
-  ['jointree_8028',['JoinTree',['../classttk_1_1MandatoryCriticalPoints.html#a0e7a766f9a884eadac1826a65ad6f4ddaebe8fffaf1759473a39fd1959e078a2d',1,'ttk::MandatoryCriticalPoints']]]
+  ['implicit_9814',['IMPLICIT',['../classttk_1_1Triangulation.html#a4a9a1c0cd04c930d4dbf972af6eb779fa12afe8f66c5af8e690fbf6ead4c55ab2',1,'ttk::Triangulation']]],
+  ['info_9815',['INFO',['../namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a551b723eafd6a31d444fcb2f5920fbd3',1,'ttk::debug']]],
+  ['iterative_9816',['ITERATIVE',['../classttk_1_1HarmonicField.html#a7b1862a1d2f2b355e5db1fcdc45a0d10ac81d9574242eba564bd95a3d48937762',1,'ttk::HarmonicField::ITERATIVE()'],['../classttk_1_1HarmonicField.html#a8b256505af1539396c0a31981c8bb8f4ac81d9574242eba564bd95a3d48937762',1,'ttk::HarmonicField::ITERATIVE()']]]
 ];

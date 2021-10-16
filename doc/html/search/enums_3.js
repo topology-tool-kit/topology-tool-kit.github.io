@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['edgeposition_7925',['EdgePosition',['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4',1,'ttk::ImplicitTriangulation::EdgePosition()'],['../classttk_1_1PeriodicImplicitTriangulation.html#a962fe191cfa914c38950ad2a1becd2a5',1,'ttk::PeriodicImplicitTriangulation::EdgePosition()']]]
+  ['direction_9686',['Direction',['../classttk.html#a4be7f7585acfb194dd41f03ae1f4bc2c',1,'ttk']]],
+  ['display_9687',['DISPLAY',['../classttkPersistenceDiagramClustering.html#a76d1ba0f8ff8d755f9002cec4401b95b',1,'ttkPersistenceDiagramClustering']]]
 ];

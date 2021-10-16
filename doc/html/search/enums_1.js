@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['componentstate_7919',['ComponentState',['../namespacettk_1_1cf.html#aadd6d4c8140d15715c0daabb81bea559',1,'ttk::cf::ComponentState()'],['../namespacettk_1_1ftm.html#a9acfb4b623c1ba16422384c20622f5c6',1,'ttk::ftm::ComponentState()']]],
-  ['compressiontype_7920',['CompressionType',['../classttk.html#a6cc8bc5da2f2a6dc72616a60c8582ae7',1,'ttk']]],
-  ['constrainttype_7921',['ConstraintType',['../classttk_1_1PersistenceDiagramDistanceMatrix.html#ad7d3493c312622beac2a44b428a3fcca',1,'ttk::PersistenceDiagramDistanceMatrix']]],
-  ['criticaltype_7922',['CriticalType',['../classttk.html#a2e938b4a3e29bf68d64fbb3a86cb55f9',1,'ttk']]]
+  ['backend_9680',['BACKEND',['../classttk_1_1PersistenceDiagram.html#a5ac0f6888163050b6b3799a087882385',1,'ttk::PersistenceDiagram::BACKEND()'],['../classttk_1_1ScalarFieldCriticalPoints.html#a8d8927f2ca9f4bb68b77dcd65784e4cd',1,'ttk::ScalarFieldCriticalPoints::BACKEND()']]]
 ];

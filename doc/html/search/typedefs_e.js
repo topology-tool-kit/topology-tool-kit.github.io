@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['valence_7916',['valence',['../namespacettk_1_1ftm.html#a83de730e6ef20f9aec861a2f5d6ac179',1,'ttk::ftm::valence()'],['../namespacettk_1_1ftr.html#ab4b9c81cabc70c790dabf443c80c9355',1,'ttk::ftr::valence()']]],
-  ['vertcompfn_7917',['VertCompFN',['../namespacettk_1_1ftm.html#a3e053f000e062e447dc4a8b3381958e8',1,'ttk::ftm::VertCompFN()'],['../namespacettk_1_1ftr.html#a255be96fb6d9a2bab40408a573744249',1,'ttk::ftr::VertCompFN()']]]
+  ['uf_9674',['UF',['../namespacettk_1_1ftm.html#ab7cd30efcb2417782df7d413efb3df89',1,'ttk::ftm']]],
+  ['ufdatatype_9675',['ufDataType',['../namespacettk_1_1cf.html#ab2e2a20342ed9d1ab82007a001472255',1,'ttk::cf::ufDataType()'],['../namespacettk_1_1ftm.html#aa183a35760a5d6dc4dd84900e9668c03',1,'ttk::ftm::ufDataType()']]]
 ];

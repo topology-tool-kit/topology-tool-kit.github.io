@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['m_5fpi_8154',['M_PI',['../Os_8h.html#ae71449b1cc6e6250b91f539153a7a0d3',1,'Os.h']]],
-  ['matchingtuple_8155',['matchingTuple',['../Auction_8h.html#a5d82f45db0f4b05eb8fb047c46326a32',1,'matchingTuple():&#160;Auction.h'],['../AuctionImpl_8h.html#a5d82f45db0f4b05eb8fb047c46326a32',1,'matchingTuple():&#160;AuctionImpl.h'],['../BottleneckDistance_8h.html#a5d82f45db0f4b05eb8fb047c46326a32',1,'matchingTuple():&#160;BottleneckDistance.h']]],
-  ['msquad_5fexplicit_5fcalls_8156',['MSQUAD_EXPLICIT_CALLS',['../ttkMorseSmaleQuadrangulation_8cpp.html#ac26fed1612e1864181ab4cda52fe523a',1,'ttkMorseSmaleQuadrangulation.cpp']]]
+  ['harmonicfield_5fspecialize_9969',['HARMONICFIELD_SPECIALIZE',['../HarmonicField_8cpp.html#a4b600e491960ae7c6a2bf6b1bb64446a',1,'HarmonicField.cpp']]],
+  ['higher_9970',['HIGHER',['../FTMTree__MT_8cpp.html#a4c48324c04ea9396e387804b3525b64b',1,'FTMTree_MT.cpp']]]
 ];

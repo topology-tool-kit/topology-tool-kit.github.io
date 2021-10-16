@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['request_7933',['Request',['../classttkTriangulationRequest.html#a7bbea7d214c53cf71485598cbd003fc8',1,'ttkTriangulationRequest']]]
+  ['nodetype_9696',['NodeType',['../namespacettk_1_1ftr.html#ae1efeab53251c5a639c587a4a71e1b12',1,'ttk::ftr']]]
 ];

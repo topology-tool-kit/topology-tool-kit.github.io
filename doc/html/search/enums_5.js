@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linemode_7927',['LineMode',['../namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82',1,'ttk::debug']]]
+  ['format_9690',['FORMAT',['../classttkCinemaWriter.html#a8bd244a4df249f8e1721508019492aa4',1,'ttkCinemaWriter']]]
 ];

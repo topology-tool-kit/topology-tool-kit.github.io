@@ -1,13 +1,22 @@
 var searchData=
 [
-  ['rangearea_8078',['rangeArea',['../classttk_1_1ReebSpace.html#aabfa2a3992fe0b2b1ad851588eb1b1baa32f308fbba10dd36437244076a696814',1,'ttk::ReebSpace']]],
-  ['regular_8079',['Regular',['../classttk.html#a2e938b4a3e29bf68d64fbb3a86cb55f9ad2203cb1237cb6460cbad94564e39345',1,'ttk::Regular()'],['../namespacettk_1_1ftr.html#ae1efeab53251c5a639c587a4a71e1b12ad2203cb1237cb6460cbad94564e39345',1,'ttk::ftr::Regular()']]],
-  ['relative_5fpersistence_5fglobal_8080',['RELATIVE_PERSISTENCE_GLOBAL',['../classttk_1_1PersistenceDiagramDistanceMatrix.html#ad7d3493c312622beac2a44b428a3fccaa30be01c5467bd4251cf813bbbfc95370',1,'ttk::PersistenceDiagramDistanceMatrix']]],
-  ['relative_5fpersistence_5fper_5fdiag_8081',['RELATIVE_PERSISTENCE_PER_DIAG',['../classttk_1_1PersistenceDiagramDistanceMatrix.html#ad7d3493c312622beac2a44b428a3fccaab6690dd85111de8485a94a3e56a222ac',1,'ttk::PersistenceDiagramDistanceMatrix']]],
-  ['replace_8082',['REPLACE',['../namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7',1,'ttk::debug']]],
-  ['right_5fback_5fedge_5f3d_8083',['RIGHT_BACK_EDGE_3D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5dafed8c5e017c5b6683a6f28e49bff52af',1,'ttk::ImplicitTriangulation']]],
-  ['right_5fcorner_5f1d_8084',['RIGHT_CORNER_1D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da0c08ca984d08805eeee86c37db0045fe',1,'ttk::ImplicitTriangulation']]],
-  ['right_5fedge_5f2d_8085',['RIGHT_EDGE_2D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da2fb7a8da2cdc31414389d51c55716bd9',1,'ttk::ImplicitTriangulation']]],
-  ['right_5fface_5f3d_8086',['RIGHT_FACE_3D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da64cc6d92e7ebf2155013976724ee4f98',1,'ttk::ImplicitTriangulation']]],
-  ['right_5ffront_5fedge_5f3d_8087',['RIGHT_FRONT_EDGE_3D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da3084ae1a852b35feadfb879ca6812909',1,'ttk::ImplicitTriangulation']]]
+  ['p_5f00z_5f3d_9871',['P_00z_3D',['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4aa95321705d9c71e00b67edb09351a956',1,'ttk::ImplicitTriangulation']]],
+  ['p_5f0nz_5f3d_9872',['P_0nz_3D',['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4ad7ceb146f7a401646c92dab1105933cd',1,'ttk::ImplicitTriangulation']]],
+  ['p_5f0nz_5f3d_9873',['P_0Nz_3D',['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4ab4226f8a7e99339aa5dc99f9d3a87480',1,'ttk::ImplicitTriangulation']]],
+  ['p_5f3d_9874',['P_3D',['../classttk_1_1PeriodicImplicitTriangulation.html#a962fe191cfa914c38950ad2a1becd2a5a96fea2bd3b3d0ccbf588e4a10c5d4b89',1,'ttk::PeriodicImplicitTriangulation']]],
+  ['p_5fn0z_5f3d_9875',['P_n0z_3D',['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4a5df2e967a93fc3e53877cf1861980c54',1,'ttk::ImplicitTriangulation']]],
+  ['p_5fn0z_5f3d_9876',['P_N0z_3D',['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4ab49d5670034c048a7e579faf33dacc3b',1,'ttk::ImplicitTriangulation']]],
+  ['p_5fnnz_5f3d_9877',['P_nnz_3D',['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4aebf36e7d713e5e71df1150ff307b5b4f',1,'ttk::ImplicitTriangulation']]],
+  ['p_5fnnz_5f3d_9878',['P_NNz_3D',['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4a46c3597327a846782fe865940bac5a38',1,'ttk::ImplicitTriangulation']]],
+  ['p_5fnnz_5f3d_9879',['P_nNz_3D',['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4ac1f091410d31423933ce781d59680e96',1,'ttk::ImplicitTriangulation']]],
+  ['p_5fnnz_5f3d_9880',['P_Nnz_3D',['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4a9ba3be28c7c1be0aac22e06be28b6d8a',1,'ttk::ImplicitTriangulation']]],
+  ['performance_9881',['PERFORMANCE',['../namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a063360736adfccfae2f1d8093c02959a',1,'ttk::debug']]],
+  ['periodic_9882',['PERIODIC',['../classttk_1_1Triangulation.html#a4a9a1c0cd04c930d4dbf972af6eb779fad9d83fc826ae0d42075af007a477e2c9',1,'ttk::Triangulation']]],
+  ['persist_9883',['Persist',['../namespacettk_1_1ftm.html#a032970813b2edc14cfd2639d3a53620ba9e8d3427abb0f8ee7ec60833773ddeca',1,'ttk::ftm::Persist()'],['../namespacettk_1_1cf.html#a27b24c96425b2888bde0185d85821905a881e7a958032fbf88e892635c928b3bd',1,'ttk::cf::Persist()']]],
+  ['persistence_9884',['persistence',['../ContourTreeAlignment_8h.html#a275d2d09f357553d6d27e979f5407092af38dede3d6395ae716798bade6571bca',1,'ContourTreeAlignment.h']]],
+  ['persistencediagram_9885',['PersistenceDiagram',['../classttk.html#a6cc8bc5da2f2a6dc72616a60c8582ae7a6ec94c918cce378ceb81c8dc361df541',1,'ttk']]],
+  ['png_9886',['PNG',['../classttkCinemaWriter.html#a8bd244a4df249f8e1721508019492aa4a55505ba281b015ec31f03ccb151b2a34',1,'ttkCinemaWriter']]],
+  ['progressive_9887',['PROGRESSIVE',['../classttkPersistenceDiagramClustering.html#a0cbd029ebb0e76a5ac9b01b9368799aca9bc5e7fe934fe08249e3aa2e0d3678ed',1,'ttkPersistenceDiagramClustering']]],
+  ['progressive_5ftopology_9888',['PROGRESSIVE_TOPOLOGY',['../classttk_1_1ScalarFieldCriticalPoints.html#a8d8927f2ca9f4bb68b77dcd65784e4cdab1efd1f00d23b1a725126af7546980bb',1,'ttk::ScalarFieldCriticalPoints::PROGRESSIVE_TOPOLOGY()'],['../classttk_1_1PersistenceDiagram.html#a5ac0f6888163050b6b3799a087882385ab1efd1f00d23b1a725126af7546980bb',1,'ttk::PersistenceDiagram::PROGRESSIVE_TOPOLOGY()']]],
+  ['pruned_9889',['Pruned',['../namespacettk_1_1cf.html#aadd6d4c8140d15715c0daabb81bea559a350a34fd84c0591cad3b6664e867f7e2',1,'ttk::cf::Pruned()'],['../namespacettk_1_1ftm.html#a9acfb4b623c1ba16422384c20622f5c6aef42f1d8e4390e347a3c4f38ca3a3559',1,'ttk::ftm::Pruned()']]]
 ];

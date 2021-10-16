@@ -1,14 +1,5 @@
 var searchData=
 [
-  ['p_5f00z_5f3d_8067',['P_00z_3D',['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4aa95321705d9c71e00b67edb09351a956',1,'ttk::ImplicitTriangulation']]],
-  ['p_5f0nz_5f3d_8068',['P_0Nz_3D',['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4ab4226f8a7e99339aa5dc99f9d3a87480',1,'ttk::ImplicitTriangulation::P_0Nz_3D()'],['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4ad7ceb146f7a401646c92dab1105933cd',1,'ttk::ImplicitTriangulation::P_0nz_3D()']]],
-  ['p_5f3d_8069',['P_3D',['../classttk_1_1PeriodicImplicitTriangulation.html#a962fe191cfa914c38950ad2a1becd2a5a96fea2bd3b3d0ccbf588e4a10c5d4b89',1,'ttk::PeriodicImplicitTriangulation']]],
-  ['p_5fn0z_5f3d_8070',['P_n0z_3D',['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4a5df2e967a93fc3e53877cf1861980c54',1,'ttk::ImplicitTriangulation::P_n0z_3D()'],['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4ab49d5670034c048a7e579faf33dacc3b',1,'ttk::ImplicitTriangulation::P_N0z_3D()']]],
-  ['p_5fnnz_5f3d_8071',['P_Nnz_3D',['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4a9ba3be28c7c1be0aac22e06be28b6d8a',1,'ttk::ImplicitTriangulation::P_Nnz_3D()'],['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4ac1f091410d31423933ce781d59680e96',1,'ttk::ImplicitTriangulation::P_nNz_3D()'],['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4a46c3597327a846782fe865940bac5a38',1,'ttk::ImplicitTriangulation::P_NNz_3D()'],['../classttk_1_1ImplicitTriangulation.html#a11893e13eaee342165b364c45b11e5a4aebf36e7d713e5e71df1150ff307b5b4f',1,'ttk::ImplicitTriangulation::P_nnz_3D()']]],
-  ['performance_8072',['PERFORMANCE',['../namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a063360736adfccfae2f1d8093c02959a',1,'ttk::debug']]],
-  ['periodic_8073',['PERIODIC',['../classttk_1_1Triangulation.html#a4a9a1c0cd04c930d4dbf972af6eb779fad9d83fc826ae0d42075af007a477e2c9',1,'ttk::Triangulation']]],
-  ['persist_8074',['Persist',['../namespacettk_1_1cf.html#a27b24c96425b2888bde0185d85821905a881e7a958032fbf88e892635c928b3bd',1,'ttk::cf::Persist()'],['../namespacettk_1_1ftm.html#a032970813b2edc14cfd2639d3a53620ba9e8d3427abb0f8ee7ec60833773ddeca',1,'ttk::ftm::Persist()']]],
-  ['persistence_8075',['persistence',['../ContourTreeAlignment_8h.html#a275d2d09f357553d6d27e979f5407092af38dede3d6395ae716798bade6571bca',1,'ContourTreeAlignment.h']]],
-  ['persistencediagram_8076',['PersistenceDiagram',['../classttk.html#a6cc8bc5da2f2a6dc72616a60c8582ae7a6ec94c918cce378ceb81c8dc361df541',1,'ttk']]],
-  ['pruned_8077',['Pruned',['../namespacettk_1_1cf.html#aadd6d4c8140d15715c0daabb81bea559a350a34fd84c0591cad3b6664e867f7e2',1,'ttk::cf::Pruned()'],['../namespacettk_1_1ftm.html#a9acfb4b623c1ba16422384c20622f5c6aef42f1d8e4390e347a3c4f38ca3a3559',1,'ttk::ftm::Pruned()']]]
+  ['other_9869',['Other',['../classttk.html#a6cc8bc5da2f2a6dc72616a60c8582ae7a6311ae17c1ee52b36e68aaf4ad066387',1,'ttk']]],
+  ['overlap_9870',['overlap',['../ContourTreeAlignment_8h.html#a275d2d09f357553d6d27e979f5407092a2eea4f887647b44ec13dd957ba3706c1',1,'ContourTreeAlignment.h']]]
 ];
