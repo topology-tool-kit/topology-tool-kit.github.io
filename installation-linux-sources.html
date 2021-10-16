@@ -450,7 +450,15 @@ the following commands:<br><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
 The configuration window opens. Click on the "Configure" button to proceed.
-Once the configuration is finished, please 
+Once the configuration is finished, you may want to enable additional build options (OSPRay, MPI, etc) to your liking (see the 
+<a 
+href="http://www.paraview.org/Wiki/ParaView:
+Build_And_Install#Configure_ParaView_With_CMake"
+target="new">
+ParaView 
+build documentation</a> for further details). Note that certain options require the installation of additional dependencies.
+<!--
+please 
 tick the "Advanced" check box and 
 set the following variables as follows (required 
 for TTK's 
@@ -458,7 +466,7 @@ installation):<br><br>
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_USE_PYTHON=ON</code><br>
 <code>&nbsp;&middot;&nbsp;PARAVIEW_INSTALL_DEVELOPMENT_FILES=ON</code><br>
-<code>&nbsp;&middot;&nbsp;PARAVIEW_PYTHON_VERSION=3</code>
+<code>&nbsp;&middot;&nbsp;PARAVIEW_PYTHON_VERSION=3</code>-->
 <br>
 <!-- <code>&nbsp;&middot;&nbsp;VTK_USE_SYSTEM_PROTOBUF=ON</code><br> -->
 <!-- <code>&nbsp;&middot;&nbsp;PARAVIEW_QT_VERSION=4</code><br> -->
@@ -471,13 +479,13 @@ We recommend in general to use the version 5 of the Qt library, instead of the
 version 4 as described above (which is only recommended for Ubuntu 
 users).<br><br>-->
 
-Optionally, you may want to turn on additional features. See the 
+<!--Optionally, you may want to turn on additional features. See the 
 <a 
 href="http://www.paraview.org/Wiki/ParaView:
 Build_And_Install#Configure_ParaView_With_CMake"
 target="new">
 ParaView 
-build documentation</a> for further details if needed.<br><br>
+build documentation</a> for further details if needed.<br><br>-->
 Next, click on the "Generate" button and close the configuration window when 
 the generation is completed.<br><br>
 
