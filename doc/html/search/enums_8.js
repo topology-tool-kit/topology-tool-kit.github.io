@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['pointtype_7930',['PointType',['../classttk_1_1MandatoryCriticalPoints.html#ab2cf29184e67a40532222ae2a99a2a0e',1,'ttk::MandatoryCriticalPoints']]],
-  ['priority_7931',['Priority',['../namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75',1,'ttk::debug']]],
-  ['prioritylevel_7932',['PriorityLevel',['../namespacettk_1_1ftr.html#a0c84ef7d4c33773e25dae991568fd4fe',1,'ttk::ftr']]]
+  ['method_9693',['METHOD',['../classttkPersistenceDiagramClustering.html#a0cbd029ebb0e76a5ac9b01b9368799ac',1,'ttkPersistenceDiagramClustering']]],
+  ['mode_9694',['MODE',['../classttkArrayEditor.html#a896ae4d58fac98140d2712e6121e24f8',1,'ttkArrayEditor']]],
+  ['mode_5farcmatch_9695',['Mode_ArcMatch',['../ContourTreeAlignment_8h.html#a275d2d09f357553d6d27e979f5407092',1,'ContourTreeAlignment.h']]]
 ];

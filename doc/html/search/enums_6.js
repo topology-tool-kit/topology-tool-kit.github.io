@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mode_5farcmatch_7928',['Mode_ArcMatch',['../ContourTreeAlignment_8h.html#a275d2d09f357553d6d27e979f5407092',1,'ContourTreeAlignment.h']]]
+  ['graphcomponent_9691',['GraphComponent',['../namespacettk_1_1ftr.html#a53a5f77c278677828a9808e7fb5cf8f6',1,'ttk::ftr']]]
 ];

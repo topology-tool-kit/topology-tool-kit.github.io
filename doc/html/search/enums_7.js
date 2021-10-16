@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nodetype_7929',['NodeType',['../namespacettk_1_1ftr.html#ae1efeab53251c5a639c587a4a71e1b12',1,'ttk::ftr']]]
+  ['linemode_9692',['LineMode',['../namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82',1,'ttk::debug']]]
 ];

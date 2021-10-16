@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['print_8158',['PRINT',['../FTRGraphPrivate__Template_8h.html#a994cb1e8771e881023efb47d91c58fbb',1,'FTRGraphPrivate_Template.h']]],
-  ['prior_8159',['PRIOR',['../FTMTree__MT_8cpp.html#a2ff77317386645639fe889cea0098816',1,'FTMTree_MT.cpp']]],
-  ['psort_8160',['PSORT',['../AbstractMorseSmaleComplex_8h.html#aa7ff5a29507b0d69bd39bf52863f750b',1,'PSORT():&#160;AbstractMorseSmaleComplex.h'],['../OrderDisambiguation_8h.html#aa7ff5a29507b0d69bd39bf52863f750b',1,'PSORT():&#160;OrderDisambiguation.h'],['../ttkIdentifierRandomizer_8cpp.html#aa7ff5a29507b0d69bd39bf52863f750b',1,'PSORT():&#160;ttkIdentifierRandomizer.cpp']]]
+  ['optional_5fpriority_9974',['OPTIONAL_PRIORITY',['../FTMTree__MT_8cpp.html#ad7a9e15ee14f256de5f40f5f9c9dd8c1',1,'OPTIONAL_PRIORITY():&#160;FTMTree_MT.cpp'],['../FTMTree__MT__Template_8h.html#ad7a9e15ee14f256de5f40f5f9c9dd8c1',1,'OPTIONAL_PRIORITY():&#160;FTMTree_MT_Template.h'],['../FTRGraph__Template_8h.html#ad7a9e15ee14f256de5f40f5f9c9dd8c1',1,'OPTIONAL_PRIORITY():&#160;FTRGraph_Template.h']]]
 ];

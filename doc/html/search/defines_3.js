@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['dbl_5fsignificant_5fdigits_8144',['DBL_SIGNIFICANT_DIGITS',['../Os_8h.html#a2ea18a92890363827d8542bdea482411',1,'Os.h']]],
-  ['debug_8145',['DEBUG',['../Graph__Template_8h.html#aecc1f7a8a2493b9e021e5bff76a00a5b',1,'Graph_Template.h']]],
-  ['diagramtuple_8146',['diagramTuple',['../Auction_8h.html#a9ff04deae413f25d866fbb62b03a294d',1,'diagramTuple():&#160;Auction.h'],['../BottleneckDistance_8h.html#a9ff04deae413f25d866fbb62b03a294d',1,'diagramTuple():&#160;BottleneckDistance.h'],['../PersistenceDiagramBarycenter_8h.html#a9ff04deae413f25d866fbb62b03a294d',1,'diagramTuple():&#160;PersistenceDiagramBarycenter.h'],['../PersistenceDiagramClustering_8h.html#a9ff04deae413f25d866fbb62b03a294d',1,'diagramTuple():&#160;PersistenceDiagramClustering.h'],['../ttkPersistenceDiagramClustering_8h.html#a9ff04deae413f25d866fbb62b03a294d',1,'diagramTuple():&#160;ttkPersistenceDiagramClustering.h']]],
-  ['dispatch_5finterpolate_5fcont_8147',['DISPATCH_INTERPOLATE_CONT',['../ttkBarycentricSubdivision_8cpp.html#ae38d2cda07f922c2a5f821883b75dc6e',1,'ttkBarycentricSubdivision.cpp']]],
-  ['dispatch_5finterpolate_5fdis_8148',['DISPATCH_INTERPOLATE_DIS',['../ttkBarycentricSubdivision_8cpp.html#a15afa3759825f916245a3adb7cbef4e3',1,'ttkBarycentricSubdivision.cpp']]]
+  ['case_5fedge_5fposition_5fd1_5f3d_9952',['CASE_EDGE_POSITION_D1_3D',['../ImplicitTriangulation_8cpp.html#a44631b2c7bae3191676119a5e638f811',1,'ImplicitTriangulation.cpp']]],
+  ['case_5fedge_5fposition_5fd2_5f3d_9953',['CASE_EDGE_POSITION_D2_3D',['../ImplicitTriangulation_8cpp.html#a43ae58611f7b377798ec7ad0498c7494',1,'ImplicitTriangulation.cpp']]],
+  ['case_5fedge_5fposition_5fd3_5f3d_9954',['CASE_EDGE_POSITION_D3_3D',['../ImplicitTriangulation_8cpp.html#aa4517a79c8737e0196ca2947ff19fe61',1,'ImplicitTriangulation.cpp']]],
+  ['case_5fedge_5fposition_5fh_5f2d_9955',['CASE_EDGE_POSITION_H_2D',['../ImplicitTriangulation_8cpp.html#a5e10ee227465c5be302b2f456ff492e4',1,'ImplicitTriangulation.cpp']]],
+  ['case_5fedge_5fposition_5fh_5f3d_9956',['CASE_EDGE_POSITION_H_3D',['../ImplicitTriangulation_8cpp.html#a74d68f8dd8521bd8a9dbb63fc5935af4',1,'ImplicitTriangulation.cpp']]],
+  ['case_5fedge_5fposition_5fl_5f2d_9957',['CASE_EDGE_POSITION_L_2D',['../ImplicitTriangulation_8cpp.html#a5ac15e65afc2126cbbda26ff1495b406',1,'ImplicitTriangulation.cpp']]],
+  ['case_5fedge_5fposition_5fl_5f3d_9958',['CASE_EDGE_POSITION_L_3D',['../ImplicitTriangulation_8cpp.html#a7954821f4c5cabba3390da550a445fdc',1,'ImplicitTriangulation.cpp']]],
+  ['case_5fedge_5fposition_5fp_5f3d_9959',['CASE_EDGE_POSITION_P_3D',['../ImplicitTriangulation_8cpp.html#a0f5a97ec2710091b4cf00634923e8b5f',1,'ImplicitTriangulation.cpp']]],
+  ['common_5fexports_9960',['COMMON_EXPORTS',['../BaseClass_8h.html#af062563d191a45e86f95e5cd9f10445c',1,'BaseClass.h']]]
 ];
