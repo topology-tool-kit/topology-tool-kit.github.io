@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /home/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkPersistenceCurve/ttkPersistenceCurve.h Source File</title>
+<title>TTK: /data/julien/git/github/ttk-tierny/core/vtk/ttkPersistenceCurve/ttkPersistenceCurve.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_aa319678ed2cb39fab2f8ff1969e8605.html">tierny</a></li><li class="navelem"><a class="el" href="dir_90f0e18f6a3db9a50a0cff0ad55689f7.html">private</a></li><li class="navelem"><a class="el" href="dir_3a6af36370c7b2c289deb8eee8b7da12.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_b6ff1f0e45d53bd762250c1eea10201d.html">core</a></li><li class="navelem"><a class="el" href="dir_f896db529ed01bc9983c6880f4c01d3c.html">vtk</a></li><li class="navelem"><a class="el" href="dir_abef7aba02fa990104e76fe967ad4a01.html">ttkPersistenceCurve</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_0e7776f16b212fdf7e5dd84de757bc05.html">ttkPersistenceCurve</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,89 +69,90 @@ $(function() {
 <div class="title">ttkPersistenceCurve.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="ttkPersistenceCurve_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _TTK_PERSISTENCECURVE_H</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define _TTK_PERSISTENCECURVE_H</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// VTK includes</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;vtkDataArray.h&gt;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;vtkDataSet.h&gt;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;vtkDoubleArray.h&gt;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;vtkInformation.h&gt;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;vtkInformationVector.h&gt;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;vtkPointData.h&gt;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;vtkSmartPointer.h&gt;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;vtkTable.h&gt;</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">// VTK Module</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;ttkPersistenceCurveModule.h&gt;</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">// ttk code includes</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="PersistenceCurve_8h.html">PersistenceCurve.h</a>&gt;</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a>&gt;</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classttkPersistenceCurve.html">   55</a></span>&#160;<span class="keyword">class </span>TTKPERSISTENCECURVE_EXPORT <a class="code" href="classttkPersistenceCurve.html">ttkPersistenceCurve</a></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  : <span class="keyword">public</span> <a class="code" href="classttkAlgorithm.html">ttkAlgorithm</a>,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">protected</span> <a class="code" href="classttk_1_1PersistenceCurve.html">ttk::PersistenceCurve</a> {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classttkPersistenceCurve.html#a3fda9edf2b3cc61a7bdbde933d77f30a">   60</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="classttkPersistenceCurve.html">ttkPersistenceCurve</a> *<a class="code" href="classttkPersistenceCurve.html#a3fda9edf2b3cc61a7bdbde933d77f30a">New</a>();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classttkPersistenceCurve.html#adb64651b79750efb74dcb011e3312ca1">   62</a></span>&#160;  <a class="code" href="classttkPersistenceCurve.html#adb64651b79750efb74dcb011e3312ca1">vtkTypeMacro</a>(<a class="code" href="classttkPersistenceCurve.html">ttkPersistenceCurve</a>, <a class="code" href="classttkAlgorithm.html">ttkAlgorithm</a>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classttkPersistenceCurve.html#a52e47da56cdad75da9e704dd2d083f31">   64</a></span>&#160;  <a class="code" href="classttkPersistenceCurve.html#a52e47da56cdad75da9e704dd2d083f31">vtkSetMacro</a>(ForceInputOffsetScalarField, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classttkPersistenceCurve.html#aa27c6658e57a7325e464ab64bf00ab22">   65</a></span>&#160;  <a class="code" href="classttkPersistenceCurve.html#aa27c6658e57a7325e464ab64bf00ab22">vtkGetMacro</a>(ForceInputOffsetScalarField, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classttkPersistenceCurve.html#acd2d3e3fe1e098e9ed8307e326e49cf5">   67</a></span>&#160;  <a class="code" href="classttkPersistenceCurve.html#acd2d3e3fe1e098e9ed8307e326e49cf5">vtkSetMacro</a>(ComputeSaddleConnectors, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classttkPersistenceCurve.html#a43320377ec2b19f50e786edecceb2b78">   68</a></span>&#160;  <a class="code" href="classttkPersistenceCurve.html#a43320377ec2b19f50e786edecceb2b78">vtkGetMacro</a>(ComputeSaddleConnectors, <span class="keywordtype">bool</span>);</div>
+<a href="ttkPersistenceCurve_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifndef _TTK_PERSISTENCECURVE_H</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define _TTK_PERSISTENCECURVE_H</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">// VTK includes</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;vtkDataArray.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;vtkDataSet.h&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;vtkDoubleArray.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;vtkInformation.h&gt;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;vtkInformationVector.h&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;vtkPointData.h&gt;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &lt;vtkSmartPointer.h&gt;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &lt;vtkTable.h&gt;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">// VTK Module</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &lt;ttkPersistenceCurveModule.h&gt;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">// ttk code includes</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="PersistenceCurve_8h.html">PersistenceCurve.h</a>&gt;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a>&gt;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classttkPersistenceCurve.html">   61</a></span>&#160;<span class="keyword">class </span>TTKPERSISTENCECURVE_EXPORT <a class="code" href="classttkPersistenceCurve.html">ttkPersistenceCurve</a></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  : <span class="keyword">public</span> <a class="code" href="classttkAlgorithm.html">ttkAlgorithm</a>,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">protected</span> <a class="code" href="classttk_1_1PersistenceCurve.html">ttk::PersistenceCurve</a> {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classttkPersistenceCurve.html#a3fda9edf2b3cc61a7bdbde933d77f30a">   66</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="classttkPersistenceCurve.html">ttkPersistenceCurve</a> *<a class="code" href="classttkPersistenceCurve.html#a3fda9edf2b3cc61a7bdbde933d77f30a">New</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classttkPersistenceCurve.html#adb64651b79750efb74dcb011e3312ca1">   68</a></span>&#160;  <a class="code" href="classttkPersistenceCurve.html#adb64651b79750efb74dcb011e3312ca1">vtkTypeMacro</a>(<a class="code" href="classttkPersistenceCurve.html">ttkPersistenceCurve</a>, <a class="code" href="classttkAlgorithm.html">ttkAlgorithm</a>);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  vtkTable *<a class="code" href="classttkAlgorithm.html#a86311a3affd29959b3d1d341e165e027">GetOutput</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  vtkTable *<a class="code" href="classttkAlgorithm.html#a86311a3affd29959b3d1d341e165e027">GetOutput</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classttkPersistenceCurve.html#a52e47da56cdad75da9e704dd2d083f31">   70</a></span>&#160;  <a class="code" href="classttkPersistenceCurve.html#a52e47da56cdad75da9e704dd2d083f31">vtkSetMacro</a>(ForceInputOffsetScalarField, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classttkPersistenceCurve.html#aa27c6658e57a7325e464ab64bf00ab22">   71</a></span>&#160;  <a class="code" href="classttkPersistenceCurve.html#aa27c6658e57a7325e464ab64bf00ab22">vtkGetMacro</a>(ForceInputOffsetScalarField, <span class="keywordtype">bool</span>);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="classttkPersistenceCurve.html">ttkPersistenceCurve</a>();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  ~<a class="code" href="classttkPersistenceCurve.html">ttkPersistenceCurve</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">RequestData</a>(vtkInformation *request,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                  vtkInformationVector **inputVector,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                  vtkInformationVector *outputVector) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classttkAlgorithm.html#a8f75b7604e5d3dd203c0e6096b7e3722">FillInputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classttkPersistenceCurve.html#acd2d3e3fe1e098e9ed8307e326e49cf5">   73</a></span>&#160;  <a class="code" href="classttkPersistenceCurve.html#acd2d3e3fe1e098e9ed8307e326e49cf5">vtkSetMacro</a>(ComputeSaddleConnectors, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classttkPersistenceCurve.html#a43320377ec2b19f50e786edecceb2b78">   74</a></span>&#160;  <a class="code" href="classttkPersistenceCurve.html#a43320377ec2b19f50e786edecceb2b78">vtkGetMacro</a>(ComputeSaddleConnectors, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  vtkTable *<a class="code" href="classttkAlgorithm.html#a86311a3affd29959b3d1d341e165e027">GetOutput</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  vtkTable *<a class="code" href="classttkAlgorithm.html#a86311a3affd29959b3d1d341e165e027">GetOutput</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="classttkPersistenceCurve.html">ttkPersistenceCurve</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  ~<a class="code" href="classttkPersistenceCurve.html">ttkPersistenceCurve</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classttkAlgorithm.html#a9327be9d48e9af4a153a1ecf5e414b75">FillOutputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> vtkArrayType, <span class="keyword">typename</span> scalarType&gt;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">int</span> getPersistenceCurve(</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    vtkTable *outputCurve,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="namespacettk_1_1ftm.html#a50fb2f892ab92b84f0d827e3993b5a2b">ttk::ftm::TreeType</a> treeType,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">const</span> std::vector&lt;std::pair&lt;scalarType, ttk::SimplexId&gt;&gt; &amp;plot);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">RequestData</a>(vtkInformation *request,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                  vtkInformationVector **inputVector,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                  vtkInformationVector *outputVector) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classttkAlgorithm.html#a8f75b7604e5d3dd203c0e6096b7e3722">FillInputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classttkAlgorithm.html#a9327be9d48e9af4a153a1ecf5e414b75">FillOutputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> vtkArrayType, <span class="keyword">typename</span> scalarType&gt;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">int</span> getMSCPersistenceCurve(</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">int</span> getPersistenceCurve(</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    vtkTable *outputCurve,</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">const</span> std::vector&lt;std::pair&lt;scalarType, ttk::SimplexId&gt;&gt; &amp;plot);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">bool</span> ForceInputOffsetScalarField{<span class="keyword">false</span>};</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> VTK_TT, <span class="keyword">typename</span> TTK_TT&gt;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">int</span> dispatch(vtkTable *outputJTPersistenceCurve,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;               vtkTable *outputMSCPersistenceCurve,</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;               vtkTable *outputSTPersistenceCurve,</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;               vtkTable *outputCTPersistenceCurve,</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;               <span class="keyword">const</span> VTK_TT *inputScalars,</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;               <span class="keyword">const</span> <span class="keywordtype">void</span> *inputOffsets,</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;               <span class="keyword">const</span> TTK_TT *triangulation);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;};</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// _TTK_PERSISTENCECURVE_H</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="namespacettk_1_1ftm.html#a50fb2f892ab92b84f0d827e3993b5a2b">ttk::ftm::TreeType</a> treeType,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">const</span> std::vector&lt;std::pair&lt;scalarType, ttk::SimplexId&gt;&gt; &amp;plot);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> vtkArrayType, <span class="keyword">typename</span> scalarType&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">int</span> getMSCPersistenceCurve(</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    vtkTable *outputCurve,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">const</span> std::vector&lt;std::pair&lt;scalarType, ttk::SimplexId&gt;&gt; &amp;plot);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">bool</span> ForceInputOffsetScalarField{<span class="keyword">false</span>};</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> VTK_TT, <span class="keyword">typename</span> TTK_TT&gt;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">int</span> dispatch(vtkTable *outputJTPersistenceCurve,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;               vtkTable *outputMSCPersistenceCurve,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;               vtkTable *outputSTPersistenceCurve,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;               vtkTable *outputCTPersistenceCurve,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;               <span class="keyword">const</span> VTK_TT *inputScalars,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;               <span class="keyword">const</span> <span class="keywordtype">void</span> *inputOffsets,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;               <span class="keyword">const</span> TTK_TT *triangulation);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;};</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// _TTK_PERSISTENCECURVE_H</span></div>
 <div class="ttc" id="aPersistenceCurve_8h_html"><div class="ttname"><a href="PersistenceCurve_8h.html">PersistenceCurve.h</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html"><div class="ttname"><a href="classttkAlgorithm.html">ttkAlgorithm</a></div><div class="ttdoc">Baseclass of all VTK filters that wrap ttk modules.</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00034">ttkAlgorithm.h:35</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a38454ad0e03893665a505e0aa3fafa48"><div class="ttname"><a href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">ttkAlgorithm::RequestData</a></div><div class="ttdeci">virtual int RequestData(vtkInformation *ttkNotUsed(request), vtkInformationVector **ttkNotUsed(inputVectors), vtkInformationVector *ttkNotUsed(outputVector))</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00294">ttkAlgorithm.h:294</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a86311a3affd29959b3d1d341e165e027"><div class="ttname"><a href="classttkAlgorithm.html#a86311a3affd29959b3d1d341e165e027">ttkAlgorithm::GetOutput</a></div><div class="ttdeci">vtkDataSet * GetOutput()</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8cpp_source.html#l00270">ttkAlgorithm.cpp:270</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a8f75b7604e5d3dd203c0e6096b7e3722"><div class="ttname"><a href="classttkAlgorithm.html#a8f75b7604e5d3dd203c0e6096b7e3722">ttkAlgorithm::FillInputPortInformation</a></div><div class="ttdeci">virtual int FillInputPortInformation(int ttkNotUsed(port), vtkInformation *ttkNotUsed(info)) override</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00309">ttkAlgorithm.h:309</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a9327be9d48e9af4a153a1ecf5e414b75"><div class="ttname"><a href="classttkAlgorithm.html#a9327be9d48e9af4a153a1ecf5e414b75">ttkAlgorithm::FillOutputPortInformation</a></div><div class="ttdeci">virtual int FillOutputPortInformation(int ttkNotUsed(port), vtkInformation *ttkNotUsed(info)) override</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00325">ttkAlgorithm.h:325</a></div></div>
-<div class="ttc" id="aclassttkPersistenceCurve_html"><div class="ttname"><a href="classttkPersistenceCurve.html">ttkPersistenceCurve</a></div><div class="ttdoc">TTK VTK-filter for the computation of persistence curves.</div><div class="ttdef"><b>Definition:</b> <a href="ttkPersistenceCurve_8h_source.html#l00055">ttkPersistenceCurve.h:57</a></div></div>
+<div class="ttc" id="aclassttkPersistenceCurve_html"><div class="ttname"><a href="classttkPersistenceCurve.html">ttkPersistenceCurve</a></div><div class="ttdoc">TTK VTK-filter for the computation of persistence curves.</div><div class="ttdef"><b>Definition:</b> <a href="ttkPersistenceCurve_8h_source.html#l00061">ttkPersistenceCurve.h:63</a></div></div>
 <div class="ttc" id="aclassttkPersistenceCurve_html_a3fda9edf2b3cc61a7bdbde933d77f30a"><div class="ttname"><a href="classttkPersistenceCurve.html#a3fda9edf2b3cc61a7bdbde933d77f30a">ttkPersistenceCurve::New</a></div><div class="ttdeci">static ttkPersistenceCurve * New()</div></div>
 <div class="ttc" id="aclassttkPersistenceCurve_html_a43320377ec2b19f50e786edecceb2b78"><div class="ttname"><a href="classttkPersistenceCurve.html#a43320377ec2b19f50e786edecceb2b78">ttkPersistenceCurve::vtkGetMacro</a></div><div class="ttdeci">vtkGetMacro(ComputeSaddleConnectors, bool)</div></div>
 <div class="ttc" id="aclassttkPersistenceCurve_html_a52e47da56cdad75da9e704dd2d083f31"><div class="ttname"><a href="classttkPersistenceCurve.html#a52e47da56cdad75da9e704dd2d083f31">ttkPersistenceCurve::vtkSetMacro</a></div><div class="ttdeci">vtkSetMacro(ForceInputOffsetScalarField, bool)</div></div>
@@ -159,12 +160,12 @@ $(function() {
 <div class="ttc" id="aclassttkPersistenceCurve_html_acd2d3e3fe1e098e9ed8307e326e49cf5"><div class="ttname"><a href="classttkPersistenceCurve.html#acd2d3e3fe1e098e9ed8307e326e49cf5">ttkPersistenceCurve::vtkSetMacro</a></div><div class="ttdeci">vtkSetMacro(ComputeSaddleConnectors, bool)</div></div>
 <div class="ttc" id="aclassttkPersistenceCurve_html_adb64651b79750efb74dcb011e3312ca1"><div class="ttname"><a href="classttkPersistenceCurve.html#adb64651b79750efb74dcb011e3312ca1">ttkPersistenceCurve::vtkTypeMacro</a></div><div class="ttdeci">vtkTypeMacro(ttkPersistenceCurve, ttkAlgorithm)</div></div>
 <div class="ttc" id="aclassttk_1_1PersistenceCurve_html"><div class="ttname"><a href="classttk_1_1PersistenceCurve.html">ttk::PersistenceCurve</a></div><div class="ttdoc">TTK processing package for the computation of persistence curves.</div><div class="ttdef"><b>Definition:</b> <a href="PersistenceCurve_8h_source.html#l00031">PersistenceCurve.h:31</a></div></div>
-<div class="ttc" id="anamespacettk_1_1ftm_html_a50fb2f892ab92b84f0d827e3993b5a2b"><div class="ttname"><a href="namespacettk_1_1ftm.html#a50fb2f892ab92b84f0d827e3993b5a2b">ttk::ftm::TreeType</a></div><div class="ttdeci">TreeType</div><div class="ttdef"><b>Definition:</b> <a href="FTMDataTypes_8h_source.html#l00085">FTMDataTypes.h:85</a></div></div>
+<div class="ttc" id="anamespacettk_1_1ftm_html_a50fb2f892ab92b84f0d827e3993b5a2b"><div class="ttname"><a href="namespacettk_1_1ftm.html#a50fb2f892ab92b84f0d827e3993b5a2b">ttk::ftm::TreeType</a></div><div class="ttdeci">TreeType</div><div class="ttdef"><b>Definition:</b> <a href="FTMDataTypes_8h_source.html#l00093">FTMDataTypes.h:93</a></div></div>
 <div class="ttc" id="attkAlgorithm_8h_html"><div class="ttname"><a href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 16 2021 08:43:41 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Nov 22 2021 12:24:21 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

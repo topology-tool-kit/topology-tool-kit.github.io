@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /home/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkWebSocketIO/ttkWebSocketIO.cpp Source File</title>
+<title>TTK: /data/julien/git/github/ttk-tierny/core/vtk/ttkWebSocketIO/ttkWebSocketIO.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_aa319678ed2cb39fab2f8ff1969e8605.html">tierny</a></li><li class="navelem"><a class="el" href="dir_90f0e18f6a3db9a50a0cff0ad55689f7.html">private</a></li><li class="navelem"><a class="el" href="dir_3a6af36370c7b2c289deb8eee8b7da12.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_b6ff1f0e45d53bd762250c1eea10201d.html">core</a></li><li class="navelem"><a class="el" href="dir_f896db529ed01bc9983c6880f4c01d3c.html">vtk</a></li><li class="navelem"><a class="el" href="dir_cd0a5be47e8985d3c1f7c9583b15b645.html">ttkWebSocketIO</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_d98f95adbdcf2ce0be812a9489e6a7e9.html">ttkWebSocketIO</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -438,8 +438,8 @@ $(function() {
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      <span class="stringliteral">&quot;Serializing vtkDataObject&quot;</span>, 0.4, 0, <a class="code" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">ttk::debug::LineMode::REPLACE</a>);</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="comment">// send points if last input is a vtkPointSet</span></div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordflow">if</span>(block-&gt;IsA(<span class="stringliteral">&quot;vtkPointSet&quot;</span>)) {</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;      <span class="keyword">auto</span> blockAsPS = vtkPointSet::SafeDownCast(block);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keyword">auto</span> blockAsPS = vtkPointSet::SafeDownCast(block);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordflow">if</span>(blockAsPS != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      <span class="keyword">auto</span> points = blockAsPS-&gt;GetPoints();</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;      this-&gt;<a class="code" href="classttk_1_1WebSocketIO.html#a5d5cef04c62e3e2477d717ab58931721">queueMessage</a>(</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="stringliteral">&quot;{&quot;</span></div>
@@ -453,7 +453,7 @@ $(function() {
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        + <span class="stringliteral">&quot;,&quot;</span></div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;          <span class="stringliteral">&quot;\&quot;nComponents\&quot;: 3&quot;</span></div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;          <span class="stringliteral">&quot;}&quot;</span>);</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      <span class="keywordflow">if</span>(blockAsPS-&gt;GetNumberOfPoints() &gt; 0)</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      <span class="keywordflow">if</span>(blockAsPS-&gt;GetNumberOfPoints() &gt; 0 &amp;&amp; points != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="keywordflow">switch</span>(points-&gt;GetDataType()) {</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;          vtkTemplateMacro(this-&gt;<a class="code" href="classttk_1_1WebSocketIO.html#a5d5cef04c62e3e2477d717ab58931721">queueMessage</a>(</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            blockAsPS-&gt;GetNumberOfPoints() * <span class="keyword">sizeof</span>(VTK_TT) * 3,</div>
@@ -634,7 +634,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 16 2021 08:43:42 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Nov 22 2021 12:24:22 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

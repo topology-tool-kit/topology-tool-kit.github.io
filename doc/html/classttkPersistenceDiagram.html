@@ -279,6 +279,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a70040608e5800ea8109d53b31b1a3442 inherit pro_methods_classttk_1_1PersistenceDiagram"><td class="memTemplParams" colspan="2">template&lt;typename scalarType , class triangulationType &gt; </td></tr>
 <tr class="memitem:a70040608e5800ea8109d53b31b1a3442 inherit pro_methods_classttk_1_1PersistenceDiagram"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagram.html#a70040608e5800ea8109d53b31b1a3442">executeProgressiveTopology</a> (std::vector&lt; <a class="el" href="structttk_1_1PersistencePair.html">PersistencePair</a> &gt; &amp;CTDiagram, const scalarType *inputScalars, const <a class="el" href="classttk.html#a105fd2ab023d1d8d27bd736a4cdc5abf">SimplexId</a> *inputOffsets, const triangulationType *triangulation)</td></tr>
 <tr class="separator:a70040608e5800ea8109d53b31b1a3442 inherit pro_methods_classttk_1_1PersistenceDiagram"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb9fa272a451d12f80e510b5c8cfb06a inherit pro_methods_classttk_1_1PersistenceDiagram"><td class="memTemplParams" colspan="2">template&lt;typename scalarType , class triangulationType &gt; </td></tr>
+<tr class="memitem:abb9fa272a451d12f80e510b5c8cfb06a inherit pro_methods_classttk_1_1PersistenceDiagram"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagram.html#abb9fa272a451d12f80e510b5c8cfb06a">executePersistentSimplex</a> (std::vector&lt; <a class="el" href="structttk_1_1PersistencePair.html">PersistencePair</a> &gt; &amp;CTDiagram, const scalarType *inputScalars, const <a class="el" href="classttk.html#a105fd2ab023d1d8d27bd736a4cdc5abf">SimplexId</a> *inputOffsets, const triangulationType *triangulation)</td></tr>
+<tr class="separator:abb9fa272a451d12f80e510b5c8cfb06a inherit pro_methods_classttk_1_1PersistenceDiagram"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c08dfa15aefc00dc6932f8ecdab939e inherit pro_methods_classttk_1_1PersistenceDiagram"><td class="memTemplParams" colspan="2">template&lt;class triangulationType &gt; </td></tr>
 <tr class="memitem:a4c08dfa15aefc00dc6932f8ecdab939e inherit pro_methods_classttk_1_1PersistenceDiagram"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagram.html#a4c08dfa15aefc00dc6932f8ecdab939e">checkProgressivityRequirement</a> (const triangulationType *triangulation)</td></tr>
 <tr class="separator:a4c08dfa15aefc00dc6932f8ecdab939e inherit pro_methods_classttk_1_1PersistenceDiagram"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -293,6 +296,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_types_classttk_1_1PersistenceDiagram"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classttk_1_1PersistenceDiagram')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="classttk_1_1PersistenceDiagram.html">ttk::PersistenceDiagram</a></td></tr>
 <tr class="memitem:a5ac0f6888163050b6b3799a087882385 inherit pro_types_classttk_1_1PersistenceDiagram"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagram.html#a5ac0f6888163050b6b3799a087882385">BACKEND</a> { <a class="el" href="classttk_1_1PersistenceDiagram.html#a5ac0f6888163050b6b3799a087882385adde93229f358372faa496c8d61104803">FTM</a> = 0
 , <a class="el" href="classttk_1_1PersistenceDiagram.html#a5ac0f6888163050b6b3799a087882385ab1efd1f00d23b1a725126af7546980bb">PROGRESSIVE_TOPOLOGY</a> = 1
+, <a class="el" href="classttk_1_1PersistenceDiagram.html#a5ac0f6888163050b6b3799a087882385afbc7b53e0dec3fb6d99ccc0bd41df862">PERSISTENT_SIMPLEX</a> = 2
  }</td></tr>
 <tr class="separator:a5ac0f6888163050b6b3799a087882385 inherit pro_types_classttk_1_1PersistenceDiagram"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classttk_1_1Debug"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classttk_1_1Debug')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classttk_1_1Debug.html">ttk::Debug</a></td></tr>
@@ -314,6 +318,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a178e8d2464c035156ecf8368de70bcf4 inherit pro_attribs_classttk_1_1PersistenceDiagram"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72eeddc088ff76522349536700c33ec4 inherit pro_attribs_classttk_1_1PersistenceDiagram"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1dcg_1_1DiscreteGradient.html">dcg::DiscreteGradient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagram.html#a72eeddc088ff76522349536700c33ec4">dcg_</a> {}</td></tr>
 <tr class="separator:a72eeddc088ff76522349536700c33ec4 inherit pro_attribs_classttk_1_1PersistenceDiagram"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae13acf046589100caefae8ff5c70dfd7 inherit pro_attribs_classttk_1_1PersistenceDiagram"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1PersistentSimplexPairs.html">PersistentSimplexPairs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagram.html#ae13acf046589100caefae8ff5c70dfd7">psp_</a> {}</td></tr>
+<tr class="separator:ae13acf046589100caefae8ff5c70dfd7 inherit pro_attribs_classttk_1_1PersistenceDiagram"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77e47c6eb08389136b50334c1c6a3c3a inherit pro_attribs_classttk_1_1PersistenceDiagram"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1PersistenceDiagram.html#a5ac0f6888163050b6b3799a087882385">BACKEND</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagram.html#a77e47c6eb08389136b50334c1c6a3c3a">BackEnd</a> {<a class="el" href="classttk_1_1PersistenceDiagram.html#a5ac0f6888163050b6b3799a087882385adde93229f358372faa496c8d61104803">BACKEND::FTM</a>}</td></tr>
 <tr class="separator:a77e47c6eb08389136b50334c1c6a3c3a inherit pro_attribs_classttk_1_1PersistenceDiagram"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a160f6838a8be097308f75109ac13cb inherit pro_attribs_classttk_1_1PersistenceDiagram"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1ProgressiveTopology.html">ttk::ProgressiveTopology</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagram.html#a3a160f6838a8be097308f75109ac13cb">progT_</a> {}</td></tr>
@@ -367,9 +373,13 @@ IEEE Transactions on Visualization and Computer Graphics, 2021</p>
 <dd>
 <a class="el" href="classttkTopologicalSimplification.html" title="TTK VTK-filter for the topological simplification of scalar data.">ttkTopologicalSimplification</a> </dd>
 <dd>
-<a class="el" href="classttk_1_1PersistenceDiagram.html" title="TTK processing package for the computation of persistence diagrams.">ttk::PersistenceDiagram</a> </dd></dl>
+<a class="el" href="classttk_1_1PersistenceDiagram.html" title="TTK processing package for the computation of persistence diagrams.">ttk::PersistenceDiagram</a></dd></dl>
+<p><b>Online</b> <b>examples:</b> <br  />
+</p><ul>
+<li><a href="https://topology-tool-kit.github.io/examples/dragon/">Dragon example</a> </li>
+</ul>
 
-<p class="definition">Definition at line <a class="el" href="ttkPersistenceDiagram_8h_source.html#l00074">74</a> of file <a class="el" href="ttkPersistenceDiagram_8h_source.html">ttkPersistenceDiagram.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ttkPersistenceDiagram_8h_source.html#l00079">79</a> of file <a class="el" href="ttkPersistenceDiagram_8h_source.html">ttkPersistenceDiagram.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a89dedd955d6baaab5533b30f0777d4af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89dedd955d6baaab5533b30f0777d4af">&#9670;&nbsp;</a></span>ttkPersistenceDiagram()</h2>
@@ -1021,13 +1031,13 @@ IEEE Transactions on Visualization and Computer Graphics, 2021</p>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkPersistenceDiagram/<a class="el" href="ttkPersistenceDiagram_8h_source.html">ttkPersistenceDiagram.h</a></li>
-<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkPersistenceDiagram/<a class="el" href="ttkPersistenceDiagram_8cpp_source.html">ttkPersistenceDiagram.cpp</a></li>
+<li>/data/julien/git/github/ttk-tierny/core/vtk/ttkPersistenceDiagram/<a class="el" href="ttkPersistenceDiagram_8h_source.html">ttkPersistenceDiagram.h</a></li>
+<li>/data/julien/git/github/ttk-tierny/core/vtk/ttkPersistenceDiagram/<a class="el" href="ttkPersistenceDiagram_8cpp_source.html">ttkPersistenceDiagram.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 16 2021 08:43:43 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Nov 22 2021 12:24:22 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

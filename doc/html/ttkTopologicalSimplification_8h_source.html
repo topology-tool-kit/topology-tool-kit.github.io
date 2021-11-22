@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /home/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkTopologicalSimplification/ttkTopologicalSimplification.h Source File</title>
+<title>TTK: /data/julien/git/github/ttk-tierny/core/vtk/ttkTopologicalSimplification/ttkTopologicalSimplification.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_aa319678ed2cb39fab2f8ff1969e8605.html">tierny</a></li><li class="navelem"><a class="el" href="dir_90f0e18f6a3db9a50a0cff0ad55689f7.html">private</a></li><li class="navelem"><a class="el" href="dir_3a6af36370c7b2c289deb8eee8b7da12.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_b6ff1f0e45d53bd762250c1eea10201d.html">core</a></li><li class="navelem"><a class="el" href="dir_f896db529ed01bc9983c6880f4c01d3c.html">vtk</a></li><li class="navelem"><a class="el" href="dir_68e13a171e1b598a717a0e7b7e634236.html">ttkTopologicalSimplification</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_9bd372ccd6cbf34f1c8a21481009ad58.html">ttkTopologicalSimplification</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -70,66 +70,66 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="ttkTopologicalSimplification_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">// VTK Module</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &lt;ttkTopologicalSimplificationModule.h&gt;</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">// ttk code includes</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="TopologicalSimplification_8h.html">TopologicalSimplification.h</a>&gt;</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a>&gt;</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">class </span>vtkDataArray;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html">   68</a></span>&#160;<span class="keyword">class </span>TTKTOPOLOGICALSIMPLIFICATION_EXPORT <a class="code" href="classttkTopologicalSimplification.html">ttkTopologicalSimplification</a></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  : <span class="keyword">public</span> <a class="code" href="classttkAlgorithm.html">ttkAlgorithm</a>,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">protected</span> <a class="code" href="classttk_1_1TopologicalSimplification.html">ttk::TopologicalSimplification</a> {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#ac5a5bfb9380c5d739e4c256ab60df685">   73</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="classttkTopologicalSimplification.html">ttkTopologicalSimplification</a> *<a class="code" href="classttkTopologicalSimplification.html#ac5a5bfb9380c5d739e4c256ab60df685">New</a>();</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#aa19724a46bc20a683ce35154b4676c95">   74</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#aa19724a46bc20a683ce35154b4676c95">vtkTypeMacro</a>(<a class="code" href="classttkTopologicalSimplification.html">ttkTopologicalSimplification</a>, <a class="code" href="classttkAlgorithm.html">ttkAlgorithm</a>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#ae06e5a39270d32835cbc017c7df29be8">   76</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#ae06e5a39270d32835cbc017c7df29be8">vtkSetMacro</a>(ForceInputOffsetScalarField, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#aab9a6bfb6362830a33b8ad13a593b539">   77</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#aab9a6bfb6362830a33b8ad13a593b539">vtkGetMacro</a>(ForceInputOffsetScalarField, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a9889713f66b8866c040a1720197416e4">   79</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#a9889713f66b8866c040a1720197416e4">vtkSetMacro</a>(ConsiderIdentifierAsBlackList, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#af9f9f2fb63cf1005bbe61e6b4f044785">   80</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#af9f9f2fb63cf1005bbe61e6b4f044785">vtkGetMacro</a>(ConsiderIdentifierAsBlackList, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a4681f562cd5b04cb9080ad88091c5d6e">   82</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#a4681f562cd5b04cb9080ad88091c5d6e">vtkSetMacro</a>(AddPerturbation, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a62cba49478b16ba4c6de06f5071a282e">   83</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#a62cba49478b16ba4c6de06f5071a282e">vtkGetMacro</a>(AddPerturbation, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a9dabbca85a86deca2252952ffe3533f8">   85</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#a9dabbca85a86deca2252952ffe3533f8">vtkSetMacro</a>(ForceInputVertexScalarField, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#acc2802f1fe984338447e4ed6b5e0153f">   86</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#acc2802f1fe984338447e4ed6b5e0153f">vtkGetMacro</a>(ForceInputVertexScalarField, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#abdb243d5c14453ec3b87ebff0a0ed138">   88</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#abdb243d5c14453ec3b87ebff0a0ed138">vtkSetMacro</a>(UseLTS, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a67192005f36d56de0e448c6310aaa711">   89</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#a67192005f36d56de0e448c6310aaa711">vtkGetMacro</a>(UseLTS, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a3aa489fd776ce813b814f34da2d8181c">   91</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#a3aa489fd776ce813b814f34da2d8181c">vtkSetMacro</a>(PersistenceThreshold, <span class="keywordtype">double</span>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a30dc054b1ce2c3e98b05a0e2f59282f5">   92</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#a30dc054b1ce2c3e98b05a0e2f59282f5">vtkGetMacro</a>(PersistenceThreshold, <span class="keywordtype">double</span>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="classttkTopologicalSimplification.html">ttkTopologicalSimplification</a>();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classttkAlgorithm.html#a8f75b7604e5d3dd203c0e6096b7e3722">FillInputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classttkAlgorithm.html#a9327be9d48e9af4a153a1ecf5e414b75">FillOutputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">RequestData</a>(vtkInformation *request,</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                  vtkInformationVector **inputVector,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                  vtkInformationVector *outputVector) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">bool</span> ForceInputVertexScalarField{<span class="keyword">false</span>};</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">bool</span> ForceInputOffsetScalarField{<span class="keyword">false</span>};</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">bool</span> ConsiderIdentifierAsBlackList{<span class="keyword">false</span>};</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">bool</span> AddPerturbation{<span class="keyword">false</span>};</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordtype">bool</span> UseLTS{<span class="keyword">true</span>};</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">double</span> PersistenceThreshold{0};</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">// VTK Module</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#include &lt;ttkTopologicalSimplificationModule.h&gt;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">// ttk code includes</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="TopologicalSimplification_8h.html">TopologicalSimplification.h</a>&gt;</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a>&gt;</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">class </span>vtkDataArray;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html">   73</a></span>&#160;<span class="keyword">class </span>TTKTOPOLOGICALSIMPLIFICATION_EXPORT <a class="code" href="classttkTopologicalSimplification.html">ttkTopologicalSimplification</a></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  : <span class="keyword">public</span> <a class="code" href="classttkAlgorithm.html">ttkAlgorithm</a>,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">protected</span> <a class="code" href="classttk_1_1TopologicalSimplification.html">ttk::TopologicalSimplification</a> {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#ac5a5bfb9380c5d739e4c256ab60df685">   78</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="classttkTopologicalSimplification.html">ttkTopologicalSimplification</a> *<a class="code" href="classttkTopologicalSimplification.html#ac5a5bfb9380c5d739e4c256ab60df685">New</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#aa19724a46bc20a683ce35154b4676c95">   79</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#aa19724a46bc20a683ce35154b4676c95">vtkTypeMacro</a>(<a class="code" href="classttkTopologicalSimplification.html">ttkTopologicalSimplification</a>, <a class="code" href="classttkAlgorithm.html">ttkAlgorithm</a>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#ae06e5a39270d32835cbc017c7df29be8">   81</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#ae06e5a39270d32835cbc017c7df29be8">vtkSetMacro</a>(ForceInputOffsetScalarField, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#aab9a6bfb6362830a33b8ad13a593b539">   82</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#aab9a6bfb6362830a33b8ad13a593b539">vtkGetMacro</a>(ForceInputOffsetScalarField, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a9889713f66b8866c040a1720197416e4">   84</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#a9889713f66b8866c040a1720197416e4">vtkSetMacro</a>(ConsiderIdentifierAsBlackList, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#af9f9f2fb63cf1005bbe61e6b4f044785">   85</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#af9f9f2fb63cf1005bbe61e6b4f044785">vtkGetMacro</a>(ConsiderIdentifierAsBlackList, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a4681f562cd5b04cb9080ad88091c5d6e">   87</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#a4681f562cd5b04cb9080ad88091c5d6e">vtkSetMacro</a>(AddPerturbation, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a62cba49478b16ba4c6de06f5071a282e">   88</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#a62cba49478b16ba4c6de06f5071a282e">vtkGetMacro</a>(AddPerturbation, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a9dabbca85a86deca2252952ffe3533f8">   90</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#a9dabbca85a86deca2252952ffe3533f8">vtkSetMacro</a>(ForceInputVertexScalarField, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#acc2802f1fe984338447e4ed6b5e0153f">   91</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#acc2802f1fe984338447e4ed6b5e0153f">vtkGetMacro</a>(ForceInputVertexScalarField, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#abdb243d5c14453ec3b87ebff0a0ed138">   93</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#abdb243d5c14453ec3b87ebff0a0ed138">vtkSetMacro</a>(UseLTS, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a67192005f36d56de0e448c6310aaa711">   94</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#a67192005f36d56de0e448c6310aaa711">vtkGetMacro</a>(UseLTS, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a3aa489fd776ce813b814f34da2d8181c">   96</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#a3aa489fd776ce813b814f34da2d8181c">vtkSetMacro</a>(PersistenceThreshold, <span class="keywordtype">double</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a30dc054b1ce2c3e98b05a0e2f59282f5">   97</a></span>&#160;  <a class="code" href="classttkTopologicalSimplification.html#a30dc054b1ce2c3e98b05a0e2f59282f5">vtkGetMacro</a>(PersistenceThreshold, <span class="keywordtype">double</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <a class="code" href="classttkTopologicalSimplification.html">ttkTopologicalSimplification</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classttkAlgorithm.html#a8f75b7604e5d3dd203c0e6096b7e3722">FillInputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classttkAlgorithm.html#a9327be9d48e9af4a153a1ecf5e414b75">FillOutputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">RequestData</a>(vtkInformation *request,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                  vtkInformationVector **inputVector,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                  vtkInformationVector *outputVector) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">bool</span> ForceInputVertexScalarField{<span class="keyword">false</span>};</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">bool</span> ForceInputOffsetScalarField{<span class="keyword">false</span>};</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordtype">bool</span> ConsiderIdentifierAsBlackList{<span class="keyword">false</span>};</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordtype">bool</span> AddPerturbation{<span class="keyword">false</span>};</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordtype">bool</span> UseLTS{<span class="keyword">true</span>};</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">double</span> PersistenceThreshold{0};</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
 <div class="ttc" id="aTopologicalSimplification_8h_html"><div class="ttname"><a href="TopologicalSimplification_8h.html">TopologicalSimplification.h</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html"><div class="ttname"><a href="classttkAlgorithm.html">ttkAlgorithm</a></div><div class="ttdoc">Baseclass of all VTK filters that wrap ttk modules.</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00034">ttkAlgorithm.h:35</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a38454ad0e03893665a505e0aa3fafa48"><div class="ttname"><a href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">ttkAlgorithm::RequestData</a></div><div class="ttdeci">virtual int RequestData(vtkInformation *ttkNotUsed(request), vtkInformationVector **ttkNotUsed(inputVectors), vtkInformationVector *ttkNotUsed(outputVector))</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00294">ttkAlgorithm.h:294</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a8f75b7604e5d3dd203c0e6096b7e3722"><div class="ttname"><a href="classttkAlgorithm.html#a8f75b7604e5d3dd203c0e6096b7e3722">ttkAlgorithm::FillInputPortInformation</a></div><div class="ttdeci">virtual int FillInputPortInformation(int ttkNotUsed(port), vtkInformation *ttkNotUsed(info)) override</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00309">ttkAlgorithm.h:309</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a9327be9d48e9af4a153a1ecf5e414b75"><div class="ttname"><a href="classttkAlgorithm.html#a9327be9d48e9af4a153a1ecf5e414b75">ttkAlgorithm::FillOutputPortInformation</a></div><div class="ttdeci">virtual int FillOutputPortInformation(int ttkNotUsed(port), vtkInformation *ttkNotUsed(info)) override</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00325">ttkAlgorithm.h:325</a></div></div>
-<div class="ttc" id="aclassttkTopologicalSimplification_html"><div class="ttname"><a href="classttkTopologicalSimplification.html">ttkTopologicalSimplification</a></div><div class="ttdoc">TTK VTK-filter for the topological simplification of scalar data.</div><div class="ttdef"><b>Definition:</b> <a href="ttkTopologicalSimplification_8h_source.html#l00068">ttkTopologicalSimplification.h:70</a></div></div>
+<div class="ttc" id="aclassttkTopologicalSimplification_html"><div class="ttname"><a href="classttkTopologicalSimplification.html">ttkTopologicalSimplification</a></div><div class="ttdoc">TTK VTK-filter for the topological simplification of scalar data.</div><div class="ttdef"><b>Definition:</b> <a href="ttkTopologicalSimplification_8h_source.html#l00073">ttkTopologicalSimplification.h:75</a></div></div>
 <div class="ttc" id="aclassttkTopologicalSimplification_html_a30dc054b1ce2c3e98b05a0e2f59282f5"><div class="ttname"><a href="classttkTopologicalSimplification.html#a30dc054b1ce2c3e98b05a0e2f59282f5">ttkTopologicalSimplification::vtkGetMacro</a></div><div class="ttdeci">vtkGetMacro(PersistenceThreshold, double)</div></div>
 <div class="ttc" id="aclassttkTopologicalSimplification_html_a3aa489fd776ce813b814f34da2d8181c"><div class="ttname"><a href="classttkTopologicalSimplification.html#a3aa489fd776ce813b814f34da2d8181c">ttkTopologicalSimplification::vtkSetMacro</a></div><div class="ttdeci">vtkSetMacro(PersistenceThreshold, double)</div></div>
 <div class="ttc" id="aclassttkTopologicalSimplification_html_a4681f562cd5b04cb9080ad88091c5d6e"><div class="ttname"><a href="classttkTopologicalSimplification.html#a4681f562cd5b04cb9080ad88091c5d6e">ttkTopologicalSimplification::vtkSetMacro</a></div><div class="ttdeci">vtkSetMacro(AddPerturbation, bool)</div></div>
@@ -149,7 +149,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 16 2021 08:43:42 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Nov 22 2021 12:24:22 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

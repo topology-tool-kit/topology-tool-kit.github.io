@@ -17,11 +17,12 @@ var searchData=
   ['persistencediagramclustering_5028',['PersistenceDiagramClustering',['../classttk_1_1PersistenceDiagramClustering.html',1,'ttk']]],
   ['persistencediagramdistancematrix_5029',['PersistenceDiagramDistanceMatrix',['../classttk_1_1PersistenceDiagramDistanceMatrix.html',1,'ttk']]],
   ['persistencemetric_5030',['PersistenceMetric',['../classttk_1_1PersistenceMetric.html',1,'ttk']]],
-  ['persistencepair_5031',['PersistencePair',['../structttk_1_1PersistencePair.html',1,'ttk::PersistencePair'],['../structttk_1_1ProgressiveTopology_1_1PersistencePair.html',1,'ttk::ProgressiveTopology::PersistencePair']]],
-  ['planargraphlayout_5032',['PlanarGraphLayout',['../classttk_1_1PlanarGraphLayout.html',1,'ttk']]],
-  ['program_5033',['Program',['../classttk_1_1Program.html',1,'ttk']]],
-  ['programbase_5034',['ProgramBase',['../classttk_1_1ProgramBase.html',1,'ttk']]],
-  ['progressivetopology_5035',['ProgressiveTopology',['../classttk_1_1ProgressiveTopology.html',1,'ttk']]],
-  ['propagation_5036',['Propagation',['../classttk_1_1ftr_1_1Propagation.html',1,'ttk::ftr::Propagation'],['../structttk_1_1lts_1_1Propagation.html',1,'ttk::lts::Propagation&lt; IT &gt;']]],
-  ['propagations_5037',['Propagations',['../classttk_1_1ftr_1_1Propagations.html',1,'ttk::ftr']]]
+  ['persistencepair_5031',['PersistencePair',['../structttk_1_1PersistencePair.html',1,'ttk::PersistencePair'],['../structttk_1_1PersistentSimplexPairs_1_1PersistencePair.html',1,'ttk::PersistentSimplexPairs::PersistencePair'],['../structttk_1_1ProgressiveTopology_1_1PersistencePair.html',1,'ttk::ProgressiveTopology::PersistencePair']]],
+  ['persistentsimplexpairs_5032',['PersistentSimplexPairs',['../classttk_1_1PersistentSimplexPairs.html',1,'ttk']]],
+  ['planargraphlayout_5033',['PlanarGraphLayout',['../classttk_1_1PlanarGraphLayout.html',1,'ttk']]],
+  ['program_5034',['Program',['../classttk_1_1Program.html',1,'ttk']]],
+  ['programbase_5035',['ProgramBase',['../classttk_1_1ProgramBase.html',1,'ttk']]],
+  ['progressivetopology_5036',['ProgressiveTopology',['../classttk_1_1ProgressiveTopology.html',1,'ttk']]],
+  ['propagation_5037',['Propagation',['../classttk_1_1ftr_1_1Propagation.html',1,'ttk::ftr::Propagation'],['../structttk_1_1lts_1_1Propagation.html',1,'ttk::lts::Propagation&lt; IT &gt;']]],
+  ['propagations_5038',['Propagations',['../classttk_1_1ftr_1_1Propagations.html',1,'ttk::ftr']]]
 ];

@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['rangearea_9890',['rangeArea',['../classttk_1_1ReebSpace.html#aabfa2a3992fe0b2b1ad851588eb1b1baa32f308fbba10dd36437244076a696814',1,'ttk::ReebSpace']]],
-  ['regular_9891',['Regular',['../classttk.html#a2e938b4a3e29bf68d64fbb3a86cb55f9ad2203cb1237cb6460cbad94564e39345',1,'ttk::Regular()'],['../namespacettk_1_1ftr.html#ae1efeab53251c5a639c587a4a71e1b12ad2203cb1237cb6460cbad94564e39345',1,'ttk::ftr::Regular()']]],
-  ['relative_5fpersistence_5fglobal_9892',['RELATIVE_PERSISTENCE_GLOBAL',['../classttk_1_1PersistenceDiagramDistanceMatrix.html#ad7d3493c312622beac2a44b428a3fccaa30be01c5467bd4251cf813bbbfc95370',1,'ttk::PersistenceDiagramDistanceMatrix']]],
-  ['relative_5fpersistence_5fper_5fdiag_9893',['RELATIVE_PERSISTENCE_PER_DIAG',['../classttk_1_1PersistenceDiagramDistanceMatrix.html#ad7d3493c312622beac2a44b428a3fccaab6690dd85111de8485a94a3e56a222ac',1,'ttk::PersistenceDiagramDistanceMatrix']]],
-  ['replace_9894',['REPLACE',['../namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7',1,'ttk::debug']]],
-  ['right_5fback_5fedge_5f3d_9895',['RIGHT_BACK_EDGE_3D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5dafed8c5e017c5b6683a6f28e49bff52af',1,'ttk::ImplicitTriangulation']]],
-  ['right_5fcorner_5f1d_9896',['RIGHT_CORNER_1D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da0c08ca984d08805eeee86c37db0045fe',1,'ttk::ImplicitTriangulation']]],
-  ['right_5fedge_5f2d_9897',['RIGHT_EDGE_2D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da2fb7a8da2cdc31414389d51c55716bd9',1,'ttk::ImplicitTriangulation']]],
-  ['right_5fface_5f3d_9898',['RIGHT_FACE_3D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da64cc6d92e7ebf2155013976724ee4f98',1,'ttk::ImplicitTriangulation']]],
-  ['right_5ffront_5fedge_5f3d_9899',['RIGHT_FRONT_EDGE_3D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da3084ae1a852b35feadfb879ca6812909',1,'ttk::ImplicitTriangulation']]],
-  ['rows_9900',['ROWS',['../classttkExtract.html#a956df0371766b711fb4bb5d7f52db8e0ace4aae3bd64ecf94981ad98294919a63',1,'ttkExtract']]]
+  ['rangearea_9895',['rangeArea',['../classttk_1_1ReebSpace.html#aabfa2a3992fe0b2b1ad851588eb1b1baa32f308fbba10dd36437244076a696814',1,'ttk::ReebSpace']]],
+  ['regular_9896',['Regular',['../classttk.html#a2e938b4a3e29bf68d64fbb3a86cb55f9ad2203cb1237cb6460cbad94564e39345',1,'ttk::Regular()'],['../namespacettk_1_1ftr.html#ae1efeab53251c5a639c587a4a71e1b12ad2203cb1237cb6460cbad94564e39345',1,'ttk::ftr::Regular()']]],
+  ['relative_5fpersistence_5fglobal_9897',['RELATIVE_PERSISTENCE_GLOBAL',['../classttk_1_1PersistenceDiagramDistanceMatrix.html#ad7d3493c312622beac2a44b428a3fccaa30be01c5467bd4251cf813bbbfc95370',1,'ttk::PersistenceDiagramDistanceMatrix']]],
+  ['relative_5fpersistence_5fper_5fdiag_9898',['RELATIVE_PERSISTENCE_PER_DIAG',['../classttk_1_1PersistenceDiagramDistanceMatrix.html#ad7d3493c312622beac2a44b428a3fccaab6690dd85111de8485a94a3e56a222ac',1,'ttk::PersistenceDiagramDistanceMatrix']]],
+  ['replace_9899',['REPLACE',['../namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7',1,'ttk::debug']]],
+  ['right_5fback_5fedge_5f3d_9900',['RIGHT_BACK_EDGE_3D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5dafed8c5e017c5b6683a6f28e49bff52af',1,'ttk::ImplicitTriangulation']]],
+  ['right_5fcorner_5f1d_9901',['RIGHT_CORNER_1D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da0c08ca984d08805eeee86c37db0045fe',1,'ttk::ImplicitTriangulation']]],
+  ['right_5fedge_5f2d_9902',['RIGHT_EDGE_2D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da2fb7a8da2cdc31414389d51c55716bd9',1,'ttk::ImplicitTriangulation']]],
+  ['right_5fface_5f3d_9903',['RIGHT_FACE_3D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da64cc6d92e7ebf2155013976724ee4f98',1,'ttk::ImplicitTriangulation']]],
+  ['right_5ffront_5fedge_5f3d_9904',['RIGHT_FRONT_EDGE_3D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da3084ae1a852b35feadfb879ca6812909',1,'ttk::ImplicitTriangulation']]],
+  ['rows_9905',['ROWS',['../classttkExtract.html#a956df0371766b711fb4bb5d7f52db8e0ace4aae3bd64ecf94981ad98294919a63',1,'ttkExtract']]]
 ];

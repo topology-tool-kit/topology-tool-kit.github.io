@@ -306,7 +306,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>February 2016</dd></dl>
 <p>Given an input scalar field and a list of critical points to remove, this filter minimally edits the scalar field such that the listed critical points disappear. This procedure is useful to speedup subsequent topological data analysis when outlier critical points can be easily identified. It is also useful for data simplification.</p>
 <p>The list of critical points to remove must be associated with a point data scalar field that represent the vertex global identifiers in the input geometry.</p>
-<p>Note that this filter will also produce an output vertex offset scalar field that can be used for further topological data analysis tasks to disambiguate vertices on flat plateaus. For instance, this output vertex offset field can specified to the <a class="el" href="classttkFTMTree.html">ttkFTMTree</a>, vtkIntegralLines, or vtkScalarFieldCriticalPoints filters.</p>
+<p>Note that this filter will also produce an output vertex offset scalar field that can be used for further topological data analysis tasks to disambiguate vertices on flat plateaus. For instance, this output vertex offset field can specified to the <a class="el" href="classttkFTMTree.html" title="TTK VTK-filter for the computation of merge and contour trees.">ttkFTMTree</a>, vtkIntegralLines, or vtkScalarFieldCriticalPoints filters.</p>
 <p>Also, this filter can be given a specific input vertex offset.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -330,15 +330,19 @@ IEEE Transactions on Visualization and Computer Graphics, 2012.</p>
 <dd>
 <a class="el" href="classttkIntegralLines.html" title="TTK VTK-filter for the computation of edge-based integral lines of the gradient of an input scalar fi...">ttkIntegralLines</a> </dd>
 <dd>
-<a class="el" href="classttkFTMTree.html">ttkFTMTree</a> </dd>
+<a class="el" href="classttkFTMTree.html" title="TTK VTK-filter for the computation of merge and contour trees.">ttkFTMTree</a> </dd>
 <dd>
 <a class="el" href="classttkMorseSmaleComplex.html" title="TTK VTK-filter that wraps the morseSmaleComplex processing package.">ttkMorseSmaleComplex</a> </dd>
 <dd>
 <a class="el" href="classttkIdentifiers.html" title="TTK VTK-filter that computes the global identifiers for each vertex and each cell as point data and c...">ttkIdentifiers</a> </dd>
 <dd>
-<a class="el" href="classttk_1_1TopologicalSimplification.html" title="TTK processing package for the topological simplification of scalar data.">ttk::TopologicalSimplification</a> </dd></dl>
+<a class="el" href="classttk_1_1TopologicalSimplification.html" title="TTK processing package for the topological simplification of scalar data.">ttk::TopologicalSimplification</a></dd></dl>
+<p><b>Online</b> <b>examples:</b> <br  />
+</p><ul>
+<li><a href="https://topology-tool-kit.github.io/examples/dragon/">Dragon example</a> </li>
+</ul>
 
-<p class="definition">Definition at line <a class="el" href="ttkTopologicalSimplification_8h_source.html#l00068">68</a> of file <a class="el" href="ttkTopologicalSimplification_8h_source.html">ttkTopologicalSimplification.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ttkTopologicalSimplification_8h_source.html#l00073">73</a> of file <a class="el" href="ttkTopologicalSimplification_8h_source.html">ttkTopologicalSimplification.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad607eca224eb4120393453fa9092f547"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad607eca224eb4120393453fa9092f547">&#9670;&nbsp;</a></span>ttkTopologicalSimplification()</h2>
@@ -878,13 +882,13 @@ IEEE Transactions on Visualization and Computer Graphics, 2012.</p>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkTopologicalSimplification/<a class="el" href="ttkTopologicalSimplification_8h_source.html">ttkTopologicalSimplification.h</a></li>
-<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkTopologicalSimplification/<a class="el" href="ttkTopologicalSimplification_8cpp_source.html">ttkTopologicalSimplification.cpp</a></li>
+<li>/data/julien/git/github/ttk-tierny/core/vtk/ttkTopologicalSimplification/<a class="el" href="ttkTopologicalSimplification_8h_source.html">ttkTopologicalSimplification.h</a></li>
+<li>/data/julien/git/github/ttk-tierny/core/vtk/ttkTopologicalSimplification/<a class="el" href="ttkTopologicalSimplification_8cpp_source.html">ttkTopologicalSimplification.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 16 2021 08:43:43 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Nov 22 2021 12:24:23 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/bottleneckDistance/GabowTarjan.h Source File</title>
+<title>TTK: /data/julien/git/github/ttk-tierny/core/base/bottleneckDistance/GabowTarjan.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_aa319678ed2cb39fab2f8ff1969e8605.html">tierny</a></li><li class="navelem"><a class="el" href="dir_90f0e18f6a3db9a50a0cff0ad55689f7.html">private</a></li><li class="navelem"><a class="el" href="dir_3a6af36370c7b2c289deb8eee8b7da12.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_b6ff1f0e45d53bd762250c1eea10201d.html">core</a></li><li class="navelem"><a class="el" href="dir_ddc5a3d512b4fb0b449ac7d2dce9d26f.html">base</a></li><li class="navelem"><a class="el" href="dir_bdbc409a49641999a4e3a9de7ccef1c1.html">bottleneckDistance</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_3ad7e135a9cfc1d857da285e04cf7dd4.html">bottleneckDistance</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -112,34 +112,34 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      MaxSize = Size1 + Size2;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <a class="code" href="TrackingFromOverlap_8h.html#ab8b6cd0cea2cdac9a06e4f1cf4dd5685">Edges</a>.clear();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      Edges.clear();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="comment">// Connect diagonal points.</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = Size1; i &lt; MaxSize; ++i)</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = MaxSize + Size2; j &lt; 2 * MaxSize; ++j)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;          <a class="code" href="TrackingFromOverlap_8h.html#ab8b6cd0cea2cdac9a06e4f1cf4dd5685">Edges</a>.emplace_back(<a class="code" href="classEdge.html">Edge</a>(i, j, (<span class="keywordtype">double</span>)0));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;          Edges.emplace_back(<a class="code" href="classEdge.html">Edge</a>(i, j, (<span class="keywordtype">double</span>)0));</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="comment">// Connect real points.</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; Size1; ++i) {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = MaxSize;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; Size2; ++j) {</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;          <span class="keyword">auto</span> val = (double)(*C)[i][j];</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          <a class="code" href="TrackingFromOverlap_8h.html#ab8b6cd0cea2cdac9a06e4f1cf4dd5685">Edges</a>.emplace_back(<a class="code" href="classEdge.html">Edge</a>(i, k++, val));</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          Edges.emplace_back(<a class="code" href="classEdge.html">Edge</a>(i, k++, val));</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="comment">// Connect real points with their diagonal.</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; Size1; ++i) {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">auto</span> val = (double)(*C)[i][Size2];</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="TrackingFromOverlap_8h.html#ab8b6cd0cea2cdac9a06e4f1cf4dd5685">Edges</a>.emplace_back(<a class="code" href="classEdge.html">Edge</a>(i, MaxSize + Size2 + i, val));</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        Edges.emplace_back(<a class="code" href="classEdge.html">Edge</a>(i, MaxSize + Size2 + i, val));</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      }</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0, k = MaxSize; j &lt; Size2; ++j, ++k) {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">auto</span> val = (double)(*C)[Size1][j];</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="TrackingFromOverlap_8h.html#ab8b6cd0cea2cdac9a06e4f1cf4dd5685">Edges</a>.emplace_back(<a class="code" href="classEdge.html">Edge</a>(Size1 + (k - MaxSize), k, val));</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        Edges.emplace_back(<a class="code" href="classEdge.html">Edge</a>(Size1 + (k - MaxSize), k, val));</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <a class="code" href="namespacettk_1_1ftr.html#ad99ad1ac749454686e3b7cb340cda5e7">std::sort</a>(<a class="code" href="TrackingFromOverlap_8h.html#ab8b6cd0cea2cdac9a06e4f1cf4dd5685">Edges</a>.begin(), <a class="code" href="TrackingFromOverlap_8h.html#ab8b6cd0cea2cdac9a06e4f1cf4dd5685">Edges</a>.end());</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <a class="code" href="namespacettk_1_1ftr.html#ad99ad1ac749454686e3b7cb340cda5e7">std::sort</a>(Edges.begin(), Edges.end());</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> dataType&gt;</div>
@@ -147,7 +147,7 @@ $(function() {
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      MaxSize = 0;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      Size1 = 0;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      Size2 = 0;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <a class="code" href="TrackingFromOverlap_8h.html#ab8b6cd0cea2cdac9a06e4f1cf4dd5685">Edges</a>.clear();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      Edges.clear();</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      Pair.clear();</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      Connections.clear();</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      Layers.clear();</div>
@@ -168,7 +168,7 @@ $(function() {
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">     * Edges between all nodes given by</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">     * persistencePairs in both persistence diagrams</span></div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    std::vector&lt;Edge&gt; <a class="code" href="TrackingFromOverlap_8h.html#ab8b6cd0cea2cdac9a06e4f1cf4dd5685">Edges</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    std::vector&lt;Edge&gt; Edges;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">     * Pairing between vertices in persistence diagrams,</span></div>
@@ -212,7 +212,6 @@ $(function() {
 <div class="ttc" id="aDebug_8h_html"><div class="ttname"><a href="Debug_8h.html">Debug.h</a></div></div>
 <div class="ttc" id="aGabowTarjanImpl_8h_html"><div class="ttname"><a href="GabowTarjanImpl_8h.html">GabowTarjanImpl.h</a></div></div>
 <div class="ttc" id="aMatchingGraph_8h_html"><div class="ttname"><a href="MatchingGraph_8h.html">MatchingGraph.h</a></div></div>
-<div class="ttc" id="aTrackingFromOverlap_8h_html_ab8b6cd0cea2cdac9a06e4f1cf4dd5685"><div class="ttname"><a href="TrackingFromOverlap_8h.html#ab8b6cd0cea2cdac9a06e4f1cf4dd5685">Edges</a></div><div class="ttdeci">std::vector&lt; idType &gt; Edges</div><div class="ttdef"><b>Definition:</b> <a href="TrackingFromOverlap_8h_source.html#l00061">TrackingFromOverlap.h:61</a></div></div>
 <div class="ttc" id="aclassEdge_html"><div class="ttname"><a href="classEdge.html">Edge</a></div><div class="ttdef"><b>Definition:</b> <a href="MatchingGraph_8h_source.html#l00003">MatchingGraph.h:3</a></div></div>
 <div class="ttc" id="aclassttk_1_1Debug_html"><div class="ttname"><a href="classttk_1_1Debug.html">ttk::Debug</a></div><div class="ttdoc">Minimalist debugging class.</div><div class="ttdef"><b>Definition:</b> <a href="Debug_8h_source.html#l00087">Debug.h:87</a></div></div>
 <div class="ttc" id="aclassttk_1_1Debug_html_a9239e36b0745881da1753f97ad8f0105"><div class="ttname"><a href="classttk_1_1Debug.html#a9239e36b0745881da1753f97ad8f0105">ttk::Debug::setDebugMsgPrefix</a></div><div class="ttdeci">void setDebugMsgPrefix(const std::string &amp;prefix)</div><div class="ttdef"><b>Definition:</b> <a href="Debug_8h_source.html#l00361">Debug.h:361</a></div></div>
@@ -230,7 +229,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 16 2021 08:43:35 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Nov 22 2021 12:24:20 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

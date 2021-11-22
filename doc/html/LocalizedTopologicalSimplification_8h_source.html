@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/localizedTopologicalSimplification/LocalizedTopologicalSimplification.h Source File</title>
+<title>TTK: /data/julien/git/github/ttk-tierny/core/base/localizedTopologicalSimplification/LocalizedTopologicalSimplification.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_aa319678ed2cb39fab2f8ff1969e8605.html">tierny</a></li><li class="navelem"><a class="el" href="dir_90f0e18f6a3db9a50a0cff0ad55689f7.html">private</a></li><li class="navelem"><a class="el" href="dir_3a6af36370c7b2c289deb8eee8b7da12.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_b6ff1f0e45d53bd762250c1eea10201d.html">core</a></li><li class="navelem"><a class="el" href="dir_ddc5a3d512b4fb0b449ac7d2dce9d26f.html">base</a></li><li class="navelem"><a class="el" href="dir_9354b59daf53c732221c9e393f423e64.html">localizedTopologicalSimplification</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_54d171c0bff0cd1708da261f5494c1c6.html">localizedTopologicalSimplification</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -645,7 +645,7 @@ $(function() {
 <div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160; </div>
 <div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;        segment.resize(propagation-&gt;<a class="code" href="structttk_1_1lts_1_1Propagation.html#a84ca1816161131d3dbbdd330ccbe880f">segmentSize</a>);</div>
 <div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;        IT segmentIndex = 0;</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;        {</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;        <span class="keywordflow">if</span>(propagation-&gt;<a class="code" href="structttk_1_1lts_1_1Propagation.html#a84ca1816161131d3dbbdd330ccbe880f">segmentSize</a> &gt; 0) {</div>
 <div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;          std::vector&lt;IT&gt; queue(propagation-&gt;<a class="code" href="structttk_1_1lts_1_1Propagation.html#a84ca1816161131d3dbbdd330ccbe880f">segmentSize</a>);</div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;          IT queueIndex = 0;</div>
 <div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160; </div>
@@ -721,7 +721,7 @@ $(function() {
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;          <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160; </div>
 <div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        <span class="comment">// print status</span></div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classttk_1_1Debug.html#a19bb5107152e6974eb9c0faaf30bf155">debugLevel_</a> &lt; 4) {</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classttk_1_1Debug.html#a19bb5107152e6974eb9c0faaf30bf155">debugLevel_</a> &lt; 4 || nPropagations == 0) {</div>
 <div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;          this-&gt;<a class="code" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a>(msg, 1, timer.<a class="code" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>(), this-&gt;threadNumber_);</div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160; </div>
@@ -964,7 +964,7 @@ $(function() {
 <div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;            = std::numeric_limits&lt;IT&gt;::max();</div>
 <div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;        }</div>
 <div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160; </div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;        <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classttk_1_1Debug.html#a19bb5107152e6974eb9c0faaf30bf155">debugLevel_</a> &lt; 4) {</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;        <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classttk_1_1Debug.html#a19bb5107152e6974eb9c0faaf30bf155">debugLevel_</a> &lt; 4 || nPropagations == 0) {</div>
 <div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;          this-&gt;<a class="code" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a>(<span class="stringliteral">&quot;Computing Local Order of Segments (&quot;</span></div>
 <div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;                           + std::to_string(nPropagations) + <span class="stringliteral">&quot;)&quot;</span>,</div>
 <div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;                         1, timer.<a class="code" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>(), this-&gt;threadNumber_);</div>
@@ -1570,7 +1570,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 16 2021 08:43:36 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Nov 22 2021 12:24:21 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

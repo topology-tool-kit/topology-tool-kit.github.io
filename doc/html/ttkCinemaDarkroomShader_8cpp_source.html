@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /home/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkCinemaDarkroom/ttkCinemaDarkroomShader.cpp Source File</title>
+<title>TTK: /data/julien/git/github/ttk-tierny/core/vtk/ttkCinemaDarkroom/ttkCinemaDarkroomShader.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_aa319678ed2cb39fab2f8ff1969e8605.html">tierny</a></li><li class="navelem"><a class="el" href="dir_90f0e18f6a3db9a50a0cff0ad55689f7.html">private</a></li><li class="navelem"><a class="el" href="dir_3a6af36370c7b2c289deb8eee8b7da12.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_b6ff1f0e45d53bd762250c1eea10201d.html">core</a></li><li class="navelem"><a class="el" href="dir_f896db529ed01bc9983c6880f4c01d3c.html">vtk</a></li><li class="navelem"><a class="el" href="dir_a13dfa0a162e70e682ffa7f407cb5795.html">ttkCinemaDarkroom</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_e3a2ce78563d743521c6d61c31866983.html">ttkCinemaDarkroom</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -247,98 +247,101 @@ $(function() {
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    this-&gt;RenderWindow-&gt;OffScreenRenderingOn();</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keyword">auto</span> windowAsOGL = vtkOpenGLRenderWindow::SafeDownCast(this-&gt;RenderWindow);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    windowAsOGL-&gt;SetSize(dim[0], dim[1]);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    windowAsOGL-&gt;Initialize();</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    this-&gt;<a class="code" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a>(<span class="stringliteral">&quot;Initializing Renderer (&quot;</span> + std::to_string(dim[0]) + <span class="stringliteral">&quot;x&quot;</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                     + std::to_string(dim[1]) + <span class="stringliteral">&quot;)&quot;</span>,</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                   1, timer.<a class="code" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>(), 1);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  }</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">if</span>(windowAsOGL == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    windowAsOGL-&gt;SetSize(dim[0], dim[1]);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    windowAsOGL-&gt;Initialize();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    this-&gt;<a class="code" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a>(<span class="stringliteral">&quot;Initializing Renderer (&quot;</span> + std::to_string(dim[0]) + <span class="stringliteral">&quot;x&quot;</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                     + std::to_string(dim[1]) + <span class="stringliteral">&quot;)&quot;</span>,</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                   1, timer.<a class="code" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>(), 1);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  }</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="classttkCinemaDarkroomShader.html#a9653f5c41d05991179e458214388d6ee">  190</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classttkCinemaDarkroomShader.html#a9653f5c41d05991179e458214388d6ee">ttkCinemaDarkroomShader::AddTexture</a>(vtkImageData *image,</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                                        <span class="keywordtype">int</span> arrayIdx,</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                                        <span class="keywordtype">int</span> textureIdx) {</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="keywordtype">int</span> dim[3];</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  image-&gt;GetDimensions(dim);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keyword">auto</span> inputArray = this-&gt;GetInputArrayToProcess(arrayIdx, image);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordflow">if</span>(!inputArray || this-&gt;GetInputArrayAssociation(arrayIdx, image) != 0) {</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    this-&gt;<a class="code" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Unable to retrieve input point data array &quot;</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                   + std::to_string(arrayIdx) + <span class="stringliteral">&quot;.&quot;</span>);</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  }</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  std::string textureName = <span class="stringliteral">&quot;tex&quot;</span> + std::to_string(textureIdx);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keyword">auto</span> properties = this-&gt;FullScreenQuadActor-&gt;GetProperty();</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="comment">// if texture already exists remove it</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="keywordflow">if</span>(properties-&gt;GetTexture(textureName.data()))</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    properties-&gt;RemoveTexture(textureName.data());</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="comment">// create texture</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="keyword">auto</span> texture = <a class="code" href="classvtkSmartPointer.html">vtkSmartPointer&lt;vtkOpenGLTexture&gt;::New</a>();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classttkCinemaDarkroomShader.html#a9653f5c41d05991179e458214388d6ee">  193</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classttkCinemaDarkroomShader.html#a9653f5c41d05991179e458214388d6ee">ttkCinemaDarkroomShader::AddTexture</a>(vtkImageData *image,</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                                        <span class="keywordtype">int</span> arrayIdx,</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                                        <span class="keywordtype">int</span> textureIdx) {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordtype">int</span> dim[3];</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  image-&gt;GetDimensions(dim);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keyword">auto</span> inputArray = this-&gt;GetInputArrayToProcess(arrayIdx, image);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordflow">if</span>(!inputArray || this-&gt;GetInputArrayAssociation(arrayIdx, image) != 0) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    this-&gt;<a class="code" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Unable to retrieve input point data array &quot;</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                   + std::to_string(arrayIdx) + <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  std::string textureName = <span class="stringliteral">&quot;tex&quot;</span> + std::to_string(textureIdx);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keyword">auto</span> properties = this-&gt;FullScreenQuadActor-&gt;GetProperty();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <span class="comment">// if texture already exists remove it</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="keywordflow">if</span>(properties-&gt;GetTexture(textureName.data()))</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    properties-&gt;RemoveTexture(textureName.data());</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keyword">auto</span> textureObj = <a class="code" href="classvtkSmartPointer.html">vtkSmartPointer&lt;vtkTextureObject&gt;::New</a>();</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  textureObj-&gt;SetContext(</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    vtkOpenGLRenderWindow::SafeDownCast(this-&gt;RenderWindow));</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  textureObj-&gt;SetWrapT(vtkTextureObject::ClampToEdge);</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  textureObj-&gt;SetWrapS(vtkTextureObject::ClampToEdge);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  textureObj-&gt;Create2DFromRaw(</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    dim[0], dim[1], inputArray-&gt;GetNumberOfComponents(),</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    inputArray-&gt;GetDataType(), <a class="code" href="classttkUtils.html#a173a585ba9ac7496e9f9c9f496acde9c">ttkUtils::GetVoidPointer</a>(inputArray));</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  texture-&gt;SetTextureObject(textureObj);</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  texture-&gt;InterpolateOn();</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="comment">// add texture to properties</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  properties-&gt;SetTexture(textureName.data(), texture);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="comment">// create texture</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keyword">auto</span> texture = <a class="code" href="classvtkSmartPointer.html">vtkSmartPointer&lt;vtkOpenGLTexture&gt;::New</a>();</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <span class="keyword">auto</span> textureObj = <a class="code" href="classvtkSmartPointer.html">vtkSmartPointer&lt;vtkTextureObject&gt;::New</a>();</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  textureObj-&gt;SetContext(</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    vtkOpenGLRenderWindow::SafeDownCast(this-&gt;RenderWindow));</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  textureObj-&gt;SetWrapT(vtkTextureObject::ClampToEdge);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  textureObj-&gt;SetWrapS(vtkTextureObject::ClampToEdge);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  textureObj-&gt;Create2DFromRaw(</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    dim[0], dim[1], inputArray-&gt;GetNumberOfComponents(),</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    inputArray-&gt;GetDataType(), <a class="code" href="classttkUtils.html#a173a585ba9ac7496e9f9c9f496acde9c">ttkUtils::GetVoidPointer</a>(inputArray));</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  texture-&gt;SetTextureObject(textureObj);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  texture-&gt;InterpolateOn();</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;}</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="comment">// add texture to properties</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  properties-&gt;SetTexture(textureName.data(), texture);</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
-<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="classttkCinemaDarkroomShader.html#a091599c63fe8c9c3bb7fb473560cc79e">  230</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classttkCinemaDarkroomShader.html#a091599c63fe8c9c3bb7fb473560cc79e">ttkCinemaDarkroomShader::Render</a>(vtkImageData *image,</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                                    <span class="keyword">const</span> std::string &amp;name) {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <a class="code" href="classttk_1_1Timer.html">ttk::Timer</a> timer;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keywordtype">int</span> dim[3];</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  image-&gt;GetDimensions(dim);</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  this-&gt;<a class="code" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a>(</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="stringliteral">&quot;Rendering (&quot;</span> + std::to_string(dim[0]) + <span class="stringliteral">&quot;x&quot;</span> + std::to_string(dim[1]) + <span class="stringliteral">&quot;)&quot;</span>,</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    0, 0, 1, <a class="code" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">ttk::debug::LineMode::REPLACE</a>);</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  this-&gt;FullScreenQuadActor-&gt;GetShaderProperty()-&gt;SetVertexShaderCode(</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    this-&gt;<a class="code" href="classttkCinemaDarkroomShader.html#ab9e98049ab84587a7f1e6d11a9864488">PerformReplacements</a>(this-&gt;<a class="code" href="classttkCinemaDarkroomShader.html#af68ecb97148bdb2ca85e4c9cc01a6c5f">GetVertexShaderCode</a>()).data());</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  this-&gt;FullScreenQuadActor-&gt;GetShaderProperty()-&gt;SetFragmentShaderCode(</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    this-&gt;<a class="code" href="classttkCinemaDarkroomShader.html#ab9e98049ab84587a7f1e6d11a9864488">PerformReplacements</a>(this-&gt;<a class="code" href="classttkCinemaDarkroomShader.html#ab87aabd58566676e44b1fdeedf080f10">GetFragmentShaderCode</a>()).data());</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keyword">auto</span> buffer = <a class="code" href="classvtkSmartPointer.html">vtkSmartPointer&lt;vtkUnsignedCharArray&gt;::New</a>();</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  buffer-&gt;SetName(name.data());</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  buffer-&gt;SetNumberOfComponents(4);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  buffer-&gt;SetNumberOfTuples(dim[0] * dim[1]);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  this-&gt;RenderWindow-&gt;Render();</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  this-&gt;RenderWindow-&gt;GetRGBACharPixelData(</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    0, 0, dim[0] - 1, dim[1] - 1, 1, buffer);</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  image-&gt;GetPointData()-&gt;AddArray(buffer);</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  image-&gt;GetPointData()-&gt;SetActiveScalars(buffer-&gt;GetName());</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;}</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="classttkCinemaDarkroomShader.html#a091599c63fe8c9c3bb7fb473560cc79e">  233</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classttkCinemaDarkroomShader.html#a091599c63fe8c9c3bb7fb473560cc79e">ttkCinemaDarkroomShader::Render</a>(vtkImageData *image,</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                                    <span class="keyword">const</span> std::string &amp;name) {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <a class="code" href="classttk_1_1Timer.html">ttk::Timer</a> timer;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordtype">int</span> dim[3];</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  image-&gt;GetDimensions(dim);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  this-&gt;<a class="code" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a>(</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="stringliteral">&quot;Rendering (&quot;</span> + std::to_string(dim[0]) + <span class="stringliteral">&quot;x&quot;</span> + std::to_string(dim[1]) + <span class="stringliteral">&quot;)&quot;</span>,</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    0, 0, 1, <a class="code" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">ttk::debug::LineMode::REPLACE</a>);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  this-&gt;FullScreenQuadActor-&gt;GetShaderProperty()-&gt;SetVertexShaderCode(</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    this-&gt;<a class="code" href="classttkCinemaDarkroomShader.html#ab9e98049ab84587a7f1e6d11a9864488">PerformReplacements</a>(this-&gt;<a class="code" href="classttkCinemaDarkroomShader.html#af68ecb97148bdb2ca85e4c9cc01a6c5f">GetVertexShaderCode</a>()).data());</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  this-&gt;FullScreenQuadActor-&gt;GetShaderProperty()-&gt;SetFragmentShaderCode(</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    this-&gt;<a class="code" href="classttkCinemaDarkroomShader.html#ab9e98049ab84587a7f1e6d11a9864488">PerformReplacements</a>(this-&gt;<a class="code" href="classttkCinemaDarkroomShader.html#ab87aabd58566676e44b1fdeedf080f10">GetFragmentShaderCode</a>()).data());</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keyword">auto</span> buffer = <a class="code" href="classvtkSmartPointer.html">vtkSmartPointer&lt;vtkUnsignedCharArray&gt;::New</a>();</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  buffer-&gt;SetName(name.data());</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  buffer-&gt;SetNumberOfComponents(4);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  buffer-&gt;SetNumberOfTuples(dim[0] * dim[1]);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  this-&gt;RenderWindow-&gt;Render();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  this-&gt;RenderWindow-&gt;GetRGBACharPixelData(</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    0, 0, dim[0] - 1, dim[1] - 1, 1, buffer);</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  this-&gt;<a class="code" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a>(</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="stringliteral">&quot;Rendering (&quot;</span> + std::to_string(dim[0]) + <span class="stringliteral">&quot;x&quot;</span> + std::to_string(dim[1]) + <span class="stringliteral">&quot;)&quot;</span>,</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    1, timer.<a class="code" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>(), 1);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  image-&gt;GetPointData()-&gt;AddArray(buffer);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  image-&gt;GetPointData()-&gt;SetActiveScalars(buffer-&gt;GetName());</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  this-&gt;<a class="code" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a>(</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="stringliteral">&quot;Rendering (&quot;</span> + std::to_string(dim[0]) + <span class="stringliteral">&quot;x&quot;</span> + std::to_string(dim[1]) + <span class="stringliteral">&quot;)&quot;</span>,</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    1, timer.<a class="code" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>(), 1);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
 <div class="ttc" id="aclassttkAlgorithm_html_ad3e8857a2e2889b16cd913cce91d1e75"><div class="ttname"><a href="classttkAlgorithm.html#ad3e8857a2e2889b16cd913cce91d1e75">ttkAlgorithm::SAME_DATA_TYPE_AS_INPUT_PORT</a></div><div class="ttdeci">static vtkInformationIntegerKey * SAME_DATA_TYPE_AS_INPUT_PORT()</div></div>
 <div class="ttc" id="aclassttkCinemaDarkroomShader_html"><div class="ttname"><a href="classttkCinemaDarkroomShader.html">ttkCinemaDarkroomShader</a></div><div class="ttdoc">Base Class for all CinemaDarkroom Shaders.</div><div class="ttdef"><b>Definition:</b> <a href="ttkCinemaDarkroomShader_8h_source.html#l00053">ttkCinemaDarkroomShader.h:53</a></div></div>
-<div class="ttc" id="aclassttkCinemaDarkroomShader_html_a091599c63fe8c9c3bb7fb473560cc79e"><div class="ttname"><a href="classttkCinemaDarkroomShader.html#a091599c63fe8c9c3bb7fb473560cc79e">ttkCinemaDarkroomShader::Render</a></div><div class="ttdeci">virtual int Render(vtkImageData *image, const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="ttkCinemaDarkroomShader_8cpp_source.html#l00230">ttkCinemaDarkroomShader.cpp:230</a></div></div>
+<div class="ttc" id="aclassttkCinemaDarkroomShader_html_a091599c63fe8c9c3bb7fb473560cc79e"><div class="ttname"><a href="classttkCinemaDarkroomShader.html#a091599c63fe8c9c3bb7fb473560cc79e">ttkCinemaDarkroomShader::Render</a></div><div class="ttdeci">virtual int Render(vtkImageData *image, const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="ttkCinemaDarkroomShader_8cpp_source.html#l00233">ttkCinemaDarkroomShader.cpp:233</a></div></div>
 <div class="ttc" id="aclassttkCinemaDarkroomShader_html_a1410e8418d75567af9576eb6a4a4cee9"><div class="ttname"><a href="classttkCinemaDarkroomShader.html#a1410e8418d75567af9576eb6a4a4cee9">ttkCinemaDarkroomShader::FillInputPortInformation</a></div><div class="ttdeci">int FillInputPortInformation(int port, vtkInformation *info) override</div><div class="ttdef"><b>Definition:</b> <a href="ttkCinemaDarkroomShader_8cpp_source.html#l00046">ttkCinemaDarkroomShader.cpp:46</a></div></div>
 <div class="ttc" id="aclassttkCinemaDarkroomShader_html_a1ee0d87fb2fc22d6ce3bcc4ecc299626"><div class="ttname"><a href="classttkCinemaDarkroomShader.html#a1ee0d87fb2fc22d6ce3bcc4ecc299626">ttkCinemaDarkroomShader::CreateRenderer</a></div><div class="ttdeci">int CreateRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="ttkCinemaDarkroomShader_8cpp_source.html#l00138">ttkCinemaDarkroomShader.cpp:138</a></div></div>
 <div class="ttc" id="aclassttkCinemaDarkroomShader_html_a2fd916e1905394f8088f2cf753c6b021"><div class="ttname"><a href="classttkCinemaDarkroomShader.html#a2fd916e1905394f8088f2cf753c6b021">ttkCinemaDarkroomShader::~ttkCinemaDarkroomShader</a></div><div class="ttdeci">~ttkCinemaDarkroomShader() override</div><div class="ttdef"><b>Definition:</b> <a href="ttkCinemaDarkroomShader_8cpp_source.html#l00043">ttkCinemaDarkroomShader.cpp:43</a></div></div>
 <div class="ttc" id="aclassttkCinemaDarkroomShader_html_a72c655d1764e238ca18b4823217f9acf"><div class="ttname"><a href="classttkCinemaDarkroomShader.html#a72c655d1764e238ca18b4823217f9acf">ttkCinemaDarkroomShader::ttkCinemaDarkroomShader</a></div><div class="ttdeci">ttkCinemaDarkroomShader()</div><div class="ttdef"><b>Definition:</b> <a href="ttkCinemaDarkroomShader_8cpp_source.html#l00035">ttkCinemaDarkroomShader.cpp:35</a></div></div>
 <div class="ttc" id="aclassttkCinemaDarkroomShader_html_a7e96cc3922cf5aa66c5eb9e053e555fc"><div class="ttname"><a href="classttkCinemaDarkroomShader.html#a7e96cc3922cf5aa66c5eb9e053e555fc">ttkCinemaDarkroomShader::InitRenderer</a></div><div class="ttdeci">int InitRenderer(vtkImageData *outputImage)</div><div class="ttdef"><b>Definition:</b> <a href="ttkCinemaDarkroomShader_8cpp_source.html#l00159">ttkCinemaDarkroomShader.cpp:159</a></div></div>
-<div class="ttc" id="aclassttkCinemaDarkroomShader_html_a9653f5c41d05991179e458214388d6ee"><div class="ttname"><a href="classttkCinemaDarkroomShader.html#a9653f5c41d05991179e458214388d6ee">ttkCinemaDarkroomShader::AddTexture</a></div><div class="ttdeci">int AddTexture(vtkImageData *image, int arrayIdx, int textureIdx)</div><div class="ttdef"><b>Definition:</b> <a href="ttkCinemaDarkroomShader_8cpp_source.html#l00190">ttkCinemaDarkroomShader.cpp:190</a></div></div>
+<div class="ttc" id="aclassttkCinemaDarkroomShader_html_a9653f5c41d05991179e458214388d6ee"><div class="ttname"><a href="classttkCinemaDarkroomShader.html#a9653f5c41d05991179e458214388d6ee">ttkCinemaDarkroomShader::AddTexture</a></div><div class="ttdeci">int AddTexture(vtkImageData *image, int arrayIdx, int textureIdx)</div><div class="ttdef"><b>Definition:</b> <a href="ttkCinemaDarkroomShader_8cpp_source.html#l00193">ttkCinemaDarkroomShader.cpp:193</a></div></div>
 <div class="ttc" id="aclassttkCinemaDarkroomShader_html_a9b43cb0283084a766620127bc745400a"><div class="ttname"><a href="classttkCinemaDarkroomShader.html#a9b43cb0283084a766620127bc745400a">ttkCinemaDarkroomShader::FillOutputPortInformation</a></div><div class="ttdeci">int FillOutputPortInformation(int port, vtkInformation *info) override</div><div class="ttdef"><b>Definition:</b> <a href="ttkCinemaDarkroomShader_8cpp_source.html#l00055">ttkCinemaDarkroomShader.cpp:55</a></div></div>
 <div class="ttc" id="aclassttkCinemaDarkroomShader_html_aa92066ca4150df82c791667f783322ef"><div class="ttname"><a href="classttkCinemaDarkroomShader.html#aa92066ca4150df82c791667f783322ef">ttkCinemaDarkroomShader::AddReplacement</a></div><div class="ttdeci">int AddReplacement(const std::string &amp;name, const std::vector&lt; double &gt; &amp;values, const bool &amp;isInt=false)</div><div class="ttdef"><b>Definition:</b> <a href="ttkCinemaDarkroomShader_8cpp_source.html#l00105">ttkCinemaDarkroomShader.cpp:105</a></div></div>
 <div class="ttc" id="aclassttkCinemaDarkroomShader_html_ab87aabd58566676e44b1fdeedf080f10"><div class="ttname"><a href="classttkCinemaDarkroomShader.html#ab87aabd58566676e44b1fdeedf080f10">ttkCinemaDarkroomShader::GetFragmentShaderCode</a></div><div class="ttdeci">virtual std::string GetFragmentShaderCode()</div><div class="ttdef"><b>Definition:</b> <a href="ttkCinemaDarkroomShader_8cpp_source.html#l00080">ttkCinemaDarkroomShader.cpp:80</a></div></div>
@@ -359,7 +362,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 16 2021 08:43:41 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Nov 22 2021 12:24:21 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

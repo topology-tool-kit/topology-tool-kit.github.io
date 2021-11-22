@@ -66,6 +66,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classttk_1_1TrackingFromOverlap-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -89,6 +91,20 @@ Inheritance diagram for ttk::TrackingFromOverlap:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structttk_1_1TrackingFromOverlap_1_1CoordinateComparator.html">CoordinateComparator</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structttk_1_1TrackingFromOverlap_1_1Node.html">Node</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a6b1c281d1456d5c1fa0ca695b9fcc045"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TrackingFromOverlap.html#a6b1c281d1456d5c1fa0ca695b9fcc045">Edges</a> = std::vector&lt; <a class="el" href="TrackingFromOverlap_8h.html#a8ff2a4d22451f4b09fbf5a7dd90f519b">idType</a> &gt;</td></tr>
+<tr class="separator:a6b1c281d1456d5c1fa0ca695b9fcc045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94188fd7e8aa99f8e0513ebbc6295104"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TrackingFromOverlap.html#a94188fd7e8aa99f8e0513ebbc6295104">Nodes</a> = std::vector&lt; <a class="el" href="structttk_1_1TrackingFromOverlap_1_1Node.html">Node</a> &gt;</td></tr>
+<tr class="separator:a94188fd7e8aa99f8e0513ebbc6295104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a12e3d76b7a29e4faf2a503bb38c37db2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TrackingFromOverlap.html#a12e3d76b7a29e4faf2a503bb38c37db2">TrackingFromOverlap</a> ()</td></tr>
@@ -97,16 +113,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aafd91516c848de583516f3220c32a8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49839a22c5175e83602f275e546a9321"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TrackingFromOverlap.html#a49839a22c5175e83602f275e546a9321">sortCoordinates</a> (const float *pointCoordinates, const size_t nPoints, std::vector&lt; size_t &gt; &amp;sortedIndicies) const</td></tr>
 <tr class="separator:a49839a22c5175e83602f275e546a9321"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9c225906e7071013242cbebea7ebdb0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TrackingFromOverlap.html#aa9c225906e7071013242cbebea7ebdb0">computeBranches</a> (std::vector&lt; <a class="el" href="TrackingFromOverlap_8h.html#ab8b6cd0cea2cdac9a06e4f1cf4dd5685">Edges</a> &gt; &amp;timeEdgesMap, std::vector&lt; <a class="el" href="TrackingFromOverlap_8h.html#a2e5ba587eb020d2eed31eb7bd333346a">Nodes</a> &gt; &amp;timeNodesMap) const</td></tr>
+<tr class="memitem:aa9c225906e7071013242cbebea7ebdb0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TrackingFromOverlap.html#aa9c225906e7071013242cbebea7ebdb0">computeBranches</a> (std::vector&lt; <a class="el" href="classttk_1_1TrackingFromOverlap.html#a6b1c281d1456d5c1fa0ca695b9fcc045">Edges</a> &gt; &amp;timeEdgesMap, std::vector&lt; <a class="el" href="classttk_1_1TrackingFromOverlap.html#a94188fd7e8aa99f8e0513ebbc6295104">Nodes</a> &gt; &amp;timeNodesMap) const</td></tr>
 <tr class="separator:aa9c225906e7071013242cbebea7ebdb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af18b8cab61d08768a26ba868d6168583"><td class="memTemplParams" colspan="2">template&lt;typename labelType &gt; </td></tr>
 <tr class="memitem:af18b8cab61d08768a26ba868d6168583"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1TrackingFromOverlap.html#af18b8cab61d08768a26ba868d6168583">computeLabelIndexMap</a> (const labelType *pointLabels, const size_t nPoints, std::map&lt; labelType, size_t &gt; &amp;labelIndexMap) const</td></tr>
 <tr class="separator:af18b8cab61d08768a26ba868d6168583"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a824fd3d5e50ad2a88f95928c0f0a60e6"><td class="memTemplParams" colspan="2">template&lt;typename labelType &gt; </td></tr>
-<tr class="memitem:a824fd3d5e50ad2a88f95928c0f0a60e6"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1TrackingFromOverlap.html#a824fd3d5e50ad2a88f95928c0f0a60e6">computeNodes</a> (const float *pointCoordinates, const labelType *pointLabels, const size_t nPoints, <a class="el" href="TrackingFromOverlap_8h.html#a2e5ba587eb020d2eed31eb7bd333346a">Nodes</a> &amp;nodes) const</td></tr>
+<tr class="memitem:a824fd3d5e50ad2a88f95928c0f0a60e6"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1TrackingFromOverlap.html#a824fd3d5e50ad2a88f95928c0f0a60e6">computeNodes</a> (const float *pointCoordinates, const labelType *pointLabels, const size_t nPoints, <a class="el" href="classttk_1_1TrackingFromOverlap.html#a94188fd7e8aa99f8e0513ebbc6295104">Nodes</a> &amp;nodes) const</td></tr>
 <tr class="separator:a824fd3d5e50ad2a88f95928c0f0a60e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebef533ce671759014b311313bef1b77"><td class="memTemplParams" colspan="2">template&lt;typename labelType &gt; </td></tr>
-<tr class="memitem:aebef533ce671759014b311313bef1b77"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1TrackingFromOverlap.html#aebef533ce671759014b311313bef1b77">computeOverlap</a> (const float *pointCoordinates0, const float *pointCoordinates1, const labelType *pointLabels0, const labelType *pointLabels1, const size_t nPoints0, const size_t nPoints1, <a class="el" href="TrackingFromOverlap_8h.html#ab8b6cd0cea2cdac9a06e4f1cf4dd5685">Edges</a> &amp;edges) const</td></tr>
+<tr class="memitem:aebef533ce671759014b311313bef1b77"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1TrackingFromOverlap.html#aebef533ce671759014b311313bef1b77">computeOverlap</a> (const float *pointCoordinates0, const float *pointCoordinates1, const labelType *pointLabels0, const labelType *pointLabels1, const size_t nPoints0, const size_t nPoints1, <a class="el" href="classttk_1_1TrackingFromOverlap.html#a6b1c281d1456d5c1fa0ca695b9fcc045">Edges</a> &amp;edges) const</td></tr>
 <tr class="separator:aebef533ce671759014b311313bef1b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classttk_1_1Debug"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classttk_1_1Debug')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classttk_1_1Debug.html">ttk::Debug</a></td></tr>
 <tr class="memitem:a5b453c195c4cfffed2702c3330f53a64 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a5b453c195c4cfffed2702c3330f53a64">Debug</a> ()</td></tr>
@@ -188,8 +204,41 @@ Additional Inherited Members</h2></td></tr>
 <p><b>Related</b> <b>publication:</b> <br  />
 'Nested Tracking Graphs' Jonas Lukasczyk, Gunther Weber, Ross Maciejewski, Christoph Garth, and Heike Leitte. Computer Graphics Forum (Special Issue, Proceedings Eurographics / IEEE Symposium on Visualization). Vol. 36. No. 3. 2017. </p>
 
-<p class="definition">Definition at line <a class="el" href="TrackingFromOverlap_8h_source.html#l00082">82</a> of file <a class="el" href="TrackingFromOverlap_8h_source.html">TrackingFromOverlap.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="TrackingFromOverlap_8h_source.html#l00048">48</a> of file <a class="el" href="TrackingFromOverlap_8h_source.html">TrackingFromOverlap.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a6b1c281d1456d5c1fa0ca695b9fcc045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b1c281d1456d5c1fa0ca695b9fcc045">&#9670;&nbsp;</a></span>Edges</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classttk_1_1TrackingFromOverlap.html#a6b1c281d1456d5c1fa0ca695b9fcc045">ttk::TrackingFromOverlap::Edges</a> =  std::vector&lt;<a class="el" href="TrackingFromOverlap_8h.html#a8ff2a4d22451f4b09fbf5a7dd90f519b">idType</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TrackingFromOverlap_8h_source.html#l00069">69</a> of file <a class="el" href="TrackingFromOverlap_8h_source.html">TrackingFromOverlap.h</a>.</p>
+
+</div>
+</div>
+<a id="a94188fd7e8aa99f8e0513ebbc6295104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94188fd7e8aa99f8e0513ebbc6295104">&#9670;&nbsp;</a></span>Nodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classttk_1_1TrackingFromOverlap.html#a94188fd7e8aa99f8e0513ebbc6295104">ttk::TrackingFromOverlap::Nodes</a> =  std::vector&lt;<a class="el" href="structttk_1_1TrackingFromOverlap_1_1Node.html">Node</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TrackingFromOverlap_8h_source.html#l00070">70</a> of file <a class="el" href="TrackingFromOverlap_8h_source.html">TrackingFromOverlap.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a12e3d76b7a29e4faf2a503bb38c37db2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a12e3d76b7a29e4faf2a503bb38c37db2">&#9670;&nbsp;</a></span>TrackingFromOverlap()</h2>
 
@@ -213,7 +262,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TrackingFromOverlap_8h_source.html#l00084">84</a> of file <a class="el" href="TrackingFromOverlap_8h_source.html">TrackingFromOverlap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TrackingFromOverlap_8h_source.html#l00050">50</a> of file <a class="el" href="TrackingFromOverlap_8h_source.html">TrackingFromOverlap.h</a>.</p>
 
 </div>
 </div>
@@ -255,13 +304,13 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">int ttk::TrackingFromOverlap::computeBranches </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="TrackingFromOverlap_8h.html#ab8b6cd0cea2cdac9a06e4f1cf4dd5685">Edges</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classttk_1_1TrackingFromOverlap.html#a6b1c281d1456d5c1fa0ca695b9fcc045">Edges</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>timeEdgesMap</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="TrackingFromOverlap_8h.html#a2e5ba587eb020d2eed31eb7bd333346a">Nodes</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classttk_1_1TrackingFromOverlap.html#a94188fd7e8aa99f8e0513ebbc6295104">Nodes</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>timeNodesMap</em>&#160;</td>
         </tr>
         <tr>
@@ -348,7 +397,7 @@ template&lt;typename labelType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="TrackingFromOverlap_8h.html#a2e5ba587eb020d2eed31eb7bd333346a">Nodes</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classttk_1_1TrackingFromOverlap.html#a94188fd7e8aa99f8e0513ebbc6295104">Nodes</a> &amp;&#160;</td>
           <td class="paramname"><em>nodes</em>&#160;</td>
         </tr>
         <tr>
@@ -410,7 +459,7 @@ template&lt;typename labelType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="TrackingFromOverlap_8h.html#ab8b6cd0cea2cdac9a06e4f1cf4dd5685">Edges</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classttk_1_1TrackingFromOverlap.html#a6b1c281d1456d5c1fa0ca695b9fcc045">Edges</a> &amp;&#160;</td>
           <td class="paramname"><em>edges</em>&#160;</td>
         </tr>
         <tr>
@@ -470,12 +519,12 @@ template&lt;typename labelType &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/trackingFromOverlap/<a class="el" href="TrackingFromOverlap_8h_source.html">TrackingFromOverlap.h</a></li>
+<li>/data/julien/git/github/ttk-tierny/core/base/trackingFromOverlap/<a class="el" href="TrackingFromOverlap_8h_source.html">TrackingFromOverlap.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 16 2021 08:43:45 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Nov 22 2021 12:24:24 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

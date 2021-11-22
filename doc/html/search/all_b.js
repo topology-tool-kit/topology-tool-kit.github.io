@@ -8,7 +8,7 @@ var searchData=
   ['kdtreemap_2199',['KDTreeMap',['../classttk_1_1KDTree.html#af633847e08f7a949d345cece88377263',1,'ttk::KDTree']]],
   ['kdtreepair_2200',['KDTreePair',['../classttk_1_1PDBarycenter.html#ab97f1c444de3acca4facf4c96a86b998',1,'ttk::PDBarycenter']]],
   ['kdtreeroot_2201',['KDTreeRoot',['../classttk_1_1KDTree.html#accbff22cbd07ba05fc9831dd26cb3baf',1,'ttk::KDTree']]],
-  ['keepsubtree_5f_2202',['keepSubtree_',['../classMergeTreeBase.html#a8c172287edc7886a2df0d4117c9ddd59',1,'MergeTreeBase']]],
+  ['keepsubtree_5f_2202',['keepSubtree_',['../classttk_1_1MergeTreeBase.html#a4ef44735c5651075188067c47f5550c1',1,'ttk::MergeTreeBase']]],
   ['key_2203',['key',['../structttkOnDeleteCommand.html#a22f3f5c5bf662cc4d8c013a41a23de50',1,'ttkOnDeleteCommand']]],
   ['key_5f_2204',['key_',['../classttk_1_1CommandLineParser_1_1CommandLineArgument.html#a74b8a5ab9e2056ddeb409944614c225d',1,'ttk::CommandLineParser::CommandLineArgument']]],
   ['keyhandler_5f_2205',['keyHandler_',['../classttkUserInterfaceBase.html#a27420179131b5afa3160c5ac6f3c2df7',1,'ttkUserInterfaceBase']]]

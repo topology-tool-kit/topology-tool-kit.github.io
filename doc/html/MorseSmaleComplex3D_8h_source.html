@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/morseSmaleComplex3D/MorseSmaleComplex3D.h Source File</title>
+<title>TTK: /data/julien/git/github/ttk-tierny/core/base/morseSmaleComplex3D/MorseSmaleComplex3D.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_aa319678ed2cb39fab2f8ff1969e8605.html">tierny</a></li><li class="navelem"><a class="el" href="dir_90f0e18f6a3db9a50a0cff0ad55689f7.html">private</a></li><li class="navelem"><a class="el" href="dir_3a6af36370c7b2c289deb8eee8b7da12.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_b6ff1f0e45d53bd762250c1eea10201d.html">core</a></li><li class="navelem"><a class="el" href="dir_ddc5a3d512b4fb0b449ac7d2dce9d26f.html">base</a></li><li class="navelem"><a class="el" href="dir_9d3b280b18bcc927e2e2a656f856054a.html">morseSmaleComplex3D</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_c0cecd68fcd312999d41a26d57a60c89.html">morseSmaleComplex3D</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -879,7 +879,7 @@ $(function() {
 <div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> &amp;s2{saddles2[i]};</div>
 <div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160; </div>
 <div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    std::set&lt;SimplexId&gt; saddles1{};</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    <a class="code" href="structttk_1_1dcg_1_1VisitedMask.html">dcg::VisitedMask</a> mask{isVisited, visitedTriangles};</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    <a class="code" href="structttk_1_1VisitedMask.html">VisitedMask</a> mask{isVisited, visitedTriangles};</div>
 <div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    discreteGradient_.getDescendingWall(</div>
 <div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;      s2, mask, triangulation, <span class="keyword">nullptr</span>, &amp;saddles1);</div>
 <div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160; </div>
@@ -966,7 +966,7 @@ $(function() {
 <div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;    <span class="keyword">const</span> <a class="code" href="structttk_1_1dcg_1_1Cell.html">Cell</a> &amp;saddle1 = criticalPoints[saddleIndex];</div>
 <div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160; </div>
 <div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;    std::vector&lt;Cell&gt; wall;</div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;    <a class="code" href="structttk_1_1dcg_1_1VisitedMask.html">dcg::VisitedMask</a> mask{isVisited, visitedEdges};</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;    <a class="code" href="structttk_1_1VisitedMask.html">VisitedMask</a> mask{isVisited, visitedEdges};</div>
 <div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;    discreteGradient_.getAscendingWall(</div>
 <div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;      saddle1, mask, triangulation, &amp;wall, &amp;separatricesSaddles[i]);</div>
 <div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160; </div>
@@ -1017,7 +1017,7 @@ $(function() {
 <div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;    <span class="keyword">const</span> <a class="code" href="structttk_1_1dcg_1_1Cell.html">Cell</a> &amp;saddle2 = criticalPoints[saddleIndex];</div>
 <div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160; </div>
 <div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;    std::vector&lt;Cell&gt; wall;</div>
-<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;    <a class="code" href="structttk_1_1dcg_1_1VisitedMask.html">dcg::VisitedMask</a> mask{isVisited, visitedTriangles};</div>
+<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;    <a class="code" href="structttk_1_1VisitedMask.html">VisitedMask</a> mask{isVisited, visitedTriangles};</div>
 <div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;    discreteGradient_.getDescendingWall(</div>
 <div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;      saddle2, mask, triangulation, &amp;wall, &amp;separatricesSaddles[i]);</div>
 <div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160; </div>
@@ -1112,15 +1112,15 @@ $(function() {
 <div class="ttc" id="aclassttk_html_a105fd2ab023d1d8d27bd736a4cdc5abf"><div class="ttname"><a href="classttk.html#a105fd2ab023d1d8d27bd736a4cdc5abf">ttk::SimplexId</a></div><div class="ttdeci">int SimplexId</div><div class="ttdoc">Identifier type for simplices of any dimension.</div><div class="ttdef"><b>Definition:</b> <a href="DataTypes_8h_source.html#l00019">DataTypes.h:19</a></div></div>
 <div class="ttc" id="anamespacettk_html"><div class="ttname"><a href="namespacettk.html">ttk</a></div><div class="ttdoc">The Topology ToolKit.</div><div class="ttdef"><b>Definition:</b> <a href="AbstractMorseSmaleComplex_8h_source.html#l00023">AbstractMorseSmaleComplex.h:23</a></div></div>
 <div class="ttc" id="astructttk_1_1Separatrix_html"><div class="ttname"><a href="structttk_1_1Separatrix.html">ttk::Separatrix</a></div><div class="ttdef"><b>Definition:</b> <a href="AbstractMorseSmaleComplex_8h_source.html#l00029">AbstractMorseSmaleComplex.h:29</a></div></div>
-<div class="ttc" id="astructttk_1_1dcg_1_1Cell_html"><div class="ttname"><a href="structttk_1_1dcg_1_1Cell.html">ttk::dcg::Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="DiscreteGradient_8h_source.html#l00037">DiscreteGradient.h:37</a></div></div>
-<div class="ttc" id="astructttk_1_1dcg_1_1Cell_html_a03eb735f587953de5a64a2bfc5903e72"><div class="ttname"><a href="structttk_1_1dcg_1_1Cell.html#a03eb735f587953de5a64a2bfc5903e72">ttk::dcg::Cell::id_</a></div><div class="ttdeci">SimplexId id_</div><div class="ttdef"><b>Definition:</b> <a href="DiscreteGradient_8h_source.html#l00044">DiscreteGradient.h:44</a></div></div>
-<div class="ttc" id="astructttk_1_1dcg_1_1Cell_html_a78bb6f4234ad8b21e0931ba5322c4840"><div class="ttname"><a href="structttk_1_1dcg_1_1Cell.html#a78bb6f4234ad8b21e0931ba5322c4840">ttk::dcg::Cell::dim_</a></div><div class="ttdeci">int dim_</div><div class="ttdef"><b>Definition:</b> <a href="DiscreteGradient_8h_source.html#l00043">DiscreteGradient.h:43</a></div></div>
-<div class="ttc" id="astructttk_1_1dcg_1_1VisitedMask_html"><div class="ttname"><a href="structttk_1_1dcg_1_1VisitedMask.html">ttk::dcg::VisitedMask</a></div><div class="ttdef"><b>Definition:</b> <a href="DiscreteGradient_8h_source.html#l00278">DiscreteGradient.h:278</a></div></div>
+<div class="ttc" id="astructttk_1_1VisitedMask_html"><div class="ttname"><a href="structttk_1_1VisitedMask.html">ttk::VisitedMask</a></div><div class="ttdoc">Auto-cleaning re-usable graph propagations data structure.</div><div class="ttdef"><b>Definition:</b> <a href="VisitedMask_8h_source.html#l00027">VisitedMask.h:27</a></div></div>
+<div class="ttc" id="astructttk_1_1dcg_1_1Cell_html"><div class="ttname"><a href="structttk_1_1dcg_1_1Cell.html">ttk::dcg::Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="DiscreteGradient_8h_source.html#l00038">DiscreteGradient.h:38</a></div></div>
+<div class="ttc" id="astructttk_1_1dcg_1_1Cell_html_a03eb735f587953de5a64a2bfc5903e72"><div class="ttname"><a href="structttk_1_1dcg_1_1Cell.html#a03eb735f587953de5a64a2bfc5903e72">ttk::dcg::Cell::id_</a></div><div class="ttdeci">SimplexId id_</div><div class="ttdef"><b>Definition:</b> <a href="DiscreteGradient_8h_source.html#l00045">DiscreteGradient.h:45</a></div></div>
+<div class="ttc" id="astructttk_1_1dcg_1_1Cell_html_a78bb6f4234ad8b21e0931ba5322c4840"><div class="ttname"><a href="structttk_1_1dcg_1_1Cell.html#a78bb6f4234ad8b21e0931ba5322c4840">ttk::dcg::Cell::dim_</a></div><div class="ttdeci">int dim_</div><div class="ttdef"><b>Definition:</b> <a href="DiscreteGradient_8h_source.html#l00044">DiscreteGradient.h:44</a></div></div>
 <div class="ttc" id="awelcomeLogo_8inl_html_a0b13334b0f9e6cf8ee4f2e30d7a983a7"><div class="ttname"><a href="welcomeLogo_8inl.html#a0b13334b0f9e6cf8ee4f2e30d7a983a7">printMsg</a></div><div class="ttdeci">printMsg(debug::output::GREEN+&quot;                           &quot;+debug::output::ENDCOLOR+debug::output::GREEN+&quot;▒&quot;+debug::output::ENDCOLOR+debug::output::GREEN+&quot;▒▒▒▒▒▒▒▒▒▒▒▒▒░&quot;+debug::output::ENDCOLOR, debug::Priority::PERFORMANCE, debug::LineMode::NEW, stream)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 16 2021 08:43:37 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Nov 22 2021 12:24:21 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
