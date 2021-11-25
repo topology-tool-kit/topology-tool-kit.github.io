@@ -14,7 +14,7 @@
     
     
       
-        <title>CT bones example - TTK Examples</title>
+        <title>Manifold Check - TTK Examples</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ct-bones-example" class="md-skip">
+        <a href="#manifold-check" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CT bones example
+              Manifold Check
             
           </span>
         </div>
@@ -197,6 +197,36 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../ctBones/" class="md-nav__link">
+        CT bones example
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dragon/" class="md-nav__link">
+        Dragon example
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -209,12 +239,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          CT bones example
+          Manifold Check
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        CT bones example
+        Manifold Check
       </a>
       
         
@@ -250,6 +280,33 @@
     Python code
   </a>
   
+    <nav class="md-nav" aria-label="Python code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-manifold-vertices" class="md-nav__link">
+    Non-manifold Vertices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-manifold-edges" class="md-nav__link">
+    Non-manifold Edges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-manifold-faces" class="md-nav__link">
+    Non-manifold Faces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -277,36 +334,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../dragon/" class="md-nav__link">
-        Dragon example
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../manifoldCheck/" class="md-nav__link">
-        Manifold Check
-      </a>
     </li>
   
 
@@ -385,6 +412,33 @@
     Python code
   </a>
   
+    <nav class="md-nav" aria-label="Python code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-manifold-vertices" class="md-nav__link">
+    Non-manifold Vertices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-manifold-edges" class="md-nav__link">
+    Non-manifold Edges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-manifold-faces" class="md-nav__link">
+    Non-manifold Faces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -421,22 +475,18 @@
               
                 
                 
-                <h1 id="ct-bones-example">CT bones example<a class="headerlink" href="#ct-bones-example" title="Permanent link">&para;</a></h1>
-<p><img alt="CT bones example Image" src="https://topology-tool-kit.github.io/img/gallery/ctBones.jpg" /></p>
+                <h1 id="manifold-check">Manifold Check<a class="headerlink" href="#manifold-check" title="Permanent link">&para;</a></h1>
+<p><img alt="Manifold check screenshot" src="https://topology-tool-kit.github.io/img/gallery/manifoldCheck.jpg" /></p>
 <h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
-<p>This example segments medical image data based on topological persistence.</p>
-<p>First, the <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a> of the data is computed (top right view, above screenshot). </p>
-<p>Then, only the 5 most persistent maxima are selected, corresponding to the toes of the foot.</p>
-<p>Next, the input data is simplified based on the selected persistent features, via <a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a>.</p>
-<p>Next, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">Split tree</a> of the simplified data is computed. </p>
-<p>Finally, the geometry of the bones of the toes is extracted by selecting the regions (in the 3D data) attached to the leaves (<code>RegionType</code> equals 1) of the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">Split tree</a> (center view, above screenshot).</p>
-<p>To get a refined segmentation, change the persistence threshold from <code>180</code> down to <code>150</code>. 
-Each toe will be subdivided into two segments, precisely along the joints.</p>
+<p>This example loads three different hexahedral geometry files from disk.
+In a pre-processing, each geometry is tetrahedralized, which is used as input data.</p>
+<p>On each of the three geometries, <a href="https://topology-tool-kit.github.io/doc/html/classttkManifoldCheck.html">ManifoldCheck</a> is executed. This filters adds link numbers to vertices and cells, which can be used to detect and extract non-manifold vertices (left), edges (middle), and faces (right).</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>$ paraview states/ctBones.pvsm
+<div class="highlight"><pre><span></span><code>$ paraview states/manifoldChecks.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
+<h3 id="non-manifold-vertices">Non-manifold Vertices<a class="headerlink" href="#non-manifold-vertices" title="Permanent link">&para;</a></h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -465,65 +515,60 @@ Each toe will be subdivided into two segments, precisely along the joints.</p>
 <span class="normal">26</span>
 <span class="normal">27</span>
 <span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
-
+<span class="normal">29</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="c1"># create a new &#39;XML Image Data Reader&#39;</span>
-<span class="n">ctBonesvti</span> <span class="o">=</span> <span class="n">XMLImageDataReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ctBones.vti&#39;</span><span class="p">])</span>
+<span class="c1"># create a new &#39;XML Unstructured Grid Reader&#39;</span>
+<span class="n">manifoldCheck0vtu</span> <span class="o">=</span> <span class="n">XMLUnstructuredGridReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;manifoldCheck0.vtu&#39;</span><span class="p">])</span>
 
-<span class="c1"># create a new &#39;TTK PersistenceDiagram&#39;</span>
-<span class="n">tTKPersistenceDiagram1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">ctBonesvti</span><span class="p">)</span>
-<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Scalars_&#39;</span><span class="p">]</span>
+<span class="c1"># create a new &#39;Tetrahedralize&#39;</span>
+<span class="n">tetrahedralize1</span> <span class="o">=</span> <span class="n">Tetrahedralize</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">manifoldCheck0vtu</span><span class="p">)</span>
 
-<span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;PairIdentifier&#39;</span><span class="p">]</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">9999999.0</span><span class="p">]</span>
+<span class="c1"># create a new &#39;TTK ManifoldCheck&#39;</span>
+<span class="n">tTKManifoldCheck1</span> <span class="o">=</span> <span class="n">TTKManifoldCheck</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tetrahedralize1</span><span class="p">)</span>
 
-<span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">persistenceThreshold</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold1</span><span class="p">)</span>
-<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;Persistence&#39;</span><span class="p">]</span>
-<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">180.0</span><span class="p">,</span> <span class="mf">255.0</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
-<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span><span class="n">Domain</span><span class="o">=</span><span class="n">ctBonesvti</span><span class="p">,</span>
-    <span class="n">Constraints</span><span class="o">=</span><span class="n">persistenceThreshold</span><span class="p">)</span>
-<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Scalars_&#39;</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;TTK Merge and Contour Tree (FTM)&#39;</span>
-<span class="n">tTKMergeandContourTreeFTM1</span> <span class="o">=</span> <span class="n">TTKMergeandContourTreeFTM</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
-<span class="n">tTKMergeandContourTreeFTM1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Scalars_&#39;</span><span class="p">]</span>
-<span class="n">tTKMergeandContourTreeFTM1</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s1">&#39;Split Tree&#39;</span>
+<span class="c1"># create a new &#39;Mask Points&#39;</span>
+<span class="n">maskPoints1</span> <span class="o">=</span> <span class="n">MaskPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKManifoldCheck1</span><span class="p">)</span>
+<span class="n">maskPoints1</span><span class="o">.</span><span class="n">OnRatio</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">maskPoints1</span><span class="o">.</span><span class="n">MaximumNumberofPoints</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">maskPoints1</span><span class="o">.</span><span class="n">GenerateVertices</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">maskPoints1</span><span class="o">.</span><span class="n">SingleVertexPerCell</span> <span class="o">=</span> <span class="mi">1</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">threshold3</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-<span class="n">threshold3</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;RegionType&#39;</span><span class="p">]</span>
-<span class="n">threshold3</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+<span class="c1"># this extracts non-manifold vertices</span>
+<span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">maskPoints1</span><span class="p">)</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;VertexLinkComponentNumber&#39;</span><span class="p">]</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">2.0</span>
 
-<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;CTBonesOutputSegmentation.vtu&quot;</span><span class="p">,</span> <span class="n">threshold3</span><span class="p">)</span>
+<span class="c1"># save the output</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;manifoldCheck0_check.vtu&#39;</span><span class="p">,</span> <span class="n">tTKManifoldCheck1</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;manifoldCheck0_non_manifold.vtu&#39;</span><span class="p">,</span> <span class="n">threshold1</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="non-manifold-edges">Non-manifold Edges<a class="headerlink" href="#non-manifold-edges" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</td></tr></table>
+<h3 id="non-manifold-faces">Non-manifold Faces<a class="headerlink" href="#non-manifold-faces" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>
 </code></pre></div>
 </td></tr></table>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/ctBones.vti">ctBones.vti</a>: a three-dimensional regular grid encoding material density in a medical image (CT scan).</li>
+<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/manifoldCheck0.vtu">manifoldCheck0.vtu</a>: example mesh with non-manifold vertices</li>
+<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/manifoldCheck1.vtu">manifoldCheck1.vtu</a>: example mesh with non-manifold edges</li>
+<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/manifoldCheck2.vtu">manifoldCheck2.vtu</a>: example mesh with non-manifold faces</li>
 </ul>
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>CTBonesOutputSegmentation.vtu</code>: the geometry of the volume of the bones of the toes, as extracted by the analysis pipeline (most persistent super-level set connected components).</li>
+<li><code>manifoldCheck0_check.vtu</code>, <code>manifoldCheck1_check.vtu</code>, <code>manifoldCheck2_check.vtu</code>: tetrhedralized geometry with link numbers</li>
+<li><code>manifoldCheck0_non_manifold.vtu</code>: non-manifold vertices in <code>manifoldCheck0.vtu</code></li>
+<li><code>manifoldCheck1_non_manifold.vtu</code>: non-manifold edges in <code>manifoldCheck1.vtu</code></li>
+<li><code>manifoldCheck2_non_manifold.vtu</code>: non-manifold faces in <code>manifoldCheck2.vtu</code></li>
 </ul>
 <h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">ContourTree (FTM)</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkManifoldCheck.html">ManifoldCheck</a> </p>
                 
               
               
@@ -543,7 +588,7 @@ Each toe will be subdivided into two segments, precisely along the joints.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Welcome to the TTK Examples!" rel="prev">
+        <a href="../dragon/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Dragon example" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -552,20 +597,20 @@ Each toe will be subdivided into two segments, precisely along the joints.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Welcome to the TTK Examples!
+              Dragon example
             </div>
           </div>
         </a>
       
       
         
-        <a href="../dragon/" class="md-footer__link md-footer__link--next" aria-label="Next: Dragon example" rel="next">
+        <a href="../morseMolecule/" class="md-footer__link md-footer__link--next" aria-label="Next: Morse molecule example" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Dragon example
+              Morse molecule example
             </div>
           </div>
           <div class="md-footer__button md-icon">
