@@ -14,7 +14,7 @@
     
     
       
-        <title>Dragon example - TTK Examples</title>
+        <title>CT bones example - TTK Examples</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dragon-example" class="md-skip">
+        <a href="#ct-bones-example" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dragon example
+              CT bones example
             
           </span>
         </div>
@@ -197,21 +197,6 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../ctBones/" class="md-nav__link">
-        CT bones example
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
     
   
   
@@ -224,12 +209,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Dragon example
+          CT bones example
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Dragon example
+        CT bones example
       </a>
       
         
@@ -292,6 +277,21 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dragon/" class="md-nav__link">
+        Dragon example
+      </a>
     </li>
   
 
@@ -391,24 +391,20 @@
               
                 
                 
-                <h1 id="dragon-example">Dragon example<a class="headerlink" href="#dragon-example" title="Permanent link">&para;</a></h1>
-<!--[![Dragon example video tutorial](https://topology-tool-kit.github.io/img/gallery/dragon.jpg)](https://youtu.be/YVk9vRKIEX8)-->
-
-<iframe width="100%" height="420"
-src="https://www.youtube.com/embed/YVk9vRKIEX8" frameborder="0"
-allowfullscreen></iframe>
-
+                <h1 id="ct-bones-example">CT bones example<a class="headerlink" href="#ct-bones-example" title="Permanent link">&para;</a></h1>
+<p><img alt="CT bones example Image" src="https://topology-tool-kit.github.io/img/gallery/ctBones.jpg" /></p>
 <h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
-<p>This example first loads a triangle mesh from disk.
-In a pre-processing, the mesh is smoothed and an elevation function is computed on top of it.
-The elevation function will be considered as the input scalar data in the remainder.</p>
-<p>Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a> is computed and thresholds are applied base on persistence to maintain only the most persistent features. This results in a simplified persistence diagram (bottom right view in the above screenshot).</p>
-<p>The <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceCurve.html">PersistenceCurve</a> is also computed (top right view in the above screenshot).</p>
-<p>The simplified persistence diagram is then used as a constraint for the <a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a> of the input scalar data.</p>
-<p>This simplified data is then used as the input of the computation of <a href="https://topology-tool-kit.github.io/doc/html/classttkScalarFieldCriticalPoints.html">ScalarFieldCriticalPoints</a> (top left view, above screenshot) and the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">ContourTree (FTM)</a> (bottom left view, above screenshot).</p>
+<p>This example segments medical image data based on topological persistence.</p>
+<p>First, the <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a> of the data is computed (top right view, above screenshot). </p>
+<p>Then, only the 5 most persistent maxima are selected, corresponding to the toes of the foot.</p>
+<p>Next, the input data is simplified based on the selected persistent features, via <a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a>.</p>
+<p>Next, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">Split tree</a> of the simplified data is computed. </p>
+<p>Finally, the geometry of the bones of the toes is extracted by selecting the regions (in the 3D data) attached to the leaves (<code>RegionType</code> equals 1) of the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">Split tree</a> (center view, above screenshot).</p>
+<p>To get a refined segmentation, change the persistence threshold from <code>180</code> down to <code>150</code>. 
+Each toe will be subdivided into two segments, precisely along the joints.</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>$ paraview states/dragon.pvsm
+<div class="highlight"><pre><span></span><code>$ paraview states/ctBones.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -447,132 +443,56 @@ The elevation function will be considered as the input scalar data in the remain
 <span class="normal">34</span>
 <span class="normal">35</span>
 <span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="c1"># create a new &#39;XML Unstructured Grid Reader&#39;</span>
-<span class="n">dragonvtu</span> <span class="o">=</span> <span class="n">XMLUnstructuredGridReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dragon.vtu&#39;</span><span class="p">])</span>
-
-<span class="c1"># create a new &#39;TTK GeometrySmoother&#39;</span>
-<span class="n">tTKGeometrySmoother1</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">dragonvtu</span><span class="p">)</span>
-
-<span class="c1"># create a new &#39;Calculator&#39;</span>
-<span class="n">elevation</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKGeometrySmoother1</span><span class="p">)</span>
-<span class="n">elevation</span><span class="o">.</span><span class="n">ResultArrayName</span> <span class="o">=</span> <span class="s1">&#39;Elevation&#39;</span>
-<span class="n">elevation</span><span class="o">.</span><span class="n">Function</span> <span class="o">=</span> <span class="s1">&#39;coordsY&#39;</span>
-
-<span class="c1"># create a new &#39;TTK PersistenceCurve&#39;</span>
-<span class="n">tTKPersistenceCurve1</span> <span class="o">=</span> <span class="n">TTKPersistenceCurve</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">elevation</span><span class="p">)</span>
-<span class="n">tTKPersistenceCurve1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation&#39;</span><span class="p">]</span>
+<span class="c1"># create a new &#39;XML Image Data Reader&#39;</span>
+<span class="n">ctBonesvti</span> <span class="o">=</span> <span class="n">XMLImageDataReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ctBones.vti&#39;</span><span class="p">])</span>
 
 <span class="c1"># create a new &#39;TTK PersistenceDiagram&#39;</span>
-<span class="n">tTKPersistenceDiagram1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">elevation</span><span class="p">)</span>
-<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation&#39;</span><span class="p">]</span>
+<span class="n">tTKPersistenceDiagram1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">ctBonesvti</span><span class="p">)</span>
+<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Scalars_&#39;</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">pairs</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
-<span class="n">pairs</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;PairIdentifier&#39;</span><span class="p">]</span>
-<span class="n">pairs</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">]</span>
+<span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;PairIdentifier&#39;</span><span class="p">]</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">9999999.0</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">persistenceThreshold</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">pairs</span><span class="p">)</span>
+<span class="n">persistenceThreshold</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold1</span><span class="p">)</span>
 <span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;Persistence&#39;</span><span class="p">]</span>
-<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">]</span>
+<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">180.0</span><span class="p">,</span> <span class="mf">255.0</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
-<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span><span class="n">Domain</span><span class="o">=</span><span class="n">elevation</span><span class="p">,</span>
+<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span><span class="n">Domain</span><span class="o">=</span><span class="n">ctBonesvti</span><span class="p">,</span>
     <span class="n">Constraints</span><span class="o">=</span><span class="n">persistenceThreshold</span><span class="p">)</span>
-<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation&#39;</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;TTK ScalarFieldCriticalPoints&#39;</span>
-<span class="n">tTKScalarFieldCriticalPoints1</span> <span class="o">=</span> <span class="n">TTKScalarFieldCriticalPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
-<span class="n">tTKScalarFieldCriticalPoints1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation&#39;</span><span class="p">]</span>
+<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Scalars_&#39;</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;TTK Merge and Contour Tree (FTM)&#39;</span>
-<span class="n">tTKContourTree1</span> <span class="o">=</span> <span class="n">TTKMergeandContourTreeFTM</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
-<span class="n">tTKContourTree1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation&#39;</span><span class="p">]</span>
-<span class="n">tTKContourTree1</span><span class="o">.</span><span class="n">ArcSampling</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">tTKMergeandContourTreeFTM1</span> <span class="o">=</span> <span class="n">TTKMergeandContourTreeFTM</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
+<span class="n">tTKMergeandContourTreeFTM1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Scalars_&#39;</span><span class="p">]</span>
+<span class="n">tTKMergeandContourTreeFTM1</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s1">&#39;Split Tree&#39;</span>
 
-<span class="c1"># create a new &#39;TTK GeometrySmoother&#39;</span>
-<span class="n">tTKGeometrySmoother2</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKContourTree1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-<span class="n">tTKGeometrySmoother2</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="c1"># create a new &#39;Threshold&#39;</span>
+<span class="n">threshold3</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">threshold3</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;RegionType&#39;</span><span class="p">]</span>
+<span class="n">threshold3</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
 
-<span class="c1"># create a new &#39;Extract Surface&#39;</span>
-<span class="n">extractSurface4</span> <span class="o">=</span> <span class="n">ExtractSurface</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKGeometrySmoother2</span><span class="p">)</span>
-
-<span class="c1"># create a new &#39;Tube&#39;</span>
-<span class="n">tube4</span> <span class="o">=</span> <span class="n">Tube</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">extractSurface4</span><span class="p">)</span>
-<span class="n">tube4</span><span class="o">.</span><span class="n">NumberofSides</span> <span class="o">=</span> <span class="mi">12</span>
-<span class="n">tube4</span><span class="o">.</span><span class="n">Radius</span> <span class="o">=</span> <span class="mf">0.75</span>
-
-<span class="c1"># create a new &#39;TTK IcospheresFromPoints&#39;</span>
-<span class="n">tTKIcospheresFromPoints4</span> <span class="o">=</span> <span class="n">TTKIcospheresFromPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKContourTree1</span><span class="p">)</span>
-<span class="n">tTKIcospheresFromPoints4</span><span class="o">.</span><span class="n">Radius</span> <span class="o">=</span> <span class="mf">2.0</span>
-
-<span class="c1"># save the output</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;PersistenceDiagram.vtu&#39;</span><span class="p">,</span> <span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;PersistenceCurve.csv&#39;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKPersistenceCurve1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;CriticalPoints.vtp&#39;</span><span class="p">,</span> <span class="n">tTKScalarFieldCriticalPoints1</span><span class="p">)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;ContourTreeNodes.vtp&#39;</span><span class="p">,</span> <span class="n">tTKIcospheresFromPoints4</span><span class="p">)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;ContourTreeArcs.vtp&#39;</span><span class="p">,</span> <span class="n">tube4</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;CTBonesOutputSegmentation.vtu&quot;</span><span class="p">,</span> <span class="n">threshold3</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/dragon.vtu">dragon.vtu</a>: a two-dimensional triangulation.</li>
+<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/ctBones.vti">ctBones.vti</a>: a three-dimensional regular grid encoding material density in a medical image (CT scan).</li>
 </ul>
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>PersistenceDiagram.vtu</code>: the output persistence diagram in VTK file format (bottom right view, above screenshot). You are free to change the <code>vtu</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
-<li><code>PersistenceCurve.csv</code>: the output persistence curve.</li>
-<li><code>CriticalPoints.vtp</code>: the output
-critical points
-in VTK file format (bottom right view, above screenshot). You are free to change the <code>vtp</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
-<li><code>ContourTreeNode.vtp</code>: spheres, representing the nodes of the output contour tree
-in VTK file format (bottom right view, above screenshot). You are free to change the <code>vtp</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
-<li><code>ContourTreeArcs.vtp</code>: cylinders, representing the arcs of the output contour tree
-in VTK file format (bottom right view, above screenshot). You are free to change the <code>vtp</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
+<li><code>CTBonesOutputSegmentation.vtu</code>: the geometry of the volume of the bones of the toes, as extracted by the analysis pipeline (most persistent super-level set connected components).</li>
 </ul>
 <h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
 <p><a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">ContourTree (FTM)</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkGeometrySmoother.html">GeometrySmoother</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkIcospheresFromPoints.html">IcospheresFromPoints</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceCurve.html">PersistenceCurve</a></p>
 <p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkScalarFieldCriticalPoints.html">ScalarFieldCriticalPoints</a></p>
 <p><a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a></p>
                 
               
@@ -593,7 +513,7 @@ in VTK file format (bottom right view, above screenshot). You are free to change
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../ctBones/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CT bones example" rel="prev">
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Welcome to the TTK Examples!" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -602,20 +522,20 @@ in VTK file format (bottom right view, above screenshot). You are free to change
               <span class="md-footer__direction">
                 Previous
               </span>
-              CT bones example
+              Welcome to the TTK Examples!
             </div>
           </div>
         </a>
       
       
         
-        <a href="../morsePersistence/" class="md-footer__link md-footer__link--next" aria-label="Next: Morse persistence example" rel="next">
+        <a href="../dragon/" class="md-footer__link md-footer__link--next" aria-label="Next: Dragon example" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Morse persistence example
+              Dragon example
             </div>
           </div>
           <div class="md-footer__button md-icon">
