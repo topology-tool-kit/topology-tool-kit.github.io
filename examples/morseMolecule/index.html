@@ -575,35 +575,16 @@ allowfullscreen></iframe>
 <span class="normal">134</span>
 <span class="normal">135</span>
 <span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="normal">137</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># create a new &#39;XML Image Data Reader&#39;</span>
 <span class="n">builtInExamplevti</span> <span class="o">=</span> <span class="n">XMLImageDataReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;BuiltInExample2.vti&#39;</span><span class="p">])</span>
-<span class="n">builtInExamplevti</span><span class="o">.</span><span class="n">PointArrayStatus</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rho&#39;</span><span class="p">,</span> <span class="s1">&#39;log(Rho)&#39;</span><span class="p">,</span> <span class="s1">&#39;log(s)&#39;</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;TTK MorseSmaleComplex&#39;</span>
 <span class="n">tTKMorseSmaleComplex1</span> <span class="o">=</span> <span class="n">TTKMorseSmaleComplex</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">builtInExamplevti</span><span class="p">)</span>
 <span class="n">tTKMorseSmaleComplex1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(Rho)&#39;</span><span class="p">]</span>
-<span class="n">tTKMorseSmaleComplex1</span><span class="o">.</span><span class="n">OffsetField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
 <span class="n">tTKMorseSmaleComplex1</span><span class="o">.</span><span class="n">Ascending2Separatrices</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">tTKMorseSmaleComplex1</span><span class="o">.</span><span class="n">Descending2Separatrices</span> <span class="o">=</span> <span class="mi">1</span>
-
-<span class="c1"># find source</span>
-<span class="n">tTKMorseSmaleComplex1_1</span> <span class="o">=</span> <span class="n">FindSource</span><span class="p">(</span><span class="s1">&#39;TTKMorseSmaleComplex1&#39;</span><span class="p">)</span>
 
 <span class="c1"># Generate spheres for the critical points using &#39;TTK IcospheresFromPoints&#39;</span>
 <span class="n">tTKIcospheresFromPoints1</span> <span class="o">=</span> <span class="n">TTKIcospheresFromPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">)</span>
@@ -618,11 +599,8 @@ allowfullscreen></iframe>
 <span class="n">threshold3</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;CellDimension&#39;</span><span class="p">]</span>
 <span class="n">threshold3</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
 
-<span class="c1"># find source</span>
-<span class="n">tTKMorseSmaleComplex1_2</span> <span class="o">=</span> <span class="n">FindSource</span><span class="p">(</span><span class="s1">&#39;TTKMorseSmaleComplex1&#39;</span><span class="p">)</span>
-
 <span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1_2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 <span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;NumberOfCriticalPointsOnBoundary&#39;</span><span class="p">]</span>
 <span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
 
@@ -634,7 +612,6 @@ allowfullscreen></iframe>
 <span class="c1"># create a new &#39;TTK GeometrySmoother&#39;</span>
 <span class="n">tTKGeometrySmoother1</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold2</span><span class="p">)</span>
 <span class="n">tTKGeometrySmoother1</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="n">tTKGeometrySmoother1</span><span class="o">.</span><span class="n">InputMaskField</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;Clean to Grid&#39;</span>
 <span class="n">cleantoGrid1</span> <span class="o">=</span> <span class="n">CleantoGrid</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKGeometrySmoother1</span><span class="p">)</span>
@@ -645,11 +622,10 @@ allowfullscreen></iframe>
 <span class="c1"># create a new &#39;Tube&#39;</span>
 <span class="n">tube1</span> <span class="o">=</span> <span class="n">Tube</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">extractSurface1</span><span class="p">)</span>
 <span class="n">tube1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;CellDimension&#39;</span><span class="p">]</span>
-<span class="n">tube1</span><span class="o">.</span><span class="n">Vectors</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
 <span class="n">tube1</span><span class="o">.</span><span class="n">Radius</span> <span class="o">=</span> <span class="mf">1.25</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">threshold8</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1_2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">threshold8</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 <span class="n">threshold8</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;SeparatrixType&#39;</span><span class="p">]</span>
 <span class="n">threshold8</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
 
@@ -677,7 +653,6 @@ allowfullscreen></iframe>
 <span class="c1"># create a new &#39;TTK GeometrySmoother&#39;</span>
 <span class="n">tTKGeometrySmoother4</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">cleantoGrid4</span><span class="p">)</span>
 <span class="n">tTKGeometrySmoother4</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">tTKGeometrySmoother4</span><span class="o">.</span><span class="n">InputMaskField</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;Extract Surface&#39;</span>
 <span class="n">extractSurface3</span> <span class="o">=</span> <span class="n">ExtractSurface</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKGeometrySmoother4</span><span class="p">)</span>
@@ -685,11 +660,10 @@ allowfullscreen></iframe>
 <span class="c1"># create a new &#39;Tube&#39;</span>
 <span class="n">tube2</span> <span class="o">=</span> <span class="n">Tube</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">extractSurface3</span><span class="p">)</span>
 <span class="n">tube2</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;CellDimension&#39;</span><span class="p">]</span>
-<span class="n">tube2</span><span class="o">.</span><span class="n">Vectors</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
 <span class="n">tube2</span><span class="o">.</span><span class="n">Radius</span> <span class="o">=</span> <span class="mf">0.75</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">threshold4</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1_1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">threshold4</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 <span class="n">threshold4</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;SeparatrixType&#39;</span><span class="p">]</span>
 <span class="n">threshold4</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
 
@@ -705,10 +679,9 @@ allowfullscreen></iframe>
 <span class="c1"># create a new &#39;TTK GeometrySmoother&#39;</span>
 <span class="n">tTKGeometrySmoother2</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">extractSurface2</span><span class="p">)</span>
 <span class="n">tTKGeometrySmoother2</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">tTKGeometrySmoother2</span><span class="o">.</span><span class="n">InputMaskField</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
 
 <span class="c1"># select 2-separatrices using &#39;Threshold&#39;</span>
-<span class="n">threshold5</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1_1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">threshold5</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 <span class="n">threshold5</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;SeparatrixType&#39;</span><span class="p">]</span>
 <span class="n">threshold5</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">]</span>
 
@@ -731,7 +704,6 @@ allowfullscreen></iframe>
 <span class="c1"># create a new &#39;TTK GeometrySmoother&#39;</span>
 <span class="n">tTKGeometrySmoother3</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tetrahedralize2</span><span class="p">)</span>
 <span class="n">tTKGeometrySmoother3</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">tTKGeometrySmoother3</span><span class="o">.</span><span class="n">InputMaskField</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
 
 <span class="c1"># save the output</span>
 <span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;CriticalPoints.vtp&#39;</span><span class="p">,</span> <span class="n">tTKIcospheresFromPoints1</span><span class="p">)</span>
