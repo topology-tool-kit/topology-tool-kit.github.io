@@ -452,23 +452,21 @@
                 
                 
                 <h1 id="morse-persistence-example">Morse persistence example<a class="headerlink" href="#morse-persistence-example" title="Permanent link">&para;</a></h1>
-<!--[![Dragon example video tutorial](https://topology-tool-kit.github.io/img/gallery/dragon.jpg)](https://youtu.be/YVk9vRKIEX8)-->
-
 <iframe width="100%" height="420"
-src="https://www.youtube.com/embed/YVk9vRKIEX8" frameborder="0"
+src="https://www.youtube.com/embed/xjKh6YTq5RA" frameborder="0"
 allowfullscreen></iframe>
 
+<!-- ![Morse Persistence example Image](https://topology-tool-kit.github.io/img/gallery/morsePersistence.jpg) -->
+
 <h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
-<p>This example first loads a triangle mesh from disk.
-In a pre-processing, the mesh is smoothed and an elevation function is computed on top of it.
-The elevation function will be considered as the input scalar data in the remainder.</p>
+<p>The first step is to create the data for our example. A plane is created to which we add random scalar values to create noise. The obtained scalar field is smoothed using the <a href="https://topology-tool-kit.github.io/doc/html/classttkScalarFieldSmoother.html">ScalarFieldSmoother</a>. A sum of sine as scalar values is also added to create the nine main hills.</p>
 <p>Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a> is computed and thresholds are applied base on persistence to maintain only the most persistent features. This results in a simplified persistence diagram (bottom right view in the above screenshot).</p>
 <p>The <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceCurve.html">PersistenceCurve</a> is also computed (top right view in the above screenshot).</p>
 <p>The simplified persistence diagram is then used as a constraint for the <a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a> of the input scalar data.</p>
-<p>This simplified data is then used as the input of the computation of <a href="https://topology-tool-kit.github.io/doc/html/classttkScalarFieldCriticalPoints.html">ScalarFieldCriticalPoints</a> (top left view, above screenshot) and the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">ContourTree (FTM)</a> (bottom left view, above screenshot).</p>
+<p>This simplified data is then used as the input of the computation of <a href="https://topology-tool-kit.github.io/doc/html/classttk_1_1MorseSmaleComplex.html">MorseSmaleComplex</a> (center view, above screenshot). This complex is composed of elements of 3 dimensions: dimension 0, which corresponds to the critical points of the Morse-Smale Complex, dimension 1, which corresponds to its edges (in grey in the screenshot) and dimension 2, which corresponds to its surfaces.</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <code>ttk-data</code>  directory and enter the following command:
-<div class="highlight"><pre><span></span><code>$ paraview states/dragon.pvsm
+<div class="highlight"><pre><span></span><code>$ paraview states/morsePersistence.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -539,100 +537,114 @@ The elevation function will be considered as the input scalar data in the remain
 <span class="normal">66</span>
 <span class="normal">67</span>
 <span class="normal">68</span>
-<span class="normal">69</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="c1"># create a new &#39;XML Unstructured Grid Reader&#39;</span>
-<span class="n">dragonvtu</span> <span class="o">=</span> <span class="n">XMLUnstructuredGridReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dragon.vtu&#39;</span><span class="p">])</span>
+<span class="c1"># create a new &#39;Plane&#39;</span>
+<span class="n">plane1</span> <span class="o">=</span> <span class="n">Plane</span><span class="p">()</span>
+<span class="n">plane1</span><span class="o">.</span><span class="n">XResolution</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">plane1</span><span class="o">.</span><span class="n">YResolution</span> <span class="o">=</span> <span class="mi">300</span>
 
-<span class="c1"># create a new &#39;TTK GeometrySmoother&#39;</span>
-<span class="n">tTKGeometrySmoother1</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">dragonvtu</span><span class="p">)</span>
+<span class="c1"># create a new &#39;Tetrahedralize&#39;</span>
+<span class="n">tetrahedralize2</span> <span class="o">=</span> <span class="n">Tetrahedralize</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">plane1</span><span class="p">)</span>
+
+<span class="c1"># create a new &#39;Random Attributes&#39;</span>
+<span class="n">randomAttributes1</span> <span class="o">=</span> <span class="n">RandomAttributes</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tetrahedralize2</span><span class="p">)</span>
+<span class="n">randomAttributes1</span><span class="o">.</span><span class="n">DataType</span> <span class="o">=</span> <span class="s1">&#39;Float&#39;</span>
+<span class="n">randomAttributes1</span><span class="o">.</span><span class="n">ComponentRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+<span class="n">randomAttributes1</span><span class="o">.</span><span class="n">GeneratePointScalars</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># create a new &#39;TTK ScalarFieldSmoother&#39;</span>
+<span class="n">tTKScalarFieldSmoother1</span> <span class="o">=</span> <span class="n">TTKScalarFieldSmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">randomAttributes1</span><span class="p">)</span>
+<span class="n">tTKScalarFieldSmoother1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;RandomPointScalars&#39;</span><span class="p">]</span>
+<span class="n">tTKScalarFieldSmoother1</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">6</span>
 
 <span class="c1"># create a new &#39;Calculator&#39;</span>
-<span class="n">elevation</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKGeometrySmoother1</span><span class="p">)</span>
-<span class="n">elevation</span><span class="o">.</span><span class="n">ResultArrayName</span> <span class="o">=</span> <span class="s1">&#39;Elevation&#39;</span>
-<span class="n">elevation</span><span class="o">.</span><span class="n">Function</span> <span class="o">=</span> <span class="s1">&#39;coordsY&#39;</span>
+<span class="n">sine</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKScalarFieldSmoother1</span><span class="p">)</span>
+<span class="n">sine</span><span class="o">.</span><span class="n">ResultArrayName</span> <span class="o">=</span> <span class="s1">&#39;Sine&#39;</span>
+<span class="n">sine</span><span class="o">.</span><span class="n">Function</span> <span class="o">=</span> <span class="s1">&#39;sin(20*coordsX+1.5)+sin(20*coordsY+1.5)&#39;</span>
 
-<span class="c1"># create a new &#39;TTK PersistenceCurve&#39;</span>
-<span class="n">tTKPersistenceCurve1</span> <span class="o">=</span> <span class="n">TTKPersistenceCurve</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">elevation</span><span class="p">)</span>
-<span class="n">tTKPersistenceCurve1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation&#39;</span><span class="p">]</span>
+<span class="c1"># create a new &#39;Calculator&#39;</span>
+<span class="n">distanceField</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">sine</span><span class="p">)</span>
+<span class="n">distanceField</span><span class="o">.</span><span class="n">ResultArrayName</span> <span class="o">=</span> <span class="s1">&#39;DistanceField&#39;</span>
+<span class="n">distanceField</span><span class="o">.</span><span class="n">Function</span> <span class="o">=</span> <span class="s1">&#39;-sqrt(coordsX*coordsX+coordsY*coordsY)&#39;</span>
 
-<span class="c1"># create a new &#39;TTK PersistenceDiagram&#39;</span>
-<span class="n">tTKPersistenceDiagram1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">elevation</span><span class="p">)</span>
-<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation&#39;</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">pairs</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
-<span class="n">pairs</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;PairIdentifier&#39;</span><span class="p">]</span>
-<span class="n">pairs</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">persistenceThreshold</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">pairs</span><span class="p">)</span>
-<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;Persistence&#39;</span><span class="p">]</span>
-<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
-<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span><span class="n">Domain</span><span class="o">=</span><span class="n">elevation</span><span class="p">,</span>
-    <span class="n">Constraints</span><span class="o">=</span><span class="n">persistenceThreshold</span><span class="p">)</span>
-<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation&#39;</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;TTK ScalarFieldCriticalPoints&#39;</span>
-<span class="n">tTKScalarFieldCriticalPoints1</span> <span class="o">=</span> <span class="n">TTKScalarFieldCriticalPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
-<span class="n">tTKScalarFieldCriticalPoints1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation&#39;</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;TTK Merge and Contour Tree (FTM)&#39;</span>
-<span class="n">tTKContourTree1</span> <span class="o">=</span> <span class="n">TTKMergeandContourTreeFTM</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
-<span class="n">tTKContourTree1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation&#39;</span><span class="p">]</span>
-<span class="n">tTKContourTree1</span><span class="o">.</span><span class="n">ArcSampling</span> <span class="o">=</span> <span class="mi">30</span>
-
-<span class="c1"># create a new &#39;TTK GeometrySmoother&#39;</span>
-<span class="n">tTKGeometrySmoother2</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKContourTree1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-<span class="n">tTKGeometrySmoother2</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="c1"># create a new &#39;Calculator&#39;</span>
+<span class="n">calculator1</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">distanceField</span><span class="p">)</span>
+<span class="n">calculator1</span><span class="o">.</span><span class="n">ResultArrayName</span> <span class="o">=</span> <span class="s1">&#39;Blend&#39;</span>
+<span class="n">calculator1</span><span class="o">.</span><span class="n">Function</span> <span class="o">=</span> <span class="s1">&#39;Sine+5*DistanceField+5*RandomPointScalars&#39;</span>
 
 <span class="c1"># create a new &#39;Extract Surface&#39;</span>
-<span class="n">extractSurface4</span> <span class="o">=</span> <span class="n">ExtractSurface</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKGeometrySmoother2</span><span class="p">)</span>
+<span class="n">extractSurface6</span> <span class="o">=</span> <span class="n">ExtractSurface</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">calculator1</span><span class="p">)</span>
 
-<span class="c1"># create a new &#39;Tube&#39;</span>
-<span class="n">tube4</span> <span class="o">=</span> <span class="n">Tube</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">extractSurface4</span><span class="p">)</span>
-<span class="n">tube4</span><span class="o">.</span><span class="n">NumberofSides</span> <span class="o">=</span> <span class="mi">12</span>
-<span class="n">tube4</span><span class="o">.</span><span class="n">Radius</span> <span class="o">=</span> <span class="mf">0.75</span>
+<span class="c1"># create a new &#39;Warp By Scalar&#39;</span>
+<span class="n">warpByScalar1</span> <span class="o">=</span> <span class="n">WarpByScalar</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">extractSurface6</span><span class="p">)</span>
+<span class="n">warpByScalar1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Blend&#39;</span><span class="p">]</span>
+<span class="n">warpByScalar1</span><span class="o">.</span><span class="n">ScaleFactor</span> <span class="o">=</span> <span class="mf">0.05</span>
 
-<span class="c1"># create a new &#39;TTK IcospheresFromPoints&#39;</span>
-<span class="n">tTKIcospheresFromPoints4</span> <span class="o">=</span> <span class="n">TTKIcospheresFromPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKContourTree1</span><span class="p">)</span>
-<span class="n">tTKIcospheresFromPoints4</span><span class="o">.</span><span class="n">Radius</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="c1"># create a new &#39;TTK PersistenceCurve&#39;</span>
+<span class="n">tTKPersistenceCurve1</span> <span class="o">=</span> <span class="n">TTKPersistenceCurve</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">warpByScalar1</span><span class="p">)</span>
+<span class="n">tTKPersistenceCurve1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Blend&#39;</span><span class="p">]</span>
 
-<span class="c1"># save the output</span>
+<span class="c1"># create a new &#39;TTK PersistenceDiagram&#39;</span>
+<span class="n">tTKPersistenceDiagram1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">warpByScalar1</span><span class="p">)</span>
+<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Blend&#39;</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;Threshold&#39;</span>
+<span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;PairIdentifier&#39;</span><span class="p">]</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;Threshold&#39;</span>
+<span class="n">persistenceThreshold</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold1</span><span class="p">)</span>
+<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;Persistence&#39;</span><span class="p">]</span>
+<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">10000.0</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
+<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span><span class="n">Domain</span><span class="o">=</span><span class="n">warpByScalar1</span><span class="p">,</span>
+    <span class="n">Constraints</span><span class="o">=</span><span class="n">persistenceThreshold</span><span class="p">)</span>
+<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Blend&#39;</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;TTK MorseSmaleComplex&#39;</span>
+<span class="n">tTKMorseSmaleComplex1</span> <span class="o">=</span> <span class="n">TTKMorseSmaleComplex</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
+<span class="n">tTKMorseSmaleComplex1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Blend&#39;</span><span class="p">]</span>
+
+<span class="c1"># save the ouput</span>
 <span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;PersistenceDiagram.vtu&#39;</span><span class="p">,</span> <span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
 <span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;PersistenceCurve.csv&#39;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKPersistenceCurve1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;CriticalPoints.vtp&#39;</span><span class="p">,</span> <span class="n">tTKScalarFieldCriticalPoints1</span><span class="p">)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;ContourTreeNodes.vtp&#39;</span><span class="p">,</span> <span class="n">tTKIcospheresFromPoints4</span><span class="p">)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;ContourTreeArcs.vtp&#39;</span><span class="p">,</span> <span class="n">tube4</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;MorseComplexeCriticalPoints.vtp&#39;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;MorseComplexe1Separatrices.vtp&#39;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;MorseComplexeSegmentation.vtp&#39;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 </code></pre></div>
 </td></tr></table>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/dragon.vtu">dragon.vtu</a>: a two-dimensional triangulation.</li>
+<li>None</li>
 </ul>
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>PersistenceDiagram.vtu</code>: the output persistence diagram in VTK file format (bottom right view, above screenshot). You are free to change the <code>vtu</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
 <li><code>PersistenceCurve.csv</code>: the output persistence curve.</li>
-<li><code>CriticalPoints.vtp</code>: the output
-critical points
-in VTK file format (bottom right view, above screenshot). You are free to change the <code>vtp</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
-<li><code>ContourTreeNode.vtp</code>: spheres, representing the nodes of the output contour tree
-in VTK file format (bottom right view, above screenshot). You are free to change the <code>vtp</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
-<li><code>ContourTreeArcs.vtp</code>: cylinders, representing the arcs of the output contour tree
-in VTK file format (bottom right view, above screenshot). You are free to change the <code>vtp</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
+<li><code>MorseComplexeCriticalPoints.vtp</code>: the output critical points (or 0 dimensional elements) of the Morse Smale Complex in VTK file format (center view, above screenshot). You are free to change the <code>vtp</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
+<li><code>MorseComplexe1Separatrices.vtp</code>: cylinders, representing the edges (or 1 dimensional elements) of the output Morse Smale Complexe in VTK file format (center view, above screenshot). You are free to change the <code>vtp</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
+<li><code>MorseComplexeSegmentation.vtp</code>: surfaces, representing the segmentation  of the output Morse Smale Complexe in VTK file format (center view, above screenshot). You are free to change the <code>vtp</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
 </ul>
 <h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">ContourTree (FTM)</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkGeometrySmoother.html">GeometrySmoother</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkIcospheresFromPoints.html">IcospheresFromPoints</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkScalarFieldSmoother.html">ScalarFieldSmoother</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkMorseSmaleComplex.html">MorseSmaleComplex</a></p>
 <p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceCurve.html">PersistenceCurve</a></p>
 <p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkScalarFieldCriticalPoints.html">ScalarFieldCriticalPoints</a></p>
 <p><a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a></p>
                 
               
