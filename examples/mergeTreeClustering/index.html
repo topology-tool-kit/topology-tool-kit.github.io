@@ -14,7 +14,7 @@
     
     
       
-        <title>Merge Tree Temporal Reduction - TTK Examples</title>
+        <title>Merge Tree Clustering - TTK Examples</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#merge-tree-temporal-reduction" class="md-skip">
+        <a href="#merge-tree-clustering" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Merge Tree Temporal Reduction
+              Merge Tree Clustering
             
           </span>
         </div>
@@ -257,21 +257,6 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../mergeTreeClustering/" class="md-nav__link">
-        Merge Tree Clustering
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
     
   
   
@@ -284,12 +269,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Merge Tree Temporal Reduction
+          Merge Tree Clustering
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Merge Tree Temporal Reduction
+        Merge Tree Clustering
       </a>
       
         
@@ -352,6 +337,21 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mergeTreeTemporalReduction/" class="md-nav__link">
+        Merge Tree Temporal Reduction
+      </a>
     </li>
   
 
@@ -466,17 +466,20 @@
               
                 
                 
-                <h1 id="merge-tree-temporal-reduction">Merge Tree Temporal Reduction<a class="headerlink" href="#merge-tree-temporal-reduction" title="Permanent link">&para;</a></h1>
-<p><img alt="Merge Tree Temporal Reduction example Image" src="https://topology-tool-kit.github.io/img/gallery/mergeTreeTemporalReduction.jpg" /></p>
+                <h1 id="merge-tree-clustering">Merge Tree Clustering<a class="headerlink" href="#merge-tree-clustering" title="Permanent link">&para;</a></h1>
+<p><img alt="Merge Tree Clustering example Image" src="https://topology-tool-kit.github.io/img/gallery/mergeTreeClustering.jpg" /></p>
 <h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
 <p>This example first loads an ensemble of scalar fields inside a single file from disk.
-Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">Split Tree</a> is computed on each scalar field.</p>
-<p>All these trees are passed to <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreeTemporalReductionEncoding.html">MergeTreeTemporalReductionEncoding</a> to compute a subsampling of a sequence of merge trees. The algorithm greedily removes trees in the sequence that can be accurately reconstructed by the geodesic computation. The remaining trees are called the key frames.</p>
-<p>In terms of visualisation, the three key frames trees and two reconstructed trees are visualized with a planar layout along with their corresponding scalar fields.</p>
-<p>The python script saves the information needed to reconstruct the trees removed in the sequence.</p>
+Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">FTMTree</a> is computed on each scalar field for the Join Tree and the Split Tree.</p>
+<p>All these trees are passed to <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreeClustering.html">MergeTreeClustering</a> to compute a clustering in the metric space of merge trees. Each input is considered as a tuple consisting of the Join Tree and the Split Tree of the corresponding scalar field. Each centroid is also a tuple of this kind and a distance between two tuples is the distance between their Join Tree plus the distance between their Split Trees.</p>
+<p>Then, a distance matrix is computed with <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreeDistanceMatrix.html">MergeTreeDistanceMatrix</a> with the input trees and the 3 centroids.</p>
+<p>This distance matrix is used as input of <a href="https://topology-tool-kit.github.io/doc/html/classttkDimensionReduction.html">DimensionReduction</a> to compute a MultiDimensional Scaling (MDS), performing a dimensionality reduction in 2D respecting the most the input distance matrix.</p>
+<p>In terms of visualisation, the MDS result is visualized and colored by clustering assignment. The split trees centroids are visualized with a planar layout and also some fields of each cluster.</p>
+<p>In the second layout, the star clustering is visualized, consisting of the input split trees grouped by cluster, with the centroid of the cluster in the middle.</p>
+<p>The python script computes the MDS and saves the resulting 2D points (for input trees and centroids).</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>$ paraview states/mergeTreeTemporalReduction.pvsm
+<div class="highlight"><pre><span></span><code>$ paraview states/mergeTreeClustering.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -511,39 +514,163 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.
 <span class="normal">30</span>
 <span class="normal">31</span>
 <span class="normal">32</span>
-<span class="normal">33</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># create a new &#39;XML Image Data Reader&#39;</span>
 <span class="n">isabelvti</span> <span class="o">=</span> <span class="n">XMLImageDataReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;isabel.vti&#39;</span><span class="p">])</span>
 
-<span class="n">all_MT_group</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">all_JT_group</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">all_ST_group</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="n">scalarFields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;velocityMag_02&#39;</span><span class="p">,</span> <span class="s1">&#39;velocityMag_03&#39;</span><span class="p">,</span> <span class="s1">&#39;velocityMag_04&#39;</span><span class="p">,</span> <span class="s1">&#39;velocityMag_05&#39;</span><span class="p">,</span> <span class="s1">&#39;velocityMag_30&#39;</span><span class="p">,</span> <span class="s1">&#39;velocityMag_31&#39;</span><span class="p">,</span> <span class="s1">&#39;velocityMag_32&#39;</span><span class="p">,</span> <span class="s1">&#39;velocityMag_33&#39;</span><span class="p">,</span> <span class="s1">&#39;velocityMag_45&#39;</span><span class="p">,</span> <span class="s1">&#39;velocityMag_46&#39;</span><span class="p">,</span> <span class="s1">&#39;velocityMag_47&#39;</span><span class="p">,</span> <span class="s1">&#39;velocityMag_48&#39;</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">scalarField</span> <span class="ow">in</span> <span class="n">scalarFields</span><span class="p">:</span>
   <span class="c1"># create a new &#39;TTK Merge and Contour Tree (FTM)&#39;</span>
   <span class="n">tTKMergeandContourTreeFTM1</span> <span class="o">=</span> <span class="n">TTKMergeandContourTreeFTM</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">isabelvti</span><span class="p">)</span>
   <span class="n">tTKMergeandContourTreeFTM1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="n">scalarField</span><span class="p">]</span>
-  <span class="n">tTKMergeandContourTreeFTM1</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s1">&#39;Split Tree&#39;</span>
+  <span class="n">tTKMergeandContourTreeFTM1</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s1">&#39;Join Tree&#39;</span>
 
   <span class="c1"># create a new &#39;Group Datasets&#39;</span>
   <span class="n">groupDatasets1</span> <span class="o">=</span> <span class="n">GroupDatasets</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="p">[</span><span class="n">tTKMergeandContourTreeFTM1</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM1</span><span class="p">,</span><span class="mi">2</span><span class="p">)])</span>
 
-  <span class="n">all_MT_group</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">groupDatasets1</span><span class="p">)</span>
+  <span class="n">all_JT_group</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">groupDatasets1</span><span class="p">)</span>
+
+  <span class="c1"># create a new &#39;TTK Merge and Contour Tree (FTM)&#39;</span>
+  <span class="n">tTKMergeandContourTreeFTM2</span> <span class="o">=</span> <span class="n">TTKMergeandContourTreeFTM</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">isabelvti</span><span class="p">)</span>
+  <span class="n">tTKMergeandContourTreeFTM2</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="n">scalarField</span><span class="p">]</span>
+  <span class="n">tTKMergeandContourTreeFTM2</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s1">&#39;Split Tree&#39;</span>
+
+  <span class="c1"># create a new &#39;Group Datasets&#39;</span>
+  <span class="n">groupDatasets2</span> <span class="o">=</span> <span class="n">GroupDatasets</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="p">[</span><span class="n">tTKMergeandContourTreeFTM2</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM2</span><span class="p">,</span><span class="mi">2</span><span class="p">)])</span>
+
+  <span class="n">all_ST_group</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">groupDatasets2</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Group Datasets&#39;</span>
-<span class="n">all_MT</span> <span class="o">=</span> <span class="n">GroupDatasets</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">all_MT_group</span><span class="p">)</span>
+<span class="n">mt_JT_all</span> <span class="o">=</span> <span class="n">GroupDatasets</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">all_JT_group</span><span class="p">)</span>
 
-<span class="c1"># create a new &#39;TTK MergeTreeTemporalReductionEncoding&#39;</span>
-<span class="n">tTKMergeTreeTemporalReductionEncoding1</span> <span class="o">=</span> <span class="n">TTKMergeTreeTemporalReductionEncoding</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">all_MT</span><span class="p">)</span>
-<span class="n">tTKMergeTreeTemporalReductionEncoding1</span><span class="o">.</span><span class="n">RemovalPercentage</span> <span class="o">=</span> <span class="mf">75.0</span>
-<span class="n">tTKMergeTreeTemporalReductionEncoding1</span><span class="o">.</span><span class="n">Epsilon1</span> <span class="o">=</span> <span class="mf">0.0</span>
-<span class="n">tTKMergeTreeTemporalReductionEncoding1</span><span class="o">.</span><span class="n">Epsilon2</span> <span class="o">=</span> <span class="mf">100.0</span>
-<span class="n">tTKMergeTreeTemporalReductionEncoding1</span><span class="o">.</span><span class="n">Epsilon3</span> <span class="o">=</span> <span class="mf">100.0</span>
-<span class="n">tTKMergeTreeTemporalReductionEncoding1</span><span class="o">.</span><span class="n">PersistenceThreshold</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="c1"># create a new &#39;Group Datasets&#39;</span>
+<span class="n">mT_all</span> <span class="o">=</span> <span class="n">GroupDatasets</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">all_ST_group</span><span class="p">)</span>
 
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;ReductionCoefficients.csv&#39;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeTreeTemporalReductionEncoding1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="c1"># create a new &#39;TTK MergeTreeClustering&#39;</span>
+<span class="n">tTKMergeTreeClustering1</span> <span class="o">=</span> <span class="n">TTKMergeTreeClustering</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">mT_all</span><span class="p">,</span>
+    <span class="n">OptionalInputclustering</span><span class="o">=</span><span class="n">mt_JT_all</span><span class="p">)</span>
+<span class="n">tTKMergeTreeClustering1</span><span class="o">.</span><span class="n">ComputeBarycenter</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">tTKMergeTreeClustering1</span><span class="o">.</span><span class="n">NumberOfClusters</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">tTKMergeTreeClustering1</span><span class="o">.</span><span class="n">Deterministic</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">tTKMergeTreeClustering1</span><span class="o">.</span><span class="n">DimensionSpacing</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">tTKMergeTreeClustering1</span><span class="o">.</span><span class="n">PersistenceThreshold</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">tTKMergeTreeClustering1</span><span class="o">.</span><span class="n">ImportantPairs</span> <span class="o">=</span> <span class="mf">34.0</span>
+<span class="n">tTKMergeTreeClustering1</span><span class="o">.</span><span class="n">MaximumNumberofImportantPairs</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">tTKMergeTreeClustering1</span><span class="o">.</span><span class="n">MinimumNumberofImportantPairs</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">tTKMergeTreeClustering1</span><span class="o">.</span><span class="n">ImportantPairsSpacing</span> <span class="o">=</span> <span class="mf">15.0</span>
+<span class="n">tTKMergeTreeClustering1</span><span class="o">.</span><span class="n">NonImportantPairsProximity</span> <span class="o">=</span> <span class="mf">0.15</span>
+
+<span class="c1"># create a new &#39;Group Datasets&#39;</span>
+<span class="n">groupDatasets14</span> <span class="o">=</span> <span class="n">GroupDatasets</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="p">[</span><span class="n">tTKMergeTreeClustering1</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeTreeClustering1</span><span class="p">,</span><span class="mi">1</span><span class="p">)])</span>
+
+<span class="c1"># create a new &#39;TTK FlattenMultiBlock&#39;</span>
+<span class="n">tTKFlattenMultiBlock2</span> <span class="o">=</span> <span class="n">TTKFlattenMultiBlock</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">groupDatasets14</span><span class="p">)</span>
+
+<span class="c1"># create a new &#39;TTK MergeTreeDistanceMatrix&#39;</span>
+<span class="n">tTKMergeTreeDistanceMatrix2</span> <span class="o">=</span> <span class="n">TTKMergeTreeDistanceMatrix</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKFlattenMultiBlock2</span><span class="p">)</span>
+<span class="n">tTKMergeTreeDistanceMatrix2</span><span class="o">.</span><span class="n">PersistenceThreshold</span> <span class="o">=</span> <span class="mf">2.0</span>
+
+<span class="c1"># create a new &#39;TTK DimensionReduction&#39;</span>
+<span class="n">tTKDimensionReduction2</span> <span class="o">=</span> <span class="n">TTKDimensionReduction</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKMergeTreeDistanceMatrix2</span><span class="p">,</span>
+    <span class="n">ModulePath</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
+<span class="n">tTKDimensionReduction2</span><span class="o">.</span><span class="n">InputColumns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Tree00&#39;</span><span class="p">,</span> <span class="s1">&#39;Tree01&#39;</span><span class="p">,</span> <span class="s1">&#39;Tree02&#39;</span><span class="p">,</span> <span class="s1">&#39;Tree03&#39;</span><span class="p">,</span> <span class="s1">&#39;Tree04&#39;</span><span class="p">,</span> <span class="s1">&#39;Tree05&#39;</span><span class="p">,</span> <span class="s1">&#39;Tree06&#39;</span><span class="p">,</span> <span class="s1">&#39;Tree07&#39;</span><span class="p">,</span> <span class="s1">&#39;Tree08&#39;</span><span class="p">,</span> <span class="s1">&#39;Tree09&#39;</span><span class="p">,</span> <span class="s1">&#39;Tree10&#39;</span><span class="p">,</span> <span class="s1">&#39;Tree11&#39;</span><span class="p">,</span> <span class="s1">&#39;Tree12&#39;</span><span class="p">,</span> <span class="s1">&#39;Tree13&#39;</span><span class="p">,</span> <span class="s1">&#39;Tree14&#39;</span><span class="p">]</span>
+<span class="n">tTKDimensionReduction2</span><span class="o">.</span><span class="n">InputIsaDistanceMatrix</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">tTKDimensionReduction2</span><span class="o">.</span><span class="n">UseAllCores</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># MDS is unstable in parallel mode</span>
+
+<span class="c1"># create a new &#39;Table To Points&#39;</span>
+<span class="n">tableToPoints1</span> <span class="o">=</span> <span class="n">TableToPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKDimensionReduction2</span><span class="p">)</span>
+<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">XColumn</span> <span class="o">=</span> <span class="s1">&#39;Component_0&#39;</span>
+<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">YColumn</span> <span class="o">=</span> <span class="s1">&#39;Component_1&#39;</span>
+<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">a2DPoints</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">KeepAllDataArrays</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># create a new &#39;Mask Points&#39; (to threshold on points)</span>
+<span class="n">maskPoints1</span> <span class="o">=</span> <span class="n">MaskPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tableToPoints1</span><span class="p">)</span>
+<span class="n">maskPoints1</span><span class="o">.</span><span class="n">OnRatio</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">maskPoints1</span><span class="o">.</span><span class="n">GenerateVertices</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">maskPoints1</span><span class="o">.</span><span class="n">SingleVertexPerCell</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># create a new &#39;Threshold&#39;</span>
+<span class="n">threshold33</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">maskPoints1</span><span class="p">)</span>
+<span class="n">threshold33</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;treeID&#39;</span><span class="p">]</span>
+<span class="n">threshold33</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">11.0</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;Threshold&#39;</span>
+<span class="n">threshold34</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">maskPoints1</span><span class="p">)</span>
+<span class="n">threshold34</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;treeID&#39;</span><span class="p">]</span>
+<span class="n">threshold34</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">12.0</span><span class="p">,</span> <span class="mf">14.0</span><span class="p">]</span>
+
+<span class="c1"># save the output</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;MDS_trees.csv&#39;</span><span class="p">,</span> <span class="n">threshold33</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;MDS_centroids.csv&#39;</span><span class="p">,</span> <span class="n">threshold34</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
@@ -552,11 +679,14 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.
 </ul>
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>ReductionCoefficients.csv</code>: a table containing information needed to reconstruct removed trees. For each removed tree we have the id of the two key frames needed to reconstruct it ('Index1' and 'Index2'), along with the interpolation parameter ('Alpha').</li>
+<li><code>MDS_trees.vtu</code>: the output points in 2D MDS (MultiDimensional Scaling) corresponding to the input trees. The 'ClusterAssignment' array contains the clustering assignments.</li>
+<li><code>MDS_centroids.vtu</code>: the output points in 2D MDS (MultiDimensional Scaling) corresponding to the centroids.</li>
 </ul>
 <h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
 <p><a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">FTMTree</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreeTemporalReductionEncoding.html">MergeTreeTemporalReductionEncoding</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreeClustering.html">MergeTreeClustering</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreeDistanceMatrix.html">MergeTreeDistanceMatrix</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkDimensionReduction.html">DimensionReduction</a></p>
                 
               
               
@@ -576,7 +706,7 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../mergeTreeClustering/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Merge Tree Clustering" rel="prev">
+        <a href="../manifoldCheck/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Manifold Check" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -585,20 +715,20 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.
               <span class="md-footer__direction">
                 Previous
               </span>
-              Merge Tree Clustering
+              Manifold Check
             </div>
           </div>
         </a>
       
       
         
-        <a href="../morseMolecule/" class="md-footer__link md-footer__link--next" aria-label="Next: Morse molecule" rel="next">
+        <a href="../mergeTreeTemporalReduction/" class="md-footer__link md-footer__link--next" aria-label="Next: Merge Tree Temporal Reduction" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Morse molecule
+              Merge Tree Temporal Reduction
             </div>
           </div>
           <div class="md-footer__button md-icon">
