@@ -14,7 +14,7 @@
     
     
       
-        <title>Image Processing - TTK Examples</title>
+        <title>Persistence-Driven Compression - TTK Examples</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#image-processing" class="md-skip">
+        <a href="#persistence-driven-compression" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Image Processing
+              Persistence-Driven Compression
             
           </span>
         </div>
@@ -302,86 +302,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Image Processing
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../imageProcessing/" class="md-nav__link">
         Image Processing
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pipeline-description" class="md-nav__link">
-    Pipeline description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#paraview" class="md-nav__link">
-    ParaView
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python-code" class="md-nav__link">
-    Python code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inputs" class="md-nav__link">
-    Inputs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outputs" class="md-nav__link">
-    Outputs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cpython-api" class="md-nav__link">
-    C++/Python API
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -512,11 +437,86 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../persistenceDrivenCompression/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Persistence-Driven Compression
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Persistence-Driven Compression
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-description" class="md-nav__link">
+    Pipeline description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paraview" class="md-nav__link">
+    ParaView
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code" class="md-nav__link">
+    Python code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpython-api" class="md-nav__link">
+    C++/Python API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -616,39 +616,40 @@
               
                 
                 
-                <h1 id="image-processing">Image Processing<a class="headerlink" href="#image-processing" title="Permanent link">&para;</a></h1>
-<p><img alt="Image Processing example
-Image" src="https://topology-tool-kit.github.io/img/gallery/imageProcessing.jpg" /></p>
+                <h1 id="persistence-driven-compression">Persistence-Driven Compression<a class="headerlink" href="#persistence-driven-compression" title="Permanent link">&para;</a></h1>
+<p><img alt="Persistence-Driven Compression example
+Image" src="https://topology-tool-kit.github.io/img/gallery/persistenceDrivenCompression.jpg" /></p>
 <h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
-<p>This example processes a grayscale image (top left view on the
-above screenshot) to generate a segmentation. We will construct the
-segmentation from the image gradient.</p>
-<p>First, the image is loaded from disk. The gradient is computed with
-ParaView's <code>ComputeDerivatives</code> or <code>Gradient</code> filters. Since TTK only
-works on scalar field, a <code>Calculator</code> is used to compute the gradient
-magnitude.</p>
-<p>From the gradient magnitude, a simplification step involving
-<a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a>
-(bottom left view) and
-<a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a>
-helps removing the noise in the gradient (top right view).</p>
-<p>To segment the image, we use the
-<a href="https://topology-tool-kit.github.io/doc/html/classttkMorseSmaleComplex.html">MorseSmaleComplex</a>
-filter. Since in the input image the objects correspond to low values
-in the gradient and their edges to high values, we are interested in
-the <code>DescendingManifold</code> scalar field of the <code>Segmentation</code> output, whose
-cells represent regions of low scalar field values.</p>
-<p>The
-<a href="https://topology-tool-kit.github.io/doc/html/classttkIdentifierRandomizer.html">IdentifierRandomizer</a>
-filter is eventually used in order to color neighbor cells with a
-distinct color (bottom right view on the above screenshot).</p>
+<p>This example helps comparing three outputs of the
+<a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalCompression.html">TopologicalCompression</a>
+filter to the original input grayscale image (top-left view in the above
+screenshot), with the following parameters:</p>
+<ul>
+<li>ZFP relative error tolerance set to 50%, no topological compression
+  (bottom-left view in the above screenshot),</li>
+<li>Topological loss set to 10%, no ZFP extra compression (top-right view),</li>
+<li>Topological loss set to 10% and ZFP relative error tolerance set to 50% (bottom-right view).</li>
+</ul>
+<p>Those files have been generated from the original VTI image using the
+<a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalCompressionWriter.html">TopologicalCompressionWriter</a>
+filter. To read them, Paraview uses its counterpart,
+<a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalCompressionWriter.html">TopologicalCompressionReader</a>.</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your
 <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory
 and enter the following command:</p>
-<div class="highlight"><pre><span></span><code>$ paraview states/imageProcessing.pvsm
+<div class="highlight"><pre><span></span><code>$ paraview states/persistenceDrivenCompression.pvsm
 </code></pre></div>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
+<p>This script loads the uncompressed
+<a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/naturalImage_original.vti">naturalImage_original.vti</a>
+input file, saves it as in the TTK Topological Compressed Image Data
+file format, using
+<a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalCompressionWriter.html">TopologicalCompressionWriter</a>
+under the hood. The produced file is then loaded with
+<a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalCompressionWriter.html">TopologicalCompressionReader</a>
+and saved back to VTI. This demonstrates the use of the
+<code>TopologicalCompression</code> I/O modules.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -674,106 +675,68 @@ and enter the following command:</p>
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">naturalImagepng</span> <span class="o">=</span> <span class="n">PNGSeriesReader</span><span class="p">(</span><span class="n">FileNames</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;naturalImage.png&quot;</span><span class="p">])</span>
+<span class="c1"># read input VTI with &#39;XML Image Data Reader&#39;</span>
+<span class="n">naturalImage</span> <span class="o">=</span> <span class="n">XMLImageDataReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;naturalImage_original.vti&quot;</span><span class="p">])</span>
 
-<span class="c1"># create a new &#39;Compute Derivatives&#39;</span>
-<span class="n">computeDerivatives1</span> <span class="o">=</span> <span class="n">ComputeDerivatives</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">naturalImagepng</span><span class="p">)</span>
-<span class="n">computeDerivatives1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;PNGImage&quot;</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;Cell Data to Point Data&#39;</span>
-<span class="n">cellDatatoPointData1</span> <span class="o">=</span> <span class="n">CellDatatoPointData</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">computeDerivatives1</span><span class="p">)</span>
-
-<span class="c1"># create a new &#39;Calculator&#39;</span>
-<span class="n">calculator1</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">cellDatatoPointData1</span><span class="p">)</span>
-<span class="n">calculator1</span><span class="o">.</span><span class="n">ResultArrayName</span> <span class="o">=</span> <span class="s2">&quot;gradient&quot;</span>
-<span class="n">calculator1</span><span class="o">.</span><span class="n">Function</span> <span class="o">=</span> <span class="s2">&quot;mag(ScalarGradient)&quot;</span>
-
-<span class="c1"># create a new &#39;TTK PersistenceDiagram&#39;</span>
-<span class="n">tTKPersistenceDiagram1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">calculator1</span><span class="p">)</span>
-<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;gradient&quot;</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;PairIdentifier&quot;</span><span class="p">]</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">59608.0</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">persistenceThreshold</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold1</span><span class="p">)</span>
-<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;Persistence&quot;</span><span class="p">]</span>
-<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">6.0</span><span class="p">,</span> <span class="mf">9999.0</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
-<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span>
-    <span class="n">Domain</span><span class="o">=</span><span class="n">calculator1</span><span class="p">,</span>
-    <span class="n">Constraints</span><span class="o">=</span><span class="n">persistenceThreshold</span><span class="p">,</span>
+<span class="c1"># compress &amp; save to TTK Topological Compression format</span>
+<span class="n">SaveData</span><span class="p">(</span>
+    <span class="s2">&quot;naturalImage_persistence10_zfp50.ttk&quot;</span><span class="p">,</span>
+    <span class="n">proxy</span><span class="o">=</span><span class="n">naturalImage</span><span class="p">,</span>
+    <span class="n">ScalarField</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;PNGImage&quot;</span><span class="p">],</span>
+    <span class="n">Topologicallosspersistencepercentage</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>  <span class="c1"># Topological loss</span>
+    <span class="n">ZFPRelativeErrorToleranceextra</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>  <span class="c1"># ZFP Relative Error Tolerance</span>
 <span class="p">)</span>
-<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;gradient&quot;</span><span class="p">]</span>
 
-<span class="c1"># create a new &#39;TTK MorseSmaleComplex&#39;</span>
-<span class="n">tTKMorseSmaleComplex1</span> <span class="o">=</span> <span class="n">TTKMorseSmaleComplex</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
-<span class="n">tTKMorseSmaleComplex1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;gradient&quot;</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">threshold3</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">threshold3</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;SeparatrixType&quot;</span><span class="p">]</span>
-<span class="n">threshold3</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;TTK IdentifierRandomizer&#39;</span>
-<span class="n">tTKIdentifierRandomizer1</span> <span class="o">=</span> <span class="n">TTKIdentifierRandomizer</span><span class="p">(</span>
-    <span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+<span class="c1"># read the compressed file with &#39;TTK TopologicalCompressionReader&#39;</span>
+<span class="n">naturalImage_compressed</span> <span class="o">=</span> <span class="n">TTKTopologicalCompressionReader</span><span class="p">(</span>
+    <span class="n">FileName</span><span class="o">=</span><span class="s2">&quot;naturalImage_persistence10_zfp50.ttk&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">tTKIdentifierRandomizer1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;DescendingManifold&quot;</span><span class="p">]</span>
 
-<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;Segmentation.vti&quot;</span><span class="p">,</span> <span class="n">tTKIdentifierRandomizer1</span><span class="p">)</span>
+<span class="c1"># write compressed data-set to VTI</span>
+<span class="n">SaveData</span><span class="p">(</span>
+    <span class="s2">&quot;uncompressed_naturalImage_persistence10_zfp50.vti&quot;</span><span class="p">,</span>
+    <span class="n">naturalImage_compressed</span><span class="p">,</span>
+<span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/naturalImage.png">naturalImage.png</a>:
-  a grayscale PNG picture.</li>
+<li>
+<p><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/naturalImage_original.vti">naturalImage_original.vti</a>:
+  a grayscale picture converted to the VTI format</p>
+</li>
+<li>
+<p><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/naturalImage_zfp50.ttk">naturalImage_zpf50.ttk</a>:
+  the previous image, compressed using <code>TopologicalCompressionWriter</code>
+  with ZFP compressor only (no topological compression). ZFP relative
+  error tolerance was set to 50%.</p>
+</li>
+<li>
+<p><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/naturalImage_persistence10.ttk">naturalImage_persistence10.ttk</a>:
+  the first input image, compressed using
+  <code>TopologicalCompressionWriter</code> with a Topological loss of 10% and
+  without ZFP (ZFP relative error tolerance set to a negative value).</p>
+</li>
+<li>
+<p><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/naturalImage_persistence10_zfp50.ttk">naturalImage_persistence10_zpf50.ttk</a>:
+  the first input image, compressed using
+  <code>TopologicalCompressionWriter</code> with a Topological loss of 10% and a
+  ZFP relative error tolerance set to 50%.</p>
+</li>
 </ul>
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>Segmentation.vti</code>: the image segmentation output.</li>
+<li><code>uncompressed_naturalImage_persistence10_zfp50.vti</code>: the first
+  input, compressed and saved as a VTI file.</li>
 </ul>
 <h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkMorseSmaleComplex.html">MorseSmaleComplex</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkIdentifierRandomizer.html">IdentifierRandomizer</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalCompression.html">TopologicalCompression</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalCompressionWriter.html">TopologicalCompressionReader</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalCompressionWriter.html">TopologicalCompressionWriter</a></p>
                 
               
               
@@ -793,7 +756,7 @@ and enter the following command:</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../dragon/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Dragon" rel="prev">
+        <a href="../persistenceClustering0/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Persistence Clustering 0" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -802,20 +765,20 @@ and enter the following command:</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Dragon
+              Persistence Clustering 0
             </div>
           </div>
         </a>
       
       
         
-        <a href="../karhunenLoveDigits64Dimensions/" class="md-footer__link md-footer__link--next" aria-label="Next: Karhunen-Love Digits 64-Dimensions" rel="next">
+        <a href="../timeTracking/" class="md-footer__link md-footer__link--next" aria-label="Next: Time Tracking" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Karhunen-Love Digits 64-Dimensions
+              Time Tracking
             </div>
           </div>
           <div class="md-footer__button md-icon">
