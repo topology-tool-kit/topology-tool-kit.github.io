@@ -515,7 +515,7 @@
 <p><img alt="Persistence Clustering 0 screenshot" src="https://topology-tool-kit.github.io/img/gallery/persistenceClustering0.jpeg" /></p>
 <h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
 <p>This example performs a persistence driven clustering of a 2D toy data set, taken from the <a href="https://scikit-learn.org/stable/modules/clustering.html">scikit-learn examples</a>.
-Please check out the <a href="https://github.com/topology-tool-kit/ttk-data/pull/87/karhunenLoveDigits64Dimensions/">Karhunen-Love Digits 64-Dimensions example</a> for an application of this pipeline to a real-life, high-dimensional, data set.</p>
+Please check out the <a href="../karhunenLoveDigits64Dimensions/">Karhunen-Love Digits 64-Dimensions example</a> for an application of this pipeline to a real-life, high-dimensional, data set.</p>
 <p>The pipeline starts by estimating the density of the input point cloud with a Gaussian kernel, by the <code>GaussianResampling</code>  filter, coupled with the <code>Slice</code> filter (to restrict the estimation to a 2D plane).</p>
 <p>Next, the <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a> of the density field is computed and only the 2 most persistent density maxima are selected (corresponding to the desired 2 output clusters, bottom left view in the above screenshot).</p>
 <p>Next, the simplified persistence diagram is used as a constraint for the <a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a> of the density field (top right view, above screenshot).
