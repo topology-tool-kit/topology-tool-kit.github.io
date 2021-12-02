@@ -14,7 +14,7 @@
     
     
       
-        <title>Dragon - TTK Examples</title>
+        <title>2-Manifold Learning - TTK Examples</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dragon" class="md-skip">
+        <a href="#2-manifold-learning" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dragon
+              2-Manifold Learning
             
           </span>
         </div>
@@ -212,11 +212,86 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../2manifoldLearning/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2-Manifold Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         2-Manifold Learning
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-description" class="md-nav__link">
+    Pipeline description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paraview" class="md-nav__link">
+    ParaView
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code" class="md-nav__link">
+    Python code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpython-api" class="md-nav__link">
+    C++/Python API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -287,86 +362,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Dragon
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../dragon/" class="md-nav__link">
         Dragon
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pipeline-description" class="md-nav__link">
-    Pipeline description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#paraview" class="md-nav__link">
-    ParaView
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python-code" class="md-nav__link">
-    Python code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inputs" class="md-nav__link">
-    Inputs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outputs" class="md-nav__link">
-    Outputs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cpython-api" class="md-nav__link">
-    C++/Python API
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -586,24 +586,17 @@
               
                 
                 
-                <h1 id="dragon">Dragon<a class="headerlink" href="#dragon" title="Permanent link">&para;</a></h1>
-<!--[![Dragon example video tutorial](https://topology-tool-kit.github.io/img/gallery/dragon.jpg)](https://youtu.be/YVk9vRKIEX8)-->
-
-<iframe width="100%" height="420"
-src="https://www.youtube.com/embed/YVk9vRKIEX8" frameborder="0"
-allowfullscreen></iframe>
-
+                <h1 id="2-manifold-learning">2-Manifold Learning<a class="headerlink" href="#2-manifold-learning" title="Permanent link">&para;</a></h1>
+<p><img alt="2-Manifold Learning example Image" src="https://topology-tool-kit.github.io/img/gallery/2manifoldLearning.jpeg" /></p>
 <h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
-<p>This example first loads a triangle mesh from disk.
-In a pre-processing, the mesh is smoothed and an elevation function is computed on top of it.
-The elevation function will be considered as the input scalar data in the remainder.</p>
-<p>Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a> is computed and thresholds are applied base on persistence to maintain only the most persistent features. This results in a simplified persistence diagram (bottom right view in the above screenshot).</p>
-<p>The <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceCurve.html">PersistenceCurve</a> is also computed (top right view in the above screenshot).</p>
+<p>This example first loads a point cloud from disk. </p>
+<p>In a pre-processing, the data is converted to a format understandable by Paraview using the <code>TableToPoints</code> filter. <code>GaussianResampling</code> is applied to the data (left view in the above screenshot). This filter has the effect of injecting input points to a structured data. For each injection, each point will "splat", or distribute values to nearby vertices. The resulting scalar field is a density estimation (with a Gaussian kernel) of the input point cloud.</p>
+<p>Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a> is computed and thresholds are applied based on persistence to maintain only the most persistent features. This results in a simplified persistence diagram.</p>
 <p>The simplified persistence diagram is then used as a constraint for the <a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a> of the input scalar data.</p>
-<p>This simplified data is then used as the input of the computation of <a href="https://topology-tool-kit.github.io/doc/html/classttkScalarFieldCriticalPoints.html">ScalarFieldCriticalPoints</a> (top left view, above screenshot) and the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">ContourTree (FTM)</a> (bottom left view, above screenshot).</p>
+<p>This simplified data is then used as the input of the computation of <a href="https://topology-tool-kit.github.io/doc/html/classttk_1_1MorseSmaleComplex.html">MorseSmaleComplex</a> (right view, above screenshot). This complex is composed of elements of 4 dimensions: dimension 0, which corresponds to the critical points of the Morse-Smale Complex, dimension 1, which corresponds to its edges (in grey in the screenshot) and dimension 2, which corresponds to its surfaces, and dimension 3, which corresponds to pieces of volume that can be extracted from the <code>Segmentation</code> output. The "S" shape made by the point cloud is outlined by the maximal 1 and 2 dimension elements of the Morse-Smale Complex.</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>$ paraview states/dragon.pvsm
+<div class="highlight"><pre><span></span><code>$ paraview states/2manifoldLearning.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -658,116 +651,73 @@ The elevation function will be considered as the input scalar data in the remain
 <span class="normal">50</span>
 <span class="normal">51</span>
 <span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">53</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="c1"># create a new &#39;XML Unstructured Grid Reader&#39;</span>
-<span class="n">dragonvtu</span> <span class="o">=</span> <span class="n">XMLUnstructuredGridReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;dragon.vtu&#39;</span><span class="p">])</span>
+<span class="c1"># create a new &#39;CSV Reader&#39;</span>
+<span class="n">pointCloudcsv</span> <span class="o">=</span> <span class="n">CSVReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;pointCloud.csv&#39;</span><span class="p">])</span>
 
-<span class="c1"># create a new &#39;TTK GeometrySmoother&#39;</span>
-<span class="n">tTKGeometrySmoother1</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">dragonvtu</span><span class="p">)</span>
+<span class="c1"># create a new &#39;Table To Points&#39;</span>
+<span class="n">tableToPoints1</span> <span class="o">=</span> <span class="n">TableToPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">pointCloudcsv</span><span class="p">)</span>
+<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">XColumn</span> <span class="o">=</span> <span class="s1">&#39;Points:0&#39;</span>
+<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">YColumn</span> <span class="o">=</span> <span class="s1">&#39;Points:1&#39;</span>
+<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">ZColumn</span> <span class="o">=</span> <span class="s1">&#39;Points:2&#39;</span>
 
-<span class="c1"># create a new &#39;Calculator&#39;</span>
-<span class="n">elevation</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKGeometrySmoother1</span><span class="p">)</span>
-<span class="n">elevation</span><span class="o">.</span><span class="n">ResultArrayName</span> <span class="o">=</span> <span class="s1">&#39;Elevation&#39;</span>
-<span class="n">elevation</span><span class="o">.</span><span class="n">Function</span> <span class="o">=</span> <span class="s1">&#39;coordsY&#39;</span>
-
-<span class="c1"># create a new &#39;TTK PersistenceCurve&#39;</span>
-<span class="n">tTKPersistenceCurve1</span> <span class="o">=</span> <span class="n">TTKPersistenceCurve</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">elevation</span><span class="p">)</span>
-<span class="n">tTKPersistenceCurve1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation&#39;</span><span class="p">]</span>
+<span class="c1"># create a new &#39;Gaussian Resampling&#39;</span>
+<span class="n">gaussianResampling1</span> <span class="o">=</span> <span class="n">GaussianResampling</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tableToPoints1</span><span class="p">)</span>
+<span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">ResampleField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;ignore arrays&#39;</span><span class="p">]</span>
+<span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">ResamplingGrid</span> <span class="o">=</span> <span class="p">[</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">128</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;TTK PersistenceDiagram&#39;</span>
-<span class="n">tTKPersistenceDiagram1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">elevation</span><span class="p">)</span>
-<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation&#39;</span><span class="p">]</span>
+<span class="n">tTKPersistenceDiagram1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">gaussianResampling1</span><span class="p">)</span>
+<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;SplatterValues&#39;</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">pairs</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
-<span class="n">pairs</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;PairIdentifier&#39;</span><span class="p">]</span>
-<span class="n">pairs</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">]</span>
+<span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;PairIdentifier&#39;</span><span class="p">]</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">9999.0</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">persistenceThreshold</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">pairs</span><span class="p">)</span>
+<span class="n">persistenceThreshold</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold1</span><span class="p">)</span>
 <span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;Persistence&#39;</span><span class="p">]</span>
-<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">]</span>
+<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.999953171649318</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
-<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span><span class="n">Domain</span><span class="o">=</span><span class="n">elevation</span><span class="p">,</span>
+<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span><span class="n">Domain</span><span class="o">=</span><span class="n">gaussianResampling1</span><span class="p">,</span>
     <span class="n">Constraints</span><span class="o">=</span><span class="n">persistenceThreshold</span><span class="p">)</span>
-<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation&#39;</span><span class="p">]</span>
+<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;SplatterValues&#39;</span><span class="p">]</span>
 
-<span class="c1"># create a new &#39;TTK ScalarFieldCriticalPoints&#39;</span>
-<span class="n">tTKScalarFieldCriticalPoints1</span> <span class="o">=</span> <span class="n">TTKScalarFieldCriticalPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
-<span class="n">tTKScalarFieldCriticalPoints1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation&#39;</span><span class="p">]</span>
+<span class="c1"># create a new &#39;TTK MorseSmaleComplex&#39;</span>
+<span class="n">tTKMorseSmaleComplex1</span> <span class="o">=</span> <span class="n">TTKMorseSmaleComplex</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
+<span class="n">tTKMorseSmaleComplex1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;SplatterValues&#39;</span><span class="p">]</span>
+<span class="n">tTKMorseSmaleComplex1</span><span class="o">.</span><span class="n">Ascending2Separatrices</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">tTKMorseSmaleComplex1</span><span class="o">.</span><span class="n">ReturnSaddleConnectors</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">tTKMorseSmaleComplex1</span><span class="o">.</span><span class="n">SaddleConnectorsPersistenceThreshold</span> <span class="o">=</span> <span class="mf">0.01</span>
 
-<span class="c1"># create a new &#39;TTK Merge and Contour Tree (FTM)&#39;</span>
-<span class="n">tTKContourTree1</span> <span class="o">=</span> <span class="n">TTKMergeandContourTreeFTM</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
-<span class="n">tTKContourTree1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation&#39;</span><span class="p">]</span>
-<span class="n">tTKContourTree1</span><span class="o">.</span><span class="n">ArcSampling</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="c1"># create a new &#39;Tetrahedralize&#39;</span>
+<span class="n">tetrahedralize1</span> <span class="o">=</span> <span class="n">Tetrahedralize</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 
 <span class="c1"># create a new &#39;TTK GeometrySmoother&#39;</span>
-<span class="n">tTKGeometrySmoother2</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKContourTree1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-<span class="n">tTKGeometrySmoother2</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">tTKGeometrySmoother2</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tetrahedralize1</span><span class="p">)</span>
+<span class="n">tTKGeometrySmoother2</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">tTKGeometrySmoother2</span><span class="o">.</span><span class="n">InputMaskField</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
 
-<span class="c1"># create a new &#39;Extract Surface&#39;</span>
-<span class="n">extractSurface4</span> <span class="o">=</span> <span class="n">ExtractSurface</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKGeometrySmoother2</span><span class="p">)</span>
-
-<span class="c1"># create a new &#39;Tube&#39;</span>
-<span class="n">tube4</span> <span class="o">=</span> <span class="n">Tube</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">extractSurface4</span><span class="p">)</span>
-<span class="n">tube4</span><span class="o">.</span><span class="n">NumberofSides</span> <span class="o">=</span> <span class="mi">12</span>
-<span class="n">tube4</span><span class="o">.</span><span class="n">Radius</span> <span class="o">=</span> <span class="mf">0.75</span>
-
-<span class="c1"># create a new &#39;TTK IcospheresFromPoints&#39;</span>
-<span class="n">tTKIcospheresFromPoints4</span> <span class="o">=</span> <span class="n">TTKIcospheresFromPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKContourTree1</span><span class="p">)</span>
-<span class="n">tTKIcospheresFromPoints4</span><span class="o">.</span><span class="n">Radius</span> <span class="o">=</span> <span class="mf">2.0</span>
-
-<span class="c1"># save the output</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;PersistenceDiagram.vtu&#39;</span><span class="p">,</span> <span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;PersistenceCurve.csv&#39;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKPersistenceCurve1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;CriticalPoints.vtp&#39;</span><span class="p">,</span> <span class="n">tTKScalarFieldCriticalPoints1</span><span class="p">)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;ContourTreeNodes.vtp&#39;</span><span class="p">,</span> <span class="n">tTKIcospheresFromPoints4</span><span class="p">)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;ContourTreeArcs.vtp&#39;</span><span class="p">,</span> <span class="n">tube4</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;OutputSurface.vtu&#39;</span><span class="p">,</span> <span class="n">tTKGeometrySmoother2</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/dragon.vtu">dragon.vtu</a>: a two-dimensional triangulation.</li>
+<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/pointCloud.csv">pointCloud.csv</a>: a table containing point coordinates.</li>
 </ul>
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>PersistenceDiagram.vtu</code>: the output persistence diagram in VTK file format (bottom right view, above screenshot). You are free to change the <code>vtu</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
-<li><code>PersistenceCurve.csv</code>: the output persistence curve.</li>
-<li><code>CriticalPoints.vtp</code>: the output
-critical points
-in VTK file format (bottom right view, above screenshot). You are free to change the <code>vtp</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
-<li><code>ContourTreeNode.vtp</code>: spheres, representing the nodes of the output contour tree
-in VTK file format (bottom right view, above screenshot). You are free to change the <code>vtp</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
-<li><code>ContourTreeArcs.vtp</code>: cylinders, representing the arcs of the output contour tree
-in VTK file format (bottom right view, above screenshot). You are free to change the <code>vtp</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
+<li><code>OutputSurface.vtu</code>: surface (or 2 dimensional elements) of the output Morse Smale Complex in VTK file format (right view, above screenshot). You are free to change the <code>vtp</code> file extension to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</li>
 </ul>
 <h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">ContourTree (FTM)</a></p>
 <p><a href="https://topology-tool-kit.github.io/doc/html/classttkGeometrySmoother.html">GeometrySmoother</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkIcospheresFromPoints.html">IcospheresFromPoints</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceCurve.html">PersistenceCurve</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttk_1_1MorseSmaleComplex.html">MorseSmaleComplex</a></p>
 <p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkScalarFieldCriticalPoints.html">ScalarFieldCriticalPoints</a></p>
 <p><a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a></p>
                 
               
@@ -788,7 +738,7 @@ in VTK file format (bottom right view, above screenshot). You are free to change
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../ctBones/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CT bones" rel="prev">
+        <a href="../1manifoldLearning/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1-Manifold Learning" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -797,20 +747,20 @@ in VTK file format (bottom right view, above screenshot). You are free to change
               <span class="md-footer__direction">
                 Previous
               </span>
-              CT bones
+              1-Manifold Learning
             </div>
           </div>
         </a>
       
       
         
-        <a href="../imageProcessing/" class="md-footer__link md-footer__link--next" aria-label="Next: Image Processing" rel="next">
+        <a href="../BuiltInExample1/" class="md-footer__link md-footer__link--next" aria-label="Next: Built in example 1" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Image Processing
+              Built in example 1
             </div>
           </div>
           <div class="md-footer__button md-icon">
