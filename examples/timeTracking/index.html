@@ -14,7 +14,7 @@
     
     
       
-        <title>Persistence Clustering 0 - TTK Examples</title>
+        <title>Time Tracking - TTK Examples</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#persistence-clustering-0" class="md-skip">
+        <a href="#time-tracking" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Persistence Clustering 0
+              Time Tracking
             
           </span>
         </div>
@@ -362,6 +362,21 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering0/" class="md-nav__link">
+        Persistence Clustering 0
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -374,12 +389,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Persistence Clustering 0
+          Time Tracking
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Persistence Clustering 0
+        Time Tracking
       </a>
       
         
@@ -442,21 +457,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../timeTracking/" class="md-nav__link">
-        Time Tracking
-      </a>
     </li>
   
 
@@ -541,20 +541,15 @@
               
                 
                 
-                <h1 id="persistence-clustering-0">Persistence Clustering 0<a class="headerlink" href="#persistence-clustering-0" title="Permanent link">&para;</a></h1>
-<p><img alt="Persistence Clustering 0 screenshot" src="https://topology-tool-kit.github.io/img/gallery/persistenceClustering0.jpeg" /></p>
+                <h1 id="time-tracking">Time Tracking<a class="headerlink" href="#time-tracking" title="Permanent link">&para;</a></h1>
+<p><img alt="Time tracking screenshot" src="https://topology-tool-kit.github.io/img/gallery/timeTracking.jpeg" /></p>
 <h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
-<p>This example performs a persistence driven clustering of a 2D toy data set, taken from the <a href="https://scikit-learn.org/stable/modules/clustering.html">scikit-learn examples</a>.
-Please check out the <a href="../karhunenLoveDigits64Dimensions/">Karhunen-Love Digits 64-Dimensions example</a> for an application of this pipeline to a real-life, high-dimensional, data set.</p>
-<p>The pipeline starts by estimating the density of the input point cloud with a Gaussian kernel, by the <code>GaussianResampling</code>  filter, coupled with the <code>Slice</code> filter (to restrict the estimation to a 2D plane).</p>
-<p>Next, the <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a> of the density field is computed and only the 2 most persistent density maxima are selected (corresponding to the desired 2 output clusters, bottom left view in the above screenshot).</p>
-<p>Next, the simplified persistence diagram is used as a constraint for the <a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a> of the density field (top right view, above screenshot).
-The simplified density field then contains only 2 maxima and it is used as an input to the <a href="https://topology-tool-kit.github.io/doc/html/classttkMorseSmaleComplex.html">Morse-Smale complex</a> computation, for the separation of the 2D space into the output clusters (background color in the bottom right view, above screenshot).</p>
-<p>Finally, the cluster identifier of each input point is given by the identifier of the 
-corresponding ascending manifold of the Morse-Smale complex (<code>AscendingManifold</code>), with the <code>ResampleWithDataset</code> filter.</p>
+<p>This example loads a 2D time-dependent scalar field, where time steps are stored as a sequence of data arrays.</p>
+<p>Using <a href="https://topology-tool-kit.github.io/doc/html/classttkTrackingFromFields.html">TrackingFromFields</a>, a tracking mesh for the temporal evolution of critical points is computed. This filter computes an optimal matching between persistence diagrams (with respect to Wasserstein metric), and discards critical point pairs below a persistence of 1% by default (parameter <code>Tolerance</code>).</p>
+<p>The state file further contains an animation of the critical points over time.</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>$ paraview states/persistenceClustering0.pvsm
+<div class="highlight"><pre><span></span><code>$ paraview states/timeTracking.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -575,103 +570,37 @@ corresponding ascending manifold of the Morse-Smale complex (<code>AscendingMani
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
-
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="c1"># create a new &#39;CSV Reader&#39;</span>
-<span class="n">clustering0csv</span> <span class="o">=</span> <span class="n">CSVReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;clustering0.csv&#39;</span><span class="p">])</span>
+<span class="c1"># create a new &#39;XML Image Data Reader&#39;</span>
+<span class="n">timeTrackingvti</span> <span class="o">=</span> <span class="n">XMLImageDataReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;timeTracking.vti&#39;</span><span class="p">])</span>
+<span class="n">timeTrackingvti</span><span class="o">.</span><span class="n">CellArrayStatus</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># select data arrays 000, 002, 004, ..., 118</span>
+<span class="n">timeTrackingvti</span><span class="o">.</span><span class="n">PointArrayStatus</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;</span><span class="si">{:0&gt;3}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span> 
 
-<span class="c1"># create a new &#39;Table To Points&#39;</span>
-<span class="n">tableToPoints1</span> <span class="o">=</span> <span class="n">TableToPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">clustering0csv</span><span class="p">)</span>
-<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">XColumn</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span>
-<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">YColumn</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
-<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">a2DPoints</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">KeepAllDataArrays</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># create a new &#39;TTK TrackingFromFields&#39;</span>
+<span class="n">tTKTrackingFromFields1</span> <span class="o">=</span> <span class="n">TTKTrackingFromFields</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">timeTrackingvti</span><span class="p">)</span>
+<span class="n">tTKTrackingFromFields1</span><span class="o">.</span><span class="n">ForceZtranslation</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">tTKTrackingFromFields1</span><span class="o">.</span><span class="n">ZTranslation</span> <span class="o">=</span> <span class="mf">0.125</span>
 
-<span class="c1"># create a new &#39;Gaussian Resampling&#39;</span>
-<span class="n">gaussianResampling1</span> <span class="o">=</span> <span class="n">GaussianResampling</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tableToPoints1</span><span class="p">)</span>
-<span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">ResampleField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;ignore arrays&#39;</span><span class="p">]</span>
-<span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">ResamplingGrid</span> <span class="o">=</span> <span class="p">[</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">SplatAccumulationMode</span> <span class="o">=</span> <span class="s1">&#39;Sum&#39;</span>
+<span class="c1"># create a new &#39;Extract Surface&#39;</span>
+<span class="n">extractSurface1</span> <span class="o">=</span> <span class="n">ExtractSurface</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTrackingFromFields1</span><span class="p">)</span>
 
-<span class="c1"># create a new &#39;Slice&#39;</span>
-<span class="n">slice1</span> <span class="o">=</span> <span class="n">Slice</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">gaussianResampling1</span><span class="p">)</span>
-<span class="n">slice1</span><span class="o">.</span><span class="n">SliceType</span> <span class="o">=</span> <span class="s1">&#39;Plane&#39;</span>
-
-<span class="c1"># init the &#39;Plane&#39; selected for &#39;SliceType&#39;</span>
-<span class="n">slice1</span><span class="o">.</span><span class="n">SliceType</span><span class="o">.</span><span class="n">Normal</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;TTK PersistenceDiagram&#39;</span>
-<span class="n">tTKPersistenceDiagram1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">slice1</span><span class="p">)</span>
-<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;SplatterValues&#39;</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">persistenceThreshold0</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
-<span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;Persistence&#39;</span><span class="p">]</span>
-<span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">9999.0</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
-<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span><span class="n">Domain</span><span class="o">=</span><span class="n">slice1</span><span class="p">,</span>
-    <span class="n">Constraints</span><span class="o">=</span><span class="n">persistenceThreshold0</span><span class="p">)</span>
-<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;SplatterValues&#39;</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;TTK MorseSmaleComplex&#39;</span>
-<span class="n">tTKMorseSmaleComplex1</span> <span class="o">=</span> <span class="n">TTKMorseSmaleComplex</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
-<span class="n">tTKMorseSmaleComplex1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;SplatterValues&#39;</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;Resample With Dataset&#39;</span>
-<span class="n">resampleWithDataset1</span> <span class="o">=</span> <span class="n">ResampleWithDataset</span><span class="p">(</span><span class="n">SourceDataArrays</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
-    <span class="n">DestinationMesh</span><span class="o">=</span><span class="n">tableToPoints1</span><span class="p">)</span>
-<span class="n">resampleWithDataset1</span><span class="o">.</span><span class="n">CellLocator</span> <span class="o">=</span> <span class="s1">&#39;Static Cell Locator&#39;</span>
-
-<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;OutputClustering.csv&quot;</span><span class="p">,</span> <span class="n">resampleWithDataset1</span><span class="p">)</span>
+<span class="c1"># save the output</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;timeTracking.vtp&#39;</span><span class="p">,</span> <span class="n">extractSurface1</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/karhunenLoveDigits64Dimensions.csv">clustering0.csv</a>: a 2D point cloud taken from the <a href="https://scikit-learn.org/stable/modules/clustering.html">scikit-learn examples</a>.</li>
+<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/timeTracking.vti">timeTracking.vti</a>: time-dependent vorticity of a 2D vortex street, with time steps represented by data arrays '000', '002', ..., '118'</li>
 </ul>
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>OutputClustering.csv</code>: the output clustering of the input point cloud (output cluster identifier: <code>AscendingManifold</code> column)</li>
+<li><code>timeTracking.vtp</code>: tracking mesh of critical points</li>
 </ul>
 <h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkMorseSmaleComplex.html">Morse-Smale complex</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkTrackingFromFields.html">TrackingFromFields</a></p>
                 
               
               
@@ -691,7 +620,7 @@ corresponding ascending manifold of the Morse-Smale complex (<code>AscendingMani
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../morsePersistence/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Morse persistence" rel="prev">
+        <a href="../persistenceClustering0/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Persistence Clustering 0" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -700,26 +629,11 @@ corresponding ascending manifold of the Morse-Smale complex (<code>AscendingMani
               <span class="md-footer__direction">
                 Previous
               </span>
-              Morse persistence
+              Persistence Clustering 0
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../timeTracking/" class="md-footer__link md-footer__link--next" aria-label="Next: Time Tracking" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Time Tracking
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
