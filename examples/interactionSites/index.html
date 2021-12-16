@@ -14,7 +14,7 @@
     
     
       
-        <title>Karhunen-Love Digits 64-Dimensions - TTK Examples</title>
+        <title>Interaction sites example - TTK Examples</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#karhunen-love-digits-64-dimensions" class="md-skip">
+        <a href="#interaction-sites-example" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Karhunen-Love Digits 64-Dimensions
+              Interaction sites example
             
           </span>
         </div>
@@ -347,21 +347,6 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../interactionSites/" class="md-nav__link">
-        Interaction sites example
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
     
   
   
@@ -374,12 +359,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Karhunen-Love Digits 64-Dimensions
+          Interaction sites example
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Karhunen-Love Digits 64-Dimensions
+        Interaction sites example
       </a>
       
         
@@ -442,6 +427,21 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../karhunenLoveDigits64Dimensions/" class="md-nav__link">
+        Karhunen-Love Digits 64-Dimensions
+      </a>
     </li>
   
 
@@ -751,21 +751,17 @@
               
                 
                 
-                <h1 id="karhunen-love-digits-64-dimensions">Karhunen-Love Digits 64-Dimensions<a class="headerlink" href="#karhunen-love-digits-64-dimensions" title="Permanent link">&para;</a></h1>
-<p><img alt="Karhunen-Love Digits 64-Dimensions screenshot" src="https://topology-tool-kit.github.io/img/gallery/karhunenLoveDigits64Dimensions.jpg" /></p>
+                <h1 id="interaction-sites-example">Interaction sites example<a class="headerlink" href="#interaction-sites-example" title="Permanent link">&para;</a></h1>
+<p><img alt="Interaction sites example screenshot" src="https://topology-tool-kit.github.io/img/gallery/interactionSites.jpg" /></p>
 <h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
-<p>This example performs a persistence driven clustering of a high-dimensional data set, specifically a <a href="https://archive.ics.uci.edu/ml/datasets/Multiple+Features">collection of 2000 images representing hand written digits</a>. Each image is encoded by its Karhunen-Love coefficients, a 64-dimensional vector. This results in a point cloud of 2000 points (2000 rows), living in 64 dimensions (64 columns).</p>
-<p>The ground truth classification for each point is provided by the column <code>Field0</code> (point color in the bottom right view, above screenshot), which indicates the digit represented by the corresponding image.</p>
-<p>The pipeline starts by using <a href="https://topology-tool-kit.github.io/doc/html/classttkDimensionReduction.html">DimensionReduction</a> (with tSNE) to project the data down to 2D.</p>
-<p>Next, the density of the projected 2D point cloud is estimated with a Gaussian kernel, by the <code>GaussianResampling</code>  filter, coupled with the <code>Slice</code> filter (to restrict the estimation to a 2D plane). </p>
-<p>Next, the <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a> of the density field is computed and only the 10 most persistent density maxima are selected (corresponding to the 10 classes, one per digit, bottom left view in the above screenshot).</p>
-<p>Next, the simplified persistence diagram is used as a constraint for the <a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a> of the density field.
-The simplified density field then contains only 10 maxima and it is used as an input to the <a href="https://topology-tool-kit.github.io/doc/html/classttkMorseSmaleComplex.html">Morse-Smale complex</a> computation, for the separation of the 2D space into the output clusters (background color in the bottom right view, above screenshot). </p>
-<p>Finally, the cluster identifier of each input point is given by the identifier of the 
-corresponding ascending manifold of the Morse-Smale complex (<code>AscendingManifold</code>), with the <code>ResampleWithDataset</code> filter.</p>
+<p>This example demostrates how topological analysis can be used to identify interaction sites i.e. different kind of chemical bonds in molecules. Using simulations and experiments, the electron density field denoted as <code>Rho</code> can be estimated for a molecule. Topological analysis of this scalar field can reveal important features in the data. For example, the maxima of this field correspond to the atom locations while saddles occur along the covalent bonds. However, for identification of non-covalent interactions like ionic bonds, analysis of the density field <code>Rho</code> is not enough. A derived scalar field from <code>Rho</code> called <a href="https://www.tandfonline.com/doi/full/10.1080/00268976.2015.1123777">reduced density gradeint</a> denoted by <code>s</code> is suggested in literature which can reveal non-covalent interation sites in a molecule. In this example, we will extract and compare the critical points for the <code>Rho</code> and <code>s</code> scalar fields for a simple molecule 1,2-ethanediol. </p>
+<p>First a VTI file is loaded which contains two scalar fields namely <code>log(Rho)</code> and <code>log(s)</code>. Then using <a href="https://topology-tool-kit.github.io/doc/html/classttkScalarFieldCriticalPoints.html">ScalarFieldCriticalPoints</a>, the critical points for <code>log(Rho)</code> are computed which are then converted into spheres using <a href="https://topology-tool-kit.github.io/doc/html/classttkIcospheresFromPoints.html">IcospheresFromPoints</a>. They are shown as bigger transluscent green and white spheres in the screenshot above. Note that these critical points identify the atoms and covalent bonds in the molecule.</p>
+<p>Next, we analyse <code>log(s)</code>, the reduced gradient scalar field. Here, the <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceCurve.html">PersistenceCurve</a> is computed (top right view in the above screenshot). Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a> for <code>log(s)</code> is computed and thresholds are applied based on persistence to maintain only the most persistent features. This results in a simplified persistence diagram (bottom right view in the above screenshot).</p>
+<p>The simplified persistence diagram is then used as a constraint for the <a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a> of the input scalar data. The simplified data is then used as input to <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">ContourTree (FTM)</a> to compute the join tree for the data. The join tree captures the topological changes in sub-level sets of the scalar field and therefore consists of leaves corresponding to minima and internal nodes corresponding to saddles, the points where sublevel sets merge. The nodes of this join tree are selected and highlighted as smaller opaque blue and white spheres using <a href="https://topology-tool-kit.github.io/doc/html/classttkIcospheresFromPoints.html">IcospheresFromPoints</a>. Similarly, the arcs of the join tree are also extracted and shown as thin grey tubes in the screenshot above.</p>
+<p>Using topological analysis of <code>log(s)</code>, we identify an outlying minimum which is not close to the atom locations. This corresponds to a non-covalent interaction site in the molecule which is not identifiable using direct toplogical analysis of electron density field <code>Rho</code>. Lastly, we extract the segmented region corresponding to this particular minimum (shown as transluscent blue surface in the screenshot). </p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>$ paraview states/karhunenLoveDigits64Dimensions.pvsm
+<div class="highlight"><pre><span></span><code>$ paraview states/interactionSites.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -828,82 +824,147 @@ corresponding ascending manifold of the Morse-Smale complex (<code>AscendingMani
 <span class="normal">58</span>
 <span class="normal">59</span>
 <span class="normal">60</span>
-<span class="normal">61</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
-
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#### import the simple module from the paraview</span>
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="c1"># create a new &#39;CSV Reader&#39;</span>
-<span class="n">karhunenLoveDigits64Dimensionscsv</span> <span class="o">=</span> <span class="n">CSVReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;karhunenLoveDigits64Dimensions.csv&#39;</span><span class="p">])</span>
-<span class="n">karhunenLoveDigits64Dimensionscsv</span><span class="o">.</span><span class="n">HaveHeaders</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># create a new &#39;XML Image Data Reader&#39;</span>
+<span class="n">builtInExamplevti</span> <span class="o">=</span> <span class="n">XMLImageDataReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;BuiltInExample2.vti&#39;</span><span class="p">])</span>
 
-<span class="c1"># create a new &#39;TTK DimensionReduction&#39;</span>
-<span class="n">tTKDimensionReduction1</span> <span class="o">=</span> <span class="n">TTKDimensionReduction</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">karhunenLoveDigits64Dimensionscsv</span><span class="p">)</span>
-<span class="n">tTKDimensionReduction1</span><span class="o">.</span><span class="n">InputColumns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Field 1&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 10&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 11&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 12&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 13&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 14&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 15&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 16&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 17&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 18&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 19&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 2&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 20&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 21&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 22&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 23&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 24&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 25&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 26&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 27&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 28&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 29&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 3&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 30&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 31&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 32&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 33&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 34&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 35&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 36&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 37&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 38&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 39&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 4&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 40&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 41&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 42&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 43&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 44&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 45&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 46&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 47&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 48&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 49&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 5&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 50&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 51&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 52&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 53&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 54&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 55&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 56&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 57&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 58&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 59&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 6&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 60&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 61&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 62&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 63&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 64&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 7&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 8&#39;</span><span class="p">,</span> <span class="s1">&#39;Field 9&#39;</span><span class="p">]</span>
-<span class="n">tTKDimensionReduction1</span><span class="o">.</span><span class="n">Method</span> <span class="o">=</span> <span class="s1">&#39;t-distributed Stochastic Neighbor Embedding&#39;</span>
+<span class="c1">#### Topological analysis of &#39;log(Rho)&#39;</span>
 
-<span class="c1"># create a new &#39;Table To Points&#39;</span>
-<span class="n">tableToPoints1</span> <span class="o">=</span> <span class="n">TableToPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKDimensionReduction1</span><span class="p">)</span>
-<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">XColumn</span> <span class="o">=</span> <span class="s1">&#39;Component_0&#39;</span>
-<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">YColumn</span> <span class="o">=</span> <span class="s1">&#39;Component_1&#39;</span>
-<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">a2DPoints</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">KeepAllDataArrays</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># extract the critical points using &#39;TTK ScalarFieldCriticalPoints&#39;</span>
+<span class="n">tTKScalarFieldCriticalPoints1</span> <span class="o">=</span> <span class="n">TTKScalarFieldCriticalPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">builtInExamplevti</span><span class="p">)</span>
+<span class="n">tTKScalarFieldCriticalPoints1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(Rho)&#39;</span><span class="p">]</span>
 
-<span class="c1"># create a new &#39;Gaussian Resampling&#39;</span>
-<span class="n">gaussianResampling1</span> <span class="o">=</span> <span class="n">GaussianResampling</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tableToPoints1</span><span class="p">)</span>
-<span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">ResampleField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;ignore arrays&#39;</span><span class="p">]</span>
-<span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">ResamplingGrid</span> <span class="o">=</span> <span class="p">[</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">SplatAccumulationMode</span> <span class="o">=</span> <span class="s1">&#39;Sum&#39;</span>
+<span class="c1"># covert these points to spheres using &#39;TTK IcospheresFromPoints&#39;</span>
+<span class="n">tTKIcospheresFromPoints3</span> <span class="o">=</span> <span class="n">TTKIcospheresFromPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKScalarFieldCriticalPoints1</span><span class="p">)</span>
+<span class="n">tTKIcospheresFromPoints3</span><span class="o">.</span><span class="n">Radius</span> <span class="o">=</span> <span class="mf">3.0</span>
 
-<span class="c1"># create a new &#39;Slice&#39;</span>
-<span class="n">slice1</span> <span class="o">=</span> <span class="n">Slice</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">gaussianResampling1</span><span class="p">)</span>
-<span class="n">slice1</span><span class="o">.</span><span class="n">SliceType</span> <span class="o">=</span> <span class="s1">&#39;Plane&#39;</span>
+<span class="c1">#### Topological analysis of &#39;log(s)&#39;</span>
 
-<span class="c1"># init the &#39;Plane&#39; selected for &#39;SliceType&#39;</span>
-<span class="n">slice1</span><span class="o">.</span><span class="n">SliceType</span><span class="o">.</span><span class="n">Normal</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+<span class="c1"># compute the &#39;TTK PersistenceCurve&#39;</span>
+<span class="n">tTKPersistenceCurve1</span> <span class="o">=</span> <span class="n">TTKPersistenceCurve</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">builtInExamplevti</span><span class="p">)</span>
+<span class="n">tTKPersistenceCurve1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(s)&#39;</span><span class="p">]</span>
 
-<span class="c1"># create a new &#39;TTK PersistenceDiagram&#39;</span>
-<span class="n">tTKPersistenceDiagram1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">slice1</span><span class="p">)</span>
-<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;SplatterValues&#39;</span><span class="p">]</span>
+<span class="c1"># compute the &#39;TTK PersistenceDiagram&#39;</span>
+<span class="n">tTKPersistenceDiagram1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">builtInExamplevti</span><span class="p">)</span>
+<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(s)&#39;</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;Persistence&#39;</span><span class="p">]</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">99999.0</span><span class="p">]</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;PairIdentifier&#39;</span><span class="p">]</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">117.0</span><span class="p">]</span>
 
-<span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
-<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span><span class="n">Domain</span><span class="o">=</span><span class="n">slice1</span><span class="p">,</span>
-    <span class="n">Constraints</span><span class="o">=</span><span class="n">threshold1</span><span class="p">)</span>
-<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;SplatterValues&#39;</span><span class="p">]</span>
+<span class="c1"># remove low persistence critical points using &#39;Threshold&#39;</span>
+<span class="n">persistenceThreshold</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold1</span><span class="p">)</span>
+<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;Persistence&#39;</span><span class="p">]</span>
+<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">3.62385640499735</span><span class="p">]</span>
 
-<span class="c1"># create a new &#39;TTK MorseSmaleComplex&#39;</span>
-<span class="n">tTKMorseSmaleComplex1</span> <span class="o">=</span> <span class="n">TTKMorseSmaleComplex</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
-<span class="n">tTKMorseSmaleComplex1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;SplatterValues&#39;</span><span class="p">]</span>
+<span class="c1"># simplify the field using &#39;TTK TopologicalSimplification&#39;</span>
+<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span><span class="n">Domain</span><span class="o">=</span><span class="n">builtInExamplevti</span><span class="p">,</span>
+    <span class="n">Constraints</span><span class="o">=</span><span class="n">persistenceThreshold</span><span class="p">)</span>
+<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(s)&#39;</span><span class="p">]</span>
 
-<span class="c1"># create a new &#39;TTK IdentifierRandomizer&#39;</span>
-<span class="n">tTKIdentifierRandomizer1</span> <span class="o">=</span> <span class="n">TTKIdentifierRandomizer</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">tTKIdentifierRandomizer1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;AscendingManifold&#39;</span><span class="p">]</span>
+<span class="c1"># create a new &#39;TTK Merge and Contour Tree (FTM)&#39; to compute the join tree</span>
+<span class="n">tTKJoinTree1</span> <span class="o">=</span> <span class="n">TTKMergeandContourTreeFTM</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
+<span class="n">tTKJoinTree1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(s)&#39;</span><span class="p">]</span>
+<span class="n">tTKJoinTree1</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s1">&#39;Join Tree&#39;</span>
+<span class="n">tTKJoinTree1</span><span class="o">.</span><span class="n">ArcSampling</span> <span class="o">=</span> <span class="mi">30</span>
 
-<span class="c1"># create a new &#39;Resample With Dataset&#39;</span>
-<span class="n">resampleWithDataset1</span> <span class="o">=</span> <span class="n">ResampleWithDataset</span><span class="p">(</span><span class="n">SourceDataArrays</span><span class="o">=</span><span class="n">tTKIdentifierRandomizer1</span><span class="p">,</span>
-    <span class="n">DestinationMesh</span><span class="o">=</span><span class="n">tableToPoints1</span><span class="p">)</span>
-<span class="n">resampleWithDataset1</span><span class="o">.</span><span class="n">PassPointArrays</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># covert the critical points to spheres using &#39;TTK IcospheresFromPoints&#39;</span>
+<span class="n">tTKIcospheresFromPoints4</span> <span class="o">=</span> <span class="n">TTKIcospheresFromPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKJoinTree1</span><span class="p">)</span>
+<span class="n">tTKIcospheresFromPoints4</span><span class="o">.</span><span class="n">Radius</span> <span class="o">=</span> <span class="mf">2.0</span>
 
-<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;OutputClustering.csv&quot;</span><span class="p">,</span> <span class="n">resampleWithDataset1</span><span class="p">)</span>
+<span class="c1"># extract the join tree arcs and save them as tubes</span>
+<span class="n">tTKGeometrySmoother2</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKJoinTree1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">tTKGeometrySmoother2</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">300</span>
+
+<span class="c1"># create a new &#39;Extract Surface&#39;</span>
+<span class="n">extractSurface4</span> <span class="o">=</span> <span class="n">ExtractSurface</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKGeometrySmoother2</span><span class="p">)</span>
+
+<span class="c1"># create a new &#39;Tube&#39;</span>
+<span class="n">tube5</span> <span class="o">=</span> <span class="n">Tube</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">extractSurface4</span><span class="p">)</span>
+<span class="n">tube5</span><span class="o">.</span><span class="n">Radius</span> <span class="o">=</span> <span class="mf">0.25</span>
+
+<span class="c1"># Extract the segmentation region corresponding to the interaction site</span>
+<span class="n">threshold6</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKJoinTree1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">threshold6</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;RegionType&#39;</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;Threshold&#39;</span>
+<span class="n">threshold7</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold6</span><span class="p">)</span>
+<span class="n">threshold7</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;SegmentationId&#39;</span><span class="p">]</span>
+<span class="n">threshold7</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">13.0</span><span class="p">,</span> <span class="mf">13.0</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;Extract Surface&#39;</span>
+<span class="n">extractSurface5</span> <span class="o">=</span> <span class="n">ExtractSurface</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold7</span><span class="p">)</span>
+
+<span class="c1"># create a new &#39;Tetrahedralize&#39;</span>
+<span class="n">tetrahedralize1</span> <span class="o">=</span> <span class="n">Tetrahedralize</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">extractSurface5</span><span class="p">)</span>
+
+<span class="c1"># create a new &#39;TTK GeometrySmoother&#39;</span>
+<span class="n">tTKGeometrySmoother3</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tetrahedralize1</span><span class="p">)</span>
+<span class="n">tTKGeometrySmoother3</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># save the output</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;logRhoCriticalPoints.vtp&#39;</span><span class="p">,</span> <span class="n">tTKIcospheresFromPoints3</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;logSPersistenceCurve.csv&#39;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKPersistenceCurve1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;logSPersistenceDiagram.vtu&#39;</span><span class="p">,</span> <span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;logSJoinTreeCriticalPoints.vtp&#39;</span><span class="p">,</span> <span class="n">tTKIcospheresFromPoints4</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;logSJoinTreeArcs.vtp&#39;</span><span class="p">,</span> <span class="n">tube5</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;NonCovalentInteractionSite.vtu&#39;</span><span class="p">,</span> <span class="n">tTKGeometrySmoother3</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/karhunenLoveDigits64Dimensions.csv">karhunenLoveDigits64Dimensions.csv</a>: an input high dimensional point cloud (2000 points in 64 dimensions).</li>
+<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/BuiltInExample2.vti">BuiltInExample2.vti</a>: 3D scalar fields corresponding to electron density distribution <code>Rho</code> and the reduced density gradient <code>s</code> around a simple molecule 1,2-ethanediol.</li>
 </ul>
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>OutputClustering.csv</code>: the output clustering of the input point cloud (output cluster identifier: <code>AscendingManifold</code> column, ground truth: <code>Field0</code>)</li>
+<li><code>logRhoCriticalPoints.vtp</code>: All the scalar field critical points computed for <code>log(Rho)</code>. </li>
+<li><code>logSPersistenceCurve.csv</code>: The output persistence curve for <code>log(s)</code>.</li>
+<li><code>logSPersistenceDiagram.vtu</code>: The output persistence diagram for <code>log(s)</code>.</li>
+<li><code>logSJoinTreeCriticalPoints.vtp</code>: The critical points in the join tree of <code>log(s)</code>.</li>
+<li><code>logSJoinTreeArcs.vtp</code>: The arcs of the join tree of <code>log(s)</code>.</li>
+<li><code>NonCovalentInteractionSite.vtp</code>: The non-covalent interaction site region identified using the join tree of <code>log(s)</code>.</li>
 </ul>
+<p>Note that you are free to change the VTK file extensions to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</p>
 <h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkDimensionReduction.html">DimensionReduction</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkMorseSmaleComplex.html">Morse-Smale complex</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a></p>
+<ul>
+<li><a href="https://topology-tool-kit.github.io/doc/html/classttkScalarFieldCriticalPoints.html">ScalarFieldCriticalPoints</a></li>
+<li><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceCurve.html">PersistenceCurve</a></li>
+<li><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a></li>
+<li><a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a></li>
+<li><a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">ContourTree (FTM)</a></li>
+<li><a href="https://topology-tool-kit.github.io/doc/html/classttkGeometrySmoother.html">GeometrySmoother</a></li>
+<li><a href="https://topology-tool-kit.github.io/doc/html/classttkIcospheresFromPoints.html">IcospheresFromPoints</a></li>
+</ul>
                 
               
               
@@ -923,7 +984,7 @@ corresponding ascending manifold of the Morse-Smale complex (<code>AscendingMani
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../interactionSites/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Interaction sites example" rel="prev">
+        <a href="../imageProcessing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Image Processing" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -932,20 +993,20 @@ corresponding ascending manifold of the Morse-Smale complex (<code>AscendingMani
               <span class="md-footer__direction">
                 Previous
               </span>
-              Interaction sites example
+              Image Processing
             </div>
           </div>
         </a>
       
       
         
-        <a href="../manifoldCheck/" class="md-footer__link md-footer__link--next" aria-label="Next: Manifold Check" rel="next">
+        <a href="../karhunenLoveDigits64Dimensions/" class="md-footer__link md-footer__link--next" aria-label="Next: Karhunen-Love Digits 64-Dimensions" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Manifold Check
+              Karhunen-Love Digits 64-Dimensions
             </div>
           </div>
           <div class="md-footer__button md-icon">
