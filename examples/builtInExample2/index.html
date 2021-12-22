@@ -1,0 +1,1292 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+    
+    
+      
+        <title>Builtin example 2 - TTK Examples</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.db9e7362.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#009485">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#builtin-example-2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TTK Examples" class="md-header__button md-logo" aria-label="TTK Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TTK Examples
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Builtin example 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TTK Examples" class="md-nav__button md-logo" aria-label="TTK Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    TTK Examples
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Welcome to the TTK Examples!
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1manifoldLearning/" class="md-nav__link">
+        1-Manifold Learning
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1manifoldLearningCircles/" class="md-nav__link">
+        1-Manifold Learning Circles
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2manifoldLearning/" class="md-nav__link">
+        2-Manifold Learning
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BuiltInExample1/" class="md-nav__link">
+        Built in example 1
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Builtin example 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Builtin example 2
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-description" class="md-nav__link">
+    Pipeline description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paraview" class="md-nav__link">
+    ParaView
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code" class="md-nav__link">
+    Python code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#univariate-analysis-outputs" class="md-nav__link">
+    Univariate analysis outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bivariate-analysis-outputs" class="md-nav__link">
+    Bivariate analysis outputs
+  </a>
+  
+    <nav class="md-nav" aria-label="Bivariate analysis outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#continuous-scatter-plot-and-projection-of-isocontours" class="md-nav__link">
+    Continuous scatter plot and projection of isocontours
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interesting-control-polygons-in-range-space" class="md-nav__link">
+    Interesting control polygons in range space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corresponding-fiber-surfaces-in-spatial-domain" class="md-nav__link">
+    Corresponding fiber surfaces in spatial domain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jacobi-set-projection-onto-the-continuous-scatter-plot" class="md-nav__link">
+    Jacobi set projection onto the continuous scatter plot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpython-api" class="md-nav__link">
+    C++/Python API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cinemaIO/" class="md-nav__link">
+        CinemaIO
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contourTreeAlignment/" class="md-nav__link">
+        Contour Tree Alignment
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ctBones/" class="md-nav__link">
+        CT bones
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dragon/" class="md-nav__link">
+        Dragon
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harmonicSkeleton/" class="md-nav__link">
+        Harmonic Skeleton
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../imageProcessing/" class="md-nav__link">
+        Image Processing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interactionSites/" class="md-nav__link">
+        Interaction sites
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../karhunenLoveDigits64Dimensions/" class="md-nav__link">
+        Karhunen-Love Digits 64-Dimensions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manifoldCheck/" class="md-nav__link">
+        Manifold Check
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mergeTreeClustering/" class="md-nav__link">
+        Merge Tree Clustering
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mergeTreeTemporalReduction/" class="md-nav__link">
+        Merge Tree Temporal Reduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../morseMolecule/" class="md-nav__link">
+        Morse molecule
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../morsePersistence/" class="md-nav__link">
+        Morse persistence
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../morseSmaleQuadrangulation/" class="md-nav__link">
+        Morse-Smale Quandrangulation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering0/" class="md-nav__link">
+        Persistence Clustering 0
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering1/" class="md-nav__link">
+        Persistence Clustering 1
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering2/" class="md-nav__link">
+        Persistence Clustering 2
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering3/" class="md-nav__link">
+        Persistence Clustering 3
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering4/" class="md-nav__link">
+        Persistence Clustering 4
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClusteringGallery/" class="md-nav__link">
+        Persistence Clustering Gallery
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceDrivenCompression/" class="md-nav__link">
+        Persistence-Driven Compression
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tectonicPuzzle/" class="md-nav__link">
+        Tectonic Puzzle
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timeTracking/" class="md-nav__link">
+        Time Tracking
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tribute/" class="md-nav__link">
+        Tribute to Edelsbrunner and Harer's book
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uncertainStartingVortex/" class="md-nav__link">
+        Uncertain Starting Vortex
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-description" class="md-nav__link">
+    Pipeline description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paraview" class="md-nav__link">
+    ParaView
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code" class="md-nav__link">
+    Python code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#univariate-analysis-outputs" class="md-nav__link">
+    Univariate analysis outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bivariate-analysis-outputs" class="md-nav__link">
+    Bivariate analysis outputs
+  </a>
+  
+    <nav class="md-nav" aria-label="Bivariate analysis outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#continuous-scatter-plot-and-projection-of-isocontours" class="md-nav__link">
+    Continuous scatter plot and projection of isocontours
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interesting-control-polygons-in-range-space" class="md-nav__link">
+    Interesting control polygons in range space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corresponding-fiber-surfaces-in-spatial-domain" class="md-nav__link">
+    Corresponding fiber surfaces in spatial domain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jacobi-set-projection-onto-the-continuous-scatter-plot" class="md-nav__link">
+    Jacobi set projection onto the continuous scatter plot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpython-api" class="md-nav__link">
+    C++/Python API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="builtin-example-2">Builtin example 2<a class="headerlink" href="#builtin-example-2" title="Permanent link">&para;</a></h1>
+<!--[![Builtin example 2 video tutorial](https://topology-tool-kit.github.io/img/gallery/builtinExample2.jpg)](https://youtu.be/Rdsfkb6SpK8)-->
+
+<iframe src="https://www.youtube.com/embed/7mlUzUJKA78" allowfullscreen="" width="100%" height="420" frameborder="0"></iframe>
+
+<h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
+<p>This example demostrates how bivariate analysis can be used for the analysis of molecular data. The input to this pipeline are two scalar fields: the electron density field denoted as <code>log(Rho)</code> and the <a href="https://www.tandfonline.com/doi/full/10.1080/00268976.2015.1123777">reduced density gradeint</a> denoted by <code>log(s)</code> for a simple molecule called 1,2-ethanediol.</p>
+<p>First, usual univariate scalar field analysis method is used for the analysis. An isosurafce is extracted in <code>log(Rho)</code> field which helps in identification of the location of atoms in the molecule, see black surfaces in the lower left panel of the screenshot above. Similarly, an isosurafce in <code>log(s)</code> identifies the covalent bonds.</p>
+<p>Next we perform bivariate analysis which looks at the joint behaviour <code>log(Rho)</code> and <code>log(s)</code> rather than looking at these scalar fields individually. We first compute the <a href="https://topology-tool-kit.github.io/doc/html/classttkContinuousScatterPlot.html">ContinuousScatterPlot</a> for this bivariate data. This is shown in the top panel of the screenshot above. We then project the isosrfaces extrated earlier during univariate analysis in the range space using <a href="https://topology-tool-kit.github.io/doc/html/classttkProjectionFromField.html">ProjectionFromField</a>. As expected these isosurfaces project to two line segments which are perpendicular to each other and parallel to the X axis and Y axis, repectively.</p>
+<p>Note how the continuous scatter plot spreads largely diagonally down from top-left corner to bottom-right in the range space with four distinct protrusions coming out on the top and bottom. These protrusions are of interest. We manually select polylines in the range space at these four protrusions and use them for extraction of fiber surfaces using <a href="https://topology-tool-kit.github.io/doc/html/classttkFiberSurface.html">FiberSurface</a>. </p>
+<p>Two of the fiber surfaces correspond to the atoms in the molecule, one of which identifies the Oxygen atoms (red surfaces in bottom right panel of the screenshot) while the other surface identifies the Carbon atoms (grey surfaces in bottom right panel of the screenshot). The other two fiber surfaces identify the bonds or interaction sites in the molecule. One surface clearly identifies the covalent bonds (blue surfaces in bottom right panel of the screenshot), while the other identifies a non-covalent interaction site in the molecule (light green surface in bottom right panel of the screenshot). Note that using univariate analysis of the data it is not straightforward to distinguish between different type of atoms and different types of bonds. However, it is much easier to do so using bivariate data analysis.</p>
+<p>Lastly, we also compute the <a href="https://topology-tool-kit.github.io/doc/html/classttkJacobiSet.html">JacobiSet</a> for the bivariate data and project it in the range space. Notice how it aligns with the continuous scatter plot and identifies the boundaries and the distinguishable curves within it.</p>
+<h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
+<p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
+<div class="highlight"><pre><span></span><code>$ paraview states/BuiltInExample2.pvsm
+</code></pre></div></p>
+<h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#### import the simple module from the paraview</span>
+<span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Load the scalar fields using &#39;XML Image Data Reader&#39;</span>
+<span class="n">example2vti</span> <span class="o">=</span> <span class="n">XMLImageDataReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;BuiltInExample2.vti&#39;</span><span class="p">])</span>
+
+<span class="c1">### Univariate data analysis using isosurfaces</span>
+
+<span class="c1"># create a new &#39;Contour&#39; for &#39;log(Rho)&#39; to identify atoms</span>
+<span class="n">contour2</span> <span class="o">=</span> <span class="n">Contour</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">example2vti</span><span class="p">)</span>
+<span class="n">contour2</span><span class="o">.</span><span class="n">ContourBy</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(Rho)&#39;</span><span class="p">]</span>
+<span class="n">contour2</span><span class="o">.</span><span class="n">Isosurfaces</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.57</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;Contour&#39; for &#39;log(s)&#39; to identify atoms</span>
+<span class="n">contour3</span> <span class="o">=</span> <span class="n">Contour</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">example2vti</span><span class="p">)</span>
+<span class="n">contour3</span><span class="o">.</span><span class="n">ContourBy</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(s)&#39;</span><span class="p">]</span>
+<span class="n">contour3</span><span class="o">.</span><span class="n">Isosurfaces</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.575</span><span class="p">]</span>
+
+<span class="c1">### Bivariate data analysis using isosurfaces</span>
+
+<span class="c1"># create a new &#39;TTK ContinuousScatterPlot&#39;</span>
+<span class="n">tTKContinuousScatterPlot1</span> <span class="o">=</span> <span class="n">TTKContinuousScatterPlot</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">example2vti</span><span class="p">)</span>
+<span class="n">tTKContinuousScatterPlot1</span><span class="o">.</span><span class="n">ScalarField1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(Rho)&#39;</span><span class="p">]</span>
+<span class="n">tTKContinuousScatterPlot1</span><span class="o">.</span><span class="n">ScalarField2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(s)&#39;</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;Threshold&#39;</span>
+<span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKContinuousScatterPlot1</span><span class="p">)</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;ValidPointMask&#39;</span><span class="p">]</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;TTK ProjectionFromField&#39; to project the &#39;log(Rho)&#39; contour onto the range space</span>
+<span class="n">tTKProjectionFromField1</span> <span class="o">=</span> <span class="n">TTKProjectionFromField</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">contour2</span><span class="p">)</span>
+<span class="n">tTKProjectionFromField1</span><span class="o">.</span><span class="n">UComponent</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(Rho)&#39;</span><span class="p">]</span>
+<span class="n">tTKProjectionFromField1</span><span class="o">.</span><span class="n">VComponent</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(s)&#39;</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;Extract Edges&#39;</span>
+<span class="n">extractEdges1</span> <span class="o">=</span> <span class="n">ExtractEdges</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKProjectionFromField1</span><span class="p">)</span>
+
+<span class="c1"># create a new &#39;TTK ProjectionFromField&#39; to project the &#39;log(s)&#39; contour onto the range space</span>
+<span class="n">tTKProjectionFromField2</span> <span class="o">=</span> <span class="n">TTKProjectionFromField</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">contour3</span><span class="p">)</span>
+<span class="n">tTKProjectionFromField2</span><span class="o">.</span><span class="n">UComponent</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(Rho)&#39;</span><span class="p">]</span>
+<span class="n">tTKProjectionFromField2</span><span class="o">.</span><span class="n">VComponent</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(s)&#39;</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;Extract Edges&#39;</span>
+<span class="n">extractEdges2</span> <span class="o">=</span> <span class="n">ExtractEdges</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKProjectionFromField2</span><span class="p">)</span>
+
+<span class="c1"># Four manually created polylines in the range space to select regions corresponding to </span>
+<span class="c1"># Oxygen and carbon atoms, followed by covalent and non-covalent bonds</span>
+<span class="n">rangePolygonsCoordinates</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mf">1.89657</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.278516</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.06003</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.24493</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.15538</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.278516</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.21441</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.416216</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">1.3744</span><span class="p">,</span> <span class="mf">0.000242441</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.51061</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.00983316</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.65137</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0434185</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.70586</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.181118</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">1.21547</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.701691</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.27904</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.614369</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.51061</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.607652</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.52878</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.16853</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.53786</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.688257</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mf">0.310174</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.325535</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0150337</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.124023</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.216538</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.140816</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.466272</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.399423</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="c1"># Save the four range space control polygons</span>
+<span class="n">polygons</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Save the corresponding four fiber surfaces</span>
+<span class="n">fiberSurfaces</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">coords</span> <span class="ow">in</span> <span class="n">rangePolygonsCoordinates</span><span class="p">:</span>
+    <span class="c1"># create a new &#39;Poly Line Source&#39;</span>
+    <span class="n">polyLineSource1</span> <span class="o">=</span> <span class="n">PolyLineSource</span><span class="p">()</span>
+    <span class="n">polyLineSource1</span><span class="o">.</span><span class="n">Points</span> <span class="o">=</span> <span class="n">coords</span>
+
+    <span class="c1"># create a new &#39;Resample With Dataset&#39;</span>
+    <span class="n">resampleWithDataset1</span> <span class="o">=</span> <span class="n">ResampleWithDataset</span><span class="p">(</span><span class="n">SourceDataArrays</span><span class="o">=</span><span class="n">tTKContinuousScatterPlot1</span><span class="p">,</span>
+        <span class="n">DestinationMesh</span><span class="o">=</span><span class="n">polyLineSource1</span><span class="p">)</span>
+
+    <span class="c1"># create a new &#39;Tetrahedralize&#39;</span>
+    <span class="n">tetrahedralize2</span> <span class="o">=</span> <span class="n">Tetrahedralize</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">resampleWithDataset1</span><span class="p">)</span>
+
+    <span class="c1"># create a new &#39;TTK FiberSurface&#39;</span>
+    <span class="n">tTKFiberSurface1</span> <span class="o">=</span> <span class="n">TTKFiberSurface</span><span class="p">(</span><span class="n">InputDomain</span><span class="o">=</span><span class="n">example2vti</span><span class="p">,</span>
+        <span class="n">RangePolygon</span><span class="o">=</span><span class="n">tetrahedralize2</span><span class="p">)</span>
+    <span class="n">tTKFiberSurface1</span><span class="o">.</span><span class="n">DomainUComponent</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(Rho)&#39;</span><span class="p">]</span>
+    <span class="n">tTKFiberSurface1</span><span class="o">.</span><span class="n">DomainVComponent</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(s)&#39;</span><span class="p">]</span>
+    <span class="n">tTKFiberSurface1</span><span class="o">.</span><span class="n">PolygonUComponent</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(Rho)&#39;</span><span class="p">]</span>
+    <span class="n">tTKFiberSurface1</span><span class="o">.</span><span class="n">PolygonVComponent</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(s)&#39;</span><span class="p">]</span>
+    <span class="n">tTKFiberSurface1</span><span class="o">.</span><span class="n">WithPointMerging</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># create a new &#39;Generate Surface Normals&#39;</span>
+    <span class="n">generateSurfaceNormals1</span> <span class="o">=</span> <span class="n">GenerateSurfaceNormals</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKFiberSurface1</span><span class="p">)</span>
+
+    <span class="n">fiberSurfaces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">generateSurfaceNormals1</span><span class="p">)</span>
+
+    <span class="c1"># create a new &#39;Extract Surface&#39;</span>
+    <span class="n">extractSurface1</span> <span class="o">=</span> <span class="n">ExtractSurface</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">resampleWithDataset1</span><span class="p">)</span>
+
+    <span class="n">polygons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">extractSurface1</span><span class="p">)</span>
+
+<span class="c1"># compute &#39;TTK JacobiSet&#39; for the bivariate data</span>
+<span class="n">tTKJacobiSet1</span> <span class="o">=</span> <span class="n">TTKJacobiSet</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">example2vti</span><span class="p">)</span>
+<span class="n">tTKJacobiSet1</span><span class="o">.</span><span class="n">UComponent</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(Rho)&#39;</span><span class="p">]</span>
+<span class="n">tTKJacobiSet1</span><span class="o">.</span><span class="n">VComponent</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(s)&#39;</span><span class="p">]</span>
+<span class="n">tTKJacobiSet1</span><span class="o">.</span><span class="n">Withedgeidentifiers</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">tTKJacobiSet1</span><span class="o">.</span><span class="n">Withvertexscalars</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># project the Jacobi set onto the range space using &#39;TTK ProjectionFromField&#39;</span>
+<span class="n">tTKProjectionFromField3</span> <span class="o">=</span> <span class="n">TTKProjectionFromField</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKJacobiSet1</span><span class="p">)</span>
+<span class="n">tTKProjectionFromField3</span><span class="o">.</span><span class="n">UComponent</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(Rho)&#39;</span><span class="p">]</span>
+<span class="n">tTKProjectionFromField3</span><span class="o">.</span><span class="n">VComponent</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;log(s)&#39;</span><span class="p">]</span>
+
+<span class="c1"># save the output</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;logRhoIsosurfaceAtoms.vtp&#39;</span><span class="p">,</span> <span class="n">contour2</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;logSIsosurfaceBonds.vtp&#39;</span><span class="p">,</span> <span class="n">contour3</span><span class="p">)</span>
+
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;ContinuousScatterPlot.vtu&#39;</span><span class="p">,</span> <span class="n">threshold1</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;logRhoIsosurfaceRangeProjection.vtp&#39;</span><span class="p">,</span> <span class="n">extractEdges1</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;logSIsosurfaceRangeProjection.vtp&#39;</span><span class="p">,</span> <span class="n">extractEdges2</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;OxygenAtomsRangePolygon.vtp&#39;</span><span class="p">,</span> <span class="n">polygons</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;CarbonAtomsRangePolygon.vtp&#39;</span><span class="p">,</span> <span class="n">polygons</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;CovalentBondsRangePolygon.vtp&#39;</span><span class="p">,</span> <span class="n">polygons</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;NonCovalentIntercationSiteRangePolygon.vtp&#39;</span><span class="p">,</span> <span class="n">polygons</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;OxygenAtomsFiberSurface.vtp&#39;</span><span class="p">,</span> <span class="n">fiberSurfaces</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;CarbonAtomsFiberSurface.vtp&#39;</span><span class="p">,</span> <span class="n">fiberSurfaces</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;CovalentBondsFiberSurface.vtp&#39;</span><span class="p">,</span> <span class="n">fiberSurfaces</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;NonCovalentIntercationSiteFiberSurface.vtp&#39;</span><span class="p">,</span> <span class="n">fiberSurfaces</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;JacobiSetRangeProjection.vtu&#39;</span><span class="p">,</span> <span class="n">tTKProjectionFromField3</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/BuiltInExample2.vti">BuiltInExample2.vti</a>: Bivariate field corresponding to electron density distribution <code>log(Rho)</code> and the reduced density gradient <code>log(s)</code> around a simple molecule 1,2-ethanediol.</li>
+</ul>
+<h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
+<h3 id="univariate-analysis-outputs">Univariate analysis outputs<a class="headerlink" href="#univariate-analysis-outputs" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>logRhoIsosurfaceAtoms.vtp</code>: An isosurface extracted from <code>log(Rho)</code> scalar field which identifies the locations of the atoms.</li>
+<li><code>logSIsosurfaceBonds.vtp</code>: An isosurface extracted from <code>log(s)</code> scalar field which identifies the locations of the bonds or interaction sites.</li>
+</ul>
+<h3 id="bivariate-analysis-outputs">Bivariate analysis outputs<a class="headerlink" href="#bivariate-analysis-outputs" title="Permanent link">&para;</a></h3>
+<h4 id="continuous-scatter-plot-and-projection-of-isocontours">Continuous scatter plot and projection of isocontours<a class="headerlink" href="#continuous-scatter-plot-and-projection-of-isocontours" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>ContinuousScatterPlot.vtu</code>: The continuous scatter plot for the <code>log(Rho)</code> and <code>log(s)</code> bivariate field.</li>
+<li><code>logRhoIsosurfaceRangeProjection.vtp</code>: The projection of the isosurface extracted from <code>log(Rho)</code> onto the bivariate range space.</li>
+<li><code>logSIsosurfaceRangeProjection.vtp</code>: The projection of the isosurface extracted from <code>log(s)</code> onto the bivariate range space.</li>
+</ul>
+<h4 id="interesting-control-polygons-in-range-space">Interesting control polygons in range space<a class="headerlink" href="#interesting-control-polygons-in-range-space" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>OxygenAtomsRangePolygon.vtp</code>: Manually specified control polygon in range space to select the two Oxygen atoms in the molecule.</li>
+<li><code>CarbonAtomsRangePolygon.vtp</code>: Manually specified control polygon to select the Carbon atoms in the molecule.</li>
+<li><code>CovalentBondsRangePolygon.vtp</code>: Manually specified control polygon to identify the covalent bonds in the molecule.</li>
+<li><code>NonCovalentIntercationSiteRangePolygon.vtp</code>: Manually specified control polygon to identify the non-covalent interaction sites in the molecule.</li>
+</ul>
+<h4 id="corresponding-fiber-surfaces-in-spatial-domain">Corresponding fiber surfaces in spatial domain<a class="headerlink" href="#corresponding-fiber-surfaces-in-spatial-domain" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>OxygenAtomsFiberSurface.vtp</code>: The corresponding fiber surface in the spatial domain for the Oxygen atom control polygon.</li>
+<li><code>CarbonAtomsFiberSurface.vtp</code>: The corresponding fiber surface in the spatial domain for the Carbon atom control polygon.</li>
+<li><code>CovalentBondsFiberSurface.vtp</code>: The corresponding fiber surface in the spatial domain for the covalent bonds control polygon.</li>
+<li><code>NonCovalentIntercationSiteFiberSurface.vtp</code>: The corresponding fiber surface in the spatial domain for the non-covalent bonds control polygon.</li>
+</ul>
+<h4 id="jacobi-set-projection-onto-the-continuous-scatter-plot">Jacobi set projection onto the continuous scatter plot<a class="headerlink" href="#jacobi-set-projection-onto-the-continuous-scatter-plot" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>JacobiSetRangeProjection.vtu</code>: The projection of the Jacobi set of the bivariate field onto the bivariate range space.</li>
+</ul>
+<p>Note that you are free to change the VTK file extensions to that of any other supported file format (e.g. <code>csv</code>) in the above python script.</p>
+<h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://topology-tool-kit.github.io/doc/html/classttkContinuousScatterPlot.html">ContinuousScatterPlot</a></li>
+<li><a href="https://topology-tool-kit.github.io/doc/html/classttkProjectionFromField.html">ProjectionFromField</a></li>
+<li><a href="https://topology-tool-kit.github.io/doc/html/classttkRangePolygon.html">RangePolygon</a></li>
+<li><a href="https://topology-tool-kit.github.io/doc/html/classttkFiberSurface.html">FiberSurface</a></li>
+<li><a href="https://topology-tool-kit.github.io/doc/html/classttkJacobiSet.html">JacobiSet</a></li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../BuiltInExample1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Built in example 1" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Built in example 1
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../cinemaIO/" class="md-footer__link md-footer__link--next" aria-label="Next: CinemaIO" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              CinemaIO
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e84347e.min.js"></script>
+      
+    
+  </body>
+</html>
