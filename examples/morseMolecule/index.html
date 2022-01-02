@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -473,6 +473,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -758,6 +760,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -980,7 +984,31 @@ allowfullscreen></iframe>
 <span class="normal">134</span>
 <span class="normal">135</span>
 <span class="normal">136</span>
-<span class="normal">137</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># paraview 5.9 VS 5.10 compatibility ===========================================</span>
+<span class="k">def</span> <span class="nf">ThresholdBetween</span><span class="p">(</span><span class="n">threshold</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># paraview 5.9</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="c1"># paraview 5.10</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="n">lower</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="n">upper</span>
+<span class="c1"># end of comphatibility =======================================================</span>
 
 <span class="c1"># create a new &#39;XML Image Data Reader&#39;</span>
 <span class="n">builtInExamplevti</span> <span class="o">=</span> <span class="n">XMLImageDataReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;BuiltInExample2.vti&#39;</span><span class="p">])</span>
@@ -1002,17 +1030,17 @@ allowfullscreen></iframe>
 <span class="c1"># Then select critical points of CellDimension 3 using &#39;Threshold&#39; to select maxima</span>
 <span class="n">threshold3</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKIcospheresFromPoints2</span><span class="p">)</span>
 <span class="n">threshold3</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;CellDimension&#39;</span><span class="p">]</span>
-<span class="n">threshold3</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold3</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 <span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;NumberOfCriticalPointsOnBoundary&#39;</span><span class="p">]</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold2</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold1</span><span class="p">)</span>
 <span class="n">threshold2</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;SeparatrixType&#39;</span><span class="p">]</span>
-<span class="n">threshold2</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold2</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;TTK GeometrySmoother&#39;</span>
 <span class="n">tTKGeometrySmoother1</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold2</span><span class="p">)</span>
@@ -1032,22 +1060,22 @@ allowfullscreen></iframe>
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold8</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 <span class="n">threshold8</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;SeparatrixType&#39;</span><span class="p">]</span>
-<span class="n">threshold8</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold8</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold9</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold8</span><span class="p">)</span>
 <span class="n">threshold9</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;NumberOfCriticalPointsOnBoundary&#39;</span><span class="p">]</span>
-<span class="n">threshold9</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold9</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold11</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold9</span><span class="p">)</span>
 <span class="n">threshold11</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;SeparatrixId&#39;</span><span class="p">]</span>
-<span class="n">threshold11</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">75.0</span><span class="p">,</span> <span class="mf">76.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold11</span><span class="p">,</span> <span class="mf">75.0</span><span class="p">,</span> <span class="mf">76.0</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold10</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold9</span><span class="p">)</span>
 <span class="n">threshold10</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;SeparatrixId&#39;</span><span class="p">]</span>
-<span class="n">threshold10</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">73.0</span><span class="p">,</span> <span class="mf">74.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold10</span><span class="p">,</span> <span class="mf">73.0</span><span class="p">,</span> <span class="mf">74.0</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Append Datasets&#39;</span>
 <span class="n">appendDatasets1</span> <span class="o">=</span> <span class="n">AppendDatasets</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="p">[</span><span class="n">threshold10</span><span class="p">,</span> <span class="n">threshold11</span><span class="p">])</span>
@@ -1070,7 +1098,7 @@ allowfullscreen></iframe>
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold4</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 <span class="n">threshold4</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;SeparatrixType&#39;</span><span class="p">]</span>
-<span class="n">threshold4</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold4</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Clean to Grid&#39;</span>
 <span class="n">cleantoGrid2</span> <span class="o">=</span> <span class="n">CleantoGrid</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold4</span><span class="p">)</span>
@@ -1088,17 +1116,17 @@ allowfullscreen></iframe>
 <span class="c1"># select 2-separatrices using &#39;Threshold&#39;</span>
 <span class="n">threshold5</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 <span class="n">threshold5</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;SeparatrixType&#39;</span><span class="p">]</span>
-<span class="n">threshold5</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold6</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold5</span><span class="p">)</span>
 <span class="n">threshold6</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;NumberOfCriticalPointsOnBoundary&#39;</span><span class="p">]</span>
-<span class="n">threshold6</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold6</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">)</span>
 
 <span class="c1"># select a particular 2-separatrix using &#39;Threshold&#39;</span>
 <span class="n">threshold7</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold6</span><span class="p">)</span>
 <span class="n">threshold7</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;SeparatrixId&#39;</span><span class="p">]</span>
-<span class="n">threshold7</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold7</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Clean to Grid&#39;</span>
 <span class="n">cleantoGrid3</span> <span class="o">=</span> <span class="n">CleantoGrid</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold7</span><span class="p">)</span>
@@ -1209,10 +1237,10 @@ allowfullscreen></iframe>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>
