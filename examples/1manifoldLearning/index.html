@@ -849,7 +849,7 @@
 <p>This simplified data is then used as the input of the computation of <a href="https://topology-tool-kit.github.io/doc/html/classttk_1_1MorseSmaleComplex.html">MorseSmaleComplex</a> (right view, above screenshot). This complex is composed of elements of 3 dimensions: dimension 0, which corresponds to the critical points of the Morse-Smale Complex, dimension 1, which corresponds to its edges and dimension 2, which corresponds to its surfaces. Only certain maximal edges are displayed here: using thresholds, the edges connecting at least one critical point situated in the boundary are discarded. This way, the "S" shape made by the point cloud is outlined.</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>$ paraview states/1manifoldLearning.pvsm
+<div class="highlight"><pre><span></span><code>$ paraview --state<span class="o">=</span>states/1manifoldLearning.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>

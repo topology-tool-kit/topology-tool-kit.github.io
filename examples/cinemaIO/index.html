@@ -854,7 +854,7 @@ picture-in-picture" allowfullscreen></iframe>
 <p><a href="https://topology-tool-kit.github.io/doc/html/classttkForEach.html">ForEach</a> is used to loop through all slices, and then the <a href="https://topology-tool-kit.github.io/doc/html/classttkArrayEditor.html">ArrayEditor</a> is used to add a FieldData value to each slice. In this case, we add the interval  <code>SampleInterval</code> between each queried entry. Each slice is then written to a new cinema database with the <a href="https://topology-tool-kit.github.io/doc/html/classttkCinemaWriter.html">CinemaWriter</a>. Finally, the for-loop is terminated using <a href="https://topology-tool-kit.github.io/doc/html/classttkEndFor.html">EndFor</a>.</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>$ paraview states/cinemaIO.pvsm
+<div class="highlight"><pre><span></span><code>$ paraview --state<span class="o">=</span>states/cinemaIO.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>

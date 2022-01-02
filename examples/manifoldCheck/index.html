@@ -901,7 +901,7 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
 <p>On each of the three geometries, <a href="https://topology-tool-kit.github.io/doc/html/classttkManifoldCheck.html">ManifoldCheck</a> is executed. This filters adds link numbers to vertices and cells, which can be used to detect and extract non-manifold vertices (left), edges (middle), and faces (right).</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>$ paraview states/manifoldChecks.pvsm
+<div class="highlight"><pre><span></span><code>$ paraview --state<span class="o">=</span>states/manifoldChecks.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <h3 id="non-manifold-vertices">Non-manifold Vertices<a class="headerlink" href="#non-manifold-vertices" title="Permanent link">&para;</a></h3>

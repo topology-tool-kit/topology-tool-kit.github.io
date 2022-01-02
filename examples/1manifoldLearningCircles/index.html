@@ -849,7 +849,7 @@
 <p>This simplified data is then used as the input of the computation of <a href="https://topology-tool-kit.github.io/doc/html/classttk_1_1MorseSmaleComplex.html">MorseSmaleComplex</a> (bottom right view, above screenshot). This complex is composed of elements of 3 dimensions: dimension 0, which corresponds to the critical points of the Morse-Smale Complex, dimension 1, which corresponds to its edges and dimension 2, which corresponds to its surfaces. The generators of the clusters are edges of the Morse-Smale Complex. Not all edges of the Complex are useful: using thresholds, only the separatrices connected to maxima are kept (<code>Separatrix = 1</code>). Then the edges with the field <code>SeparatrixFunctionMinimum</code> below a certain value (here 2) are also discarded. This corresponds to the two green and yellow generators (bottom right view, above screenshot).</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <code>ttk-data</code>  directory and enter the following command:
-<div class="highlight"><pre><span></span><code>$ paraview states/1manifoldLearningCircles.pvsm
+<div class="highlight"><pre><span></span><code>$ paraview --state<span class="o">=</span>states/1manifoldLearningCircles.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
