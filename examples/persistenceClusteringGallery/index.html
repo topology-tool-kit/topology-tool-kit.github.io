@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -18,14 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#009485">
         
       
     
@@ -51,13 +47,17 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="teal">
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
   
     
     <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -103,6 +103,15 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
     
     
     
@@ -608,6 +617,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -785,6 +796,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -899,7 +912,7 @@
 <p>From there a <a href="https://topology-tool-kit.github.io/doc/html/classttkMorseSmaleComplex.html">MorseSmaleComplex</a> is computed (bottom view in the above screenshot) then smoothed. Finally, by using the identifier of the 2-dimension cell of the Morse Smale complex where one point lands, a cluster is given to it.</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <code>ttk-data</code>  directory and enter the following command:
-<div class="highlight"><pre><span></span><code>$ paraview states/persistenceClusteringGallery.pvsm
+<div class="highlight"><pre><span></span><code>$ paraview --state<span class="o">=</span>states/persistenceClusteringGallery.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <h3 id="persistence-clusering-0">Persistence clusering 0<a class="headerlink" href="#persistence-clusering-0" title="Permanent link">&para;</a></h3>
@@ -953,9 +966,33 @@
 <span class="normal">48</span>
 <span class="normal">49</span>
 <span class="normal">50</span>
-<span class="normal">51</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># paraview 5.9 VS 5.10 compatibility ===========================================</span>
+<span class="k">def</span> <span class="nf">ThresholdBetween</span><span class="p">(</span><span class="n">threshold</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># paraview 5.9</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="c1"># paraview 5.10</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="n">lower</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="n">upper</span>
+<span class="c1"># end of comphatibility ========================================================</span>
 
 <span class="c1"># create a new &#39;CSV Reader&#39;</span>
 <span class="n">clustering0csv</span> <span class="o">=</span> <span class="n">CSVReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;clustering0.csv&#39;</span><span class="p">])</span>
@@ -987,7 +1024,7 @@
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">persistenceThreshold0</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
 <span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;Persistence&#39;</span><span class="p">]</span>
-<span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">9999.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">persistenceThreshold0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mi">999999999</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
 <span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span><span class="n">Domain</span><span class="o">=</span><span class="n">slice1</span><span class="p">,</span>
@@ -1063,7 +1100,31 @@
 <span class="normal">54</span>
 <span class="normal">55</span>
 <span class="normal">56</span>
-<span class="normal">57</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># paraview 5.9 VS 5.10 compatibility ===========================================</span>
+<span class="k">def</span> <span class="nf">ThresholdBetween</span><span class="p">(</span><span class="n">threshold</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># paraview 5.9</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="c1"># paraview 5.10</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="n">lower</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="n">upper</span>
+<span class="c1"># end of comphatibility ========================================================</span>
 
 <span class="c1"># create a new &#39;CSV Reader&#39;</span>
 <span class="n">clusteringcsv</span> <span class="o">=</span> <span class="n">CSVReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;clustering1.csv&quot;</span><span class="p">])</span>
@@ -1095,12 +1156,12 @@
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
 <span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;PairIdentifier&quot;</span><span class="p">]</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">999.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">999999999</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">persistenceThreshold0</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold1</span><span class="p">)</span>
 <span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;Persistence&quot;</span><span class="p">]</span>
-<span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">9999.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">persistenceThreshold0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mi">999999999</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
 <span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span>
@@ -1119,7 +1180,7 @@
 <span class="p">)</span>
 
 <span class="c1"># save the output(s)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;data1Resampled.csv&#39;</span><span class="p">,</span> <span class="n">resampleWithDataset1</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;OutputClustering.csv&#39;</span><span class="p">,</span> <span class="n">resampleWithDataset1</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <h3 id="persistence-clusering-2">Persistence clusering 2<a class="headerlink" href="#persistence-clusering-2" title="Permanent link">&para;</a></h3>
@@ -1179,7 +1240,31 @@
 <span class="normal">54</span>
 <span class="normal">55</span>
 <span class="normal">56</span>
-<span class="normal">57</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># paraview 5.9 VS 5.10 compatibility ===========================================</span>
+<span class="k">def</span> <span class="nf">ThresholdBetween</span><span class="p">(</span><span class="n">threshold</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># paraview 5.9</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="c1"># paraview 5.10</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="n">lower</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="n">upper</span>
+<span class="c1"># end of comphatibility ========================================================</span>
 
 <span class="c1"># create a new &#39;CSV Reader&#39;</span>
 <span class="n">clusteringcsv</span> <span class="o">=</span> <span class="n">CSVReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;clustering2.csv&#39;</span><span class="p">])</span>
@@ -1212,12 +1297,12 @@
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
 <span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;PairIdentifier&#39;</span><span class="p">]</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">999.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">999999999</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">persistenceThreshold0</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold1</span><span class="p">)</span>
 <span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;Persistence&#39;</span><span class="p">]</span>
-<span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">9999.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">persistenceThreshold0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mi">999999999</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
 <span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span><span class="n">Domain</span><span class="o">=</span><span class="n">slice1</span><span class="p">,</span>
@@ -1235,7 +1320,7 @@
 <span class="p">)</span>
 
 <span class="c1"># save the output(s)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;data2Resampled.csv&#39;</span><span class="p">,</span> <span class="n">resampleWithDataset1</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;OutputClustering.csv&#39;</span><span class="p">,</span> <span class="n">resampleWithDataset1</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <h3 id="persistence-clusering-3">Persistence clusering 3<a class="headerlink" href="#persistence-clusering-3" title="Permanent link">&para;</a></h3>
@@ -1295,7 +1380,30 @@
 <span class="normal">54</span>
 <span class="normal">55</span>
 <span class="normal">56</span>
-<span class="normal">57</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># paraview 5.9 VS 5.10 compatibility ===========================================</span>
+<span class="k">def</span> <span class="nf">ThresholdBetween</span><span class="p">(</span><span class="n">threshold</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># paraview 5.9</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="c1"># paraview 5.10</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="n">lower</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="n">upper</span>
+<span class="c1"># end of comphatibility ========================================================</span>
 
 <span class="c1"># create a new &#39;CSV Reader&#39;</span>
 <span class="n">clusteringcsv</span> <span class="o">=</span> <span class="n">CSVReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;clustering3.csv&#39;</span><span class="p">])</span>
@@ -1311,7 +1419,6 @@
 <span class="n">gaussianResampling1</span> <span class="o">=</span> <span class="n">GaussianResampling</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tableToPoints1</span><span class="p">)</span>
 <span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">ResampleField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;ignore arrays&#39;</span><span class="p">]</span>
 <span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">ResamplingGrid</span> <span class="o">=</span> <span class="p">[</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">GaussianSplatRadius</span> <span class="o">=</span> <span class="mf">0.05</span>
 <span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">SplatAccumulationMode</span> <span class="o">=</span> <span class="s1">&#39;Sum&#39;</span>
 
 <span class="c1"># create a new &#39;Slice&#39;</span>
@@ -1328,12 +1435,12 @@
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
 <span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;PairIdentifier&#39;</span><span class="p">]</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">999.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">999999999</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">persistenceThreshold0</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold1</span><span class="p">)</span>
 <span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;Persistence&#39;</span><span class="p">]</span>
-<span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">9999.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">persistenceThreshold0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mi">999999999</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
 <span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span><span class="n">Domain</span><span class="o">=</span><span class="n">slice1</span><span class="p">,</span>
@@ -1351,7 +1458,7 @@
 <span class="p">)</span>
 
 <span class="c1"># save the output(s)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;data1Resampled.csv&#39;</span><span class="p">,</span> <span class="n">resampleWithDataset1</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;OutputClustering.csv&#39;</span><span class="p">,</span> <span class="n">resampleWithDataset1</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <h3 id="persistence-clusering-4">Persistence clusering 4<a class="headerlink" href="#persistence-clusering-4" title="Permanent link">&para;</a></h3>
@@ -1411,7 +1518,31 @@
 <span class="normal">54</span>
 <span class="normal">55</span>
 <span class="normal">56</span>
-<span class="normal">57</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># paraview 5.9 VS 5.10 compatibility ===========================================</span>
+<span class="k">def</span> <span class="nf">ThresholdBetween</span><span class="p">(</span><span class="n">threshold</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># paraview 5.9</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="c1"># paraview 5.10</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="n">lower</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="n">upper</span>
+<span class="c1"># end of comphatibility ========================================================</span>
 
 <span class="c1"># create a new &#39;CSV Reader&#39;</span>
 <span class="n">clusteringcsv</span> <span class="o">=</span> <span class="n">CSVReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;clustering4.csv&#39;</span><span class="p">])</span>
@@ -1443,12 +1574,12 @@
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
 <span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;PairIdentifier&#39;</span><span class="p">]</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">999.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">999999999</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">persistenceThreshold0</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold1</span><span class="p">)</span>
 <span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;Persistence&#39;</span><span class="p">]</span>
-<span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">9999.0</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">persistenceThreshold0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mi">999999999</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
 <span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span><span class="n">Domain</span><span class="o">=</span><span class="n">slice1</span><span class="p">,</span>
@@ -1467,7 +1598,7 @@
 <span class="p">)</span>
 
 <span class="c1"># save the output(s)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;data4Resampled.csv&#39;</span><span class="p">,</span> <span class="n">resampleWithDataset1</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;OutputClustering.csv&#39;</span><span class="p">,</span> <span class="n">resampleWithDataset1</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
@@ -1547,10 +1678,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>
