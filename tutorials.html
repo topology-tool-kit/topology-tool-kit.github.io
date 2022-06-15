@@ -652,7 +652,7 @@ src="https://www.youtube.com/embed/7mlUzUJKA78" frameborder="0"
 allowfullscreen></iframe>
 <b>Update:</b>
 as of version 1.0.0, the TTK module "RangePolygon" is marked as
-deprecated, in favor of built-in ParaView filters. Instead, please use the filter "PolyLineSource" to create your polygon on top of the Continuous Scatter Plot (CFP). Next, to map the input bivariate data to your polygon, use the filter "ResampleWithDataset" (with the CSP as a source, and the polygon as a target). At this point, the output of "ResampleWithDataset" is a valid polygon input for the TTK module "FiberSurface" (and can fully replace the deprecated "RangePolygon").
+deprecated, in favor of built-in ParaView filters. Instead, please use the filter "PolyLineSource" to create your polygon on top of the Continuous Scatter Plot (CFP). Next, to map the input bivariate data to your polygon, use the filter "ResampleWithDataset" (with the CSP as a source, and the polygon as a target). Finally, apply the filter "Tetrahedralize", to transform the polygon into a simplicial representation. At this point, the output of "Tetrahedralize" is a valid polygon input for the TTK module "FiberSurface" (and can fully replace the deprecated "RangePolygon").
 <!--<video width="100%" controls poster="img/gallery/builtinExample2.jpg">
   <source 
 src="http://lip6.fr/Julien.Tierny/stuff/videos/builtin2_compressed1k.mp4" 
@@ -1456,7 +1456,7 @@ development guidelines</a>.
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on Jun. 13, 2022.</p>
+                    Updated on Jun. 15, 2022.</p>
                 </div>
             </div>
         </div>
