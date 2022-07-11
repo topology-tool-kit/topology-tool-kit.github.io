@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.4">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
     
     
       
@@ -17,19 +17,21 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bb3983ee.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
         
       
+      
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -54,7 +56,7 @@
   
     
     
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -79,11 +81,11 @@
     <a href=".." title="TTK Examples" class="md-header__button md-logo" aria-label="TTK Examples" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -114,7 +116,7 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -122,13 +124,13 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -174,7 +176,7 @@
     <a href=".." title="TTK Examples" class="md-nav__button md-logo" aria-label="TTK Examples" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     TTK Examples
@@ -834,6 +836,7 @@
               
                 
 
+
 <h1 id="uncertain-starting-vortex">Uncertain Starting Vortex<a class="headerlink" href="#uncertain-starting-vortex" title="Permanent link">&para;</a></h1>
 <!--[![Uncertain Starting Vortex example video tutorial](https://topology-tool-kit.github.io/img/gallery/uncertainStartingVortex.jpg)](https://youtu.be/18sxV6A5REA)-->
 
@@ -853,7 +856,7 @@ allowfullscreen></iframe>
 <div class="highlight"><pre><span></span><code>$ paraview --state<span class="o">=</span>states/uncertainStartingVortex.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -925,7 +928,19 @@ allowfullscreen></iframe>
 <span class="normal">70</span>
 <span class="normal">71</span>
 <span class="normal">72</span>
-<span class="normal">73</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
@@ -939,67 +954,78 @@ allowfullscreen></iframe>
         <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
         <span class="n">threshold</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="n">lower</span>
         <span class="n">threshold</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="n">upper</span>
+
+
 <span class="c1"># end of comphatibility ========================================================</span>
 
 <span class="c1"># create a new &#39;XML Image Data Reader&#39;</span>
-<span class="n">uncertainStartingVortexvti</span> <span class="o">=</span> <span class="n">XMLImageDataReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;uncertainStartingVortex.vti&#39;</span><span class="p">])</span>
+<span class="n">uncertainStartingVortexvti</span> <span class="o">=</span> <span class="n">XMLImageDataReader</span><span class="p">(</span>
+    <span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;uncertainStartingVortex.vti&quot;</span><span class="p">]</span>
+<span class="p">)</span>
 
 <span class="c1"># create a new &#39;TTK MandatoryCriticalPoints&#39;</span>
-<span class="n">tTKMandatoryCriticalPoints1</span> <span class="o">=</span> <span class="n">TTKMandatoryCriticalPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">uncertainStartingVortexvti</span><span class="p">)</span>
-<span class="n">tTKMandatoryCriticalPoints1</span><span class="o">.</span><span class="n">LowerBoundField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;lowerBoundField&#39;</span><span class="p">]</span>
-<span class="n">tTKMandatoryCriticalPoints1</span><span class="o">.</span><span class="n">UpperBoundField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;upperBoundField&#39;</span><span class="p">]</span>
+<span class="n">tTKMandatoryCriticalPoints1</span> <span class="o">=</span> <span class="n">TTKMandatoryCriticalPoints</span><span class="p">(</span>
+    <span class="n">Input</span><span class="o">=</span><span class="n">uncertainStartingVortexvti</span>
+<span class="p">)</span>
+<span class="n">tTKMandatoryCriticalPoints1</span><span class="o">.</span><span class="n">LowerBoundField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;lowerBoundField&quot;</span><span class="p">]</span>
+<span class="n">tTKMandatoryCriticalPoints1</span><span class="o">.</span><span class="n">UpperBoundField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;upperBoundField&quot;</span><span class="p">]</span>
 <span class="n">tTKMandatoryCriticalPoints1</span><span class="o">.</span><span class="n">NormalizedThreshold</span> <span class="o">=</span> <span class="mf">0.02</span>
 
 <span class="c1"># create a new &#39;Threshold&#39; for the Minimas</span>
 <span class="n">threshold6</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKMandatoryCriticalPoints1</span><span class="p">)</span>
-<span class="n">threshold6</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;MinimumComponents&#39;</span><span class="p">]</span>
+<span class="n">threshold6</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;MinimumComponents&quot;</span><span class="p">]</span>
 <span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold6</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Threshold&#39; for the maximas</span>
-<span class="n">threshold5</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMandatoryCriticalPoints1</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">threshold5</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;MaximumComponents&#39;</span><span class="p">]</span>
+<span class="n">threshold5</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMandatoryCriticalPoints1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">threshold5</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;MaximumComponents&quot;</span><span class="p">]</span>
 <span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Random Attributes&#39;</span>
 <span class="n">randomAttributes1</span> <span class="o">=</span> <span class="n">RandomAttributes</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">uncertainStartingVortexvti</span><span class="p">)</span>
-<span class="n">randomAttributes1</span><span class="o">.</span><span class="n">DataType</span> <span class="o">=</span> <span class="s1">&#39;Double&#39;</span>
+<span class="n">randomAttributes1</span><span class="o">.</span><span class="n">DataType</span> <span class="o">=</span> <span class="s2">&quot;Double&quot;</span>
 <span class="n">randomAttributes1</span><span class="o">.</span><span class="n">ComponentRange</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.999</span><span class="p">]</span>
 <span class="n">randomAttributes1</span><span class="o">.</span><span class="n">GeneratePointScalars</span> <span class="o">=</span> <span class="mi">1</span>
 
 <span class="c1"># create a new &#39;Calculator&#39;</span>
 <span class="n">calculator1</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">randomAttributes1</span><span class="p">)</span>
-<span class="n">calculator1</span><span class="o">.</span><span class="n">ResultArrayName</span> <span class="o">=</span> <span class="s1">&#39;realization0&#39;</span>
-<span class="n">calculator1</span><span class="o">.</span><span class="n">Function</span> <span class="o">=</span> <span class="s1">&#39;lowerBoundField+(upperBoundField-lowerBoundField)*RandomPointScalars&#39;</span>
+<span class="n">calculator1</span><span class="o">.</span><span class="n">ResultArrayName</span> <span class="o">=</span> <span class="s2">&quot;realization0&quot;</span>
+<span class="n">calculator1</span><span class="o">.</span><span class="n">Function</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;lowerBoundField+(upperBoundField-lowerBoundField)*RandomPointScalars&quot;</span>
+<span class="p">)</span>
 
 <span class="c1"># create a new &#39;TTK PersistenceDiagram&#39;</span>
 <span class="n">tTKPersistenceDiagram1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">calculator1</span><span class="p">)</span>
-<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;realization0&#39;</span><span class="p">]</span>
+<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;realization0&quot;</span><span class="p">]</span>
+<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">Backend</span> <span class="o">=</span> <span class="s2">&quot;FTM (IEEE TPSD 2019)&quot;</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold2</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
-<span class="n">threshold2</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;PairIdentifier&#39;</span><span class="p">]</span>
+<span class="n">threshold2</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;PairIdentifier&quot;</span><span class="p">]</span>
 <span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">185374.0</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">persistenceThreshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold2</span><span class="p">)</span>
-<span class="n">persistenceThreshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;Persistence&#39;</span><span class="p">]</span>
+<span class="n">persistenceThreshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;Persistence&quot;</span><span class="p">]</span>
 <span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">persistenceThreshold1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">1.75475390406744</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
-<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span><span class="n">Domain</span><span class="o">=</span><span class="n">calculator1</span><span class="p">,</span>
-    <span class="n">Constraints</span><span class="o">=</span><span class="n">persistenceThreshold1</span><span class="p">)</span>
-<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;realization0&#39;</span><span class="p">]</span>
+<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span>
+    <span class="n">Domain</span><span class="o">=</span><span class="n">calculator1</span><span class="p">,</span> <span class="n">Constraints</span><span class="o">=</span><span class="n">persistenceThreshold1</span>
+<span class="p">)</span>
+<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;realization0&quot;</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;TTK ScalarFieldCriticalPoints&#39;</span>
-<span class="n">tTKScalarFieldCriticalPoints1</span> <span class="o">=</span> <span class="n">TTKScalarFieldCriticalPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
-<span class="n">tTKScalarFieldCriticalPoints1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;realization0&#39;</span><span class="p">]</span>
+<span class="n">tTKScalarFieldCriticalPoints1</span> <span class="o">=</span> <span class="n">TTKScalarFieldCriticalPoints</span><span class="p">(</span>
+    <span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span>
+<span class="p">)</span>
+<span class="n">tTKScalarFieldCriticalPoints1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;realization0&quot;</span><span class="p">]</span>
 
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;PersistenceDiagram.vtu&#39;</span><span class="p">,</span> <span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;CriticalPoints.vtp&#39;</span><span class="p">,</span> <span class="n">tTKScalarFieldCriticalPoints1</span><span class="p">)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;MandatoryCriticalMinima.csv&#39;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMandatoryCriticalPoints1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;MandatoryCriticalMaxima.csv&#39;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMandatoryCriticalPoints1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-</code></pre></div>
-</td></tr></table>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;PersistenceDiagram.vtu&quot;</span><span class="p">,</span> <span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;CriticalPoints.vtp&quot;</span><span class="p">,</span> <span class="n">tTKScalarFieldCriticalPoints1</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;MandatoryCriticalMinima.csv&quot;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMandatoryCriticalPoints1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;MandatoryCriticalMaxima.csv&quot;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMandatoryCriticalPoints1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/uncertainStartingVortex.vti">uncertainStartingVortex.vti</a>: two two-dimensional scalar fields.</li>
@@ -1021,6 +1047,7 @@ in VTK file format (bottom right view, above screenshot). You are free to change
 
               
             </article>
+            
           </div>
         </div>
         
@@ -1028,12 +1055,13 @@ in VTK file format (bottom right view, above screenshot). You are free to change
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
         <a href="../tribute/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tribute to Edelsbrunner and Harer&#39;s book" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
@@ -1068,10 +1096,10 @@ in VTK file format (bottom right view, above screenshot). You are free to change
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.361d90f1.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.289a2a4b.min.js"></script>
+      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
       
     
   </body>

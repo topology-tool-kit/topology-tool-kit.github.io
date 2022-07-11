@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.4">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
     
     
       
@@ -17,19 +17,21 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bb3983ee.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
         
       
+      
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -54,7 +56,7 @@
   
     
     
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -79,11 +81,11 @@
     <a href=".." title="TTK Examples" class="md-header__button md-logo" aria-label="TTK Examples" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -114,7 +116,7 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -122,13 +124,13 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -174,7 +176,7 @@
     <a href=".." title="TTK Examples" class="md-nav__button md-logo" aria-label="TTK Examples" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     TTK Examples
@@ -888,6 +890,7 @@
               
                 
 
+
 <h1 id="manifold-check">Manifold Check<a class="headerlink" href="#manifold-check" title="Permanent link">&para;</a></h1>
 <p><img alt="Manifold check screenshot" src="https://topology-tool-kit.github.io/img/gallery/manifoldCheck.jpg" /></p>
 <h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
@@ -900,7 +903,7 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <h3 id="non-manifold-vertices">Non-manifold Vertices<a class="headerlink" href="#non-manifold-vertices" title="Permanent link">&para;</a></h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -928,11 +931,38 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
 <span class="normal">26</span>
 <span class="normal">27</span>
 <span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
+<span class="c1"># paraview 5.9 VS 5.10 compatibility ===========================================</span>
+<span class="k">def</span> <span class="nf">ThresholdBetween</span><span class="p">(</span><span class="n">threshold</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># paraview 5.9</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="c1"># paraview 5.10</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="n">lower</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="n">upper</span>
+
+
+<span class="c1"># end of comphatibility ========================================================</span>
+
 <span class="c1"># create a new &#39;XML Unstructured Grid Reader&#39;</span>
-<span class="n">manifoldCheck0vtu</span> <span class="o">=</span> <span class="n">XMLUnstructuredGridReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;manifoldCheck0.vtu&#39;</span><span class="p">])</span>
+<span class="n">manifoldCheck0vtu</span> <span class="o">=</span> <span class="n">XMLUnstructuredGridReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;manifoldCheck0.vtu&quot;</span><span class="p">])</span>
 
 <span class="c1"># create a new &#39;Tetrahedralize&#39;</span>
 <span class="n">tetrahedralize1</span> <span class="o">=</span> <span class="n">Tetrahedralize</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">manifoldCheck0vtu</span><span class="p">)</span>
@@ -950,17 +980,15 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="c1"># this extracts non-manifold vertices</span>
 <span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">maskPoints1</span><span class="p">)</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;VertexLinkComponentNumber&#39;</span><span class="p">]</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">2.0</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;VertexLinkComponentNumber&quot;</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 
 <span class="c1"># save the output</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;manifoldCheck0_check.vtu&#39;</span><span class="p">,</span> <span class="n">tTKManifoldCheck1</span><span class="p">)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;manifoldCheck0_non_manifold.vtu&#39;</span><span class="p">,</span> <span class="n">threshold1</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;manifoldCheck0_check.vtu&quot;</span><span class="p">,</span> <span class="n">tTKManifoldCheck1</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;manifoldCheck0_non_manifold.vtu&quot;</span><span class="p">,</span> <span class="n">threshold1</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="non-manifold-edges">Non-manifold Edges<a class="headerlink" href="#non-manifold-edges" title="Permanent link">&para;</a></h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -984,11 +1012,38 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
 <span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
+<span class="c1"># paraview 5.9 VS 5.10 compatibility ===========================================</span>
+<span class="k">def</span> <span class="nf">ThresholdBetween</span><span class="p">(</span><span class="n">threshold</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># paraview 5.9</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="c1"># paraview 5.10</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="n">lower</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="n">upper</span>
+
+
+<span class="c1"># end of comphatibility ========================================================</span>
+
 <span class="c1"># create a new &#39;XML Unstructured Grid Reader&#39;</span>
-<span class="n">manifoldCheck1vtu</span> <span class="o">=</span> <span class="n">XMLUnstructuredGridReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;manifoldCheck1.vtu&#39;</span><span class="p">])</span>
+<span class="n">manifoldCheck1vtu</span> <span class="o">=</span> <span class="n">XMLUnstructuredGridReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;manifoldCheck1.vtu&quot;</span><span class="p">])</span>
 
 <span class="c1"># create a new &#39;Tetrahedralize&#39;</span>
 <span class="n">tetrahedralize2</span> <span class="o">=</span> <span class="n">Tetrahedralize</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">manifoldCheck1vtu</span><span class="p">)</span>
@@ -1002,17 +1057,15 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="c1"># this extracts non-manifold edges</span>
 <span class="n">threshold2</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">extractEdges2</span><span class="p">)</span>
-<span class="n">threshold2</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;EdgeLinkComponentNumber&#39;</span><span class="p">]</span>
-<span class="n">threshold2</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">2.0</span>
-<span class="n">threshold2</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">threshold2</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;EdgeLinkComponentNumber&quot;</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold2</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 
 <span class="c1"># save the output</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;manifoldCheck1_check.vtu&#39;</span><span class="p">,</span> <span class="n">tTKManifoldCheck2</span><span class="p">)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;manifoldCheck1_non_manifold.vtu&#39;</span><span class="p">,</span> <span class="n">threshold2</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;manifoldCheck1_check.vtu&quot;</span><span class="p">,</span> <span class="n">tTKManifoldCheck2</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;manifoldCheck1_non_manifold.vtu&quot;</span><span class="p">,</span> <span class="n">threshold2</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="non-manifold-faces">Non-manifold Faces<a class="headerlink" href="#non-manifold-faces" title="Permanent link">&para;</a></h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1054,51 +1107,82 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
 <span class="normal">40</span>
 <span class="normal">41</span>
 <span class="normal">42</span>
-<span class="normal">43</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
+<span class="c1"># paraview 5.9 VS 5.10 compatibility ===========================================</span>
+<span class="k">def</span> <span class="nf">ThresholdBetween</span><span class="p">(</span><span class="n">threshold</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># paraview 5.9</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="c1"># paraview 5.10</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="n">lower</span>
+        <span class="n">threshold</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="n">upper</span>
+
+
+<span class="c1"># end of comphatibility ========================================================</span>
+
 <span class="c1"># create a new &#39;XML Unstructured Grid Reader&#39;</span>
-<span class="n">manifoldCheck2vtu</span> <span class="o">=</span> <span class="n">XMLUnstructuredGridReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;manifoldCheck2.vtu&#39;</span><span class="p">])</span>
+<span class="n">manifoldCheck2vtu</span> <span class="o">=</span> <span class="n">XMLUnstructuredGridReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;manifoldCheck2.vtu&quot;</span><span class="p">])</span>
 
 <span class="c1"># create a new &#39;Tetrahedralize&#39;</span>
-<span class="n">tetrahedralize3</span> <span class="o">=</span> <span class="n">Tetrahedralize</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s1">&#39;Tetrahedralize3&#39;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">manifoldCheck2vtu</span><span class="p">)</span>
+<span class="n">tetrahedralize3</span> <span class="o">=</span> <span class="n">Tetrahedralize</span><span class="p">(</span>
+    <span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;Tetrahedralize3&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">manifoldCheck2vtu</span>
+<span class="p">)</span>
 
 <span class="c1"># create a new &#39;TTK ManifoldCheck&#39;</span>
-<span class="n">tTKManifoldCheck3</span> <span class="o">=</span> <span class="n">TTKManifoldCheck</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s1">&#39;TTKManifoldCheck3&#39;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">tetrahedralize3</span><span class="p">)</span>
+<span class="n">tTKManifoldCheck3</span> <span class="o">=</span> <span class="n">TTKManifoldCheck</span><span class="p">(</span>
+    <span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;TTKManifoldCheck3&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">tetrahedralize3</span>
+<span class="p">)</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="c1"># this extracts tetrahedra that contain non-manifold faces</span>
-<span class="n">threshold3</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s1">&#39;Threshold3&#39;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">tTKManifoldCheck3</span><span class="p">)</span>
-<span class="n">threshold3</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;TriangleLinkComponentNumber&#39;</span><span class="p">]</span>
-<span class="n">threshold3</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">3.0</span>
-<span class="n">threshold3</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">threshold3</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;Threshold3&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">tTKManifoldCheck3</span><span class="p">)</span>
+<span class="n">threshold3</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;TriangleLinkComponentNumber&quot;</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold3</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Generate Ids&#39;</span>
-<span class="n">generateIds1</span> <span class="o">=</span> <span class="n">GenerateIds</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s1">&#39;GenerateIds1&#39;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">threshold3</span><span class="p">)</span>
-<span class="n">generateIds1</span><span class="o">.</span><span class="n">PointIdsArrayName</span> <span class="o">=</span> <span class="s1">&#39;VertexIdentifiers&#39;</span>
-<span class="n">generateIds1</span><span class="o">.</span><span class="n">CellIdsArrayName</span> <span class="o">=</span> <span class="s1">&#39;CellIdentifiers&#39;</span>
+<span class="n">generateIds1</span> <span class="o">=</span> <span class="n">GenerateIds</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;GenerateIds1&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">threshold3</span><span class="p">)</span>
+<span class="n">generateIds1</span><span class="o">.</span><span class="n">PointIdsArrayName</span> <span class="o">=</span> <span class="s2">&quot;VertexIdentifiers&quot;</span>
+<span class="n">generateIds1</span><span class="o">.</span><span class="n">CellIdsArrayName</span> <span class="o">=</span> <span class="s2">&quot;CellIdentifiers&quot;</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="c1"># select two of the tetrahedra</span>
-<span class="n">threshold4</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s1">&#39;Threshold4&#39;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">generateIds1</span><span class="p">)</span>
-<span class="n">threshold4</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;CellIdentifiers&#39;</span><span class="p">]</span>
-<span class="n">threshold4</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">threshold4</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;Threshold4&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">generateIds1</span><span class="p">)</span>
+<span class="n">threshold4</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;CellIdentifiers&quot;</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Extract Surface&#39;</span>
-<span class="n">extractSurface2</span> <span class="o">=</span> <span class="n">ExtractSurface</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s1">&#39;ExtractSurface2&#39;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">threshold4</span><span class="p">)</span>
+<span class="n">extractSurface2</span> <span class="o">=</span> <span class="n">ExtractSurface</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;ExtractSurface2&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">threshold4</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="c1"># this extracts non-manifold faces</span>
-<span class="n">threshold5</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s1">&#39;Threshold5&#39;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">extractSurface2</span><span class="p">)</span>
-<span class="n">threshold5</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;TriangleLinkComponentNumber&#39;</span><span class="p">]</span>
-<span class="n">threshold5</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">3.0</span>
-<span class="n">threshold5</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">threshold5</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;Threshold5&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">extractSurface2</span><span class="p">)</span>
+<span class="n">threshold5</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;TriangleLinkComponentNumber&quot;</span><span class="p">]</span>
+<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold5</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)</span>
 
 <span class="c1"># save the output</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;manifoldCheck2_check.vtu&#39;</span><span class="p">,</span> <span class="n">tTKManifoldCheck3</span><span class="p">)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;manifoldCheck2_non_manifold.vtu&#39;</span><span class="p">,</span> <span class="n">threshold5</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;manifoldCheck2_check.vtu&quot;</span><span class="p">,</span> <span class="n">tTKManifoldCheck3</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;manifoldCheck2_non_manifold.vtu&quot;</span><span class="p">,</span> <span class="n">threshold5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/manifoldCheck0.vtu">manifoldCheck0.vtu</a>: example mesh with non-manifold vertices</li>
@@ -1117,6 +1201,7 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
 
               
             </article>
+            
           </div>
         </div>
         
@@ -1124,12 +1209,13 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
         <a href="../karhunenLoveDigits64Dimensions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Karhunen-Love Digits 64-Dimensions" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
@@ -1153,7 +1239,7 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -1179,10 +1265,10 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.361d90f1.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.289a2a4b.min.js"></script>
+      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
       
     
   </body>
