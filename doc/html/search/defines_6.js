@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['flt_5fsignificant_5fdigits_9972',['FLT_SIGNIFICANT_DIGITS',['../Os_8h.html#a483e8427bc753aa48b8c08e3b0ad3748',1,'Os.h']]]
+  ['harmonicfield_5fspecialize_0',['HARMONICFIELD_SPECIALIZE',['../HarmonicField_8cpp.html#a4b600e491960ae7c6a2bf6b1bb64446a',1,'HarmonicField.cpp']]],
+  ['higher_1',['HIGHER',['../FTMTree__MT_8cpp.html#a4c48324c04ea9396e387804b3525b64b',1,'FTMTree_MT.cpp']]]
 ];

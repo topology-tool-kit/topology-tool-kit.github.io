@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ttk_201_2e0_20documentation_10020',['TTK 1.0 Documentation',['../index.html',1,'']]]
+  ['ttk_201_2e1_20documentation_0',['TTK 1.1 Documentation',['../index.html',1,'']]]
 ];

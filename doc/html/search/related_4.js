@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['sublevelsettree_9947',['SubLevelSetTree',['../classttk_1_1SuperArc.html#aa62216218fb1f3074213d37df00f3d76',1,'ttk::SuperArc::SubLevelSetTree()'],['../classttk_1_1Node.html#aa62216218fb1f3074213d37df00f3d76',1,'ttk::Node::SubLevelSetTree()'],['../classttk_1_1ContourTreeSimplificationMetric.html#aa62216218fb1f3074213d37df00f3d76',1,'ttk::ContourTreeSimplificationMetric::SubLevelSetTree()']]]
+  ['octree_0',['Octree',['../classOctreeNode.html#acc8a7ec8cf44f290482ad3d68f6a7719',1,'OctreeNode']]],
+  ['operator_3c_1',['operator&lt;',['../structttk_1_1DiscreteMorseSandwich_1_1Simplex.html#a0dfcde5bf1b3bdf022b16c38e36fb41c',1,'ttk::DiscreteMorseSandwich::Simplex']]],
+  ['operator_3c_3c_2',['operator&lt;&lt;',['../structttk_1_1SurfaceGeometrySmoother_1_1Point.html#a40a2c347e8c84ef40c1a170ab17fec47',1,'ttk::SurfaceGeometrySmoother::Point']]]
 ];
