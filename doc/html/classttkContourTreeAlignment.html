@@ -406,51 +406,54 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p >TTK VTK-filter that computes an alignment for a multiblock of contourtrees. </p>
 <dl class="section author"><dt>Author</dt><dd>Florian Wetzels (<a href="#" onclick="location.href='mai'+'lto:'+'f_w'+'et'+'zel'+'s1'+'3@c'+'s.'+'uni'+'-k'+'l.d'+'e'; return false;">f_wet<span style="display: none;">.nosp@m.</span>zels<span style="display: none;">.nosp@m.</span>13@cs<span style="display: none;">.nosp@m.</span>.uni<span style="display: none;">.nosp@m.</span>-kl.d<span style="display: none;">.nosp@m.</span>e</a>), Jonas Lukasczyk (<a href="#" onclick="location.href='mai'+'lto:'+'jl@'+'jl'+'uk.'+'de'; return false;">jl@jl<span style="display: none;">.nosp@m.</span>uk.d<span style="display: none;">.nosp@m.</span>e</a>) </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>28.01.2020</dd></dl>
-<p>VTK wrapping code for the <a class="el" href="classttk_1_1ContourTreeAlignment.html" title="TTK contourTreeAlignment processing package.">ttk::ContourTreeAlignment</a> package.</p>
-<p >This filter takes a multiblock of unstructured grids, where each block represents a contour tree, and computed the alignment of these contour trees. For each tree, a point array for the scalar vlues, a cell array for the region sizes of arcs and a cell array "for the segmentation ids of arcs
-are required. Contour trees computed by the FTMTree module fulfill these
-requirements and are the recommended way to use this filter.
+<p>This filter takes a multiblock of unstructured grids, where each block represents a contour tree, and computed the alignment of these contour trees. For each tree, a point array for the scalar values, a cell array for the region sizes of arcs and a cell array for the segmentation ids of arcs are required. Contour trees computed by the FTMTree module fulfill these requirements and are the recommended way to use this filter.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Input</td><td>vtkMultiBlockDataSet representing the contour trees to align </td></tr>
+    <tr><td class="paramname">Output</td><td>vtkUnstructuredGrid representing the alignment tree</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The input data array for the scalar values needs to be specified via the standard VTK call vtkAlgorithm::SetInputArrayToProcess() with the following parameters:</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>0 (FIXED: the first array the algorithm requires) </td></tr>
+    <tr><td class="paramname">port</td><td>0 (FIXED: first port) </td></tr>
+    <tr><td class="paramname">connection</td><td>0 (FIXED: first connection) </td></tr>
+    <tr><td class="paramname">fieldAssociation</td><td>0 (FIXED: point data) </td></tr>
+    <tr><td class="paramname">arrayName</td><td>(DYNAMIC: string identifier of the input array)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The input data array for the region sizes needs to be specified via the standard VTK call vtkAlgorithm::SetInputArrayToProcess() with the following parameters:</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>1 (FIXED: the second array the algorithm requires) </td></tr>
+    <tr><td class="paramname">port</td><td>0 (FIXED: first port)R </td></tr>
+    <tr><td class="paramname">connection</td><td>0 (FIXED: first connection) </td></tr>
+    <tr><td class="paramname">fieldAssociation</td><td>1 (FIXED: cell data) </td></tr>
+    <tr><td class="paramname">arrayName</td><td>(DYNAMIC: string identifier of the input array)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The input data array for the segmentation ids needs to be specified via the standard VTK call vtkAlgorithm::SetInputArrayToProcess() with the following parameters:</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>2 (FIXED: the third array the algorithm requires) </td></tr>
+    <tr><td class="paramname">port</td><td>0 (FIXED: first port) </td></tr>
+    <tr><td class="paramname">connection</td><td>0 (FIXED: first connection) </td></tr>
+    <tr><td class="paramname">fieldAssociation</td><td>1 (FIXED: cell data) </td></tr>
+    <tr><td class="paramname">arrayName</td><td>(DYNAMIC: string identifier of the input array)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>Related</b> <b>publication:</b> <br  />
+'Fuzzy contour trees: Alignment and joint layout of multiple contour trees' Anna Pia Lohfink, Florian Wetzels, Jonas Lukasczyk, Gunther H. Weber, and Christoph Garth. Comput. Graph. Forum, 39(3):343-355, 2020.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1ContourTreeAlignment.html" title="TTK contourTreeAlignment processing package.">ttk::ContourTreeAlignment</a></dd></dl>
+<p><b>Online</b> <b>examples:</b> <br  />
+</p><ul>
+<li><a href="https://topology-tool-kit.github.io/examples/contourTreeAlignment/">Contour Tree Alignment example</a> <br  />
+ </li>
+</ul>
 
-@param Input vtkMultiBlockDataSet representing the contour trees to align
-@param Output vtkUnstructuredGrid representing the alignment tree
-
-The input data array for the scalar values needs to be specified via the
-standard VTK call vtkAlgorithm::SetInputArrayToProcess() with the following
-parameters:@param idx 0 (FIXED: the first array the algorithm requires)
-@param port 0 (FIXED: first port)
-@param connection 0 (FIXED: first connection)
-@param fieldAssociation 0 (FIXED: point data)
-@param arrayName (DYNAMIC: string identifier of the input array)
-
-The input data array for the region sizes needs to be specified via the
-standard VTK call vtkAlgorithm::SetInputArrayToProcess() with the following
-parameters:@param idx 1 (FIXED: the second array the algorithm requires)
-@param port 0 (FIXED: first port)R
-@param connection 0 (FIXED: first connection)
-@param fieldAssociation 1 (FIXED: cell data)
-@param arrayName (DYNAMIC: string identifier of the input array)
-
-The input data array for the segmentation ids needs to be specified via the
-standard VTK call vtkAlgorithm::SetInputArrayToProcess() with the following
-parameters:@param idx 2 (FIXED: the third array the algorithm requires)
-@param port 0 (FIXED: first port)
-@param connection 0 (FIXED: first connection)
-@param fieldAssociation 1 (FIXED: cell data)
-@param arrayName (DYNAMIC: string identifier of the input array)
-
-\b Related \b publication: \n
-'Fuzzy contour trees: Alignment and joint layout of multiple contour trees'
-Anna Pia Lohfink, Florian Wetzels, Jonas Lukasczyk, Gunther H. Weber, and
-Christoph Garth. Comput. Graph. Forum, 39(3):343-355, 2020.
-
-\sa ttk::ContourTreeAlignment
-
-\b Online \b examples: \n
-  - &lt;a
-  href="<a href="https://topology-tool-kit.github.io/examples/contourTreeAlignment/">https://topology-tool-kit.github.io/examples/contourTreeAlignment/</a>"&gt; Contour Tree Alignment example <br  />
- </p>
-
-<p class="definition">Definition at line <a class="el" href="ttkContourTreeAlignment_8h_source.html#l00069">69</a> of file <a class="el" href="ttkContourTreeAlignment_8h_source.html">ttkContourTreeAlignment.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ttkContourTreeAlignment_8h_source.html#l00067">67</a> of file <a class="el" href="ttkContourTreeAlignment_8h_source.html">ttkContourTreeAlignment.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ab7a1963cd167324abff7ee21ff627fbc" name="ab7a1963cd167324abff7ee21ff627fbc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7a1963cd167324abff7ee21ff627fbc">&#9670;&nbsp;</a></span>Superclass</h2>
@@ -464,7 +467,7 @@ Christoph Garth. Comput. Graph. Forum, 39(3):343-355, 2020.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ttkContourTreeAlignment_8h_source.html#l00076">76</a> of file <a class="el" href="ttkContourTreeAlignment_8h_source.html">ttkContourTreeAlignment.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ttkContourTreeAlignment_8h_source.html#l00074">74</a> of file <a class="el" href="ttkContourTreeAlignment_8h_source.html">ttkContourTreeAlignment.h</a>.</p>
 
 </div>
 </div>
@@ -1232,13 +1235,13 @@ Christoph Garth. Comput. Graph. Forum, 39(3):343-355, 2020.
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/data/julien/git/github/ttk-tierny/core/vtk/ttkContourTreeAlignment/<a class="el" href="ttkContourTreeAlignment_8h_source.html">ttkContourTreeAlignment.h</a></li>
-<li>/data/julien/git/github/ttk-tierny/core/vtk/ttkContourTreeAlignment/<a class="el" href="ttkContourTreeAlignment_8cpp_source.html">ttkContourTreeAlignment.cpp</a></li>
+<li>/home/julien/Pro/git/github/ttk-tierny/core/vtk/ttkContourTreeAlignment/<a class="el" href="ttkContourTreeAlignment_8h_source.html">ttkContourTreeAlignment.h</a></li>
+<li>/home/julien/Pro/git/github/ttk-tierny/core/vtk/ttkContourTreeAlignment/<a class="el" href="ttkContourTreeAlignment_8cpp_source.html">ttkContourTreeAlignment.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 11 2022 10:31:20 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+Generated on Wed Jul 13 2022 22:09:14 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>

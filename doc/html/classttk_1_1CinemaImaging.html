@@ -70,9 +70,12 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classttk_1_1CinemaImaging-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">ttk::CinemaImaging Class Reference</div></div>
+  <div class="headertitle"><div class="title">ttk::CinemaImaging Class Reference<div class="ingroups"><a class="el" href="group__base.html">base</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>TTK modules that generates images of a dataset.  
+ <a href="classttk_1_1CinemaImaging.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="CinemaImaging_8h_source.html">CinemaImaging.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -176,8 +179,17 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a60efc2e439eb661a6d6978b9e7ea5f7a inherit pro_static_attribs_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="CinemaImaging_8h_source.html#l00009">9</a> of file <a class="el" href="CinemaImaging_8h_source.html">CinemaImaging.h</a>.</p>
+<div class="textblock"><p >TTK modules that generates images of a dataset. </p>
+<dl class="section author"><dt>Author</dt><dd>Jonas Lukasczyk <a href="#" onclick="location.href='mai'+'lto:'+'jl@'+'jl'+'uk.'+'de'; return false;">jl@jl<span style="display: none;">.nosp@m.</span>uk.d<span style="display: none;">.nosp@m.</span>e</a> </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>1.9.2018</dd></dl>
+<p>This module takes images of a dataset from positions specified on a point set. Each image will be a block of a multi-blocks where block order corresponds to point order. Each sample point can optionally have double arrays to override the rendering parameters, i.e, the resolution, focus, clipping planes, and viewport height.</p>
+<p ><b>Online</b> <b>examples:</b> <br  />
+</p><ul>
+<li><a href="https://topology-tool-kit.github.io/examples/geometryApproximation/">Geometry Approximation example</a> <br  />
+ </li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="CinemaImaging_8h_source.html#l00027">27</a> of file <a class="el" href="CinemaImaging_8h_source.html">CinemaImaging.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="acad4daa7c72d082a635b4e9b4372b4bf" name="acad4daa7c72d082a635b4e9b4372b4bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acad4daa7c72d082a635b4e9b4372b4bf">&#9670;&nbsp;</a></span>interpolateArray()</h2>
@@ -243,7 +255,7 @@ template&lt;typename DT , typename IT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CinemaImaging_8h_source.html#l00044">44</a> of file <a class="el" href="CinemaImaging_8h_source.html">CinemaImaging.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CinemaImaging_8h_source.html#l00062">62</a> of file <a class="el" href="CinemaImaging_8h_source.html">CinemaImaging.h</a>.</p>
 
 </div>
 </div>
@@ -299,7 +311,7 @@ template&lt;typename DT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CinemaImaging_8h_source.html#l00086">86</a> of file <a class="el" href="CinemaImaging_8h_source.html">CinemaImaging.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CinemaImaging_8h_source.html#l00104">104</a> of file <a class="el" href="CinemaImaging_8h_source.html">CinemaImaging.h</a>.</p>
 
 </div>
 </div>
@@ -326,17 +338,17 @@ template&lt;typename DT &gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">{</div>
 <div class="line">      std::numeric_limits&lt;unsigned int&gt;::max()}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="CinemaImaging_8h_source.html#l00011">11</a> of file <a class="el" href="CinemaImaging_8h_source.html">CinemaImaging.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CinemaImaging_8h_source.html#l00029">29</a> of file <a class="el" href="CinemaImaging_8h_source.html">CinemaImaging.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/data/julien/git/github/ttk-tierny/core/base/cinemaImaging/<a class="el" href="CinemaImaging_8h_source.html">CinemaImaging.h</a></li>
+<li>/home/julien/Pro/git/github/ttk-tierny/core/base/cinemaImaging/<a class="el" href="CinemaImaging_8h_source.html">CinemaImaging.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 11 2022 10:31:21 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+Generated on Wed Jul 13 2022 22:09:18 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>

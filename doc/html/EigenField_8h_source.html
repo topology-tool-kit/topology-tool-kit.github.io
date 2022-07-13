@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /data/julien/git/github/ttk-tierny/core/base/eigenField/EigenField.h Source File</title>
+<title>TTK: /home/julien/Pro/git/github/ttk-tierny/core/base/eigenField/EigenField.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,39 +70,39 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="EigenField_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// base code includes</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="Debug_8h.html">Debug.h</a>&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="Geometry_8h.html">Geometry.h</a>&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="Laplacian_8h.html">Laplacian.h</a>&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;<a class="code" href="Triangulation_8h.html">Triangulation.h</a>&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacettk.html">ttk</a> {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classttk_1_1EigenField.html">   22</a></span>  <span class="keyword">class </span><a class="code hl_class" href="classttk_1_1EigenField.html">EigenField</a> : <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code hl_class" href="classttk_1_1Debug.html">Debug</a> {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classttk_1_1EigenField.html#a0af85cde9a96eea5e3663fe832573403">   24</a></span>    <a class="code hl_function" href="classttk_1_1EigenField.html#a0af85cde9a96eea5e3663fe832573403">EigenField</a>() {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#a9239e36b0745881da1753f97ad8f0105">setDebugMsgPrefix</a>(<span class="stringliteral">&quot;EigenField&quot;</span>);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classttk_1_1EigenField.html#a5c0fc39f410bdfd014e296771838aec3">   29</a></span>      <a class="code hl_function" href="classttk_1_1EigenField.html#a5c0fc39f410bdfd014e296771838aec3">preconditionTriangulation</a>(<a class="code hl_class" href="classttk_1_1AbstractTriangulation.html">AbstractTriangulation</a> &amp;triangulation)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      triangulation.<a class="code hl_function" href="classttk_1_1AbstractTriangulation.html#a46b37180ac5a6c65fd3367b75fde671b">preconditionVertexNeighbors</a>();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <span class="comment">// cotan weights method needs more pre-processing</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      triangulation.<a class="code hl_function" href="classttk_1_1AbstractTriangulation.html#a541de36cf02a8f42ea828d4d052604ed">preconditionEdgeTriangles</a>();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">class</span> TriangulationType = AbstractTriangulation&gt;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classttk_1_1EigenField.html#afa2778a2b68326f9b2f7d4c4493ba874">execute</a>(<span class="keyword">const</span> TriangulationType &amp;triangulation,</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                T *<span class="keyword">const</span> outputFieldPointer,</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> eigenNumber = 500,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                <span class="keywordtype">bool</span> computeStatistics = <span class="keyword">false</span>,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                T *<span class="keyword">const</span> outputStatistics = <span class="keyword">nullptr</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  };</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>} <span class="comment">// namespace ttk</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// base code includes</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="Debug_8h.html">Debug.h</a>&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="Geometry_8h.html">Geometry.h</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="Laplacian_8h.html">Laplacian.h</a>&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="Triangulation_8h.html">Triangulation.h</a>&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacettk.html">ttk</a> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classttk_1_1EigenField.html">   36</a></span>  <span class="keyword">class </span><a class="code hl_class" href="classttk_1_1EigenField.html">EigenField</a> : <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code hl_class" href="classttk_1_1Debug.html">Debug</a> {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classttk_1_1EigenField.html#a0af85cde9a96eea5e3663fe832573403">   38</a></span>    <a class="code hl_function" href="classttk_1_1EigenField.html#a0af85cde9a96eea5e3663fe832573403">EigenField</a>() {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#a9239e36b0745881da1753f97ad8f0105">setDebugMsgPrefix</a>(<span class="stringliteral">&quot;EigenField&quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classttk_1_1EigenField.html#a5c0fc39f410bdfd014e296771838aec3">   43</a></span>      <a class="code hl_function" href="classttk_1_1EigenField.html#a5c0fc39f410bdfd014e296771838aec3">preconditionTriangulation</a>(<a class="code hl_class" href="classttk_1_1AbstractTriangulation.html">AbstractTriangulation</a> &amp;triangulation)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      triangulation.<a class="code hl_function" href="classttk_1_1AbstractTriangulation.html#a46b37180ac5a6c65fd3367b75fde671b">preconditionVertexNeighbors</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <span class="comment">// cotan weights method needs more pre-processing</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      triangulation.<a class="code hl_function" href="classttk_1_1AbstractTriangulation.html#a541de36cf02a8f42ea828d4d052604ed">preconditionEdgeTriangles</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">class</span> TriangulationType = AbstractTriangulation&gt;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classttk_1_1EigenField.html#afa2778a2b68326f9b2f7d4c4493ba874">execute</a>(<span class="keyword">const</span> TriangulationType &amp;triangulation,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                T *<span class="keyword">const</span> outputFieldPointer,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> eigenNumber = 500,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                <span class="keywordtype">bool</span> computeStatistics = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                T *<span class="keyword">const</span> outputStatistics = <span class="keyword">nullptr</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  };</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">// namespace ttk</span></div>
 <div class="ttc" id="aDebug_8h_html"><div class="ttname"><a href="Debug_8h.html">Debug.h</a></div></div>
 <div class="ttc" id="aGeometry_8h_html"><div class="ttname"><a href="Geometry_8h.html">Geometry.h</a></div></div>
 <div class="ttc" id="aLaplacian_8h_html"><div class="ttname"><a href="Laplacian_8h.html">Laplacian.h</a></div></div>
@@ -112,15 +112,15 @@ $(function() {
 <div class="ttc" id="aclassttk_1_1AbstractTriangulation_html_a541de36cf02a8f42ea828d4d052604ed"><div class="ttname"><a href="classttk_1_1AbstractTriangulation.html#a541de36cf02a8f42ea828d4d052604ed">ttk::AbstractTriangulation::preconditionEdgeTriangles</a></div><div class="ttdeci">virtual int preconditionEdgeTriangles()</div><div class="ttdef"><b>Definition:</b> <a href="AbstractTriangulation_8h_source.html#l02116">AbstractTriangulation.h:2116</a></div></div>
 <div class="ttc" id="aclassttk_1_1Debug_html"><div class="ttname"><a href="classttk_1_1Debug.html">ttk::Debug</a></div><div class="ttdoc">Minimalist debugging class.</div><div class="ttdef"><b>Definition:</b> <a href="Debug_8h_source.html#l00087">Debug.h:87</a></div></div>
 <div class="ttc" id="aclassttk_1_1Debug_html_a9239e36b0745881da1753f97ad8f0105"><div class="ttname"><a href="classttk_1_1Debug.html#a9239e36b0745881da1753f97ad8f0105">ttk::Debug::setDebugMsgPrefix</a></div><div class="ttdeci">void setDebugMsgPrefix(const std::string &amp;prefix)</div><div class="ttdef"><b>Definition:</b> <a href="Debug_8h_source.html#l00361">Debug.h:361</a></div></div>
-<div class="ttc" id="aclassttk_1_1EigenField_html"><div class="ttname"><a href="classttk_1_1EigenField.html">ttk::EigenField</a></div><div class="ttdoc">TTK processing package for computing eigenfunctions of a triangular mesh.</div><div class="ttdef"><b>Definition:</b> <a href="EigenField_8h_source.html#l00022">EigenField.h:22</a></div></div>
-<div class="ttc" id="aclassttk_1_1EigenField_html_a0af85cde9a96eea5e3663fe832573403"><div class="ttname"><a href="classttk_1_1EigenField.html#a0af85cde9a96eea5e3663fe832573403">ttk::EigenField::EigenField</a></div><div class="ttdeci">EigenField()</div><div class="ttdef"><b>Definition:</b> <a href="EigenField_8h_source.html#l00024">EigenField.h:24</a></div></div>
-<div class="ttc" id="aclassttk_1_1EigenField_html_a5c0fc39f410bdfd014e296771838aec3"><div class="ttname"><a href="classttk_1_1EigenField.html#a5c0fc39f410bdfd014e296771838aec3">ttk::EigenField::preconditionTriangulation</a></div><div class="ttdeci">void preconditionTriangulation(AbstractTriangulation &amp;triangulation) const</div><div class="ttdef"><b>Definition:</b> <a href="EigenField_8h_source.html#l00029">EigenField.h:29</a></div></div>
+<div class="ttc" id="aclassttk_1_1EigenField_html"><div class="ttname"><a href="classttk_1_1EigenField.html">ttk::EigenField</a></div><div class="ttdoc">TTK processing package for computing eigenfunctions of a triangular mesh.</div><div class="ttdef"><b>Definition:</b> <a href="EigenField_8h_source.html#l00036">EigenField.h:36</a></div></div>
+<div class="ttc" id="aclassttk_1_1EigenField_html_a0af85cde9a96eea5e3663fe832573403"><div class="ttname"><a href="classttk_1_1EigenField.html#a0af85cde9a96eea5e3663fe832573403">ttk::EigenField::EigenField</a></div><div class="ttdeci">EigenField()</div><div class="ttdef"><b>Definition:</b> <a href="EigenField_8h_source.html#l00038">EigenField.h:38</a></div></div>
+<div class="ttc" id="aclassttk_1_1EigenField_html_a5c0fc39f410bdfd014e296771838aec3"><div class="ttname"><a href="classttk_1_1EigenField.html#a5c0fc39f410bdfd014e296771838aec3">ttk::EigenField::preconditionTriangulation</a></div><div class="ttdeci">void preconditionTriangulation(AbstractTriangulation &amp;triangulation) const</div><div class="ttdef"><b>Definition:</b> <a href="EigenField_8h_source.html#l00043">EigenField.h:43</a></div></div>
 <div class="ttc" id="aclassttk_1_1EigenField_html_afa2778a2b68326f9b2f7d4c4493ba874"><div class="ttname"><a href="classttk_1_1EigenField.html#afa2778a2b68326f9b2f7d4c4493ba874">ttk::EigenField::execute</a></div><div class="ttdeci">int execute(const TriangulationType &amp;triangulation, T *const outputFieldPointer, const unsigned int eigenNumber=500, bool computeStatistics=false, T *const outputStatistics=nullptr) const</div><div class="ttdef"><b>Definition:</b> <a href="EigenField_8cpp_source.html#l00015">EigenField.cpp:15</a></div></div>
 <div class="ttc" id="anamespacettk_html"><div class="ttname"><a href="namespacettk.html">ttk</a></div><div class="ttdoc">The Topology ToolKit.</div><div class="ttdef"><b>Definition:</b> <a href="AbstractTriangulation_8h_source.html#l00051">AbstractTriangulation.h:51</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 11 2022 10:31:18 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+Generated on Wed Jul 13 2022 22:09:06 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>

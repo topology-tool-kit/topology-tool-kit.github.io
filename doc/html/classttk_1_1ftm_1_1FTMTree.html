@@ -69,9 +69,12 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classttk_1_1ftm_1_1FTMTree-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">ttk::ftm::FTMTree Class Reference</div></div>
+  <div class="headertitle"><div class="title">ttk::ftm::FTMTree Class Reference<div class="ingroups"><a class="el" href="group__base.html">base</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>TTK processing package that efficiently computes the contour tree of scalar data and more (data segmentation, topological simplification, persistence diagrams, persistence curves, etc.).  
+ <a href="classttk_1_1ftm_1_1FTMTree.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="FTMTree_8h_source.html">FTMTree.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -583,9 +586,34 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a60efc2e439eb661a6d6978b9e7ea5f7a inherit pro_static_attribs_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Compute the join tree, split tree or contour tree of a function on a triangulation. TTK assumes that the input dataset is made of only one connected component. </p>
+<div class="textblock"><p >TTK processing package that efficiently computes the contour tree of scalar data and more (data segmentation, topological simplification, persistence diagrams, persistence curves, etc.). </p>
+<p >Compute the join tree, split tree or contour tree of a function on a triangulation. TTK assumes that the input dataset is made of only one connected component.</p>
+<dl class="section author"><dt>Author</dt><dd>Charles Gueunet <a href="#" onclick="location.href='mai'+'lto:'+'cha'+'rl'+'es.'+'gu'+'eun'+'et'+'@li'+'p6'+'.fr'; return false;">charl<span style="display: none;">.nosp@m.</span>es.g<span style="display: none;">.nosp@m.</span>ueune<span style="display: none;">.nosp@m.</span>t@li<span style="display: none;">.nosp@m.</span>p6.fr</a> </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>December 2016.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataType</td><td>Data type of the input scalar field (char, float, etc.).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ttkFTMTree_8cpp.html">ttkFTMTree.cpp</a> for a usage example.</dd></dl>
+<p><b>Online</b> <b>examples:</b> <br  />
+</p><ul>
+<li><a href="https://topology-tool-kit.github.io/examples/contourTreeAlignment/">Contour Tree Alignment example</a> <br  />
+</li>
+<li><a href="https://topology-tool-kit.github.io/examples/ctBones/">CT Bones example</a> <br  />
+</li>
+<li><a href="https://topology-tool-kit.github.io/examples/dragon/">Dragon example</a><br  />
+</li>
+<li><a href="https://topology-tool-kit.github.io/examples/interactionSites/">Interaction sites</a> <br  />
+</li>
+<li><a href="https://topology-tool-kit.github.io/examples/mergeTreeClustering/">Merge Tree Clustering example</a> <br  />
+</li>
+<li><a href="https://topology-tool-kit.github.io/examples/mergeTreeTemporalReduction/">Merge Tree Temporal Reduction</a> <br  />
+ </li>
+</ul>
 
-<p class="definition">Definition at line <a class="el" href="FTMTree_8h_source.html#l00032">32</a> of file <a class="el" href="FTMTree_8h_source.html">FTMTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FTMTree_8h_source.html#l00050">50</a> of file <a class="el" href="FTMTree_8h_source.html">FTMTree.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad14b7b5318da2af9f0fdb103939b2386" name="ad14b7b5318da2af9f0fdb103939b2386"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad14b7b5318da2af9f0fdb103939b2386">&#9670;&nbsp;</a></span>FTMTree()</h2>
@@ -657,14 +685,14 @@ template&lt;typename scalarType , class triangulationType &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/data/julien/git/github/ttk-tierny/core/base/ftmTree/<a class="el" href="FTMTree_8h_source.html">FTMTree.h</a></li>
-<li>/data/julien/git/github/ttk-tierny/core/base/ftmTree/<a class="el" href="FTMTree_8cpp_source.html">FTMTree.cpp</a></li>
-<li>/data/julien/git/github/ttk-tierny/core/base/ftmTree/<a class="el" href="FTMTree__Template_8h_source.html">FTMTree_Template.h</a></li>
+<li>/home/julien/Pro/git/github/ttk-tierny/core/base/ftmTree/<a class="el" href="FTMTree_8h_source.html">FTMTree.h</a></li>
+<li>/home/julien/Pro/git/github/ttk-tierny/core/base/ftmTree/<a class="el" href="FTMTree_8cpp_source.html">FTMTree.cpp</a></li>
+<li>/home/julien/Pro/git/github/ttk-tierny/core/base/ftmTree/<a class="el" href="FTMTree__Template_8h_source.html">FTMTree_Template.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 11 2022 10:31:21 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+Generated on Wed Jul 13 2022 22:09:22 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>

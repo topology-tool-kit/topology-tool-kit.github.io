@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /data/julien/git/github/ttk-tierny/core/vtk/ttkFTMTree/ttkFTMTree.h Source File</title>
+<title>TTK: /home/julien/Pro/git/github/ttk-tierny/core/vtk/ttkFTMTree/ttkFTMTree.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,147 +70,147 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="ttkFTMTree_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">// VTK includes</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#include &lt;vtkSmartPointer.h&gt;</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">// VTK module</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#include &lt;ttkFTMTreeModule.h&gt;</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">// ttk code includes</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#include &lt;<a class="code" href="FTMTree_8h.html">FTMTree.h</a>&gt;</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#include &lt;<a class="code" href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a>&gt;</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#include &lt;<a class="code" href="ttkFTMStructures_8h.html">ttkFTMStructures.h</a>&gt;</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keyword">class </span>vtkDataSet;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">// VTK includes</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#include &lt;vtkSmartPointer.h&gt;</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">// VTK module</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#include &lt;ttkFTMTreeModule.h&gt;</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">// ttk code includes</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#include &lt;<a class="code" href="FTMTree_8h.html">FTMTree.h</a>&gt;</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#include &lt;<a class="code" href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a>&gt;</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#include &lt;<a class="code" href="ttkFTMStructures_8h.html">ttkFTMStructures.h</a>&gt;</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classttkFTMTree.html">   85</a></span><span class="keyword">class </span>TTKFTMTREE_EXPORT <a class="code hl_class" href="classttkFTMTree.html">ttkFTMTree</a> : <span class="keyword">public</span> <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a> {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword">class </span>vtkDataSet;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a1ec0ea644e87e63531b32adbebad922b">   88</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classttkFTMTree.html">ttkFTMTree</a> *<a class="code hl_function" href="classttkFTMTree.html#a1ec0ea644e87e63531b32adbebad922b">New</a>();</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a7f90b86401dff63da641a4a8919e8fc2">   90</a></span>  vtkTypeMacro(<a class="code hl_class" href="classttkFTMTree.html">ttkFTMTree</a>, <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classttkFTMTree.html">   87</a></span><span class="keyword">class </span>TTKFTMTREE_EXPORT <a class="code hl_class" href="classttkFTMTree.html">ttkFTMTree</a> : <span class="keyword">public</span> <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a> {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a1ec0ea644e87e63531b32adbebad922b">   90</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classttkFTMTree.html">ttkFTMTree</a> *<a class="code hl_function" href="classttkFTMTree.html#a1ec0ea644e87e63531b32adbebad922b">New</a>();</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a85ec07237a1796cef4632469119ea53f">   94</a></span>  vtkGetMacro(ForceInputOffsetScalarField, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a339ca25b2b3b1f8e2faba810b1704291">   95</a></span>  vtkSetMacro(ForceInputOffsetScalarField, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="comment">// Parameters uses a structure, we can&#39;t use vtkMacro on them</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a7f90b86401dff63da641a4a8919e8fc2">   92</a></span>  vtkTypeMacro(<a class="code hl_class" href="classttkFTMTree.html">ttkFTMTree</a>, <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a85ec07237a1796cef4632469119ea53f">   96</a></span>  vtkGetMacro(ForceInputOffsetScalarField, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a339ca25b2b3b1f8e2faba810b1704291">   97</a></span>  vtkSetMacro(ForceInputOffsetScalarField, <span class="keywordtype">bool</span>);</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#ab895f03b9b878c7eb690306fecf8a2bc">  102</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkFTMTree.html#ab895f03b9b878c7eb690306fecf8a2bc">SetTreeType</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> type) {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    params_.treeType = (<a class="code hl_enumeration" href="namespacettk_1_1ftm.html#a50fb2f892ab92b84f0d827e3993b5a2b">ttk::ftm::TreeType</a>)type;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    Modified();</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  }</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a97ba6a346f4f279a2d1934e98c6f4b08">  106</a></span>  <a class="code hl_enumeration" href="namespacettk_1_1ftm.html#a50fb2f892ab92b84f0d827e3993b5a2b">ttk::ftm::TreeType</a> <a class="code hl_function" href="classttkFTMTree.html#a97ba6a346f4f279a2d1934e98c6f4b08">GetTreeType</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">return</span> params_.treeType;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  }</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#aba3ad78436ba2e5b720ae04d8f61b7b9">  113</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkFTMTree.html#aba3ad78436ba2e5b720ae04d8f61b7b9">SetWithSegmentation</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> segm) {</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    params_.segm = segm;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    Modified();</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  }</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a45215c03ad61b2d32bb0f46918e49956">  117</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classttkFTMTree.html#a45215c03ad61b2d32bb0f46918e49956">GetWithSegmentation</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">return</span> params_.segm;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  }</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#aedea6997513f7af15293dd98c3990692">  125</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkFTMTree.html#aedea6997513f7af15293dd98c3990692">SetWithNormalize</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> norm) {</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    params_.normalize = norm;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    Modified();</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  }</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#ac5575f3913cfeb76107a7887f43627ed">  129</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classttkFTMTree.html#ac5575f3913cfeb76107a7887f43627ed">GetWithNormalize</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">return</span> params_.normalize;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  }</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#abb7a4904b22e381e89a33ee636b1f9a7">  137</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkFTMTree.html#abb7a4904b22e381e89a33ee636b1f9a7">SetWithAdvStats</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> adv) {</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    params_.advStats = adv;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    Modified();</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  }</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a3c54afbe98e70bf52598a1c5d11a4200">  141</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classttkFTMTree.html#a3c54afbe98e70bf52598a1c5d11a4200">GetWithAdvStats</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">return</span> params_.advStats;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  }</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a0166acdb3c95ed63725fb0eec5f90268">  148</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkFTMTree.html#a0166acdb3c95ed63725fb0eec5f90268">SetSuperArcSamplingLevel</a>(<span class="keywordtype">int</span> lvl) {</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    params_.samplingLvl = lvl;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    Modified();</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  }</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a6ff65b47672eeebc2de4b824b2156623">  152</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkFTMTree.html#a6ff65b47672eeebc2de4b824b2156623">GetSuperArcSamplingLevel</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordflow">return</span> params_.samplingLvl;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  }</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="keywordtype">int</span> preconditionTriangulation();</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keywordtype">int</span> getScalars();</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="keywordtype">int</span> getOffsets();</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <span class="keywordtype">int</span> getSkeletonNodes(vtkUnstructuredGrid *outputSkeletonNodes);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="comment">// Parameters uses a structure, we can&#39;t use vtkMacro on them</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#ab895f03b9b878c7eb690306fecf8a2bc">  104</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkFTMTree.html#ab895f03b9b878c7eb690306fecf8a2bc">SetTreeType</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> type) {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    params_.treeType = (<a class="code hl_enumeration" href="namespacettk_1_1ftm.html#a50fb2f892ab92b84f0d827e3993b5a2b">ttk::ftm::TreeType</a>)type;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    Modified();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a97ba6a346f4f279a2d1934e98c6f4b08">  108</a></span>  <a class="code hl_enumeration" href="namespacettk_1_1ftm.html#a50fb2f892ab92b84f0d827e3993b5a2b">ttk::ftm::TreeType</a> <a class="code hl_function" href="classttkFTMTree.html#a97ba6a346f4f279a2d1934e98c6f4b08">GetTreeType</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">return</span> params_.treeType;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#aba3ad78436ba2e5b720ae04d8f61b7b9">  115</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkFTMTree.html#aba3ad78436ba2e5b720ae04d8f61b7b9">SetWithSegmentation</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> segm) {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    params_.segm = segm;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    Modified();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a45215c03ad61b2d32bb0f46918e49956">  119</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classttkFTMTree.html#a45215c03ad61b2d32bb0f46918e49956">GetWithSegmentation</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">return</span> params_.segm;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#aedea6997513f7af15293dd98c3990692">  127</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkFTMTree.html#aedea6997513f7af15293dd98c3990692">SetWithNormalize</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> norm) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    params_.normalize = norm;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    Modified();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#ac5575f3913cfeb76107a7887f43627ed">  131</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classttkFTMTree.html#ac5575f3913cfeb76107a7887f43627ed">GetWithNormalize</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">return</span> params_.normalize;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#abb7a4904b22e381e89a33ee636b1f9a7">  139</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkFTMTree.html#abb7a4904b22e381e89a33ee636b1f9a7">SetWithAdvStats</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> adv) {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    params_.advStats = adv;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    Modified();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a3c54afbe98e70bf52598a1c5d11a4200">  143</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classttkFTMTree.html#a3c54afbe98e70bf52598a1c5d11a4200">GetWithAdvStats</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordflow">return</span> params_.advStats;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a0166acdb3c95ed63725fb0eec5f90268">  150</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkFTMTree.html#a0166acdb3c95ed63725fb0eec5f90268">SetSuperArcSamplingLevel</a>(<span class="keywordtype">int</span> lvl) {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    params_.samplingLvl = lvl;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    Modified();</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="classttkFTMTree.html#a6ff65b47672eeebc2de4b824b2156623">  154</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkFTMTree.html#a6ff65b47672eeebc2de4b824b2156623">GetSuperArcSamplingLevel</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordflow">return</span> params_.samplingLvl;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="keywordtype">int</span> preconditionTriangulation();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="keywordtype">int</span> getScalars();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <span class="keywordtype">int</span> getOffsets();</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="keywordtype">int</span> addDirectSkeletonArc(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacettk_1_1ftm.html#a2e62d56c6e1e659d7a2f2daf7fe86982">ttk::ftm::idSuperArc</a> arcId,</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                           <span class="keyword">const</span> <span class="keywordtype">int</span> cc,</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                           vtkPoints *points,</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                           vtkUnstructuredGrid *skeletonArcs,</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                           <a class="code hl_struct" href="structttk_1_1ftm_1_1ArcData.html">ttk::ftm::ArcData</a> &amp;arcData);</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <span class="keywordtype">int</span> addSampledSkeletonArc(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacettk_1_1ftm.html#a2e62d56c6e1e659d7a2f2daf7fe86982">ttk::ftm::idSuperArc</a> arcId,</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                            <span class="keyword">const</span> <span class="keywordtype">int</span> cc,</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                            vtkPoints *points,</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                            vtkUnstructuredGrid *skeletonArcs,</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                            <a class="code hl_struct" href="structttk_1_1ftm_1_1ArcData.html">ttk::ftm::ArcData</a> &amp;arcData);</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <span class="keywordtype">int</span> addCompleteSkeletonArc(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacettk_1_1ftm.html#a2e62d56c6e1e659d7a2f2daf7fe86982">ttk::ftm::idSuperArc</a> arcId,</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> cc,</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                             vtkPoints *points,</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                             vtkUnstructuredGrid *skeletonArcs,</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                             <a class="code hl_struct" href="structttk_1_1ftm_1_1ArcData.html">ttk::ftm::ArcData</a> &amp;arcData);</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  <span class="keywordtype">int</span> getSkeletonArcs(vtkUnstructuredGrid *outputSkeletonArcs);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="keywordtype">int</span> getSkeletonNodes(vtkUnstructuredGrid *outputSkeletonNodes);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keywordtype">int</span> addDirectSkeletonArc(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacettk_1_1ftm.html#a2e62d56c6e1e659d7a2f2daf7fe86982">ttk::ftm::idSuperArc</a> arcId,</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                           <span class="keyword">const</span> <span class="keywordtype">int</span> cc,</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                           vtkPoints *points,</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                           vtkUnstructuredGrid *skeletonArcs,</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                           <a class="code hl_struct" href="structttk_1_1ftm_1_1ArcData.html">ttk::ftm::ArcData</a> &amp;arcData);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <span class="keywordtype">int</span> addSampledSkeletonArc(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacettk_1_1ftm.html#a2e62d56c6e1e659d7a2f2daf7fe86982">ttk::ftm::idSuperArc</a> arcId,</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                            <span class="keyword">const</span> <span class="keywordtype">int</span> cc,</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                            vtkPoints *points,</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                            vtkUnstructuredGrid *skeletonArcs,</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                            <a class="code hl_struct" href="structttk_1_1ftm_1_1ArcData.html">ttk::ftm::ArcData</a> &amp;arcData);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <span class="keywordtype">int</span> addCompleteSkeletonArc(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacettk_1_1ftm.html#a2e62d56c6e1e659d7a2f2daf7fe86982">ttk::ftm::idSuperArc</a> arcId,</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> cc,</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                             vtkPoints *points,</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                             vtkUnstructuredGrid *skeletonArcs,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                             <a class="code hl_struct" href="structttk_1_1ftm_1_1ArcData.html">ttk::ftm::ArcData</a> &amp;arcData);</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <span class="keywordtype">int</span> getSegmentation(vtkDataSet *outputSegmentation);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <span class="keywordtype">int</span> getSkeletonArcs(vtkUnstructuredGrid *outputSkeletonArcs);</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="preprocessor">#ifdef TTK_ENABLE_FTM_TREE_STATS_TIME</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  <span class="keywordtype">void</span> printCSVStats();</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="keywordtype">void</span> printCSVTree(<span class="keyword">const</span> <a class="code hl_class" href="classttk_1_1ftm_1_1FTMTree__MT.html">ttk::ftm::FTMTree_MT</a> *<span class="keyword">const</span> tree) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <a class="code hl_class" href="classttkFTMTree.html">ttkFTMTree</a>();</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <span class="comment">// vtkDataSetAlgorithm methods</span></div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a9d1bc15e1c75f193d33cf08516082b0e">FillInputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#af12cc495fab5711bb738a7bdef8b52a2">FillOutputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">RequestData</a>(vtkInformation *request,</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                  vtkInformationVector **inputVector,</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                  vtkInformationVector *outputVector) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <span class="keywordtype">void</span> identify(vtkDataSet *ds) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <span class="keywordtype">int</span> getSegmentation(vtkDataSet *outputSegmentation);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">#ifdef TTK_ENABLE_FTM_TREE_STATS_TIME</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keywordtype">void</span> printCSVStats();</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  <span class="keywordtype">void</span> printCSVTree(<span class="keyword">const</span> <a class="code hl_class" href="classttk_1_1ftm_1_1FTMTree__MT.html">ttk::ftm::FTMTree_MT</a> *<span class="keyword">const</span> tree) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <a class="code hl_class" href="classttkFTMTree.html">ttkFTMTree</a>();</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="comment">// vtkDataSetAlgorithm methods</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a9d1bc15e1c75f193d33cf08516082b0e">FillInputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#af12cc495fab5711bb738a7bdef8b52a2">FillOutputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">RequestData</a>(vtkInformation *request,</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                  vtkInformationVector **inputVector,</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                  vtkInformationVector *outputVector) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <span class="keywordtype">bool</span> ForceInputOffsetScalarField = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <a class="code hl_struct" href="structttk_1_1ftm_1_1Params.html">ttk::ftm::Params</a> params_;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <span class="keywordtype">int</span> nbCC_;</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  std::vector&lt;vtkSmartPointer&lt;vtkDataSet&gt;&gt; connected_components_;</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  std::vector&lt;ttk::Triangulation *&gt; triangulation_;</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  std::vector&lt;ttk::ftm::LocalFTM&gt; ftmTree_;</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  std::vector&lt;vtkDataArray *&gt; inputScalars_;</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  std::vector&lt;std::vector&lt;ttk::SimplexId&gt;&gt; offsets_;</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>};</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <span class="keywordtype">void</span> identify(vtkDataSet *ds) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <span class="keywordtype">bool</span> ForceInputOffsetScalarField = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <a class="code hl_struct" href="structttk_1_1ftm_1_1Params.html">ttk::ftm::Params</a> params_;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  <span class="keywordtype">int</span> nbCC_;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  std::vector&lt;vtkSmartPointer&lt;vtkDataSet&gt;&gt; connected_components_;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  std::vector&lt;ttk::Triangulation *&gt; triangulation_;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  std::vector&lt;ttk::ftm::LocalFTM&gt; ftmTree_;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  std::vector&lt;vtkDataArray *&gt; inputScalars_;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  std::vector&lt;std::vector&lt;ttk::SimplexId&gt;&gt; offsets_;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>};</div>
 <div class="ttc" id="aFTMTree_8h_html"><div class="ttname"><a href="FTMTree_8h.html">FTMTree.h</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html"><div class="ttname"><a href="classttkAlgorithm.html">ttkAlgorithm</a></div><div class="ttdoc">Baseclass of all VTK filters that wrap ttk modules.</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00033">ttkAlgorithm.h:34</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a38454ad0e03893665a505e0aa3fafa48"><div class="ttname"><a href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">ttkAlgorithm::RequestData</a></div><div class="ttdeci">virtual int RequestData(vtkInformation *ttkNotUsed(request), vtkInformationVector **ttkNotUsed(inputVectors), vtkInformationVector *ttkNotUsed(outputVector))</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00319">ttkAlgorithm.h:319</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a9d1bc15e1c75f193d33cf08516082b0e"><div class="ttname"><a href="classttkAlgorithm.html#a9d1bc15e1c75f193d33cf08516082b0e">ttkAlgorithm::FillInputPortInformation</a></div><div class="ttdeci">int FillInputPortInformation(int ttkNotUsed(port), vtkInformation *ttkNotUsed(info)) override</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00333">ttkAlgorithm.h:333</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_af12cc495fab5711bb738a7bdef8b52a2"><div class="ttname"><a href="classttkAlgorithm.html#af12cc495fab5711bb738a7bdef8b52a2">ttkAlgorithm::FillOutputPortInformation</a></div><div class="ttdeci">int FillOutputPortInformation(int ttkNotUsed(port), vtkInformation *ttkNotUsed(info)) override</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00348">ttkAlgorithm.h:348</a></div></div>
-<div class="ttc" id="aclassttkFTMTree_html"><div class="ttname"><a href="classttkFTMTree.html">ttkFTMTree</a></div><div class="ttdoc">TTK VTK-filter for the computation of merge and contour trees.</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00085">ttkFTMTree.h:85</a></div></div>
-<div class="ttc" id="aclassttkFTMTree_html_a0166acdb3c95ed63725fb0eec5f90268"><div class="ttname"><a href="classttkFTMTree.html#a0166acdb3c95ed63725fb0eec5f90268">ttkFTMTree::SetSuperArcSamplingLevel</a></div><div class="ttdeci">void SetSuperArcSamplingLevel(int lvl)</div><div class="ttdoc">control the sampling level of the superarc. By default: 0</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00148">ttkFTMTree.h:148</a></div></div>
+<div class="ttc" id="aclassttkFTMTree_html"><div class="ttname"><a href="classttkFTMTree.html">ttkFTMTree</a></div><div class="ttdoc">TTK VTK-filter for the computation of merge and contour trees.</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00087">ttkFTMTree.h:87</a></div></div>
+<div class="ttc" id="aclassttkFTMTree_html_a0166acdb3c95ed63725fb0eec5f90268"><div class="ttname"><a href="classttkFTMTree.html#a0166acdb3c95ed63725fb0eec5f90268">ttkFTMTree::SetSuperArcSamplingLevel</a></div><div class="ttdeci">void SetSuperArcSamplingLevel(int lvl)</div><div class="ttdoc">control the sampling level of the superarc. By default: 0</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00150">ttkFTMTree.h:150</a></div></div>
 <div class="ttc" id="aclassttkFTMTree_html_a1ec0ea644e87e63531b32adbebad922b"><div class="ttname"><a href="classttkFTMTree.html#a1ec0ea644e87e63531b32adbebad922b">ttkFTMTree::New</a></div><div class="ttdeci">static ttkFTMTree * New()</div></div>
-<div class="ttc" id="aclassttkFTMTree_html_a3c54afbe98e70bf52598a1c5d11a4200"><div class="ttname"><a href="classttkFTMTree.html#a3c54afbe98e70bf52598a1c5d11a4200">ttkFTMTree::GetWithAdvStats</a></div><div class="ttdeci">bool GetWithAdvStats() const</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00141">ttkFTMTree.h:141</a></div></div>
-<div class="ttc" id="aclassttkFTMTree_html_a45215c03ad61b2d32bb0f46918e49956"><div class="ttname"><a href="classttkFTMTree.html#a45215c03ad61b2d32bb0f46918e49956">ttkFTMTree::GetWithSegmentation</a></div><div class="ttdeci">bool GetWithSegmentation() const</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00117">ttkFTMTree.h:117</a></div></div>
-<div class="ttc" id="aclassttkFTMTree_html_a6ff65b47672eeebc2de4b824b2156623"><div class="ttname"><a href="classttkFTMTree.html#a6ff65b47672eeebc2de4b824b2156623">ttkFTMTree::GetSuperArcSamplingLevel</a></div><div class="ttdeci">int GetSuperArcSamplingLevel() const</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00152">ttkFTMTree.h:152</a></div></div>
-<div class="ttc" id="aclassttkFTMTree_html_a97ba6a346f4f279a2d1934e98c6f4b08"><div class="ttname"><a href="classttkFTMTree.html#a97ba6a346f4f279a2d1934e98c6f4b08">ttkFTMTree::GetTreeType</a></div><div class="ttdeci">ttk::ftm::TreeType GetTreeType() const</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00106">ttkFTMTree.h:106</a></div></div>
-<div class="ttc" id="aclassttkFTMTree_html_ab895f03b9b878c7eb690306fecf8a2bc"><div class="ttname"><a href="classttkFTMTree.html#ab895f03b9b878c7eb690306fecf8a2bc">ttkFTMTree::SetTreeType</a></div><div class="ttdeci">void SetTreeType(const int type)</div><div class="ttdoc">the type of tree to compute (Join, Split, Contour, JoinSplit)</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00102">ttkFTMTree.h:102</a></div></div>
-<div class="ttc" id="aclassttkFTMTree_html_aba3ad78436ba2e5b720ae04d8f61b7b9"><div class="ttname"><a href="classttkFTMTree.html#aba3ad78436ba2e5b720ae04d8f61b7b9">ttkFTMTree::SetWithSegmentation</a></div><div class="ttdeci">void SetWithSegmentation(const bool segm)</div><div class="ttdoc">control if the output should contains the segmentation information</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00113">ttkFTMTree.h:113</a></div></div>
-<div class="ttc" id="aclassttkFTMTree_html_abb7a4904b22e381e89a33ee636b1f9a7"><div class="ttname"><a href="classttkFTMTree.html#abb7a4904b22e381e89a33ee636b1f9a7">ttkFTMTree::SetWithAdvStats</a></div><div class="ttdeci">void SetWithAdvStats(const bool adv)</div><div class="ttdoc">Compute additional information on the segmentation like the span and size (in nb of vertex) of each r...</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00137">ttkFTMTree.h:137</a></div></div>
-<div class="ttc" id="aclassttkFTMTree_html_ac5575f3913cfeb76107a7887f43627ed"><div class="ttname"><a href="classttkFTMTree.html#ac5575f3913cfeb76107a7887f43627ed">ttkFTMTree::GetWithNormalize</a></div><div class="ttdeci">bool GetWithNormalize() const</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00129">ttkFTMTree.h:129</a></div></div>
-<div class="ttc" id="aclassttkFTMTree_html_aedea6997513f7af15293dd98c3990692"><div class="ttname"><a href="classttkFTMTree.html#aedea6997513f7af15293dd98c3990692">ttkFTMTree::SetWithNormalize</a></div><div class="ttdeci">void SetWithNormalize(const bool norm)</div><div class="ttdoc">if true, a post process pass will ensure NodesId have a deterministic order</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00125">ttkFTMTree.h:125</a></div></div>
+<div class="ttc" id="aclassttkFTMTree_html_a3c54afbe98e70bf52598a1c5d11a4200"><div class="ttname"><a href="classttkFTMTree.html#a3c54afbe98e70bf52598a1c5d11a4200">ttkFTMTree::GetWithAdvStats</a></div><div class="ttdeci">bool GetWithAdvStats() const</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00143">ttkFTMTree.h:143</a></div></div>
+<div class="ttc" id="aclassttkFTMTree_html_a45215c03ad61b2d32bb0f46918e49956"><div class="ttname"><a href="classttkFTMTree.html#a45215c03ad61b2d32bb0f46918e49956">ttkFTMTree::GetWithSegmentation</a></div><div class="ttdeci">bool GetWithSegmentation() const</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00119">ttkFTMTree.h:119</a></div></div>
+<div class="ttc" id="aclassttkFTMTree_html_a6ff65b47672eeebc2de4b824b2156623"><div class="ttname"><a href="classttkFTMTree.html#a6ff65b47672eeebc2de4b824b2156623">ttkFTMTree::GetSuperArcSamplingLevel</a></div><div class="ttdeci">int GetSuperArcSamplingLevel() const</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00154">ttkFTMTree.h:154</a></div></div>
+<div class="ttc" id="aclassttkFTMTree_html_a97ba6a346f4f279a2d1934e98c6f4b08"><div class="ttname"><a href="classttkFTMTree.html#a97ba6a346f4f279a2d1934e98c6f4b08">ttkFTMTree::GetTreeType</a></div><div class="ttdeci">ttk::ftm::TreeType GetTreeType() const</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00108">ttkFTMTree.h:108</a></div></div>
+<div class="ttc" id="aclassttkFTMTree_html_ab895f03b9b878c7eb690306fecf8a2bc"><div class="ttname"><a href="classttkFTMTree.html#ab895f03b9b878c7eb690306fecf8a2bc">ttkFTMTree::SetTreeType</a></div><div class="ttdeci">void SetTreeType(const int type)</div><div class="ttdoc">the type of tree to compute (Join, Split, Contour, JoinSplit)</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00104">ttkFTMTree.h:104</a></div></div>
+<div class="ttc" id="aclassttkFTMTree_html_aba3ad78436ba2e5b720ae04d8f61b7b9"><div class="ttname"><a href="classttkFTMTree.html#aba3ad78436ba2e5b720ae04d8f61b7b9">ttkFTMTree::SetWithSegmentation</a></div><div class="ttdeci">void SetWithSegmentation(const bool segm)</div><div class="ttdoc">control if the output should contains the segmentation information</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00115">ttkFTMTree.h:115</a></div></div>
+<div class="ttc" id="aclassttkFTMTree_html_abb7a4904b22e381e89a33ee636b1f9a7"><div class="ttname"><a href="classttkFTMTree.html#abb7a4904b22e381e89a33ee636b1f9a7">ttkFTMTree::SetWithAdvStats</a></div><div class="ttdeci">void SetWithAdvStats(const bool adv)</div><div class="ttdoc">Compute additional information on the segmentation like the span and size (in nb of vertex) of each r...</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00139">ttkFTMTree.h:139</a></div></div>
+<div class="ttc" id="aclassttkFTMTree_html_ac5575f3913cfeb76107a7887f43627ed"><div class="ttname"><a href="classttkFTMTree.html#ac5575f3913cfeb76107a7887f43627ed">ttkFTMTree::GetWithNormalize</a></div><div class="ttdeci">bool GetWithNormalize() const</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00131">ttkFTMTree.h:131</a></div></div>
+<div class="ttc" id="aclassttkFTMTree_html_aedea6997513f7af15293dd98c3990692"><div class="ttname"><a href="classttkFTMTree.html#aedea6997513f7af15293dd98c3990692">ttkFTMTree::SetWithNormalize</a></div><div class="ttdeci">void SetWithNormalize(const bool norm)</div><div class="ttdoc">if true, a post process pass will ensure NodesId have a deterministic order</div><div class="ttdef"><b>Definition:</b> <a href="ttkFTMTree_8h_source.html#l00127">ttkFTMTree.h:127</a></div></div>
 <div class="ttc" id="aclassttk_1_1ftm_1_1FTMTree__MT_html"><div class="ttname"><a href="classttk_1_1ftm_1_1FTMTree__MT.html">ttk::ftm::FTMTree_MT</a></div><div class="ttdef"><b>Definition:</b> <a href="FTMTree__MT_8h_source.html#l00087">FTMTree_MT.h:87</a></div></div>
 <div class="ttc" id="anamespacettk_1_1ftm_html_a2e62d56c6e1e659d7a2f2daf7fe86982"><div class="ttname"><a href="namespacettk_1_1ftm.html#a2e62d56c6e1e659d7a2f2daf7fe86982">ttk::ftm::idSuperArc</a></div><div class="ttdeci">long unsigned int idSuperArc</div><div class="ttdoc">SuperArc index in vect_superArcs_.</div><div class="ttdef"><b>Definition:</b> <a href="FTMDataTypes_8h_source.html#l00037">FTMDataTypes.h:37</a></div></div>
 <div class="ttc" id="anamespacettk_1_1ftm_html_a50fb2f892ab92b84f0d827e3993b5a2b"><div class="ttname"><a href="namespacettk_1_1ftm.html#a50fb2f892ab92b84f0d827e3993b5a2b">ttk::ftm::TreeType</a></div><div class="ttdeci">TreeType</div><div class="ttdef"><b>Definition:</b> <a href="FTMDataTypes_8h_source.html#l00092">FTMDataTypes.h:92</a></div></div>
@@ -221,7 +221,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 11 2022 10:31:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+Generated on Wed Jul 13 2022 22:09:11 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>

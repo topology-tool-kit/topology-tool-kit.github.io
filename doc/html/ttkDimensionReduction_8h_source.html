@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /data/julien/git/github/ttk-tierny/core/vtk/ttkDimensionReduction/ttkDimensionReduction.h Source File</title>
+<title>TTK: /home/julien/Pro/git/github/ttk-tierny/core/vtk/ttkDimensionReduction/ttkDimensionReduction.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,241 +70,241 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="ttkDimensionReduction_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">// VTK Module</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;ttkDimensionReductionModule.h&gt;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// TTK includes</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;<a class="code" href="DimensionReduction_8h.html">DimensionReduction.h</a>&gt;</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;<a class="code" href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a>&gt;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html">   42</a></span><span class="keyword">class </span>TTKDIMENSIONREDUCTION_EXPORT <a class="code hl_class" href="classttkDimensionReduction.html">ttkDimensionReduction</a></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  : <span class="keyword">public</span> <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a>,</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">protected</span> <a class="code hl_class" href="classttk_1_1DimensionReduction.html">ttk::DimensionReduction</a> {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a23cb346883918f364206b929c0f6279c">   47</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classttkDimensionReduction.html">ttkDimensionReduction</a> *<a class="code hl_function" href="classttkDimensionReduction.html#a23cb346883918f364206b929c0f6279c">New</a>();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aaa4442962b6a48c26fceccf3ff748c0b">   48</a></span>  vtkTypeMacro(<a class="code hl_class" href="classttkDimensionReduction.html">ttkDimensionReduction</a>, <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a>);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ad649af967919486ca50517d3b5f01167">   50</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkDimensionReduction.html#ad649af967919486ca50517d3b5f01167">SetScalarFields</a>(<span class="keyword">const</span> std::string &amp;s) {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    ScalarFields.push_back(s);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    Modified();</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  }</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a82a1bd5ed15bcba3e52873996ada5b0f">   55</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkDimensionReduction.html#a82a1bd5ed15bcba3e52873996ada5b0f">ClearScalarFields</a>() {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    ScalarFields.clear();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    Modified();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="comment">// default</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a5187683ffff762caba7eade1d887a28c">   61</a></span>  vtkSetMacro(SelectFieldsWithRegexp, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#adb7f4bc82a7fc400ae3c8d6876e25ef7">   62</a></span>  vtkGetMacro(SelectFieldsWithRegexp, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a5bb4c329d6aa077c1221db95e045669e">   64</a></span>  vtkSetMacro(RegexpString, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a0c589952a90e98bd6bf024b6edca5223">   65</a></span>  vtkGetMacro(RegexpString, std::string);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">// VTK Module</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;ttkDimensionReductionModule.h&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">// TTK includes</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#include &lt;<a class="code" href="DimensionReduction_8h.html">DimensionReduction.h</a>&gt;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#include &lt;<a class="code" href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a>&gt;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html">   49</a></span><span class="keyword">class </span>TTKDIMENSIONREDUCTION_EXPORT <a class="code hl_class" href="classttkDimensionReduction.html">ttkDimensionReduction</a></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  : <span class="keyword">public</span> <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a>,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">protected</span> <a class="code hl_class" href="classttk_1_1DimensionReduction.html">ttk::DimensionReduction</a> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a23cb346883918f364206b929c0f6279c">   54</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classttkDimensionReduction.html">ttkDimensionReduction</a> *<a class="code hl_function" href="classttkDimensionReduction.html#a23cb346883918f364206b929c0f6279c">New</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aaa4442962b6a48c26fceccf3ff748c0b">   55</a></span>  vtkTypeMacro(<a class="code hl_class" href="classttkDimensionReduction.html">ttkDimensionReduction</a>, <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ad649af967919486ca50517d3b5f01167">   57</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkDimensionReduction.html#ad649af967919486ca50517d3b5f01167">SetScalarFields</a>(<span class="keyword">const</span> std::string &amp;s) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    ScalarFields.push_back(s);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    Modified();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a82a1bd5ed15bcba3e52873996ada5b0f">   62</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkDimensionReduction.html#a82a1bd5ed15bcba3e52873996ada5b0f">ClearScalarFields</a>() {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    ScalarFields.clear();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    Modified();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  }</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#acfde637b77b7d9140d286cc7bd1a4666">   67</a></span>  vtkSetMacro(NumberOfComponents, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a3a08eceaca7baa08b3130356ebbfcf7e">   68</a></span>  vtkGetMacro(NumberOfComponents, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a981c5e7e27dbdb7456d913329ca17e19">   70</a></span>  vtkSetMacro(NumberOfNeighbors, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aef232b2c09a2659d37713af2676cd8a2">   71</a></span>  vtkGetMacro(NumberOfNeighbors, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ab7c370d8f9adbe30806344e18ddd836d">   73</a></span>  vtkSetMacro(IsDeterministic, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a39f9313b074bd3d721ed25f1f13a6439">   74</a></span>  vtkGetMacro(IsDeterministic, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a21b00bf33d6322d014f5f56456fe3560">   76</a></span>  vtkSetMacro(Method, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#adb67a892a850ca70c93cee9eeb440109">   77</a></span>  vtkGetMacro(Method, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a87e3fb0dd4cd30057080791a88138096">   79</a></span>  vtkSetMacro(KeepAllDataArrays, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ab0fdffe9fc0a494c05d8b5c31b343366">   80</a></span>  vtkGetMacro(KeepAllDataArrays, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="comment">// SE &amp;&amp; MDS</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aea790ec58649516215340c188e461a61">   83</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkDimensionReduction.html#aea790ec58649516215340c188e461a61">SetInputIsADistanceMatrix</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> b) {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    this-&gt;InputIsADistanceMatrix = b;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">if</span>(b) {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      this-&gt;mds_Dissimilarity = <span class="stringliteral">&quot;precomputed&quot;</span>;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      this-&gt;se_Affinity = <span class="stringliteral">&quot;precomputed&quot;</span>;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      this-&gt;tsne_Metric = <span class="stringliteral">&quot;precomputed&quot;</span>;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      this-&gt;iso_Metric = <span class="stringliteral">&quot;precomputed&quot;</span>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    Modified();</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  }</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a5a7a48edd95d0c33c6832437e8014e99">   93</a></span>  vtkGetMacro(InputIsADistanceMatrix, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="comment">// SE</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ace63ddd1f0f028ca79370b12388302b8">   96</a></span>  vtkSetMacro(se_Affinity, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a913d5b8644294f3869abb7b83c2af021">   97</a></span>  vtkGetMacro(se_Affinity, std::string);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a3eeb375090873e20b9a60f17e9d3e467">   99</a></span>  vtkSetMacro(se_Gamma, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a85d1cead894a4344df8c63414576c204">  100</a></span>  vtkGetMacro(se_Gamma, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="comment">// default</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a5187683ffff762caba7eade1d887a28c">   68</a></span>  vtkSetMacro(SelectFieldsWithRegexp, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#adb7f4bc82a7fc400ae3c8d6876e25ef7">   69</a></span>  vtkGetMacro(SelectFieldsWithRegexp, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a5bb4c329d6aa077c1221db95e045669e">   71</a></span>  vtkSetMacro(RegexpString, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a0c589952a90e98bd6bf024b6edca5223">   72</a></span>  vtkGetMacro(RegexpString, std::string);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#acfde637b77b7d9140d286cc7bd1a4666">   74</a></span>  vtkSetMacro(NumberOfComponents, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a3a08eceaca7baa08b3130356ebbfcf7e">   75</a></span>  vtkGetMacro(NumberOfComponents, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a981c5e7e27dbdb7456d913329ca17e19">   77</a></span>  vtkSetMacro(NumberOfNeighbors, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aef232b2c09a2659d37713af2676cd8a2">   78</a></span>  vtkGetMacro(NumberOfNeighbors, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ab7c370d8f9adbe30806344e18ddd836d">   80</a></span>  vtkSetMacro(IsDeterministic, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a39f9313b074bd3d721ed25f1f13a6439">   81</a></span>  vtkGetMacro(IsDeterministic, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a21b00bf33d6322d014f5f56456fe3560">   83</a></span>  vtkSetMacro(Method, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#adb67a892a850ca70c93cee9eeb440109">   84</a></span>  vtkGetMacro(Method, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a87e3fb0dd4cd30057080791a88138096">   86</a></span>  vtkSetMacro(KeepAllDataArrays, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ab0fdffe9fc0a494c05d8b5c31b343366">   87</a></span>  vtkGetMacro(KeepAllDataArrays, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="comment">// SE &amp;&amp; MDS</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aea790ec58649516215340c188e461a61">   90</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkDimensionReduction.html#aea790ec58649516215340c188e461a61">SetInputIsADistanceMatrix</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> b) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    this-&gt;InputIsADistanceMatrix = b;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">if</span>(b) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      this-&gt;mds_Dissimilarity = <span class="stringliteral">&quot;precomputed&quot;</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      this-&gt;se_Affinity = <span class="stringliteral">&quot;precomputed&quot;</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      this-&gt;tsne_Metric = <span class="stringliteral">&quot;precomputed&quot;</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      this-&gt;iso_Metric = <span class="stringliteral">&quot;precomputed&quot;</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    Modified();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a5a7a48edd95d0c33c6832437e8014e99">  100</a></span>  vtkGetMacro(InputIsADistanceMatrix, <span class="keywordtype">bool</span>);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aac533262bffa29e4526daf2b937728b8">  102</a></span>  vtkSetMacro(se_EigenSolver, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#acb9a71675762687ee4a5dc16e16dd829">  103</a></span>  vtkGetMacro(se_EigenSolver, std::string);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="comment">// LLE</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aebb0e463983860992329645cfa96d1ac">  106</a></span>  vtkSetMacro(lle_Regularization, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#afae55a19c9a47de733d448030739dfe4">  107</a></span>  vtkGetMacro(lle_Regularization, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="comment">// SE</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ace63ddd1f0f028ca79370b12388302b8">  103</a></span>  vtkSetMacro(se_Affinity, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a913d5b8644294f3869abb7b83c2af021">  104</a></span>  vtkGetMacro(se_Affinity, std::string);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a3eeb375090873e20b9a60f17e9d3e467">  106</a></span>  vtkSetMacro(se_Gamma, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a85d1cead894a4344df8c63414576c204">  107</a></span>  vtkGetMacro(se_Gamma, <span class="keywordtype">float</span>);</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a26825686a1e70a19e053caa3c470a376">  109</a></span>  vtkSetMacro(lle_EigenSolver, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#abe4bb1e06a35175dfb345afdd6184d14">  110</a></span>  vtkGetMacro(lle_EigenSolver, std::string);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aac533262bffa29e4526daf2b937728b8">  109</a></span>  vtkSetMacro(se_EigenSolver, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#acb9a71675762687ee4a5dc16e16dd829">  110</a></span>  vtkGetMacro(se_EigenSolver, std::string);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ad21b00f2b5cfe4b14d802e8318958a50">  112</a></span>  vtkSetMacro(lle_Tolerance, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ab334b1d24db57d91de1b556b2c834a39">  113</a></span>  vtkGetMacro(lle_Tolerance, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#af15b9d40ca63a37513259d2da963d3a0">  115</a></span>  vtkSetMacro(lle_MaxIteration, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a35dfeae02ba064deb3ff7fcf015a8b00">  116</a></span>  vtkGetMacro(lle_MaxIteration, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aebd6eafade69cc4fee9c63d70c6f0ded">  118</a></span>  vtkSetMacro(lle_Method, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a5acbaae9d2e44afddf85b292badf2056">  119</a></span>  vtkGetMacro(lle_Method, std::string);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#af35d9bc204f26dc55e6e87d2a043a98b">  121</a></span>  vtkSetMacro(lle_HessianTolerance, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a784122d09b9c3f64c31c6ca48e3e99a6">  122</a></span>  vtkGetMacro(lle_HessianTolerance, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ad130d93a3700a8c2261692f2943f1fd7">  124</a></span>  vtkSetMacro(lle_ModifiedTolerance, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ad8e1f8c43c6d24fbd5450c59a99d4c59">  125</a></span>  vtkGetMacro(lle_ModifiedTolerance, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#adc58d90feaf7ced05b5b73c61045fcab">  127</a></span>  vtkSetMacro(lle_NeighborsAlgorithm, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#af87d13bfc27f10f68d9f766a17e529b9">  128</a></span>  vtkGetMacro(lle_NeighborsAlgorithm, std::string);</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <span class="comment">// MDS</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a6330264e8347d149b1b7884dfd98ec7f">  131</a></span>  vtkSetMacro(mds_Metric, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a33d36e858c5dd4ec7a25b5d7a39ef035">  132</a></span>  vtkGetMacro(mds_Metric, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="comment">// LLE</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aebb0e463983860992329645cfa96d1ac">  113</a></span>  vtkSetMacro(lle_Regularization, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#afae55a19c9a47de733d448030739dfe4">  114</a></span>  vtkGetMacro(lle_Regularization, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a26825686a1e70a19e053caa3c470a376">  116</a></span>  vtkSetMacro(lle_EigenSolver, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#abe4bb1e06a35175dfb345afdd6184d14">  117</a></span>  vtkGetMacro(lle_EigenSolver, std::string);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ad21b00f2b5cfe4b14d802e8318958a50">  119</a></span>  vtkSetMacro(lle_Tolerance, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ab334b1d24db57d91de1b556b2c834a39">  120</a></span>  vtkGetMacro(lle_Tolerance, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#af15b9d40ca63a37513259d2da963d3a0">  122</a></span>  vtkSetMacro(lle_MaxIteration, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a35dfeae02ba064deb3ff7fcf015a8b00">  123</a></span>  vtkGetMacro(lle_MaxIteration, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aebd6eafade69cc4fee9c63d70c6f0ded">  125</a></span>  vtkSetMacro(lle_Method, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a5acbaae9d2e44afddf85b292badf2056">  126</a></span>  vtkGetMacro(lle_Method, std::string);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#af35d9bc204f26dc55e6e87d2a043a98b">  128</a></span>  vtkSetMacro(lle_HessianTolerance, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a784122d09b9c3f64c31c6ca48e3e99a6">  129</a></span>  vtkGetMacro(lle_HessianTolerance, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ad130d93a3700a8c2261692f2943f1fd7">  131</a></span>  vtkSetMacro(lle_ModifiedTolerance, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ad8e1f8c43c6d24fbd5450c59a99d4c59">  132</a></span>  vtkGetMacro(lle_ModifiedTolerance, <span class="keywordtype">float</span>);</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a31e944b4aaf213d129cfc2c2b57822af">  134</a></span>  vtkSetMacro(mds_Init, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#afddd132f883f789bb4e5d0e83056b495">  135</a></span>  vtkGetMacro(mds_Init, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#adc58d90feaf7ced05b5b73c61045fcab">  134</a></span>  vtkSetMacro(lle_NeighborsAlgorithm, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#af87d13bfc27f10f68d9f766a17e529b9">  135</a></span>  vtkGetMacro(lle_NeighborsAlgorithm, std::string);</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#acb4fa75adee562e66a0fe68a6637bed8">  137</a></span>  vtkSetMacro(mds_MaxIteration, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a2940a726d1f7e0964a86a29df5c1a779">  138</a></span>  vtkGetMacro(mds_MaxIteration, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ae93f8c0caa5069b16d5930ffeadc3c9d">  140</a></span>  vtkSetMacro(mds_Verbose, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#af8f8fbf3658559b7725708f6716f1570">  141</a></span>  vtkGetMacro(mds_Verbose, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a6760e8e1dbb9f3d47fef99659df4f0ee">  143</a></span>  vtkSetMacro(mds_Epsilon, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a666957d842d5e0033673d79791c9adf9">  144</a></span>  vtkGetMacro(mds_Epsilon, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <span class="comment">// TSNE</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a9e8660312d29be009d2d2d1ad07f093c">  147</a></span>  vtkSetMacro(tsne_Perplexity, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aa7334e4d7eb920cf59d788e4c888aee8">  148</a></span>  vtkGetMacro(tsne_Perplexity, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="comment">// MDS</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a6330264e8347d149b1b7884dfd98ec7f">  138</a></span>  vtkSetMacro(mds_Metric, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a33d36e858c5dd4ec7a25b5d7a39ef035">  139</a></span>  vtkGetMacro(mds_Metric, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a31e944b4aaf213d129cfc2c2b57822af">  141</a></span>  vtkSetMacro(mds_Init, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#afddd132f883f789bb4e5d0e83056b495">  142</a></span>  vtkGetMacro(mds_Init, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#acb4fa75adee562e66a0fe68a6637bed8">  144</a></span>  vtkSetMacro(mds_MaxIteration, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a2940a726d1f7e0964a86a29df5c1a779">  145</a></span>  vtkGetMacro(mds_MaxIteration, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ae93f8c0caa5069b16d5930ffeadc3c9d">  147</a></span>  vtkSetMacro(mds_Verbose, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#af8f8fbf3658559b7725708f6716f1570">  148</a></span>  vtkGetMacro(mds_Verbose, <span class="keywordtype">int</span>);</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#abda609df0ded1f297f3035579f90718b">  150</a></span>  vtkSetMacro(tsne_Exaggeration, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a04a56a1534dc824596089171d38b0f62">  151</a></span>  vtkGetMacro(tsne_Exaggeration, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a6760e8e1dbb9f3d47fef99659df4f0ee">  150</a></span>  vtkSetMacro(mds_Epsilon, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a666957d842d5e0033673d79791c9adf9">  151</a></span>  vtkGetMacro(mds_Epsilon, <span class="keywordtype">float</span>);</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a662572a1b4399a8dc82b6351b8b5f756">  153</a></span>  vtkSetMacro(tsne_LearningRate, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aac5ab9f322157dd140d255231c28ca73">  154</a></span>  vtkGetMacro(tsne_LearningRate, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a6b67bfe185ce3375f13fcb15e47fb79f">  156</a></span>  vtkSetMacro(tsne_MaxIteration, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aa8f2e28255b0ff4e357caab05563d465">  157</a></span>  vtkGetMacro(tsne_MaxIteration, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a04da2c743a49eb68b12973395bc810a0">  159</a></span>  vtkSetMacro(tsne_MaxIterationProgress, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a54739ab1fec79618c0d715a32f381ba6">  160</a></span>  vtkGetMacro(tsne_MaxIterationProgress, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a2d1f13302260b4424c2e3ed122a50a6e">  162</a></span>  vtkSetMacro(tsne_GradientThreshold, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a9c5c686f0dd8e533e35532a78e647d79">  163</a></span>  vtkGetMacro(tsne_GradientThreshold, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aa20bf3f18db3a20377e12f164825b09f">  165</a></span>  vtkSetMacro(tsne_Metric, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a4d5472357b72a77211a2fc820030db59">  166</a></span>  vtkGetMacro(tsne_Metric, std::string);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a0c7abfdb65082d50efe3818493ea1c7b">  168</a></span>  vtkSetMacro(tsne_Init, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a6aeef4eda4a58b0772099b7365617e0c">  169</a></span>  vtkGetMacro(tsne_Init, std::string);</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a3d92507fe32e95640c6747fd5ea7ccf4">  171</a></span>  vtkSetMacro(tsne_Verbose, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a92f2d6b25f6d024f2bf87af98b9bb3e1">  172</a></span>  vtkGetMacro(tsne_Verbose, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#afdc46a8337a7d2dd652eed8bc3f3156b">  174</a></span>  vtkSetMacro(tsne_Method, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a82f62b97f7d920503ef4da7d7119eb8f">  175</a></span>  vtkGetMacro(tsne_Method, std::string);</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a52795c89709855ed0dcc3c1111330b4a">  177</a></span>  vtkSetMacro(tsne_Angle, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a109f0b608d825a1b6a3e6d242bafb88d">  178</a></span>  vtkGetMacro(tsne_Angle, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="comment">// Iso</span></div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a8c0f3f1d799cb15f259beb4478d691f7">  181</a></span>  vtkSetMacro(iso_EigenSolver, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a114712d701354b0bc0097fbe69c20375">  182</a></span>  vtkGetMacro(iso_EigenSolver, std::string);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="comment">// TSNE</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a9e8660312d29be009d2d2d1ad07f093c">  154</a></span>  vtkSetMacro(tsne_Perplexity, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aa7334e4d7eb920cf59d788e4c888aee8">  155</a></span>  vtkGetMacro(tsne_Perplexity, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#abda609df0ded1f297f3035579f90718b">  157</a></span>  vtkSetMacro(tsne_Exaggeration, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a04a56a1534dc824596089171d38b0f62">  158</a></span>  vtkGetMacro(tsne_Exaggeration, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a662572a1b4399a8dc82b6351b8b5f756">  160</a></span>  vtkSetMacro(tsne_LearningRate, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aac5ab9f322157dd140d255231c28ca73">  161</a></span>  vtkGetMacro(tsne_LearningRate, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a6b67bfe185ce3375f13fcb15e47fb79f">  163</a></span>  vtkSetMacro(tsne_MaxIteration, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aa8f2e28255b0ff4e357caab05563d465">  164</a></span>  vtkGetMacro(tsne_MaxIteration, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a04da2c743a49eb68b12973395bc810a0">  166</a></span>  vtkSetMacro(tsne_MaxIterationProgress, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a54739ab1fec79618c0d715a32f381ba6">  167</a></span>  vtkGetMacro(tsne_MaxIterationProgress, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a2d1f13302260b4424c2e3ed122a50a6e">  169</a></span>  vtkSetMacro(tsne_GradientThreshold, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a9c5c686f0dd8e533e35532a78e647d79">  170</a></span>  vtkGetMacro(tsne_GradientThreshold, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aa20bf3f18db3a20377e12f164825b09f">  172</a></span>  vtkSetMacro(tsne_Metric, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a4d5472357b72a77211a2fc820030db59">  173</a></span>  vtkGetMacro(tsne_Metric, std::string);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a0c7abfdb65082d50efe3818493ea1c7b">  175</a></span>  vtkSetMacro(tsne_Init, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a6aeef4eda4a58b0772099b7365617e0c">  176</a></span>  vtkGetMacro(tsne_Init, std::string);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a3d92507fe32e95640c6747fd5ea7ccf4">  178</a></span>  vtkSetMacro(tsne_Verbose, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a92f2d6b25f6d024f2bf87af98b9bb3e1">  179</a></span>  vtkGetMacro(tsne_Verbose, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#afdc46a8337a7d2dd652eed8bc3f3156b">  181</a></span>  vtkSetMacro(tsne_Method, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a82f62b97f7d920503ef4da7d7119eb8f">  182</a></span>  vtkGetMacro(tsne_Method, std::string);</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ab5ca19fc00c5e7c35df4e7bd73a393b2">  184</a></span>  vtkSetMacro(iso_Tolerance, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a55e32aec931614938c14f2f9caf28638">  185</a></span>  vtkGetMacro(iso_Tolerance, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a52795c89709855ed0dcc3c1111330b4a">  184</a></span>  vtkSetMacro(tsne_Angle, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a109f0b608d825a1b6a3e6d242bafb88d">  185</a></span>  vtkGetMacro(tsne_Angle, <span class="keywordtype">float</span>);</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a821a14d9d46031d016e27c1e9d20a1f2">  187</a></span>  vtkSetMacro(iso_MaxIteration, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#af1eff62b98bdf5be33004d98d47db633">  188</a></span>  vtkGetMacro(iso_MaxIteration, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a4a28c9406172913cc11ffd2d101be615">  190</a></span>  vtkSetMacro(iso_PathMethod, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a54c8dd3e27dbbe89e8772728d2b0395f">  191</a></span>  vtkGetMacro(iso_PathMethod, std::string);</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a35d7c44ba7af500987459a15db5f6395">  193</a></span>  vtkSetMacro(iso_NeighborsAlgorithm, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a5aa1c6d80a4c9b7875cfc2e96ec4257a">  194</a></span>  vtkGetMacro(iso_NeighborsAlgorithm, std::string);</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ab8ae439ddb2d9b8712bc7f177f242dc2">  196</a></span>  vtkSetMacro(iso_Metric, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a613142f2ad15c10a9320babeec8fc18d">  197</a></span>  vtkGetMacro(iso_Metric, std::string);</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="comment">// PCA</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a1ea2afd83fed9fd4f981925f40f55b39">  200</a></span>  vtkSetMacro(pca_Copy, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aabf6bfeed2c2d77490536b6558cb1bfa">  201</a></span>  vtkGetMacro(pca_Copy, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="comment">// Iso</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a8c0f3f1d799cb15f259beb4478d691f7">  188</a></span>  vtkSetMacro(iso_EigenSolver, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a114712d701354b0bc0097fbe69c20375">  189</a></span>  vtkGetMacro(iso_EigenSolver, std::string);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ab5ca19fc00c5e7c35df4e7bd73a393b2">  191</a></span>  vtkSetMacro(iso_Tolerance, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a55e32aec931614938c14f2f9caf28638">  192</a></span>  vtkGetMacro(iso_Tolerance, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a821a14d9d46031d016e27c1e9d20a1f2">  194</a></span>  vtkSetMacro(iso_MaxIteration, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#af1eff62b98bdf5be33004d98d47db633">  195</a></span>  vtkGetMacro(iso_MaxIteration, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a4a28c9406172913cc11ffd2d101be615">  197</a></span>  vtkSetMacro(iso_PathMethod, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a54c8dd3e27dbbe89e8772728d2b0395f">  198</a></span>  vtkGetMacro(iso_PathMethod, std::string);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a35d7c44ba7af500987459a15db5f6395">  200</a></span>  vtkSetMacro(iso_NeighborsAlgorithm, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a5aa1c6d80a4c9b7875cfc2e96ec4257a">  201</a></span>  vtkGetMacro(iso_NeighborsAlgorithm, std::string);</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a9f91d9f21d5b8f247e8015e9dca746d3">  203</a></span>  vtkSetMacro(pca_Whiten, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aabaeb7dedcafa6dcc670866c98a5b4d7">  204</a></span>  vtkGetMacro(pca_Whiten, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ab8ae439ddb2d9b8712bc7f177f242dc2">  203</a></span>  vtkSetMacro(iso_Metric, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a613142f2ad15c10a9320babeec8fc18d">  204</a></span>  vtkGetMacro(iso_Metric, std::string);</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a57743fd566c0bfe4bef1968cf7a62d22">  206</a></span>  vtkSetMacro(pca_SVDSolver, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a8ec4682ff8e7003cdd12de483a6a16e1">  207</a></span>  vtkGetMacro(pca_SVDSolver, std::string);</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a619135cc00892270e23fb9caa6e07e16">  209</a></span>  vtkSetMacro(pca_Tolerance, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a3fd297dc5a139354ffa37460fd5b4c8a">  210</a></span>  vtkGetMacro(pca_Tolerance, <span class="keywordtype">float</span>);</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#abf2747a286c107652017e9d63d50b556">  212</a></span>  vtkSetMacro(pca_MaxIteration, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a7391b9ab2da8a8aa69a9f1af97a5ad4d">  213</a></span>  vtkGetMacro(pca_MaxIteration, std::string);</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  <span class="comment">// testing</span></div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#af3f0616eb50948ec85890e5109e7dc94">  216</a></span>  vtkSetMacro(ModulePath, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a7952200e51a96d89b4b727e0117d8958">  217</a></span>  vtkGetMacro(ModulePath, std::string);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <span class="comment">// PCA</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a1ea2afd83fed9fd4f981925f40f55b39">  207</a></span>  vtkSetMacro(pca_Copy, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aabf6bfeed2c2d77490536b6558cb1bfa">  208</a></span>  vtkGetMacro(pca_Copy, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a9f91d9f21d5b8f247e8015e9dca746d3">  210</a></span>  vtkSetMacro(pca_Whiten, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aabaeb7dedcafa6dcc670866c98a5b4d7">  211</a></span>  vtkGetMacro(pca_Whiten, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a57743fd566c0bfe4bef1968cf7a62d22">  213</a></span>  vtkSetMacro(pca_SVDSolver, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a8ec4682ff8e7003cdd12de483a6a16e1">  214</a></span>  vtkGetMacro(pca_SVDSolver, std::string);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a619135cc00892270e23fb9caa6e07e16">  216</a></span>  vtkSetMacro(pca_Tolerance, <span class="keywordtype">float</span>);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a3fd297dc5a139354ffa37460fd5b4c8a">  217</a></span>  vtkGetMacro(pca_Tolerance, <span class="keywordtype">float</span>);</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ab69ff7895e9d3476ef97c9f439fa9a61">  219</a></span>  vtkSetMacro(ModuleName, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aa48db5f91d6e45cc49c3272ab5bd39a9">  220</a></span>  vtkGetMacro(ModuleName, std::string);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#abf2747a286c107652017e9d63d50b556">  219</a></span>  vtkSetMacro(pca_MaxIteration, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a7391b9ab2da8a8aa69a9f1af97a5ad4d">  220</a></span>  vtkGetMacro(pca_MaxIteration, std::string);</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a72582db6d0102ad92a1dcb1a3c182c19">  222</a></span>  vtkSetMacro(FunctionName, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#acd5924d1929fe4bc144f9ce6b6d52c2d">  223</a></span>  vtkGetMacro(FunctionName, std::string);</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  <a class="code hl_class" href="classttkDimensionReduction.html">ttkDimensionReduction</a>();</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a9d1bc15e1c75f193d33cf08516082b0e">FillInputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#af12cc495fab5711bb738a7bdef8b52a2">FillOutputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">RequestData</a>(vtkInformation *request,</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                  vtkInformationVector **inputVector,</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                  vtkInformationVector *outputVector) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  <span class="comment">// default</span></div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  <span class="keywordtype">bool</span> SelectFieldsWithRegexp{<span class="keyword">false</span>};</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  std::string RegexpString{<span class="stringliteral">&quot;.*&quot;</span>};</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  std::vector&lt;std::string&gt; ScalarFields{};</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  <span class="keywordtype">int</span> NumberOfComponents{2};</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  <span class="keywordtype">int</span> NumberOfNeighbors{5};</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <span class="keywordtype">int</span> Method{2}; <span class="comment">// MDS</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  <span class="keywordtype">int</span> IsDeterministic{<span class="keyword">true</span>};</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  <span class="keywordtype">bool</span> KeepAllDataArrays{<span class="keyword">true</span>};</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  <span class="comment">// mds &amp;&amp; se</span></div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  <span class="keywordtype">bool</span> InputIsADistanceMatrix{<span class="keyword">false</span>};</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  std::vector&lt;std::vector&lt;double&gt;&gt; outputData_{};</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>};</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <span class="comment">// testing</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#af3f0616eb50948ec85890e5109e7dc94">  223</a></span>  vtkSetMacro(ModulePath, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a7952200e51a96d89b4b727e0117d8958">  224</a></span>  vtkGetMacro(ModulePath, std::string);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#ab69ff7895e9d3476ef97c9f439fa9a61">  226</a></span>  vtkSetMacro(ModuleName, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#aa48db5f91d6e45cc49c3272ab5bd39a9">  227</a></span>  vtkGetMacro(ModuleName, std::string);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#a72582db6d0102ad92a1dcb1a3c182c19">  229</a></span>  vtkSetMacro(FunctionName, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="classttkDimensionReduction.html#acd5924d1929fe4bc144f9ce6b6d52c2d">  230</a></span>  vtkGetMacro(FunctionName, std::string);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  <a class="code hl_class" href="classttkDimensionReduction.html">ttkDimensionReduction</a>();</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a9d1bc15e1c75f193d33cf08516082b0e">FillInputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#af12cc495fab5711bb738a7bdef8b52a2">FillOutputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">RequestData</a>(vtkInformation *request,</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                  vtkInformationVector **inputVector,</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                  vtkInformationVector *outputVector) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <span class="comment">// default</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  <span class="keywordtype">bool</span> SelectFieldsWithRegexp{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  std::string RegexpString{<span class="stringliteral">&quot;.*&quot;</span>};</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  std::vector&lt;std::string&gt; ScalarFields{};</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  <span class="keywordtype">int</span> NumberOfComponents{2};</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  <span class="keywordtype">int</span> NumberOfNeighbors{5};</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  <span class="keywordtype">int</span> Method{2}; <span class="comment">// MDS</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  <span class="keywordtype">int</span> IsDeterministic{<span class="keyword">true</span>};</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  <span class="keywordtype">bool</span> KeepAllDataArrays{<span class="keyword">true</span>};</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <span class="comment">// mds &amp;&amp; se</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  <span class="keywordtype">bool</span> InputIsADistanceMatrix{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  std::vector&lt;std::vector&lt;double&gt;&gt; outputData_{};</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>};</div>
 <div class="ttc" id="aDimensionReduction_8h_html"><div class="ttname"><a href="DimensionReduction_8h.html">DimensionReduction.h</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html"><div class="ttname"><a href="classttkAlgorithm.html">ttkAlgorithm</a></div><div class="ttdoc">Baseclass of all VTK filters that wrap ttk modules.</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00033">ttkAlgorithm.h:34</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a38454ad0e03893665a505e0aa3fafa48"><div class="ttname"><a href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">ttkAlgorithm::RequestData</a></div><div class="ttdeci">virtual int RequestData(vtkInformation *ttkNotUsed(request), vtkInformationVector **ttkNotUsed(inputVectors), vtkInformationVector *ttkNotUsed(outputVector))</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00319">ttkAlgorithm.h:319</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a9d1bc15e1c75f193d33cf08516082b0e"><div class="ttname"><a href="classttkAlgorithm.html#a9d1bc15e1c75f193d33cf08516082b0e">ttkAlgorithm::FillInputPortInformation</a></div><div class="ttdeci">int FillInputPortInformation(int ttkNotUsed(port), vtkInformation *ttkNotUsed(info)) override</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00333">ttkAlgorithm.h:333</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_af12cc495fab5711bb738a7bdef8b52a2"><div class="ttname"><a href="classttkAlgorithm.html#af12cc495fab5711bb738a7bdef8b52a2">ttkAlgorithm::FillOutputPortInformation</a></div><div class="ttdeci">int FillOutputPortInformation(int ttkNotUsed(port), vtkInformation *ttkNotUsed(info)) override</div><div class="ttdef"><b>Definition:</b> <a href="ttkAlgorithm_8h_source.html#l00348">ttkAlgorithm.h:348</a></div></div>
-<div class="ttc" id="aclassttkDimensionReduction_html"><div class="ttname"><a href="classttkDimensionReduction.html">ttkDimensionReduction</a></div><div class="ttdoc">TTK VTK-filter that wraps the ttk::DimensionReduction processing package.</div><div class="ttdef"><b>Definition:</b> <a href="ttkDimensionReduction_8h_source.html#l00042">ttkDimensionReduction.h:44</a></div></div>
+<div class="ttc" id="aclassttkDimensionReduction_html"><div class="ttname"><a href="classttkDimensionReduction.html">ttkDimensionReduction</a></div><div class="ttdoc">TTK VTK-filter that wraps the ttk::DimensionReduction processing package.</div><div class="ttdef"><b>Definition:</b> <a href="ttkDimensionReduction_8h_source.html#l00049">ttkDimensionReduction.h:51</a></div></div>
 <div class="ttc" id="aclassttkDimensionReduction_html_a23cb346883918f364206b929c0f6279c"><div class="ttname"><a href="classttkDimensionReduction.html#a23cb346883918f364206b929c0f6279c">ttkDimensionReduction::New</a></div><div class="ttdeci">static ttkDimensionReduction * New()</div></div>
-<div class="ttc" id="aclassttkDimensionReduction_html_a82a1bd5ed15bcba3e52873996ada5b0f"><div class="ttname"><a href="classttkDimensionReduction.html#a82a1bd5ed15bcba3e52873996ada5b0f">ttkDimensionReduction::ClearScalarFields</a></div><div class="ttdeci">void ClearScalarFields()</div><div class="ttdef"><b>Definition:</b> <a href="ttkDimensionReduction_8h_source.html#l00055">ttkDimensionReduction.h:55</a></div></div>
-<div class="ttc" id="aclassttkDimensionReduction_html_ad649af967919486ca50517d3b5f01167"><div class="ttname"><a href="classttkDimensionReduction.html#ad649af967919486ca50517d3b5f01167">ttkDimensionReduction::SetScalarFields</a></div><div class="ttdeci">void SetScalarFields(const std::string &amp;s)</div><div class="ttdef"><b>Definition:</b> <a href="ttkDimensionReduction_8h_source.html#l00050">ttkDimensionReduction.h:50</a></div></div>
-<div class="ttc" id="aclassttkDimensionReduction_html_aea790ec58649516215340c188e461a61"><div class="ttname"><a href="classttkDimensionReduction.html#aea790ec58649516215340c188e461a61">ttkDimensionReduction::SetInputIsADistanceMatrix</a></div><div class="ttdeci">void SetInputIsADistanceMatrix(const bool b)</div><div class="ttdef"><b>Definition:</b> <a href="ttkDimensionReduction_8h_source.html#l00083">ttkDimensionReduction.h:83</a></div></div>
-<div class="ttc" id="aclassttk_1_1DimensionReduction_html"><div class="ttname"><a href="classttk_1_1DimensionReduction.html">ttk::DimensionReduction</a></div><div class="ttdoc">TTK VTK-filter that apply dimension reduction algorithms on input.</div><div class="ttdef"><b>Definition:</b> <a href="DimensionReduction_8h_source.html#l00023">DimensionReduction.h:23</a></div></div>
+<div class="ttc" id="aclassttkDimensionReduction_html_a82a1bd5ed15bcba3e52873996ada5b0f"><div class="ttname"><a href="classttkDimensionReduction.html#a82a1bd5ed15bcba3e52873996ada5b0f">ttkDimensionReduction::ClearScalarFields</a></div><div class="ttdeci">void ClearScalarFields()</div><div class="ttdef"><b>Definition:</b> <a href="ttkDimensionReduction_8h_source.html#l00062">ttkDimensionReduction.h:62</a></div></div>
+<div class="ttc" id="aclassttkDimensionReduction_html_ad649af967919486ca50517d3b5f01167"><div class="ttname"><a href="classttkDimensionReduction.html#ad649af967919486ca50517d3b5f01167">ttkDimensionReduction::SetScalarFields</a></div><div class="ttdeci">void SetScalarFields(const std::string &amp;s)</div><div class="ttdef"><b>Definition:</b> <a href="ttkDimensionReduction_8h_source.html#l00057">ttkDimensionReduction.h:57</a></div></div>
+<div class="ttc" id="aclassttkDimensionReduction_html_aea790ec58649516215340c188e461a61"><div class="ttname"><a href="classttkDimensionReduction.html#aea790ec58649516215340c188e461a61">ttkDimensionReduction::SetInputIsADistanceMatrix</a></div><div class="ttdeci">void SetInputIsADistanceMatrix(const bool b)</div><div class="ttdef"><b>Definition:</b> <a href="ttkDimensionReduction_8h_source.html#l00090">ttkDimensionReduction.h:90</a></div></div>
+<div class="ttc" id="aclassttk_1_1DimensionReduction_html"><div class="ttname"><a href="classttk_1_1DimensionReduction.html">ttk::DimensionReduction</a></div><div class="ttdoc">TTK VTK-filter that apply dimension reduction algorithms on input.</div><div class="ttdef"><b>Definition:</b> <a href="DimensionReduction_8h_source.html#l00041">DimensionReduction.h:41</a></div></div>
 <div class="ttc" id="attkAlgorithm_8h_html"><div class="ttname"><a href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 11 2022 10:31:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+Generated on Wed Jul 13 2022 22:09:10 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>
