@@ -184,24 +184,21 @@ href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/c%2B%2B"
 
 The remainder of these notes describe the installation of the
 <a href="downloads.html" target="new">
-version 1.1.0 of
+version 1.0.0 of
 TTK</a> along with the
 <a
-href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.10&type=source&os=Sources&downloadFile=ParaView-v5.10.1.zip"
+href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.9&type=source&os=Sources&downloadFile=ParaView-v5.9.1.zip"
 target="new">
-version 5.10.1 of ParaView</a>. Other versions of either software packages
+version 5.9.1 of ParaView</a>. Other versions of either software packages
 may require slight variations in the installation procedure.
 For earlier versions of both software packages, you may want to check out
 previous versions of our installation notes for Windows: <br>
 &nbsp;&middot;&nbsp;
-<a href="installation-windows-sources-0.9.9.html">TTK 1.0.0 with ParaView 5.9.1</a>.<br>
-&nbsp;&middot;&nbsp;
 <a href="installation-windows-sources-0.9.9.html">TTK 0.9.9 with ParaView 5.6.1</a>.<br>
 &nbsp;&middot;&nbsp;
 <a href="installation-windows-0.9.7.html">TTK 0.9.7 with ParaView 5.6.0</a>.<br>
-<!--&nbsp;&middot;&nbsp;
-<a href="installation-windows-0.9.6.html">TTK 0.9.6 with ParaView
-5.5.2</a>.<br>-->
+&nbsp;&middot;&nbsp;
+<a href="installation-windows-0.9.6.html">TTK 0.9.6 with ParaView 5.5.2</a>.<br>
 (...)
 <br><br>
 
@@ -271,15 +268,15 @@ conda install -c conda-forge eigen=3.3.8 spectralib zfp scikit-learn
 </code></pre>
 
 <p><h3>2. Download TTK</h3>
-Download TTK's source code archive <code>ttk-1.1.0.zip</code> from the
+Download TTK's source code archive <code>ttk-1.0.0.zip</code> from the
 <a target="new" href="downloads.html">download page</a> and decompress
 it.
 </p>
 
 <p><h3>3. Download ParaView</h3>
-Download ParaView's source code archive <code>ttk-paraview-5.10.1.zip</code> from
+Download ParaView's source code archive <code>ttk-paraview-5.9.1.zip</code> from
 <a target="new"
-href="https://github.com/topology-tool-kit/ttk-paraview/archive/v5.10.1.zip">GitHub</a>
+href="https://github.com/topology-tool-kit/ttk-paraview/archive/v5.9.1.zip">GitHub</a>
 and decompress it.
 </p>
 
@@ -291,7 +288,7 @@ CMake:
 <br>
 
 <pre><code>
-cd ttk-paraview-5.10.1
+cd ttk-paraview-5.9.1
 mkdir build
 cd build
 cmake-gui ..
@@ -330,7 +327,7 @@ with CMake:
 Run the following commands to configure TTK with CMake:
 <br>
 <pre><code>
-cd ttk-1.1.0
+cd ttk-1.0.0
 mkdir build
 cd build
 cmake-gui ..
@@ -351,7 +348,7 @@ href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/vtk-c%2B%2B"
 
 If you are an advanced user and you do not even wish  to activate TTK's VTK
 support, set the CMake variables
-<!-- NOT NEEDED AFTER RELEASE 1.1.0 -->
+<!-- NOT NEEDED AFTER RELEASE 1.0.0 -->
 <code>TTK_BUILD_STANDALONE_APPS</code> and
 <!-- END OF NOT NEEDED -->
 <code>TTK_BUILD_VTK_WRAPPERS</code> to <code>OFF</code>.
@@ -453,7 +450,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on Jul. 16, 2022.</p>
+                    Updated on Oct. 16, 2021.</p>
                 </div>
             </div>
         </div>
