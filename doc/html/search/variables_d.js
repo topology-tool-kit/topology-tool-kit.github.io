@@ -73,7 +73,7 @@ var searchData=
   ['mergedminimaid_5f_70',['mergedMinimaId_',['../classttk_1_1MandatoryCriticalPoints.html#a2c0e07a24c447576accf18c83f6b349d',1,'ttk::MandatoryCriticalPoints']]],
   ['mergetree_5f_71',['mergeTree_',['../classttk_1_1ContourTree.html#aa8609c8322cf326ce8e4065791dc4492',1,'ttk::ContourTree']]],
   ['meshedge_5f_72',['meshEdge_',['../structttk_1_1FiberSurface_1_1Vertex.html#a74fba094bb795699ce507558b2678830',1,'ttk::FiberSurface::Vertex']]],
-  ['method_5f_73',['method_',['../classttk_1_1DimensionReduction.html#a572f100616220f719583a274cb37b7c3',1,'ttk::DimensionReduction::method_()'],['../classttk_1_1PDBarycenter.html#a474cb293f5df7edf4424580ff9b148df',1,'ttk::PDBarycenter::method_()'],['../classttk_1_1PersistenceDiagramBarycenter.html#ab77b6f09072e383966e56b0d874f30ab',1,'ttk::PersistenceDiagramBarycenter::method_()']]],
+  ['method_5f_73',['method_',['../classttk_1_1DimensionReduction.html#a572f100616220f719583a274cb37b7c3',1,'ttk::DimensionReduction::method_()'],['../classttk_1_1PDBarycenter.html#a98940ae3e2aa9f6ce0e5ec13d72e5e79',1,'ttk::PDBarycenter::method_()'],['../classttk_1_1PersistenceDiagramBarycenter.html#ae7a6a728927ec6d435c78bb32ddfce68',1,'ttk::PersistenceDiagramBarycenter::method_()']]],
   ['min_5fsubweights_5f_74',['min_subweights_',['../classttk_1_1KDTree.html#a2cba27694cdb0267aaaef4e6ebefc01f',1,'ttk::KDTree']]],
   ['minimumlist_5f_75',['minimumList_',['../classttk_1_1SubLevelSetTree.html#a2557dc67d5a32885492daf5efb4a0ad8',1,'ttk::SubLevelSetTree']]],
   ['minpersistence_76',['MinPersistence',['../classttk_1_1PersistenceDiagramDistanceMatrix.html#a05679303e05c74e850361724e208daca',1,'ttk::PersistenceDiagramDistanceMatrix']]],

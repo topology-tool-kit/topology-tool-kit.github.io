@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pairtuple_0',['pairTuple',['../classttkPersistenceDiagramClustering.html#ae6323f2582ed03e9850c70b6c9707e52',1,'ttkPersistenceDiagramClustering']]],
-  ['polarity_1',['polarity',['../namespacettk.html#ae4653b36cd463d51ff690619d26e56da',1,'ttk']]]
+  ['orderededge_0',['orderedEdge',['../namespacettk_1_1ftr.html#a22e0aa72fb4f4ae7665607eb367609de',1,'ttk::ftr']]],
+  ['orderedtriangle_1',['orderedTriangle',['../namespacettk_1_1ftr.html#a26e8706511bc29db623cf867ba736565',1,'ttk::ftr']]]
 ];

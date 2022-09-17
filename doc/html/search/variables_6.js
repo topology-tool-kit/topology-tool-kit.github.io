@@ -13,7 +13,7 @@ var searchData=
   ['flashing_10',['FLASHING',['../namespacettk_1_1debug_1_1output.html#a8f3f457a1191ebf2248cc7058ec1dc8c',1,'ttk::debug::output']]],
   ['forcenonmanifoldcheck_11',['forceNonManifoldCheck',['../classttk_1_1ScalarFieldCriticalPoints.html#aeeeb63f3b95d95aac814471c13d84186',1,'ttk::ScalarFieldCriticalPoints']]],
   ['forceuseofalgorithm_12',['ForceUseOfAlgorithm',['../classttk_1_1PersistenceDiagramClustering.html#ac611d9017f8423b3d126112c41671744',1,'ttk::PersistenceDiagramClustering']]],
-  ['forceuseofalgorithm_5f_13',['forceUseOfAlgorithm_',['../classttk_1_1PDClustering.html#a827868015d6fe8ba8462d96e7fa84cca',1,'ttk::PDClustering']]],
+  ['forceuseofalgorithm_5f_13',['forceUseOfAlgorithm_',['../classttk_1_1PDClustering.html#a4f13d4a7403768506431cd56b07ffbad',1,'ttk::PDClustering']]],
   ['formatversion_5f_14',['formatVersion_',['../classttk_1_1TopologicalCompression.html#ad698f95457577c6d895b53083ccc8e58',1,'ttk::TopologicalCompression']]],
   ['forward_15',['forward',['../structttk_1_1cf_1_1Region.html#a7e4075a2fa273efeb8a1e495c2036612',1,'ttk::cf::Region']]],
   ['freq_16',['freq',['../structttk_1_1cta_1_1AlignmentNode.html#a111c945f902f88b587ef26ad3352408d',1,'ttk::cta::AlignmentNode::freq()'],['../structttk_1_1cta_1_1AlignmentEdge.html#a94c719f3ee9042ffdbd60213344d3389',1,'ttk::cta::AlignmentEdge::freq()'],['../structttk_1_1cta_1_1BinaryTree.html#aaf2b3ff25816d6764f53bf63b4dc1ce7',1,'ttk::cta::BinaryTree::freq()']]],

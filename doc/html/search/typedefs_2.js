@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['edgecompfn_0',['EdgeCompFN',['../namespacettk_1_1ftr.html#a91c809ce064610b62f88eef95c344746',1,'ttk::ftr']]],
-  ['edges_1',['Edges',['../classttk_1_1TrackingFromOverlap.html#a6b1c281d1456d5c1fa0ca695b9fcc045',1,'ttk::TrackingFromOverlap']]],
-  ['edgescheme_2',['edgeScheme',['../namespacettk_1_1ftr.html#a6885dcdae3a3c74ba36fd8443f3b12e9',1,'ttk::ftr']]]
+  ['diagramtype_0',['DiagramType',['../namespacettk.html#aab8bba05f97023f08b0a26d1b3598555',1,'ttk']]]
 ];

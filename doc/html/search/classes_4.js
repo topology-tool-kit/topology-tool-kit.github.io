@@ -10,8 +10,9 @@ var searchData=
   ['discretemorsesandwich_7',['DiscreteMorseSandwich',['../classttk_1_1DiscreteMorseSandwich.html',1,'ttk']]],
   ['distancefield_8',['DistanceField',['../classttk_1_1DistanceField.html',1,'ttk']]],
   ['dynamicgraph_9',['DynamicGraph',['../classttk_1_1ftr_1_1DynamicGraph.html',1,'ttk::ftr']]],
-  ['dynamictree_10',['DynamicTree',['../classttk_1_1DynamicTree.html',1,'ttk']]],
-  ['dyngraphnode_11',['DynGraphNode',['../structttk_1_1ftr_1_1DynGraphNode.html',1,'ttk::ftr']]],
-  ['dyngraphs_12',['DynGraphs',['../structttk_1_1ftr_1_1DynGraphs.html',1,'ttk::ftr']]],
-  ['dyntreenode_13',['DynTreeNode',['../structttk_1_1DynTreeNode.html',1,'ttk']]]
+  ['dynamicgraph_3c_20idvertex_20_3e_10',['DynamicGraph&lt; idVertex &gt;',['../classttk_1_1ftr_1_1DynamicGraph.html',1,'ttk::ftr']]],
+  ['dynamictree_11',['DynamicTree',['../classttk_1_1DynamicTree.html',1,'ttk']]],
+  ['dyngraphnode_12',['DynGraphNode',['../structttk_1_1ftr_1_1DynGraphNode.html',1,'ttk::ftr']]],
+  ['dyngraphs_13',['DynGraphs',['../structttk_1_1ftr_1_1DynGraphs.html',1,'ttk::ftr']]],
+  ['dyntreenode_14',['DynTreeNode',['../structttk_1_1DynTreeNode.html',1,'ttk']]]
 ];

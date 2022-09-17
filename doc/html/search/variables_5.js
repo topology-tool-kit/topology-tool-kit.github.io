@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['early_5fstoppage_5f_0',['early_stoppage_',['../classttk_1_1PersistenceDiagramBarycenter.html#afdb8f4e4717ed1ef349b24883478ef08',1,'ttk::PersistenceDiagramBarycenter::early_stoppage_()'],['../classttk_1_1PDBarycenter.html#a69a9295f235173a40f07096332a4ea64',1,'ttk::PDBarycenter::early_stoppage_()']]],
+  ['early_5fstoppage_5f_0',['early_stoppage_',['../classttk_1_1PersistenceDiagramBarycenter.html#af27ad4fca805a08efa47ff62120b3097',1,'ttk::PersistenceDiagramBarycenter::early_stoppage_()'],['../classttk_1_1PDBarycenter.html#a6665530ea7fd04d3d92ff866925791fb',1,'ttk::PDBarycenter::early_stoppage_()']]],
   ['edgecollapsethreshold_5f_1',['edgeCollapseThreshold_',['../classttk_1_1FiberSurface.html#a2378d8afafa51d90e672a32404e80616',1,'ttk::FiberSurface']]],
   ['edgefanlinkedgelists_5f_2',['edgeFanLinkEdgeLists_',['../classttk_1_1JacobiSet.html#afae597491c0f5c57c915756001c031a0',1,'ttk::JacobiSet']]],
   ['edgefans_5f_3',['edgeFans_',['../classttk_1_1JacobiSet.html#aa4f9fdaec1ed13aa98b126e258a8b9bc',1,'ttk::JacobiSet']]],
@@ -23,9 +23,9 @@ var searchData=
   ['epsilon2tree2_5f_20',['epsilon2Tree2_',['../classttk_1_1MergeTreeBase.html#ada9b533968f676e4bf5d48074d23915c',1,'ttk::MergeTreeBase']]],
   ['epsilon3tree1_5f_21',['epsilon3Tree1_',['../classttk_1_1MergeTreeBase.html#a21340c316db5e36bab06c21213ad25d3',1,'ttk::MergeTreeBase']]],
   ['epsilon3tree2_5f_22',['epsilon3Tree2_',['../classttk_1_1MergeTreeBase.html#a6875f9376920ae118fcec60297564ace',1,'ttk::MergeTreeBase']]],
-  ['epsilon_5f_23',['epsilon_',['../classttk_1_1PersistenceDiagramAuction.html#afce173f3a8d4c8bd1abc5fc3e99ce616',1,'ttk::PersistenceDiagramAuction::epsilon_()'],['../classttk_1_1PDClustering.html#a188159d1917fe96e74d1d44f731d267f',1,'ttk::PDClustering::epsilon_()'],['../classttk_1_1ApproximateTopology.html#a7235f2de2ea478de9ff6fa73ecf8abd9',1,'ttk::ApproximateTopology::epsilon_()']]],
-  ['epsilon_5fdecreases_5f_24',['epsilon_decreases_',['../classttk_1_1PDBarycenter.html#aebf0e48af5c90897a1175ea585ded683',1,'ttk::PDBarycenter::epsilon_decreases_()'],['../classttk_1_1PersistenceDiagramBarycenter.html#a63b856ff12a4ebfd9e375b2950f44387',1,'ttk::PersistenceDiagramBarycenter::epsilon_decreases_()']]],
-  ['epsilon_5fmin_5f_25',['epsilon_min_',['../classttk_1_1PDClustering.html#a639de12f7989eb4ee8ceedc099428953',1,'ttk::PDClustering::epsilon_min_()'],['../classttk_1_1PDBarycenter.html#a2c8b8716c07dec60ef7666def2878de3',1,'ttk::PDBarycenter::epsilon_min_()']]],
+  ['epsilon_5f_23',['epsilon_',['../classttk_1_1PersistenceDiagramAuction.html#adeea6ddc697301490d335dc2238fce58',1,'ttk::PersistenceDiagramAuction::epsilon_()'],['../classttk_1_1PDClustering.html#aa769a7fd6e3f26d8b9ade81d345e27bd',1,'ttk::PDClustering::epsilon_()'],['../classttk_1_1ApproximateTopology.html#a7235f2de2ea478de9ff6fa73ecf8abd9',1,'ttk::ApproximateTopology::epsilon_()']]],
+  ['epsilon_5fdecreases_5f_24',['epsilon_decreases_',['../classttk_1_1PDBarycenter.html#a4b464389cb1b2e50a7babe5a7c484f85',1,'ttk::PDBarycenter::epsilon_decreases_()'],['../classttk_1_1PersistenceDiagramBarycenter.html#a3292774b823ff6da3309ab3b71242e98',1,'ttk::PersistenceDiagramBarycenter::epsilon_decreases_()']]],
+  ['epsilon_5fmin_5f_25',['epsilon_min_',['../classttk_1_1PDClustering.html#a364c9fecaa05b26ca299b213f7f7333a',1,'ttk::PDClustering::epsilon_min_()'],['../classttk_1_1PDBarycenter.html#a0fbf07b40b86fe77c982f0f9f01820a9',1,'ttk::PDBarycenter::epsilon_min_()']]],
   ['epsilontree1_5f_26',['epsilonTree1_',['../classttk_1_1MergeTreeBase.html#a0fe229b0d405d56049b8119867b63e8c',1,'ttk::MergeTreeBase']]],
   ['epsilontree2_5f_27',['epsilonTree2_',['../classttk_1_1MergeTreeBase.html#a984705c7c2f52ead960eaa645bddf369',1,'ttk::MergeTreeBase']]],
   ['esetdims_5f_28',['esetdims_',['../classttk_1_1PeriodicImplicitTriangulation.html#a460d4e3da89d072046d999b769eac165',1,'ttk::PeriodicImplicitTriangulation::esetdims_()'],['../classttk_1_1ImplicitTriangulation.html#a20447bc654b63b9d81fac3538eec254d',1,'ttk::ImplicitTriangulation::esetdims_()']]],

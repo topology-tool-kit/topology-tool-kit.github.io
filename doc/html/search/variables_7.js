@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['geom_5fpair_5flength_5f_0',['geom_pair_length_',['../classttk_1_1PersistenceDiagramAuctionActor.html#a15dcbd935ceccf0979aa0aadb205940c',1,'ttk::PersistenceDiagramAuctionActor']]],
-  ['geometrical_5ffactor_5f_1',['geometrical_factor_',['../classttk_1_1PDBarycenter.html#acfb1d475a853573e0f81d999f4da63c0',1,'ttk::PDBarycenter::geometrical_factor_()'],['../classttk_1_1PDClustering.html#a9ceb0d766c5de756d0d75574e84a3655',1,'ttk::PDClustering::geometrical_factor_()']]],
-  ['geometricalfactor_5f_2',['geometricalFactor_',['../classttk_1_1PersistenceDiagramAuction.html#a990b50dc669ea8f53ec5ccb8c4fa2329',1,'ttk::PersistenceDiagramAuction']]],
+  ['geom_5fpair_5flength_5f_0',['geom_pair_length_',['../classttk_1_1PersistenceDiagramAuctionActor.html#a4a8b58d6841cd0e45c7e5a1ebf5ffd67',1,'ttk::PersistenceDiagramAuctionActor']]],
+  ['geometrical_5ffactor_5f_1',['geometrical_factor_',['../classttk_1_1PDBarycenter.html#ae58375750db30dcc287ba9577beee84f',1,'ttk::PDBarycenter::geometrical_factor_()'],['../classttk_1_1PDClustering.html#ad85aaf5618c5ae9694e324a0e30b5337',1,'ttk::PDClustering::geometrical_factor_()']]],
+  ['geometricalfactor_5f_2',['geometricalFactor_',['../classttk_1_1PersistenceDiagramAuction.html#ae794d676a72bbbb6b66b4ab5e966342f',1,'ttk::PersistenceDiagramAuction']]],
   ['geometry_5f_3',['geometry_',['../structttk_1_1MorseSmaleComplex_1_1Separatrix.html#a5a7680435b55fd1fac6fcbe29cb2e768',1,'ttk::MorseSmaleComplex::Separatrix']]],
   ['globaldebuglevel_5f_4',['globalDebugLevel_',['../namespacettk.html#afccbedfe5c9266f187f6e15ac1e043e2',1,'ttk']]],
   ['globalid_5f_5',['globalId_',['../structttk_1_1FiberSurface_1_1Vertex.html#a03b1a59f5aa0bf05bf6d82c3ee602455',1,'ttk::FiberSurface::Vertex']]],
@@ -13,7 +13,7 @@ var searchData=
   ['globalthreadnumber_5f_10',['globalThreadNumber_',['../namespacettk.html#a13a2506f04566a5590741d23d8b57b49',1,'ttk']]],
   ['globalvertexlist_5f_11',['globalVertexList_',['../classttk_1_1FiberSurface.html#a9d1cd66987926a9fa4e5da8727a77270',1,'ttk::FiberSurface']]],
   ['goodbyemsg_5f_12',['goodbyeMsg_',['../namespacettk.html#a9c6e27760dd2981d7305e30ff75b9494',1,'ttk']]],
-  ['goods_5f_13',['goods_',['../classttk_1_1PersistenceDiagramAuction.html#af906fc878fb71da5124791a47721250a',1,'ttk::PersistenceDiagramAuction']]],
+  ['goods_5f_13',['goods_',['../classttk_1_1PersistenceDiagramAuction.html#aa66d5dec1d5ab708d79478e26fff81ab',1,'ttk::PersistenceDiagramAuction']]],
   ['gradient_5f_14',['gradient_',['../classttk_1_1dcg_1_1DiscreteGradient.html#ae5d0f9fd114f9ea2a3a60fc8e0243836',1,'ttk::dcg::DiscreteGradient']]],
   ['gradientcache_5f_15',['gradientCache_',['../classttk_1_1AbstractTriangulation.html#ab878d032c93b28b71ba2247a63ffbe0f',1,'ttk::AbstractTriangulation']]],
   ['grainsize_16',['grainSize',['../structttk_1_1ftr_1_1TaskChunk.html#a8ea8578625a64ee7d63d2be42263b53c',1,'ttk::ftr::TaskChunk']]],
