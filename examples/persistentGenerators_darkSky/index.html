@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
@@ -1029,17 +1029,21 @@ simplification using <a href="https://topology-tool-kit.github.io/doc/html/class
 <span class="normal">38</span>
 <span class="normal">39</span>
 <span class="normal">40</span>
-<span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># create a new &#39;XML PolyData Reader&#39;</span>
-<span class="n">ds14_scivis_0128_e4_dt04_06800vtp</span> <span class="o">=</span> <span class="n">XMLPolyDataReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ds14_scivis_0128_e4_dt04_1.0000.vtp&#39;</span><span class="p">])</span>
-<span class="n">ds14_scivis_0128_e4_dt04_06800vtp</span><span class="o">.</span><span class="n">PointArrayStatus</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DarkMatter_Phi&#39;</span><span class="p">]</span>
+<span class="n">ds14_scivis_0128_e4_dt04_06800vtp</span> <span class="o">=</span> <span class="n">XMLPolyDataReader</span><span class="p">(</span>
+    <span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ds14_scivis_0128_e4_dt04_1.0000.vtp&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">ds14_scivis_0128_e4_dt04_06800vtp</span><span class="o">.</span><span class="n">PointArrayStatus</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;DarkMatter_Phi&quot;</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;Gaussian Resampling&#39;</span>
 <span class="n">gaussianResampling1</span> <span class="o">=</span> <span class="n">GaussianResampling</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">ds14_scivis_0128_e4_dt04_06800vtp</span><span class="p">)</span>
-<span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">ResampleField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;DarkMatter_Phi&#39;</span><span class="p">]</span>
+<span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">ResampleField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;DarkMatter_Phi&quot;</span><span class="p">]</span>
 <span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">ResamplingGrid</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span>
 <span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">GaussianSplatRadius</span> <span class="o">=</span> <span class="mf">0.008</span>
 <span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">ScaleSplats</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1048,23 +1052,23 @@ simplification using <a href="https://topology-tool-kit.github.io/doc/html/class
 
 <span class="c1"># create a new &#39;TTK ScalarFieldSmoother&#39;</span>
 <span class="n">tTKScalarFieldSmoother1</span> <span class="o">=</span> <span class="n">TTKScalarFieldSmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">gaussianResampling1</span><span class="p">)</span>
-<span class="n">tTKScalarFieldSmoother1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;SplatterValues&#39;</span><span class="p">]</span>
+<span class="n">tTKScalarFieldSmoother1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;SplatterValues&quot;</span><span class="p">]</span>
 <span class="n">tTKScalarFieldSmoother1</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">tTKScalarFieldSmoother1</span><span class="o">.</span><span class="n">MaskField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;SplatterValues&#39;</span><span class="p">]</span>
+<span class="n">tTKScalarFieldSmoother1</span><span class="o">.</span><span class="n">MaskField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;SplatterValues&quot;</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;Calculator&#39;</span>
 <span class="n">calculator1</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKScalarFieldSmoother1</span><span class="p">)</span>
-<span class="n">calculator1</span><span class="o">.</span><span class="n">ResultArrayName</span> <span class="o">=</span> <span class="s1">&#39;SplatterValues&#39;</span>
-<span class="n">calculator1</span><span class="o">.</span><span class="n">Function</span> <span class="o">=</span> <span class="s1">&#39;-SplatterValues&#39;</span>
+<span class="n">calculator1</span><span class="o">.</span><span class="n">ResultArrayName</span> <span class="o">=</span> <span class="s2">&quot;SplatterValues&quot;</span>
+<span class="n">calculator1</span><span class="o">.</span><span class="n">Function</span> <span class="o">=</span> <span class="s2">&quot;-SplatterValues&quot;</span>
 
 <span class="c1"># create a new &#39;TTK PersistentGenerators&#39;</span>
 <span class="n">tTKPersistentGenerators1</span> <span class="o">=</span> <span class="n">TTKPersistentGenerators</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">calculator1</span><span class="p">)</span>
-<span class="n">tTKPersistentGenerators1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;SplatterValues&#39;</span><span class="p">]</span>
-<span class="n">tTKPersistentGenerators1</span><span class="o">.</span><span class="n">InputOffsetField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;SplatterValues&#39;</span><span class="p">]</span>
+<span class="n">tTKPersistentGenerators1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;SplatterValues&quot;</span><span class="p">]</span>
+<span class="n">tTKPersistentGenerators1</span><span class="o">.</span><span class="n">InputOffsetField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;SplatterValues&quot;</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistentGenerators1</span><span class="p">)</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;Persistence&#39;</span><span class="p">]</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;Persistence&quot;</span><span class="p">]</span>
 <span class="n">threshold1</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">0.24</span>
 <span class="n">threshold1</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">0.2863966089734687</span>
 
@@ -1153,7 +1157,7 @@ simplification using <a href="https://topology-tool-kit.github.io/doc/html/class
     <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
     
   </body>

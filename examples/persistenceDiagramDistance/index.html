@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
@@ -1037,25 +1037,25 @@ The actual distance is available in the field data of the 'matchings' output.</p
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># create a new &#39;TTK CinemaReader&#39;</span>
-<span class="n">tTKCinemaReader1</span> <span class="o">=</span> <span class="n">TTKCinemaReader</span><span class="p">(</span><span class="n">DatabasePath</span><span class="o">=</span><span class="s1">&#39;Isabel.cdb&#39;</span><span class="p">)</span>
+<span class="n">tTKCinemaReader1</span> <span class="o">=</span> <span class="n">TTKCinemaReader</span><span class="p">(</span><span class="n">DatabasePath</span><span class="o">=</span><span class="s2">&quot;Isabel.cdb&quot;</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;TTK CinemaProductReader&#39;</span>
 <span class="n">tTKCinemaProductReader1</span> <span class="o">=</span> <span class="n">TTKCinemaProductReader</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaReader1</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;Extract Block&#39;</span>
 <span class="n">extractBlock1</span> <span class="o">=</span> <span class="n">ExtractBlock</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaProductReader1</span><span class="p">)</span>
-<span class="n">extractBlock1</span><span class="o">.</span><span class="n">Selectors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;/Root/Block0&#39;</span><span class="p">,</span> <span class="s1">&#39;/Root/Block10&#39;</span><span class="p">]</span>
+<span class="n">extractBlock1</span><span class="o">.</span><span class="n">Selectors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;/Root/Block0&quot;</span><span class="p">,</span> <span class="s2">&quot;/Root/Block10&quot;</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;TTK PersistenceDiagram&#39;</span>
 <span class="n">tTKPersistenceDiagram3</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">extractBlock1</span><span class="p">)</span>
-<span class="n">tTKPersistenceDiagram3</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;velocityMag&#39;</span><span class="p">]</span>
-<span class="n">tTKPersistenceDiagram3</span><span class="o">.</span><span class="n">InputOffsetField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;velocityMag&#39;</span><span class="p">]</span>
-<span class="n">tTKPersistenceDiagram3</span><span class="o">.</span><span class="n">Backend</span> <span class="o">=</span> <span class="s1">&#39;FTM (IEEE TPSD 2019)&#39;</span>
+<span class="n">tTKPersistenceDiagram3</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;velocityMag&quot;</span><span class="p">]</span>
+<span class="n">tTKPersistenceDiagram3</span><span class="o">.</span><span class="n">InputOffsetField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;velocityMag&quot;</span><span class="p">]</span>
+<span class="n">tTKPersistenceDiagram3</span><span class="o">.</span><span class="n">Backend</span> <span class="o">=</span> <span class="s2">&quot;FTM (IEEE TPSD 2019)&quot;</span>
 <span class="n">tTKPersistenceDiagram3</span><span class="o">.</span><span class="n">UseAllCores</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold7</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram3</span><span class="p">)</span>
-<span class="n">threshold7</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CELLS&#39;</span><span class="p">,</span> <span class="s1">&#39;Persistence&#39;</span><span class="p">]</span>
+<span class="n">threshold7</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;Persistence&quot;</span><span class="p">]</span>
 <span class="n">threshold7</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">1.2</span>
 <span class="n">threshold7</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">136.490955383565</span>
 
@@ -1064,7 +1064,7 @@ The actual distance is available in the field data of the 'matchings' output.</p
 <span class="n">Show</span><span class="p">(</span><span class="n">tTKPersistenceDiagramClustering1</span><span class="p">)</span>
 
 <span class="c1"># Get the data</span>
-<span class="n">matchings_data</span> <span class="o">=</span> <span class="n">FetchData</span><span class="p">(</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKPersistenceDiagramClustering1</span><span class="p">,</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">matchings_data</span> <span class="o">=</span> <span class="n">FetchData</span><span class="p">(</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKPersistenceDiagramClustering1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># Get field data</span>
 <span class="n">field_data</span> <span class="o">=</span> <span class="n">matchings_data</span><span class="o">.</span><span class="n">GetBlock</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">GetFieldData</span><span class="p">()</span>
@@ -1159,7 +1159,7 @@ The actual distance is available in the field data of the 'matchings' output.</p
     <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
     
   </body>

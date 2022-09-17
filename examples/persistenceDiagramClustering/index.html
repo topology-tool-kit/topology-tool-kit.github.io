@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
@@ -1019,38 +1019,68 @@ Each centroid is also an explicit persistence diagram. Upon convergence, it is a
 <span class="normal">29</span>
 <span class="normal">30</span>
 <span class="normal">31</span>
-<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#! /usr/bin/env/python</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#! /usr/bin/env/python</span>
 
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># create a new &#39;TTK CinemaReader&#39;</span>
-<span class="n">tTKCinemaReader1</span> <span class="o">=</span> <span class="n">TTKCinemaReader</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s1">&#39;TTKCinemaReader1&#39;</span><span class="p">,</span> <span class="n">DatabasePath</span><span class="o">=</span><span class="s1">&#39;Isabel.cdb&#39;</span><span class="p">)</span>
+<span class="n">tTKCinemaReader1</span> <span class="o">=</span> <span class="n">TTKCinemaReader</span><span class="p">(</span>
+    <span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;TTKCinemaReader1&quot;</span><span class="p">,</span> <span class="n">DatabasePath</span><span class="o">=</span><span class="s2">&quot;Isabel.cdb&quot;</span>
+<span class="p">)</span>
 
 <span class="c1"># create a new &#39;TTK CinemaProductReader&#39;</span>
-<span class="n">tTKCinemaProductReader1</span> <span class="o">=</span> <span class="n">TTKCinemaProductReader</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s1">&#39;TTKCinemaProductReader1&#39;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaReader1</span><span class="p">)</span>
+<span class="n">tTKCinemaProductReader1</span> <span class="o">=</span> <span class="n">TTKCinemaProductReader</span><span class="p">(</span>
+    <span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;TTKCinemaProductReader1&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaReader1</span>
+<span class="p">)</span>
 
 <span class="c1"># create a new &#39;TTK PersistenceDiagram&#39;</span>
-<span class="n">tTKPersistenceDiagram13</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s1">&#39;TTKPersistenceDiagram13&#39;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaProductReader1</span><span class="p">)</span>
-<span class="n">tTKPersistenceDiagram13</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;velocityMag&#39;</span><span class="p">]</span>
-<span class="n">tTKPersistenceDiagram13</span><span class="o">.</span><span class="n">InputOffsetField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;velocityMag&#39;</span><span class="p">]</span>
-<span class="n">tTKPersistenceDiagram13</span><span class="o">.</span><span class="n">Backend</span> <span class="o">=</span> <span class="s1">&#39;FTM (IEEE TPSD 2019)&#39;</span>
+<span class="n">tTKPersistenceDiagram13</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span>
+    <span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;TTKPersistenceDiagram13&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaProductReader1</span>
+<span class="p">)</span>
+<span class="n">tTKPersistenceDiagram13</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;velocityMag&quot;</span><span class="p">]</span>
+<span class="n">tTKPersistenceDiagram13</span><span class="o">.</span><span class="n">InputOffsetField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;velocityMag&quot;</span><span class="p">]</span>
+<span class="n">tTKPersistenceDiagram13</span><span class="o">.</span><span class="n">Backend</span> <span class="o">=</span> <span class="s2">&quot;FTM (IEEE TPSD 2019)&quot;</span>
 <span class="n">tTKPersistenceDiagram13</span><span class="o">.</span><span class="n">UseAllCores</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="c1"># create a new &#39;TTK PersistenceDiagramClustering&#39;</span>
-<span class="n">tTKPersistenceDiagramClustering1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagramClustering</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s1">&#39;TTKPersistenceDiagramClustering1&#39;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram13</span><span class="p">)</span>
+<span class="n">tTKPersistenceDiagramClustering1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagramClustering</span><span class="p">(</span>
+    <span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;TTKPersistenceDiagramClustering1&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram13</span>
+<span class="p">)</span>
 <span class="n">tTKPersistenceDiagramClustering1</span><span class="o">.</span><span class="n">Numberofclusters</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">tTKPersistenceDiagramClustering1</span><span class="o">.</span><span class="n">Maximalcomputationtimes</span> <span class="o">=</span> <span class="mf">10.0</span>
-<span class="n">tTKPersistenceDiagramClustering1</span><span class="o">.</span><span class="n">Displayingmethod</span> <span class="o">=</span> <span class="s1">&#39;Clusters as stars&#39;</span>
+<span class="n">tTKPersistenceDiagramClustering1</span><span class="o">.</span><span class="n">Displayingmethod</span> <span class="o">=</span> <span class="s2">&quot;Clusters as stars&quot;</span>
 <span class="n">tTKPersistenceDiagramClustering1</span><span class="o">.</span><span class="n">Spacing</span> <span class="o">=</span> <span class="mf">1.1</span>
 <span class="n">tTKPersistenceDiagramClustering1</span><span class="o">.</span><span class="n">GeometricalLiftingalpha</span> <span class="o">=</span> <span class="mf">0.2</span>
 
 <span class="c1"># save the output</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;PersistenceDiagramClustering_centroids.vtm&quot;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKPersistenceDiagramClustering1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">SaveData</span><span class="p">(</span>
+    <span class="s2">&quot;PersistenceDiagramClustering_centroids.vtm&quot;</span><span class="p">,</span>
+    <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKPersistenceDiagramClustering1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">)</span>
 
-<span class="n">SaveData</span><span class="p">(</span><span class="s1">&#39;PersistenceDiagramClustering_clustering.csv&#39;</span><span class="p">,</span> <span class="n">proxy</span><span class="o">=</span><span class="n">tTKPersistenceDiagramClustering1</span><span class="p">,</span> <span class="n">ChooseArraysToWrite</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-    <span class="n">FieldDataArrays</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;FILE&#39;</span><span class="p">,</span> <span class="s1">&#39;TimeStep&#39;</span><span class="p">,</span> <span class="s1">&#39;ClusterId&#39;</span><span class="p">],</span>
-    <span class="n">FieldAssociation</span><span class="o">=</span><span class="s1">&#39;Field Data&#39;</span><span class="p">,</span>
-    <span class="n">AddMetaData</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span>
+    <span class="s2">&quot;PersistenceDiagramClustering_clustering.csv&quot;</span><span class="p">,</span>
+    <span class="n">proxy</span><span class="o">=</span><span class="n">tTKPersistenceDiagramClustering1</span><span class="p">,</span>
+    <span class="n">ChooseArraysToWrite</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">FieldDataArrays</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;FILE&quot;</span><span class="p">,</span> <span class="s2">&quot;TimeStep&quot;</span><span class="p">,</span> <span class="s2">&quot;ClusterId&quot;</span><span class="p">],</span>
+    <span class="n">FieldAssociation</span><span class="o">=</span><span class="s2">&quot;Field Data&quot;</span><span class="p">,</span>
+    <span class="n">AddMetaData</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1136,7 +1166,7 @@ Each centroid is also an explicit persistence diagram. Upon convergence, it is a
     <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
     
   </body>
