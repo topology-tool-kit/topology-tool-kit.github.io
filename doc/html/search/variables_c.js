@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['l_5f_0',['l_',['../classttk_1_1PDClustering.html#a8ac8c3f9b8a51fde5799631ae3175c8c',1,'ttk::PDClustering']]],
+  ['l_5f_0',['l_',['../classttk_1_1PDClustering.html#a30fcf700404fea9c4b6694c9f3a6e091',1,'ttk::PDClustering']]],
   ['label_1',['label',['../structttk_1_1TrackingFromOverlap_1_1Node.html#a82b610e21aea853a195b8fb046e32305',1,'ttk::TrackingFromOverlap::Node']]],
   ['labelfieldname_2',['labelFieldName',['../ttkTrackingFromOverlap_8cpp.html#aac2ac14343bfed6593aacaaea4394a5e',1,'ttkTrackingFromOverlap.cpp']]],
   ['labels_3',['labels',['../ttkTrackingFromOverlap_8cpp.html#abc325fc13d4194905c1786e24ee447f0',1,'ttkTrackingFromOverlap.cpp']]],
   ['lambda_4',['Lambda',['../classttk_1_1PersistenceDiagramDistanceMatrix.html#abcacdf35b99cf4127b973969a87080bb',1,'ttk::PersistenceDiagramDistanceMatrix::Lambda()'],['../classttk_1_1PersistenceDiagramClustering.html#abc5700156cbb0738e06e68d5ff9a926f',1,'ttk::PersistenceDiagramClustering::Lambda()']]],
-  ['lambda_5f_5',['lambda_',['../classttk_1_1PersistenceDiagramAuction.html#acf68f289d186d63794053a2f8f565469',1,'ttk::PersistenceDiagramAuction::lambda_()'],['../classttk_1_1PDBarycenter.html#aecbc00a7965a473f78fb1ff02999d75f',1,'ttk::PDBarycenter::lambda_()'],['../classttk_1_1PDClustering.html#abf67cfad7339c179c1beda6d348a81ea',1,'ttk::PDClustering::lambda_()'],['../classttk_1_1PersistenceDiagramBarycenter.html#a39d6ffefd9a4ac0882ad5b47d688216b',1,'ttk::PersistenceDiagramBarycenter::lambda_()']]],
+  ['lambda_5f_5',['lambda_',['../classttk_1_1PersistenceDiagramAuction.html#a07c41f8a4816455d1114865da026ee88',1,'ttk::PersistenceDiagramAuction::lambda_()'],['../classttk_1_1PDBarycenter.html#a74f2cdbe8d60a00135743d9bd96d3a94',1,'ttk::PDBarycenter::lambda_()'],['../classttk_1_1PDClustering.html#a4f0e67183ca4bf72e6046aa1531245ce',1,'ttk::PDClustering::lambda_()'],['../classttk_1_1PersistenceDiagramBarycenter.html#abd9ba945d2e08da0f044a767e3c5615c',1,'ttk::PersistenceDiagramBarycenter::lambda_()']]],
   ['lastlinemode_6',['lastLineMode',['../classttk_1_1Debug.html#a60efc2e439eb661a6d6978b9e7ea5f7a',1,'ttk::Debug']]],
   ['lastobject_5f_7',['lastObject_',['../classttk_1_1BaseClass.html#a0c8177245081f5de2fd8e357dd3ce868',1,'ttk::BaseClass']]],
   ['layoutx_5f_8',['layoutX_',['../classttk_1_1Node.html#a791af655c23349b32c18bc7d067a5013',1,'ttk::Node']]],

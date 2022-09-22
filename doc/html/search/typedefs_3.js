@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['gradidtype_0',['gradIdType',['../classttk_1_1AbstractTriangulation.html#a30cefac3220971179aecf0fbd4406f4f',1,'ttk::AbstractTriangulation']]],
-  ['gradientcachetype_1',['gradientCacheType',['../classttk_1_1AbstractTriangulation.html#a1e9256921ab285985c2fee75a44bf355',1,'ttk::AbstractTriangulation']]],
-  ['gradientkeytype_2',['gradientKeyType',['../classttk_1_1AbstractTriangulation.html#a08f0de4c499b0fd1b2c9583050249604',1,'ttk::AbstractTriangulation']]],
-  ['gradienttype_3',['gradientType',['../classttk_1_1AbstractTriangulation.html#ad4ed4eb2ca35aa75e43ceb1a1c393da0',1,'ttk::AbstractTriangulation']]]
+  ['edgecompfn_0',['EdgeCompFN',['../namespacettk_1_1ftr.html#a91c809ce064610b62f88eef95c344746',1,'ttk::ftr']]],
+  ['edges_1',['Edges',['../classttk_1_1TrackingFromOverlap.html#a6b1c281d1456d5c1fa0ca695b9fcc045',1,'ttk::TrackingFromOverlap']]],
+  ['edgescheme_2',['edgeScheme',['../namespacettk_1_1ftr.html#a6885dcdae3a3c74ba36fd8443f3b12e9',1,'ttk::ftr']]]
 ];

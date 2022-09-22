@@ -1,19 +1,8 @@
 var searchData=
 [
-  ['idcell_0',['idCell',['../namespacettk_1_1ftr.html#a50412be272a305619f3bafec31c3bd4a',1,'ttk::ftr']]],
-  ['idcorresp_1',['idCorresp',['../namespacettk_1_1cf.html#a64da8a10d6137d2e3bc2fcd45797c3d2',1,'ttk::cf::idCorresp()'],['../namespacettk_1_1ftm.html#a344ba877ae7fef0ffc244ed22a6be5ff',1,'ttk::ftm::idCorresp()']]],
-  ['idedge_2',['idEdge',['../namespacettk_1_1ftr.html#aca586f18adcfc0ea166da8a74dc658c8',1,'ttk::ftr']]],
-  ['idinterface_3',['idInterface',['../namespacettk_1_1cf.html#a08a312cecaf721d5ee1dde01c60caa1e',1,'ttk::cf']]],
-  ['idnode_4',['idNode',['../namespacettk_1_1cf.html#ad324a4b8d2662e715e531a6c24da9a94',1,'ttk::cf::idNode()'],['../namespacettk_1_1ftm.html#ad534056b33266df3cf6d0e997347b840',1,'ttk::ftm::idNode()'],['../namespacettk_1_1ftr.html#ad6335aa4d2a5aba34e47a3c34d326a6a',1,'ttk::ftr::idNode()']]],
-  ['idpartition_5',['idPartition',['../namespacettk_1_1cf.html#a75ea5c320ab59dac7ec66d74b1baacfa',1,'ttk::cf']]],
-  ['idpropagation_6',['idPropagation',['../namespacettk_1_1ftr.html#a90318a58281e96d009484cca319579b5',1,'ttk::ftr']]],
-  ['idroot_7',['idRoot',['../namespacettk_1_1ftr.html#afd6fa205c723ec2146a0f47606e0f43d',1,'ttk::ftr']]],
-  ['idsegment_8',['idSegment',['../namespacettk_1_1cf.html#a30651aec444bbdae1cbb436a304753fe',1,'ttk::cf::idSegment()'],['../namespacettk_1_1ftm.html#a1b8b0ff72626d224964edc7c9bfdc554',1,'ttk::ftm::idSegment()']]],
-  ['idsegmentation_9',['idSegmentation',['../namespacettk_1_1ftr.html#a8c96feb131246154081b15ce3173bcea',1,'ttk::ftr']]],
-  ['idsuperarc_10',['idSuperArc',['../namespacettk_1_1ftr.html#aadad7cc9a1423df23b7e7321804d4420',1,'ttk::ftr::idSuperArc()'],['../namespacettk_1_1ftm.html#a2e62d56c6e1e659d7a2f2daf7fe86982',1,'ttk::ftm::idSuperArc()'],['../namespacettk_1_1cf.html#a9b8e565bb950ad5bb5b0ba281e9ed1de',1,'ttk::cf::idSuperArc()']]],
-  ['idtask_11',['idTask',['../namespacettk_1_1ftm.html#a19155de552526f539fe32175d50403ce',1,'ttk::ftm']]],
-  ['idthread_12',['idThread',['../namespacettk_1_1ftm.html#a9fdb5e1a69935cc88216787abf767e0e',1,'ttk::ftm']]],
-  ['idtype_13',['idType',['../TrackingFromOverlap_8h.html#a8ff2a4d22451f4b09fbf5a7dd90f519b',1,'TrackingFromOverlap.h']]],
-  ['idvertex_14',['idVertex',['../namespacettk_1_1ftr.html#aba5360477f0e0adfa276bd11a44349bf',1,'ttk::ftr']]],
-  ['iterator_15',['iterator',['../classttk_1_1FTRAtomicVector.html#ac8d382c1fd67512a8bcb51a2dc25f8fb',1,'ttk::FTRAtomicVector::iterator()'],['../classttk_1_1FTMAtomicVector.html#a1c7a8150297d94d477079392d71bff7c',1,'ttk::FTMAtomicVector::iterator()']]]
+  ['gooddiagram_0',['GoodDiagram',['../namespacettk.html#ad34fb9fb5505b8e7ca1942443ee5d3d0',1,'ttk']]],
+  ['gradidtype_1',['gradIdType',['../classttk_1_1AbstractTriangulation.html#a30cefac3220971179aecf0fbd4406f4f',1,'ttk::AbstractTriangulation']]],
+  ['gradientcachetype_2',['gradientCacheType',['../classttk_1_1AbstractTriangulation.html#a1e9256921ab285985c2fee75a44bf355',1,'ttk::AbstractTriangulation']]],
+  ['gradientkeytype_3',['gradientKeyType',['../classttk_1_1AbstractTriangulation.html#a08f0de4c499b0fd1b2c9583050249604',1,'ttk::AbstractTriangulation']]],
+  ['gradienttype_4',['gradientType',['../classttk_1_1AbstractTriangulation.html#ad4ed4eb2ca35aa75e43ceb1a1c393da0',1,'ttk::AbstractTriangulation']]]
 ];
