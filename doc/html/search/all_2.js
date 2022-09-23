@@ -1,8 +1,8 @@
 var searchData=
 [
   ['back_5fface_5f3d_0',['BACK_FACE_3D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da5763856a100d0ad77e6227deb0264d17',1,'ttk::ImplicitTriangulation']]],
-  ['backend_1',['BACKEND',['../classttk_1_1ScalarFieldCriticalPoints.html#a8d8927f2ca9f4bb68b77dcd65784e4cd',1,'ttk::ScalarFieldCriticalPoints::BACKEND()'],['../classttk_1_1PersistenceDiagram.html#a5ac0f6888163050b6b3799a087882385',1,'ttk::PersistenceDiagram::BACKEND()']]],
-  ['backend_2',['BackEnd',['../classttk_1_1ScalarFieldCriticalPoints.html#a1cfff0c1f84e586ca2d8355f65c36d0f',1,'ttk::ScalarFieldCriticalPoints::BackEnd()'],['../classttk_1_1PersistenceDiagram.html#a77e47c6eb08389136b50334c1c6a3c3a',1,'ttk::PersistenceDiagram::BackEnd()']]],
+  ['backend_1',['BackEnd',['../classttk_1_1ScalarFieldCriticalPoints.html#a1cfff0c1f84e586ca2d8355f65c36d0f',1,'ttk::ScalarFieldCriticalPoints::BackEnd()'],['../classttk_1_1PersistenceDiagram.html#a77e47c6eb08389136b50334c1c6a3c3a',1,'ttk::PersistenceDiagram::BackEnd()']]],
+  ['backend_2',['BACKEND',['../classttk_1_1ScalarFieldCriticalPoints.html#a8d8927f2ca9f4bb68b77dcd65784e4cd',1,'ttk::ScalarFieldCriticalPoints::BACKEND()'],['../classttk_1_1PersistenceDiagram.html#a5ac0f6888163050b6b3799a087882385',1,'ttk::PersistenceDiagram::BACKEND()']]],
   ['backslash_3',['BACKSLASH',['../namespacettk_1_1debug.html#af3ebd7fb2185c549f7461a695912a2a1aecb4a6f3440c2ed0dff59f17375a27c0',1,'ttk::debug']]],
   ['backward_4',['Backward',['../namespacettk.html#a4be7f7585acfb194dd41f03ae1f4bc2ca50c3118fce9b8e2c720640bae27eb6b0',1,'ttk']]],
   ['balancedassignment_5',['balancedAssignment',['../classttk_1_1AssignmentSolver.html#aa42a9e47e4e1824c58102fa8987a968f',1,'ttk::AssignmentSolver']]],

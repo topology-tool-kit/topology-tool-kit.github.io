@@ -297,6 +297,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae7a953f5957acf2370b6e639988ff333"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c7baf8136c1fdde6a67cdd569a4b554"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1AbstractTriangulation.html#a1c7baf8136c1fdde6a67cdd569a4b554">getCellIncenter</a> (const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> cellid, const int dim, float incenter[3]) const</td></tr>
 <tr class="separator:a1c7baf8136c1fdde6a67cdd569a4b554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc449a132daef473093a0d3513477dc8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1AbstractTriangulation.html#abc449a132daef473093a0d3513477dc8">getCellVTKID</a> (const int &amp;ttkId, int &amp;vtkId) const</td></tr>
+<tr class="separator:abc449a132daef473093a0d3513477dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8189dc723d594531b2d5baaa74939da2"><td class="memTemplParams" colspan="2">template&lt;class itemType &gt; </td></tr>
 <tr class="memitem:a8189dc723d594531b2d5baaa74939da2"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1AbstractTriangulation.html#a8189dc723d594531b2d5baaa74939da2">tableTableFootprint</a> (const vector&lt; vector&lt; itemType &gt; &gt; &amp;table, const string &amp;tableName, ostream &amp;stream) const</td></tr>
 <tr class="separator:a8189dc723d594531b2d5baaa74939da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -565,6 +567,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a73c9fef12f6d81d8d65d78036dc4f053"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48497fedbca6fe2da81a3a9734607c8a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1AbstractTriangulation.html#a48497fedbca6fe2da81a3a9734607c8a">preconditionVertexTrianglesInternal</a> ()</td></tr>
 <tr class="separator:a48497fedbca6fe2da81a3a9734607c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b26ededa3066f2dd0903499de753c92"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1AbstractTriangulation.html#a6b26ededa3066f2dd0903499de753c92">getCellVTKIDInternal</a> (const int &amp;ttkId, int &amp;vtkId) const</td></tr>
+<tr class="separator:a6b26ededa3066f2dd0903499de753c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7f3389d5afc4554b20db236fbc85779"><td class="memTemplParams" colspan="2">template&lt;class itemType &gt; </td></tr>
 <tr class="memitem:ab7f3389d5afc4554b20db236fbc85779"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1AbstractTriangulation.html#ab7f3389d5afc4554b20db236fbc85779">tableFootprint</a> (const std::vector&lt; itemType &gt; &amp;table, const std::string &amp;tableName=&quot;&quot;, std::ostream &amp;stream=std::cout) const</td></tr>
 <tr class="separator:ab7f3389d5afc4554b20db236fbc85779"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -728,7 +732,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03627">3627</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03647">3647</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -752,7 +756,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03659">3659</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03679">3679</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -779,7 +783,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Key type for <a class="el" href="classttk_1_1AbstractTriangulation.html#a1e9256921ab285985c2fee75a44bf355">gradientCacheType</a>. </p>
 <p >The key type models a scalar field buffer. The first element is a const void pointer to the beginning of the buffer and the second stores the timestamp of the last modification of the scalar field. </p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03652">3652</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03672">3672</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -807,7 +811,7 @@ Additional Inherited Members</h2></td></tr>
 <p >0: paired edge id per vertex 1: paired vertex id per edge 2: paired triangle id per edge 3: paired edge id per triangle 4: paired tetra id per triangle 5: paired triangle id per tetra Values: -1 if critical or paired to a cell of another dimension</p>
 <p >Is used as a value type for <a class="el" href="classttk_1_1AbstractTriangulation.html#a1e9256921ab285985c2fee75a44bf355">gradientCacheType</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03643">3643</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03663">3663</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -993,7 +997,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Here the notion of cell refers to the simplicices of maximal dimension (3D: tetrahedra, 2D: triangles, 1D: edges).</p>
 <p >In 1D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#aee29a75a01112cbad3e1e6002a95258f">getCellNeighbor()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#ae4b43524963567915622deb5042f5dfb">preconditionCellEdges()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cellId</td><td>Input global cell identifier. </td></tr>
@@ -1053,7 +1057,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02809">2809</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02818">2818</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -1084,7 +1088,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Here the notion of cell refers to the simplicices of maximal dimension (3D: tetrahedra, 2D: triangles, 1D: edges).</p>
 <p >In 1D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#a87f13136b1110c585a5dae5a16d0e28c">getCellNeighborNumber()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#ae4b43524963567915622deb5042f5dfb">preconditionCellEdges()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cellId</td><td>Input global cell identifier. </td></tr>
@@ -1124,7 +1128,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02816">2816</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02825">2825</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -1157,7 +1161,7 @@ Additional Inherited Members</h2></td></tr>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA.</p>
 <p >In 1D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#a14dc76d7478ed7b1dd6e7b1ecf9d932f">getCellNeighbors()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#ae4b43524963567915622deb5042f5dfb">preconditionCellEdges()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the cell edge list. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a14dc76d7478ed7b1dd6e7b1ecf9d932f">getCellNeighbors()</a> </dd></dl>
 
@@ -1192,7 +1196,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a1252626530d6ee97cd4d35520da9d75d">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#a9693a73a4b4d532efd7deb72ab27633e">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#a4f6f710ab76db4631891049b1c581148">ttk::ImplicitTriangulation</a>, and <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#abe23a33c52db53082c3ab3f2d646ba2f">ttk::PeriodicImplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02821">2821</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02830">2830</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -1283,7 +1287,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the <code>localNeighborId-th</code> cell neighbor of the <code>cellId-th</code> cell.</p>
 <p >Here the notion of cell refers to the simplicices of maximal dimension (3D: tetrahedra, 2D: triangles, 1D: edges).</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#acb5b2ae47c005128c9f10e6adae0ba01">preconditionCellNeighbors()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cellId</td><td>Input global cell identifier. </td></tr>
@@ -1341,7 +1345,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02826">2826</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02835">2835</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -1371,7 +1375,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the number of cell neighbors for the <code>cellId-th</code> cell.</p>
 <p >Here the notion of cell refers to the simplicices of maximal dimension (3D: tetrahedra, 2D: triangles, 1D: edges).</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#acb5b2ae47c005128c9f10e6adae0ba01">preconditionCellNeighbors()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cellId</td><td>Input global cell identifier. </td></tr>
@@ -1410,7 +1414,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02833">2833</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02842">2842</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -1442,7 +1446,7 @@ Additional Inherited Members</h2></td></tr>
 <p >The number of entries in this list is equal to the number of cells. Each entry is a std::vector of identifiers whose size is equal to the number of neighbor cells for the corresponding cell.</p>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#acb5b2ae47c005128c9f10e6adae0ba01">preconditionCellNeighbors()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the cell neighbor list. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a2eda840d725d83fba855e262917e9938">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#a9edac0b14b5a882487ccffbc90cd70c6">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#a84189197681160a86a3d60fca1a1f0d3">ttk::ImplicitTriangulation</a>, <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#a84803c8207e6d6380aa677858a86ebdb">ttk::PeriodicImplicitTriangulation</a>, and <a class="el" href="classttk_1_1Triangulation.html#adb911f107aebf32aaba18c8be0393ea8">ttk::Triangulation</a>.</p>
@@ -1474,7 +1478,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02838">2838</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02847">2847</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -1521,7 +1525,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Here the notion of cell refers to the simplicices of maximal dimension (3D: tetrahedra, 2D: triangles, 1D: edges).</p>
 <p >In 2D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#aee29a75a01112cbad3e1e6002a95258f">getCellNeighbor()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a24985dbb191edbeb5921a2281bb870dc">preconditionCellTriangles()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cellId</td><td>Input global cell identifier. </td></tr>
@@ -1581,7 +1585,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02843">2843</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02852">2852</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -1612,7 +1616,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Here the notion of cell refers to the simplicices of maximal dimension (3D: tetrahedra, 2D: triangles, 1D: edges).</p>
 <p >In 2D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#a87f13136b1110c585a5dae5a16d0e28c">getCellNeighborNumber()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a24985dbb191edbeb5921a2281bb870dc">preconditionCellTriangles()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cellId</td><td>Input global cell identifier. </td></tr>
@@ -1654,7 +1658,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#aa5dd0fb8b640a060c764d180947fc5a2">ttk::PeriodicImplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02850">2850</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02859">2859</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -1688,7 +1692,7 @@ Additional Inherited Members</h2></td></tr>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA.</p>
 <p >In 2D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#a14dc76d7478ed7b1dd6e7b1ecf9d932f">getCellNeighbors()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a24985dbb191edbeb5921a2281bb870dc">preconditionCellTriangles()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the cell triangle list. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a14dc76d7478ed7b1dd6e7b1ecf9d932f">getCellNeighbors()</a> </dd></dl>
 
@@ -1723,7 +1727,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a39dcc51e05a9a6b887f0888b920bbe98">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#aaa935a59fdfc4d16dfd077d5da30534d">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#acc48b0871ebb1fcaacec5bbdc8a31a8a">ttk::ImplicitTriangulation</a>, and <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#ad93290bccc426fccf2374269cb086bd2">ttk::PeriodicImplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02855">2855</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02864">2864</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -1824,7 +1828,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02860">2860</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02869">2869</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -1890,7 +1894,87 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02867">2867</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02876">2876</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+
+</div>
+</div>
+<a id="abc449a132daef473093a0d3513477dc8" name="abc449a132daef473093a0d3513477dc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc449a132daef473093a0d3513477dc8">&#9670;&nbsp;</a></span>getCellVTKID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ttk::AbstractTriangulation::getCellVTKID </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>ttkId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>vtkId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classttk_1_1Triangulation.html#afa2c57a49a888c2a30385b5fe9170357">ttk::Triangulation</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02524">2524</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+
+</div>
+</div>
+<a id="a6b26ededa3066f2dd0903499de753c92" name="a6b26ededa3066f2dd0903499de753c92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b26ededa3066f2dd0903499de753c92">&#9670;&nbsp;</a></span>getCellVTKIDInternal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ttk::AbstractTriangulation::getCellVTKIDInternal </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>ttkId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>vtkId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classttk_1_1ImplicitWithPreconditions.html#a43a3325861fcb7a1936b567dab3e390a">ttk::ImplicitWithPreconditions</a>, <a class="el" href="classttk_1_1ImplicitNoPreconditions.html#ab44b4b7a13a203fa578c654179f3fda7">ttk::ImplicitNoPreconditions</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#a9269dee05c82787bedab8a57bb27f9fa">ttk::ImplicitTriangulation</a>, <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#aed27f894fa1f121df1c63103256c8646">ttk::PeriodicImplicitTriangulation</a>, <a class="el" href="classttk_1_1PeriodicWithPreconditions.html#aa06f60dbb93e8d4c62d6406cfcf67f02">ttk::PeriodicWithPreconditions</a>, and <a class="el" href="classttk_1_1PeriodicNoPreconditions.html#a03826a962fbce15a46d3c4a3c4283fdd">ttk::PeriodicNoPreconditions</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03491">3491</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -1947,7 +2031,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02871">2871</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02880">2880</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -2032,7 +2116,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the <code>localLinkId-th</code> simplex of the link of the <code>edgeId-th</code> edge.</p>
 <p >The output <code>linkId</code> refers in 2D to a vertex identifier and in 3D to an edge identifier. It returns a negative value in 1D.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a49657557d75c845bed66fa1121dbe8d3">preconditionEdgeLinks()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edgeId</td><td>Input global edge identifier. </td></tr>
@@ -2090,7 +2174,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02881">2881</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02890">2890</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -2120,7 +2204,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the number of simplicies in the link of the <code>edgeId-th</code> edge.</p>
 <p >In 2D, this will return the number of vertices in the link, in 3D the number of edges. It returns a negative value in 1D.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a49657557d75c845bed66fa1121dbe8d3">preconditionEdgeLinks()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edgeId</td><td>Input global edge identifier. </td></tr>
@@ -2159,7 +2243,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02888">2888</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02897">2897</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -2190,7 +2274,7 @@ Additional Inherited Members</h2></td></tr>
 <p >The number of entries in this list is equal to the number of edges. Each entry is a std::vector of identifiers representing vertices in 2D and edges in 3D. It returns NULL in 1D.</p>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a49657557d75c845bed66fa1121dbe8d3">preconditionEdgeLinks()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the edge link list. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a9027e1847248ea595818367168b46baf">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#a7ecd766081c7ef7d5ed91fb257073eca">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#a3b5b306a710e5c6963a89171521c160e">ttk::ImplicitTriangulation</a>, <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#a0cf920b6d2eb8f53fa49ba6063256055">ttk::PeriodicImplicitTriangulation</a>, and <a class="el" href="classttk_1_1Triangulation.html#a27053a81743ad119bac5dc44ec6a7e6d">ttk::Triangulation</a>.</p>
@@ -2222,7 +2306,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02893">2893</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02902">2902</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -2254,7 +2338,7 @@ Additional Inherited Members</h2></td></tr>
 <p >The number of entries in this list is equal to the number of edges. Each entry is a std::pair of vertex identifiers.</p>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a7bac8a5b05c4b3e270150a1c7fcd9d03">preconditionEdges()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the edge list. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a393df4ef3a46d8574786d75a039f1473">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#a928396ccc1da3c623e0e98cb3361825f">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#a81280518028cf99debb042f9d1837423">ttk::ImplicitTriangulation</a>, <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#a2c406c68640c00666ea4d6f27a87c266">ttk::PeriodicImplicitTriangulation</a>, and <a class="el" href="classttk_1_1Triangulation.html#a065b3cd9e060264bff2d084581af24ed">ttk::Triangulation</a>.</p>
@@ -2286,7 +2370,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02876">2876</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02885">2885</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -2333,7 +2417,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Here the notion of cell refers to the simplicices of maximal dimension (3D: tetrahedra, 2D: triangles, 1D: edges).</p>
 <p >Also, the notion of edge only makes sense if the triangulation has a dimension greater than 1 (otherwise, use the cell information).</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a02feb2b66e2481331da1a999d9a8719d">preconditionEdgeStars()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edgeId</td><td>Input global edge identifier. </td></tr>
@@ -2391,7 +2475,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02898">2898</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02907">2907</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -2422,7 +2506,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Here the notion of cell refers to the simplicices of maximal dimension (3D: tetrahedra, 2D: triangles, 1D: edges).</p>
 <p >Also, the notion of edge only makes sense if the triangulation has a dimension greater than 1 (otherwise, use the cell information).</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a02feb2b66e2481331da1a999d9a8719d">preconditionEdgeStars()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edgeId</td><td>Input global edge identifier </td></tr>
@@ -2461,7 +2545,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02905">2905</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02914">2914</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -2494,7 +2578,7 @@ Additional Inherited Members</h2></td></tr>
 <p >The number of entries in this list is equal to the number of edges. Each entry is a std::vector of identifiers whose size is equal to the number of star cells for the corresponding edge.</p>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a02feb2b66e2481331da1a999d9a8719d">preconditionEdgeStars()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the edge star list. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#afcd76893c99d247e2e7255bbf043d7a4">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#a20c554a7346973f31ed4fc4517118d23">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#a49337d0f04f0ba56cf30bec770ecabcc">ttk::ImplicitTriangulation</a>, <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#a7ffa234fe7b5f6e4b27671e59fc0650b">ttk::PeriodicImplicitTriangulation</a>, and <a class="el" href="classttk_1_1Triangulation.html#a07dce028125a65adc444baef187d4de1">ttk::Triangulation</a>.</p>
@@ -2526,7 +2610,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02910">2910</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02919">2919</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -2572,7 +2656,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the <code>localTriangleId-th</code> triangle id of the <code>edgeId-th</code> edge.</p>
 <p >In 2D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#a8bc8de11acd27d25cafc5a0c9cd842b5">getEdgeStar()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a541de36cf02a8f42ea828d4d052604ed">preconditionEdgeTriangles()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edgeId</td><td>Input global edge identifier. </td></tr>
@@ -2632,7 +2716,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02915">2915</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02924">2924</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -2662,7 +2746,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the number of triangles for the <code>edgeId-th</code> edge.</p>
 <p >In 2D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#af9efcf36d0a6c922ce4f93617f02c7b6">getEdgeStarNumber()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a541de36cf02a8f42ea828d4d052604ed">preconditionEdgeTriangles()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edgeId</td><td>Input global edge identifier. </td></tr>
@@ -2702,7 +2786,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02922">2922</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02931">2931</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -2734,7 +2818,7 @@ Additional Inherited Members</h2></td></tr>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA.</p>
 <p >In 2D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#a2e2e97c566e70ddf84401a03b0386cb6">getEdgeStars()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a541de36cf02a8f42ea828d4d052604ed">preconditionEdgeTriangles()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the edge triangle list. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a2e2e97c566e70ddf84401a03b0386cb6">getEdgeStars</a> </dd></dl>
 
@@ -2769,7 +2853,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#af55aa823c4991570bf9bab6aa54df5fc">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#ac17d70ae9beaef206b30a449593ad24c">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#ab570d8ffc6d9806292da0f08767b3e46">ttk::ImplicitTriangulation</a>, and <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#a51e5d3c331c85fa8f5972721db436637">ttk::PeriodicImplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02927">2927</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02936">2936</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -2815,7 +2899,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the <code>localVertexId-th</code> vertex identifier of the <code>edgeId-th</code> edge.</p>
 <p >In 1D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#aa4d67cc47a5ed6d14c2b8436b646281a">getCellVertex()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a7bac8a5b05c4b3e270150a1c7fcd9d03">preconditionEdges()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edgeId</td><td>Input global edge identifier. </td></tr>
@@ -2873,7 +2957,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02932">2932</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02941">2941</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -2929,7 +3013,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03666">3666</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03686">3686</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -3024,7 +3108,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02938">2938</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02947">2947</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -3053,7 +3137,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the number of edges in the triangulation.</p>
 <p >In 1D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#a7ef6f24a32b488d587f8fb38f185c27d">getNumberOfCells()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a7bac8a5b05c4b3e270150a1c7fcd9d03">preconditionEdges()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns the number of edges. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a7ef6f24a32b488d587f8fb38f185c27d">getNumberOfCells()</a> </dd></dl>
 
@@ -3088,7 +3172,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#ad70cac085a9b7dd34bdec634d8cca6b0">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#aaa90d29794865010033fc62481fd5aa0">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#a987f7d2c69a1b41e8c23c25214b511ba">ttk::ImplicitTriangulation</a>, and <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#aee02ba41eb1c660b838e22967634aa3b">ttk::PeriodicImplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02942">2942</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02951">2951</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -3117,7 +3201,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the number of triangles in the triangulation.</p>
 <p >In 2D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#a7ef6f24a32b488d587f8fb38f185c27d">getNumberOfCells()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#ac6faf840a61450ed0737934432b65784">preconditionTriangles()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns the number of triangles. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a7ef6f24a32b488d587f8fb38f185c27d">getNumberOfCells()</a> </dd></dl>
 
@@ -3152,7 +3236,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#ad4bd9de390c91a1cdb6498cec3f239fc">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#a365eea2446d96559e3768352e0410ed8">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#ac93be2d864328f9dac289230ea5174b9">ttk::ImplicitTriangulation</a>, and <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#ac10c480ec12ef5f540b8c41bd5118208">ttk::PeriodicImplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02946">2946</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02955">2955</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -3209,7 +3293,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02950">2950</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02959">2959</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -3294,7 +3378,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the <code>localEdgeId-th</code> edge of the <code>triangleId-th</code> triangle.</p>
 <p >In 2D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#a8b9987aee2eca555d649847fe1cd3e57">getCellEdge()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a72b5236af9ed6824befebfc4bb36d7da">preconditionTriangleEdges()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">triangleId</td><td>Input global triangle identifier. </td></tr>
@@ -3354,7 +3438,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02960">2960</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02969">2969</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -3384,7 +3468,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the number of edges of the <code>triangleId-th</code> triangle.</p>
 <p >In 2D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#a5f008699f2df39d1b0766c9345d77fb2">getCellEdgeNumber()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a72b5236af9ed6824befebfc4bb36d7da">preconditionTriangleEdges()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">triangleId</td><td>Input global triangle identifier. </td></tr>
@@ -3426,7 +3510,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#aa41d81af8d636f32629329202062a93f">ttk::PeriodicImplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02966">2966</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02975">2975</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -3458,7 +3542,7 @@ Additional Inherited Members</h2></td></tr>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA.</p>
 <p >In 2D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#aff5d905a3802d3ba3357b2d264619c44">getCellEdges()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a72b5236af9ed6824befebfc4bb36d7da">preconditionTriangleEdges()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the triangle edge list. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#aff5d905a3802d3ba3357b2d264619c44">getCellEdges()</a> </dd></dl>
 
@@ -3493,7 +3577,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a77767676eac07ca11d52f72b73e5d576">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#a1377dd3b8f2a714abdf38f7bcbc3d93b">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#a23be0c9449a0093b719915e26e3710b4">ttk::ImplicitTriangulation</a>, and <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#a1d3944daa4c48be68f668f1ccd4624e1">ttk::PeriodicImplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02972">2972</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02981">2981</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -3578,7 +3662,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the <code>localLinkId-th</code> simplex of the link of the <code>triangleId-th</code> triangle.</p>
 <p >The notion of triangle link only makes sense in 3D, where the output <code>linkId</code> refers to a vertex identifier.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a27e2977d14b8e17299c7bb696176acc6">preconditionTriangleLinks()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">triangleId</td><td>Input global triangle identifier. </td></tr>
@@ -3636,7 +3720,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02977">2977</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02986">2986</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -3666,7 +3750,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the number of simplices in the link of the <code>triangleId-th</code> triangle.</p>
 <p >The notion of triangle link only makes sense in 3D, where the number of vertices in the link will be returned.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a27e2977d14b8e17299c7bb696176acc6">preconditionTriangleLinks()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">triangleId</td><td>Input global triangle identifier. </td></tr>
@@ -3705,7 +3789,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02983">2983</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02992">2992</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -3737,7 +3821,7 @@ Additional Inherited Members</h2></td></tr>
 <p >The notion of triangle link only makes sense in 3D.</p>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a27e2977d14b8e17299c7bb696176acc6">preconditionTriangleLinks()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the triangle link list. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#ae61288de5e2b8ed360acc5fdcab821e9">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#afb0d767fa31b7123a44dc6c8ecf552f2">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#ac1173dabcb31de3d3290a8cc9b7b1b7c">ttk::ImplicitTriangulation</a>, <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#a1bb076ea740f74ab224b87f3759df835">ttk::PeriodicImplicitTriangulation</a>, and <a class="el" href="classttk_1_1Triangulation.html#aee39903c581bb8cda972c7799268e4be">ttk::Triangulation</a>.</p>
@@ -3769,7 +3853,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02989">2989</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02998">2998</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -3800,7 +3884,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Here the notion of triangle only makes sense if the triangulation has a dimension greater than 2 (otherwise, use the cell information).</p>
 <p >The number of entries in this list is equal to the number of triangles. Each entry is a std::vector of vertex identifiers.</p>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA. </p><dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#ac6faf840a61450ed0737934432b65784">preconditionTriangles()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the triangle list. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#acc56b77f0dd076c78c77eb3e6b826e55">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#a5c0ae1f2445d2cedcfce9527c76d3ddf">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#a0599f0d4a7322614c95b79e7690cde6e">ttk::ImplicitTriangulation</a>, <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#aab8f264820369bbf5585d6a975b138dc">ttk::PeriodicImplicitTriangulation</a>, and <a class="el" href="classttk_1_1Triangulation.html#ad32162cfa360c6973b23031383228dae">ttk::Triangulation</a>.</p>
@@ -3832,7 +3916,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02955">2955</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02964">2964</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -3878,7 +3962,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the <code>localStarId-th</code> cell of the star of the <code>triangleId-th</code> triangle.</p>
 <p >The notion of triangle star only makes sense in 3D, where the output <code>starId</code> refers to a tetrahedron identifier.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a68da42d54f82ed63184ecbd5abc50b93">preconditionTriangleStars()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">triangleId</td><td>Input global triangle identifier. </td></tr>
@@ -3936,7 +4020,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l02994">2994</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03003">3003</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -3966,7 +4050,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the number of star cells for the <code>triangleId-th</code> triangle.</p>
 <p >The notion of triangle star only makes sense in 3D, where the number of tetrahedra in the star will be returned.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a68da42d54f82ed63184ecbd5abc50b93">preconditionTriangleStars()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">triangleId</td><td>Input global triangle identifier. </td></tr>
@@ -4005,7 +4089,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03000">3000</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03009">3009</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -4037,7 +4121,7 @@ Additional Inherited Members</h2></td></tr>
 <p >The notion of triangle star only makes sense in 3D.</p>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a68da42d54f82ed63184ecbd5abc50b93">preconditionTriangleStars()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the triangle star list. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a369413f4b21d5b8b90f3690c33215d0e">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#a4b90f376431adb84588c605e62878acc">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#a33239e60069deca83651172d44401af6">ttk::ImplicitTriangulation</a>, <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#a22336c8de40276335c7ec74a9b01291d">ttk::PeriodicImplicitTriangulation</a>, and <a class="el" href="classttk_1_1Triangulation.html#a83ed55a3d2d500fbc94f3803adcffcab">ttk::Triangulation</a>.</p>
@@ -4069,7 +4153,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03006">3006</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03015">3015</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -4115,7 +4199,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the <code>localVertexId-th</code> vertex identifier of the <code>triangleId-th</code> triangle.</p>
 <p >In 2D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#aa4d67cc47a5ed6d14c2b8436b646281a">getCellVertex()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#ac6faf840a61450ed0737934432b65784">preconditionTriangles()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">triangleId</td><td>Input global edge identifier. </td></tr>
@@ -4173,7 +4257,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03011">3011</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03020">3020</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -4248,7 +4332,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the <code>localEdgeId-th</code> edge identifier connected to the <code>vertexId-th</code> vertex.</p>
 <p >In 1D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#aa3b1d4c272c9cd35e33c6722cf033e84">getVertexStar()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a447ad6d37e2bc93c485505bbf68ed034">preconditionVertexEdges()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vertexId</td><td>Input global vertex identifier. </td></tr>
@@ -4308,7 +4392,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03018">3018</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03027">3027</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -4338,7 +4422,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the number of edges connected to the <code>vertexId-th</code> vertex.</p>
 <p >In 1D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#aba5c3c521e085df31943e944857ece82">getVertexStarNumber()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a447ad6d37e2bc93c485505bbf68ed034">preconditionVertexEdges()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vertexId</td><td>Input global vertex identifier. </td></tr>
@@ -4378,7 +4462,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03025">3025</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03034">3034</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -4410,7 +4494,7 @@ Additional Inherited Members</h2></td></tr>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA.</p>
 <p >In 1D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#a2bfba0a399fcf88dee63bc9a36c73f4a">getVertexStars()</a></p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a447ad6d37e2bc93c485505bbf68ed034">preconditionVertexEdges()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the vertex edge list. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a2bfba0a399fcf88dee63bc9a36c73f4a">getVertexStars()</a> </dd></dl>
 
@@ -4445,7 +4529,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a99275e557283bcaa29f892b5007745e9">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#acc7d5f180a1ec78fee8af49f1a6abf54">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#a3c84b25324ff5cb2f5a3b66e275c6e96">ttk::ImplicitTriangulation</a>, and <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#a8fceb007bf58d370606ef097e4ad79e1">ttk::PeriodicImplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03030">3030</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03039">3039</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -4491,7 +4575,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the <code>localLinkId-th</code> simplex of the link of the <code>vertexId-th</code> vertex.</p>
 <p >The output <code>linkId</code> refers in 2D to an edge identifier and in 3D to a triangle identifier.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#af4b3b2bdc544abff297719b6598fc730">preconditionVertexLinks()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vertexId</td><td>Input global vertex identifier. </td></tr>
@@ -4549,7 +4633,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03035">3035</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03044">3044</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -4579,7 +4663,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the number of simplices in the link of the <code>vertexId-th</code> vertex.</p>
 <p >In 2D, this will return the number of edges in the link, in 3D the number of triangles.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#af4b3b2bdc544abff297719b6598fc730">preconditionVertexLinks()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vertexId</td><td>Input global vertex identifier. </td></tr>
@@ -4618,7 +4702,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03042">3042</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03051">3051</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -4649,7 +4733,7 @@ Additional Inherited Members</h2></td></tr>
 <p >The number of entries in this list is equal to the number of vertices. Each entry is a std::vector of identifiers representing edges in 2D and triangles in 3D.</p>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#af4b3b2bdc544abff297719b6598fc730">preconditionVertexLinks()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the vertex link list. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a2236dbaa7cda8569b086483fc09ac0ee">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#a709bee4c6d78d5e9462c58deba157379">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#ae351e275c198194d3ba06050431d8ca5">ttk::ImplicitTriangulation</a>, <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#a230fa5988667082f03b9e4a06d6fcc47">ttk::PeriodicImplicitTriangulation</a>, and <a class="el" href="classttk_1_1Triangulation.html#a2d15757eddfc35d86730337d0bfd5f0c">ttk::Triangulation</a>.</p>
@@ -4681,7 +4765,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03047">3047</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03056">3056</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -4726,7 +4810,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p >Get the <code>localNeighborId-th</code> vertex neighbor of the <code>vertexId-th</code> vertex.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a46b37180ac5a6c65fd3367b75fde671b">preconditionVertexNeighbors()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vertexId</td><td>Input global vertex identifier. </td></tr>
@@ -4784,7 +4868,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03052">3052</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03061">3061</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -4813,7 +4897,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p >Get the number of vertex neighbors for the <code>vertexId-th</code> vertex.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a46b37180ac5a6c65fd3367b75fde671b">preconditionVertexNeighbors()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vertexId</td><td>Input global vertex identifier. </td></tr>
@@ -4852,7 +4936,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03058">3058</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03067">3067</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -4883,7 +4967,7 @@ Additional Inherited Members</h2></td></tr>
 <p >The number of entries in this list is equal to the number of vertices. Each entry is a std::vector of identifiers whose size is equal to the number of vertex neighbors for the corresponding vertex.</p>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a46b37180ac5a6c65fd3367b75fde671b">preconditionVertexNeighbors()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the vertex neighbor list. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a3a9643aa3f1a462f5e80d82c336738ee">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#af563f976dde1693c32ede86d837df858">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#a879ee1304477e05105c8b141034d5e93">ttk::ImplicitTriangulation</a>, <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#ac2548df2a64ed19419115c323feb886c">ttk::PeriodicImplicitTriangulation</a>, and <a class="el" href="classttk_1_1Triangulation.html#ad83c37e55eb540a2e092800f527dfbe5">ttk::Triangulation</a>.</p>
@@ -4915,7 +4999,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03064">3064</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03073">3073</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5027,7 +5111,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03069">3069</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03078">3078</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5073,7 +5157,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the <code>localStarId-th</code> cell of the star of the <code>vertexId-th</code> vertex.</p>
 <p >Here the notion of cell refers to the simplicices of maximal dimension (3D: tetrahedra, 2D: triangles, 1D: edges).</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a367066a81c4c8f5ae65f2bfafd942d2d">preconditionVertexStars()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vertexId</td><td>Input global vertex identifier. </td></tr>
@@ -5131,7 +5215,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03077">3077</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03086">3086</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5161,7 +5245,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the number of star cells for the <code>vertexId-th</code> vertex.</p>
 <p >Here the notion of cell refers to the simplicices of maximal dimension (3D: tetrahedra, 2D: triangles, 1D: edges).</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a367066a81c4c8f5ae65f2bfafd942d2d">preconditionVertexStars()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vertexId</td><td>Input global vertex identifier </td></tr>
@@ -5200,7 +5284,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03084">3084</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03093">3093</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5232,7 +5316,7 @@ Additional Inherited Members</h2></td></tr>
 <p >The number of entries in this list is equal to the number of vertices. Each entry is a std::vector of identifiers whose size is equal to the number of star cells for the corresponding vertex.</p>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a367066a81c4c8f5ae65f2bfafd942d2d">preconditionVertexStars()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the vertex star list. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a7338e85716bbc88ea891f7b61031bf66">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#a19413f3c590065e3586a41def583b472">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#a41d019151b49f1c67144e1405d1c7caf">ttk::ImplicitTriangulation</a>, <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#a7a73a329130d55bdf3ddf72608538799">ttk::PeriodicImplicitTriangulation</a>, and <a class="el" href="classttk_1_1Triangulation.html#a81eb9b3e36740891aa02d583df68e2a0">ttk::Triangulation</a>.</p>
@@ -5264,7 +5348,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03089">3089</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03098">3098</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5310,7 +5394,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the <code>localTriangleId-th</code> triangle id of the <code>vertexId-th</code> vertex.</p>
 <p >In 2D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#aa3b1d4c272c9cd35e33c6722cf033e84">getVertexStar()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a9ed5683a1be85e949af0fd1e92500770">preconditionVertexTriangles()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vertexId</td><td>Input global vertex identifier. </td></tr>
@@ -5370,7 +5454,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03094">3094</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03103">3103</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5400,7 +5484,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Get the number of triangles for the <code>vertexId-th</code> vertex.</p>
 <p >In 2D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#aba5c3c521e085df31943e944857ece82">getVertexStarNumber()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a9ed5683a1be85e949af0fd1e92500770">preconditionVertexTriangles()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vertexId</td><td>Input global vertex identifier. </td></tr>
@@ -5440,7 +5524,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03100">3100</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03109">3109</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5472,7 +5556,7 @@ Additional Inherited Members</h2></td></tr>
 <p >In implicit mode, this function will force the creation of such a list (which will be time and memory consuming). THIS IS USUALLY A BAD IDEA.</p>
 <p >In 2D, this function is equivalent to <a class="el" href="classttk_1_1AbstractTriangulation.html#a2bfba0a399fcf88dee63bc9a36c73f4a">getVertexStars()</a>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a9ed5683a1be85e949af0fd1e92500770">preconditionVertexTriangles()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the vertex triangle list. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a2bfba0a399fcf88dee63bc9a36c73f4a">getVertexStars()</a> </dd></dl>
 
@@ -5507,7 +5591,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a8363420b0f1615ab493c09a1f0cbe095">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#a3da2f899ea969a10c8fa616718453707">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#a5feb119b37dc69c418125afb84aa7f90">ttk::ImplicitTriangulation</a>, and <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#ad9c2756301f257191843da6694473295">ttk::PeriodicImplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03106">3106</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03115">3115</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5563,7 +5647,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03125">3125</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03134">3134</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5590,7 +5674,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03140">3140</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03149">3149</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5617,7 +5701,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03154">3154</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03163">3163</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5644,7 +5728,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03167">3167</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03176">3176</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5671,7 +5755,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03183">3183</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03192">3192</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5698,7 +5782,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03196">3196</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03205">3205</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5725,7 +5809,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03213">3213</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03222">3222</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5752,7 +5836,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03256">3256</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03265">3265</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5779,7 +5863,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03226">3226</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03235">3235</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5806,7 +5890,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03239">3239</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03248">3248</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5833,7 +5917,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03286">3286</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03295">3295</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5860,7 +5944,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03303">3303</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03312">3312</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5887,7 +5971,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03271">3271</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03280">3280</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5914,7 +5998,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03316">3316</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03325">3325</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5941,7 +6025,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03329">3329</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03338">3338</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5968,7 +6052,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03345">3345</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03354">3354</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -5995,7 +6079,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03358">3358</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03367">3367</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -6022,7 +6106,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03371">3371</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03380">3380</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -6049,7 +6133,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03384">3384</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03393">3393</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -6080,7 +6164,7 @@ Additional Inherited Members</h2></td></tr>
 <p >For 2D triangulations, this function will return true if the edge is a boundary edge. For 3D triangulations, this function will return true if the edge belongs to a boundary triangle.</p>
 <p >Here the notion of edge only makes sense if the triangulation has a dimension greater than 1 (otherwise, use the cell information).</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a0977b529f981669d9b74325edf98a3e3">preconditionBoundaryEdges()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edgeId</td><td>Input global edge identifier. </td></tr>
@@ -6119,7 +6203,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03111">3111</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03120">3120</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -6180,7 +6264,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Here the notion of triangle only makes sense if the triangulation has a dimension greater than 2 (otherwise, use the cell information).</p>
 <p >For 2D triangulations, this function will return false all the time. For 3D triangulations, this function will return true if the triangle is a boundary triangle.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#aca8757f4b3f96a314a85f34070e51dff">preconditionBoundaryTriangles()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">triangleId</td><td>Input global triangle identifier. </td></tr>
@@ -6219,7 +6303,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03115">3115</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03124">3124</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -6249,7 +6333,7 @@ Additional Inherited Members</h2></td></tr>
 <p >Check if the vertex with global identifier <code>vertexId</code> is on the boundary of the domain.</p>
 <p >For 2D triangulations, this function will return true if the vertex belongs to a boundary edge. For 3D triangulations, this function will return true if the vertex belongs to a boundary triangle.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly, <a class="el" href="classttk_1_1AbstractTriangulation.html#a45377b33871229ba902654b575d318e8">preconditionBoundaryVertices()</a> needs to be called on this object prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a pre-processing step from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude such a preconditioning step from any time performance measurement. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vertexId</td><td>Input global vertex identifier. </td></tr>
@@ -6288,7 +6372,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03121">3121</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03130">3130</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -6317,7 +6401,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classttk_1_1Wrapper.html#ab6c6972b7554b55b66a32701bb0cffef">ttk::Wrapper</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03402">3402</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03411">3411</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -6400,7 +6484,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#a66e47be7367987f22ec323c55ab15b89">isEdgeOnBoundary()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a66e47be7367987f22ec323c55ab15b89">isEdgeOnBoundary()</a> </dd></dl>
 
@@ -6435,7 +6519,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a90cf6e3fe6a6333ba30bcf122bf8239a">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#a9cc36fc6deb76312f0334d790e66e215">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03406">3406</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03415">3415</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -6466,7 +6550,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#a260edd60dde953a7ef7d7b8ae7bf2deb">isTriangleOnBoundary()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a260edd60dde953a7ef7d7b8ae7bf2deb">isTriangleOnBoundary()</a> </dd></dl>
 
@@ -6501,7 +6585,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a0c70a02f36023d9228fe01efb4fdc1ac">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#a3c81a7348c96f60dec25f6eca0f6add9">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03410">3410</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03419">3419</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -6532,7 +6616,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#a5a7a9accad6944174aabc91bb404c45b">isVertexOnBoundary()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a5a7a9accad6944174aabc91bb404c45b">isVertexOnBoundary()</a> </dd></dl>
 
@@ -6567,7 +6651,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a1a68e489db8447c82794a9d7e2ac0bb7">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#aa9a61bff306fb90b4095db611f8c466e">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03414">3414</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03423">3423</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -6599,7 +6683,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#a5f008699f2df39d1b0766c9345d77fb2">getCellEdgeNumber()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a8b9987aee2eca555d649847fe1cd3e57">getCellEdge()</a> </dd>
 <dd>
@@ -6636,7 +6720,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a0b4bedc24f3e6975e34807748735a1e3">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#a52dc2e769427417f4ed6319f680a7510">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03418">3418</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03427">3427</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -6669,7 +6753,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#a87f13136b1110c585a5dae5a16d0e28c">getCellNeighborNumber()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#aee29a75a01112cbad3e1e6002a95258f">getCellNeighbor()</a> </dd>
 <dd>
@@ -6708,7 +6792,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a934af2b87b64ef58c4a22876c830f993">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#ac7e309abcb91acf35e07b709460dda35">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03422">3422</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03431">3431</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -6741,7 +6825,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#a7f012e4cdcd1312ee753f43a15a6daff">getCellTriangleNumber()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#ac88bee3ba53edfd9e75706a27ade60d1">getCellTriangle()</a> </dd>
 <dd>
@@ -6780,7 +6864,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a473616ef43e23667febb567bd41b3f6a">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#a429f97c19ebed79e65ec79e319561790">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03426">3426</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03435">3435</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -6813,7 +6897,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#a93a7686e790f8299f944164ee528d9f1">getEdgeLinkNumber()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a0acf27f1e77cb33951e2a9eb1e92268f">getEdgeLink()</a> </dd>
 <dd>
@@ -6852,7 +6936,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a0cadad146e7a4cb72b58ad12475ea5a3">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#a8c1a5b17508eca080bdc83666a8c38d1">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03434">3434</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03443">3443</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -6885,7 +6969,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#adc587c192a5fe611d2f328d199e4b3a2">getNumberOfEdges()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a4d8b40b8f252439a6ff3c10a20cdb972">getEdges()</a> </dd>
 <dd>
@@ -6924,7 +7008,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a0c057355fafeca86acf2394e40f59e01">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#a40967d2af7e99dc6e2f34c7509ccab9a">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitWithPreconditions.html#a2d897f28434f486f2c577ea78bc4710c">ttk::ImplicitWithPreconditions</a>, <a class="el" href="classttk_1_1ImplicitNoPreconditions.html#a4acb0bbc0d9714c9db003f9d8289c5d9">ttk::ImplicitNoPreconditions</a>, <a class="el" href="classttk_1_1PeriodicWithPreconditions.html#a09cc0a1e4a5a2bf2a520d09e4a240363">ttk::PeriodicWithPreconditions</a>, <a class="el" href="classttk_1_1PeriodicNoPreconditions.html#a87825c3a9ecd6f4a7e7ec694626d0d2c">ttk::PeriodicNoPreconditions</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#a2e486549a89c6d21f1073a93001c6b10">ttk::ImplicitTriangulation</a>, and <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#a6293edb394aa7ad007023b6cd3a364cd">ttk::PeriodicImplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03430">3430</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03439">3439</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -6957,7 +7041,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#af9efcf36d0a6c922ce4f93617f02c7b6">getEdgeStarNumber()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a8bc8de11acd27d25cafc5a0c9cd842b5">getEdgeStar()</a> </dd>
 <dd>
@@ -6996,7 +7080,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a80b0ba4133b952f7d0f57324ac089ada">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#a0a97f329c2e9396fa91a68574db65bd9">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03438">3438</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03447">3447</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7029,7 +7113,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#a1ee97002da7227a07fbfc3772afe6ccf">getEdgeTriangleNumber()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a3b4607cec952c65e931263ea69e9b707">getEdgeTriangle()</a> </dd>
 <dd>
@@ -7068,7 +7152,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#ad2e7cc83a38ce99d6c85fb69f92aa354">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#aa68cc9b40c6d5290aae7b3fe00e3a52c">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03442">3442</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03451">3451</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7101,7 +7185,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#aea9a40882ff079f7e648f7e8efdec2d9">getTriangleEdgeNumber()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a4f8f76b0f0c1fea49a6228489141ecf3">getTriangleEdge()</a> </dd>
 <dd>
@@ -7140,7 +7224,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a61b09d7684a96181a14fd558cbc7d816">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#aab44338be2f75e8f6277418c463a3268">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03450">3450</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03459">3459</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7173,7 +7257,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#a5775ac7ca6d1fb397b081da8dfce088f">getTriangleLinkNumber()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a6c6d08b861042461f2ef4b7197f4487f">getTriangleLink()</a> </dd>
 <dd>
@@ -7212,7 +7296,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#ab57c29b08a82e3a39255f152fa92ed91">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#a652982c6732af238c4846eebd65802e7">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03454">3454</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03463">3463</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7245,7 +7329,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#ab81e47de8b7bec8142e523c4842eef37">getTriangleVertex()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#ab772565ddc3f8c85b63b6b583ff898a9">getNumberOfTriangles()</a> </dd>
 <dd>
@@ -7284,7 +7368,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a7d95123acde8fb9948f3c289c7b3e30b">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#a2fd614b82c8bcdc081146b56ba7eda2c">ttk::ExplicitTriangulation</a>, <a class="el" href="classttk_1_1ImplicitWithPreconditions.html#ab2e40fd172440c867433a8436c95714b">ttk::ImplicitWithPreconditions</a>, <a class="el" href="classttk_1_1ImplicitNoPreconditions.html#a80eb699ed871340f0d8c66ac821c6732">ttk::ImplicitNoPreconditions</a>, <a class="el" href="classttk_1_1PeriodicWithPreconditions.html#a8f726fa4cc070f78f6c5e72d165abef2">ttk::PeriodicWithPreconditions</a>, <a class="el" href="classttk_1_1PeriodicNoPreconditions.html#a5eebd528e57bcb8b81dac4c998be2e77">ttk::PeriodicNoPreconditions</a>, <a class="el" href="classttk_1_1ImplicitTriangulation.html#af803c735888799baaab5feffa122ca80">ttk::ImplicitTriangulation</a>, and <a class="el" href="classttk_1_1PeriodicImplicitTriangulation.html#a5a5547fbe87a7f95f4f4e2ce6d88843b">ttk::PeriodicImplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03446">3446</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03455">3455</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7317,7 +7401,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#aa3bf19fabd09e554a85f446845dd0eaf">getTriangleStarNumber()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a37f6c53f55f2b6934bb6253fddd3795e">getTriangleStar()</a> </dd>
 <dd>
@@ -7356,7 +7440,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#abe370cce35a4862316ca61ec0ac9c06a">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#a2821ca656a8e70ea1365bdf06a9a0ce5">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03458">3458</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03467">3467</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7389,7 +7473,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#ad21d7954a3c8924d97822b34d234c378">getVertexEdgeNumber()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a1880ac794478a1b883bde5100797c23f">getVertexEdge()</a> </dd>
 <dd>
@@ -7428,7 +7512,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#ad4005f73aa4695651582e02f5c98583b">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#a9388704443dd1845328b9852f2feb77c">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03462">3462</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03471">3471</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7461,7 +7545,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#ad107db0741140f7b0f6282c76fda9c02">getVertexLinkNumber()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#af5e5e31c47713882482f936829c74211">getVertexLink()</a> </dd>
 <dd>
@@ -7500,7 +7584,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a0b5e78af4f870033db09b8fed72165b2">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#a557660e4e70f49ffd7111cc0bad5a411">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03466">3466</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03475">3475</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7533,7 +7617,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#a381f13fdcf414ee42368e65016ace1b3">getVertexNeighborNumber()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a8dc263f3c24b562dc12cac548c493fee">getVertexNeighbor()</a> </dd>
 <dd>
@@ -7572,7 +7656,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#ad680e095c5285f510de5bda44889b4aa">ttk::CompactTriangulation</a>, <a class="el" href="classttk_1_1ExplicitTriangulation.html#a46711179e2543fc2ede1a8ace2291894">ttk::ExplicitTriangulation</a>, and <a class="el" href="classttk_1_1ImplicitTriangulation.html#add19872aa3a8aca9c94131b58749948b">ttk::ImplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03470">3470</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03479">3479</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7605,7 +7689,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#aba5c3c521e085df31943e944857ece82">getVertexStarNumber()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#aa3b1d4c272c9cd35e33c6722cf033e84">getVertexStar()</a> </dd>
 <dd>
@@ -7644,7 +7728,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#a8602f215b8342c3016a827a3c0f0d6dc">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#a92cf561858a1b52bd1345e24bbc6eeac">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03474">3474</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03483">3483</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7677,7 +7761,7 @@ Additional Inherited Members</h2></td></tr>
 <li><a class="el" href="classttk_1_1AbstractTriangulation.html#a10d0946e76d15e3f4a1fdd9ec7bd0135">getVertexTriangleNumber()</a></li>
 </ul>
 <dl class="section pre"><dt>Precondition</dt><dd>This function should be called prior to any traversal, in a clearly distinct pre-processing step that involves no traversal at all. An error will be returned otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this pre-processing function from any time performance measurement. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to exclude this preconditioning function from any time performance measurement. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classttk_1_1AbstractTriangulation.html#a1508c5839ec3ab0d0f02cdbf17730fa1">getVertexTriangle()</a> </dd>
 <dd>
@@ -7716,7 +7800,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classttk_1_1CompactTriangulation.html#ac07632a8830aa700edac1992482c4b68">ttk::CompactTriangulation</a>, and <a class="el" href="classttk_1_1ExplicitTriangulation.html#af409e53e650393e43d352682b36f14c3">ttk::ExplicitTriangulation</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03478">3478</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03487">3487</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7762,7 +7846,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03483">3483</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03503">3503</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7872,7 +7956,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03502">3502</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03522">3522</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7897,7 +7981,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03622">3622</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03642">3642</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7922,7 +8006,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03519">3519</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03539">3539</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7946,7 +8030,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03519">3519</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03539">3539</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7970,7 +8054,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03519">3519</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03539">3539</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -7994,7 +8078,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03539">3539</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03559">3559</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8018,7 +8102,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03521">3521</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03541">3541</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8042,7 +8126,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03540">3540</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03560">3560</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8066,7 +8150,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03523">3523</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03543">3543</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8090,7 +8174,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03524">3524</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03544">3544</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8114,7 +8198,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03525">3525</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03545">3545</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8138,7 +8222,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03526">3526</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03546">3546</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8162,7 +8246,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03672">3672</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03692">3692</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8186,7 +8270,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03517">3517</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03537">3537</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8210,7 +8294,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03506">3506</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03526">3526</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8234,7 +8318,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03506">3506</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03526">3526</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8258,7 +8342,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03507">3507</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03527">3527</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8282,7 +8366,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03507">3507</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03527">3527</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8306,7 +8390,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03508">3508</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03528">3528</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8330,7 +8414,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03508">3508</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03528">3528</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8354,7 +8438,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03509">3509</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03529">3529</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8378,7 +8462,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03510">3510</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03530">3530</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8402,7 +8486,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03509">3509</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03529">3529</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8426,7 +8510,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03510">3510</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03530">3530</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8450,7 +8534,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03511">3511</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03531">3531</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8474,7 +8558,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03512">3512</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03532">3532</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8498,7 +8582,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03512">3512</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03532">3532</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8522,7 +8606,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03511">3511</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03531">3531</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8546,7 +8630,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03513">3513</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03533">3533</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8570,7 +8654,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03513">3513</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03533">3533</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8594,7 +8678,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03514">3514</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03534">3534</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8618,7 +8702,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03514">3514</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03534">3534</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8642,7 +8726,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03515">3515</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03535">3535</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8666,7 +8750,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03515">3515</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03535">3535</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8690,7 +8774,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03520">3520</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03540">3540</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8714,7 +8798,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03522">3522</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03542">3542</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8738,7 +8822,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03528">3528</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03548">3548</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8762,7 +8846,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03541">3541</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03561">3561</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8786,7 +8870,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03529">3529</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03549">3549</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8810,7 +8894,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03527">3527</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03547">3547</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8834,7 +8918,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03530">3530</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03550">3550</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8858,7 +8942,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03531">3531</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03551">3551</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8882,7 +8966,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03532">3532</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03552">3552</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8906,7 +8990,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03533">3533</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03553">3553</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8930,7 +9014,7 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03534">3534</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03554">3554</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
@@ -8954,18 +9038,18 @@ template&lt;class itemType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03535">3535</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AbstractTriangulation_8h_source.html#l03555">3555</a> of file <a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/julien/Pro/git/github/ttk-tierny/core/base/abstractTriangulation/<a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a></li>
-<li>/home/julien/Pro/git/github/ttk-tierny/core/base/abstractTriangulation/<a class="el" href="AbstractTriangulation_8cpp_source.html">AbstractTriangulation.cpp</a></li>
+<li>/data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/abstractTriangulation/<a class="el" href="AbstractTriangulation_8h_source.html">AbstractTriangulation.h</a></li>
+<li>/data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/abstractTriangulation/<a class="el" href="AbstractTriangulation_8cpp_source.html">AbstractTriangulation.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 17 2022 16:11:43 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Fri Sep 23 2022 11:08:20 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

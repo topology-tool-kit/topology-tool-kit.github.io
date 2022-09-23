@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /home/julien/Pro/git/github/ttk-tierny/core/base/scalarFieldSmoother/ScalarFieldSmoother.h Source File</title>
+<title>TTK: /data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/scalarFieldSmoother/ScalarFieldSmoother.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -208,24 +208,25 @@ $(function() {
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>      exchangeGhostCells&lt;dataType, SimplexId&gt;(</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        outputData, triangulation-&gt;getVertRankArray(),</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        triangulation-&gt;getVertsGlobalIds(),</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        triangulation-&gt;getVertexGlobalIdMap(), vertexNumber, ttk::MPIcomm_);</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    }</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classttk_1_1Debug.html#a19bb5107152e6974eb9c0faaf30bf155">debugLevel_</a> &gt;= (<span class="keywordtype">int</span>)(<a class="code hl_enumvalue" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a551b723eafd6a31d444fcb2f5920fbd3">debug::Priority::INFO</a>)) {</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      <span class="keywordflow">if</span>(!(it % ((numberOfIterations) / timeBuckets))) {</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <a class="code hl_function" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a>(<span class="stringliteral">&quot;Smoothing &quot;</span> + std::to_string(vertexNumber) + <span class="stringliteral">&quot; vertices&quot;</span>,</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                 (it / (<span class="keywordtype">float</span>)numberOfIterations), t.<a class="code hl_function" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>(),</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                 <a class="code hl_variable" href="classttk_1_1BaseClass.html#a3b6d157f3ae3fa7b25d203bb189a58b6">threadNumber_</a>, <a class="code hl_enumvalue" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">debug::LineMode::REPLACE</a>);</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>      }</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    }</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  }</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <a class="code hl_function" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a>(<span class="stringliteral">&quot;Smoothed &quot;</span> + std::to_string(vertexNumber) + <span class="stringliteral">&quot; vertices&quot;</span>, 1,</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>           t.<a class="code hl_function" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>(), <a class="code hl_variable" href="classttk_1_1BaseClass.html#a3b6d157f3ae3fa7b25d203bb189a58b6">threadNumber_</a>);</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>}</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        triangulation-&gt;getVertexGlobalIdMap(), vertexNumber, ttk::MPIcomm_,</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <a class="code hl_variable" href="classttk_1_1ScalarFieldSmoother.html#ac88231edbf150c7bec796bcb3d582425">dimensionNumber_</a>);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    }</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classttk_1_1Debug.html#a19bb5107152e6974eb9c0faaf30bf155">debugLevel_</a> &gt;= (<span class="keywordtype">int</span>)(<a class="code hl_enumvalue" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a551b723eafd6a31d444fcb2f5920fbd3">debug::Priority::INFO</a>)) {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>      <span class="keywordflow">if</span>(!(it % ((numberOfIterations) / timeBuckets))) {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <a class="code hl_function" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a>(<span class="stringliteral">&quot;Smoothing &quot;</span> + std::to_string(vertexNumber) + <span class="stringliteral">&quot; vertices&quot;</span>,</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                 (it / (<span class="keywordtype">float</span>)numberOfIterations), t.<a class="code hl_function" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>(),</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                 <a class="code hl_variable" href="classttk_1_1BaseClass.html#a3b6d157f3ae3fa7b25d203bb189a58b6">threadNumber_</a>, <a class="code hl_enumvalue" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">debug::LineMode::REPLACE</a>);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>      }</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    }</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  }</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  <a class="code hl_function" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a>(<span class="stringliteral">&quot;Smoothed &quot;</span> + std::to_string(vertexNumber) + <span class="stringliteral">&quot; vertices&quot;</span>, 1,</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>           t.<a class="code hl_function" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>(), <a class="code hl_variable" href="classttk_1_1BaseClass.html#a3b6d157f3ae3fa7b25d203bb189a58b6">threadNumber_</a>);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>}</div>
 <div class="ttc" id="aTriangulation_8h_html"><div class="ttname"><a href="Triangulation_8h.html">Triangulation.h</a></div></div>
 <div class="ttc" id="aclassttk_1_1AbstractTriangulation_html"><div class="ttname"><a href="classttk_1_1AbstractTriangulation.html">ttk::AbstractTriangulation</a></div><div class="ttdoc">AbstractTriangulation is an interface class that defines an interface for efficient traversal methods...</div><div class="ttdef"><b>Definition:</b> <a href="AbstractTriangulation_8h_source.html#l00060">AbstractTriangulation.h:60</a></div></div>
 <div class="ttc" id="aclassttk_1_1AbstractTriangulation_html_a46b37180ac5a6c65fd3367b75fde671b"><div class="ttname"><a href="classttk_1_1AbstractTriangulation.html#a46b37180ac5a6c65fd3367b75fde671b">ttk::AbstractTriangulation::preconditionVertexNeighbors</a></div><div class="ttdeci">virtual int preconditionVertexNeighbors()</div><div class="ttdef"><b>Definition:</b> <a href="AbstractTriangulation_8h_source.html#l02344">AbstractTriangulation.h:2344</a></div></div>
@@ -255,7 +256,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 17 2022 16:11:41 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Fri Sep 23 2022 11:08:14 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>
