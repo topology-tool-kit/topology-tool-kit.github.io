@@ -67,6 +67,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
@@ -87,14 +88,19 @@ Inheritance diagram for ttk::PersistenceDiagramAuction:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a1f64a6dce20694ddb98ffb4dd5e886d8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">KDT</a> = <a class="el" href="classttk_1_1Bidder.html#a9b593e2d8afa47ba5edc88f2b66830ea">Bidder::KDT</a></td></tr>
+<tr class="separator:a1f64a6dce20694ddb98ffb4dd5e886d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4799ad027c688d7894f3e2d0141216ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a4799ad027c688d7894f3e2d0141216ef">getAugmentedNumberOfBidders</a> ()</td></tr>
 <tr class="separator:a4799ad027c688d7894f3e2d0141216ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcdf19d6daea73af35d4f568c64e70f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#adcdf19d6daea73af35d4f568c64e70f2">PersistenceDiagramAuction</a> (int wasserstein, double geometricalFactor, double lambda, double delta_lim, bool use_kdTree)</td></tr>
 <tr class="separator:adcdf19d6daea73af35d4f568c64e70f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95a247ab3a92c7f60ee6864c38d2b7fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a95a247ab3a92c7f60ee6864c38d2b7fa">PersistenceDiagramAuction</a> (<a class="el" href="namespacettk.html#a2b8b9b6d75890e6b92e0b1d2d2b138c0">BidderDiagram</a> &amp;bidders, <a class="el" href="namespacettk.html#ad34fb9fb5505b8e7ca1942443ee5d3d0">GoodDiagram</a> &amp;goods, int wasserstein, double geometricalFactor, double lambda, double delta_lim, <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt; &amp;kdt, std::vector&lt; <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt; * &gt; &amp;correspondance_kdt_map, double epsilon={}, double initial_diag_price={}, bool use_kdTree=true)</td></tr>
-<tr class="separator:a95a247ab3a92c7f60ee6864c38d2b7fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f714600a1e975158f3ecbafb8a16fd3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a9f714600a1e975158f3ecbafb8a16fd3">PersistenceDiagramAuction</a> (<a class="el" href="namespacettk.html#a2b8b9b6d75890e6b92e0b1d2d2b138c0">BidderDiagram</a> &amp;bidders, <a class="el" href="namespacettk.html#ad34fb9fb5505b8e7ca1942443ee5d3d0">GoodDiagram</a> &amp;goods, int wasserstein, double geometricalFactor, double lambda, double delta_lim, <a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">KDT</a> &amp;kdt, std::vector&lt; <a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">KDT</a> * &gt; &amp;correspondance_kdt_map, double epsilon={}, double initial_diag_price={}, bool use_kdTree=true)</td></tr>
+<tr class="separator:a9f714600a1e975158f3ecbafb8a16fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a056cd298aab82fc04c7c0054f68636b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a056cd298aab82fc04c7c0054f68636b1">runAuctionRound</a> (int &amp;n_biddings, const int kdt_index=0)</td></tr>
 <tr class="separator:a056cd298aab82fc04c7c0054f68636b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69c0d9f5730bf9b2f3b96dff24206f45"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a69c0d9f5730bf9b2f3b96dff24206f45">getMatchingsAndDistance</a> (std::vector&lt; <a class="el" href="namespacettk.html#ac4fae15b84f386737689bfec7dafee8b">MatchingType</a> &gt; &amp;matchings, bool get_diagonal_matches=false)</td></tr>
@@ -182,14 +188,14 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a4abce62947fdf32bda34a04b447300a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a4abce62947fdf32bda34a04b447300a6">default_kdt_</a> {}</td></tr>
-<tr class="separator:a4abce62947fdf32bda34a04b447300a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca6b67ec397b90f2d6c0893df1bb2223"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#aca6b67ec397b90f2d6c0893df1bb2223">kdt_</a> {<a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a4abce62947fdf32bda34a04b447300a6">default_kdt_</a>}</td></tr>
-<tr class="separator:aca6b67ec397b90f2d6c0893df1bb2223"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4535afe7c1372d0090d509969dbd86b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#ad4535afe7c1372d0090d509969dbd86b">default_correspondance_kdt_map_</a> {}</td></tr>
-<tr class="separator:ad4535afe7c1372d0090d509969dbd86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55c1fb551fe1c70278f19738506c699d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt; * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a55c1fb551fe1c70278f19738506c699d">correspondance_kdt_map_</a></td></tr>
-<tr class="separator:a55c1fb551fe1c70278f19738506c699d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8fd95723b9ddb54f57f3be3e86833f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">KDT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#ac8fd95723b9ddb54f57f3be3e86833f4">default_kdt_</a> {}</td></tr>
+<tr class="separator:ac8fd95723b9ddb54f57f3be3e86833f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf32409e5cd561aa0e2e09e32b02583f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">KDT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#adf32409e5cd561aa0e2e09e32b02583f">kdt_</a> {<a class="el" href="classttk_1_1PersistenceDiagramAuction.html#ac8fd95723b9ddb54f57f3be3e86833f4">default_kdt_</a>}</td></tr>
+<tr class="separator:adf32409e5cd561aa0e2e09e32b02583f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae53bb5c1613f15f64d0ab6dae990e961"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">KDT</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#ae53bb5c1613f15f64d0ab6dae990e961">default_correspondance_kdt_map_</a> {}</td></tr>
+<tr class="separator:ae53bb5c1613f15f64d0ab6dae990e961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb733232775cedc0dc099dfaedfb3cd6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">KDT</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#adb733232775cedc0dc099dfaedfb3cd6">correspondance_kdt_map_</a></td></tr>
+<tr class="separator:adb733232775cedc0dc099dfaedfb3cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -252,7 +258,24 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00008">8</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a1f64a6dce20694ddb98ffb4dd5e886d8" name="a1f64a6dce20694ddb98ffb4dd5e886d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f64a6dce20694ddb98ffb4dd5e886d8">&#9670;&nbsp;</a></span>KDT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">ttk::PersistenceDiagramAuction::KDT</a> =  <a class="el" href="classttk_1_1Bidder.html#a9b593e2d8afa47ba5edc88f2b66830ea">Bidder::KDT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00015">15</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adcdf19d6daea73af35d4f568c64e70f2" name="adcdf19d6daea73af35d4f568c64e70f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adcdf19d6daea73af35d4f568c64e70f2">&#9670;&nbsp;</a></span>PersistenceDiagramAuction() <span class="overload">[1/2]</span></h2>
 
@@ -305,12 +328,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00021">21</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00023">23</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
-<a id="a95a247ab3a92c7f60ee6864c38d2b7fa" name="a95a247ab3a92c7f60ee6864c38d2b7fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95a247ab3a92c7f60ee6864c38d2b7fa">&#9670;&nbsp;</a></span>PersistenceDiagramAuction() <span class="overload">[2/2]</span></h2>
+<a id="a9f714600a1e975158f3ecbafb8a16fd3" name="a9f714600a1e975158f3ecbafb8a16fd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f714600a1e975158f3ecbafb8a16fd3">&#9670;&nbsp;</a></span>PersistenceDiagramAuction() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -357,13 +380,13 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">KDT</a> &amp;&#160;</td>
           <td class="paramname"><em>kdt</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt; * &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">KDT</a> * &gt; &amp;&#160;</td>
           <td class="paramname"><em>correspondance_kdt_map</em>, </td>
         </tr>
         <tr>
@@ -397,7 +420,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00030">30</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00032">32</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -436,7 +459,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00090">90</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00091">91</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -474,7 +497,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00122">122</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00123">123</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -501,7 +524,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00172">172</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00173">173</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -528,7 +551,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00215">215</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00216">216</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -582,7 +605,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00232">232</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00233">233</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -658,7 +681,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00261">261</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00262">262</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -685,7 +708,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00241">241</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00242">242</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -712,7 +735,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00198">198</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00199">199</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -739,7 +762,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00223">223</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00224">224</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -766,7 +789,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00084">84</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00085">85</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -844,7 +867,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00153">153</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00154">154</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -872,7 +895,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00194">194</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00195">195</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -900,7 +923,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00163">163</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00164">164</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -927,7 +950,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00254">254</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00255">255</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -952,26 +975,26 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00278">278</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00279">279</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
-<a id="a55c1fb551fe1c70278f19738506c699d" name="a55c1fb551fe1c70278f19738506c699d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55c1fb551fe1c70278f19738506c699d">&#9670;&nbsp;</a></span>correspondance_kdt_map_</h2>
+<a id="adb733232775cedc0dc099dfaedfb3cd6" name="adb733232775cedc0dc099dfaedfb3cd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb733232775cedc0dc099dfaedfb3cd6">&#9670;&nbsp;</a></span>correspondance_kdt_map_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt;double&gt; *&gt;&amp; ttk::PersistenceDiagramAuction::correspondance_kdt_map_</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">KDT</a> *&gt;&amp; ttk::PersistenceDiagramAuction::correspondance_kdt_map_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">{</div>
-<div class="line">      <a class="code hl_variable" href="classttk_1_1PersistenceDiagramAuction.html#ad4535afe7c1372d0090d509969dbd86b">default_correspondance_kdt_map_</a>}</div>
-<div class="ttc" id="aclassttk_1_1PersistenceDiagramAuction_html_ad4535afe7c1372d0090d509969dbd86b"><div class="ttname"><a href="classttk_1_1PersistenceDiagramAuction.html#ad4535afe7c1372d0090d509969dbd86b">ttk::PersistenceDiagramAuction::default_correspondance_kdt_map_</a></div><div class="ttdeci">std::vector&lt; KDTree&lt; double &gt; * &gt; default_correspondance_kdt_map_</div><div class="ttdef"><b>Definition:</b> <a href="PersistenceDiagramAuction_8h_source.html#l00017">PersistenceDiagramAuction.h:17</a></div></div>
+<div class="line">      <a class="code hl_variable" href="classttk_1_1PersistenceDiagramAuction.html#ae53bb5c1613f15f64d0ab6dae990e961">default_correspondance_kdt_map_</a>}</div>
+<div class="ttc" id="aclassttk_1_1PersistenceDiagramAuction_html_ae53bb5c1613f15f64d0ab6dae990e961"><div class="ttname"><a href="classttk_1_1PersistenceDiagramAuction.html#ae53bb5c1613f15f64d0ab6dae990e961">ttk::PersistenceDiagramAuction::default_correspondance_kdt_map_</a></div><div class="ttdeci">std::vector&lt; KDT * &gt; default_correspondance_kdt_map_</div><div class="ttdef"><b>Definition:</b> <a href="PersistenceDiagramAuction_8h_source.html#l00019">PersistenceDiagramAuction.h:19</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00018">18</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00020">20</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -995,23 +1018,23 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00277">277</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00278">278</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
-<a id="ad4535afe7c1372d0090d509969dbd86b" name="ad4535afe7c1372d0090d509969dbd86b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4535afe7c1372d0090d509969dbd86b">&#9670;&nbsp;</a></span>default_correspondance_kdt_map_</h2>
+<a id="ae53bb5c1613f15f64d0ab6dae990e961" name="ae53bb5c1613f15f64d0ab6dae990e961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae53bb5c1613f15f64d0ab6dae990e961">&#9670;&nbsp;</a></span>default_correspondance_kdt_map_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt;double&gt; *&gt; ttk::PersistenceDiagramAuction::default_correspondance_kdt_map_ {}</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">KDT</a> *&gt; ttk::PersistenceDiagramAuction::default_correspondance_kdt_map_ {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00017">17</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00019">19</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -1035,23 +1058,23 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00279">279</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00280">280</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
-<a id="a4abce62947fdf32bda34a04b447300a6" name="a4abce62947fdf32bda34a04b447300a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4abce62947fdf32bda34a04b447300a6">&#9670;&nbsp;</a></span>default_kdt_</h2>
+<a id="ac8fd95723b9ddb54f57f3be3e86833f4" name="ac8fd95723b9ddb54f57f3be3e86833f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8fd95723b9ddb54f57f3be3e86833f4">&#9670;&nbsp;</a></span>default_kdt_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt;double&gt; ttk::PersistenceDiagramAuction::default_kdt_ {}</td>
+          <td class="memname"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">KDT</a> ttk::PersistenceDiagramAuction::default_kdt_ {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00015">15</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00017">17</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -1075,7 +1098,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00299">299</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00300">300</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -1099,7 +1122,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00281">281</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00282">282</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -1123,7 +1146,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00285">285</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00286">286</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -1147,7 +1170,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00291">291</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00292">292</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -1171,7 +1194,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00292">292</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00293">293</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -1195,23 +1218,23 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00280">280</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00281">281</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
-<a id="aca6b67ec397b90f2d6c0893df1bb2223" name="aca6b67ec397b90f2d6c0893df1bb2223"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca6b67ec397b90f2d6c0893df1bb2223">&#9670;&nbsp;</a></span>kdt_</h2>
+<a id="adf32409e5cd561aa0e2e09e32b02583f" name="adf32409e5cd561aa0e2e09e32b02583f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf32409e5cd561aa0e2e09e32b02583f">&#9670;&nbsp;</a></span>kdt_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt;double&gt;&amp; ttk::PersistenceDiagramAuction::kdt_ {<a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a4abce62947fdf32bda34a04b447300a6">default_kdt_</a>}</td>
+          <td class="memname"><a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">KDT</a>&amp; ttk::PersistenceDiagramAuction::kdt_ {<a class="el" href="classttk_1_1PersistenceDiagramAuction.html#ac8fd95723b9ddb54f57f3be3e86833f4">default_kdt_</a>}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00016">16</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00018">18</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -1235,7 +1258,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00293">293</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00294">294</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -1259,7 +1282,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00288">288</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00289">289</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -1283,7 +1306,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00289">289</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00290">290</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -1307,7 +1330,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00286">286</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00287">287</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -1331,7 +1354,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00300">300</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00301">301</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
@@ -1355,18 +1378,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00276">276</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramAuction_8h_source.html#l00277">277</a> of file <a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceDiagramAuction/<a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a></li>
-<li>/data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceDiagramAuction/<a class="el" href="PersistenceDiagramAuction_8cpp_source.html">PersistenceDiagramAuction.cpp</a></li>
+<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceDiagramAuction/<a class="el" href="PersistenceDiagramAuction_8h_source.html">PersistenceDiagramAuction.h</a></li>
+<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceDiagramAuction/<a class="el" href="PersistenceDiagramAuction_8cpp_source.html">PersistenceDiagramAuction.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 23 2022 11:08:22 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Sat Nov 5 2022 16:05:56 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

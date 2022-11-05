@@ -107,6 +107,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a81e78c653ac0802c3cb1fdd1d4a2e18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6eee4821b00e17eb240d03377868a52"><td class="memItemLeft" align="right" valign="top">virtual char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttkTriangulationWriter.html#ae6eee4821b00e17eb240d03377868a52">GetFilename</a> ()</td></tr>
 <tr class="separator:ae6eee4821b00e17eb240d03377868a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f67555b4341cbb6e6fa050c7545043"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttkTriangulationWriter.html#a89f67555b4341cbb6e6fa050c7545043">SetUseASCIIFormat</a> (bool)</td></tr>
+<tr class="separator:a89f67555b4341cbb6e6fa050c7545043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fafb4116ad7137cd905a65b178dbf6a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttkTriangulationWriter.html#a2fafb4116ad7137cd905a65b178dbf6a">GetUseASCIIFormat</a> ()</td></tr>
+<tr class="separator:a2fafb4116ad7137cd905a65b178dbf6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee8b4553d420247a465dbeda0b14256c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttkTriangulationWriter.html#aee8b4553d420247a465dbeda0b14256c">Write</a> ()</td></tr>
 <tr class="separator:aee8b4553d420247a465dbeda0b14256c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a22d89834071de9c8278335e8f818e1"><td class="memItemLeft" align="right" valign="top">vtkDataObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttkTriangulationWriter.html#a2a22d89834071de9c8278335e8f818e1">GetInput</a> ()</td></tr>
@@ -268,6 +272,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a5cf1d40809fc9b0676981f2daa3800d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea00b8f851ad56348f519cce04da6478"><td class="memItemLeft" align="right" valign="top">std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttkTriangulationWriter.html#aea00b8f851ad56348f519cce04da6478">Stream</a> {}</td></tr>
 <tr class="separator:aea00b8f851ad56348f519cce04da6478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d1657afae3eda71a70558a4ac8eabfe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttkTriangulationWriter.html#a5d1657afae3eda71a70558a4ac8eabfe">UseASCIIFormat</a> {false}</td></tr>
+<tr class="separator:a5d1657afae3eda71a70558a4ac8eabfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classttk_1_1Debug"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classttk_1_1Debug')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classttk_1_1Debug.html">ttk::Debug</a></td></tr>
 <tr class="memitem:a19bb5107152e6974eb9c0faaf30bf155 inherit pro_attribs_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a19bb5107152e6974eb9c0faaf30bf155">debugLevel_</a></td></tr>
 <tr class="separator:a19bb5107152e6974eb9c0faaf30bf155 inherit pro_attribs_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -445,7 +451,32 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ttkTriangulationWriter_8cpp_source.html#l00085">85</a> of file <a class="el" href="ttkTriangulationWriter_8cpp_source.html">ttkTriangulationWriter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ttkTriangulationWriter_8cpp_source.html#l00090">90</a> of file <a class="el" href="ttkTriangulationWriter_8cpp_source.html">ttkTriangulationWriter.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2fafb4116ad7137cd905a65b178dbf6a" name="a2fafb4116ad7137cd905a65b178dbf6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fafb4116ad7137cd905a65b178dbf6a">&#9670;&nbsp;</a></span>GetUseASCIIFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ttkTriangulationWriter::GetUseASCIIFormat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -623,7 +654,33 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ttkTriangulationWriter_8cpp_source.html#l00093">93</a> of file <a class="el" href="ttkTriangulationWriter_8cpp_source.html">ttkTriangulationWriter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ttkTriangulationWriter_8cpp_source.html#l00098">98</a> of file <a class="el" href="ttkTriangulationWriter_8cpp_source.html">ttkTriangulationWriter.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a89f67555b4341cbb6e6fa050c7545043" name="a89f67555b4341cbb6e6fa050c7545043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f67555b4341cbb6e6fa050c7545043">&#9670;&nbsp;</a></span>SetUseASCIIFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ttkTriangulationWriter::SetUseASCIIFormat </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -642,7 +699,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ttkTriangulationWriter_8cpp_source.html#l00048">48</a> of file <a class="el" href="ttkTriangulationWriter_8cpp_source.html">ttkTriangulationWriter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ttkTriangulationWriter_8cpp_source.html#l00043">43</a> of file <a class="el" href="ttkTriangulationWriter_8cpp_source.html">ttkTriangulationWriter.cpp</a>.</p>
 
 </div>
 </div>
@@ -667,7 +724,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ttkTriangulationWriter_8h_source.html#l00040">40</a> of file <a class="el" href="ttkTriangulationWriter_8h_source.html">ttkTriangulationWriter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ttkTriangulationWriter_8h_source.html#l00043">43</a> of file <a class="el" href="ttkTriangulationWriter_8h_source.html">ttkTriangulationWriter.h</a>.</p>
 
 </div>
 </div>
@@ -691,18 +748,42 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ttkTriangulationWriter_8h_source.html#l00041">41</a> of file <a class="el" href="ttkTriangulationWriter_8h_source.html">ttkTriangulationWriter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ttkTriangulationWriter_8h_source.html#l00044">44</a> of file <a class="el" href="ttkTriangulationWriter_8h_source.html">ttkTriangulationWriter.h</a>.</p>
+
+</div>
+</div>
+<a id="a5d1657afae3eda71a70558a4ac8eabfe" name="a5d1657afae3eda71a70558a4ac8eabfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d1657afae3eda71a70558a4ac8eabfe">&#9670;&nbsp;</a></span>UseASCIIFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ttkTriangulationWriter::UseASCIIFormat {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ttkTriangulationWriter_8h_source.html#l00045">45</a> of file <a class="el" href="ttkTriangulationWriter_8h_source.html">ttkTriangulationWriter.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/data/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkTriangulationWriter/<a class="el" href="ttkTriangulationWriter_8h_source.html">ttkTriangulationWriter.h</a></li>
-<li>/data/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkTriangulationWriter/<a class="el" href="ttkTriangulationWriter_8cpp_source.html">ttkTriangulationWriter.cpp</a></li>
+<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkTriangulationWriter/<a class="el" href="ttkTriangulationWriter_8h_source.html">ttkTriangulationWriter.h</a></li>
+<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkTriangulationWriter/<a class="el" href="ttkTriangulationWriter_8cpp_source.html">ttkTriangulationWriter.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 23 2022 11:08:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Sat Nov 5 2022 16:05:54 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

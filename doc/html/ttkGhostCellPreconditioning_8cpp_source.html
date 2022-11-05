@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /data/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkGhostCellPreconditioning/ttkGhostCellPreconditioning.cpp Source File</title>
+<title>TTK: /home/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkGhostCellPreconditioning/ttkGhostCellPreconditioning.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_af7e4fd7d94979f2f9436f5412e2e979.html">ttkGhostCellPreconditioning</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_aa319678ed2cb39fab2f8ff1969e8605.html">tierny</a></li><li class="navelem"><a class="el" href="dir_90f0e18f6a3db9a50a0cff0ad55689f7.html">private</a></li><li class="navelem"><a class="el" href="dir_3a6af36370c7b2c289deb8eee8b7da12.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_b6ff1f0e45d53bd762250c1eea10201d.html">core</a></li><li class="navelem"><a class="el" href="dir_f896db529ed01bc9983c6880f4c01d3c.html">vtk</a></li><li class="navelem"><a class="el" href="dir_b06e25243f838088b01e5760068cf79c.html">ttkGhostCellPreconditioning</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -147,7 +147,7 @@ $(function() {
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="keywordflow">if</span>(verticesGlobalIds != <span class="keyword">nullptr</span> &amp;&amp; verticesGhostCells != <span class="keyword">nullptr</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>     &amp;&amp; cellsGlobalIds != <span class="keyword">nullptr</span> &amp;&amp; cellsGhostCells != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#ifdef TTK_ENABLE_MPI</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">if</span>(ttk::isRunningWithMPI()) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">if</span>(ttk::hasInitializedMPI()) {</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="namespacettk.html#a70e199b7a7b2002a79a4f09b08b61d50">ttk::MPIrank_</a> == 0)</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a>(</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>          <span class="stringliteral">&quot;Global Point Ids and Ghost Cells exist, therefore we can continue!&quot;</span>);</div>
@@ -222,7 +222,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 23 2022 11:08:15 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Sat Nov 5 2022 16:05:49 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

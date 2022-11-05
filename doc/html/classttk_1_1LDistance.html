@@ -98,9 +98,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4b43917777a3e4815fa40c2be0d4d39d"><td class="memTemplParams" colspan="2">template&lt;class dataType &gt; </td></tr>
 <tr class="memitem:a4b43917777a3e4815fa40c2be0d4d39d"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1LDistance.html#a4b43917777a3e4815fa40c2be0d4d39d">execute</a> (const dataType *const inputData1, const dataType *const inputData2, dataType *const outputData, const std::string &amp;distanceType, const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> vertexNumber)</td></tr>
 <tr class="separator:a4b43917777a3e4815fa40c2be0d4d39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a8163c1c75f92e6fc21408c0ced000c"><td class="memTemplParams" colspan="2">template&lt;class dataType &gt; </td></tr>
-<tr class="memitem:a0a8163c1c75f92e6fc21408c0ced000c"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1LDistance.html#a0a8163c1c75f92e6fc21408c0ced000c">computeLn</a> (const dataType *const input1, const dataType *const input2, dataType *const output, const int n, const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> vertexNumber)</td></tr>
-<tr class="separator:a0a8163c1c75f92e6fc21408c0ced000c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3303abda2a9c4138cb7346d035f7c374"><td class="memTemplParams" colspan="2">template&lt;class dataType , typename PowerFunc &gt; </td></tr>
+<tr class="memitem:a3303abda2a9c4138cb7346d035f7c374"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1LDistance.html#a3303abda2a9c4138cb7346d035f7c374">computeLn</a> (const dataType *const input1, const dataType *const input2, dataType *const output, const int n, const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> vertexNumber, const PowerFunc &amp;powerFunc)</td></tr>
+<tr class="separator:a3303abda2a9c4138cb7346d035f7c374"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d70f3bb567ade2149ae6590919b47c1"><td class="memTemplParams" colspan="2">template&lt;class dataType &gt; </td></tr>
 <tr class="memitem:a1d70f3bb567ade2149ae6590919b47c1"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1LDistance.html#a1d70f3bb567ade2149ae6590919b47c1">computeLinf</a> (const dataType *const input1, const dataType *const input2, dataType *const output, const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> vertexNumber)</td></tr>
 <tr class="separator:a1d70f3bb567ade2149ae6590919b47c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -260,7 +260,7 @@ template&lt;typename type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00059">59</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00060">60</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
 
 </div>
 </div>
@@ -304,17 +304,17 @@ template&lt;class dataType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00143">143</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00146">146</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
 
 </div>
 </div>
-<a id="a0a8163c1c75f92e6fc21408c0ced000c" name="a0a8163c1c75f92e6fc21408c0ced000c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a8163c1c75f92e6fc21408c0ced000c">&#9670;&nbsp;</a></span>computeLn()</h2>
+<a id="a3303abda2a9c4138cb7346d035f7c374" name="a3303abda2a9c4138cb7346d035f7c374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3303abda2a9c4138cb7346d035f7c374">&#9670;&nbsp;</a></span>computeLn()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class dataType &gt; </div>
+template&lt;class dataType , typename PowerFunc &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">int ttk::LDistance::computeLn </td>
@@ -344,7 +344,13 @@ template&lt;class dataType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a>&#160;</td>
-          <td class="paramname"><em>vertexNumber</em>&#160;</td>
+          <td class="paramname"><em>vertexNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const PowerFunc &amp;&#160;</td>
+          <td class="paramname"><em>powerFunc</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -354,7 +360,7 @@ template&lt;class dataType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00106">106</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00108">108</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
 
 </div>
 </div>
@@ -404,7 +410,7 @@ template&lt;class dataType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00071">71</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00072">72</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
 
 </div>
 </div>
@@ -431,7 +437,7 @@ template&lt;class dataType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00050">50</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00051">51</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
 
 </div>
 </div>
@@ -459,7 +465,7 @@ template&lt;class dataType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00054">54</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00055">55</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
 
 </div>
 </div>
@@ -484,7 +490,7 @@ template&lt;class dataType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00065">65</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00066">66</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
 
 </div>
 </div>
@@ -508,18 +514,18 @@ template&lt;class dataType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00064">64</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LDistance_8h_source.html#l00065">65</a> of file <a class="el" href="LDistance_8h_source.html">LDistance.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/lDistance/<a class="el" href="LDistance_8h_source.html">LDistance.h</a></li>
-<li>/data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/lDistance/<a class="el" href="LDistance_8cpp_source.html">LDistance.cpp</a></li>
+<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/lDistance/<a class="el" href="LDistance_8h_source.html">LDistance.h</a></li>
+<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/lDistance/<a class="el" href="LDistance_8cpp_source.html">LDistance.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 23 2022 11:08:21 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Sat Nov 5 2022 16:05:56 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

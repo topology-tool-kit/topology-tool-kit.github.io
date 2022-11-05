@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /data/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkMatrixToHeatMap/ttkMatrixToHeatMap.cpp Source File</title>
+<title>TTK: /home/julien/Pro/git/github/tierny/private/ttk-tierny/core/vtk/ttkMatrixToHeatMap/ttkMatrixToHeatMap.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_ec92d15ca7c817cd7ed22ac72da0c541.html">ttkMatrixToHeatMap</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_aa319678ed2cb39fab2f8ff1969e8605.html">tierny</a></li><li class="navelem"><a class="el" href="dir_90f0e18f6a3db9a50a0cff0ad55689f7.html">private</a></li><li class="navelem"><a class="el" href="dir_3a6af36370c7b2c289deb8eee8b7da12.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_b6ff1f0e45d53bd762250c1eea10201d.html">core</a></li><li class="navelem"><a class="el" href="dir_f896db529ed01bc9983c6880f4c01d3c.html">vtk</a></li><li class="navelem"><a class="el" href="dir_fea3de9c8bfb870910681df67b91eff7.html">ttkMatrixToHeatMap</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -129,79 +129,87 @@ $(function() {
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        ScalarFields.emplace_back(name);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keyword">const</span> <span class="keyword">auto</span> nInputs = ScalarFields.size();</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keyword">const</span> <span class="keyword">auto</span> nRows = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(input-&gt;GetNumberOfRows());</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordflow">if</span>(nInputs != nRows) {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#a37c8c3e3e723babc48eeaa06b481cc4b">printWrn</a>(<span class="stringliteral">&quot;Distance matrix is not square&quot;</span>);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="comment">// grid points</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  vtkNew&lt;vtkPoints&gt; points{};</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  points-&gt;SetNumberOfPoints((nInputs + 1) * (nRows + 1));</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="comment">// grid cells connectivity arrays</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  vtkNew&lt;vtkIdTypeArray&gt; offsets{}, connectivity{};</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  offsets-&gt;SetNumberOfComponents(1);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  offsets-&gt;SetNumberOfTuples(nInputs * nRows + 1);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  connectivity-&gt;SetNumberOfComponents(1);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  connectivity-&gt;SetNumberOfTuples(4 * nInputs * nRows);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="comment">// distance and proximity arrays</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  vtkNew&lt;vtkDoubleArray&gt; dist{}, prox{};</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  dist-&gt;SetNumberOfComponents(1);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  dist-&gt;SetName(<span class="stringliteral">&quot;Distance&quot;</span>);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  dist-&gt;SetNumberOfTuples(nInputs * nRows);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  prox-&gt;SetNumberOfComponents(1);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  prox-&gt;SetName(<span class="stringliteral">&quot;Proximity&quot;</span>);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  prox-&gt;SetNumberOfTuples(nInputs * nRows);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#ifdef TTK_ENABLE_OPENMP</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#pragma omp parallel for num_threads(this-&gt;threadNumber_)</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif </span><span class="comment">// TTK_ENABLE_OPENMP</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; nInputs + 1; ++i) {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j = 0; j &lt; nRows + 1; ++j) {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      points-&gt;SetPoint(i * (nRows + 1) + j, i, j, 0.0);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  }</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#ifdef TTK_ENABLE_OPENMP</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#pragma omp parallel for num_threads(this-&gt;threadNumber_)</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#endif </span><span class="comment">// TTK_ENABLE_OPENMP</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; nInputs; ++i) {</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j = 0; j &lt; nRows; ++j) {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      <span class="comment">// build the cell connectivity and offsets array</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <span class="keyword">const</span> <span class="keyword">auto</span> nptline{<span class="keyword">static_cast&lt;</span>vtkIdType<span class="keyword">&gt;</span>(nRows + 1)};</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      <span class="keyword">const</span> <span class="keyword">auto</span> curr{<span class="keyword">static_cast&lt;</span>vtkIdType<span class="keyword">&gt;</span>(i * nptline + j)};</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      <span class="keyword">const</span> <span class="keyword">auto</span> o = i * nRows + j;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      connectivity-&gt;SetTuple1(4 * o + 0, curr);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      connectivity-&gt;SetTuple1(4 * o + 1, curr + nptline);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      connectivity-&gt;SetTuple1(4 * o + 2, curr + nptline + 1);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      connectivity-&gt;SetTuple1(4 * o + 3, curr + 1);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      offsets-&gt;SetTuple1(o, 4 * o);</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      <span class="comment">// copy distance matrix to heat map cell data</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      <span class="keyword">const</span> <span class="keyword">auto</span> val = input-&gt;GetColumnByName(ScalarFields[i].data())</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                         -&gt;GetVariantValue(j)</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                         .ToDouble();</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      dist-&gt;SetTuple1(i * nRows + j, val);</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      prox-&gt;SetTuple1(i * nRows + j, std::exp(-val));</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  }</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  offsets-&gt;SetTuple1(nInputs * nRows, connectivity-&gt;GetNumberOfTuples());</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <span class="comment">// gather arrays to make the PolyData</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  vtkNew&lt;vtkCellArray&gt; cells{};</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  cells-&gt;SetData(offsets, connectivity);</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  output-&gt;SetPoints(points);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  output-&gt;SetPolys(cells);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  output-&gt;GetCellData()-&gt;AddArray(dist);</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  output-&gt;GetCellData()-&gt;AddArray(prox);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// Remove manually selected arrays that are not present in the input table</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    ScalarFields.erase(</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      std::remove_if(ScalarFields.begin(), ScalarFields.end(),</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                     [&amp;input](<span class="keyword">const</span> std::string &amp;name) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                       return not input-&gt;GetColumnByName(name.data());</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                     }),</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      ScalarFields.end());</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keyword">const</span> <span class="keyword">auto</span> nInputs = ScalarFields.size();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keyword">const</span> <span class="keyword">auto</span> nRows = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(input-&gt;GetNumberOfRows());</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordflow">if</span>(nInputs != nRows) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#a37c8c3e3e723babc48eeaa06b481cc4b">printWrn</a>(<span class="stringliteral">&quot;Distance matrix is not square&quot;</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="comment">// grid points</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  vtkNew&lt;vtkPoints&gt; points{};</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  points-&gt;SetNumberOfPoints((nInputs + 1) * (nRows + 1));</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="comment">// grid cells connectivity arrays</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  vtkNew&lt;vtkIdTypeArray&gt; offsets{}, connectivity{};</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  offsets-&gt;SetNumberOfComponents(1);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  offsets-&gt;SetNumberOfTuples(nInputs * nRows + 1);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  connectivity-&gt;SetNumberOfComponents(1);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  connectivity-&gt;SetNumberOfTuples(4 * nInputs * nRows);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="comment">// distance and proximity arrays</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  vtkNew&lt;vtkDoubleArray&gt; dist{}, prox{};</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  dist-&gt;SetNumberOfComponents(1);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  dist-&gt;SetName(<span class="stringliteral">&quot;Distance&quot;</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  dist-&gt;SetNumberOfTuples(nInputs * nRows);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  prox-&gt;SetNumberOfComponents(1);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  prox-&gt;SetName(<span class="stringliteral">&quot;Proximity&quot;</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  prox-&gt;SetNumberOfTuples(nInputs * nRows);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#ifdef TTK_ENABLE_OPENMP</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#pragma omp parallel for num_threads(this-&gt;threadNumber_)</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#endif </span><span class="comment">// TTK_ENABLE_OPENMP</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; nInputs + 1; ++i) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j = 0; j &lt; nRows + 1; ++j) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      points-&gt;SetPoint(i * (nRows + 1) + j, i, j, 0.0);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#ifdef TTK_ENABLE_OPENMP</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#pragma omp parallel for num_threads(this-&gt;threadNumber_)</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#endif </span><span class="comment">// TTK_ENABLE_OPENMP</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; nInputs; ++i) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j = 0; j &lt; nRows; ++j) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <span class="comment">// build the cell connectivity and offsets array</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      <span class="keyword">const</span> <span class="keyword">auto</span> nptline{<span class="keyword">static_cast&lt;</span>vtkIdType<span class="keyword">&gt;</span>(nRows + 1)};</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      <span class="keyword">const</span> <span class="keyword">auto</span> curr{<span class="keyword">static_cast&lt;</span>vtkIdType<span class="keyword">&gt;</span>(i * nptline + j)};</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      <span class="keyword">const</span> <span class="keyword">auto</span> o = i * nRows + j;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      connectivity-&gt;SetTuple1(4 * o + 0, curr);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      connectivity-&gt;SetTuple1(4 * o + 1, curr + nptline);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      connectivity-&gt;SetTuple1(4 * o + 2, curr + nptline + 1);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      connectivity-&gt;SetTuple1(4 * o + 3, curr + 1);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      offsets-&gt;SetTuple1(o, 4 * o);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      <span class="comment">// copy distance matrix to heat map cell data</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      <span class="keyword">const</span> <span class="keyword">auto</span> val = input-&gt;GetColumnByName(ScalarFields[i].data())</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                         -&gt;GetVariantValue(j)</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                         .ToDouble();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      dist-&gt;SetTuple1(i * nRows + j, val);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      prox-&gt;SetTuple1(i * nRows + j, std::exp(-val));</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  offsets-&gt;SetTuple1(nInputs * nRows, connectivity-&gt;GetNumberOfTuples());</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a>(<span class="stringliteral">&quot;Complete (#inputs: &quot;</span> + std::to_string(nInputs) + <span class="stringliteral">&quot;)&quot;</span>, 1.0,</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                 tm.getElapsedTime(), this-&gt;threadNumber_);</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="comment">// gather arrays to make the PolyData</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  vtkNew&lt;vtkCellArray&gt; cells{};</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  cells-&gt;SetData(offsets, connectivity);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  output-&gt;SetPoints(points);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  output-&gt;SetPolys(cells);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  output-&gt;GetCellData()-&gt;AddArray(dist);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  output-&gt;GetCellData()-&gt;AddArray(prox);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a>(<span class="stringliteral">&quot;Complete (#inputs: &quot;</span> + std::to_string(nInputs) + <span class="stringliteral">&quot;)&quot;</span>, 1.0,</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                 tm.getElapsedTime(), this-&gt;threadNumber_);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>}</div>
 <div class="ttc" id="aclassttkMatrixToHeatMap_html"><div class="ttname"><a href="classttkMatrixToHeatMap.html">ttkMatrixToHeatMap</a></div><div class="ttdoc">Generates a Heat Map from a Distance Matrix stored into a vtkTable.</div><div class="ttdef"><b>Definition:</b> <a href="ttkMatrixToHeatMap_8h_source.html#l00025">ttkMatrixToHeatMap.h:25</a></div></div>
 <div class="ttc" id="aclassttkMatrixToHeatMap_html_a48b1268d18a350f4bc2c572446984839"><div class="ttname"><a href="classttkMatrixToHeatMap.html#a48b1268d18a350f4bc2c572446984839">ttkMatrixToHeatMap::FillOutputPortInformation</a></div><div class="ttdeci">int FillOutputPortInformation(int port, vtkInformation *info) override</div><div class="ttdef"><b>Definition:</b> <a href="ttkMatrixToHeatMap_8cpp_source.html#l00034">ttkMatrixToHeatMap.cpp:34</a></div></div>
 <div class="ttc" id="aclassttkMatrixToHeatMap_html_acac4f2547b5988de1dabdd977a346016"><div class="ttname"><a href="classttkMatrixToHeatMap.html#acac4f2547b5988de1dabdd977a346016">ttkMatrixToHeatMap::RequestData</a></div><div class="ttdeci">int RequestData(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector) override</div><div class="ttdef"><b>Definition:</b> <a href="ttkMatrixToHeatMap_8cpp_source.html#l00043">ttkMatrixToHeatMap.cpp:43</a></div></div>
@@ -216,7 +224,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 23 2022 11:08:15 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Sat Nov 5 2022 16:05:50 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

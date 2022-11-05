@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceDiagramClustering/PersistenceDiagramClustering.cpp Source File</title>
+<title>TTK: /home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceDiagramClustering/PersistenceDiagramClustering.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_087131ca07bb13536b7eeffdd2bca99c.html">persistenceDiagramClustering</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_aa319678ed2cb39fab2f8ff1969e8605.html">tierny</a></li><li class="navelem"><a class="el" href="dir_90f0e18f6a3db9a50a0cff0ad55689f7.html">private</a></li><li class="navelem"><a class="el" href="dir_3a6af36370c7b2c289deb8eee8b7da12.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_b6ff1f0e45d53bd762250c1eea10201d.html">core</a></li><li class="navelem"><a class="el" href="dir_ddc5a3d512b4fb0b449ac7d2dce9d26f.html">base</a></li><li class="navelem"><a class="el" href="dir_68887e584944fe797f4ccfeb516dde9b.html">persistenceDiagramClustering</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -106,7 +106,7 @@ $(function() {
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <a class="code hl_enumeration" href="namespacettk.html#a2e938b4a3e29bf68d64fbb3a86cb55f9">ttk::CriticalType</a> nt1 = t.birth.type;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <a class="code hl_enumeration" href="namespacettk.html#a2e938b4a3e29bf68d64fbb3a86cb55f9">ttk::CriticalType</a> nt2 = t.death.type;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <span class="keywordtype">double</span> dt = t.persistence;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <span class="keywordtype">double</span> dt = t.persistence();</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <span class="comment">// if (abs&lt;double&gt;(dt) &lt; zeroThresh) continue;</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <span class="keywordflow">if</span>(dt &gt; 0) {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">if</span>(nt1 == <a class="code hl_enumvalue" href="namespacettk.html#a2e938b4a3e29bf68d64fbb3a86cb55f9a2e7e012b7d4f76c7b9ae6bcd005e0240">ttk::CriticalType::Local_minimum</a></div>
@@ -336,12 +336,12 @@ $(function() {
 <div class="ttc" id="anamespacettk_html_a2e938b4a3e29bf68d64fbb3a86cb55f9a356def59d909cbfb4697a8072846c887"><div class="ttname"><a href="namespacettk.html#a2e938b4a3e29bf68d64fbb3a86cb55f9a356def59d909cbfb4697a8072846c887">ttk::CriticalType::Saddle1</a></div><div class="ttdeci">@ Saddle1</div></div>
 <div class="ttc" id="anamespacettk_html_a2e938b4a3e29bf68d64fbb3a86cb55f9abee5ecb53314499c0c2ee972351b157a"><div class="ttname"><a href="namespacettk.html#a2e938b4a3e29bf68d64fbb3a86cb55f9abee5ecb53314499c0c2ee972351b157a">ttk::CriticalType::Saddle2</a></div><div class="ttdeci">@ Saddle2</div></div>
 <div class="ttc" id="anamespacettk_html_a2e938b4a3e29bf68d64fbb3a86cb55f9aefbcd967ae50908baf330d056bbae37e"><div class="ttname"><a href="namespacettk.html#a2e938b4a3e29bf68d64fbb3a86cb55f9aefbcd967ae50908baf330d056bbae37e">ttk::CriticalType::Local_maximum</a></div><div class="ttdeci">@ Local_maximum</div></div>
-<div class="ttc" id="anamespacettk_html_aab8bba05f97023f08b0a26d1b3598555"><div class="ttname"><a href="namespacettk.html#aab8bba05f97023f08b0a26d1b3598555">ttk::DiagramType</a></div><div class="ttdeci">std::vector&lt; PersistencePair &gt; DiagramType</div><div class="ttdoc">Persistence Diagram type as a vector of Persistence pairs.</div><div class="ttdef"><b>Definition:</b> <a href="PersistenceDiagramUtils_8h_source.html#l00053">PersistenceDiagramUtils.h:53</a></div></div>
-<div class="ttc" id="anamespacettk_html_ac4fae15b84f386737689bfec7dafee8b"><div class="ttname"><a href="namespacettk.html#ac4fae15b84f386737689bfec7dafee8b">ttk::MatchingType</a></div><div class="ttdeci">std::tuple&lt; int, int, double &gt; MatchingType</div><div class="ttdoc">Matching between two Persistence Diagram pairs.</div><div class="ttdef"><b>Definition:</b> <a href="PersistenceDiagramUtils_8h_source.html#l00058">PersistenceDiagramUtils.h:61</a></div></div>
+<div class="ttc" id="anamespacettk_html_aab8bba05f97023f08b0a26d1b3598555"><div class="ttname"><a href="namespacettk.html#aab8bba05f97023f08b0a26d1b3598555">ttk::DiagramType</a></div><div class="ttdeci">std::vector&lt; PersistencePair &gt; DiagramType</div><div class="ttdoc">Persistence Diagram type as a vector of Persistence pairs.</div><div class="ttdef"><b>Definition:</b> <a href="PersistenceDiagramUtils_8h_source.html#l00058">PersistenceDiagramUtils.h:58</a></div></div>
+<div class="ttc" id="anamespacettk_html_ac4fae15b84f386737689bfec7dafee8b"><div class="ttname"><a href="namespacettk.html#ac4fae15b84f386737689bfec7dafee8b">ttk::MatchingType</a></div><div class="ttdeci">std::tuple&lt; int, int, double &gt; MatchingType</div><div class="ttdoc">Matching between two Persistence Diagram pairs.</div><div class="ttdef"><b>Definition:</b> <a href="PersistenceDiagramUtils_8h_source.html#l00063">PersistenceDiagramUtils.h:66</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 23 2022 11:08:13 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Sat Nov 5 2022 16:05:48 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

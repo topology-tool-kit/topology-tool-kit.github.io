@@ -10,7 +10,7 @@ var searchData=
   ['m_5fmaxy_7',['m_maxY',['../structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a5c2a1cf468a3f819373df1d1a2b3c8fd',1,'ttk::BoundingVolumeHierarchy::Node::m_maxY()'],['../structttk_1_1BoundingVolumeHierarchy_1_1Triangle.html#a05397b52266b5ea2530aa0836985dd50',1,'ttk::BoundingVolumeHierarchy::Triangle::m_maxY()']]],
   ['m_5fmaxz_8',['m_maxZ',['../structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a39dddef0a1f19af521f51c73bb06f6f0',1,'ttk::BoundingVolumeHierarchy::Node::m_maxZ()'],['../structttk_1_1BoundingVolumeHierarchy_1_1Triangle.html#a0493a1e1e24a62f84986433af8dc6933',1,'ttk::BoundingVolumeHierarchy::Triangle::m_maxZ()']]],
   ['m_5fminx_9',['m_minX',['../structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a0bc168784bf4c605dd3c3e499aa65a4c',1,'ttk::BoundingVolumeHierarchy::Node::m_minX()'],['../structttk_1_1BoundingVolumeHierarchy_1_1Triangle.html#a603462fcc7560ebc51e49bde2eca99b0',1,'ttk::BoundingVolumeHierarchy::Triangle::m_minX()']]],
-  ['m_5fminy_10',['m_minY',['../structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a0655119ff062b2aec243d003d4be91c3',1,'ttk::BoundingVolumeHierarchy::Node::m_minY()'],['../structttk_1_1BoundingVolumeHierarchy_1_1Triangle.html#a30ceb01c73d9ecef0ef9cc9d7a0cac3d',1,'ttk::BoundingVolumeHierarchy::Triangle::m_minY()']]],
+  ['m_5fminy_10',['m_minY',['../structttk_1_1BoundingVolumeHierarchy_1_1Triangle.html#a30ceb01c73d9ecef0ef9cc9d7a0cac3d',1,'ttk::BoundingVolumeHierarchy::Triangle::m_minY()'],['../structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a0655119ff062b2aec243d003d4be91c3',1,'ttk::BoundingVolumeHierarchy::Node::m_minY()']]],
   ['m_5fminz_11',['m_minZ',['../structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a137e1d09f7ef4efaca8852f4d0c84c3f',1,'ttk::BoundingVolumeHierarchy::Node::m_minZ()'],['../structttk_1_1BoundingVolumeHierarchy_1_1Triangle.html#a522526fa334ee04e94a4a3c9e7b8da52',1,'ttk::BoundingVolumeHierarchy::Triangle::m_minZ()']]],
   ['m_5forigin_12',['m_origin',['../classttk_1_1Ray.html#a77b81e5c64a95ddf3453a3e5cfb0937b',1,'ttk::Ray']]],
   ['m_5fright_13',['m_right',['../structttk_1_1BoundingVolumeHierarchy_1_1Node.html#aaeb7b1c88906b76aa32d0fa0406a6144',1,'ttk::BoundingVolumeHierarchy::Node']]],
@@ -74,7 +74,7 @@ var searchData=
   ['mergetree_5f_71',['mergeTree_',['../classttk_1_1ContourTree.html#aa8609c8322cf326ce8e4065791dc4492',1,'ttk::ContourTree']]],
   ['meshedge_5f_72',['meshEdge_',['../structttk_1_1FiberSurface_1_1Vertex.html#a74fba094bb795699ce507558b2678830',1,'ttk::FiberSurface::Vertex']]],
   ['method_5f_73',['method_',['../classttk_1_1DimensionReduction.html#a572f100616220f719583a274cb37b7c3',1,'ttk::DimensionReduction::method_()'],['../classttk_1_1PDBarycenter.html#a98940ae3e2aa9f6ce0e5ec13d72e5e79',1,'ttk::PDBarycenter::method_()'],['../classttk_1_1PersistenceDiagramBarycenter.html#ae7a6a728927ec6d435c78bb32ddfce68',1,'ttk::PersistenceDiagramBarycenter::method_()']]],
-  ['min_5fsubweights_5f_74',['min_subweights_',['../classttk_1_1KDTree.html#a2cba27694cdb0267aaaef4e6ebefc01f',1,'ttk::KDTree']]],
+  ['min_5fsubweights_5f_74',['min_subweights_',['../classttk_1_1KDTree.html#a60aa08d86aaed77d45662a1a2c30abef',1,'ttk::KDTree']]],
   ['minimumlist_5f_75',['minimumList_',['../classttk_1_1SubLevelSetTree.html#a2557dc67d5a32885492daf5efb4a0ad8',1,'ttk::SubLevelSetTree']]],
   ['minpersistence_76',['MinPersistence',['../classttk_1_1PersistenceDiagramDistanceMatrix.html#a05679303e05c74e850361724e208daca',1,'ttk::PersistenceDiagramDistanceMatrix']]],
   ['minscalar_5f_77',['minScalar_',['../classttk_1_1SubLevelSetTree.html#a1fe31b80f2d664ec92a4d6ae042b6634',1,'ttk::SubLevelSetTree']]],
@@ -100,7 +100,6 @@ var searchData=
   ['morsesmalesourceidname_97',['MorseSmaleSourceIdName',['../namespacettk.html#a7a0029e701461ff9d626dd7605b85dc3',1,'ttk']]],
   ['mpirank_5f_98',['MPIrank_',['../namespacettk.html#a70e199b7a7b2002a79a4f09b08b61d50',1,'ttk']]],
   ['mpisize_5f_99',['MPIsize_',['../namespacettk.html#a088238591c81218006bb10afa15706c4',1,'ttk']]],
-  ['mscplot_5f_100',['MSCPlot_',['../classttk_1_1PersistenceCurve.html#ad76d8d8880162a9e442517003e104b65',1,'ttk::PersistenceCurve']]],
-  ['mt_5fdata_5f_101',['mt_data_',['../classttk_1_1ftm_1_1FTMTree__MT.html#a15c525e1207361d069324324c58bb371',1,'ttk::ftm::FTMTree_MT']]],
-  ['multirestriangulation_5f_102',['multiresTriangulation_',['../classttk_1_1MultiresTopology.html#a62b5e8f2aa422d26012a10752b8f9763',1,'ttk::MultiresTopology']]]
+  ['mt_5fdata_5f_100',['mt_data_',['../classttk_1_1ftm_1_1FTMTree__MT.html#a15c525e1207361d069324324c58bb371',1,'ttk::ftm::FTMTree_MT']]],
+  ['multirestriangulation_5f_101',['multiresTriangulation_',['../classttk_1_1MultiresTopology.html#a62b5e8f2aa422d26012a10752b8f9763',1,'ttk::MultiresTopology']]]
 ];

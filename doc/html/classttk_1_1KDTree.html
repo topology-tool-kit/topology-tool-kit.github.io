@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: ttk::KDTree&lt; dataType &gt; Class Template Reference</title>
+<title>TTK: ttk::KDTree&lt; dataType, Container &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,7 +72,7 @@ $(function() {
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classttk_1_1KDTree-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">ttk::KDTree&lt; dataType &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__base.html">base</a></div></div></div>
+  <div class="headertitle"><div class="title">ttk::KDTree&lt; dataType, Container &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__base.html">base</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -80,188 +80,104 @@ $(function() {
  <a href="classttk_1_1KDTree.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="KDTree_8h_source.html">KDTree.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for ttk::KDTree&lt; dataType &gt;:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="classttk_1_1KDTree.png" usemap="#ttk::KDTree_3C_20dataType_20_3E_map" alt=""/>
-  <map id="ttk::KDTree_3C_20dataType_20_3E_map" name="ttk::KDTree_3C_20dataType_20_3E_map">
-<area href="classttk_1_1Debug.html" title="Minimalist debugging class." alt="ttk::Debug" shape="rect" coords="0,56,149,80"/>
-<area href="classttk_1_1BaseClass.html" title="TTK base package." alt="ttk::BaseClass" shape="rect" coords="0,0,149,24"/>
-  </map>
-</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:accbff22cbd07ba05fc9831dd26cb3baf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#accbff22cbd07ba05fc9831dd26cb3baf">KDTreeRoot</a> = std::unique_ptr&lt; <a class="el" href="classttk_1_1KDTree.html">KDTree</a> &gt;</td></tr>
-<tr class="separator:accbff22cbd07ba05fc9831dd26cb3baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af633847e08f7a949d345cece88377263"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#af633847e08f7a949d345cece88377263">KDTreeMap</a> = std::vector&lt; <a class="el" href="classttk_1_1KDTree.html">KDTree</a> * &gt;</td></tr>
-<tr class="separator:af633847e08f7a949d345cece88377263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae384b116e35bceb2d2f163463fa9d59c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#ae384b116e35bceb2d2f163463fa9d59c">KDTreeRoot</a> = std::unique_ptr&lt; <a class="el" href="classttk_1_1KDTree.html">KDTree</a> &gt;</td></tr>
+<tr class="separator:ae384b116e35bceb2d2f163463fa9d59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eeffe1d0d8dc6ea0a83702a64319cb8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a4eeffe1d0d8dc6ea0a83702a64319cb8">KDTreeMap</a> = std::vector&lt; <a class="el" href="classttk_1_1KDTree.html">KDTree</a> * &gt;</td></tr>
+<tr class="separator:a4eeffe1d0d8dc6ea0a83702a64319cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a897785f9cdada57691cb76ddffe98495"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a897785f9cdada57691cb76ddffe98495">KDTree</a> ()=default</td></tr>
-<tr class="separator:a897785f9cdada57691cb76ddffe98495"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8315ca5dcc4d31829f804eb89f51227"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#ab8315ca5dcc4d31829f804eb89f51227">KDTree</a> (bool include_weights, int p)</td></tr>
-<tr class="separator:ab8315ca5dcc4d31829f804eb89f51227"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7c3395915661fbaa779cae9a164fa37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#ab7c3395915661fbaa779cae9a164fa37">KDTree</a> (<a class="el" href="classttk_1_1KDTree.html">KDTree</a> *father, int coords_number, bool is_left)</td></tr>
-<tr class="separator:ab7c3395915661fbaa779cae9a164fa37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f0cdb0ac4670415b463aa9eab101d53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1KDTree.html#af633847e08f7a949d345cece88377263">KDTreeMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a9f0cdb0ac4670415b463aa9eab101d53">build</a> (dataType *data, const int &amp;ptNumber, const int &amp;dimension, const int weight_number=1)</td></tr>
-<tr class="separator:a9f0cdb0ac4670415b463aa9eab101d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae06810220dfdcaca446e60d1aa22a42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1KDTree.html#af633847e08f7a949d345cece88377263">KDTreeMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#aae06810220dfdcaca446e60d1aa22a42">build</a> (dataType *data, const int &amp;ptNumber, const int &amp;dimension, std::vector&lt; std::vector&lt; dataType &gt; &gt; &amp;weights, const int weight_number=1)</td></tr>
-<tr class="separator:aae06810220dfdcaca446e60d1aa22a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a701107ce8bcb3ecd279b52b51dbac23a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a701107ce8bcb3ecd279b52b51dbac23a">buildRecursive</a> (dataType *data, std::vector&lt; int &gt; idx_side, const int &amp;ptNumber, const int &amp;dimension, <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; dataType &gt; *parent, <a class="el" href="classttk_1_1KDTree.html#af633847e08f7a949d345cece88377263">KDTreeMap</a> &amp;correspondance_map, std::vector&lt; std::vector&lt; dataType &gt; &gt; &amp;weights, const int weight_number=1)</td></tr>
-<tr class="separator:a701107ce8bcb3ecd279b52b51dbac23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab98321451c9a4345330dee22b5b59e22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#ab98321451c9a4345330dee22b5b59e22">buildRecursive</a> (dataType *data, std::vector&lt; int &gt; idx_side, const int &amp;ptNumber, const int &amp;dimension, <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; dataType &gt; *parent, <a class="el" href="classttk_1_1KDTree.html#af633847e08f7a949d345cece88377263">KDTreeMap</a> &amp;correspondance_map, const int weight_number=1)</td></tr>
-<tr class="separator:ab98321451c9a4345330dee22b5b59e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a442588f1e4afc4572b2a89f39b497f0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a442588f1e4afc4572b2a89f39b497f0f">updateWeight</a> (dataType new_weight, const int weight_index=0)</td></tr>
-<tr class="separator:a442588f1e4afc4572b2a89f39b497f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11cdc79af234e11a4c54ac5c7957dfec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a11cdc79af234e11a4c54ac5c7957dfec">updateMinSubweight</a> (const int weight_index=0)</td></tr>
-<tr class="separator:a11cdc79af234e11a4c54ac5c7957dfec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e95ccd9f19ce6d16d0af6e72a0a4849"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a9e95ccd9f19ce6d16d0af6e72a0a4849">getKClosest</a> (const unsigned int k, const std::vector&lt; dataType &gt; &amp;coordinates, <a class="el" href="classttk_1_1KDTree.html#af633847e08f7a949d345cece88377263">KDTreeMap</a> &amp;neighbours, std::vector&lt; dataType &gt; &amp;costs, const int weight_index=0)</td></tr>
-<tr class="separator:a9e95ccd9f19ce6d16d0af6e72a0a4849"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b8ae737d0980a4a936fa08c165ced3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a7b8ae737d0980a4a936fa08c165ced3e">recursiveGetKClosest</a> (const unsigned int k, const std::vector&lt; dataType &gt; &amp;coordinates, <a class="el" href="classttk_1_1KDTree.html#af633847e08f7a949d345cece88377263">KDTreeMap</a> &amp;neighbours, std::vector&lt; dataType &gt; &amp;costs, const int weight_index=0)</td></tr>
-<tr class="separator:a7b8ae737d0980a4a936fa08c165ced3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9df92aeac28c7b2e74a041a3305f8355"><td class="memItemLeft" align="right" valign="top">dataType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a9df92aeac28c7b2e74a041a3305f8355">cost</a> (const std::vector&lt; dataType &gt; &amp;coordinates)</td></tr>
-<tr class="separator:a9df92aeac28c7b2e74a041a3305f8355"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3a46d04b4b7c641b562a47f747c4335"><td class="memItemLeft" align="right" valign="top">dataType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#ad3a46d04b4b7c641b562a47f747c4335">distanceToBox</a> (const <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; dataType &gt; &amp;subtree, const std::vector&lt; dataType &gt; &amp;coordinates)</td></tr>
-<tr class="separator:ad3a46d04b4b7c641b562a47f747c4335"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0096b7520d9c082a77946142bc1307da"><td class="memItemLeft" align="right" valign="top">std::vector&lt; dataType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a0096b7520d9c082a77946142bc1307da">getCoordinates</a> ()</td></tr>
-<tr class="separator:a0096b7520d9c082a77946142bc1307da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4ce3721f30afd2e8a32d2573344ae95"><td class="memItemLeft" align="right" valign="top">dataType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#ab4ce3721f30afd2e8a32d2573344ae95">getWeight</a> (const int weight_index=0)</td></tr>
-<tr class="separator:ab4ce3721f30afd2e8a32d2573344ae95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a102f0df0dbd46f7a337b2b3301647cdf"><td class="memItemLeft" align="right" valign="top">dataType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a102f0df0dbd46f7a337b2b3301647cdf">getMinSubWeight</a> (const int weight_index=0)</td></tr>
-<tr class="separator:a102f0df0dbd46f7a337b2b3301647cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6417a65ef0d808bf97b657ad94c2a1d5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a6417a65ef0d808bf97b657ad94c2a1d5">isLeaf</a> ()</td></tr>
-<tr class="separator:a6417a65ef0d808bf97b657ad94c2a1d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77ea47a7331c0e08087f743b3435499c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a77ea47a7331c0e08087f743b3435499c">isRoot</a> ()</td></tr>
-<tr class="separator:a77ea47a7331c0e08087f743b3435499c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classttk_1_1Debug"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classttk_1_1Debug')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classttk_1_1Debug.html">ttk::Debug</a></td></tr>
-<tr class="memitem:a5b453c195c4cfffed2702c3330f53a64 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a5b453c195c4cfffed2702c3330f53a64">Debug</a> ()</td></tr>
-<tr class="separator:a5b453c195c4cfffed2702c3330f53a64 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab15bd9db158c7eac64c3d0bd959d3d43 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#ab15bd9db158c7eac64c3d0bd959d3d43">~Debug</a> () override</td></tr>
-<tr class="separator:ab15bd9db158c7eac64c3d0bd959d3d43 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad253dbfa766db12385f3cb81caa42d0 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#aad253dbfa766db12385f3cb81caa42d0">setDebugLevel</a> (const int &amp;debugLevel)</td></tr>
-<tr class="separator:aad253dbfa766db12385f3cb81caa42d0 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a778628227789fc345aacad15443fee48 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a778628227789fc345aacad15443fee48">setWrapper</a> (const <a class="el" href="classttk_1_1Wrapper.html">Wrapper</a> *wrapper) override</td></tr>
-<tr class="separator:a778628227789fc345aacad15443fee48 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af33d122d91d6fc87adcd36e00add9642 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#af33d122d91d6fc87adcd36e00add9642">printMsg</a> (const std::string &amp;msg, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority=<a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a551b723eafd6a31d444fcb2f5920fbd3">debug::Priority::INFO</a>, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, std::ostream &amp;stream=std::cout) const</td></tr>
-<tr class="separator:af33d122d91d6fc87adcd36e00add9642 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9b9f2b9b4ab338a7a5cb430c645d361 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#ad9b9f2b9b4ab338a7a5cb430c645d361">printMsg</a> (const std::vector&lt; std::string &gt; &amp;msgs, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority=<a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a551b723eafd6a31d444fcb2f5920fbd3">debug::Priority::INFO</a>, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, std::ostream &amp;stream=std::cout) const</td></tr>
-<tr class="separator:ad9b9f2b9b4ab338a7a5cb430c645d361 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd1938d93be0cf163be78086ed26370e inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a> (const std::string &amp;msg, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, std::ostream &amp;stream=std::cerr) const</td></tr>
-<tr class="separator:afd1938d93be0cf163be78086ed26370e inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37c8c3e3e723babc48eeaa06b481cc4b inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a37c8c3e3e723babc48eeaa06b481cc4b">printWrn</a> (const std::string &amp;msg, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, std::ostream &amp;stream=std::cerr) const</td></tr>
-<tr class="separator:a37c8c3e3e723babc48eeaa06b481cc4b inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bb39a3359fee37a2208596c7c788d63 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a6bb39a3359fee37a2208596c7c788d63">printMsg</a> (const std::string &amp;msg, const double &amp;progress, const double &amp;<a class="el" href="ttkTrackingFromOverlap_8cpp.html#a239387bf18ba628f88e407fa80732525">time</a>, const int &amp;threads, const double &amp;memory, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority=<a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a063360736adfccfae2f1d8093c02959a">debug::Priority::PERFORMANCE</a>, std::ostream &amp;stream=std::cout) const</td></tr>
-<tr class="separator:a6bb39a3359fee37a2208596c7c788d63 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb874e3c8ffc3195cbea2ea35d5a71c0 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#acb874e3c8ffc3195cbea2ea35d5a71c0">printMsg</a> (const std::string &amp;msg, const double &amp;progress, const double &amp;<a class="el" href="ttkTrackingFromOverlap_8cpp.html#a239387bf18ba628f88e407fa80732525">time</a>, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority=<a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a063360736adfccfae2f1d8093c02959a">debug::Priority::PERFORMANCE</a>, std::ostream &amp;stream=std::cout) const</td></tr>
-<tr class="separator:acb874e3c8ffc3195cbea2ea35d5a71c0 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39fd3000b3be4e6b80ae457098d2dcb9 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a39fd3000b3be4e6b80ae457098d2dcb9">printMsg</a> (const std::string &amp;msg, const double &amp;progress, const double &amp;<a class="el" href="ttkTrackingFromOverlap_8cpp.html#a239387bf18ba628f88e407fa80732525">time</a>, const int &amp;threads, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority=<a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a063360736adfccfae2f1d8093c02959a">debug::Priority::PERFORMANCE</a>, std::ostream &amp;stream=std::cout) const</td></tr>
-<tr class="separator:a39fd3000b3be4e6b80ae457098d2dcb9 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6be07e9434d225a87af670604cd0f021 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a6be07e9434d225a87af670604cd0f021">printMsg</a> (const std::string &amp;msg, const double &amp;progress, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority=<a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a063360736adfccfae2f1d8093c02959a">debug::Priority::PERFORMANCE</a>, std::ostream &amp;stream=std::cout) const</td></tr>
-<tr class="separator:a6be07e9434d225a87af670604cd0f021 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab290fdda3ade579ebe10c2fe808a5006 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#ab290fdda3ade579ebe10c2fe808a5006">printMsg</a> (const std::string &amp;msg, const double &amp;progress, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, std::ostream &amp;stream=std::cout) const</td></tr>
-<tr class="separator:ab290fdda3ade579ebe10c2fe808a5006 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a31bff6938e35f1d42fc0d88761550b inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a5a31bff6938e35f1d42fc0d88761550b">printMsg</a> (const std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;rows, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority=<a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a551b723eafd6a31d444fcb2f5920fbd3">debug::Priority::INFO</a>, const bool hasHeader=true, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, std::ostream &amp;stream=std::cout) const</td></tr>
-<tr class="separator:a5a31bff6938e35f1d42fc0d88761550b inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee368b369aa1254d9a008c779ee505e8 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#aee368b369aa1254d9a008c779ee505e8">printMsg</a> (const <a class="el" href="namespacettk_1_1debug.html#af3ebd7fb2185c549f7461a695912a2a1">debug::Separator</a> &amp;separator, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority=<a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a551b723eafd6a31d444fcb2f5920fbd3">debug::Priority::INFO</a>, std::ostream &amp;stream=std::cout) const</td></tr>
-<tr class="separator:aee368b369aa1254d9a008c779ee505e8 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21654ce6c01bfe956a82920f134eed65 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a21654ce6c01bfe956a82920f134eed65">printMsg</a> (const <a class="el" href="namespacettk_1_1debug.html#af3ebd7fb2185c549f7461a695912a2a1">debug::Separator</a> &amp;separator, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, std::ostream &amp;stream=std::cout) const</td></tr>
-<tr class="separator:a21654ce6c01bfe956a82920f134eed65 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b20623dedc39f250877b624b389b194 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a7b20623dedc39f250877b624b389b194">printMsg</a> (const std::string &amp;msg, const <a class="el" href="namespacettk_1_1debug.html#af3ebd7fb2185c549f7461a695912a2a1">debug::Separator</a> &amp;separator, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority=<a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a551b723eafd6a31d444fcb2f5920fbd3">debug::Priority::INFO</a>, std::ostream &amp;stream=std::cout) const</td></tr>
-<tr class="separator:a7b20623dedc39f250877b624b389b194 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9239e36b0745881da1753f97ad8f0105 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a9239e36b0745881da1753f97ad8f0105">setDebugMsgPrefix</a> (const std::string &amp;prefix)</td></tr>
-<tr class="separator:a9239e36b0745881da1753f97ad8f0105 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classttk_1_1BaseClass"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classttk_1_1BaseClass')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classttk_1_1BaseClass.html">ttk::BaseClass</a></td></tr>
-<tr class="memitem:a84b1d36d0060e74a7b48255bca0d1928 inherit pub_methods_classttk_1_1BaseClass"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BaseClass.html#a84b1d36d0060e74a7b48255bca0d1928">BaseClass</a> ()</td></tr>
-<tr class="separator:a84b1d36d0060e74a7b48255bca0d1928 inherit pub_methods_classttk_1_1BaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfbc9157a6abce321a96bbd8347113ac inherit pub_methods_classttk_1_1BaseClass"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BaseClass.html#acfbc9157a6abce321a96bbd8347113ac">~BaseClass</a> ()=default</td></tr>
-<tr class="separator:acfbc9157a6abce321a96bbd8347113ac inherit pub_methods_classttk_1_1BaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6097f5acd9a5e2af94df4901ed3b38f0 inherit pub_methods_classttk_1_1BaseClass"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BaseClass.html#a6097f5acd9a5e2af94df4901ed3b38f0">getThreadNumber</a> () const</td></tr>
-<tr class="separator:a6097f5acd9a5e2af94df4901ed3b38f0 inherit pub_methods_classttk_1_1BaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab731b4ac48f32967be10741cc5506bfa inherit pub_methods_classttk_1_1BaseClass"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BaseClass.html#ab731b4ac48f32967be10741cc5506bfa">setThreadNumber</a> (const int threadNumber)</td></tr>
-<tr class="separator:ab731b4ac48f32967be10741cc5506bfa inherit pub_methods_classttk_1_1BaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e7363bda386d18abaf066bf9b9b9264 inherit pub_methods_classttk_1_1BaseClass"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BaseClass.html#a2e7363bda386d18abaf066bf9b9b9264">setWrapper</a> (const <a class="el" href="classttk_1_1Wrapper.html">Wrapper</a> *wrapper)</td></tr>
-<tr class="separator:a2e7363bda386d18abaf066bf9b9b9264 inherit pub_methods_classttk_1_1BaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cc99e4091df3db041fbbedf763e1069"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a8cc99e4091df3db041fbbedf763e1069">KDTree</a> ()=default</td></tr>
+<tr class="separator:a8cc99e4091df3db041fbbedf763e1069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6a1b9bd78c57367a162d856712a78fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#aa6a1b9bd78c57367a162d856712a78fa">KDTree</a> (const bool include_weights, const int p)</td></tr>
+<tr class="separator:aa6a1b9bd78c57367a162d856712a78fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97728105bd676da9ba92dde0cef021b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a97728105bd676da9ba92dde0cef021b9">KDTree</a> (<a class="el" href="classttk_1_1KDTree.html">KDTree</a> *const father, const int coords_number, const bool is_left)</td></tr>
+<tr class="separator:a97728105bd676da9ba92dde0cef021b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d409bc038d79be1690b89f243318788"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1KDTree.html#a4eeffe1d0d8dc6ea0a83702a64319cb8">KDTreeMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a9d409bc038d79be1690b89f243318788">build</a> (dataType *data, const int &amp;ptNumber, const int &amp;dimension, const std::vector&lt; std::vector&lt; dataType &gt; &gt; &amp;weights={}, const int weight_number=1)</td></tr>
+<tr class="separator:a9d409bc038d79be1690b89f243318788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21a843af2c31d4bab9c318bed76cc283"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a21a843af2c31d4bab9c318bed76cc283">buildRecursive</a> (dataType *data, std::vector&lt; int &gt; &amp;idx_side, const int &amp;ptNumber, const int &amp;dimension, <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; dataType, Container &gt; *parent, <a class="el" href="classttk_1_1KDTree.html#a4eeffe1d0d8dc6ea0a83702a64319cb8">KDTreeMap</a> &amp;correspondance_map, const std::vector&lt; std::vector&lt; dataType &gt; &gt; &amp;weights={}, const int weight_number=1)</td></tr>
+<tr class="separator:a21a843af2c31d4bab9c318bed76cc283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ded7c2332fbc725828bca6479cb687"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a19ded7c2332fbc725828bca6479cb687">updateWeight</a> (const dataType new_weight, const int weight_index=0)</td></tr>
+<tr class="separator:a19ded7c2332fbc725828bca6479cb687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f7dccd4e028bc3743252667ec88bc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#ac9f7dccd4e028bc3743252667ec88bc0">updateMinSubweight</a> (const int weight_index=0)</td></tr>
+<tr class="separator:ac9f7dccd4e028bc3743252667ec88bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e63a6f72e5eaa733205bdcdccbcaf2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a4e63a6f72e5eaa733205bdcdccbcaf2f">getKClosest</a> (const unsigned int k, const Container &amp;coordinates, <a class="el" href="classttk_1_1KDTree.html#a4eeffe1d0d8dc6ea0a83702a64319cb8">KDTreeMap</a> &amp;neighbours, std::vector&lt; dataType &gt; &amp;costs, const int weight_index=0)</td></tr>
+<tr class="separator:a4e63a6f72e5eaa733205bdcdccbcaf2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a159180172102d107cfaf33234c91347d"><td class="memTemplParams" colspan="2">template&lt;typename PowerFunc &gt; </td></tr>
+<tr class="memitem:a159180172102d107cfaf33234c91347d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a159180172102d107cfaf33234c91347d">recursiveGetKClosest</a> (const unsigned int k, const Container &amp;coordinates, <a class="el" href="classttk_1_1KDTree.html#a4eeffe1d0d8dc6ea0a83702a64319cb8">KDTreeMap</a> &amp;neighbours, std::vector&lt; dataType &gt; &amp;costs, const int weight_index, const PowerFunc &amp;power)</td></tr>
+<tr class="separator:a159180172102d107cfaf33234c91347d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4b7b0ad94486bf702d051ad1875d987"><td class="memTemplParams" colspan="2">template&lt;typename PowerFunc &gt; </td></tr>
+<tr class="memitem:af4b7b0ad94486bf702d051ad1875d987"><td class="memTemplItemLeft" align="right" valign="top">dataType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#af4b7b0ad94486bf702d051ad1875d987">cost</a> (const Container &amp;coordinates, const PowerFunc &amp;power) const</td></tr>
+<tr class="separator:af4b7b0ad94486bf702d051ad1875d987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee847838e1a5bca5785135b018c44d6c"><td class="memTemplParams" colspan="2">template&lt;typename PowerFunc &gt; </td></tr>
+<tr class="memitem:aee847838e1a5bca5785135b018c44d6c"><td class="memTemplItemLeft" align="right" valign="top">dataType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#aee847838e1a5bca5785135b018c44d6c">distanceToBox</a> (const <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; dataType, Container &gt; &amp;subtree, const Container &amp;coordinates, const PowerFunc &amp;power) const</td></tr>
+<tr class="separator:aee847838e1a5bca5785135b018c44d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbdc2ad9cb7428697beb45875a4ea0b7"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; dataType &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#acbdc2ad9cb7428697beb45875a4ea0b7">getCoordinates</a> () const</td></tr>
+<tr class="separator:acbdc2ad9cb7428697beb45875a4ea0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff28c05a404703bbb58d3a997266b92"><td class="memItemLeft" align="right" valign="top">dataType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a7ff28c05a404703bbb58d3a997266b92">getWeight</a> (const int weight_index=0) const</td></tr>
+<tr class="separator:a7ff28c05a404703bbb58d3a997266b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0734de9f9b3f23dfed72f9b5d1a450c5"><td class="memItemLeft" align="right" valign="top">dataType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a0734de9f9b3f23dfed72f9b5d1a450c5">getMinSubWeight</a> (const int weight_index=0) const</td></tr>
+<tr class="separator:a0734de9f9b3f23dfed72f9b5d1a450c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1a431045eaf5523966cab41c57c8a71"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#ae1a431045eaf5523966cab41c57c8a71">isLeaf</a> () const</td></tr>
+<tr class="separator:ae1a431045eaf5523966cab41c57c8a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a40fe7f926ed421344a402cb2ef7dcc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a0a40fe7f926ed421344a402cb2ef7dcc">isRoot</a> () const</td></tr>
+<tr class="separator:a0a40fe7f926ed421344a402cb2ef7dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a2b5c17a60f5cca194b80071ff7a1edff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1KDTree.html#accbff22cbd07ba05fc9831dd26cb3baf">KDTreeRoot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a2b5c17a60f5cca194b80071ff7a1edff">left_</a> {}</td></tr>
-<tr class="separator:a2b5c17a60f5cca194b80071ff7a1edff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8454c119d4ad7f6f91d66560b326b852"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1KDTree.html#accbff22cbd07ba05fc9831dd26cb3baf">KDTreeRoot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a8454c119d4ad7f6f91d66560b326b852">right_</a> {}</td></tr>
-<tr class="separator:a8454c119d4ad7f6f91d66560b326b852"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbb1205b87af2665827fa54a6d736cb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1KDTree.html">KDTree</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#adbb1205b87af2665827fa54a6d736cb1">parent_</a> {}</td></tr>
-<tr class="separator:adbb1205b87af2665827fa54a6d736cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b81dfe6223f06a2710163aa5fc8360b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a3b81dfe6223f06a2710163aa5fc8360b">id_</a> {}</td></tr>
-<tr class="separator:a3b81dfe6223f06a2710163aa5fc8360b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99cfbb1cf8baa12d25dc19522eecc76c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; dataType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a99cfbb1cf8baa12d25dc19522eecc76c">coordinates_</a> {}</td></tr>
-<tr class="separator:a99cfbb1cf8baa12d25dc19522eecc76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67722600b143458d30594218a743f940"><td class="memItemLeft" align="right" valign="top">std::vector&lt; dataType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a67722600b143458d30594218a743f940">coords_min_</a> {}</td></tr>
-<tr class="separator:a67722600b143458d30594218a743f940"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bb677b36bda60b556463868d62f58e5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; dataType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a5bb677b36bda60b556463868d62f58e5">coords_max_</a> {}</td></tr>
-<tr class="separator:a5bb677b36bda60b556463868d62f58e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a592ba782708d56053681b0617ed9d412"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a592ba782708d56053681b0617ed9d412">level_</a> {}</td></tr>
-<tr class="separator:a592ba782708d56053681b0617ed9d412"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11f33a6a1ab43e05b974aef8bb2e0b1e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; dataType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a11f33a6a1ab43e05b974aef8bb2e0b1e">weight_</a> {}</td></tr>
-<tr class="separator:a11f33a6a1ab43e05b974aef8bb2e0b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cba27694cdb0267aaaef4e6ebefc01f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; dataType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a2cba27694cdb0267aaaef4e6ebefc01f">min_subweights_</a> {}</td></tr>
-<tr class="separator:a2cba27694cdb0267aaaef4e6ebefc01f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba60fc29e773fbe9d2407e786e76eb87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1KDTree.html#ae384b116e35bceb2d2f163463fa9d59c">KDTreeRoot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#aba60fc29e773fbe9d2407e786e76eb87">left_</a> {}</td></tr>
+<tr class="separator:aba60fc29e773fbe9d2407e786e76eb87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada281593b52119ea9c4abaf10869ebdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1KDTree.html#ae384b116e35bceb2d2f163463fa9d59c">KDTreeRoot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#ada281593b52119ea9c4abaf10869ebdf">right_</a> {}</td></tr>
+<tr class="separator:ada281593b52119ea9c4abaf10869ebdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a560fb6027646e27e79872a438a0eafd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1KDTree.html">KDTree</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a560fb6027646e27e79872a438a0eafd2">parent_</a> {}</td></tr>
+<tr class="separator:a560fb6027646e27e79872a438a0eafd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0479eede435a0d84322f81e1d98d976"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#af0479eede435a0d84322f81e1d98d976">id_</a> {}</td></tr>
+<tr class="separator:af0479eede435a0d84322f81e1d98d976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5a8923e97845c73cedb23dcb538fb0a"><td class="memItemLeft" align="right" valign="top">Container&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#aa5a8923e97845c73cedb23dcb538fb0a">coordinates_</a> {}</td></tr>
+<tr class="separator:aa5a8923e97845c73cedb23dcb538fb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a819551c872fa497f3a8bdcdbd6278"><td class="memItemLeft" align="right" valign="top">Container&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a18a819551c872fa497f3a8bdcdbd6278">coords_min_</a> {}</td></tr>
+<tr class="separator:a18a819551c872fa497f3a8bdcdbd6278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0d63b359dc11bd14722993da818586"><td class="memItemLeft" align="right" valign="top">Container&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#aec0d63b359dc11bd14722993da818586">coords_max_</a> {}</td></tr>
+<tr class="separator:aec0d63b359dc11bd14722993da818586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae23a8c447d363e581b3d1780e9ebc796"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#ae23a8c447d363e581b3d1780e9ebc796">level_</a> {}</td></tr>
+<tr class="separator:ae23a8c447d363e581b3d1780e9ebc796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73b3fbb650e53c362906ce9dfb3e96d4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; dataType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a73b3fbb650e53c362906ce9dfb3e96d4">weight_</a> {}</td></tr>
+<tr class="separator:a73b3fbb650e53c362906ce9dfb3e96d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60aa08d86aaed77d45662a1a2c30abef"><td class="memItemLeft" align="right" valign="top">std::vector&lt; dataType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a60aa08d86aaed77d45662a1a2c30abef">min_subweights_</a> {}</td></tr>
+<tr class="separator:a60aa08d86aaed77d45662a1a2c30abef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:aa47d75a4bf1f1776cb5f2c6307f6a88c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#aa47d75a4bf1f1776cb5f2c6307f6a88c">is_left_</a></td></tr>
-<tr class="separator:aa47d75a4bf1f1776cb5f2c6307f6a88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0c4b57ff10bba01da0c8fa6701a0c5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#ab0c4b57ff10bba01da0c8fa6701a0c5c">coords_number_</a> {0}</td></tr>
-<tr class="separator:ab0c4b57ff10bba01da0c8fa6701a0c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada7976d776bdef540ebd0278c6345a19"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#ada7976d776bdef540ebd0278c6345a19">p_</a> {2}</td></tr>
-<tr class="separator:ada7976d776bdef540ebd0278c6345a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbeb4cb999c267faf7e4adbb9168d961"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#adbeb4cb999c267faf7e4adbb9168d961">include_weights_</a> {false}</td></tr>
-<tr class="separator:adbeb4cb999c267faf7e4adbb9168d961"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classttk_1_1Debug"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classttk_1_1Debug')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classttk_1_1Debug.html">ttk::Debug</a></td></tr>
-<tr class="memitem:a19bb5107152e6974eb9c0faaf30bf155 inherit pro_attribs_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a19bb5107152e6974eb9c0faaf30bf155">debugLevel_</a></td></tr>
-<tr class="separator:a19bb5107152e6974eb9c0faaf30bf155 inherit pro_attribs_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5daa30b6b3c382b129d145adec76dc3 inherit pro_attribs_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#ab5daa30b6b3c382b129d145adec76dc3">debugMsgPrefix_</a></td></tr>
-<tr class="separator:ab5daa30b6b3c382b129d145adec76dc3 inherit pro_attribs_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classttk_1_1BaseClass"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classttk_1_1BaseClass')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classttk_1_1BaseClass.html">ttk::BaseClass</a></td></tr>
-<tr class="memitem:a0c8177245081f5de2fd8e357dd3ce868 inherit pro_attribs_classttk_1_1BaseClass"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BaseClass.html#a0c8177245081f5de2fd8e357dd3ce868">lastObject_</a></td></tr>
-<tr class="separator:a0c8177245081f5de2fd8e357dd3ce868 inherit pro_attribs_classttk_1_1BaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b6d157f3ae3fa7b25d203bb189a58b6 inherit pro_attribs_classttk_1_1BaseClass"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BaseClass.html#a3b6d157f3ae3fa7b25d203bb189a58b6">threadNumber_</a></td></tr>
-<tr class="separator:a3b6d157f3ae3fa7b25d203bb189a58b6 inherit pro_attribs_classttk_1_1BaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addc45c3a4d6760b908f78f0a916eb939 inherit pro_attribs_classttk_1_1BaseClass"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1Wrapper.html">Wrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BaseClass.html#addc45c3a4d6760b908f78f0a916eb939">wrapper_</a></td></tr>
-<tr class="separator:addc45c3a4d6760b908f78f0a916eb939 inherit pro_attribs_classttk_1_1BaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_classttk_1_1Debug"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classttk_1_1Debug')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classttk_1_1Debug.html">ttk::Debug</a></td></tr>
-<tr class="memitem:a2ba4609b8a3b575210021d376db859df inherit pro_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a2ba4609b8a3b575210021d376db859df">printMsgInternal</a> (const std::string &amp;msg, const std::string &amp;right, const std::string &amp;filler, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority=<a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a551b723eafd6a31d444fcb2f5920fbd3">debug::Priority::INFO</a>, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, std::ostream &amp;stream=std::cout) const</td></tr>
-<tr class="separator:a2ba4609b8a3b575210021d376db859df inherit pro_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab12b00561e29b15e523cfa219f28b580 inherit pro_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#ab12b00561e29b15e523cfa219f28b580">printMsgInternal</a> (const std::string &amp;msg, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode, std::ostream &amp;stream=std::cout) const</td></tr>
-<tr class="separator:ab12b00561e29b15e523cfa219f28b580 inherit pro_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60e58144dd48aefae7b38d7dc5ee9d0d inherit pro_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a60e58144dd48aefae7b38d7dc5ee9d0d">welcomeMsg</a> (std::ostream &amp;stream)</td></tr>
-<tr class="separator:a60e58144dd48aefae7b38d7dc5ee9d0d inherit pro_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_static_attribs_classttk_1_1Debug"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classttk_1_1Debug')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classttk_1_1Debug.html">ttk::Debug</a></td></tr>
-<tr class="memitem:a60efc2e439eb661a6d6978b9e7ea5f7a inherit pro_static_attribs_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="BaseClass_8h.html#af062563d191a45e86f95e5cd9f10445c">COMMON_EXPORTS</a> <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a60efc2e439eb661a6d6978b9e7ea5f7a">lastLineMode</a> = <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">ttk::debug::LineMode::NEW</a></td></tr>
-<tr class="separator:a60efc2e439eb661a6d6978b9e7ea5f7a inherit pro_static_attribs_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842dce0d55e6886c1689b5b2897e64e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a842dce0d55e6886c1689b5b2897e64e4">is_left_</a> {}</td></tr>
+<tr class="separator:a842dce0d55e6886c1689b5b2897e64e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0f0e955b6f52b656c4d702fd5f694ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#ae0f0e955b6f52b656c4d702fd5f694ca">coords_number_</a> {0}</td></tr>
+<tr class="separator:ae0f0e955b6f52b656c4d702fd5f694ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd2fad1c0f8b5203cafa4d8778120dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a1bd2fad1c0f8b5203cafa4d8778120dc">p_</a> {2}</td></tr>
+<tr class="separator:a1bd2fad1c0f8b5203cafa4d8778120dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2553a06d6ce966a24471952dec631ac9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1KDTree.html#a2553a06d6ce966a24471952dec631ac9">include_weights_</a> {false}</td></tr>
+<tr class="separator:a2553a06d6ce966a24471952dec631ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename dataType&gt;<br />
-class ttk::KDTree&lt; dataType &gt;</div><p >TTK KD-Tree. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename dataType, typename Container&gt;<br />
+class ttk::KDTree&lt; dataType, Container &gt;</div><p >TTK KD-Tree. </p>
 <dl class="section author"><dt>Author</dt><dd>Joseph Budin <a href="#" onclick="location.href='mai'+'lto:'+'jos'+'ep'+'h.b'+'ud'+'in@'+'po'+'lyt'+'ec'+'hni'+'qu'+'e.e'+'du'; return false;">josep<span class="obfuscator">.nosp@m.</span>h.bu<span class="obfuscator">.nosp@m.</span>din@p<span class="obfuscator">.nosp@m.</span>olyt<span class="obfuscator">.nosp@m.</span>echni<span class="obfuscator">.nosp@m.</span>que.<span class="obfuscator">.nosp@m.</span>edu</a> </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>June 2018 </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00021">21</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="af633847e08f7a949d345cece88377263" name="af633847e08f7a949d345cece88377263"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af633847e08f7a949d345cece88377263">&#9670;&nbsp;</a></span>KDTreeMap</h2>
+<a id="a4eeffe1d0d8dc6ea0a83702a64319cb8" name="a4eeffe1d0d8dc6ea0a83702a64319cb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eeffe1d0d8dc6ea0a83702a64319cb8">&#9670;&nbsp;</a></span>KDTreeMap</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::KDTreeMap =  std::vector&lt;<a class="el" href="classttk_1_1KDTree.html">KDTree</a> *&gt;</td>
+          <td class="memname">using <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::KDTreeMap =  std::vector&lt;<a class="el" href="classttk_1_1KDTree.html">KDTree</a> *&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -270,16 +186,16 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="accbff22cbd07ba05fc9831dd26cb3baf" name="accbff22cbd07ba05fc9831dd26cb3baf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accbff22cbd07ba05fc9831dd26cb3baf">&#9670;&nbsp;</a></span>KDTreeRoot</h2>
+<a id="ae384b116e35bceb2d2f163463fa9d59c" name="ae384b116e35bceb2d2f163463fa9d59c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae384b116e35bceb2d2f163463fa9d59c">&#9670;&nbsp;</a></span>KDTreeRoot</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::KDTreeRoot =  std::unique_ptr&lt;<a class="el" href="classttk_1_1KDTree.html">KDTree</a>&gt;</td>
+          <td class="memname">using <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::KDTreeRoot =  std::unique_ptr&lt;<a class="el" href="classttk_1_1KDTree.html">KDTree</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -289,19 +205,19 @@ template&lt;typename dataType &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a897785f9cdada57691cb76ddffe98495" name="a897785f9cdada57691cb76ddffe98495"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a897785f9cdada57691cb76ddffe98495">&#9670;&nbsp;</a></span>KDTree() <span class="overload">[1/3]</span></h2>
+<a id="a8cc99e4091df3db041fbbedf763e1069" name="a8cc99e4091df3db041fbbedf763e1069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cc99e4091df3db041fbbedf763e1069">&#9670;&nbsp;</a></span>KDTree() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::KDTree </td>
+          <td class="memname"><a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::KDTree </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -316,27 +232,27 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="ab8315ca5dcc4d31829f804eb89f51227" name="ab8315ca5dcc4d31829f804eb89f51227"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8315ca5dcc4d31829f804eb89f51227">&#9670;&nbsp;</a></span>KDTree() <span class="overload">[2/3]</span></h2>
+<a id="aa6a1b9bd78c57367a162d856712a78fa" name="aa6a1b9bd78c57367a162d856712a78fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6a1b9bd78c57367a162d856712a78fa">&#9670;&nbsp;</a></span>KDTree() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::KDTree </td>
+          <td class="memname"><a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::KDTree </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype">const bool&#160;</td>
           <td class="paramname"><em>include_weights</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>p</em>&#160;</td>
         </tr>
         <tr>
@@ -356,33 +272,33 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="ab7c3395915661fbaa779cae9a164fa37" name="ab7c3395915661fbaa779cae9a164fa37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7c3395915661fbaa779cae9a164fa37">&#9670;&nbsp;</a></span>KDTree() <span class="overload">[3/3]</span></h2>
+<a id="a97728105bd676da9ba92dde0cef021b9" name="a97728105bd676da9ba92dde0cef021b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97728105bd676da9ba92dde0cef021b9">&#9670;&nbsp;</a></span>KDTree() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::KDTree </td>
+          <td class="memname"><a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::KDTree </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; dataType &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; dataType, Container &gt; *const&#160;</td>
           <td class="paramname"><em>father</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>coords_number</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype">const bool&#160;</td>
           <td class="paramname"><em>is_left</em>&#160;</td>
         </tr>
         <tr>
@@ -403,16 +319,16 @@ template&lt;typename dataType &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9f0cdb0ac4670415b463aa9eab101d53" name="a9f0cdb0ac4670415b463aa9eab101d53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f0cdb0ac4670415b463aa9eab101d53">&#9670;&nbsp;</a></span>build() <span class="overload">[1/2]</span></h2>
+<a id="a9d409bc038d79be1690b89f243318788" name="a9d409bc038d79be1690b89f243318788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d409bc038d79be1690b89f243318788">&#9670;&nbsp;</a></span>build()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; dataType &gt;<a class="el" href="classttk_1_1KDTree.html#af633847e08f7a949d345cece88377263">::KDTreeMap</a> <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::build </td>
+          <td class="memname"><a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;<a class="el" href="classttk_1_1KDTree.html#a4eeffe1d0d8dc6ea0a83702a64319cb8">::KDTreeMap</a> <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::build </td>
           <td>(</td>
           <td class="paramtype">dataType *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -432,52 +348,8 @@ template&lt;typename dataType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>weight_number</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00130">130</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
-
-</div>
-</div>
-<a id="aae06810220dfdcaca446e60d1aa22a42" name="aae06810220dfdcaca446e60d1aa22a42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae06810220dfdcaca446e60d1aa22a42">&#9670;&nbsp;</a></span>build() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename dataType &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; dataType &gt; * &gt; <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::build </td>
-          <td>(</td>
-          <td class="paramtype">dataType *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int &amp;&#160;</td>
-          <td class="paramname"><em>ptNumber</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int &amp;&#160;</td>
-          <td class="paramname"><em>dimension</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::vector&lt; dataType &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>weights</em>, </td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; dataType &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>weights</em> = <code>{}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -493,20 +365,20 @@ template&lt;typename dataType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="buildWeights_8h_source.html#l00008">8</a> of file <a class="el" href="buildWeights_8h_source.html">buildWeights.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00144">144</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
 
 </div>
 </div>
-<a id="ab98321451c9a4345330dee22b5b59e22" name="ab98321451c9a4345330dee22b5b59e22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab98321451c9a4345330dee22b5b59e22">&#9670;&nbsp;</a></span>buildRecursive() <span class="overload">[1/2]</span></h2>
+<a id="a21a843af2c31d4bab9c318bed76cc283" name="a21a843af2c31d4bab9c318bed76cc283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21a843af2c31d4bab9c318bed76cc283">&#9670;&nbsp;</a></span>buildRecursive()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::buildRecursive </td>
+          <td class="memname">void <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::buildRecursive </td>
           <td>(</td>
           <td class="paramtype">dataType *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -514,7 +386,7 @@ template&lt;typename dataType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
           <td class="paramname"><em>idx_side</em>, </td>
         </tr>
         <tr>
@@ -532,14 +404,20 @@ template&lt;typename dataType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; dataType &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; dataType, Container &gt; *&#160;</td>
           <td class="paramname"><em>parent</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classttk_1_1KDTree.html#af633847e08f7a949d345cece88377263">KDTreeMap</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classttk_1_1KDTree.html#a4eeffe1d0d8dc6ea0a83702a64319cb8">KDTreeMap</a> &amp;&#160;</td>
           <td class="paramname"><em>correspondance_map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; dataType &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>weights</em> = <code>{}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -555,160 +433,139 @@ template&lt;typename dataType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00194">194</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00221">221</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
 
 </div>
 </div>
-<a id="a701107ce8bcb3ecd279b52b51dbac23a" name="a701107ce8bcb3ecd279b52b51dbac23a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a701107ce8bcb3ecd279b52b51dbac23a">&#9670;&nbsp;</a></span>buildRecursive() <span class="overload">[2/2]</span></h2>
+<a id="af4b7b0ad94486bf702d051ad1875d987" name="af4b7b0ad94486bf702d051ad1875d987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4b7b0ad94486bf702d051ad1875d987">&#9670;&nbsp;</a></span>cost()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
+<div class="memtemplate">
+template&lt;typename PowerFunc &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::buildRecursive </td>
+          <td class="memname">dataType <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::cost </td>
           <td>(</td>
-          <td class="paramtype">dataType *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
+          <td class="paramtype">const Container &amp;&#160;</td>
+          <td class="paramname"><em>coordinates</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
-          <td class="paramname"><em>idx_side</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int &amp;&#160;</td>
-          <td class="paramname"><em>ptNumber</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int &amp;&#160;</td>
-          <td class="paramname"><em>dimension</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; dataType &gt; *&#160;</td>
-          <td class="paramname"><em>parent</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classttk_1_1KDTree.html#af633847e08f7a949d345cece88377263">KDTreeMap</a> &amp;&#160;</td>
-          <td class="paramname"><em>correspondance_map</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::vector&lt; dataType &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>weights</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>weight_number</em> = <code>1</code>&#160;</td>
+          <td class="paramtype">const PowerFunc &amp;&#160;</td>
+          <td class="paramname"><em>power</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="buildWeights_8h_source.html#l00074">74</a> of file <a class="el" href="buildWeights_8h_source.html">buildWeights.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00100">100</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
 
 </div>
 </div>
-<a id="a9df92aeac28c7b2e74a041a3305f8355" name="a9df92aeac28c7b2e74a041a3305f8355"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9df92aeac28c7b2e74a041a3305f8355">&#9670;&nbsp;</a></span>cost()</h2>
+<a id="aee847838e1a5bca5785135b018c44d6c" name="aee847838e1a5bca5785135b018c44d6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee847838e1a5bca5785135b018c44d6c">&#9670;&nbsp;</a></span>distanceToBox()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">dataType <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::cost </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; dataType &gt; &amp;&#160;</td>
-          <td class="paramname"><em>coordinates</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00372">372</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
-
-</div>
-</div>
-<a id="ad3a46d04b4b7c641b562a47f747c4335" name="ad3a46d04b4b7c641b562a47f747c4335"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3a46d04b4b7c641b562a47f747c4335">&#9670;&nbsp;</a></span>distanceToBox()</h2>
-
-<div class="memitem">
-<div class="memproto">
+template&lt;typename dataType , typename Container &gt; </div>
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename PowerFunc &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">dataType <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::distanceToBox </td>
+          <td class="memname">dataType <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::distanceToBox </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; dataType &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; dataType, Container &gt; &amp;&#160;</td>
           <td class="paramname"><em>subtree</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; dataType &gt; &amp;&#160;</td>
-          <td class="paramname"><em>coordinates</em>&#160;</td>
+          <td class="paramtype">const Container &amp;&#160;</td>
+          <td class="paramname"><em>coordinates</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const PowerFunc &amp;&#160;</td>
+          <td class="paramname"><em>power</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00382">382</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00110">110</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
 
 </div>
 </div>
-<a id="a0096b7520d9c082a77946142bc1307da" name="a0096b7520d9c082a77946142bc1307da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0096b7520d9c082a77946142bc1307da">&#9670;&nbsp;</a></span>getCoordinates()</h2>
+<a id="acbdc2ad9cb7428697beb45875a4ea0b7" name="acbdc2ad9cb7428697beb45875a4ea0b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbdc2ad9cb7428697beb45875a4ea0b7">&#9670;&nbsp;</a></span>getCoordinates()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; dataType &gt; <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::getCoordinates</td>
+          <td class="memname">const std::vector&lt; dataType &gt; &amp; <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::getCoordinates </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00114">114</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00124">124</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
 
 </div>
 </div>
-<a id="a9e95ccd9f19ce6d16d0af6e72a0a4849" name="a9e95ccd9f19ce6d16d0af6e72a0a4849"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e95ccd9f19ce6d16d0af6e72a0a4849">&#9670;&nbsp;</a></span>getKClosest()</h2>
+<a id="a4e63a6f72e5eaa733205bdcdccbcaf2f" name="a4e63a6f72e5eaa733205bdcdccbcaf2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e63a6f72e5eaa733205bdcdccbcaf2f">&#9670;&nbsp;</a></span>getKClosest()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::getKClosest </td>
+          <td class="memname">void <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::getKClosest </td>
           <td>(</td>
           <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>k</em>, </td>
@@ -716,13 +573,13 @@ template&lt;typename dataType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; dataType &gt; &amp;&#160;</td>
+          <td class="paramtype">const Container &amp;&#160;</td>
           <td class="paramname"><em>coordinates</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classttk_1_1KDTree.html#af633847e08f7a949d345cece88377263">KDTreeMap</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classttk_1_1KDTree.html#a4eeffe1d0d8dc6ea0a83702a64319cb8">KDTreeMap</a> &amp;&#160;</td>
           <td class="paramname"><em>neighbours</em>, </td>
         </tr>
         <tr>
@@ -746,100 +603,140 @@ template&lt;typename dataType &gt; </div>
 </div><div class="memdoc">
 <p >Puts the k closest points to the given coordinates in the "neighbours" vector along with their costs in the "costs" vector The output is not sorted, if you are interested in the k nearest neighbours in the order, will need to sort them according to their cost.</p>
 
-<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00295">295</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00335">335</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
 
 </div>
 </div>
-<a id="a102f0df0dbd46f7a337b2b3301647cdf" name="a102f0df0dbd46f7a337b2b3301647cdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a102f0df0dbd46f7a337b2b3301647cdf">&#9670;&nbsp;</a></span>getMinSubWeight()</h2>
+<a id="a0734de9f9b3f23dfed72f9b5d1a450c5" name="a0734de9f9b3f23dfed72f9b5d1a450c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0734de9f9b3f23dfed72f9b5d1a450c5">&#9670;&nbsp;</a></span>getMinSubWeight()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">dataType <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::getMinSubWeight </td>
+          <td class="memname">dataType <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::getMinSubWeight </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>weight_index</em> = <code>0</code></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00124">124</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00130">130</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
 
 </div>
 </div>
-<a id="ab4ce3721f30afd2e8a32d2573344ae95" name="ab4ce3721f30afd2e8a32d2573344ae95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4ce3721f30afd2e8a32d2573344ae95">&#9670;&nbsp;</a></span>getWeight()</h2>
+<a id="a7ff28c05a404703bbb58d3a997266b92" name="a7ff28c05a404703bbb58d3a997266b92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ff28c05a404703bbb58d3a997266b92">&#9670;&nbsp;</a></span>getWeight()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">dataType <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::getWeight </td>
+          <td class="memname">dataType <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::getWeight </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>weight_index</em> = <code>0</code></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00119">119</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00127">127</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
 
 </div>
 </div>
-<a id="a6417a65ef0d808bf97b657ad94c2a1d5" name="a6417a65ef0d808bf97b657ad94c2a1d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6417a65ef0d808bf97b657ad94c2a1d5">&#9670;&nbsp;</a></span>isLeaf()</h2>
+<a id="ae1a431045eaf5523966cab41c57c8a71" name="ae1a431045eaf5523966cab41c57c8a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1a431045eaf5523966cab41c57c8a71">&#9670;&nbsp;</a></span>isLeaf()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::isLeaf</td>
+          <td class="memname">bool <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::isLeaf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00398">398</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00133">133</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
 
 </div>
 </div>
-<a id="a77ea47a7331c0e08087f743b3435499c" name="a77ea47a7331c0e08087f743b3435499c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77ea47a7331c0e08087f743b3435499c">&#9670;&nbsp;</a></span>isRoot()</h2>
+<a id="a0a40fe7f926ed421344a402cb2ef7dcc" name="a0a40fe7f926ed421344a402cb2ef7dcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a40fe7f926ed421344a402cb2ef7dcc">&#9670;&nbsp;</a></span>isRoot()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::isRoot</td>
+          <td class="memname">bool <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::isRoot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00403">403</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00136">136</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
 
 </div>
 </div>
-<a id="a7b8ae737d0980a4a936fa08c165ced3e" name="a7b8ae737d0980a4a936fa08c165ced3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b8ae737d0980a4a936fa08c165ced3e">&#9670;&nbsp;</a></span>recursiveGetKClosest()</h2>
+<a id="a159180172102d107cfaf33234c91347d" name="a159180172102d107cfaf33234c91347d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a159180172102d107cfaf33234c91347d">&#9670;&nbsp;</a></span>recursiveGetKClosest()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
+<div class="memtemplate">
+template&lt;typename PowerFunc &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::recursiveGetKClosest </td>
+          <td class="memname">void <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::recursiveGetKClosest </td>
           <td>(</td>
           <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>k</em>, </td>
@@ -847,13 +744,13 @@ template&lt;typename dataType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; dataType &gt; &amp;&#160;</td>
+          <td class="paramtype">const Container &amp;&#160;</td>
           <td class="paramname"><em>coordinates</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classttk_1_1KDTree.html#af633847e08f7a949d345cece88377263">KDTreeMap</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classttk_1_1KDTree.html#a4eeffe1d0d8dc6ea0a83702a64319cb8">KDTreeMap</a> &amp;&#160;</td>
           <td class="paramname"><em>neighbours</em>, </td>
         </tr>
         <tr>
@@ -866,7 +763,13 @@ template&lt;typename dataType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>weight_index</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>weight_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const PowerFunc &amp;&#160;</td>
+          <td class="paramname"><em>power</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -876,20 +779,20 @@ template&lt;typename dataType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00317">317</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00364">364</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
 
 </div>
 </div>
-<a id="a11cdc79af234e11a4c54ac5c7957dfec" name="a11cdc79af234e11a4c54ac5c7957dfec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11cdc79af234e11a4c54ac5c7957dfec">&#9670;&nbsp;</a></span>updateMinSubweight()</h2>
+<a id="ac9f7dccd4e028bc3743252667ec88bc0" name="ac9f7dccd4e028bc3743252667ec88bc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9f7dccd4e028bc3743252667ec88bc0">&#9670;&nbsp;</a></span>updateMinSubweight()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::updateMinSubweight </td>
+          <td class="memname">void <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::updateMinSubweight </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>weight_index</em> = <code>0</code></td><td>)</td>
@@ -898,22 +801,25 @@ template&lt;typename dataType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00269">269</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00308">308</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
 
 </div>
 </div>
-<a id="a442588f1e4afc4572b2a89f39b497f0f" name="a442588f1e4afc4572b2a89f39b497f0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a442588f1e4afc4572b2a89f39b497f0f">&#9670;&nbsp;</a></span>updateWeight()</h2>
+<a id="a19ded7c2332fbc725828bca6479cb687" name="a19ded7c2332fbc725828bca6479cb687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19ded7c2332fbc725828bca6479cb687">&#9670;&nbsp;</a></span>updateWeight()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::updateWeight </td>
+          <td class="memname">void <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::updateWeight </td>
           <td>(</td>
-          <td class="paramtype">dataType&#160;</td>
+          <td class="paramtype">const dataType&#160;</td>
           <td class="paramname"><em>new_weight</em>, </td>
         </tr>
         <tr>
@@ -928,23 +834,28 @@ template&lt;typename dataType &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00262">262</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="KDTree_8h_source.html#l00078">78</a> of file <a class="el" href="KDTree_8h_source.html">KDTree.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a99cfbb1cf8baa12d25dc19522eecc76c" name="a99cfbb1cf8baa12d25dc19522eecc76c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99cfbb1cf8baa12d25dc19522eecc76c">&#9670;&nbsp;</a></span>coordinates_</h2>
+<a id="aa5a8923e97845c73cedb23dcb538fb0a" name="aa5a8923e97845c73cedb23dcb538fb0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5a8923e97845c73cedb23dcb538fb0a">&#9670;&nbsp;</a></span>coordinates_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;dataType&gt; <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::coordinates_ {}</td>
+          <td class="memname">Container <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::coordinates_ {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -953,16 +864,16 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="a5bb677b36bda60b556463868d62f58e5" name="a5bb677b36bda60b556463868d62f58e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bb677b36bda60b556463868d62f58e5">&#9670;&nbsp;</a></span>coords_max_</h2>
+<a id="aec0d63b359dc11bd14722993da818586" name="aec0d63b359dc11bd14722993da818586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec0d63b359dc11bd14722993da818586">&#9670;&nbsp;</a></span>coords_max_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;dataType&gt; <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::coords_max_ {}</td>
+          <td class="memname">Container <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::coords_max_ {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -971,16 +882,16 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="a67722600b143458d30594218a743f940" name="a67722600b143458d30594218a743f940"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67722600b143458d30594218a743f940">&#9670;&nbsp;</a></span>coords_min_</h2>
+<a id="a18a819551c872fa497f3a8bdcdbd6278" name="a18a819551c872fa497f3a8bdcdbd6278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18a819551c872fa497f3a8bdcdbd6278">&#9670;&nbsp;</a></span>coords_min_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;dataType&gt; <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::coords_min_ {}</td>
+          <td class="memname">Container <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::coords_min_ {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -989,19 +900,19 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="ab0c4b57ff10bba01da0c8fa6701a0c5c" name="ab0c4b57ff10bba01da0c8fa6701a0c5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0c4b57ff10bba01da0c8fa6701a0c5c">&#9670;&nbsp;</a></span>coords_number_</h2>
+<a id="ae0f0e955b6f52b656c4d702fd5f694ca" name="ae0f0e955b6f52b656c4d702fd5f694ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0f0e955b6f52b656c4d702fd5f694ca">&#9670;&nbsp;</a></span>coords_number_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::coords_number_ {0}</td>
+          <td class="memname">int <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::coords_number_ {0}</td>
         </tr>
       </table>
   </td>
@@ -1015,16 +926,16 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="a3b81dfe6223f06a2710163aa5fc8360b" name="a3b81dfe6223f06a2710163aa5fc8360b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b81dfe6223f06a2710163aa5fc8360b">&#9670;&nbsp;</a></span>id_</h2>
+<a id="af0479eede435a0d84322f81e1d98d976" name="af0479eede435a0d84322f81e1d98d976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0479eede435a0d84322f81e1d98d976">&#9670;&nbsp;</a></span>id_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::id_ {}</td>
+          <td class="memname">int <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::id_ {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1033,19 +944,19 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="adbeb4cb999c267faf7e4adbb9168d961" name="adbeb4cb999c267faf7e4adbb9168d961"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbeb4cb999c267faf7e4adbb9168d961">&#9670;&nbsp;</a></span>include_weights_</h2>
+<a id="a2553a06d6ce966a24471952dec631ac9" name="a2553a06d6ce966a24471952dec631ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2553a06d6ce966a24471952dec631ac9">&#9670;&nbsp;</a></span>include_weights_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::include_weights_ {false}</td>
+          <td class="memname">bool <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::include_weights_ {false}</td>
         </tr>
       </table>
   </td>
@@ -1059,19 +970,19 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="aa47d75a4bf1f1776cb5f2c6307f6a88c" name="aa47d75a4bf1f1776cb5f2c6307f6a88c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa47d75a4bf1f1776cb5f2c6307f6a88c">&#9670;&nbsp;</a></span>is_left_</h2>
+<a id="a842dce0d55e6886c1689b5b2897e64e4" name="a842dce0d55e6886c1689b5b2897e64e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a842dce0d55e6886c1689b5b2897e64e4">&#9670;&nbsp;</a></span>is_left_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::is_left_</td>
+          <td class="memname">bool <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::is_left_ {}</td>
         </tr>
       </table>
   </td>
@@ -1085,16 +996,16 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="a2b5c17a60f5cca194b80071ff7a1edff" name="a2b5c17a60f5cca194b80071ff7a1edff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b5c17a60f5cca194b80071ff7a1edff">&#9670;&nbsp;</a></span>left_</h2>
+<a id="aba60fc29e773fbe9d2407e786e76eb87" name="aba60fc29e773fbe9d2407e786e76eb87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba60fc29e773fbe9d2407e786e76eb87">&#9670;&nbsp;</a></span>left_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classttk_1_1KDTree.html#accbff22cbd07ba05fc9831dd26cb3baf">KDTreeRoot</a> <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::left_ {}</td>
+          <td class="memname"><a class="el" href="classttk_1_1KDTree.html#ae384b116e35bceb2d2f163463fa9d59c">KDTreeRoot</a> <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::left_ {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1103,16 +1014,16 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="a592ba782708d56053681b0617ed9d412" name="a592ba782708d56053681b0617ed9d412"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a592ba782708d56053681b0617ed9d412">&#9670;&nbsp;</a></span>level_</h2>
+<a id="ae23a8c447d363e581b3d1780e9ebc796" name="ae23a8c447d363e581b3d1780e9ebc796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae23a8c447d363e581b3d1780e9ebc796">&#9670;&nbsp;</a></span>level_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::level_ {}</td>
+          <td class="memname">int <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::level_ {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1121,16 +1032,16 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="a2cba27694cdb0267aaaef4e6ebefc01f" name="a2cba27694cdb0267aaaef4e6ebefc01f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cba27694cdb0267aaaef4e6ebefc01f">&#9670;&nbsp;</a></span>min_subweights_</h2>
+<a id="a60aa08d86aaed77d45662a1a2c30abef" name="a60aa08d86aaed77d45662a1a2c30abef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60aa08d86aaed77d45662a1a2c30abef">&#9670;&nbsp;</a></span>min_subweights_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;dataType&gt; <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::min_subweights_ {}</td>
+          <td class="memname">std::vector&lt;dataType&gt; <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::min_subweights_ {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1139,19 +1050,19 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="ada7976d776bdef540ebd0278c6345a19" name="ada7976d776bdef540ebd0278c6345a19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada7976d776bdef540ebd0278c6345a19">&#9670;&nbsp;</a></span>p_</h2>
+<a id="a1bd2fad1c0f8b5203cafa4d8778120dc" name="a1bd2fad1c0f8b5203cafa4d8778120dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bd2fad1c0f8b5203cafa4d8778120dc">&#9670;&nbsp;</a></span>p_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::p_ {2}</td>
+          <td class="memname">int <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::p_ {2}</td>
         </tr>
       </table>
   </td>
@@ -1165,16 +1076,16 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="adbb1205b87af2665827fa54a6d736cb1" name="adbb1205b87af2665827fa54a6d736cb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbb1205b87af2665827fa54a6d736cb1">&#9670;&nbsp;</a></span>parent_</h2>
+<a id="a560fb6027646e27e79872a438a0eafd2" name="a560fb6027646e27e79872a438a0eafd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a560fb6027646e27e79872a438a0eafd2">&#9670;&nbsp;</a></span>parent_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classttk_1_1KDTree.html">KDTree</a>* <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::parent_ {}</td>
+          <td class="memname"><a class="el" href="classttk_1_1KDTree.html">KDTree</a>* <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::parent_ {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1183,16 +1094,16 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="a8454c119d4ad7f6f91d66560b326b852" name="a8454c119d4ad7f6f91d66560b326b852"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8454c119d4ad7f6f91d66560b326b852">&#9670;&nbsp;</a></span>right_</h2>
+<a id="ada281593b52119ea9c4abaf10869ebdf" name="ada281593b52119ea9c4abaf10869ebdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada281593b52119ea9c4abaf10869ebdf">&#9670;&nbsp;</a></span>right_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classttk_1_1KDTree.html#accbff22cbd07ba05fc9831dd26cb3baf">KDTreeRoot</a> <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::right_ {}</td>
+          <td class="memname"><a class="el" href="classttk_1_1KDTree.html#ae384b116e35bceb2d2f163463fa9d59c">KDTreeRoot</a> <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::right_ {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1201,16 +1112,16 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<a id="a11f33a6a1ab43e05b974aef8bb2e0b1e" name="a11f33a6a1ab43e05b974aef8bb2e0b1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11f33a6a1ab43e05b974aef8bb2e0b1e">&#9670;&nbsp;</a></span>weight_</h2>
+<a id="a73b3fbb650e53c362906ce9dfb3e96d4" name="a73b3fbb650e53c362906ce9dfb3e96d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73b3fbb650e53c362906ce9dfb3e96d4">&#9670;&nbsp;</a></span>weight_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dataType &gt; </div>
+template&lt;typename dataType , typename Container &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;dataType&gt; <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType &gt;::weight_ {}</td>
+          <td class="memname">std::vector&lt;dataType&gt; <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a>&lt; dataType, Container &gt;::weight_ {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1219,14 +1130,13 @@ template&lt;typename dataType &gt; </div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>/data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/kdTree/<a class="el" href="KDTree_8h_source.html">KDTree.h</a></li>
-<li>/data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/kdTree/<a class="el" href="buildWeights_8h_source.html">buildWeights.h</a></li>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/kdTree/<a class="el" href="KDTree_8h_source.html">KDTree.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 23 2022 11:08:21 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Sat Nov 5 2022 16:05:56 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

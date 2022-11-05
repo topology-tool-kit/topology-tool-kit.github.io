@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/geometry/Geometry.h Source File</title>
+<title>TTK: /home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/geometry/Geometry.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_967e09ec44fc65f538a936c6eb770f12.html">geometry</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_aa319678ed2cb39fab2f8ff1969e8605.html">tierny</a></li><li class="navelem"><a class="el" href="dir_90f0e18f6a3db9a50a0cff0ad55689f7.html">private</a></li><li class="navelem"><a class="el" href="dir_3a6af36370c7b2c289deb8eee8b7da12.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_b6ff1f0e45d53bd762250c1eea10201d.html">core</a></li><li class="navelem"><a class="el" href="dir_ddc5a3d512b4fb0b449ac7d2dce9d26f.html">base</a></li><li class="navelem"><a class="el" href="dir_6dfbe886ef00bceb50a79b2f66a6aea0.html">geometry</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -240,27 +240,49 @@ $(function() {
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="namespacettk_1_1Geometry.html#ab164c602942731cb38dba9503a70b453">powInt</a>(<span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(10), n);</div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    }</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T1, <span class="keyword">typename</span> T2&gt;</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno"><a class="line" href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">  322</a></span>    <span class="keyword">inline</span> T1 <a class="code hl_function" href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">pow</a>(<span class="keyword">const</span> T1 val, <span class="keyword">const</span> T2 n) {</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>      <span class="keyword">static_assert</span>(</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        std::is_arithmetic&lt;T1&gt;::value &amp;&amp; std::is_arithmetic&lt;T2&gt;::value,</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        <span class="stringliteral">&quot;pow can only be applied on arithmetic values&quot;</span>);</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>      <span class="keywordflow">if</span>(std::is_integral&lt;T2&gt;::value) {</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacettk_1_1Geometry.html#ab164c602942731cb38dba9503a70b453">powInt</a>(val, n);</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(std::is_floating_point&lt;T2&gt;::value) {</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">std::pow</a>(val, n);</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>      }</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>      <span class="comment">// this return statement should be unreachable thanks to the</span></div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>      <span class="comment">// static_assert</span></div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>      <span class="keywordflow">return</span> T1{};</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    }</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="namespacettk_1_1Geometry.html#a8abe8ca88266b2e1d27b62157770ebfe">subtractVectors</a>(<span class="keyword">const</span> T *a, <span class="keyword">const</span> T *b, T *out);</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>  } <span class="comment">// namespace Geometry</span></div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>} <span class="comment">// namespace ttk</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="Geometry_8h.html#a5b276127c58b30365836bd2e49cb9215">  339</a></span><span class="preprocessor">#define TTK_POW_LAMBDA(CALLEXPR, TYPE, EXPN, ...)                      \</span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="preprocessor">  {                                                                    \</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="preprocessor">    const auto one = [](const TYPE ttkNotUsed(a)) { return TYPE{1}; }; \</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="preprocessor">    const auto id = [](const TYPE a) { return a; };                    \</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="preprocessor">    const auto square = [](const TYPE a) { return a * a; };            \</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="preprocessor">    const auto cube = [](const TYPE a) { return a * a * a; };          \</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="preprocessor">    const auto powInt                                                  \</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="preprocessor">      = [EXPN](const TYPE a) { return Geometry::powInt(a, EXPN); };    \</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="preprocessor">                                                                       \</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="preprocessor">    if(EXPN == 0) {                                                    \</span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="preprocessor">      CALLEXPR(__VA_ARGS__, one);                                      \</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="preprocessor">    } else if(EXPN == 1) {                                             \</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="preprocessor">      CALLEXPR(__VA_ARGS__, id);                                       \</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="preprocessor">    } else if(EXPN == 2) {                                             \</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="preprocessor">      CALLEXPR(__VA_ARGS__, square);                                   \</span></div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="preprocessor">    } else if(EXPN == 3) {                                             \</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span><span class="preprocessor">      CALLEXPR(__VA_ARGS__, cube);                                     \</span></div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="preprocessor">    } else {                                                           \</span></div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="preprocessor">      CALLEXPR(__VA_ARGS__, powInt);                                   \</span></div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="preprocessor">    }                                                                  \</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="preprocessor">  }</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T1, <span class="keyword">typename</span> T2&gt;</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno"><a class="line" href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">  365</a></span>    <span class="keyword">inline</span> T1 <a class="code hl_function" href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">pow</a>(<span class="keyword">const</span> T1 val, <span class="keyword">const</span> T2 n) {</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>      <span class="keyword">static_assert</span>(</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        std::is_arithmetic&lt;T1&gt;::value &amp;&amp; std::is_arithmetic&lt;T2&gt;::value,</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>        <span class="stringliteral">&quot;pow can only be applied on arithmetic values&quot;</span>);</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span> </div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>      <span class="keywordflow">if</span>(std::is_integral&lt;T2&gt;::value) {</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacettk_1_1Geometry.html#ab164c602942731cb38dba9503a70b453">powInt</a>(val, n);</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(std::is_floating_point&lt;T2&gt;::value) {</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">std::pow</a>(val, n);</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>      }</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>      <span class="comment">// this return statement should be unreachable thanks to the</span></div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>      <span class="comment">// static_assert</span></div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>      <span class="keywordflow">return</span> T1{};</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    }</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span> </div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="namespacettk_1_1Geometry.html#a8abe8ca88266b2e1d27b62157770ebfe">subtractVectors</a>(<span class="keyword">const</span> T *a, <span class="keyword">const</span> T *b, T *out);</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>  } <span class="comment">// namespace Geometry</span></div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>} <span class="comment">// namespace ttk</span></div>
 <div class="ttc" id="aDebug_8h_html"><div class="ttname"><a href="Debug_8h.html">Debug.h</a></div></div>
 <div class="ttc" id="anamespacettk_1_1Geometry_html_a0a0f4d3014b5961cb2c4dc0f9073f556"><div class="ttname"><a href="namespacettk_1_1Geometry.html#a0a0f4d3014b5961cb2c4dc0f9073f556">ttk::Geometry::areVectorsColinear</a></div><div class="ttdeci">bool areVectorsColinear(const T *vA0, const T *vA1, const T *vB0, const T *vB1, std::array&lt; T, 3 &gt; *coefficients=nullptr, const T *tolerance=NULL)</div><div class="ttdef"><b>Definition:</b> <a href="Geometry_8cpp_source.html#l00020">Geometry.cpp:20</a></div></div>
 <div class="ttc" id="anamespacettk_1_1Geometry_html_a12799ca2fef0180502bbf5ca2a7c11d0"><div class="ttname"><a href="namespacettk_1_1Geometry.html#a12799ca2fef0180502bbf5ca2a7c11d0">ttk::Geometry::computeTriangleArea</a></div><div class="ttdeci">int computeTriangleArea(const T *p0, const T *p1, const T *p2, T &amp;area)</div><div class="ttdef"><b>Definition:</b> <a href="Geometry_8cpp_source.html#l00263">Geometry.cpp:263</a></div></div>
@@ -270,7 +292,7 @@ $(function() {
 <div class="ttc" id="anamespacettk_1_1Geometry_html_a46bc8d8d23d90b75c3ad51822f2e9f6f"><div class="ttname"><a href="namespacettk_1_1Geometry.html#a46bc8d8d23d90b75c3ad51822f2e9f6f">ttk::Geometry::computeBarycentricCoordinates</a></div><div class="ttdeci">int computeBarycentricCoordinates(const T *p0, const T *p1, const T *p, std::array&lt; T, 2 &gt; &amp;baryCentrics, const int &amp;dimension=3)</div><div class="ttdef"><b>Definition:</b> <a href="Geometry_8cpp_source.html#l00124">Geometry.cpp:124</a></div></div>
 <div class="ttc" id="anamespacettk_1_1Geometry_html_a6faaf55596fa1ba49e252e78d35514d3"><div class="ttname"><a href="namespacettk_1_1Geometry.html#a6faaf55596fa1ba49e252e78d35514d3">ttk::Geometry::magnitude</a></div><div class="ttdeci">T magnitude(const T *v)</div><div class="ttdef"><b>Definition:</b> <a href="Geometry_8cpp_source.html#l00460">Geometry.cpp:460</a></div></div>
 <div class="ttc" id="anamespacettk_1_1Geometry_html_a7cd6ecbb35338d490bb8aec747765b00"><div class="ttname"><a href="namespacettk_1_1Geometry.html#a7cd6ecbb35338d490bb8aec747765b00">ttk::Geometry::computeTriangleAreaFromSides</a></div><div class="ttdeci">int computeTriangleAreaFromSides(const T s0, const T s1, const T s2, T &amp;area)</div><div class="ttdef"><b>Definition:</b> <a href="Geometry_8cpp_source.html#l00278">Geometry.cpp:278</a></div></div>
-<div class="ttc" id="anamespacettk_1_1Geometry_html_a85154fcad15b4f1aba5961e892bccb1e"><div class="ttname"><a href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">ttk::Geometry::pow</a></div><div class="ttdeci">T1 pow(const T1 val, const T2 n)</div><div class="ttdef"><b>Definition:</b> <a href="Geometry_8h_source.html#l00322">Geometry.h:322</a></div></div>
+<div class="ttc" id="anamespacettk_1_1Geometry_html_a85154fcad15b4f1aba5961e892bccb1e"><div class="ttname"><a href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">ttk::Geometry::pow</a></div><div class="ttdeci">T1 pow(const T1 val, const T2 n)</div><div class="ttdef"><b>Definition:</b> <a href="Geometry_8h_source.html#l00365">Geometry.h:365</a></div></div>
 <div class="ttc" id="anamespacettk_1_1Geometry_html_a8abe8ca88266b2e1d27b62157770ebfe"><div class="ttname"><a href="namespacettk_1_1Geometry.html#a8abe8ca88266b2e1d27b62157770ebfe">ttk::Geometry::subtractVectors</a></div><div class="ttdeci">int subtractVectors(const T *a, const T *b, T *out)</div><div class="ttdef"><b>Definition:</b> <a href="Geometry_8cpp_source.html#l00484">Geometry.cpp:484</a></div></div>
 <div class="ttc" id="anamespacettk_1_1Geometry_html_a8e3465b53b9d471ce82073d5254ca5fc"><div class="ttname"><a href="namespacettk_1_1Geometry.html#a8e3465b53b9d471ce82073d5254ca5fc">ttk::Geometry::isTriangleColinear</a></div><div class="ttdeci">bool isTriangleColinear(const T *p0, const T *p1, const T *p2, const T *tolerance=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="Geometry_8cpp_source.html#l00417">Geometry.cpp:417</a></div></div>
 <div class="ttc" id="anamespacettk_1_1Geometry_html_a9a6d30ecccb104f5136aa4e25447324e"><div class="ttname"><a href="namespacettk_1_1Geometry.html#a9a6d30ecccb104f5136aa4e25447324e">ttk::Geometry::getBoundingBox</a></div><div class="ttdeci">int getBoundingBox(const Container &amp;points, std::array&lt; std::pair&lt; T, T &gt;, dim &gt; &amp;bBox)</div><div class="ttdef"><b>Definition:</b> <a href="Geometry_8h_source.html#l00197">Geometry.h:197</a></div></div>
@@ -287,7 +309,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 23 2022 11:08:11 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Sat Nov 5 2022 16:05:46 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/explicitTriangulation/ExplicitTriangulation.cpp File Reference</title>
+<title>TTK: /home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/explicitTriangulation/ExplicitTriangulation.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_0bdd7391b9103d3c9563043204b0f1cb.html">explicitTriangulation</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_aa319678ed2cb39fab2f8ff1969e8605.html">tierny</a></li><li class="navelem"><a class="el" href="dir_90f0e18f6a3db9a50a0cff0ad55689f7.html">private</a></li><li class="navelem"><a class="el" href="dir_3a6af36370c7b2c289deb8eee8b7da12.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_b6ff1f0e45d53bd762250c1eea10201d.html">core</a></li><li class="navelem"><a class="el" href="dir_ddc5a3d512b4fb0b449ac7d2dce9d26f.html">base</a></li><li class="navelem"><a class="el" href="dir_0bc3eeb4c7a8b1cefb9e1c749ae94f3b.html">explicitTriangulation</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -88,6 +88,10 @@ Macros</h2></td></tr>
 <tr class="separator:a8227ea91f72700b9836dac54fe3ebc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51bfa1ccc164d0ebddb62fb9f105caf0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ExplicitTriangulation_8cpp.html#a51bfa1ccc164d0ebddb62fb9f105caf0">WRITE_GUARD</a>(ARRAY)</td></tr>
 <tr class="separator:a51bfa1ccc164d0ebddb62fb9f105caf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd7db8aa427370c300b153d0a3164950"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ExplicitTriangulation_8cpp.html#acd7db8aa427370c300b153d0a3164950">WRITE_ASCII</a>(ARRAY)</td></tr>
+<tr class="separator:acd7db8aa427370c300b153d0a3164950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc8c271e8f9d6f40f99e25a2924b3368"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ExplicitTriangulation_8cpp.html#abc8c271e8f9d6f40f99e25a2924b3368">WRITE_BOOL</a>(ARRAY)</td></tr>
+<tr class="separator:abc8c271e8f9d6f40f99e25a2924b3368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f312b519d431619223d14a6d55f8774"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ExplicitTriangulation_8cpp.html#a4f312b519d431619223d14a6d55f8774">READ_FIXED</a>(ARRAY,  N_ITEMS)</td></tr>
 <tr class="separator:a4f312b519d431619223d14a6d55f8774"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -135,6 +139,56 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span>(!read_guard()) {                            \</div>
 <div class="line">    ARRAY.resize(N_ITEMS);                       \</div>
 <div class="line">    readBinArray(stream, ARRAY.data(), N_ITEMS); \</div>
+<div class="line">  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acd7db8aa427370c300b153d0a3164950" name="acd7db8aa427370c300b153d0a3164950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd7db8aa427370c300b153d0a3164950">&#9670;&nbsp;</a></span>WRITE_ASCII</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WRITE_ASCII</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ARRAY</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  stream &lt;&lt; #ARRAY &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;                    \</div>
+<div class="line">  for(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;slice : ARRAY) {             \</div>
+<div class="line">    for(<span class="keywordtype">size_t</span> i = 0; i &lt; slice.size(); ++i) { \</div>
+<div class="line">      if(i &gt; 0) {                              \</div>
+<div class="line">        stream &lt;&lt; <span class="charliteral">&#39; &#39;</span>;                         \</div>
+<div class="line">      }                                        \</div>
+<div class="line">      stream &lt;&lt; slice[i];                      \</div>
+<div class="line">    }                                          \</div>
+<div class="line">    stream &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;                            \</div>
+<div class="line">  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abc8c271e8f9d6f40f99e25a2924b3368" name="abc8c271e8f9d6f40f99e25a2924b3368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc8c271e8f9d6f40f99e25a2924b3368">&#9670;&nbsp;</a></span>WRITE_BOOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WRITE_BOOL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ARRAY</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  stream &lt;&lt; #ARRAY &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;    \</div>
+<div class="line">  for(<span class="keyword">const</span> <span class="keyword">auto</span> el : ARRAY) { \</div>
+<div class="line">    stream &lt;&lt; el &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;      \</div>
 <div class="line">  }</div>
 </div><!-- fragment -->
 </div>
@@ -216,7 +270,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExplicitTriangulation_8cpp_source.html#l01344">1344</a> of file <a class="el" href="ExplicitTriangulation_8cpp_source.html">ExplicitTriangulation.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ExplicitTriangulation_8cpp_source.html#l01439">1439</a> of file <a class="el" href="ExplicitTriangulation_8cpp_source.html">ExplicitTriangulation.cpp</a>.</p>
 
 </div>
 </div>
@@ -254,7 +308,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExplicitTriangulation_8cpp_source.html#l01349">1349</a> of file <a class="el" href="ExplicitTriangulation_8cpp_source.html">ExplicitTriangulation.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ExplicitTriangulation_8cpp_source.html#l01444">1444</a> of file <a class="el" href="ExplicitTriangulation_8cpp_source.html">ExplicitTriangulation.cpp</a>.</p>
 
 </div>
 </div>
@@ -286,7 +340,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExplicitTriangulation_8cpp_source.html#l01207">1207</a> of file <a class="el" href="ExplicitTriangulation_8cpp_source.html">ExplicitTriangulation.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ExplicitTriangulation_8cpp_source.html#l01211">1211</a> of file <a class="el" href="ExplicitTriangulation_8cpp_source.html">ExplicitTriangulation.cpp</a>.</p>
 
 </div>
 </div>
@@ -324,14 +378,14 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExplicitTriangulation_8cpp_source.html#l01212">1212</a> of file <a class="el" href="ExplicitTriangulation_8cpp_source.html">ExplicitTriangulation.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ExplicitTriangulation_8cpp_source.html#l01216">1216</a> of file <a class="el" href="ExplicitTriangulation_8cpp_source.html">ExplicitTriangulation.cpp</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 23 2022 11:08:16 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Sat Nov 5 2022 16:05:51 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

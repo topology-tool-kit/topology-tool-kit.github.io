@@ -1,8 +1,8 @@
 var searchData=
 [
   ['valdown_0',['valDown',['../classttk_1_1ftr_1_1Graph.html#a8e317815bb1095bce6e43835a17c9310',1,'ttk::ftr::Graph::valDown(const idVertex v)'],['../classttk_1_1ftr_1_1Graph.html#a425cd46498e3b30f86d87fded4fbebc6',1,'ttk::ftr::Graph::valDown(const idVertex v) const']]],
-  ['validatedatabasepath_1',['ValidateDatabasePath',['../classttkCinemaWriter.html#a0829dc61b155a07e75580b5cb3472c86',1,'ttkCinemaWriter']]],
-  ['validatedatabasepath_2',['validateDatabasePath',['../classttkCinemaReader.html#a40b83dceac55cb247cf5a624ffbc9820',1,'ttkCinemaReader']]],
+  ['validatedatabasepath_1',['validateDatabasePath',['../classttkCinemaReader.html#a40b83dceac55cb247cf5a624ffbc9820',1,'ttkCinemaReader']]],
+  ['validatedatabasepath_2',['ValidateDatabasePath',['../classttkCinemaWriter.html#a0829dc61b155a07e75580b5cb3472c86',1,'ttkCinemaWriter']]],
   ['validatefilepath_3',['validateFilePath',['../classttkTriangulationReader.html#a334d3cbcd87e458f663a783a9e8efbb8',1,'ttkTriangulationReader']]],
   ['valup_4',['valUp',['../classttk_1_1ftr_1_1Graph.html#a1595f230f4aa6ecf56fdd30e3c2bf8df',1,'ttk::ftr::Graph::valUp(const idVertex v) const'],['../classttk_1_1ftr_1_1Graph.html#af00b53376a8ea25056cfcc3bdf078a1b',1,'ttk::ftr::Graph::valUp(const idVertex v)']]],
   ['vectortostring_5',['vectorToString',['../classttk_1_1AssignmentExhaustive.html#a4ff02c5792c46db651ee90e6df9c255b',1,'ttk::AssignmentExhaustive']]],

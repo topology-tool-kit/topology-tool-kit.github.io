@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TTK: /data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/trackingFromPersistenceDiagrams/TrackingFromPersistenceDiagrams.cpp Source File</title>
+<title>TTK: /home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/trackingFromPersistenceDiagrams/TrackingFromPersistenceDiagrams.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_fb1b73566810bbe04813a51486d67593.html">trackingFromPersistenceDiagrams</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_aa319678ed2cb39fab2f8ff1969e8605.html">tierny</a></li><li class="navelem"><a class="el" href="dir_90f0e18f6a3db9a50a0cff0ad55689f7.html">private</a></li><li class="navelem"><a class="el" href="dir_3a6af36370c7b2c289deb8eee8b7da12.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_b6ff1f0e45d53bd762250c1eea10201d.html">core</a></li><li class="navelem"><a class="el" href="dir_ddc5a3d512b4fb0b449ac7d2dce9d26f.html">base</a></li><li class="navelem"><a class="el" href="dir_8ddae44e38cc8008d522a73c5aadca8e.html">trackingFromPersistenceDiagrams</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -351,10 +351,10 @@ $(function() {
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        <span class="keywordtype">double</span> dist = 0;</div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <span class="keywordtype">bool</span> hasMatched = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        <span class="keywordflow">if</span>(doMatch1 &amp;&amp; ((t3Max &amp;&amp; t1Max) || (t3Min &amp;&amp; t1Min))) {</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>          <span class="keywordtype">double</span> dist13</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            = std::sqrt(<a class="code hl_function" href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">Geometry::pow</a>(x1 - x3, 2) + <a class="code hl_function" href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">Geometry::pow</a>(y1 - y3, 2)</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                        + <a class="code hl_function" href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">Geometry::pow</a>(z1 - z3, 2));</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        <span class="keyword">const</span> <span class="keyword">auto</span> square = [](<span class="keyword">const</span> <span class="keywordtype">double</span> a) { <span class="keywordflow">return</span> a * a; };</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        <span class="keywordflow">if</span>(doMatch1 &amp;&amp; ((t3Max &amp;&amp; t1Max) || (t3Min &amp;&amp; t1Min))) {</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>          <span class="keywordtype">double</span> dist13</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            = std::sqrt(square(x1 - x3) + square(y1 - y3) + square(z1 - z3));</div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>          dist = dist13;</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>          <span class="keywordflow">if</span>(dist13 &gt;= postProcThresh)</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            <span class="keywordflow">continue</span>;</div>
@@ -363,37 +363,36 @@ $(function() {
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        <span class="keywordflow">if</span>(doMatch2 &amp;&amp; ((t3Max &amp;&amp; t2Max) || (t3Min &amp;&amp; t2Min))) {</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>          <span class="keywordtype">double</span> dist23</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            = std::sqrt(<a class="code hl_function" href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">Geometry::pow</a>(x2 - x3, 2) + <a class="code hl_function" href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">Geometry::pow</a>(y2 - y3, 2)</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                        + <a class="code hl_function" href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">Geometry::pow</a>(z2 - z3, 2));</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>          dist = dist23;</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>          <span class="keywordflow">if</span>(dist23 &gt;= postProcThresh)</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>          hasMatched = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        }</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        <span class="keywordflow">if</span>(!hasMatched)</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>          <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        std::stringstream msg;</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        msg &lt;&lt; <span class="stringliteral">&quot;Merged &quot;</span> &lt;&lt; m &lt;&lt; <span class="stringliteral">&quot; with &quot;</span> &lt;&lt; k &lt;&lt; <span class="stringliteral">&quot;: d = &quot;</span> &lt;&lt; dist &lt;&lt; <span class="stringliteral">&quot;.&quot;</span>;</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        <a class="code hl_function" href="welcomeLogo_8inl.html#a0b13334b0f9e6cf8ee4f2e30d7a983a7">printMsg</a>(msg.str());</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        <span class="comment">// Get every other tracking trajectory.</span></div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        std::set&lt;int&gt; &amp;mergedM = trackingTupleToMerged[m];</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        <span class="comment">// std::set&lt;int&gt; mergedK = trackingTupleToMerged[k];</span></div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        <span class="comment">// Push for others to merge.</span></div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        <span class="comment">// for (auto&amp; i : mergedM) mergedK.insert(i);</span></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        <span class="comment">// for (auto&amp; i : mergedK) mergedM.insert(i);</span></div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="comment">// mergedK.insert(m);</span></div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        mergedM.insert(k);</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>      }</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    }</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  }</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>}</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            = std::sqrt(square(x2 - x3) + square(y2 - y3) + square(z2 - z3));</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>          dist = dist23;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>          <span class="keywordflow">if</span>(dist23 &gt;= postProcThresh)</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>          hasMatched = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        }</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        <span class="keywordflow">if</span>(!hasMatched)</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>          <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        std::stringstream msg;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        msg &lt;&lt; <span class="stringliteral">&quot;Merged &quot;</span> &lt;&lt; m &lt;&lt; <span class="stringliteral">&quot; with &quot;</span> &lt;&lt; k &lt;&lt; <span class="stringliteral">&quot;: d = &quot;</span> &lt;&lt; dist &lt;&lt; <span class="stringliteral">&quot;.&quot;</span>;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        <a class="code hl_function" href="welcomeLogo_8inl.html#a0b13334b0f9e6cf8ee4f2e30d7a983a7">printMsg</a>(msg.str());</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        <span class="comment">// Get every other tracking trajectory.</span></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        std::set&lt;int&gt; &amp;mergedM = trackingTupleToMerged[m];</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        <span class="comment">// std::set&lt;int&gt; mergedK = trackingTupleToMerged[k];</span></div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        <span class="comment">// Push for others to merge.</span></div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        <span class="comment">// for (auto&amp; i : mergedM) mergedK.insert(i);</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        <span class="comment">// for (auto&amp; i : mergedK) mergedM.insert(i);</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        <span class="comment">// mergedK.insert(m);</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        mergedM.insert(k);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>      }</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    }</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  }</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>}</div>
 <div class="ttc" id="aTrackingFromPersistenceDiagrams_8h_html"><div class="ttname"><a href="TrackingFromPersistenceDiagrams_8h.html">TrackingFromPersistenceDiagrams.h</a></div></div>
 <div class="ttc" id="aclassttk_1_1BottleneckDistance_html"><div class="ttname"><a href="classttk_1_1BottleneckDistance.html">ttk::BottleneckDistance</a></div><div class="ttdef"><b>Definition:</b> <a href="BottleneckDistance_8h_source.html#l00015">BottleneckDistance.h:15</a></div></div>
 <div class="ttc" id="aclassttk_1_1BottleneckDistance_html_a32e0e83b283dd23cf4024065d57e2449"><div class="ttname"><a href="classttk_1_1BottleneckDistance.html#a32e0e83b283dd23cf4024065d57e2449">ttk::BottleneckDistance::setWasserstein</a></div><div class="ttdeci">void setWasserstein(const std::string &amp;wasserstein)</div><div class="ttdef"><b>Definition:</b> <a href="BottleneckDistance_8h_source.html#l00047">BottleneckDistance.h:47</a></div></div>
@@ -414,16 +413,15 @@ $(function() {
 <div class="ttc" id="aclassttk_1_1TrackingFromPersistenceDiagrams_html_a959b196d167da15bfebe09107877ce1c"><div class="ttname"><a href="classttk_1_1TrackingFromPersistenceDiagrams.html#a959b196d167da15bfebe09107877ce1c">ttk::TrackingFromPersistenceDiagrams::performTracking</a></div><div class="ttdeci">int performTracking(std::vector&lt; ttk::DiagramType &gt; &amp;allDiagrams, std::vector&lt; std::vector&lt; MatchingType &gt; &gt; &amp;allMatchings, std::vector&lt; trackingTuple &gt; &amp;trackings)</div><div class="ttdef"><b>Definition:</b> <a href="TrackingFromPersistenceDiagrams_8cpp_source.html#l00087">TrackingFromPersistenceDiagrams.cpp:87</a></div></div>
 <div class="ttc" id="aclassttk_1_1TrackingFromPersistenceDiagrams_html_ad9bc6c56bf09d1d4e7aa57e76ea67d2e"><div class="ttname"><a href="classttk_1_1TrackingFromPersistenceDiagrams.html#ad9bc6c56bf09d1d4e7aa57e76ea67d2e">ttk::TrackingFromPersistenceDiagrams::performPostProcess</a></div><div class="ttdeci">int performPostProcess(const std::vector&lt; ttk::DiagramType &gt; &amp;allDiagrams, const std::vector&lt; trackingTuple &gt; &amp;trackings, std::vector&lt; std::set&lt; int &gt; &gt; &amp;trackingTupleToMerged, const double postProcThresh)</div><div class="ttdef"><b>Definition:</b> <a href="TrackingFromPersistenceDiagrams_8cpp_source.html#l00176">TrackingFromPersistenceDiagrams.cpp:176</a></div></div>
 <div class="ttc" id="aclassttk_1_1TrackingFromPersistenceDiagrams_html_aff182a544f402e7fee8f3ef12ebbd1b1"><div class="ttname"><a href="classttk_1_1TrackingFromPersistenceDiagrams.html#aff182a544f402e7fee8f3ef12ebbd1b1">ttk::TrackingFromPersistenceDiagrams::execute</a></div><div class="ttdeci">int execute()</div><div class="ttdef"><b>Definition:</b> <a href="TrackingFromPersistenceDiagrams_8cpp_source.html#l00007">TrackingFromPersistenceDiagrams.cpp:7</a></div></div>
-<div class="ttc" id="anamespacettk_1_1Geometry_html_a85154fcad15b4f1aba5961e892bccb1e"><div class="ttname"><a href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">ttk::Geometry::pow</a></div><div class="ttdeci">T1 pow(const T1 val, const T2 n)</div><div class="ttdef"><b>Definition:</b> <a href="Geometry_8h_source.html#l00322">Geometry.h:322</a></div></div>
 <div class="ttc" id="anamespacettk_html_a2e938b4a3e29bf68d64fbb3a86cb55f9a2e7e012b7d4f76c7b9ae6bcd005e0240"><div class="ttname"><a href="namespacettk.html#a2e938b4a3e29bf68d64fbb3a86cb55f9a2e7e012b7d4f76c7b9ae6bcd005e0240">ttk::CriticalType::Local_minimum</a></div><div class="ttdeci">@ Local_minimum</div></div>
 <div class="ttc" id="anamespacettk_html_a2e938b4a3e29bf68d64fbb3a86cb55f9aefbcd967ae50908baf330d056bbae37e"><div class="ttname"><a href="namespacettk.html#a2e938b4a3e29bf68d64fbb3a86cb55f9aefbcd967ae50908baf330d056bbae37e">ttk::CriticalType::Local_maximum</a></div><div class="ttdeci">@ Local_maximum</div></div>
 <div class="ttc" id="anamespacettk_html_a7d48160d1dca90d1fee71566fbe0294e"><div class="ttname"><a href="namespacettk.html#a7d48160d1dca90d1fee71566fbe0294e">ttk::trackingTuple</a></div><div class="ttdeci">std::tuple&lt; int, int, std::vector&lt; SimplexId &gt; &gt; trackingTuple</div><div class="ttdef"><b>Definition:</b> <a href="TrackingFromPersistenceDiagrams_8h_source.html#l00014">TrackingFromPersistenceDiagrams.h:14</a></div></div>
-<div class="ttc" id="anamespacettk_html_aab8bba05f97023f08b0a26d1b3598555"><div class="ttname"><a href="namespacettk.html#aab8bba05f97023f08b0a26d1b3598555">ttk::DiagramType</a></div><div class="ttdeci">std::vector&lt; PersistencePair &gt; DiagramType</div><div class="ttdoc">Persistence Diagram type as a vector of Persistence pairs.</div><div class="ttdef"><b>Definition:</b> <a href="PersistenceDiagramUtils_8h_source.html#l00053">PersistenceDiagramUtils.h:53</a></div></div>
+<div class="ttc" id="anamespacettk_html_aab8bba05f97023f08b0a26d1b3598555"><div class="ttname"><a href="namespacettk.html#aab8bba05f97023f08b0a26d1b3598555">ttk::DiagramType</a></div><div class="ttdeci">std::vector&lt; PersistencePair &gt; DiagramType</div><div class="ttdoc">Persistence Diagram type as a vector of Persistence pairs.</div><div class="ttdef"><b>Definition:</b> <a href="PersistenceDiagramUtils_8h_source.html#l00058">PersistenceDiagramUtils.h:58</a></div></div>
 <div class="ttc" id="awelcomeLogo_8inl_html_a0b13334b0f9e6cf8ee4f2e30d7a983a7"><div class="ttname"><a href="welcomeLogo_8inl.html#a0b13334b0f9e6cf8ee4f2e30d7a983a7">printMsg</a></div><div class="ttdeci">printMsg(debug::output::GREEN+&quot;                           &quot;+debug::output::ENDCOLOR+debug::output::GREEN+&quot;▒&quot;+debug::output::ENDCOLOR+debug::output::GREEN+&quot;▒▒▒▒▒▒▒▒▒▒▒▒▒░&quot;+debug::output::ENDCOLOR, debug::Priority::PERFORMANCE, debug::LineMode::NEW, stream)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 23 2022 11:08:14 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Sat Nov 5 2022 16:05:49 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

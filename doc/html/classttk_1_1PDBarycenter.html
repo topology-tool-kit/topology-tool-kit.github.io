@@ -89,8 +89,10 @@ Inheritance diagram for ttk::PDBarycenter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a4cf091655a49335161ba0e4961486f33"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PDBarycenter.html#a4cf091655a49335161ba0e4961486f33">KDTreePair</a> = std::pair&lt; typename <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt;::KDTreeRoot, typename <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt;::KDTreeMap &gt;</td></tr>
-<tr class="separator:a4cf091655a49335161ba0e4961486f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa37247b7872dece3613b48a4eac80a72"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PDBarycenter.html#aa37247b7872dece3613b48a4eac80a72">KDT</a> = <a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">PersistenceDiagramAuction::KDT</a></td></tr>
+<tr class="separator:aa37247b7872dece3613b48a4eac80a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a5f1e0a3ea0e11f9a265e518a5513c4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PDBarycenter.html#a4a5f1e0a3ea0e11f9a265e518a5513c4">KDTreePair</a> = std::pair&lt; typename <a class="el" href="classttk_1_1KDTree.html#ae384b116e35bceb2d2f163463fa9d59c">KDT::KDTreeRoot</a>, typename <a class="el" href="classttk_1_1KDTree.html#a4eeffe1d0d8dc6ea0a83702a64319cb8">KDT::KDTreeMap</a> &gt;</td></tr>
+<tr class="separator:a4a5f1e0a3ea0e11f9a265e518a5513c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -118,12 +120,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad71c48729df68f784f7b6f5ebebf86a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acea109d040a27a20d9afed807ead97de"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PDBarycenter.html#acea109d040a27a20d9afed807ead97de">getMinimalPrice</a> (int i)</td></tr>
 <tr class="separator:acea109d040a27a20d9afed807ead97de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90e0c29b89f806a3f4c51793dfd53dc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1PDBarycenter.html#a4cf091655a49335161ba0e4961486f33">KDTreePair</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PDBarycenter.html#a90e0c29b89f806a3f4c51793dfd53dc5">getKDTree</a> () const</td></tr>
+<tr class="memitem:a90e0c29b89f806a3f4c51793dfd53dc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1PDBarycenter.html#a4a5f1e0a3ea0e11f9a265e518a5513c4">KDTreePair</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PDBarycenter.html#a90e0c29b89f806a3f4c51793dfd53dc5">getKDTree</a> () const</td></tr>
 <tr class="separator:a90e0c29b89f806a3f4c51793dfd53dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18ddad5029caccef6a077e7a0ef26c8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PDBarycenter.html#a18ddad5029caccef6a077e7a0ef26c8f">runMatching</a> (double *total_cost, double epsilon, std::vector&lt; int &gt; &amp;sizes, <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt; &amp;kdt, std::vector&lt; <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt; * &gt; &amp;correspondance_kdt_map, std::vector&lt; double &gt; *min_diag_price, std::vector&lt; double &gt; *min_price, std::vector&lt; std::vector&lt; <a class="el" href="namespacettk.html#ac4fae15b84f386737689bfec7dafee8b">MatchingType</a> &gt; &gt; *all_matchings, bool use_kdt, int actual_distance)</td></tr>
-<tr class="separator:a18ddad5029caccef6a077e7a0ef26c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abaa5c80bf9cf96af51620320be363ee2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PDBarycenter.html#abaa5c80bf9cf96af51620320be363ee2">runMatchingAuction</a> (double *total_cost, std::vector&lt; int &gt; &amp;sizes, <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt; &amp;kdt, std::vector&lt; <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt; * &gt; &amp;correspondance_kdt_map, std::vector&lt; double &gt; *min_diag_price, std::vector&lt; std::vector&lt; <a class="el" href="namespacettk.html#ac4fae15b84f386737689bfec7dafee8b">MatchingType</a> &gt; &gt; *all_matchings, bool use_kdt)</td></tr>
-<tr class="separator:abaa5c80bf9cf96af51620320be363ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd741043bb23bb81bdc0ea45d85ea98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PDBarycenter.html#a8dd741043bb23bb81bdc0ea45d85ea98">runMatching</a> (double *total_cost, double epsilon, std::vector&lt; int &gt; &amp;sizes, <a class="el" href="classttk_1_1PDBarycenter.html#aa37247b7872dece3613b48a4eac80a72">KDT</a> &amp;kdt, std::vector&lt; <a class="el" href="classttk_1_1PDBarycenter.html#aa37247b7872dece3613b48a4eac80a72">KDT</a> * &gt; &amp;correspondance_kdt_map, std::vector&lt; double &gt; *min_diag_price, std::vector&lt; double &gt; *min_price, std::vector&lt; std::vector&lt; <a class="el" href="namespacettk.html#ac4fae15b84f386737689bfec7dafee8b">MatchingType</a> &gt; &gt; *all_matchings, bool use_kdt, int actual_distance)</td></tr>
+<tr class="separator:a8dd741043bb23bb81bdc0ea45d85ea98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f05759ed02ebd721706dbcc96f5396b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PDBarycenter.html#a4f05759ed02ebd721706dbcc96f5396b">runMatchingAuction</a> (double *total_cost, std::vector&lt; int &gt; &amp;sizes, <a class="el" href="classttk_1_1PDBarycenter.html#aa37247b7872dece3613b48a4eac80a72">KDT</a> &amp;kdt, std::vector&lt; <a class="el" href="classttk_1_1PDBarycenter.html#aa37247b7872dece3613b48a4eac80a72">KDT</a> * &gt; &amp;correspondance_kdt_map, std::vector&lt; double &gt; *min_diag_price, std::vector&lt; std::vector&lt; <a class="el" href="namespacettk.html#ac4fae15b84f386737689bfec7dafee8b">MatchingType</a> &gt; &gt; *all_matchings, bool use_kdt)</td></tr>
+<tr class="separator:a4f05759ed02ebd721706dbcc96f5396b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7156a38d248a0fa2189b61a8faac6d86"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PDBarycenter.html#a7156a38d248a0fa2189b61a8faac6d86">updateBarycenter</a> (std::vector&lt; std::vector&lt; <a class="el" href="namespacettk.html#ac4fae15b84f386737689bfec7dafee8b">MatchingType</a> &gt; &gt; &amp;matchings)</td></tr>
 <tr class="separator:a7156a38d248a0fa2189b61a8faac6d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cb4587f7a65b396d715d36d1b3b6595"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PDBarycenter.html#a6cb4587f7a65b396d715d36d1b3b6595">computeRealCost</a> ()</td></tr>
@@ -315,19 +317,35 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 
 <p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00025">25</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a4cf091655a49335161ba0e4961486f33" name="a4cf091655a49335161ba0e4961486f33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cf091655a49335161ba0e4961486f33">&#9670;&nbsp;</a></span>KDTreePair</h2>
+<a id="aa37247b7872dece3613b48a4eac80a72" name="aa37247b7872dece3613b48a4eac80a72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa37247b7872dece3613b48a4eac80a72">&#9670;&nbsp;</a></span>KDT</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classttk_1_1PDBarycenter.html#a4cf091655a49335161ba0e4961486f33">ttk::PDBarycenter::KDTreePair</a> =  std::pair&lt;typename <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt;double&gt;::KDTreeRoot, typename <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt;double&gt;::KDTreeMap&gt;</td>
+          <td class="memname">using <a class="el" href="classttk_1_1PDBarycenter.html#aa37247b7872dece3613b48a4eac80a72">ttk::PDBarycenter::KDT</a> =  <a class="el" href="classttk_1_1PersistenceDiagramAuction.html#a1f64a6dce20694ddb98ffb4dd5e886d8">PersistenceDiagramAuction::KDT</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00055">55</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00056">56</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+
+</div>
+</div>
+<a id="a4a5f1e0a3ea0e11f9a265e518a5513c4" name="a4a5f1e0a3ea0e11f9a265e518a5513c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a5f1e0a3ea0e11f9a265e518a5513c4">&#9670;&nbsp;</a></span>KDTreePair</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classttk_1_1PDBarycenter.html#a4a5f1e0a3ea0e11f9a265e518a5513c4">ttk::PDBarycenter::KDTreePair</a> =  std::pair&lt;typename <a class="el" href="classttk_1_1KDTree.html#ae384b116e35bceb2d2f163463fa9d59c">KDT::KDTreeRoot</a>, typename <a class="el" href="classttk_1_1KDTree.html#a4eeffe1d0d8dc6ea0a83702a64319cb8">KDT::KDTreeMap</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00057">57</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -400,7 +418,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8cpp_source.html#l00689">689</a> of file <a class="el" href="PDBarycenter_8cpp_source.html">PDBarycenter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8cpp_source.html#l00687">687</a> of file <a class="el" href="PDBarycenter_8cpp_source.html">PDBarycenter.cpp</a>.</p>
 
 </div>
 </div>
@@ -514,7 +532,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8cpp_source.html#l00576">576</a> of file <a class="el" href="PDBarycenter_8cpp_source.html">PDBarycenter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8cpp_source.html#l00575">575</a> of file <a class="el" href="PDBarycenter_8cpp_source.html">PDBarycenter.cpp</a>.</p>
 
 </div>
 </div>
@@ -577,7 +595,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00179">179</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00181">181</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -604,7 +622,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00149">149</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00151">151</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -631,7 +649,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00145">145</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00147">147</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -662,7 +680,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classttk_1_1PDBarycenter.html#a4cf091655a49335161ba0e4961486f33">ttk::PDBarycenter::KDTreePair</a> ttk::PDBarycenter::getKDTree </td>
+          <td class="memname"><a class="el" href="classttk_1_1PDBarycenter.html#a4a5f1e0a3ea0e11f9a265e518a5513c4">ttk::PDBarycenter::KDTreePair</a> ttk::PDBarycenter::getKDTree </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -825,12 +843,12 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8cpp_source.html#l00704">704</a> of file <a class="el" href="PDBarycenter_8cpp_source.html">PDBarycenter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8cpp_source.html#l00702">702</a> of file <a class="el" href="PDBarycenter_8cpp_source.html">PDBarycenter.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a18ddad5029caccef6a077e7a0ef26c8f" name="a18ddad5029caccef6a077e7a0ef26c8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18ddad5029caccef6a077e7a0ef26c8f">&#9670;&nbsp;</a></span>runMatching()</h2>
+<a id="a8dd741043bb23bb81bdc0ea45d85ea98" name="a8dd741043bb23bb81bdc0ea45d85ea98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd741043bb23bb81bdc0ea45d85ea98">&#9670;&nbsp;</a></span>runMatching()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -856,13 +874,13 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classttk_1_1PDBarycenter.html#aa37247b7872dece3613b48a4eac80a72">KDT</a> &amp;&#160;</td>
           <td class="paramname"><em>kdt</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt; * &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classttk_1_1PDBarycenter.html#aa37247b7872dece3613b48a4eac80a72">KDT</a> * &gt; &amp;&#160;</td>
           <td class="paramname"><em>correspondance_kdt_map</em>, </td>
         </tr>
         <tr>
@@ -907,8 +925,8 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 
 </div>
 </div>
-<a id="abaa5c80bf9cf96af51620320be363ee2" name="abaa5c80bf9cf96af51620320be363ee2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abaa5c80bf9cf96af51620320be363ee2">&#9670;&nbsp;</a></span>runMatchingAuction()</h2>
+<a id="a4f05759ed02ebd721706dbcc96f5396b" name="a4f05759ed02ebd721706dbcc96f5396b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f05759ed02ebd721706dbcc96f5396b">&#9670;&nbsp;</a></span>runMatchingAuction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -928,13 +946,13 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classttk_1_1PDBarycenter.html#aa37247b7872dece3613b48a4eac80a72">KDT</a> &amp;&#160;</td>
           <td class="paramname"><em>kdt</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="classttk_1_1KDTree.html">KDTree</a>&lt; double &gt; * &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classttk_1_1PDBarycenter.html#aa37247b7872dece3613b48a4eac80a72">KDT</a> * &gt; &amp;&#160;</td>
           <td class="paramname"><em>correspondance_kdt_map</em>, </td>
         </tr>
         <tr>
@@ -1010,7 +1028,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00141">141</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00143">143</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1038,7 +1056,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00137">137</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00139">139</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1066,7 +1084,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00094">94</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00096">96</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1094,7 +1112,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00109">109</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00111">111</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1122,7 +1140,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00165">165</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00167">167</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1150,7 +1168,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00161">161</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00163">163</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1178,7 +1196,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00157">157</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00159">159</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1206,7 +1224,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00129">129</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00131">131</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1254,7 +1272,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00133">133</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00135">135</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1282,7 +1300,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00098">98</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00100">100</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1310,7 +1328,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00114">114</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00116">116</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1338,7 +1356,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00153">153</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00155">155</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1366,7 +1384,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00125">125</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00127">127</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1394,7 +1412,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00121">121</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00123">123</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1439,7 +1457,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00214">214</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00216">216</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1463,7 +1481,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00215">215</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00217">217</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1487,7 +1505,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00219">219</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00221">221</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1511,7 +1529,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00216">216</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00218">218</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1535,7 +1553,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00205">205</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00207">207</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1559,7 +1577,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00217">217</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00219">219</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1583,7 +1601,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00218">218</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00220">220</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1607,7 +1625,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00188">188</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00190">190</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1631,7 +1649,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00202">202</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00204">204</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1655,7 +1673,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00223">223</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00225">225</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1679,7 +1697,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00222">222</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00224">224</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1703,7 +1721,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00208">208</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00210">210</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1727,7 +1745,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00193">193</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00195">195</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1751,7 +1769,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00209">209</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00211">211</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1775,7 +1793,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00200">200</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00202">202</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1799,7 +1817,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00190">190</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00192">192</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1823,7 +1841,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00203">203</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00205">205</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1847,7 +1865,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00204">204</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00206">206</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1871,7 +1889,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00206">206</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00208">208</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1895,7 +1913,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00211">211</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00213">213</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1919,7 +1937,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00212">212</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00214">214</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1943,7 +1961,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00185">185</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00187">187</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1967,7 +1985,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00221">221</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00223">223</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -1991,7 +2009,7 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00207">207</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00209">209</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
@@ -2015,18 +2033,18 @@ IEEE Transactions on Visualization and Computer Graphics, 2019.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00191">191</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PDBarycenter_8h_source.html#l00193">193</a> of file <a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceDiagramClustering/<a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a></li>
-<li>/data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceDiagramClustering/<a class="el" href="PDBarycenter_8cpp_source.html">PDBarycenter.cpp</a></li>
+<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceDiagramClustering/<a class="el" href="PDBarycenter_8h_source.html">PDBarycenter.h</a></li>
+<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceDiagramClustering/<a class="el" href="PDBarycenter_8cpp_source.html">PDBarycenter.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 23 2022 11:08:22 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Sat Nov 5 2022 16:05:56 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

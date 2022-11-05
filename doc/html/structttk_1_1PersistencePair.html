@@ -84,6 +84,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4229e167e96454322bd91b88eda24f19"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structttk_1_1PersistencePair.html#a4229e167e96454322bd91b88eda24f19">operator&lt;</a> (const <a class="el" href="structttk_1_1PersistencePair.html">PersistencePair</a> &amp;rhs) const</td></tr>
 <tr class="memdesc:a4229e167e96454322bd91b88eda24f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Order pairs according to their birth value.  <a href="structttk_1_1PersistencePair.html#a4229e167e96454322bd91b88eda24f19">More...</a><br /></td></tr>
 <tr class="separator:a4229e167e96454322bd91b88eda24f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37f64f0fb2568eee0e439ab31e90e406"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structttk_1_1PersistencePair.html#a37f64f0fb2568eee0e439ab31e90e406">persistence</a> () const</td></tr>
+<tr class="memdesc:a37f64f0fb2568eee0e439ab31e90e406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the topological persistence of the pair.  <a href="structttk_1_1PersistencePair.html#a37f64f0fb2568eee0e439ab31e90e406">More...</a><br /></td></tr>
+<tr class="separator:a37f64f0fb2568eee0e439ab31e90e406"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -91,8 +94,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a31b6f78267d0aeb0d50060b98592d7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecf44fe899b9e9a70b2aa19b3129a5a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structttk_1_1CriticalVertex.html">ttk::CriticalVertex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structttk_1_1PersistencePair.html#aecf44fe899b9e9a70b2aa19b3129a5a7">death</a></td></tr>
 <tr class="separator:aecf44fe899b9e9a70b2aa19b3129a5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b469248d7d8d1f97cc542870c0c67fe"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structttk_1_1PersistencePair.html#a4b469248d7d8d1f97cc542870c0c67fe">persistence</a></td></tr>
-<tr class="separator:a4b469248d7d8d1f97cc542870c0c67fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a383086bd79b06b6113488b11d115a5f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">ttk::SimplexId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structttk_1_1PersistencePair.html#a383086bd79b06b6113488b11d115a5f2">dim</a></td></tr>
 <tr class="separator:a383086bd79b06b6113488b11d115a5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2df3b7e3f3cc7e04ce8181023f1fe7a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structttk_1_1PersistencePair.html#ae2df3b7e3f3cc7e04ce8181023f1fe7a">isFinite</a></td></tr>
@@ -129,7 +130,36 @@ Public Attributes</h2></td></tr>
 
 <p>Order pairs according to their birth value. </p>
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramUtils_8h_source.html#l00045">45</a> of file <a class="el" href="PersistenceDiagramUtils_8h_source.html">PersistenceDiagramUtils.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramUtils_8h_source.html#l00043">43</a> of file <a class="el" href="PersistenceDiagramUtils_8h_source.html">PersistenceDiagramUtils.h</a>.</p>
+
+</div>
+</div>
+<a id="a37f64f0fb2568eee0e439ab31e90e406" name="a37f64f0fb2568eee0e439ab31e90e406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37f64f0fb2568eee0e439ab31e90e406">&#9670;&nbsp;</a></span>persistence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ttk::PersistencePair::persistence </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the topological persistence of the pair. </p>
+
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramUtils_8h_source.html#l00050">50</a> of file <a class="el" href="PersistenceDiagramUtils_8h_source.html">PersistenceDiagramUtils.h</a>.</p>
 
 </div>
 </div>
@@ -181,7 +211,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >pair dimension </p>
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramUtils_8h_source.html#l00036">36</a> of file <a class="el" href="PersistenceDiagramUtils_8h_source.html">PersistenceDiagramUtils.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramUtils_8h_source.html#l00034">34</a> of file <a class="el" href="PersistenceDiagramUtils_8h_source.html">PersistenceDiagramUtils.h</a>.</p>
 
 </div>
 </div>
@@ -198,34 +228,17 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >to help distinguish homology classes with infinite persistence (connected components, topological handles or cavities in the domain) </p>
 
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramUtils_8h_source.html#l00040">40</a> of file <a class="el" href="PersistenceDiagramUtils_8h_source.html">PersistenceDiagramUtils.h</a>.</p>
-
-</div>
-</div>
-<a id="a4b469248d7d8d1f97cc542870c0c67fe" name="a4b469248d7d8d1f97cc542870c0c67fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b469248d7d8d1f97cc542870c0c67fe">&#9670;&nbsp;</a></span>persistence</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double ttk::PersistencePair::persistence</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >pair persistence (death.sfValue - birth.sfValue) </p>
-
-<p class="definition">Definition at line <a class="el" href="PersistenceDiagramUtils_8h_source.html#l00034">34</a> of file <a class="el" href="PersistenceDiagramUtils_8h_source.html">PersistenceDiagramUtils.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceDiagramUtils_8h_source.html#l00038">38</a> of file <a class="el" href="PersistenceDiagramUtils_8h_source.html">PersistenceDiagramUtils.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceDiagram/<a class="el" href="PersistenceDiagramUtils_8h_source.html">PersistenceDiagramUtils.h</a></li>
+<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceDiagram/<a class="el" href="PersistenceDiagramUtils_8h_source.html">PersistenceDiagramUtils.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 23 2022 11:08:22 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Sat Nov 5 2022 16:05:56 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

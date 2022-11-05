@@ -67,8 +67,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classttk_1_1PersistenceCurve-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ttk::PersistenceCurve Class Reference<div class="ingroups"><a class="el" href="group__base.html">base</a></div></div></div>
 </div><!--header-->
@@ -90,28 +90,18 @@ Inheritance diagram for ttk::PersistenceCurve:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae338bcd61166d54b21ea63f60defbf25"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#ae338bcd61166d54b21ea63f60defbf25">PlotType</a> = std::vector&lt; std::pair&lt; double, <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> &gt; &gt;</td></tr>
+<tr class="separator:ae338bcd61166d54b21ea63f60defbf25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adf5008509d09cbfd4692eb94d24e60ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#adf5008509d09cbfd4692eb94d24e60ce">PersistenceCurve</a> ()</td></tr>
 <tr class="separator:adf5008509d09cbfd4692eb94d24e60ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa2239ffbf3469f015a91815df6a9c76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#afa2239ffbf3469f015a91815df6a9c76">setComputeSaddleConnectors</a> (bool state)</td></tr>
-<tr class="separator:afa2239ffbf3469f015a91815df6a9c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad233869ba71d8ead6d8d041a78329372"><td class="memTemplParams" colspan="2">template&lt;typename scalarType &gt; </td></tr>
-<tr class="memitem:ad233869ba71d8ead6d8d041a78329372"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#ad233869ba71d8ead6d8d041a78329372">computePersistencePlot</a> (const std::vector&lt; std::tuple&lt; <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a>, <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a>, scalarType &gt; &gt; &amp;pairs, std::vector&lt; std::pair&lt; scalarType, <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> &gt; &gt; &amp;plot) const</td></tr>
-<tr class="separator:ad233869ba71d8ead6d8d041a78329372"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09a3ab45743b0a30adeadc6ba3bba3dd"><td class="memTemplParams" colspan="2">template&lt;typename scalarType , class triangulationType  = ttk::AbstractTriangulation&gt; </td></tr>
-<tr class="memitem:a09a3ab45743b0a30adeadc6ba3bba3dd"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#a09a3ab45743b0a30adeadc6ba3bba3dd">execute</a> (const scalarType *inputScalars, const size_t scalarsMTime, const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> *inputOffsets, const triangulationType *triangulation)</td></tr>
-<tr class="separator:a09a3ab45743b0a30adeadc6ba3bba3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f4c26d6b15fb74659231adbe6ea55db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#a8f4c26d6b15fb74659231adbe6ea55db">preconditionTriangulation</a> (<a class="el" href="classttk_1_1AbstractTriangulation.html">AbstractTriangulation</a> *const triangulation)</td></tr>
-<tr class="separator:a8f4c26d6b15fb74659231adbe6ea55db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2291ed112ab8694e2894e02e41fd008a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#a2291ed112ab8694e2894e02e41fd008a">setOutputJTPlot</a> (void *const data)</td></tr>
-<tr class="separator:a2291ed112ab8694e2894e02e41fd008a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4174ced43d7c8c47cdd8ab45a66d005"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#ae4174ced43d7c8c47cdd8ab45a66d005">setOutputSTPlot</a> (void *const data)</td></tr>
-<tr class="separator:ae4174ced43d7c8c47cdd8ab45a66d005"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1408fc47bee1cffdf1e8855b721fabe2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#a1408fc47bee1cffdf1e8855b721fabe2">setOutputCTPlot</a> (void *const data)</td></tr>
-<tr class="separator:a1408fc47bee1cffdf1e8855b721fabe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28fb6c20e1fcf49f09002677fb0a341c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#a28fb6c20e1fcf49f09002677fb0a341c">setOutputMSCPlot</a> (void *const data)</td></tr>
-<tr class="separator:a28fb6c20e1fcf49f09002677fb0a341c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2de0fce563e3be33ac79f0514020ae88"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#a2de0fce563e3be33ac79f0514020ae88">execute</a> (std::array&lt; <a class="el" href="classttk_1_1PersistenceCurve.html#ae338bcd61166d54b21ea63f60defbf25">PlotType</a>, 4 &gt; &amp;plots, const <a class="el" href="namespacettk.html#aab8bba05f97023f08b0a26d1b3598555">DiagramType</a> &amp;diagram) const</td></tr>
+<tr class="memdesc:a2de0fce563e3be33ac79f0514020ae88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Persistence Curve from the input Diagram.  <a href="classttk_1_1PersistenceCurve.html#a2de0fce563e3be33ac79f0514020ae88">More...</a><br /></td></tr>
+<tr class="separator:a2de0fce563e3be33ac79f0514020ae88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classttk_1_1Debug"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classttk_1_1Debug')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classttk_1_1Debug.html">ttk::Debug</a></td></tr>
 <tr class="memitem:a5b453c195c4cfffed2702c3330f53a64 inherit pub_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a5b453c195c4cfffed2702c3330f53a64">Debug</a> ()</td></tr>
 <tr class="separator:a5b453c195c4cfffed2702c3330f53a64 inherit pub_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,22 +151,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2e7363bda386d18abaf066bf9b9b9264 inherit pub_methods_classttk_1_1BaseClass"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BaseClass.html#a2e7363bda386d18abaf066bf9b9b9264">setWrapper</a> (const <a class="el" href="classttk_1_1Wrapper.html">Wrapper</a> *wrapper)</td></tr>
 <tr class="separator:a2e7363bda386d18abaf066bf9b9b9264 inherit pub_methods_classttk_1_1BaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a62004c059c996ba03d6d07da2d76e838"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#a62004c059c996ba03d6d07da2d76e838">JTPlot_</a> {}</td></tr>
-<tr class="separator:a62004c059c996ba03d6d07da2d76e838"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d8f4f9e8ca6aff27fd185ea47f9d317"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#a6d8f4f9e8ca6aff27fd185ea47f9d317">STPlot_</a> {}</td></tr>
-<tr class="separator:a6d8f4f9e8ca6aff27fd185ea47f9d317"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01984dca0e49a34702de8b2382dc7192"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#a01984dca0e49a34702de8b2382dc7192">CTPlot_</a> {}</td></tr>
-<tr class="separator:a01984dca0e49a34702de8b2382dc7192"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad76d8d8880162a9e442517003e104b65"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#ad76d8d8880162a9e442517003e104b65">MSCPlot_</a> {}</td></tr>
-<tr class="separator:ad76d8d8880162a9e442517003e104b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a723f09e53d5932bc182f5e1b8505f29a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#a723f09e53d5932bc182f5e1b8505f29a">ComputeSaddleConnectors</a> {false}</td></tr>
-<tr class="separator:a723f09e53d5932bc182f5e1b8505f29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4687f0ce9d5b88453c3ab157479ea84f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1ftm_1_1FTMTreePP.html">ftm::FTMTreePP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#a4687f0ce9d5b88453c3ab157479ea84f">contourTree_</a> {}</td></tr>
-<tr class="separator:a4687f0ce9d5b88453c3ab157479ea84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38091b2baaabe8c1c4dcf2bbffdd71a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1dcg_1_1DiscreteGradient.html">dcg::DiscreteGradient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1PersistenceCurve.html#a38091b2baaabe8c1c4dcf2bbffdd71a3">dcg_</a> {}</td></tr>
-<tr class="separator:a38091b2baaabe8c1c4dcf2bbffdd71a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classttk_1_1Debug"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classttk_1_1Debug')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classttk_1_1Debug.html">ttk::Debug</a></td></tr>
+<tr class="memitem:a2ba4609b8a3b575210021d376db859df inherit pro_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a2ba4609b8a3b575210021d376db859df">printMsgInternal</a> (const std::string &amp;msg, const std::string &amp;right, const std::string &amp;filler, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority=<a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a551b723eafd6a31d444fcb2f5920fbd3">debug::Priority::INFO</a>, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, std::ostream &amp;stream=std::cout) const</td></tr>
+<tr class="separator:a2ba4609b8a3b575210021d376db859df inherit pro_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab12b00561e29b15e523cfa219f28b580 inherit pro_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#ab12b00561e29b15e523cfa219f28b580">printMsgInternal</a> (const std::string &amp;msg, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode, std::ostream &amp;stream=std::cout) const</td></tr>
+<tr class="separator:ab12b00561e29b15e523cfa219f28b580 inherit pro_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60e58144dd48aefae7b38d7dc5ee9d0d inherit pro_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a60e58144dd48aefae7b38d7dc5ee9d0d">welcomeMsg</a> (std::ostream &amp;stream)</td></tr>
+<tr class="separator:a60e58144dd48aefae7b38d7dc5ee9d0d inherit pro_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classttk_1_1Debug"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classttk_1_1Debug')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classttk_1_1Debug.html">ttk::Debug</a></td></tr>
 <tr class="memitem:a19bb5107152e6974eb9c0faaf30bf155 inherit pro_attribs_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a19bb5107152e6974eb9c0faaf30bf155">debugLevel_</a></td></tr>
 <tr class="separator:a19bb5107152e6974eb9c0faaf30bf155 inherit pro_attribs_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,28 +172,19 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a3b6d157f3ae3fa7b25d203bb189a58b6 inherit pro_attribs_classttk_1_1BaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addc45c3a4d6760b908f78f0a916eb939 inherit pro_attribs_classttk_1_1BaseClass"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1Wrapper.html">Wrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BaseClass.html#addc45c3a4d6760b908f78f0a916eb939">wrapper_</a></td></tr>
 <tr class="separator:addc45c3a4d6760b908f78f0a916eb939 inherit pro_attribs_classttk_1_1BaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_classttk_1_1Debug"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classttk_1_1Debug')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classttk_1_1Debug.html">ttk::Debug</a></td></tr>
-<tr class="memitem:a2ba4609b8a3b575210021d376db859df inherit pro_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a2ba4609b8a3b575210021d376db859df">printMsgInternal</a> (const std::string &amp;msg, const std::string &amp;right, const std::string &amp;filler, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority=<a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75a551b723eafd6a31d444fcb2f5920fbd3">debug::Priority::INFO</a>, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode=<a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">debug::LineMode::NEW</a>, std::ostream &amp;stream=std::cout) const</td></tr>
-<tr class="separator:a2ba4609b8a3b575210021d376db859df inherit pro_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab12b00561e29b15e523cfa219f28b580 inherit pro_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#ab12b00561e29b15e523cfa219f28b580">printMsgInternal</a> (const std::string &amp;msg, const <a class="el" href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75">debug::Priority</a> &amp;priority, const <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a> &amp;lineMode, std::ostream &amp;stream=std::cout) const</td></tr>
-<tr class="separator:ab12b00561e29b15e523cfa219f28b580 inherit pro_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60e58144dd48aefae7b38d7dc5ee9d0d inherit pro_methods_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a60e58144dd48aefae7b38d7dc5ee9d0d">welcomeMsg</a> (std::ostream &amp;stream)</td></tr>
-<tr class="separator:a60e58144dd48aefae7b38d7dc5ee9d0d inherit pro_methods_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_attribs_classttk_1_1Debug"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classttk_1_1Debug')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classttk_1_1Debug.html">ttk::Debug</a></td></tr>
 <tr class="memitem:a60efc2e439eb661a6d6978b9e7ea5f7a inherit pro_static_attribs_classttk_1_1Debug"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="BaseClass_8h.html#af062563d191a45e86f95e5cd9f10445c">COMMON_EXPORTS</a> <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82">debug::LineMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a60efc2e439eb661a6d6978b9e7ea5f7a">lastLineMode</a> = <a class="el" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">ttk::debug::LineMode::NEW</a></td></tr>
 <tr class="separator:a60efc2e439eb661a6d6978b9e7ea5f7a inherit pro_static_attribs_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >TTK processing package for the computation of persistence curves. </p>
-<p >Compute the persistence curve of a function on a triangulation. TTK assumes that the input dataset is made of only one connected component.</p>
 <dl class="section author"><dt>Author</dt><dd>Guillaume Favelier <a href="#" onclick="location.href='mai'+'lto:'+'gui'+'ll'+'aum'+'e.'+'fav'+'el'+'ier'+'@l'+'ip6'+'.f'+'r'; return false;">guill<span class="obfuscator">.nosp@m.</span>aume<span class="obfuscator">.nosp@m.</span>.fave<span class="obfuscator">.nosp@m.</span>lier<span class="obfuscator">.nosp@m.</span>@lip6<span class="obfuscator">.nosp@m.</span>.fr</a> </dd>
 <dd>
-Julien Tierny <a href="#" onclick="location.href='mai'+'lto:'+'jul'+'ie'+'n.t'+'ie'+'rny'+'@l'+'ip6'+'.f'+'r'; return false;">julie<span class="obfuscator">.nosp@m.</span>n.ti<span class="obfuscator">.nosp@m.</span>erny@<span class="obfuscator">.nosp@m.</span>lip6<span class="obfuscator">.nosp@m.</span>.fr</a> </dd></dl>
+Julien Tierny <a href="#" onclick="location.href='mai'+'lto:'+'jul'+'ie'+'n.t'+'ie'+'rny'+'@l'+'ip6'+'.f'+'r'; return false;">julie<span class="obfuscator">.nosp@m.</span>n.ti<span class="obfuscator">.nosp@m.</span>erny@<span class="obfuscator">.nosp@m.</span>lip6<span class="obfuscator">.nosp@m.</span>.fr</a> </dd>
+<dd>
+Pierre Guillou <a href="#" onclick="location.href='mai'+'lto:'+'pie'+'rr'+'e.g'+'ui'+'llo'+'u@'+'lip'+'6.'+'fr'; return false;">pierr<span class="obfuscator">.nosp@m.</span>e.gu<span class="obfuscator">.nosp@m.</span>illou<span class="obfuscator">.nosp@m.</span>@lip<span class="obfuscator">.nosp@m.</span>6.fr</a> </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>September 2016.</dd></dl>
-<p>This package computes the list of extremum-saddle pairs and computes the number of pairs as a function of persistence (i.e. the number of pairs whose persistence is higher than a threshold).</p>
+<p>This package takes a <a class="el" href="namespacettk.html#aab8bba05f97023f08b0a26d1b3598555">ttk::DiagramType</a> as input and computes the number of pairs as a function of persistence (i.e. the number of pairs whose persistence is higher than a threshold).</p>
 <p >These curves provide useful visual clues in order to fine-tune persistence simplification thresholds.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="ttkPersistenceCurve_8cpp.html">ttkPersistenceCurve.cpp</a> for a usage example.</dd></dl>
 <p><b>Online</b> <b>examples:</b> <br  />
@@ -225,8 +199,26 @@ Julien Tierny <a href="#" onclick="location.href='mai'+'lto:'+'jul'+'ie'+'n.t'+'
  </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00044">44</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00039">39</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ae338bcd61166d54b21ea63f60defbf25" name="ae338bcd61166d54b21ea63f60defbf25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae338bcd61166d54b21ea63f60defbf25">&#9670;&nbsp;</a></span>PlotType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classttk_1_1PersistenceCurve.html#ae338bcd61166d54b21ea63f60defbf25">ttk::PersistenceCurve::PlotType</a> =  std::vector&lt;std::pair&lt;double, <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a>&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Plot of (Persistence, Number of Pairs) </p>
+
+<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00046">46</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adf5008509d09cbfd4692eb94d24e60ce" name="adf5008509d09cbfd4692eb94d24e60ce"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf5008509d09cbfd4692eb94d24e60ce">&#9670;&nbsp;</a></span>PersistenceCurve()</h2>
 
@@ -242,30 +234,28 @@ Julien Tierny <a href="#" onclick="location.href='mai'+'lto:'+'jul'+'ie'+'n.t'+'
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8cpp_source.html#l00003">3</a> of file <a class="el" href="PersistenceCurve_8cpp_source.html">PersistenceCurve.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8cpp_source.html#l00004">4</a> of file <a class="el" href="PersistenceCurve_8cpp_source.html">PersistenceCurve.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad233869ba71d8ead6d8d041a78329372" name="ad233869ba71d8ead6d8d041a78329372"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad233869ba71d8ead6d8d041a78329372">&#9670;&nbsp;</a></span>computePersistencePlot()</h2>
+<a id="a2de0fce563e3be33ac79f0514020ae88" name="a2de0fce563e3be33ac79f0514020ae88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2de0fce563e3be33ac79f0514020ae88">&#9670;&nbsp;</a></span>execute()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalarType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int ttk::PersistenceCurve::computePersistencePlot </td>
+          <td class="memname">int ttk::PersistenceCurve::execute </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; std::tuple&lt; <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a>, <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a>, scalarType &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>pairs</em>, </td>
+          <td class="paramtype">std::array&lt; <a class="el" href="classttk_1_1PersistenceCurve.html#ae338bcd61166d54b21ea63f60defbf25">PlotType</a>, 4 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plots</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; std::pair&lt; scalarType, <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>plot</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacettk.html#aab8bba05f97023f08b0a26d1b3598555">DiagramType</a> &amp;&#160;</td>
+          <td class="paramname"><em>diagram</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -275,401 +265,28 @@ template&lt;typename scalarType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00112">112</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
+<p>Compute the Persistence Curve from the input Diagram. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">plots</td><td>Array of 4 PlotTypes: minimum-saddle plot, saddle-saddle plot, saddle-maximum plot and all pairs plot </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">diagram</td><td>Input Persistence Diagram</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success </dd></dl>
 
-</div>
-</div>
-<a id="a09a3ab45743b0a30adeadc6ba3bba3dd" name="a09a3ab45743b0a30adeadc6ba3bba3dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09a3ab45743b0a30adeadc6ba3bba3dd">&#9670;&nbsp;</a></span>execute()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalarType , class triangulationType &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">int ttk::PersistenceCurve::execute </td>
-          <td>(</td>
-          <td class="paramtype">const scalarType *&#160;</td>
-          <td class="paramname"><em>inputScalars</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const size_t&#160;</td>
-          <td class="paramname"><em>scalarsMTime</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> *&#160;</td>
-          <td class="paramname"><em>inputOffsets</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const triangulationType *&#160;</td>
-          <td class="paramname"><em>triangulation</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly in the absence of the VTK wrapper, <a class="el" href="namespacettk.html#a795fd9ff680537ecd096901f4bc133bc" title="Precondition an order array to be consumed by the base layer API.">ttk::preconditionOrderArray()</a> needs to be called to fill the <code>inputOffsets</code> buffer prior to any computation (the VTK wrapper already includes a mecanism to automatically generate such a preconditioned buffer). </dd></dl>
-<dl class="section see"><dt>See also</dt><dd>examples/c++/main.cpp for an example use. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00131">131</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
-
-</div>
-</div>
-<a id="a8f4c26d6b15fb74659231adbe6ea55db" name="a8f4c26d6b15fb74659231adbe6ea55db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f4c26d6b15fb74659231adbe6ea55db">&#9670;&nbsp;</a></span>preconditionTriangulation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ttk::PersistenceCurve::preconditionTriangulation </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classttk_1_1AbstractTriangulation.html">AbstractTriangulation</a> *const&#160;</td>
-          <td class="paramname"><em>triangulation</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00074">74</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
-
-</div>
-</div>
-<a id="afa2239ffbf3469f015a91815df6a9c76" name="afa2239ffbf3469f015a91815df6a9c76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa2239ffbf3469f015a91815df6a9c76">&#9670;&nbsp;</a></span>setComputeSaddleConnectors()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ttk::PersistenceCurve::setComputeSaddleConnectors </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00049">49</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
-
-</div>
-</div>
-<a id="a1408fc47bee1cffdf1e8855b721fabe2" name="a1408fc47bee1cffdf1e8855b721fabe2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1408fc47bee1cffdf1e8855b721fabe2">&#9670;&nbsp;</a></span>setOutputCTPlot()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ttk::PersistenceCurve::setOutputCTPlot </td>
-          <td>(</td>
-          <td class="paramtype">void *const&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00093">93</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
-
-</div>
-</div>
-<a id="a2291ed112ab8694e2894e02e41fd008a" name="a2291ed112ab8694e2894e02e41fd008a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2291ed112ab8694e2894e02e41fd008a">&#9670;&nbsp;</a></span>setOutputJTPlot()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ttk::PersistenceCurve::setOutputJTPlot </td>
-          <td>(</td>
-          <td class="paramtype">void *const&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00087">87</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
-
-</div>
-</div>
-<a id="a28fb6c20e1fcf49f09002677fb0a341c" name="a28fb6c20e1fcf49f09002677fb0a341c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28fb6c20e1fcf49f09002677fb0a341c">&#9670;&nbsp;</a></span>setOutputMSCPlot()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ttk::PersistenceCurve::setOutputMSCPlot </td>
-          <td>(</td>
-          <td class="paramtype">void *const&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00096">96</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
-
-</div>
-</div>
-<a id="ae4174ced43d7c8c47cdd8ab45a66d005" name="ae4174ced43d7c8c47cdd8ab45a66d005"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4174ced43d7c8c47cdd8ab45a66d005">&#9670;&nbsp;</a></span>setOutputSTPlot()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ttk::PersistenceCurve::setOutputSTPlot </td>
-          <td>(</td>
-          <td class="paramtype">void *const&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00090">90</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a723f09e53d5932bc182f5e1b8505f29a" name="a723f09e53d5932bc182f5e1b8505f29a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a723f09e53d5932bc182f5e1b8505f29a">&#9670;&nbsp;</a></span>ComputeSaddleConnectors</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ttk::PersistenceCurve::ComputeSaddleConnectors {false}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00105">105</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
-
-</div>
-</div>
-<a id="a4687f0ce9d5b88453c3ab157479ea84f" name="a4687f0ce9d5b88453c3ab157479ea84f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4687f0ce9d5b88453c3ab157479ea84f">&#9670;&nbsp;</a></span>contourTree_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classttk_1_1ftm_1_1FTMTreePP.html">ftm::FTMTreePP</a> ttk::PersistenceCurve::contourTree_ {}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00106">106</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
-
-</div>
-</div>
-<a id="a01984dca0e49a34702de8b2382dc7192" name="a01984dca0e49a34702de8b2382dc7192"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01984dca0e49a34702de8b2382dc7192">&#9670;&nbsp;</a></span>CTPlot_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* ttk::PersistenceCurve::CTPlot_ {}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00103">103</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
-
-</div>
-</div>
-<a id="a38091b2baaabe8c1c4dcf2bbffdd71a3" name="a38091b2baaabe8c1c4dcf2bbffdd71a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38091b2baaabe8c1c4dcf2bbffdd71a3">&#9670;&nbsp;</a></span>dcg_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classttk_1_1dcg_1_1DiscreteGradient.html">dcg::DiscreteGradient</a> ttk::PersistenceCurve::dcg_ {}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00107">107</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
-
-</div>
-</div>
-<a id="a62004c059c996ba03d6d07da2d76e838" name="a62004c059c996ba03d6d07da2d76e838"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62004c059c996ba03d6d07da2d76e838">&#9670;&nbsp;</a></span>JTPlot_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* ttk::PersistenceCurve::JTPlot_ {}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00101">101</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
-
-</div>
-</div>
-<a id="ad76d8d8880162a9e442517003e104b65" name="ad76d8d8880162a9e442517003e104b65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad76d8d8880162a9e442517003e104b65">&#9670;&nbsp;</a></span>MSCPlot_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* ttk::PersistenceCurve::MSCPlot_ {}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00104">104</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
-
-</div>
-</div>
-<a id="a6d8f4f9e8ca6aff27fd185ea47f9d317" name="a6d8f4f9e8ca6aff27fd185ea47f9d317"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d8f4f9e8ca6aff27fd185ea47f9d317">&#9670;&nbsp;</a></span>STPlot_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* ttk::PersistenceCurve::STPlot_ {}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8h_source.html#l00102">102</a> of file <a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PersistenceCurve_8cpp_source.html#l00008">8</a> of file <a class="el" href="PersistenceCurve_8cpp_source.html">PersistenceCurve.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceCurve/<a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a></li>
-<li>/data/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceCurve/<a class="el" href="PersistenceCurve_8cpp_source.html">PersistenceCurve.cpp</a></li>
+<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceCurve/<a class="el" href="PersistenceCurve_8h_source.html">PersistenceCurve.h</a></li>
+<li>/home/julien/Pro/git/github/tierny/private/ttk-tierny/core/base/persistenceCurve/<a class="el" href="PersistenceCurve_8cpp_source.html">PersistenceCurve.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 23 2022 11:08:22 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Generated on Sat Nov 5 2022 16:05:56 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
 </small></address>
 </body>
 </html>

@@ -29,7 +29,7 @@ var searchData=
   ['resumeprogressive_5f_26',['resumeProgressive_',['../classttk_1_1ProgressiveTopology.html#a332dabaf68f2ea70b56e9204a68d6c46',1,'ttk::ProgressiveTopology']]],
   ['returnsaddleconnectors_27',['ReturnSaddleConnectors',['../classttk_1_1dcg_1_1DiscreteGradient.html#a394ae0b0aeba645339e99f16abec3328',1,'ttk::dcg::DiscreteGradient::ReturnSaddleConnectors()'],['../classttk_1_1MorseSmaleComplex.html#aeb0be854a2492ba321259443b10cae0a',1,'ttk::MorseSmaleComplex::ReturnSaddleConnectors()']]],
   ['reverseprojection_28',['reverseProjection',['../structttk_1_1SurfaceGeometrySmoother_1_1ProjectionResult.html#a91808c8d493db9f7e003c94bbb853037',1,'ttk::SurfaceGeometrySmoother::ProjectionResult']]],
-  ['right_5f_29',['right_',['../classttk_1_1KDTree.html#a8454c119d4ad7f6f91d66560b326b852',1,'ttk::KDTree']]],
+  ['right_5f_29',['right_',['../classttk_1_1KDTree.html#ada281593b52119ea9c4abaf10869ebdf',1,'ttk::KDTree']]],
   ['rootid_5f_30',['rootId_',['../classttk_1_1RangeDrivenOctree.html#a042373b4af905e220bfcbdb7279d6a5f',1,'ttk::RangeDrivenOctree']]],
   ['roots_31',['roots',['../structttk_1_1cf_1_1TreeData.html#aaca7865fb8bccab4c32133a4305cb628',1,'ttk::cf::TreeData::roots()'],['../structttk_1_1ftm_1_1TreeData.html#adfd05dc46c0138964ae2e714ef85f66d',1,'ttk::ftm::TreeData::roots()']]],
   ['rowsize_32',['rowSize',['../classttk_1_1AssignmentSolver.html#a17db13c99431c76bd80d545223066114',1,'ttk::AssignmentSolver']]]

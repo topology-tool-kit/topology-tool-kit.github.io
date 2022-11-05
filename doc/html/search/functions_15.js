@@ -22,7 +22,7 @@ var searchData=
   ['updateindicators_19',['updateIndicators',['../classttk_1_1MetricDistortion.html#a30233b169b87c11251abc395a0b8e96f',1,'ttk::MetricDistortion']]],
   ['updatelinkpolarity_20',['updateLinkPolarity',['../classttk_1_1ProgressiveTopology.html#af2df2020d8ce36bc1f30d8e2564df189',1,'ttk::ProgressiveTopology']]],
   ['updatelinkpolarityponctual_21',['updateLinkPolarityPonctual',['../classttk_1_1MultiresTopology.html#aff2c6280654331db3abfb637db9ab071',1,'ttk::MultiresTopology']]],
-  ['updateminsubweight_22',['updateMinSubweight',['../classttk_1_1KDTree.html#a11cdc79af234e11a4c54ac5c7957dfec',1,'ttk::KDTree']]],
+  ['updateminsubweight_22',['updateMinSubweight',['../classttk_1_1KDTree.html#ac9f7dccd4e028bc3743252667ec88bc0',1,'ttk::KDTree']]],
   ['updatenodesandscalars_23',['updateNodesAndScalars',['../classttk_1_1MergeTreeBarycenter.html#a1d3a3ce085064da399ee985e142c7459',1,'ttk::MergeTreeBarycenter']]],
   ['updateprogress_24',['updateProgress',['../classttk_1_1AbstractTriangulation.html#a571bca61294f97c3997a76a9b5c93333',1,'ttk::AbstractTriangulation::updateProgress()'],['../classttk_1_1Wrapper.html#aa544b218e38be0342553d4bd00166a59',1,'ttk::Wrapper::updateProgress()']]],
   ['updatepropagation_25',['updatePropagation',['../classttk_1_1ApproximateTopology.html#a8e95794033a0875a3d9f7b8aff07e825',1,'ttk::ApproximateTopology::updatePropagation()'],['../classttk_1_1ProgressiveTopology.html#a7a178f2a2015703613ab101b18a9b20a',1,'ttk::ProgressiveTopology::updatePropagation()'],['../classttk_1_1ApproximateTopology.html#a8229d5615c6c183b809b0b1e38383243',1,'ttk::ApproximateTopology::updatePropagation()']]],
@@ -32,6 +32,6 @@ var searchData=
   ['updatesegmentation_29',['updateSegmentation',['../classttk_1_1cf_1_1MergeTree.html#ae99edc27511728c2758621a6c0c0b768',1,'ttk::cf::MergeTree']]],
   ['updatethreadnumber_30',['UpdateThreadNumber',['../classttkAlgorithm.html#acf7ad13c91f4a836c17d12e78432edf2',1,'ttkAlgorithm']]],
   ['updatetree_31',['updateTree',['../classttkContourForests.html#a94a42a2f648ed8c30c50800d86dc60b4',1,'ttkContourForests']]],
-  ['updateweight_32',['updateWeight',['../classttk_1_1KDTree.html#a442588f1e4afc4572b2a89f39b497f0f',1,'ttk::KDTree']]],
+  ['updateweight_32',['updateWeight',['../classttk_1_1KDTree.html#a19ded7c2332fbc725828bca6479cb687',1,'ttk::KDTree']]],
   ['upreserve_33',['upReserve',['../classttk_1_1cf_1_1Interface.html#a0d4d3aa7748c9a01aaad60a00767364d',1,'ttk::cf::Interface']]]
 ];

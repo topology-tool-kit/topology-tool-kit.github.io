@@ -8,5 +8,6 @@ var searchData=
   ['bottleneckdistance_2eh_5',['BottleneckDistance.h',['../BottleneckDistance_8h.html',1,'']]],
   ['boundingvolumehierarchy_2ecpp_6',['BoundingVolumeHierarchy.cpp',['../BoundingVolumeHierarchy_8cpp.html',1,'']]],
   ['boundingvolumehierarchy_2eh_7',['BoundingVolumeHierarchy.h',['../BoundingVolumeHierarchy_8h.html',1,'']]],
-  ['buildweights_2eh_8',['buildWeights.h',['../buildWeights_8h.html',1,'']]]
+  ['branchmappingdistance_2ecpp_8',['BranchMappingDistance.cpp',['../BranchMappingDistance_8cpp.html',1,'']]],
+  ['branchmappingdistance_2eh_9',['BranchMappingDistance.h',['../BranchMappingDistance_8h.html',1,'']]]
 ];
