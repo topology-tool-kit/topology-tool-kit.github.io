@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.2">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.2">
     
     
       
@@ -1174,6 +1174,9 @@ likely to imply transformations through other clusters present along the cycle.<
 <span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;PersistentGeneratorsHouseholdAnalysis_points.vtp&quot;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">kMeans1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 <span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;PersistentGeneratorsHouseholdAnalysis_ripsComplex.vtu&quot;</span><span class="p">,</span> <span class="n">tTKRipsComplex1</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
+<p>To run the above Python script, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
+<div class="highlight"><pre><span></span><code>pvpython python/persistentGenerators_householdAnalysis.py
+</code></pre></div></p>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/household_part1_ID_daily.csv">household_part1_ID_daily.csv</a>: A csv file containing the high-dimensional data.</li>
