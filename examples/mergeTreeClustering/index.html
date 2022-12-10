@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.2">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.10">
     
     
       
@@ -17,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.9f9400aa.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -108,6 +108,7 @@
     
       <form class="md-header__option" data-md-component="palette">
         
+          
           
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
@@ -1162,35 +1163,9 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.
 <span class="normal">139</span>
 <span class="normal">140</span>
 <span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">142</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="c1"># paraview 5.9 VS 5.10 compatibility ===========================================</span>
-<span class="k">def</span> <span class="nf">ThresholdBetween</span><span class="p">(</span><span class="n">threshold</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># paraview 5.9</span>
-        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="c1"># paraview 5.10</span>
-        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
-        <span class="n">threshold</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="n">lower</span>
-        <span class="n">threshold</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="n">upper</span>
-
-
-<span class="c1"># end of comphatibility ========================================================</span>
 
 <span class="c1"># create a new &#39;TTK CinemaReader&#39;</span>
 <span class="n">tTKCinemaReader1</span> <span class="o">=</span> <span class="n">TTKCinemaReader</span><span class="p">(</span><span class="n">DatabasePath</span><span class="o">=</span><span class="s2">&quot;./Isabel.cdb&quot;</span><span class="p">)</span>
@@ -1204,7 +1179,6 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.
 <span class="n">tTKMergeandContourTreeFTM26</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;velocityMag&quot;</span><span class="p">]</span>
 <span class="n">tTKMergeandContourTreeFTM26</span><span class="o">.</span><span class="n">InputOffsetField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;velocityMag&quot;</span><span class="p">]</span>
 <span class="n">tTKMergeandContourTreeFTM26</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s2">&quot;Join Tree&quot;</span>
-<span class="n">tTKMergeandContourTreeFTM26</span><span class="o">.</span><span class="n">UseAllCores</span> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="c1"># create a new &#39;Group Datasets&#39;</span>
 <span class="n">mt_JT_all</span> <span class="o">=</span> <span class="n">GroupDatasets</span><span class="p">(</span>
@@ -1220,7 +1194,6 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.
 <span class="n">tTKMergeandContourTreeFTM25</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;velocityMag&quot;</span><span class="p">]</span>
 <span class="n">tTKMergeandContourTreeFTM25</span><span class="o">.</span><span class="n">InputOffsetField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;velocityMag&quot;</span><span class="p">]</span>
 <span class="n">tTKMergeandContourTreeFTM25</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s2">&quot;Split Tree&quot;</span>
-<span class="n">tTKMergeandContourTreeFTM25</span><span class="o">.</span><span class="n">UseAllCores</span> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="c1"># create a new &#39;Group Datasets&#39;</span>
 <span class="n">mT_all</span> <span class="o">=</span> <span class="n">GroupDatasets</span><span class="p">(</span>
@@ -1318,12 +1291,16 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold33</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">maskPoints1</span><span class="p">)</span>
 <span class="n">threshold33</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;treeID&quot;</span><span class="p">]</span>
-<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold33</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">11.0</span><span class="p">)</span>
+<span class="n">threshold33</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+<span class="n">threshold33</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">threshold33</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">11.0</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold34</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">maskPoints1</span><span class="p">)</span>
 <span class="n">threshold34</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;treeID&quot;</span><span class="p">]</span>
-<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold34</span><span class="p">,</span> <span class="mf">12.0</span><span class="p">,</span> <span class="mf">14.0</span><span class="p">)</span>
+<span class="n">threshold34</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+<span class="n">threshold34</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">12.0</span>
+<span class="n">threshold34</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">14.0</span>
 
 <span class="c1"># save the output</span>
 <span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;MDS_trees.csv&quot;</span><span class="p">,</span> <span class="n">threshold33</span><span class="p">)</span>
@@ -1423,10 +1400,10 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.39f04ddb.min.js"></script>
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>

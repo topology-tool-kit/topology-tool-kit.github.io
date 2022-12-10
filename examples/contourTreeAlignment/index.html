@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.2">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.10">
     
     
       
@@ -17,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.9f9400aa.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -108,6 +108,7 @@
     
       <form class="md-header__option" data-md-component="palette">
         
+          
           
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
@@ -1131,7 +1132,10 @@ The extraction is done using the <a href="https://topology-tool-kit.github.io/do
 <span class="normal">100</span>
 <span class="normal">101</span>
 <span class="normal">102</span>
-<span class="normal">103</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
@@ -1153,6 +1157,7 @@ The extraction is done using the <a href="https://topology-tool-kit.github.io/do
 <span class="p">)</span>
 <span class="n">ttkTopologicalSimplificationByPersistence</span><span class="o">.</span><span class="n">InputArray</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;nrrd&quot;</span><span class="p">]</span>
 <span class="n">ttkTopologicalSimplificationByPersistence</span><span class="o">.</span><span class="n">PersistenceThreshold</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">ttkTopologicalSimplificationByPersistence</span><span class="o">.</span><span class="n">ThresholdIsAbsolute</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="c1"># create a new &#39;TTK Merge and Contour Tree (FTM)&#39;</span>
 <span class="n">ttkMergeandContourTreeFTM</span> <span class="o">=</span> <span class="n">TTKMergeandContourTreeFTM</span><span class="p">(</span>
@@ -1168,6 +1173,7 @@ The extraction is done using the <a href="https://topology-tool-kit.github.io/do
 <span class="n">contourTreeAlignment</span><span class="o">.</span><span class="n">Regionsizearray</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;RegionSize&quot;</span><span class="p">]</span>
 <span class="n">contourTreeAlignment</span><span class="o">.</span><span class="n">SegmentationIDarrayforCT</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;SegmentationId&quot;</span><span class="p">]</span>
 <span class="n">contourTreeAlignment</span><span class="o">.</span><span class="n">SegmentIDarrayforsegmentation</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;Scalar&quot;</span><span class="p">]</span>
+<span class="n">contourTreeAlignment</span><span class="o">.</span><span class="n">Seed</span> <span class="o">=</span> <span class="mi">35</span>
 
 <span class="c1"># create a new &#39;TTK PlanarGraphLayout&#39;</span>
 <span class="n">alignmentLayout</span> <span class="o">=</span> <span class="n">TTKPlanarGraphLayout</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">contourTreeAlignment</span><span class="p">)</span>
@@ -1183,6 +1189,7 @@ The extraction is done using the <a href="https://topology-tool-kit.github.io/do
 <span class="n">alignmentEdges</span><span class="o">.</span><span class="n">Function</span> <span class="o">=</span> <span class="s2">&quot;iHat*Layout_Y+jHat*Scalar*3&quot;</span>
 
 <span class="c1"># create a query selection</span>
+<span class="n">Show</span><span class="p">()</span>
 <span class="n">QuerySelect</span><span class="p">(</span>
     <span class="n">QueryString</span><span class="o">=</span><span class="s2">&quot;(id == 16)&quot;</span><span class="p">,</span> <span class="n">Source</span><span class="o">=</span><span class="n">alignmentEdges</span><span class="p">,</span> <span class="n">FieldType</span><span class="o">=</span><span class="s2">&quot;POINT&quot;</span><span class="p">,</span> <span class="n">InsideOut</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span>
@@ -1335,10 +1342,10 @@ The extraction is done using the <a href="https://topology-tool-kit.github.io/do
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.39f04ddb.min.js"></script>
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>

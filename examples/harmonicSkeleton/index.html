@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.2">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.10">
     
     
       
@@ -17,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.9f9400aa.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -108,6 +108,7 @@
     
       <form class="md-header__option" data-md-component="palette">
         
+          
           
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
@@ -1162,35 +1163,10 @@ From the created ids the bottom middle of the platform, both wing tips, the tip 
 <span class="normal">140</span>
 <span class="normal">141</span>
 <span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">143</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
 <span class="c1">#### import the simple module from the paraview</span>
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="c1"># paraview 5.9 VS 5.10 compatibility ===========================================</span>
-<span class="k">def</span> <span class="nf">ThresholdBetween</span><span class="p">(</span><span class="n">threshold</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># paraview 5.9</span>
-        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="c1"># paraview 5.10</span>
-        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
-        <span class="n">threshold</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="n">lower</span>
-        <span class="n">threshold</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="n">upper</span>
-
-
-<span class="c1"># end of comphatibility ========================================================</span>
 
 <span class="c1"># load the pegasus dataset by creating a&#39;XML Unstructured Grid Reader&#39;</span>
 <span class="n">pegasusvtu</span> <span class="o">=</span> <span class="n">XMLUnstructuredGridReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;pegasus.vtu&quot;</span><span class="p">])</span>
@@ -1212,6 +1188,7 @@ From the created ids the bottom middle of the platform, both wing tips, the tip 
 <span class="n">resampleWithDataset1</span><span class="o">.</span><span class="n">CellLocator</span> <span class="o">=</span> <span class="s2">&quot;Static Cell Locator&quot;</span>
 
 <span class="c1"># create a new &#39;Extract Selection&#39;, creating its query first and clearing it afterwards</span>
+<span class="n">Show</span><span class="p">()</span>
 <span class="n">QuerySelect</span><span class="p">(</span>
     <span class="n">QueryString</span><span class="o">=</span><span class="s2">&quot;(ttkVertexScalarField == 29019)&quot;</span><span class="p">,</span>
     <span class="n">FieldType</span><span class="o">=</span><span class="s2">&quot;POINT&quot;</span><span class="p">,</span>
@@ -1296,7 +1273,9 @@ From the created ids the bottom middle of the platform, both wing tips, the tip 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
 <span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;Persistence&quot;</span><span class="p">]</span>
-<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold1</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mi">999999999</span><span class="p">)</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">threshold1</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mi">999999999</span>
 
 <span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
 <span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span>
@@ -1423,10 +1402,10 @@ in VTK file format (bottom right view, above screenshot). You are free to change
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.39f04ddb.min.js"></script>
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>
