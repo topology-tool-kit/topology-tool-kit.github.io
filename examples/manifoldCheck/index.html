@@ -8,8 +8,14 @@
       
       
       
+      
+        <link rel="prev" href="../karhunenLoveDigits64Dimensions/">
+      
+      
+        <link rel="next" href="../mergeTreeClustering/">
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.10">
     
     
       
@@ -17,11 +23,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0d440cfe.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
-        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -109,8 +114,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
           
         
@@ -144,7 +147,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -453,7 +456,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -1060,6 +1063,7 @@
                   
 
 
+
 <h1 id="manifold-check">Manifold Check<a class="headerlink" href="#manifold-check" title="Permanent link">&para;</a></h1>
 <p><img alt="Manifold check screenshot" src="https://topology-tool-kit.github.io/img/gallery/manifoldCheck.jpg" /></p>
 <h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
@@ -1068,7 +1072,7 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
 <p>On each of the three geometries, <a href="https://topology-tool-kit.github.io/doc/html/classttkManifoldCheck.html">ManifoldCheck</a> is executed. This filters adds link numbers to vertices and cells, which can be used to detect and extract non-manifold vertices (left), edges (middle), and faces (right).</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>paraview --state<span class="o">=</span>states/manifoldChecks.pvsm
+<div class="highlight"><pre><span></span><code>paraview<span class="w"> </span>--state<span class="o">=</span>states/manifoldChecks.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <h3 id="non-manifold-vertices">Non-manifold Vertices<a class="headerlink" href="#non-manifold-vertices" title="Permanent link">&para;</a></h3>
@@ -1133,7 +1137,7 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
 <span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;manifoldCheck0_non_manifold.vtu&quot;</span><span class="p">,</span> <span class="n">threshold1</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>To run the above Python script, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>pvpython python/manifoldCheck0.py
+<div class="highlight"><pre><span></span><code>pvpython<span class="w"> </span>python/manifoldCheck0.py
 </code></pre></div></p>
 <h3 id="non-manifold-edges">Non-manifold Edges<a class="headerlink" href="#non-manifold-edges" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1189,7 +1193,7 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
 <span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;manifoldCheck1_non_manifold.vtu&quot;</span><span class="p">,</span> <span class="n">threshold2</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>To run the above Python script, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>pvpython python/manifoldCheck1.py
+<div class="highlight"><pre><span></span><code>pvpython<span class="w"> </span>python/manifoldCheck1.py
 </code></pre></div></p>
 <h3 id="non-manifold-faces">Non-manifold Faces<a class="headerlink" href="#non-manifold-faces" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1295,7 +1299,7 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
 <span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;manifoldCheck2_non_manifold.vtu&quot;</span><span class="p">,</span> <span class="n">threshold5</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>To run the above Python script, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>pvpython python/manifoldCheck2.py
+<div class="highlight"><pre><span></span><code>pvpython<span class="w"> </span>python/manifoldCheck2.py
 </code></pre></div></p>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1328,42 +1332,6 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../karhunenLoveDigits64Dimensions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Karhunen-Love Digits 64-Dimensions" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Karhunen-Love Digits 64-Dimensions
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../mergeTreeClustering/" class="md-footer__link md-footer__link--next" aria-label="Next: Merge Tree Clustering" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Merge Tree Clustering
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -1385,10 +1353,10 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../assets/javascripts/bundle.6df46069.min.js"></script>
       
     
   </body>
