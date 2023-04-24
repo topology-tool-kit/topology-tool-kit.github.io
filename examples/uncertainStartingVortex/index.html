@@ -8,8 +8,12 @@
       
       
       
+      
+        <link rel="prev" href="../tribute/">
+      
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.2">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
@@ -17,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.9f9400aa.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7a7fce14.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
-        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -78,7 +81,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="TTK Examples" class="md-header__button md-logo" aria-label="TTK Examples" data-md-component="logo">
       
@@ -108,7 +113,6 @@
     
       <form class="md-header__option" data-md-component="palette">
         
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
           
@@ -143,7 +147,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -466,6 +470,21 @@
     <li class="md-nav__item">
       <a href="../mergeTreeClustering/" class="md-nav__link">
         Merge Tree Clustering
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mergeTreeFeatureTracking/" class="md-nav__link">
+        Merge Tree Feature Tracking
       </a>
     </li>
   
@@ -842,7 +861,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -1021,7 +1040,7 @@ allowfullscreen></iframe>
 <p>At last, the <a href="https://topology-tool-kit.github.io/doc/html/classttkScalarFieldCriticalPoints.html">ScalarFieldCriticalPoints</a> (top left view, above screenshot) are computed for the smoothed realization (both left views show them as spheres). The critial points extracted from this random realization are indeed located within the regions predicted by the <a href="https://topology-tool-kit.github.io/doc/html/classttkMandatoryCriticalPoints.html">MandatoryCriticalPoints</a>.</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>paraview --state<span class="o">=</span>states/uncertainStartingVortex.pvsm
+<div class="highlight"><pre><span></span><code>paraview<span class="w"> </span>--state<span class="o">=</span>states/uncertainStartingVortex.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1101,29 +1120,9 @@ allowfullscreen></iframe>
 <span class="normal">75</span>
 <span class="normal">76</span>
 <span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">78</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="c1"># paraview 5.9 VS 5.10 compatibility ===========================================</span>
-<span class="k">def</span> <span class="nf">ThresholdBetween</span><span class="p">(</span><span class="n">threshold</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># paraview 5.9</span>
-        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdRange</span> <span class="o">=</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="c1"># paraview 5.10</span>
-        <span class="n">threshold</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
-        <span class="n">threshold</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="n">lower</span>
-        <span class="n">threshold</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="n">upper</span>
-
-
-<span class="c1"># end of comphatibility ========================================================</span>
 
 <span class="c1"># create a new &#39;XML Image Data Reader&#39;</span>
 <span class="n">uncertainStartingVortexvti</span> <span class="o">=</span> <span class="n">XMLImageDataReader</span><span class="p">(</span>
@@ -1141,12 +1140,16 @@ allowfullscreen></iframe>
 <span class="c1"># create a new &#39;Threshold&#39; for the Minimas</span>
 <span class="n">threshold6</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKMandatoryCriticalPoints1</span><span class="p">)</span>
 <span class="n">threshold6</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;MinimumComponents&quot;</span><span class="p">]</span>
-<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold6</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="n">threshold6</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+<span class="n">threshold6</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">threshold6</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">2.0</span>
 
 <span class="c1"># create a new &#39;Threshold&#39; for the maximas</span>
 <span class="n">threshold5</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMandatoryCriticalPoints1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="n">threshold5</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;MaximumComponents&quot;</span><span class="p">]</span>
-<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)</span>
+<span class="n">threshold5</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+<span class="n">threshold5</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">threshold5</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">8.0</span>
 
 <span class="c1"># create a new &#39;Random Attributes&#39;</span>
 <span class="n">randomAttributes1</span> <span class="o">=</span> <span class="n">RandomAttributes</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">uncertainStartingVortexvti</span><span class="p">)</span>
@@ -1168,12 +1171,16 @@ allowfullscreen></iframe>
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">threshold2</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
 <span class="n">threshold2</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;PairIdentifier&quot;</span><span class="p">]</span>
-<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">threshold2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">185374.0</span><span class="p">)</span>
+<span class="n">threshold2</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+<span class="n">threshold2</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">threshold2</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">185374.0</span>
 
 <span class="c1"># create a new &#39;Threshold&#39;</span>
 <span class="n">persistenceThreshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold2</span><span class="p">)</span>
 <span class="n">persistenceThreshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;Persistence&quot;</span><span class="p">]</span>
-<span class="n">ThresholdBetween</span><span class="p">(</span><span class="n">persistenceThreshold1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">1.75475390406744</span><span class="p">)</span>
+<span class="n">persistenceThreshold1</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
+<span class="n">persistenceThreshold1</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">persistenceThreshold1</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">1.75475390406744</span>
 
 <span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
 <span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span>
@@ -1193,7 +1200,7 @@ allowfullscreen></iframe>
 <span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;MandatoryCriticalMaxima.csv&quot;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMandatoryCriticalPoints1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
 <p>To run the above Python script, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>pvpython python/uncertainStartingVortex.py
+<div class="highlight"><pre><span></span><code>pvpython<span class="w"> </span>python/uncertainStartingVortex.py
 </code></pre></div></p>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1229,27 +1236,6 @@ in VTK file format (bottom right view, above screenshot). You are free to change
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../tribute/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tribute to Edelsbrunner and Harer&#39;s book" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Tribute to Edelsbrunner and Harer's book
-            </div>
-          </div>
-        </a>
-      
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -1271,10 +1257,10 @@ in VTK file format (bottom right view, above screenshot). You are free to change
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.39f04ddb.min.js"></script>
+      <script src="../assets/javascripts/bundle.407015b8.min.js"></script>
       
     
   </body>

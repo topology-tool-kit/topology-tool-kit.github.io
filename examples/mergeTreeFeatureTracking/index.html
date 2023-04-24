@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../persistenceClustering3/">
+        <link rel="prev" href="../mergeTreeClustering/">
       
       
-        <link rel="next" href="../persistenceClusteringGallery/">
+        <link rel="next" href="../mergeTreeTemporalReduction/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
-        <title>Persistence Clustering 4 - TTK Examples</title>
+        <title>Merge Tree Feature Tracking - TTK Examples</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#persistence-clustering-4" class="md-skip">
+        <a href="#merge-tree-feature-tracking" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Persistence Clustering 4
+              Merge Tree Feature Tracking
             
           </span>
         </div>
@@ -483,11 +483,87 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../mergeTreeFeatureTracking/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Merge Tree Feature Tracking
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Merge Tree Feature Tracking
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-description" class="md-nav__link">
+    Pipeline description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paraview" class="md-nav__link">
+    ParaView
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code" class="md-nav__link">
+    Python code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpython-api" class="md-nav__link">
+    C++/Python API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -633,87 +709,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Persistence Clustering 4
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../persistenceClustering4/" class="md-nav__link">
         Persistence Clustering 4
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pipeline-description" class="md-nav__link">
-    Pipeline description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#paraview" class="md-nav__link">
-    ParaView
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python-code" class="md-nav__link">
-    Python code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inputs" class="md-nav__link">
-    Inputs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outputs" class="md-nav__link">
-    Outputs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cpython-api" class="md-nav__link">
-    C++/Python API
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1026,29 +1026,17 @@
                   
 
 
-<h1 id="persistence-clustering-4">Persistence Clustering 4<a class="headerlink" href="#persistence-clustering-4" title="Permanent link">&para;</a></h1>
-<!--[![Dragon example video tutorial](https://topology-tool-kit.github.io/img/gallery/dragon.jpg)](https://youtu.be/YVk9vRKIEX8)-->
-
-<!--iframe width="100%" height="420"
-src="https://www.youtube.com/embed/YVk9vRKIEX8" frameborder="0"
-allowfullscreen></iframe-->
-
-<p><img alt="Persistence Clustering 4 Image" src="https://topology-tool-kit.github.io/img/gallery/persistenceClustering4.jpeg" /></p>
+<h1 id="merge-tree-feature-tracking">Merge Tree Feature Tracking<a class="headerlink" href="#merge-tree-feature-tracking" title="Permanent link">&para;</a></h1>
+<p><img alt="Merge Tree Feature Tracking example Image" src="https://topology-tool-kit.github.io/img/gallery/mergeTreeFeatureTracking.jpg" /></p>
 <h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
-<p>This pipeline is the same as the previous ones and performs a clustering by persistence on a 2D data set taken from the <a href="https://scikit-learn.org/stable/modules/clustering.html">scikit-learn examples</a>. Please check out the <a href="https://topology-tool-kit.github.io/examples/karhunenLoveDigits64Dimensions/">Karhunen-Love Digits 64-Dimensions</a> example for an application of this pipeline on a real-life data set..</p>
-<!--This example first loads a triangle mesh from disk.-->
-<p>First, this example loads a point cloud from disk (top left view in the above screenshot), then it computes a mesh on which a density field is obtained with a Gaussian Resampling on the points (top right view in the above screenshot). This density field will be considered as the input scalar data.</p>
-<!--In a pre-processing, the mesh is smoothed and an elevation function is computed on top of it.-->
-<!--Then an elevation function is computed on it, and will be considered as the input scalar data for ou.-->
-
-<p>Next, a <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a> is computed and thresholds are applied base on persistence to maintain only the features with a persistence above a certain value. The result is a simplified persistence diagram (bottom left view in the above screenshot).</p>
-<p>The simplified persistence diagram is then used as a constraint for the <a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a> of the input scalar data, giving us a simplified data.</p>
-<p>From there a <a href="https://topology-tool-kit.github.io/doc/html/classttkMorseSmaleComplex.html">MorseSmaleComplex</a> is computed (bottom right view in the above screenshot). Finally, by using the identifier of the 2-dimension cell of the Morse Smale complex where one point lands, a cluster identifier, encoded in the AscendingManifold field in the ouput, is given to it.</p>
-<!--This simplified data is then used as the input of the computation of [ScalarFieldCriticalPoints](https://topology-tool-kit.github.io/doc/html/classttkScalarFieldCriticalPoints.html) (top left view, above screenshot) and the [ContourTree (FTM)](https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html) (bottom left view, above screenshot).-->
-
+<p>This example first loads two pairs of timesteps of an ensemble of scalar fields inside a cinema database from disk.</p>
+<p>Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">FTMTree</a> is computed on each scalar field for the Split Tree.</p>
+<p>These two pairs of timesteps are given respectively to two <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreeClustering.html">MergeTreeClustering</a> filters to compute a distance between them.</p>
+<p>In terms of visualisation, the matching between the trees of the first pair and the trees of the second pair are visualized using their planar layout and their embedding in the data.</p>
+<p>The python script computes the matchings and saves the result (for each pair of trees).</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>paraview<span class="w"> </span>--state<span class="o">=</span>states/persistenceClustering4.pvsm
+<div class="highlight"><pre><span></span><code>paraview<span class="w"> </span>--state<span class="o">=</span>states/mergeTreeFeatureTracking.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1111,85 +1099,133 @@ allowfullscreen></iframe-->
 <span class="normal">58</span>
 <span class="normal">59</span>
 <span class="normal">60</span>
-<span class="normal">61</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
-<span class="c1"># create a new &#39;CSV Reader&#39;</span>
-<span class="n">clusteringcsv</span> <span class="o">=</span> <span class="n">CSVReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;clustering4.csv&quot;</span><span class="p">])</span>
+<span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="c1"># create a new &#39;Table To Points&#39;</span>
-<span class="n">tableToPoints1</span> <span class="o">=</span> <span class="n">TableToPoints</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">clusteringcsv</span><span class="p">)</span>
-<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">XColumn</span> <span class="o">=</span> <span class="s2">&quot;X&quot;</span>
-<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">YColumn</span> <span class="o">=</span> <span class="s2">&quot;Y&quot;</span>
-<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">a2DPoints</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">tableToPoints1</span><span class="o">.</span><span class="n">KeepAllDataArrays</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># create a new &#39;TTK CinemaReader&#39;</span>
+<span class="n">tTKCinemaReader1</span> <span class="o">=</span> <span class="n">TTKCinemaReader</span><span class="p">(</span><span class="n">DatabasePath</span><span class="o">=</span><span class="s2">&quot;./Isabel.cdb&quot;</span><span class="p">)</span>
 
-<span class="c1"># create a new &#39;Gaussian Resampling&#39;</span>
-<span class="n">gaussianResampling1</span> <span class="o">=</span> <span class="n">GaussianResampling</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tableToPoints1</span><span class="p">)</span>
-<span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">ResampleField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;ignore arrays&quot;</span><span class="p">]</span>
-<span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">ResamplingGrid</span> <span class="o">=</span> <span class="p">[</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">gaussianResampling1</span><span class="o">.</span><span class="n">SplatAccumulationMode</span> <span class="o">=</span> <span class="s2">&quot;Sum&quot;</span>
+<span class="c1"># create a new &#39;TTK CinemaQuery&#39;</span>
+<span class="n">tTKCinemaQuery1</span> <span class="o">=</span> <span class="n">TTKCinemaQuery</span><span class="p">(</span><span class="n">InputTable</span><span class="o">=</span><span class="n">tTKCinemaReader1</span><span class="p">)</span>
+<span class="n">tTKCinemaQuery1</span><span class="o">.</span><span class="n">SQLStatement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT * FROM InputTable0</span>
+<span class="s2">WHERE TimeStep == 2 or TimeStep == 32&quot;&quot;&quot;</span>
 
-<span class="c1"># create a new &#39;Slice&#39;</span>
-<span class="n">slice1</span> <span class="o">=</span> <span class="n">Slice</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">gaussianResampling1</span><span class="p">)</span>
-<span class="n">slice1</span><span class="o">.</span><span class="n">SliceType</span> <span class="o">=</span> <span class="s2">&quot;Plane&quot;</span>
+<span class="c1"># create a new &#39;TTK CinemaProductReader&#39;</span>
+<span class="n">tTKCinemaProductReader1</span> <span class="o">=</span> <span class="n">TTKCinemaProductReader</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaQuery1</span><span class="p">)</span>
 
-<span class="c1"># init the &#39;Plane&#39; selected for &#39;SliceType&#39;</span>
-<span class="n">slice1</span><span class="o">.</span><span class="n">SliceType</span><span class="o">.</span><span class="n">Normal</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+<span class="c1"># create a new &#39;TTK Merge and Contour Tree (FTM)&#39;</span>
+<span class="n">tTKMergeandContourTreeFTM4</span> <span class="o">=</span> <span class="n">TTKMergeandContourTreeFTM</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaProductReader1</span><span class="p">)</span>
+<span class="n">tTKMergeandContourTreeFTM4</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;velocityMag&quot;</span><span class="p">]</span>
+<span class="n">tTKMergeandContourTreeFTM4</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s2">&quot;Split Tree&quot;</span>
 
-<span class="c1"># create a new &#39;TTK PersistenceDiagram&#39;</span>
-<span class="n">tTKPersistenceDiagram1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">slice1</span><span class="p">)</span>
-<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;SplatterValues&quot;</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;PairIdentifier&quot;</span><span class="p">]</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.1</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mi">999999999</span>
-
-<span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">persistenceThreshold0</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold1</span><span class="p">)</span>
-<span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;Persistence&quot;</span><span class="p">]</span>
-<span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
-<span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">10.0</span>
-<span class="n">persistenceThreshold0</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mi">999999999</span>
-
-<span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
-<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span>
-    <span class="n">Domain</span><span class="o">=</span><span class="n">slice1</span><span class="p">,</span> <span class="n">Constraints</span><span class="o">=</span><span class="n">persistenceThreshold0</span>
+<span class="c1"># create a new &#39;TTK BlockAggregator&#39;</span>
+<span class="n">tTKBlockAggregator1</span> <span class="o">=</span> <span class="n">TTKBlockAggregator</span><span class="p">(</span>
+    <span class="n">Input</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">tTKMergeandContourTreeFTM4</span><span class="p">,</span>
+        <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM4</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM4</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="p">]</span>
 <span class="p">)</span>
-<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;SplatterValues&quot;</span><span class="p">]</span>
+<span class="n">tTKBlockAggregator1</span><span class="o">.</span><span class="n">FlattenInput</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="c1"># create a new &#39;TTK MorseSmaleComplex&#39;</span>
-<span class="n">tTKMorseSmaleComplex1</span> <span class="o">=</span> <span class="n">TTKMorseSmaleComplex</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
-<span class="n">tTKMorseSmaleComplex1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;SplatterValues&quot;</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;Resample With Dataset&#39;</span>
-<span class="n">resampleWithDataset1</span> <span class="o">=</span> <span class="n">ResampleWithDataset</span><span class="p">(</span>
-    <span class="n">SourceDataArrays</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMorseSmaleComplex1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
-    <span class="n">DestinationMesh</span><span class="o">=</span><span class="n">tableToPoints1</span><span class="p">,</span>
+<span class="c1"># create a new &#39;TTK MergeTreeClustering&#39;</span>
+<span class="n">tTKMergeTreeClustering3</span> <span class="o">=</span> <span class="n">TTKMergeTreeClustering</span><span class="p">(</span>
+    <span class="n">Input</span><span class="o">=</span><span class="n">tTKBlockAggregator1</span><span class="p">,</span> <span class="n">OptionalInputclustering</span><span class="o">=</span><span class="kc">None</span>
 <span class="p">)</span>
+<span class="n">tTKMergeTreeClustering3</span><span class="o">.</span><span class="n">Deterministic</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">tTKMergeTreeClustering3</span><span class="o">.</span><span class="n">DimensionSpacing</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">tTKMergeTreeClustering3</span><span class="o">.</span><span class="n">DimensionToshift</span> <span class="o">=</span> <span class="s2">&quot;Y&quot;</span>
+<span class="n">tTKMergeTreeClustering3</span><span class="o">.</span><span class="n">Epsilon1</span> <span class="o">=</span> <span class="mf">20.0</span>
+<span class="n">tTKMergeTreeClustering3</span><span class="o">.</span><span class="n">Epsilon2</span> <span class="o">=</span> <span class="mf">100.0</span>
+<span class="n">tTKMergeTreeClustering3</span><span class="o">.</span><span class="n">Epsilon3</span> <span class="o">=</span> <span class="mf">100.0</span>
+<span class="n">tTKMergeTreeClustering3</span><span class="o">.</span><span class="n">PersistenceThreshold</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">tTKMergeTreeClustering3</span><span class="o">.</span><span class="n">ImportantPairs</span> <span class="o">=</span> <span class="mf">20.0</span>
+<span class="n">tTKMergeTreeClustering3</span><span class="o">.</span><span class="n">ImportantPairsSpacing</span> <span class="o">=</span> <span class="mf">20.0</span>
+<span class="n">tTKMergeTreeClustering3</span><span class="o">.</span><span class="n">NonImportantPairsProximity</span> <span class="o">=</span> <span class="mf">0.2</span>
 
-<span class="c1"># save the output(s)</span>
-<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;OutputClustering.csv&quot;</span><span class="p">,</span> <span class="n">resampleWithDataset1</span><span class="p">)</span>
+<span class="c1"># create a new &#39;TTK CinemaQuery&#39;</span>
+<span class="n">tTKCinemaQuery2</span> <span class="o">=</span> <span class="n">TTKCinemaQuery</span><span class="p">(</span><span class="n">InputTable</span><span class="o">=</span><span class="n">tTKCinemaReader1</span><span class="p">)</span>
+<span class="n">tTKCinemaQuery2</span><span class="o">.</span><span class="n">SQLStatement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT * FROM InputTable0</span>
+<span class="s2">WHERE TimeStep == 32 or TimeStep == 45&quot;&quot;&quot;</span>
+
+<span class="c1"># create a new &#39;TTK CinemaProductReader&#39;</span>
+<span class="n">tTKCinemaProductReader2</span> <span class="o">=</span> <span class="n">TTKCinemaProductReader</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaQuery2</span><span class="p">)</span>
+<span class="n">tTKCinemaProductReader2</span><span class="o">.</span><span class="n">AddFieldDataRecursively</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># create a new &#39;TTK Merge and Contour Tree (FTM)&#39;</span>
+<span class="n">tTKMergeandContourTreeFTM5</span> <span class="o">=</span> <span class="n">TTKMergeandContourTreeFTM</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaProductReader2</span><span class="p">)</span>
+<span class="n">tTKMergeandContourTreeFTM5</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;velocityMag&quot;</span><span class="p">]</span>
+<span class="n">tTKMergeandContourTreeFTM5</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s2">&quot;Split Tree&quot;</span>
+
+<span class="c1"># create a new &#39;TTK BlockAggregator&#39;</span>
+<span class="n">tTKBlockAggregator2</span> <span class="o">=</span> <span class="n">TTKBlockAggregator</span><span class="p">(</span>
+    <span class="n">Input</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">tTKMergeandContourTreeFTM5</span><span class="p">,</span>
+        <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM5</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+<span class="n">tTKBlockAggregator2</span><span class="o">.</span><span class="n">FlattenInput</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># create a new &#39;TTK MergeTreeClustering&#39;</span>
+<span class="n">tTKMergeTreeClustering4</span> <span class="o">=</span> <span class="n">TTKMergeTreeClustering</span><span class="p">(</span>
+    <span class="n">Input</span><span class="o">=</span><span class="n">tTKBlockAggregator2</span><span class="p">,</span> <span class="n">OptionalInputclustering</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+<span class="n">tTKMergeTreeClustering4</span><span class="o">.</span><span class="n">Deterministic</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">tTKMergeTreeClustering4</span><span class="o">.</span><span class="n">DimensionSpacing</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">tTKMergeTreeClustering4</span><span class="o">.</span><span class="n">DimensionToshift</span> <span class="o">=</span> <span class="s2">&quot;Y&quot;</span>
+<span class="n">tTKMergeTreeClustering4</span><span class="o">.</span><span class="n">PersistenceThreshold</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">tTKMergeTreeClustering4</span><span class="o">.</span><span class="n">ImportantPairs</span> <span class="o">=</span> <span class="mf">23.0</span>
+<span class="n">tTKMergeTreeClustering4</span><span class="o">.</span><span class="n">ImportantPairsSpacing</span> <span class="o">=</span> <span class="mf">20.0</span>
+<span class="n">tTKMergeTreeClustering4</span><span class="o">.</span><span class="n">NonImportantPairsProximity</span> <span class="o">=</span> <span class="mf">0.2</span>
+
+<span class="c1"># save the output</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;matching_T2_T32.vtm&quot;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeTreeClustering3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;matching_T32_T45.vtm&quot;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeTreeClustering4</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
 <p>To run the above Python script, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>pvpython<span class="w"> </span>python/persistenceClustering4.py
+<div class="highlight"><pre><span></span><code>pvpython<span class="w"> </span>python/mergeTreeFeatureTracking.py
 </code></pre></div></p>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/topology-tool-kit/ttk-data/blob/dev/clustering4.csv">clustering4.csv</a>: a table of 2 dimension points.</li>
+<li><a href="https://github.com/topology-tool-kit/ttk-data/tree/dev/Isabel.cdb">Isabel.cdb</a>: a cinema database containing 12 regular grids.</li>
 </ul>
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>data4Resampled.csv</code>: the output is the data resampled in CSV file format, the cluster identifier of a point is given in the AscendingManifold field.</li>
+<li><code>matching_T2_T32.vtm</code>: the output matching between timestep 2 and 32.</li>
+<li><code>matching_T32_T45.vtm</code>: the output matching between timestep 32 and 45.</li>
 </ul>
-<!-- `Segmentation.vtp`: the output Morse Smale complex in VTK file format (bottom right view, above screenshot).-->
-
 <h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkMorseSmaleComplex.html">MorseSmaleComplex</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkBlockAggregator.html">BlockAggregator</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkCinemaProductReader.html">CinemaProductReader</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkCinemaQuery.html">CinemaQuery</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkCinemaReader.html">CinemaReader</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">FTMTree</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreeClustering.html">MergeTreeClustering</a></p>
 
 
 
