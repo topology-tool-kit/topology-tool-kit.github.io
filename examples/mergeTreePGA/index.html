@@ -1,0 +1,1221 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../mergeTreeFeatureTracking/">
+      
+      
+        <link rel="next" href="../mergeTreeTemporalReduction/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.9">
+    
+    
+      
+        <title>Merge Tree Principal Geodesic Analysis - TTK Examples</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#merge-tree-principal-geodesic-analysis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TTK Examples" class="md-header__button md-logo" aria-label="TTK Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TTK Examples
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Merge Tree Principal Geodesic Analysis
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TTK Examples" class="md-nav__button md-logo" aria-label="TTK Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    TTK Examples
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Welcome to the TTK Examples!
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1manifoldLearning/" class="md-nav__link">
+        1-Manifold Learning
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1manifoldLearningCircles/" class="md-nav__link">
+        1-Manifold Learning Circles
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2manifoldLearning/" class="md-nav__link">
+        2-Manifold Learning
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BuiltInExample1/" class="md-nav__link">
+        Builtin example 1
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../builtInExample2/" class="md-nav__link">
+        Builtin example 2
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cinemaIO/" class="md-nav__link">
+        CinemaIO
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clusteringKelvinHelmholtzInstabilities/" class="md-nav__link">
+        Clustering Kelvin Helmholtz Instabilities
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compactTriangulation/" class="md-nav__link">
+        Compact Triangulation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contourTreeAlignment/" class="md-nav__link">
+        Contour Tree Alignment
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ctBones/" class="md-nav__link">
+        CT bones
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dragon/" class="md-nav__link">
+        Dragon
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geometryApproximation/" class="md-nav__link">
+        Geometry Approximation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harmonicSkeleton/" class="md-nav__link">
+        Harmonic Skeleton
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../imageProcessing/" class="md-nav__link">
+        Image Processing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interactionSites/" class="md-nav__link">
+        Interaction sites
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../karhunenLoveDigits64Dimensions/" class="md-nav__link">
+        Karhunen-Love Digits 64-Dimensions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manifoldCheck/" class="md-nav__link">
+        Manifold Check
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mergeTreeClustering/" class="md-nav__link">
+        Merge Tree Clustering
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mergeTreeFeatureTracking/" class="md-nav__link">
+        Merge Tree Feature Tracking
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Merge Tree Principal Geodesic Analysis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Merge Tree Principal Geodesic Analysis
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-description" class="md-nav__link">
+    Pipeline description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paraview" class="md-nav__link">
+    ParaView
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code" class="md-nav__link">
+    Python code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpython-api" class="md-nav__link">
+    C++/Python API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mergeTreeTemporalReduction/" class="md-nav__link">
+        Merge Tree Temporal Reduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../morseMolecule/" class="md-nav__link">
+        Morse molecule
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../morsePersistence/" class="md-nav__link">
+        Morse persistence
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../morseSmaleQuadrangulation/" class="md-nav__link">
+        Morse-Smale Quadrangulation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nestedTrackingFromOverlap/" class="md-nav__link">
+        Nested Tracking From Overlap
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering0/" class="md-nav__link">
+        Persistence Clustering 0
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering1/" class="md-nav__link">
+        Persistence Clustering 1
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering2/" class="md-nav__link">
+        Persistence Clustering 2
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering3/" class="md-nav__link">
+        Persistence Clustering 3
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering4/" class="md-nav__link">
+        Persistence Clustering 4
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClusteringGallery/" class="md-nav__link">
+        Persistence Clustering Gallery
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceDiagramClustering/" class="md-nav__link">
+        Persistence Diagram Clustering
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceDiagramDistance/" class="md-nav__link">
+        Persistence Diagram Distance
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceDrivenCompression/" class="md-nav__link">
+        Persistence-Driven Compression
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistentGenerators_at/" class="md-nav__link">
+        Persistent Generators AT
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistentGenerators_casting/" class="md-nav__link">
+        Persistent Generators Casting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistentGenerators_darkSky/" class="md-nav__link">
+        Persistent Generators DarkSky
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistentGenerators_fertility/" class="md-nav__link">
+        Persistent Generators Fertility
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistentGenerators_householdAnalysis/" class="md-nav__link">
+        Persistent Generators Household Analysis
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistentGenerators_periodicPicture/" class="md-nav__link">
+        Persistent Generators Periodic Picture
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistentGenerators_skull/" class="md-nav__link">
+        Persistent Generators Skull
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tectonicPuzzle/" class="md-nav__link">
+        Tectonic Puzzle
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timeTracking/" class="md-nav__link">
+        Time Tracking
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tribute/" class="md-nav__link">
+        Tribute to Edelsbrunner and Harer's book
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uncertainStartingVortex/" class="md-nav__link">
+        Uncertain Starting Vortex
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-description" class="md-nav__link">
+    Pipeline description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paraview" class="md-nav__link">
+    ParaView
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code" class="md-nav__link">
+    Python code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpython-api" class="md-nav__link">
+    C++/Python API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="merge-tree-principal-geodesic-analysis">Merge Tree Principal Geodesic Analysis<a class="headerlink" href="#merge-tree-principal-geodesic-analysis" title="Permanent link">&para;</a></h1>
+<p><img alt="Merge Tree Principal Geodesic Analysis example Image" src="https://topology-tool-kit.github.io/img/gallery/mergeTreePGA.jpg" /></p>
+<h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
+<p>This example first loads an ensemble of scalar fields inside a cinema database from disk.
+Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">FTMTree</a> is computed on each scalar field to compute the Split Tree.</p>
+<p>All these trees are passed to <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreePrincipalGeodesics.html">MergeTreePrincipalGeodesics</a> to compute principal geodesic analysis in the metric space of merge trees. </p>
+<p>Then the filter <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreePrincipalGeodesics.html">MergeTreePrincipalGeodesicsDecoding</a> is used to reconstruct the input trees, to sample evenly trees along the principal geodesics and to sample a discrete grid of merge trees of the PGA basis. </p>
+<p>A distance matrix is then computed with <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreeDistanceMatrix.html">MergeTreeDistanceMatrix</a> with the trees of the grid. This distance matrix is used as input of <a href="https://topology-tool-kit.github.io/doc/html/classttkDimensionReduction.html">DimensionReduction</a> to compute a MultiDimensional Scaling (MDS), performing a dimensionality reduction in 3D (and 2D with a second DimensionReduction filter) respecting the most the input distance matrix. </p>
+<p>Finally the <a href="https://topology-tool-kit.github.io/doc/html/classttkPointSetToSurface.html">PointSetToSurface</a> and <a href="https://topology-tool-kit.github.io/doc/html/classttkProjectionFromTable.html">ProjectionFromTable</a> are used to create the 3D surface (and the 2D surface). The ProjectionFromTable allows to project the points (reconstructed trees, geodesic trees etc.) to the 3D (or 2D) surface.</p>
+<p>In terms of visualisation, a scalar field of each cluster is displayed with a zoom on their right of the important persistence pairs. The original trees are displayed alongside their reconstruction at their right. The persistence pairs of the trees are colored by ID to see what features they correspond to in the scalar field.</p>
+<p>The 3D and 2D surface are displayed with the persistence correlation view at the top right. The 12 scalar fields are colored by Cluster ID. Finally, a path drawn with PolyLineSource on the surface is drawn at the bottom right to show how we can interactivily explore the MT-PGA basis in user-defined locations.</p>
+<p>The python script computes the MT-PGA basis. It saves the resulting coefficients of the input trees and the geodesics of the basis. Finally it saves the reconstructed trees given the basis and the coordinates of the trees in the basis.</p>
+<h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
+<p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
+<div class="highlight"><pre><span></span><code>paraview<span class="w"> </span>--state<span class="o">=</span>states/mergeTreePGA.pvsm
+</code></pre></div></p>
+<h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+
+<span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># create a new &#39;TTK CinemaReader&#39;</span>
+<span class="n">tTKCinemaReader1</span> <span class="o">=</span> <span class="n">TTKCinemaReader</span><span class="p">(</span><span class="n">DatabasePath</span><span class="o">=</span><span class="s1">&#39;./Earthquake.cdb&#39;</span><span class="p">)</span>
+
+<span class="c1"># create a new &#39;TTK CinemaProductReader&#39;</span>
+<span class="n">tTKCinemaProductReader1</span> <span class="o">=</span> <span class="n">TTKCinemaProductReader</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaReader1</span><span class="p">)</span>
+<span class="n">tTKCinemaProductReader1</span><span class="o">.</span><span class="n">AddFieldDataRecursively</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># create a new &#39;TTK Merge and Contour Tree (FTM)&#39;</span>
+<span class="n">tTKMergeandContourTreeFTM1</span> <span class="o">=</span> <span class="n">TTKMergeandContourTreeFTM</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaProductReader1</span><span class="p">)</span>
+<span class="n">tTKMergeandContourTreeFTM1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;VectorMag&#39;</span><span class="p">]</span>
+<span class="n">tTKMergeandContourTreeFTM1</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s1">&#39;Split Tree&#39;</span>
+
+<span class="c1"># create a new &#39;TTK BlockAggregator&#39;</span>
+<span class="n">tTKBlockAggregator1</span> <span class="o">=</span> <span class="n">TTKBlockAggregator</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="p">[</span><span class="n">tTKMergeandContourTreeFTM1</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM1</span><span class="p">,</span><span class="mi">2</span><span class="p">)])</span>
+<span class="n">tTKBlockAggregator1</span><span class="o">.</span><span class="n">FlattenInput</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># create a new &#39;TTK MergeTreePrincipalGeodesics&#39;</span>
+<span class="n">tTKMergeTreePrincipalGeodesics1</span> <span class="o">=</span> <span class="n">TTKMergeTreePrincipalGeodesics</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKBlockAggregator1</span><span class="p">,</span>
+    <span class="n">OptionalInput</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="o">.</span><span class="n">BarycenterSizeLimitPercent</span> <span class="o">=</span> <span class="mf">17.0</span>
+<span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="o">.</span><span class="n">Deterministic</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="o">.</span><span class="n">Epsilon1</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="o">.</span><span class="n">Epsilon2</span> <span class="o">=</span> <span class="mf">35.0</span>
+<span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="o">.</span><span class="n">Epsilon3</span> <span class="o">=</span> <span class="mf">34.0</span>
+<span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="o">.</span><span class="n">PersistenceThreshold</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="o">.</span><span class="n">DeleteMultiPersistencePairs</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># create a new &#39;TTK MergeTreePrincipalGeodesicsDecoding&#39;</span>
+<span class="n">tTKMergeTreePrincipalGeodesicsDecoding1</span> <span class="o">=</span> <span class="n">TTKMergeTreePrincipalGeodesicsDecoding</span><span class="p">(</span><span class="n">Barycenter</span><span class="o">=</span><span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="p">,</span>
+    <span class="n">Coefficients</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+    <span class="n">GeodesicsVectors</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+    <span class="n">CorrelationMatrixoptional</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">InputTreesoptional</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># save the output</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;MT-PGA_coef.csv&quot;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;MT-PGA_geodesics.csv&quot;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;MT-PGA_reconstructed_trees.vtm&quot;</span><span class="p">,</span> <span class="n">tTKMergeTreePrincipalGeodesicsDecoding1</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>To run the above Python script, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
+<div class="highlight"><pre><span></span><code>pvpython<span class="w"> </span>python/mergeTreePGA.py
+</code></pre></div></p>
+<h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/topology-tool-kit/ttk-data/tree/dev/Earthquake.cdb">Earthquake.cdb</a>: a cinema database containing 12 regular grids.</li>
+</ul>
+<h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>MT-PGA_coef.csv</code>: the coefficients of the input trees corresponding to their coordinates in the PGA basis.</li>
+</ul>
+<h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkBlockAggregator.html">BlockAggregator</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkCinemaProductReader.html">CinemaProductReader</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkCinemaReader.html">CinemaReader</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkDataSetToTable.html">DataSetToTable</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkDimensionReduction.html">DimensionReduction</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkFlattenMultiBlock.html">FlattenMultiBlock</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.html">FTMTree</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkGeometrySmoother.html">GeometrySmoother</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkMergeBockTables.html">MergeBockTables</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreeClustering.html">MergeTreeClustering</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreeDistanceMatrix.html">MergeTreeDistanceMatrix</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreePrincipalGeodesics.html">MergeTreePrincipalGeodesics</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreePrincipalGeodesicsDecoding.html">MergeTreePrincipalGeodesicsDecoding</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPointSetToCurve.html">PointSetToCurve</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPointSetToSurface.html">PointSetToSurface</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkProjectionFromTable.html">ProjectionFromTable</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fac441b0.min.js"></script>
+      
+    
+  </body>
+</html>
