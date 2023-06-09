@@ -15,7 +15,7 @@
         <link rel="next" href="../mergeTreeTemporalReduction/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.9">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
     
     
       
@@ -655,6 +655,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../morseSmaleSegmentation_at/" class="md-nav__link">
+        Morse-Smale Segmentation AT
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../nestedTrackingFromOverlap/" class="md-nav__link">
         Nested Tracking From Overlap
       </a>
@@ -1059,7 +1074,7 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.
 <p>The python script computes the MT-PGA basis. It saves the resulting coefficients of the input trees and the geodesics of the basis. Finally it saves the reconstructed trees given the basis and the coordinates of the trees in the basis.</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>paraview<span class="w"> </span>--state<span class="o">=</span>states/mergeTreePGA.pvsm
+<div class="highlight"><pre><span></span><code>paraview<span class="w"> </span>--state<span class="o">=</span><span class="w"> </span>states/mergeTreePGA.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1103,12 +1118,21 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.
 <span class="normal">39</span>
 <span class="normal">40</span>
 <span class="normal">41</span>
-<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># create a new &#39;TTK CinemaReader&#39;</span>
-<span class="n">tTKCinemaReader1</span> <span class="o">=</span> <span class="n">TTKCinemaReader</span><span class="p">(</span><span class="n">DatabasePath</span><span class="o">=</span><span class="s1">&#39;./Earthquake.cdb&#39;</span><span class="p">)</span>
+<span class="n">tTKCinemaReader1</span> <span class="o">=</span> <span class="n">TTKCinemaReader</span><span class="p">(</span><span class="n">DatabasePath</span><span class="o">=</span><span class="s2">&quot;./Earthquake.cdb&quot;</span><span class="p">)</span>
 
 <span class="c1"># create a new &#39;TTK CinemaProductReader&#39;</span>
 <span class="n">tTKCinemaProductReader1</span> <span class="o">=</span> <span class="n">TTKCinemaProductReader</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaReader1</span><span class="p">)</span>
@@ -1116,16 +1140,23 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.
 
 <span class="c1"># create a new &#39;TTK Merge and Contour Tree (FTM)&#39;</span>
 <span class="n">tTKMergeandContourTreeFTM1</span> <span class="o">=</span> <span class="n">TTKMergeandContourTreeFTM</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaProductReader1</span><span class="p">)</span>
-<span class="n">tTKMergeandContourTreeFTM1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POINTS&#39;</span><span class="p">,</span> <span class="s1">&#39;VectorMag&#39;</span><span class="p">]</span>
-<span class="n">tTKMergeandContourTreeFTM1</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s1">&#39;Split Tree&#39;</span>
+<span class="n">tTKMergeandContourTreeFTM1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;VectorMag&quot;</span><span class="p">]</span>
+<span class="n">tTKMergeandContourTreeFTM1</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s2">&quot;Split Tree&quot;</span>
 
 <span class="c1"># create a new &#39;TTK BlockAggregator&#39;</span>
-<span class="n">tTKBlockAggregator1</span> <span class="o">=</span> <span class="n">TTKBlockAggregator</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="p">[</span><span class="n">tTKMergeandContourTreeFTM1</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM1</span><span class="p">,</span><span class="mi">2</span><span class="p">)])</span>
+<span class="n">tTKBlockAggregator1</span> <span class="o">=</span> <span class="n">TTKBlockAggregator</span><span class="p">(</span>
+    <span class="n">Input</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">tTKMergeandContourTreeFTM1</span><span class="p">,</span>
+        <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTreeFTM1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="p">]</span>
+<span class="p">)</span>
 <span class="n">tTKBlockAggregator1</span><span class="o">.</span><span class="n">FlattenInput</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="c1"># create a new &#39;TTK MergeTreePrincipalGeodesics&#39;</span>
-<span class="n">tTKMergeTreePrincipalGeodesics1</span> <span class="o">=</span> <span class="n">TTKMergeTreePrincipalGeodesics</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKBlockAggregator1</span><span class="p">,</span>
-    <span class="n">OptionalInput</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">tTKMergeTreePrincipalGeodesics1</span> <span class="o">=</span> <span class="n">TTKMergeTreePrincipalGeodesics</span><span class="p">(</span>
+    <span class="n">Input</span><span class="o">=</span><span class="n">tTKBlockAggregator1</span><span class="p">,</span> <span class="n">OptionalInput</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
 <span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="o">.</span><span class="n">BarycenterSizeLimitPercent</span> <span class="o">=</span> <span class="mf">17.0</span>
 <span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="o">.</span><span class="n">Deterministic</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="o">.</span><span class="n">Epsilon1</span> <span class="o">=</span> <span class="mf">1.5</span>
@@ -1135,11 +1166,13 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkFTMTree.
 <span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="o">.</span><span class="n">DeleteMultiPersistencePairs</span> <span class="o">=</span> <span class="mi">1</span>
 
 <span class="c1"># create a new &#39;TTK MergeTreePrincipalGeodesicsDecoding&#39;</span>
-<span class="n">tTKMergeTreePrincipalGeodesicsDecoding1</span> <span class="o">=</span> <span class="n">TTKMergeTreePrincipalGeodesicsDecoding</span><span class="p">(</span><span class="n">Barycenter</span><span class="o">=</span><span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="p">,</span>
-    <span class="n">Coefficients</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
-    <span class="n">GeodesicsVectors</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="n">tTKMergeTreePrincipalGeodesicsDecoding1</span> <span class="o">=</span> <span class="n">TTKMergeTreePrincipalGeodesicsDecoding</span><span class="p">(</span>
+    <span class="n">Barycenter</span><span class="o">=</span><span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="p">,</span>
+    <span class="n">Coefficients</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">GeodesicsVectors</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
     <span class="n">CorrelationMatrixoptional</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">InputTreesoptional</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">InputTreesoptional</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span>
 
 <span class="c1"># save the output</span>
 <span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;MT-PGA_coef.csv&quot;</span><span class="p">,</span> <span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeTreePrincipalGeodesics1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>

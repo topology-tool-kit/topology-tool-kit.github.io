@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../persistenceDiagramClustering/">
+        <link rel="prev" href="../morseSmaleQuadrangulation/">
       
       
-        <link rel="next" href="../persistenceDrivenCompression/">
+        <link rel="next" href="../nestedTrackingFromOverlap/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
     
     
       
-        <title>Persistence Diagram Distance - TTK Examples</title>
+        <title>Morse-Smale Segmentation AT - TTK Examples</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#persistence-diagram-distance" class="md-skip">
+        <a href="#morse-smale-segmentation-at" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Persistence Diagram Distance
+              Morse-Smale Segmentation AT
             
           </span>
         </div>
@@ -577,11 +577,87 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../morseSmaleSegmentation_at/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Morse-Smale Segmentation AT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Morse-Smale Segmentation AT
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-description" class="md-nav__link">
+    Pipeline description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paraview" class="md-nav__link">
+    ParaView
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code" class="md-nav__link">
+    Python code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpython-api" class="md-nav__link">
+    C++/Python API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -712,87 +788,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Persistence Diagram Distance
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../persistenceDiagramDistance/" class="md-nav__link">
         Persistence Diagram Distance
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pipeline-description" class="md-nav__link">
-    Pipeline description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#paraview" class="md-nav__link">
-    ParaView
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python-code" class="md-nav__link">
-    Python code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inputs" class="md-nav__link">
-    Inputs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outputs" class="md-nav__link">
-    Outputs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cpython-api" class="md-nav__link">
-    C++/Python API
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1060,18 +1060,18 @@
                   
 
 
-<h1 id="persistence-diagram-distance">Persistence Diagram Distance<a class="headerlink" href="#persistence-diagram-distance" title="Permanent link">&para;</a></h1>
-<p><img alt="Persistence Diagram Distance example Image" src="https://topology-tool-kit.github.io/img/gallery/persistenceDiagramDistance.jpg" /></p>
+<h1 id="morse-smale-segmentation-at">Morse-Smale Segmentation AT<a class="headerlink" href="#morse-smale-segmentation-at" title="Permanent link">&para;</a></h1>
+<p><img alt="MorseSmale Segmentation AT Example Image" src="https://topology-tool-kit.github.io/img/gallery/morseSmaleSegmentation_at.jpg" /></p>
 <h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
-<p>This example first loads an ensemble of twelve scalar fields inside a cinema database from disk. Two scalar fields are extracted from the ensemble.
-Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a> is computed on both fields.</p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagramClustering.html">PersistenceDiagramClustering</a> is then used to compute the Wasserstein distance between the two persistence diagrams.
-The assignment problem associated to the distance is computed using the Auction algorithm, and the corresponding matchings are displayed in ParaView.
-The actual distance is available in the field data of the 'matchings' output.</p>
-<p>The python script computes the distance and prints it in the terminal output. Additionally, it saves the distance as a .csv file.</p>
+<p>This example computes the ascending and descending Morse segmentations from an electronic density of the Adenine-Thymine molecular complex.
+The descending segmentation separators (red) represent the influence areas of maxima, giving each atom its own pocket since they are the most dense points in the dataset. The ascending segmentation separators (blue) represent the influence area of minima, providing the interactions (covalent and non-covalent) between the atoms in this example.</p>
+<p>The segmentations are computed using <a href="https://topology-tool-kit.github.io/doc/html/classttkPathCompression.html">PathCompression</a>.
+The separating geometry is generated using <a href="https://topology-tool-kit.github.io/doc/html/classttkMarchingTetrahedra.html">MarchingTetrahedra</a></p>
+<p>The python script simply computes the segmentation and saves the separating
+surfaces as <code>.vtu</code> files.</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
 <p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>paraview<span class="w"> </span>--state<span class="o">=</span><span class="w"> </span>states/persistenceDiagramDistance.pvsm
+<div class="highlight"><pre><span></span><code>paraview<span class="w"> </span>--state<span class="o">=</span><span class="w"> </span>states/morseSmaleSegmentation_at.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1121,71 +1121,87 @@ The actual distance is available in the field data of the 'matchings' output.</p
 <span class="normal">45</span>
 <span class="normal">46</span>
 <span class="normal">47</span>
-<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#! /usr/bin/env/python</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># create a new &#39;TTK CinemaReader&#39;</span>
-<span class="n">tTKCinemaReader1</span> <span class="o">=</span> <span class="n">TTKCinemaReader</span><span class="p">(</span><span class="n">DatabasePath</span><span class="o">=</span><span class="s2">&quot;Isabel.cdb&quot;</span><span class="p">)</span>
-
-<span class="c1"># create a new &#39;TTK CinemaProductReader&#39;</span>
-<span class="n">tTKCinemaProductReader1</span> <span class="o">=</span> <span class="n">TTKCinemaProductReader</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaReader1</span><span class="p">)</span>
-
-<span class="c1"># create a new &#39;Extract Block&#39;</span>
-<span class="n">extractBlock1</span> <span class="o">=</span> <span class="n">ExtractBlock</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKCinemaProductReader1</span><span class="p">)</span>
-<span class="n">extractBlock1</span><span class="o">.</span><span class="n">Selectors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;/Root/Block0&quot;</span><span class="p">,</span> <span class="s2">&quot;/Root/Block10&quot;</span><span class="p">]</span>
+<span class="c1"># create a new &#39;XML Image Data Reader&#39;</span>
+<span class="n">atvti</span> <span class="o">=</span> <span class="n">XMLImageDataReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;at.vti&quot;</span><span class="p">])</span>
 
 <span class="c1"># create a new &#39;Calculator&#39;</span>
-<span class="n">calculator1</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">extractBlock1</span><span class="p">)</span>
-<span class="n">calculator1</span><span class="o">.</span><span class="n">ResultArrayName</span> <span class="o">=</span> <span class="s2">&quot;velocityMag&quot;</span>
-<span class="n">calculator1</span><span class="o">.</span><span class="n">Function</span> <span class="o">=</span> <span class="s2">&quot;-velocityMag&quot;</span>
+<span class="n">calculator1</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;Calculator1&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">atvti</span><span class="p">)</span>
+<span class="n">calculator1</span><span class="o">.</span><span class="n">ResultArrayName</span> <span class="o">=</span> <span class="s2">&quot;negdensity&quot;</span>
+<span class="n">calculator1</span><span class="o">.</span><span class="n">Function</span> <span class="o">=</span> <span class="s2">&quot;-density&quot;</span>
 
-<span class="c1"># create a new &#39;TTK PersistenceDiagram&#39;</span>
-<span class="n">tTKPersistenceDiagram3</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">calculator1</span><span class="p">)</span>
-<span class="n">tTKPersistenceDiagram3</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;velocityMag&quot;</span><span class="p">]</span>
-<span class="n">tTKPersistenceDiagram3</span><span class="o">.</span><span class="n">InputOffsetField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;velocityMag&quot;</span><span class="p">]</span>
-<span class="n">tTKPersistenceDiagram3</span><span class="o">.</span><span class="n">IgnoreBoundary</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># create a new &#39;TTK PathCompression&#39;</span>
+<span class="n">tTKPathCompression1</span> <span class="o">=</span> <span class="n">TTKPathCompression</span><span class="p">(</span>
+    <span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;TTKPathCompression1&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">calculator1</span>
+<span class="p">)</span>
+<span class="n">tTKPathCompression1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;negdensity&quot;</span><span class="p">]</span>
 
-<span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">threshold7</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram3</span><span class="p">)</span>
-<span class="n">threshold7</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;Persistence&quot;</span><span class="p">]</span>
-<span class="n">threshold7</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">1.2</span>
-<span class="n">threshold7</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">136.490955383565</span>
+<span class="c1"># create a new &#39;TTK MarchingTetrahedra&#39;</span>
+<span class="n">tTKMarchingTetrahedra1</span> <span class="o">=</span> <span class="n">TTKMarchingTetrahedra</span><span class="p">(</span>
+    <span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;TTKMarchingTetrahedra1&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">tTKPathCompression1</span>
+<span class="p">)</span>
+<span class="n">tTKMarchingTetrahedra1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;DescendingSegmentation&quot;</span><span class="p">]</span>
 
-<span class="c1"># create a new &#39;TTK PersistenceDiagramClustering&#39;</span>
-<span class="n">tTKPersistenceDiagramClustering1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagramClustering</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold7</span><span class="p">)</span>
-<span class="n">UpdatePipeline</span><span class="p">()</span>
+<span class="c1"># create a new &#39;Clean to Grid&#39;</span>
+<span class="n">cleantoGrid1</span> <span class="o">=</span> <span class="n">CleantoGrid</span><span class="p">(</span>
+    <span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;CleantoGrid1&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">tTKMarchingTetrahedra1</span>
+<span class="p">)</span>
 
-<span class="c1"># Get the data</span>
-<span class="n">matchings_data</span> <span class="o">=</span> <span class="n">FetchData</span><span class="p">(</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKPersistenceDiagramClustering1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># create a new &#39;TTK GeometrySmoother&#39;</span>
+<span class="n">tTKGeometrySmoother1</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span>
+    <span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;TTKGeometrySmoother1&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">cleantoGrid1</span>
+<span class="p">)</span>
+<span class="n">tTKGeometrySmoother1</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">tTKGeometrySmoother1</span><span class="o">.</span><span class="n">InputMaskField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;Hash&quot;</span><span class="p">]</span>
 
-<span class="c1"># Get field data</span>
-<span class="n">field_data</span> <span class="o">=</span> <span class="n">matchings_data</span><span class="o">.</span><span class="n">GetBlock</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">GetFieldData</span><span class="p">()</span>
+<span class="c1"># create a new &#39;TTK MarchingTetrahedra&#39;</span>
+<span class="n">tTKMarchingTetrahedra2</span> <span class="o">=</span> <span class="n">TTKMarchingTetrahedra</span><span class="p">(</span>
+    <span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;TTKMarchingTetrahedra2&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">tTKPathCompression1</span>
+<span class="p">)</span>
+<span class="n">tTKMarchingTetrahedra2</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;AscendingSegmentation&quot;</span><span class="p">]</span>
 
-<span class="c1"># Display the Wasserstein distance</span>
-<span class="n">wasserstein_distance</span> <span class="o">=</span> <span class="n">field_data</span><span class="o">.</span><span class="n">GetArray</span><span class="p">(</span><span class="s2">&quot;WassersteinDistance&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">GetValue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># create a new &#39;Clean to Grid&#39;</span>
+<span class="n">cleantoGrid2</span> <span class="o">=</span> <span class="n">CleantoGrid</span><span class="p">(</span>
+    <span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;CleantoGrid2&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">tTKMarchingTetrahedra2</span>
+<span class="p">)</span>
 
-<span class="c1"># Save the Wasserstein distance in a csv file</span>
-<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s2">&quot;WassersteinDistance.csv&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">wasserstein_distance</span><span class="p">])</span>
+<span class="c1"># create a new &#39;TTK GeometrySmoother&#39;</span>
+<span class="n">tTKGeometrySmoother2</span> <span class="o">=</span> <span class="n">TTKGeometrySmoother</span><span class="p">(</span>
+    <span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;TTKGeometrySmoother2&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">cleantoGrid2</span>
+<span class="p">)</span>
+<span class="n">tTKGeometrySmoother2</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">tTKGeometrySmoother2</span><span class="o">.</span><span class="n">InputMaskField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;Hash&quot;</span><span class="p">]</span>
+
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;descendingSeparatorAt.vtu&quot;</span><span class="p">,</span> <span class="n">tTKGeometrySmoother1</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;ascendingSeparatorAt.vtu&quot;</span><span class="p">,</span> <span class="n">tTKGeometrySmoother2</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>To run the above Python script, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>pvpython<span class="w"> </span>python/persistenceDiagramDistance.py
+<div class="highlight"><pre><span></span><code>pvpython<span class="w"> </span>python/morseSmaleSegmentation_at.py
 </code></pre></div></p>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/topology-tool-kit/ttk-data/tree/dev/Isabel.cdb">Isabel.cdb</a>: a cinema database containing 12 scalarfields defined on a regular grid, corresponding to 12 timesteps of a hurricane simulation.</li>
+<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/at.vti">at.vti</a>: A molecular dataset: a three-dimensional regular grid with 1 scalar field, the electronic density in the Adenine Thymine complex.</li>
 </ul>
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>WassersteinDistance.csv</code>: the output distance between the two persistence diagrams.</li>
+<li><code>ascendingSeparatorAt.vtu</code>: the ascending separator geometry.</li>
+<li><code>descendingSeparatorAt.vtu</code>: the descending separator geometry.</li>
 </ul>
 <h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkCinemaReader.html">CinemaReader</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkCinemaProductReader.html">CinemaProductReader</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagramClustering.html">PersistenceDiagramClustering</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkGeometrySmoother.html">GeometrySmoother</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkMarchingTetrahedra.html">MarchingTetrahedra</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPathCompression.html">PathCompression</a></p>
 
 
 
