@@ -1127,9 +1127,7 @@ surfaces as <code>.vtu</code> files.</p>
 <span class="normal">51</span>
 <span class="normal">52</span>
 <span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">54</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
@@ -1163,7 +1161,6 @@ surfaces as <code>.vtu</code> files.</p>
     <span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;TTKGeometrySmoother1&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">cleantoGrid1</span>
 <span class="p">)</span>
 <span class="n">tTKGeometrySmoother1</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">tTKGeometrySmoother1</span><span class="o">.</span><span class="n">InputMaskField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;Hash&quot;</span><span class="p">]</span>
 
 <span class="c1"># create a new &#39;TTK MarchingTetrahedra&#39;</span>
 <span class="n">tTKMarchingTetrahedra2</span> <span class="o">=</span> <span class="n">TTKMarchingTetrahedra</span><span class="p">(</span>
@@ -1181,7 +1178,6 @@ surfaces as <code>.vtu</code> files.</p>
     <span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;TTKGeometrySmoother2&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">cleantoGrid2</span>
 <span class="p">)</span>
 <span class="n">tTKGeometrySmoother2</span><span class="o">.</span><span class="n">IterationNumber</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">tTKGeometrySmoother2</span><span class="o">.</span><span class="n">InputMaskField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;Hash&quot;</span><span class="p">]</span>
 
 <span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;descendingSeparatorAt.vtu&quot;</span><span class="p">,</span> <span class="n">tTKGeometrySmoother1</span><span class="p">)</span>
 <span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;ascendingSeparatorAt.vtu&quot;</span><span class="p">,</span> <span class="n">tTKGeometrySmoother2</span><span class="p">)</span>
