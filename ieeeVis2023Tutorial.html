@@ -10,7 +10,7 @@
     <meta name="author" content="The Topology ToolKit">
     <meta name="keywords" content="TTK, Topology ToolKit, Topological Data 
 Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour 
-tree, persistence diagram, persistence curve, continuous scatterplot, fiber 
+tree, persistence diagram, merge tree, Wasserstein distance, persistence curve, continuous scatterplot, fiber 
 surface, contour forests, jacobi set, mandatory critical points, topological 
 simplification, VTK, ParaView, Python, tutorial, IEEE VIS 2020" />
 
@@ -152,32 +152,17 @@ data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
             <p>
-            <h1>Topological Analysis of Ensemble Scalar Data with TTK</h1>
+            <h1>A Hands-on TTK Tutorial for Absolute Beginners</h1>
                         <h3>
                         <a target="new" 
-                        href="http://ieeevis.org/year/2022/info/tutorials">
-                        IEEE VIS 2022 Tutorial</a><br>
-                        Monday, October 17, 9:00am-12:25am (CT)<br>
-                        IEEE VIS, Oklahoma City, OK, USA
-<!--                         (<b><font color="#ff3d3d">online event</font></b>) -->
+                        href="http://ieeevis.org/year/2023/info/tutorials">
+                        IEEE VIS 2023 Tutorial</a><br>
+                        Date to be announced<br>
+                        IEEE VIS, Melbourne, Australia
                         <br><br>
-<!--                         <b><font color="#ff3d3d">Free registration:</font></b><br> -->
                         Registration:</b><br>
-                        &nbsp;&middot;&nbsp;<a href="https://forms.gle/9b7TTERsjMs49g9m8" target="new">Tutorial pre-registration</a><br>
-                        &nbsp;&middot;&nbsp;<a href="http://ieeevis.org/year/2022/info/registration/conference-registration" target="new">IEEE VIS 2022 registration</a><br>
-                        <!--<b><font color="#ff3d3d">Online resources:</font></b><br>
-                        &nbsp;&middot;&nbsp;<a href="https://virtual.ieeevis.org/" target="new">
-                        IEEE VIS Virtual conference site</a><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;Free 
-                        <a href="http://ieeevis.org/year/2020/info/registration/conference-registration" target="new">
-                        registration to IEEE VIS</a> required<br>
-                        &nbsp;&middot;&nbsp;<a href="https://youtu.be/l5CjWChCVbM" target="new">
-                        Youtube live stream</a><br>
-                        &nbsp;&middot;&nbsp;<a href="https://discord.gg/dxy2Uxp" target="new">
-                        IEEE VIS discord server</a><br>
-                        &nbsp;&middot;&nbsp;<a href="https://ieeevis.b-cdn.net/vis_2020/ics/t-ttk.ics" target="new">
-                        Add to calendar</a>
-                        </h3>-->
+                        &nbsp;&middot;&nbsp;<a href="https://forms.gle/t4xX4a3pJjyiU67D9" target="new">Tutorial pre-registration</a><br>
+                        &nbsp;&middot;&nbsp;<a href="http://ieeevis.org/year/2023/info/registration/conference-registration" target="new">IEEE VIS 2023 registration</a><br>
                         </p>
                         
                         <br>
@@ -223,7 +208,7 @@ send it to us by email</a>. Thanks!
 <br>-->
 &nbsp;&middot;&nbsp;
 We kindly ask potential attendees to <b><font color="#ff3d3d">pre-register</font></b> at
-<a href="https://forms.gle/9b7TTERsjMs49g9m8" target="new">https://forms.gle/9b7TTERsjMs49g9m8</a>
+<a href="https://forms.gle/t4xX4a3pJjyiU67D9" target="new">https://forms.gle/t4xX4a3pJjyiU67D9</a>
 in order for us to reach out to them ahead of the tutorial with information updates (for instance, last minute updates, instructions for the download of 
 the tutorial material package, etc.)<br>
 
@@ -231,7 +216,9 @@ the tutorial material package, etc.)<br>
 If you plan to attend this tutorial, we 
 invite you to install TTK on your system <b><font 
 color="#ff3d3d">before the tutorial</font></b>.
-Several installation alternatives are available (via ParaView's official binaries, sources, Ubuntu packages, Anaconda packages, Docker images, VirtualBox images, etc.). See the 
+The easiest way is simply to 
+<a target="new" href="http://www.paraview.org/download/">download ParaView's latest binary</a>.
+For alternatives, (sources, Ubuntu packages, Anaconda packages, Docker images, etc.), see the 
 <a href="installation.html" target="new"
 >installation instructions</a>.<br>
 <!--&nbsp;&nbsp;&nbsp;&nbsp;&middot;&nbsp;building TTK from source (default, link below, takes approximately 1 hour);<br>
@@ -277,6 +264,11 @@ target="new"
 &nbsp;&middot;&nbsp;
 <a href="installation.html" target="new"
 >Installation instructions</a><br>
+
+&nbsp;&middot;&nbsp;
+<a href="https://topology-tool-kit.github.io/examples/" target="new"
+>TTK's online example database</a><br>
+
 <!--
 &nbsp;&middot;&nbsp;
 TTK binary packages for Ubuntu:<br>
@@ -333,101 +325,83 @@ onClick="javascript:_gaq.push(['_trackPageview', 'stuff/ttk_tutorial_data.zip'])
 Tutorial data package</a><br>
 
 &nbsp;&middot;&nbsp;
-<a href="stuff/ttk_tutorial_vis22.pdf" target="new"
-onClick="javascript:_gaq.push(['_trackPageview','stuff/ttk_tutorial_vis22.pdf']);"
+<a href="stuff/ttk_tutorial_vis23.pdf" target="new"
+onClick="javascript:_gaq.push(['_trackPageview','stuff/ttk_tutorial_vis23.pdf']);"
 >
 Detailed tutorial submission document</a><br>
 
 </p>
             
 <p><h3><a name="abstract">Abstract</a></h3>
-This tutorial presents topological methods for data analysis and visualization from a user's perspective, with the Topology ToolKit (TTK), an open-source library for topological data analysis. In particular, similarly to 2021, this year's tutorial has a special focus on ensemble data analysis with TTK, but with an updated content. Topological methods have gained in popularity and maturity over the last twenty years and success stories of established methods have been documented in a wide range of applications (combustion, chemistry, astrophysics, material sciences, etc.) with both acquired and simulated data, in both post-hoc and in-situ contexts. This tutorial provides a beginner's introduction to topological methods for practitioners, researchers, students, and lecturers, with a special emphasis towards ensemble data analysis. In particular, instead of focusing on theoretical aspects and algorithmic details, this tutorial focuses on how topological methods can be used in practice to reduce ensemble datasets into concise yet meaningful topological data representations and how these representations can support advanced analysis. The tutorial describes in detail how to achieve these tasks with TTK. In contrast to the first iterations of this tutorial, this iteration focuses on the specific usage of TTK for ensemble data analysis, similarly to the 2021 edition, but with an updated content, including updated or additional features for ensemble data processing. First, we provide a general introduction to topological methods and their application in data analysis, and a brief overview of TTK's main entry point for end users, namely ParaView, will be presented. Second, we detail TTK's software infrastructure for ensemble data analysis, including TTK's Docker support (to facilitate its deployment on computing servers), a tour of the topological data representations supported by TTK, and lastly TTK's cinema support (to manipulate ensemble of topological data representations with a database formalism). Third, we will present concrete use cases of ensemble data analysis and visualization, using contour tree alignment as well as ensemble clustering and summarization with persistence diagrams and merge trees. Presenters of this tutorial include experts in topological methods, core authors of TTK as well as active users, coming from academia and industry. This tutorial mostly targets students, practitioners and researchers who are not necessarily experts in topological methods but who are interested in using them in their daily tasks. We also target researchers already familiar to topological methods and who are interested in using or contributing to TTK. We kindly ask potential attendees to optionally pre-register at the following address, in order for us to reach out to them ahead of the tutorial with information updates (for instance, last minute updates, instructions for the download of the tutorial material package, etc.): 
-<a href="https://forms.gle/9b7TTERsjMs49g9m8" target="new">https://forms.gle/9b7TTERsjMs49g9m8 </a>.
+This tutorial provides a basic, beginner’s introduction to topological data 
+analysis and visualization with the Topology ToolKit (TTK).
+While previous editions of the TTK tutorial (2018 to 2022) were organized as 
+mini-symposia (focused on the
+descriptions of TTK’s latest features), this year, in contrast, we
+would like to organize a very basic beginner’s hands-on tutorial.
+Specifically, the goal of this tutorial is to accompany attendees in
+the installation of TTK on their laptop as well as in the running
+of a few basic examples, all in a very beginner-friendly step-by-step 
+description. This decision is motivated by attendee feedback
+which we collected at previous editions of the TTK tutorial. We
+address this feedback in this tutorial proposal. Then, for the first
+time, beginners would be able to come to the tutorial without prior
+TTK experience, and walk out with TTK installed on their system,
+capable of running a few examples and ready to go further. We
+believe this basic hands-on tutorial will facilitate the adoption of
+TTK and topological techniques to a broader audience.
+The tutorial will be organized as follows. The first hands-on
+exercise will be dedicated to the installation of TTK. The second
+hands-on exercise will be focused on ParaView’s basic usage. The
+following three hands-on exercises will be dedicated to the step-by-step 
+replication of three examples extracted from TTK’s online
+example database (vortex extraction in fluid dynamics, Morse-Smale 
+complex extraction in quantum chemistry and merge tree
+comparison in ensemble data).
 </p>
 
 <p><h3><a name="organizers">Organizers</a></h3>
 <ul>
 <li><a 
 target="new"
-href="https://vis.uni-kl.de/people/garth/">Christoph Garth</a>, TU Kaiserslautern</li>
+href="https://vis.uni-kl.de/team/garth/">Christoph Garth</a>, RPTU Kaiserslautern-Landau
+ </li>
 <li><a 
 target="new"
-href="https://www.kitware.eu/profiles/charles-gueunet/">Charles Gueunet</a>, Kitware</li>
-<li><a 
-target="new"
-href="https://www.lip6.fr/actualite/personnes-fiche.php?ident=D2289">Pierre Guillou</a>, CNRS, Sorbonne Universite</li>
-<!--<li><a 
-target="new"
-href="https://vcg.iwr.uni-heidelberg.de/people/hofmann/">Lutz Hofmann</a>, Heidelberg University</li>-->
-<li><a 
-target="new"
-href="https://iuricichf.github.io/my_site/">Federico Iuricich</a>, Clemson University</li>
-<li><a 
-target="new"
-href="http://www.cs.arizona.edu/~josh">Joshua A. Levine</a>, University of Arizona</li>
-<li><a 
-target="new"
-href="https://www.jluk.de/">Jonas Lukasczyk</a>, TU Kaiserslautern</li>
+href="https://vis.uni-kl.de/team/maack/">Robin Maack</a>, RPTU Kaiserslautern-Landau</li>
 <li><a 
 target="new"
 href="https://mathieu-pont.github.io/">Mathieu Pont</a>, CNRS, Sorbonne Universite</li>
 <li><a 
 target="new"
 href="https://julien-tierny.github.io/">Julien Tierny</a>, CNRS, Sorbonne Universite</li>
-<li><a 
-target="new"
-href="https://julesvidal.github.io/">Jules Vidal</a>, CNRS, Sorbonne Universite</li>
-<li><a
-target="new"
-href="https://www.sci.utah.edu/people/beiwang.html">Bei Wang</a>, University of Utah</li>
-<li><a
-target="new"
-href="https://vis.uni-kl.de/team/wetzels/">Florian Wetzels</a>, TU Kaiserslautern</li>
 </ul>
 </p>
 
 
 <p><h3><a name="schedule">Schedule</a></h3>
 <ol>
-<li>9:00am Preliminaries (70 minutes)
+<li>9:00am Preliminaries (65 minutes)
 <ul>
-<li>9:00am <a href="#intro">General introduction: Julien Tierny</a> (10 minutes)</li>
-<li>9:10am <a href="#topology">Introduction to topological methods for data analysis: Bei Wang</a> (30 minutes)</li>
-<li>9:40am <a href="#paraview">Quick introduction to ParaView's user interface: Charles Gueunet</a> (30 minutes)</li>
+<li>9:00am <a href="#intro">General introduction</a> (5 minutes)</li>
+<li>9:05am <a href="#install">Installing TTK</a> (20 minutes)</li>
+<li>9:25am <a href="#topology">Introduction to Topological Data Analysis</a> (20 minutes)</li>
+<li>9:45am <a href="#paraview">Introduction to ParaView's basic usage</a> (20 minutes)</li>
 </ul>
 </li>
 
 <br>
 
-<li>10:10am Beak, discussion and Q&A (15 minutes)</li>
+<li>10:05am Beak, discussion and Q&A (30 minutes)</li>
 
 <br>
 
-<li>10:25am TTK infrastructure for ensemble data analysis (60 minutes)
+<li>10:35am Step-by-step examples (85 minutes)
 <ul>
-<li>10:25am <a href="#docker">Running TTK with Docker: Christoph Garth</a> (10 minutes)</li>
-<li>10:35am <a href="#tour">A tour of TTK: Joshua Levine</a> (30 minutes)</li>
-<li>11:05am <a href="#compact">TTK Compact Triangulation: Federico Iuricich</a> (10 minutes)</li>
-<!-- <li>9:50am <a href="#python">TTK Python support: Lutz Hofmann</a> (10 minutes)</li> -->
-<li>11:15am <a href="#cinema">TTK Cinema support: Jonas Lukasczyk</a> (10 minutes)</li>
-</ul>
-</li>
-
-<br>
-
-<li>11:25am Beak, discussion and Q&A (15 minutes)</li>
-
-<br>
-
-<li>11:40am Ensemble processing with TTK (50 minutes)
-<ul>
-<li>11:40am <a href="#treeAlignment">Contour tree alignment: Florian Wetzels</a> (10 minutes)</li>
-<!-- <li>10:40am <a href="#mandatoryCritical">Mandatory critical points: Julien Tierny </a> (15 minutes)</li> -->
-<li>11:50am <a href="#barycentersPD">Distances, barycenters and clusters of Persistence diagrams: Jules Vidal</a> (10 minutes)</li>
-<li>12:00am <a href="#barycentersMT">Distances, barycenters and clusters of Merge trees: Mathieu Pont</a> (10 minutes)</li>
-<li>12:10am <a href="#planar">Ensemble summarization with linked planar views: Pierre Guillou</a> (10 minutes)</li>
-
-<li>12:20am <a href="#conclusion">Concluding remarks: Julien Tierny</a> (10 minutes)</li>
+<li>10:35am <a href="#vortex">Vortex extraction in fluid dynamics</a> (25 minutes)</li>
+<li>11:00am <a href="#morse">Morse-Smale complex computation</a> (25 minutes)</li>
+<li>11:25am <a href="#merge">Merge tree comparison and matching</a> (25 minutes)</li>
+<li>11:50am <a href="#conclusion">Concluding remarks</a> (10 minutes)</li>
 </ul>
 </li>
 
@@ -446,151 +420,93 @@ href="https://vis.uni-kl.de/team/wetzels/">Florian Wetzels</a>, TU Kaiserslauter
 </h5>
 
 <h5>&nbsp;&middot;&nbsp;
-<a name="topology">Introduction to topological methods for data analysis 
-(Bei Wang) </a>
+<a name="install">Installing TTK</a>
  </h5>
+ This first hands-on session will
+describe how to install TTK. Several options will be presented. The
+default option would be via the installation of 
+<a href="https://www.paraview.org/download/" target="new">Kitware’s official
+ParaView distribution</a>.
+Other options will be presented, such as Ubuntu packages, Anaconda
+packages or Docker images. At the end of this session, we expect
+all attendees to have TTK installed and running on their laptop.
 
-This talk will present the core tools in topological data analysis (critical points, Persistence diagrams, Reeb graphs and their variants, annd Morse-Smale complexes). In particular, it will detail how these tools can be used for data segmentation and feature extraction.<br>
-<!-- <iframe width="100%" height="420" src="https://www.youtube.com/embed/louyNgsvAKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=416" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+<br />
+
+<h5>&nbsp;&middot;&nbsp;
+<a name="topology">Introduction to Topological Data Analysis</a>
+ </h5>
+This talk will cover the theoretical notions about Topological Data
+Analysis which are required for the followup step-by-step examples
+(Sec. B). Specifically, it will introduce: critical points, persistence
+diagrams, Reeb graphs, and Morse-Smale complexes. Also, it will
+illustrate how these notions can be used for data analysis.<br />
 
 
 <h5>&nbsp;&middot;&nbsp;
 <a name="paraview">
-Quick introduction to ParaView's user interface (Charles 
-Gueunet) </a>
+Introduction to ParaView's basic usage</a>
 </h5>
+This second hands-on session will describe the basic notions for using
+ParaView. The notion of pipeline browser will be presented, along
+with the properties and information panels for each filter of the
+pipeline. The different views will also be discussed. Screenshot
+features will be illustrated. Finally, pipeline IO will be presented
+(PVSM statefile) and Python exports will be illustrated.<br />
 
-This talk will provide a brief description of ParaView's main interface, in order to support its usage for beginners in the subsequent hands-on session. This will cover the usage of filters, pipeline design and view manipulation, state files backups, Python exports, and a quick introduction to Catalyst (for in-situ computations).<br/>
-<!-- <iframe width="100%" height="420" src="https://www.youtube.com/embed/DNt26-0cYBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=2259" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 
 <br/>
-<h4>TTK infrastructure for ensemble data analysis</h4>
+<h4>Step-by-step examples</h4>
+
 
 <h5>&nbsp;&middot;&nbsp;
-<a name="docker">
-Running TTK with Docker (Christoph Garth)
+<a name="vortex">
+Vortex extraction in fluid dynamics 
 </a></h5>
-This talk will describe how to use TTK's most recent Docker support, which is useful for deploying TTK on high-performance infrastructures (for the in-situ computation of topological signatures).
-<!-- introduce TTK's usage with Docker. -->
+This hands-on 
+exercise will present the entry
+<a href="https://topology-tool-kit.github.io/examples/BuiltInExample1/" target="new">Builtin Example 1</a> from 
+<a target="new" target="https://topology-tool-kit.github.io/examples/">TTK’s
+online example database</a>. Then, we will describe to participants how
+to completely re-create this example from scratch.
 <br>
-<!-- <iframe width="100%" height="420" src="https://www.youtube.com/embed/J-g-vB7UMFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=5330" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-
-<h5>&nbsp;&middot;&nbsp;
-<a name="tour">
-A tour of TTK (Joshua Levine)
-</a>
-</h5>
-This talk will
-provide an overview of the topological signatures supported by TTK
-and will illustrate how to apply them on concrete examples.
-<br/>
-<!-- <iframe width="100%" height="420" src="https://www.youtube.com/embed/p-ADsX0bRFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=4665" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-
-<h5>&nbsp;&middot;&nbsp;
-<a name="compact">
-TTK Compact Triangulation (Federico Iuricich)
-</a></h5>
-This talk will introduce TTK's novel compact triangulation data structure, specialized for the handling of large datasets.
-<br/>
-
-<!--<h5>&nbsp;&middot;&nbsp;
-<a name="python">
-TTK Python support (Lutz Hofmann)
-</a></h5>
-This talk will
-present how to deploy (with its Anaconda package) and use TTK in
-a Python environment with simple examples.
-<br/>-->
-<!-- <iframe width="100%" height="420" src="https://www.youtube.com/embed/kk9O3iRuTII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
-<h5>&nbsp;&middot;&nbsp;
-<a name="cinema">
-TTK Cinema support (Jonas Lukasczyk)
-</a></h5>
-This talk will introduce TTK’s Cinema support for storing and manipulating
-databases of topological signatures representing an ensemble.
-<br/>
-<!-- <iframe width="100%" height="420" src="https://www.youtube.com/embed/FXPFE4SthJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
-
-<br/>
-<h4>Ensemble processing with TTK</h4>
-
-<h5>&nbsp;&middot;&nbsp;
-<a name="treeAlignment">
- Contour tree alignment (Florian Wetzels)
-</a></h5>
-This
-talk will introduce the contour tree alignment module of TTK,
-which enables the simultaneous and coherent planar layout of an
-ensemble of contour trees (representing an ensemble dataset) for
-visual inspection purposes.
-<br/>
-<!-- <iframe width="100%" height="420" src="https://www.youtube.com/embed/6mQdu6tAyA8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
-<!--<h5>&nbsp;&middot;&nbsp;
-<a name="mandatoryCritical">
- Mandatory critical points (Julien Tierny)
-</a></h5>
-This talk will introduce the mandatory critical point module of TTK,
-which enables the representation of the topological structures (join
-trees and split trees) which are common to all the members of the
-ensemble, to identify recurring features throughout the ensemble.
-<br/>-->
-<!-- <iframe width="100%" height="420" src="https://www.youtube.com/embed/kQNgDWfhq8U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
-<h5>&nbsp;&middot;&nbsp;
-<a name="#barycentersPD">
-Distances, barycenters and clusters of Persistence diagrams (Jules Vidal)
-</a></h5>
-This talk will show how to efficiently compare and cluster the members of an ensemble based on their persistence diagram.
-<br/>
-<!-- <iframe width="100%" height="420" src="https://www.youtube.com/embed/URgWn31MNi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
-<h5>&nbsp;&middot;&nbsp;
-<a name="#barycentersMT">
-Distances, barycenters and clusters of merge trees (Mathieu Pont)
-</a></h5>
-This talk will show how to efficiently compare and cluster the members of an ensemble based on their merge tree.
-<br/>
-
-<h5>&nbsp;&middot;&nbsp;
-<a name="planar">
-Ensemble summarization with linked planar views (Pierre Guillou)
-</a></h5>
-This talk will show step-by-step how to generate,
-with multidimensional scaling, planar summarizations of the input
-ensemble, where each member is represented as a point in 2D and
-where similar members (in terms of their topological signatures) are
-projected in similar locations. Linked views, related to each point of
-the summarization, enable the visual inspection of each topological
-signature. Together, the planar summarization and its detailed linked
-view enable the visual analysis of global trends in the ensemble.
-<br/>
-<!-- <iframe width="100%" height="420" src="https://www.youtube.com/embed/OiOhbJ-cHy8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
-<iframe  width="100%" height="420" src="https://www.youtube.com/embed/VShcG9Il7zE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 <h5>&nbsp;&middot;&nbsp;
-<a name="conclusion" target="new" href="https://docs.google.com/presentation/d/1fBU2eh1UkjT1WPVWFptGi56VoBRbcmuv4LuCQ-S7nU0/edit?usp=sharing">
+<a name="morse">
+Morse-Smale complex computation
+</a></h5>
+This hands-on exercise will present the entry
+<a href="https://topology-tool-kit.github.io/examples/morseSmaleSegmentation_at/" target="new">Morse-Smale Segmentation AT</a> from 
+<a target="new" target="https://topology-tool-kit.github.io/examples/">TTK’s
+online example database</a>. Then, we will describe to participants how
+to completely re-create this example from scratch.
+<br>
+
+<h5>&nbsp;&middot;&nbsp;
+<a name="morse">
+Merge Tree comparison and matching
+</a></h5>
+This hands-on exercise will present the entry
+<a href="https://topology-tool-kit.github.io/examples/mergeTreeFeatureTracking/" target="new">Merge Tree Feature Tracking</a> from 
+<a target="new" target="https://topology-tool-kit.github.io/examples/">TTK’s
+online example database</a>. Then, we will describe to participants how
+to completely re-create this example from scratch.
+<br>
+
+<h5>&nbsp;&middot;&nbsp;
+<a name="conclusion">
 Concluding remarks (Julien Tierny)
 </a></h5>
-<!-- <iframe width="100%" height="420" src="https://www.youtube.com/embed/8YjIeIS5QV4?start=12619" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-<!--<iframe width="100%" height="420" src="https://www.youtube.com/embed/l5CjWChCVbM?start=11620" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 </p>
 
 
-
+<!--
 <p><h3>Pictures of the tutorial</h3></p>
  <a href="https://photos.app.goo.gl/cSW9cXoGHReSTvvM7" target="new">
   <img align='center'width="95%" 
    src="stuff/ieeevis2022_tutorial.jpg" >
-</a>
+</a>-->
  
 
 
