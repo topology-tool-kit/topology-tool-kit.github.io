@@ -198,7 +198,7 @@ href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/c%2B%2B"
 <b>Most users will want to activate TTK's ParaView support.</b><br><br>
 
 This page describes installing TTK 1.2.0 on MacOS, using MacOS Ventura 13, and ParaView 5.11.1.  These specific instructions were
-tested with MacOS Monterey 13.1 using an Apple M1 chip. <br><br> 
+tested with MacOS Ventura 13.1 using an Apple M1 chip. <br><br> 
 
 The key differences from the linux installation involve how 
 ParaView is compiled, installing certain dependencies, and setting up some of 
@@ -249,7 +249,7 @@ Using <a href="https://brew.sh/">homebrew</a>, install:
 <li> cmake (tested with 3.26.4) </li>
 <li> qt@5 (tested with 5.15.10) <br/>
 Note, as recommended by brew, we added qt@5 to our PATH variable.  The
-most generic way to do this is to add <code>export PATH="$(brew --prefix qt@5)/bin:$PATH"</code> to either your <code>~/.zprofile</code> or <code>~/.zshrc</code> file.
+most generic way to do this is to add <code>export PATH="$(brew --prefix qt@5)/bin:$PATH"</code> to either your <code>~/.zprofile</code> or <code>~/.zshrc</code> file.  You will also want to add <code>export CMAKE_PREFIX_PATH="$(brew --prefix qt@5)/lib/cmake:$CMAKE_PREFIX_PATH"</code> to the same file.
 </li>
 <li> python (tested with 3.11.4)<br/>
 Note: We use python3 instead of MacOS's default python2.  To map the default executable for python, please add <code>export PATH="$(brew --prefix python)/libexec/bin/:$PATH"</code> and <code>export PATH="$(brew --prefix python)/bin:$PATH</code> to either your <code>~/.zprofile</code> or <code>~/.zshrc</code> file.  Alternatively, you may have to set paths by hand when running cmake.
