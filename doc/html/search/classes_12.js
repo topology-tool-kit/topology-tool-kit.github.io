@@ -7,5 +7,6 @@ var searchData=
   ['reebspace_4',['ReebSpace',['../classttk_1_1ReebSpace.html',1,'ttk']]],
   ['region_5',['Region',['../structttk_1_1cf_1_1Region.html',1,'ttk::cf::Region'],['../structttk_1_1ftm_1_1Region.html',1,'ttk::ftm::Region']]],
   ['registryvalue_6',['RegistryValue',['../structRegistryValue.html',1,'']]],
-  ['ripscomplex_7',['RipsComplex',['../classttk_1_1RipsComplex.html',1,'ttk']]]
+  ['regulargridtriangulation_7',['RegularGridTriangulation',['../classttk_1_1RegularGridTriangulation.html',1,'ttk']]],
+  ['ripscomplex_8',['RipsComplex',['../classttk_1_1RipsComplex.html',1,'ttk']]]
 ];

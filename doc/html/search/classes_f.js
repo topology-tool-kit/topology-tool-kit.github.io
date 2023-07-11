@@ -8,5 +8,6 @@ var searchData=
   ['output1separatrices_5',['Output1Separatrices',['../structttk_1_1MorseSmaleComplex_1_1Output1Separatrices.html',1,'ttk::MorseSmaleComplex']]],
   ['output2separatrices_6',['Output2Separatrices',['../structttk_1_1MorseSmaleComplex_1_1Output2Separatrices.html',1,'ttk::MorseSmaleComplex']]],
   ['outputcriticalpoints_7',['OutputCriticalPoints',['../structttk_1_1MorseSmaleComplex_1_1OutputCriticalPoints.html',1,'ttk::MorseSmaleComplex']]],
-  ['outputmanifold_8',['OutputManifold',['../structttk_1_1MorseSmaleComplex_1_1OutputManifold.html',1,'ttk::MorseSmaleComplex']]]
+  ['outputmanifold_8',['OutputManifold',['../structttk_1_1MorseSmaleComplex_1_1OutputManifold.html',1,'ttk::MorseSmaleComplex']]],
+  ['outputsegmentation_9',['OutputSegmentation',['../structttk_1_1PathCompression_1_1OutputSegmentation.html',1,'ttk::PathCompression']]]
 ];

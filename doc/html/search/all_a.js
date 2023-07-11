@@ -14,6 +14,5 @@ var searchData=
   ['jointree_11',['JoinTree',['../classttk_1_1MandatoryCriticalPoints.html#a0e7a766f9a884eadac1826a65ad6f4ddaebe8fffaf1759473a39fd1959e078a2d',1,'ttk::MandatoryCriticalPoints']]],
   ['jsonarraytoarray_12',['jsonArrayToArray',['../ttkWebSocketIO_8cpp.html#a8799dac9bbdfe9683955b659123e0372',1,'ttkWebSocketIO.cpp']]],
   ['jsongetvalue_13',['jsonGetValue',['../ttkWebSocketIO_8cpp.html#a00cdf6c8072973b5316724c672c5a748',1,'ttkWebSocketIO.cpp']]],
-  ['jsonhaschild_14',['jsonHasChild',['../ttkWebSocketIO_8cpp.html#a679448ca4b73bca709cb5982cdfdb7e4',1,'ttkWebSocketIO.cpp']]],
-  ['jt_5f_15',['jt_',['../classttk_1_1ftm_1_1FTMTree__CT.html#a4b2e4e4d642f4e0fba9559b7d668f5ba',1,'ttk::ftm::FTMTree_CT::jt_()'],['../classttk_1_1cf_1_1ContourForestsTree.html#ac95af35e0803a7c40bfc8faff7565ce2',1,'ttk::cf::ContourForestsTree::jt_()']]]
+  ['jt_5f_14',['jt_',['../classttk_1_1ftm_1_1FTMTree__CT.html#ad14a74d89a994839a340bdf91fb4f28c',1,'ttk::ftm::FTMTree_CT::jt_()'],['../classttk_1_1cf_1_1ContourForestsTree.html#a12995dc91fafd72a04708c8140857b74',1,'ttk::cf::ContourForestsTree::jt_()']]]
 ];

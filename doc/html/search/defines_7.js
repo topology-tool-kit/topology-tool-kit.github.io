@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['m_5fpi_0',['M_PI',['../Os_8h.html#ae71449b1cc6e6250b91f539153a7a0d3',1,'Os.h']]],
-  ['matchingvector_1',['matchingVector',['../MergeTreeClustering_8h.html#a2e2aad42f1a00040bb021f4d68aa5a37',1,'MergeTreeClustering.h']]]
+  ['integral_5fline_5ftabular_5fsize_0',['INTEGRAL_LINE_TABULAR_SIZE',['../IntegralLines_8h.html#ae8b2afc05b34033a753a5ce72114592c',1,'IntegralLines.h']]]
 ];

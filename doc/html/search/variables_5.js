@@ -15,7 +15,7 @@ var searchData=
   ['edgestarlist_5f_12',['edgeStarList_',['../classttk_1_1AbstractTriangulation.html#ab2c74a31d7e98278f2afa80aaae2d63f',1,'ttk::AbstractTriangulation']]],
   ['edgetrianglelist_5f_13',['edgeTriangleList_',['../classttk_1_1AbstractTriangulation.html#afad1f741c757cf79324b42159ddb266b',1,'ttk::AbstractTriangulation']]],
   ['edgetrianglepartner_5f_14',['edgeTrianglePartner_',['../classttk_1_1DiscreteMorseSandwich.html#a58c08037279821cf29952c2fd8c785a5',1,'ttk::DiscreteMorseSandwich']]],
-  ['embedding_5f_15',['embedding_',['../classttk_1_1DimensionReduction.html#a58626e82a5c412a49ceaf77a64915c5f',1,'ttk::DimensionReduction']]],
+  ['enableforking_15',['EnableForking',['../classttk_1_1IntegralLines.html#a1c39500e555c6365b6fe7f2463e61716',1,'ttk::IntegralLines']]],
   ['endcolor_16',['ENDCOLOR',['../namespacettk_1_1debug_1_1output.html#a030867df8709f75c7e0833d2e5bdb532',1,'ttk::debug::output']]],
   ['epsilon_17',['Epsilon',['../classttk_1_1RipsComplex.html#af243d796c7a8c4f7b26e6e9c321f1700',1,'ttk::RipsComplex::Epsilon()'],['../classttk_1_1PersistenceDiagram.html#ae220b4d9501ccefcdf9387858eff3cbe',1,'ttk::PersistenceDiagram::Epsilon()']]],
   ['epsilon1usefarthestsaddle_5f_18',['epsilon1UseFarthestSaddle_',['../classttk_1_1MergeTreeBase.html#a171df0d00e2d892353cf80303899d1e8',1,'ttk::MergeTreeBase']]],
@@ -39,5 +39,6 @@ var searchData=
   ['explicittriangulation_5f_36',['explicitTriangulation_',['../classttk_1_1Triangulation.html#a297c705181b36583e03c84c5eaceff11',1,'ttk::Triangulation']]],
   ['extent_37',['extent',['../structRegistryValue.html#a33a80fb39ab2f326cec3a6f1dffabfbe',1,'RegistryValue']]],
   ['externalcells_5f_38',['externalCells_',['../classttk_1_1CompactTriangulation.html#a4a46cbefb63255d9b73036daa581d39d',1,'ttk::CompactTriangulation']]],
-  ['extrema_39',['extrema',['../structttk_1_1ftm_1_1SharedData.html#abf8c3e43535034df4b110268045501c2',1,'ttk::ftm::SharedData']]]
+  ['externaloffsets_5f_39',['externalOffsets_',['../classttk_1_1SubLevelSetTree.html#aa126d156721404924c2c534b01072bfa',1,'ttk::SubLevelSetTree']]],
+  ['extrema_40',['extrema',['../structttk_1_1ftm_1_1SharedData.html#abf8c3e43535034df4b110268045501c2',1,'ttk::ftm::SharedData']]]
 ];

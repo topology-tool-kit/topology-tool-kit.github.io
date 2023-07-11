@@ -6,6 +6,8 @@ var searchData=
   ['ray_2eh_3',['Ray.h',['../Ray_8h.html',1,'']]],
   ['reebspace_2ecpp_4',['ReebSpace.cpp',['../ReebSpace_8cpp.html',1,'']]],
   ['reebspace_2eh_5',['ReebSpace.h',['../ReebSpace_8h.html',1,'']]],
-  ['ripscomplex_2ecpp_6',['RipsComplex.cpp',['../RipsComplex_8cpp.html',1,'']]],
-  ['ripscomplex_2eh_7',['RipsComplex.h',['../RipsComplex_8h.html',1,'']]]
+  ['regulargridtriangulation_2ecpp_6',['RegularGridTriangulation.cpp',['../RegularGridTriangulation_8cpp.html',1,'']]],
+  ['regulargridtriangulation_2eh_7',['RegularGridTriangulation.h',['../RegularGridTriangulation_8h.html',1,'']]],
+  ['ripscomplex_2ecpp_8',['RipsComplex.cpp',['../RipsComplex_8cpp.html',1,'']]],
+  ['ripscomplex_2eh_9',['RipsComplex.h',['../RipsComplex_8h.html',1,'']]]
 ];
