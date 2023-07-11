@@ -283,10 +283,10 @@ compile ParaView and TTK from source. Please enter the following commands
 (omit the <code>$</code> character) in a terminal to install them (please see 
 the documentation of your package manager if your operating system is not 
 Ubuntu Linux):<br><code><br>
-$ sudo apt-get install cmake-qt-gui libboost-system-dev libopengl-dev<br>
+$ sudo apt-get install cmake-qt-gui ninja-build libboost-system-dev libopengl-dev<br>
 <!-- $ sudo apt-get install libvtk7-dev<br> -->
 <!-- $ sudo apt-get install protobuf-compiler<br> -->
-$ sudo apt-get install qt5-default qttools5-dev libqt5x11extras5-dev
+$ sudo apt-get install qttools5-dev libqt5x11extras5-dev
 libqt5svg5-dev qtxmlpatterns5-dev-tools
 </code><br><br>
 Note that these commands will also trigger the installation of the (numerous) 
@@ -430,15 +430,15 @@ under Fedora (as of version 30):
 a terminal (this assumes that you downloaded the tarballs to the 
 <code>~/Downloads</code> directory):<br><br>
 <code>$ mkdir ~/ttk</code><br>
-<code>$ mv ~/Downloads/ParaView-v5.11.1.tar.xz ~/ttk/</code><br>
-<code>$ mv ~/Downloads/ttk-1.2.0.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ParaView-v5.11.1.zip ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ttk-1.2.0.zip ~/ttk/</code><br>
 <code>$ cd ~/ttk</code><br>
-<code>$ tar xvJf ParaView-v5.11.1.tar.xz</code><br>
-<code>$ tar xvzf ttk-1.2.0.tar.gz</code><br><br>
+<code>$ unzip ParaView-v5.11.1.zip</code><br>
+<code>$ unzip ttk-1.2.0.zip</code><br><br>
 You can delete the tarballs after the source trees have been decompressed by 
 entering the following commands:<br><br>
-<code>$ rm ParaView-v5.11.1.tar.xz</code><br>
-<code>$ rm ttk-1.2.0.tar.gz</code></p>
+<code>$ rm ParaView-v5.11.1.zip</code><br>
+<code>$ rm ttk-1.2.0.zip</code></p>
                   
                   <p>
                   <h3>4. Patching the ParaView source tree</h3>
@@ -465,7 +465,8 @@ the following commands:<br><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
-The configuration window opens. Click on the "Configure" button to proceed.
+The configuration window opens. 
+Click on the "Configure" button to proceed. Select the "Ninja" generator.
 Once the configuration is finished, you may want to enable additional build options (OSPRay, MPI, etc) to your liking (see the 
 <a 
 href="http://www.paraview.org/Wiki/ParaView:
@@ -513,23 +514,17 @@ It has been reported that the following CMake variables need to be updated as fo
 <br><br>
 
 <h4>b) Build</h4>
-Now you can start the compilation process by entering the following command, 
-where <code>N</code> is the number of available cores on your system (this will 
+Now you can start the compilation process by entering the following command
+(this will 
 take a <b>LONG</b> time):<br><br>
-<code>$ make -jN</code><br><br>
+<code>$ ninja</code><br><br>
+
 
 <h4>c) Installation</h4>
-Once the build is finished, 
-enter the following 
-command
-to install your build of ParaView on your system:<br><br>
-<code>$ sudo make install</code><br><br>
-<!--<h4>Note to MacOS users</h4>
-It seems that the support of ParaView's development framework is currently not 
-as mature under MacOS than it is under Linux. We recommend MacOS users to omit 
-the above command (to use ParaView then, simply invoke the output binary 
-located in the source tree).<br><br>-->
-
+Once the build is finished,
+enter the following
+command to install your build of ParaView on your system:<br><br>
+<code>$ sudo ninja install</code>
 
 <!--<h4>c) Post-installation</h4>
 Once the installation of ParaView is finished, 
@@ -547,6 +542,7 @@ commands:<br><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
 The configuration window opens. Click on the "Configure" button to proceed.
+Select the "Ninja" generator.
 At this stage, under Linux, TTK's build should be automatically configured
 correctly 
  by default and Linux users can click on the "Generate" button.<br>
@@ -578,16 +574,16 @@ href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/c%2B%2B"
 >on this page</a>.<br><br>
 
 <h4>b) Build</h4>
-Now you can start the compilation process by entering the following command, 
-where <code>N</code> is the number of available cores on your system (this will 
+Now you can start the compilation process by entering the following command
+(this will 
 take a <b>LONG</b> time):<br><br>
-<code>$ make -jN</code><br><br>
+<code>$ ninja</code><br><br>
 
 <h4>c) Installation</h4>
 Once the build is finished, 
 enter the following 
 command to install your build of TTK on your system:<br><br>
-<code>$ sudo make install</code>
+<code>$ sudo ninja install</code>
 <!--as mentioned previously, it seems that the support of paraview's 
 development 
 framework is currently not as mature under macos than it is under linux. we 
