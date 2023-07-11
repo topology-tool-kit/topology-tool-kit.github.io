@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['read_5ffixed_0',['READ_FIXED',['../ExplicitTriangulation_8cpp.html#a4f312b519d431619223d14a6d55f8774',1,'ExplicitTriangulation.cpp']]],
-  ['real_5fmax_1',['REAL_MAX',['../Os_8h.html#a70fc4e60483cc1a5cb39dd935640cadc',1,'Os.h']]],
-  ['real_5fsignificant_5fdigits_2',['REAL_SIGNIFICANT_DIGITS',['../Os_8h.html#a985264636a55a9eb2225fdb81d6b4d3f',1,'Os.h']]],
-  ['real_5ftype_3',['REAL_TYPE',['../Os_8h.html#a7db5e8ee7c27e6fb5c9caf9d674ea949',1,'Os.h']]],
-  ['real_5ftype_5fstring_4',['REAL_TYPE_STRING',['../Os_8h.html#a5e053fd2ac5137e85ec829cc253d95f8',1,'Os.h']]]
+  ['points_5fbelow_5fdiag_5ftolerance_0',['POINTS_BELOW_DIAG_TOLERANCE',['../MergeTreePrincipalGeodesicsBase_8h.html#aac567219ae07b9a58d371394d92f9ed4',1,'MergeTreePrincipalGeodesicsBase.h']]],
+  ['print_1',['PRINT',['../FTRGraphPrivate__Template_8h.html#a994cb1e8771e881023efb47d91c58fbb',1,'FTRGraphPrivate_Template.h']]],
+  ['prior_2',['PRIOR',['../FTMTree__MT_8cpp.html#a2ff77317386645639fe889cea0098816',1,'FTMTree_MT.cpp']]]
 ];

@@ -21,8 +21,10 @@ var searchData=
   ['discretemorsesandwich_2eh_18',['DiscreteMorseSandwich.h',['../DiscreteMorseSandwich_8h.html',1,'']]],
   ['distancefield_2ecpp_19',['DistanceField.cpp',['../DistanceField_8cpp.html',1,'']]],
   ['distancefield_2eh_20',['DistanceField.h',['../DistanceField_8h.html',1,'']]],
-  ['dynamicgraph_2eh_21',['DynamicGraph.h',['../DynamicGraph_8h.html',1,'']]],
-  ['dynamicgraph_5ftemplate_2eh_22',['DynamicGraph_Template.h',['../DynamicGraph__Template_8h.html',1,'']]],
-  ['dynamictree_2ecpp_23',['DynamicTree.cpp',['../DynamicTree_8cpp.html',1,'']]],
-  ['dynamictree_2eh_24',['DynamicTree.h',['../DynamicTree_8h.html',1,'']]]
+  ['distancematrixdistorsion_2ecpp_21',['DistanceMatrixDistorsion.cpp',['../DistanceMatrixDistorsion_8cpp.html',1,'']]],
+  ['distancematrixdistorsion_2eh_22',['DistanceMatrixDistorsion.h',['../DistanceMatrixDistorsion_8h.html',1,'']]],
+  ['dynamicgraph_2eh_23',['DynamicGraph.h',['../DynamicGraph_8h.html',1,'']]],
+  ['dynamicgraph_5ftemplate_2eh_24',['DynamicGraph_Template.h',['../DynamicGraph__Template_8h.html',1,'']]],
+  ['dynamictree_2ecpp_25',['DynamicTree.cpp',['../DynamicTree_8cpp.html',1,'']]],
+  ['dynamictree_2eh_26',['DynamicTree.h',['../DynamicTree_8h.html',1,'']]]
 ];

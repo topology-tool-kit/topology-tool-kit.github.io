@@ -6,5 +6,6 @@ var searchData=
   ['simplifmethod_3',['SimplifMethod',['../namespacettk_1_1cf.html#a27b24c96425b2888bde0185d85821905',1,'ttk::cf::SimplifMethod()'],['../namespacettk_1_1ftm.html#a032970813b2edc14cfd2639d3a53620b',1,'ttk::ftm::SimplifMethod()']]],
   ['solvingmethodtype_4',['SolvingMethodType',['../classttk_1_1HarmonicField.html#a8b256505af1539396c0a31981c8bb8f4',1,'ttk::HarmonicField']]],
   ['solvingmethodusertype_5',['SolvingMethodUserType',['../classttk_1_1HarmonicField.html#a7b1862a1d2f2b355e5db1fcdc45a0d10',1,'ttk::HarmonicField']]],
-  ['strategy_6',['STRATEGY',['../classttk_1_1Triangulation.html#a734859e18bc3612ce72a9d4e5aa23891',1,'ttk::Triangulation']]]
+  ['strategy_6',['STRATEGY',['../classttk_1_1Triangulation.html#a734859e18bc3612ce72a9d4e5aa23891',1,'ttk::Triangulation']]],
+  ['surface_5fmode_7',['SURFACE_MODE',['../classttk_1_1MarchingTetrahedra.html#a7cd6c8d8cf9121738dbe87041b6ec312',1,'ttk::MarchingTetrahedra']]]
 ];

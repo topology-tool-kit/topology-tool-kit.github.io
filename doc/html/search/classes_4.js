@@ -9,10 +9,11 @@ var searchData=
   ['discretegradient_6',['DiscreteGradient',['../classttk_1_1dcg_1_1DiscreteGradient.html',1,'ttk::dcg']]],
   ['discretemorsesandwich_7',['DiscreteMorseSandwich',['../classttk_1_1DiscreteMorseSandwich.html',1,'ttk']]],
   ['distancefield_8',['DistanceField',['../classttk_1_1DistanceField.html',1,'ttk']]],
-  ['dynamicgraph_9',['DynamicGraph',['../classttk_1_1ftr_1_1DynamicGraph.html',1,'ttk::ftr']]],
-  ['dynamicgraph_3c_20idvertex_20_3e_10',['DynamicGraph&lt; idVertex &gt;',['../classttk_1_1ftr_1_1DynamicGraph.html',1,'ttk::ftr']]],
-  ['dynamictree_11',['DynamicTree',['../classttk_1_1DynamicTree.html',1,'ttk']]],
-  ['dyngraphnode_12',['DynGraphNode',['../structttk_1_1ftr_1_1DynGraphNode.html',1,'ttk::ftr']]],
-  ['dyngraphs_13',['DynGraphs',['../structttk_1_1ftr_1_1DynGraphs.html',1,'ttk::ftr']]],
-  ['dyntreenode_14',['DynTreeNode',['../structttk_1_1DynTreeNode.html',1,'ttk']]]
+  ['distancematrixdistorsion_9',['DistanceMatrixDistorsion',['../classttk_1_1DistanceMatrixDistorsion.html',1,'ttk']]],
+  ['dynamicgraph_10',['DynamicGraph',['../classttk_1_1ftr_1_1DynamicGraph.html',1,'ttk::ftr']]],
+  ['dynamicgraph_3c_20idvertex_20_3e_11',['DynamicGraph&lt; idVertex &gt;',['../classttk_1_1ftr_1_1DynamicGraph.html',1,'ttk::ftr']]],
+  ['dynamictree_12',['DynamicTree',['../classttk_1_1DynamicTree.html',1,'ttk']]],
+  ['dyngraphnode_13',['DynGraphNode',['../structttk_1_1ftr_1_1DynGraphNode.html',1,'ttk::ftr']]],
+  ['dyngraphs_14',['DynGraphs',['../structttk_1_1ftr_1_1DynGraphs.html',1,'ttk::ftr']]],
+  ['dyntreenode_15',['DynTreeNode',['../structttk_1_1DynTreeNode.html',1,'ttk']]]
 ];
