@@ -197,20 +197,23 @@ href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/c%2B%2B"
 
 <b>Most users will want to activate TTK's ParaView support.</b><br><br>
 
-This page describes installing TTK 1.2.0 on MacOS, using MacOS Ventura 13, and ParaView 5.11.1.  These specific instructions were
-tested with MacOS Ventura 13.1 using an Apple M1 chip. <br><br> 
+This page describes installing TTK 1.1.0 on MacOS, using MacOS BigSur 11
+or Monterey 12, and ParaView 5.10.1.  These specific instructions were
+tested with MacOS Monterey 12.4 using an Apple M1 chip.  These
+instructions have also been updated to reflect MacOS's switch to zsh as
+the default shell rather than bash.<br><br> 
+
+Note that during this transition of support for arm-based architectures, MacOS was not well supported for compiling ParaView from source, whereas the later versions of Paraview adapted to MacOS Big Sur and beyond.  Thus, there is a gap in the installation for which TTK 1.0.0 was only experimentally supported on older versions of MacOS.</br></br>
 
 The key differences from the linux installation involve how 
 ParaView is compiled, installing certain dependencies, and setting up some of 
 the paths for MacOS.  The following assumes that the target is to compile with 
-MacOS clang and uses homebrew for dependencies, including python3.<br><br>
+MacOS clang and uses homebrew for dependencies, including python3<br><br>
 
 Other versions of earlier software packages 
 may require slight variations in the installation procedure.
 For earlier versions of both software packages, you may want to check out 
 previous versions of our installation notes for MacOS: <br>
-&nbsp;&middot;&nbsp;<a href="installation-osx-sources-1.1.0.html">TTK 1.1.0
-with ParaView 5.10.1 on MacOS BigSur and Monterey</a>.<br>
 &nbsp;&middot;&nbsp;<a href="installation-osx-sources-0.9.9.html">TTK 0.9.9
 with ParaView 5.8.1 on MacOS Mojave (these may also be adapted to TTK
 1.0.0 and MacOS Catalina)</a>.<br>
@@ -227,9 +230,9 @@ TTK builds on top of <a href="http://www.paraview.org"
 target="new">ParaView</a> for its main user interface. Thus, you will first 
 need to download 
 <a 
-href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.11&type=source&os=Sources&downloadFile=ParaView-v5.11.1.tar.gz"
+href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.10&type=source&os=Sources&downloadFile=ParaView-v5.10.1.tar.gz"
 target="new">
-ParaView 5.11.1's source code</a>.
+ParaView 5.10.1's source code</a>.
 Note 
 that TTK plugins for ParaView will only work with a version of ParaView 
 compiled from source. Thus, if you already installed ParaView with a binary 
@@ -246,16 +249,16 @@ href="downloads.html">download page</a>.
 
 Using <a href="https://brew.sh/">homebrew</a>, install:
 <ul>
-<li> cmake (tested with 3.26.4) </li>
-<li> qt@5 (tested with 5.15.10) <br/>
+<li> cmake (tested with 3.23.2) </li>
+<li> qt@5 (tested with 5.15.5) <br/>
 Note, as recommended by brew, we added qt@5 to our PATH variable.  The
-most generic way to do this is to add <code>export PATH="$(brew --prefix qt@5)/bin:$PATH"</code> to either your <code>~/.zprofile</code> or <code>~/.zshrc</code> file.  You will also want to add <code>export CMAKE_PREFIX_PATH="$(brew --prefix qt@5)/lib/cmake:$CMAKE_PREFIX_PATH"</code> to the same file.
+most generic way to do this is to add <code>export PATH="$(brew --prefix qt@5)/bin:$PATH"</code> to either your <code>~/.zprofile</code> or <code>~/.zshrc</code> file.
 </li>
-<li> python (tested with 3.11.4)<br/>
-Note: We use python3 instead of MacOS's default python2.  To map the default executable for python, please add <code>export PATH="$(brew --prefix python)/libexec/bin/:$PATH"</code> and <code>export PATH="$(brew --prefix python)/bin:$PATH</code> to either your <code>~/.zprofile</code> or <code>~/.zshrc</code> file.  Alternatively, you may have to set paths by hand when running cmake.
-<li> vtk (tested with version 9.2.6)<br/>
+<li> python (tested with 3.9.13)<br/>
+Note: We use python3 instead of MacOS's default python2.  To map the default executable for python, please add <code>export PATH="$(brew --prefix python@3.9)/libexec/bin/:$PATH"</code> and <code>export PATH="$(brew --prefix python@3.9)/bin:$PATH</code> to either your <code>~/.zprofile</code> or <code>~/.zshrc</code> file.
+<li> vtk (tested with version 9.1.0)<br/>
 This required installing certain vtk dependencies, including pyqt@5,
-glew, etc., which should be handled seamlessly.  Installing vtk will also install hdf5 as a dependency (that ParaView can make use of).  </li>
+glew, etc., which should be handled seamlessly.  Installing vtk will also install hdf5 as a dependency (that ParaView can make use of).</li>
 </ul>
 Altogether, this required the following sequence of commands:<br><br>
 <code>$ brew install cmake qt@5 python vtk</code><br><br>
@@ -265,16 +268,16 @@ Altogether, this required the following sequence of commands:<br><br>
 
 <h5>(i) OpenMP:</h5>
 
-Using homebrew, one can also install OpenMP support for TTK (with homebrew:
+Using homebrew, one can also install OpenMP support for TTK with homebrew:
 <ul>
-<li> libomp (tested with 16.0.6)</li>
+<li> libomp (tested with 14.0.6)</li>
 </ul>
 Using the command: <code>$ brew install libomp</code><br><br>
 
 
 <h5>(ii) OSPRay/Embree:</h5>
 
-Our continuous integration framework does call <code>$ brew install embree</code>, which with the above environment will install embree 4.1.0.  TTK 1.2.0 is compatible with embree version 3.4 and above, but not 4 or higher, so unfortunately this will disable embree-based features in TTK.  That said, if you also <code>$ brew install ospray</code> (which will install embree as well), you can set <code>PARAVIEW_ENABLE_RAYTRACING</code> at build time as described below.<br/><br/>
+Are not currently fully tested at this time, although our continuous integration framework does <code>$ brew install embree</code>.  If you also <code>$ brew install ospray</code> (which will install embree as well), you can set <code>PARAVIEW_ENABLE_RAYTRACING</code> at build time as described below.<br/><br/>
 
 
 <h5>(iii) TTK optional dependencies:</h5>
@@ -283,16 +286,15 @@ Finally, in order to enjoy the complete set of TTK features, we also recommend i
 <ul>
 <li><a target="new" href="http://eigen.tuxfamily.org/">eigen</a> (for scalar field design) tested with version 3.4.0 on homebrew:<br>
 <code>$ brew install eigen</code></li>
-<li><a target="new" href="https://www.graphviz.org/">graphviz</a> (for graph drawing features) tested with version 8.0.5 on homebrew:<br>
+<li><a target="new" href="https://www.graphviz.org/">graphviz</a> (for graph drawing features) tested with version 5.0.0 on homebrew:<br>
 <code>$ brew install graphviz</code></li>
-<li><a target="new" href="https://scikit-learn.org/stable/index.html">scikit-learn</a> for Python3 (for data reduction features, version 0.19.0 or later).  Support is still experimental.  We tested with version 1.3.0, installed for python3 with pip3:<br>
+<li><a target="new" href="https://scikit-learn.org/stable/index.html">scikit-learn</a> for Python3 (for data reduction features, version 0.19.0 or later).  Support is still experimental.  We tested with version 1.1.1, installed for python3 with pip3:<br>
 <code>$ pip3 install -U scikit-learn</code></li>
-<li><a target="new" href="https://spectralib.org">Spectra</a> (for the computation of the eigenfunctions of the Laplace-Beltrami operator) tested with version 1.0.1 on homebrew:<br>
-<code>$ brew install spectra</code></li>
-<li><a href="https://www.sqlite.org/" target="new">sqlite</a> (for cinema query features), tested with version 3.42.0 on homebrew:<br>
+<li><a target="new" href="https://github.com/yixuan/spectra/archive/v0.8.1.tar.gz">Spectra</a> (for the computation of the eigenfunctions of the Laplace-Beltrami operator) tested with version 0.8.1 and <a href="https://spectralib.org/">installed from source (see instructions)</a>.</li>
+<li><a href="https://www.sqlite.org/" target="new">sqlite</a> (for cinema query features), tested with version 3.39.1 on homebrew:<br>
 <code>$ brew install sqlite</code></li>
-<li><a href="https://github.com/LLNL/zfp" target="new">ZFP</a> (for advanced compression support, version 0.5.4 or later) tested with version 1.0.0 and <a href="https://github.com/LLNL/zfp">installed from source (see instructions)</a>,</li>
-<li><a href="https://zlib.net/" target="new">zlib</a> (for further compression support) tested with version 1.2.13 on homebrew:<br>
+<li><a href="https://github.com/LLNL/zfp/archive/master.zip" target="new">ZFP</a> (for advanced compression support, version 0.5.4 or later) tested with version 0.5.5 and <a href="https://github.com/LLNL/zfp">installed from source (see instructions)</a>,</li>
+<li><a href="https://zlib.net/" target="new">zlib</a> (for further compression support) tested with version 1.2.12 on homebrew:<br>
 <code>$ brew install zlib</code></li>
 </ul>
 </p>
@@ -308,15 +310,15 @@ Move the tarballs to a working directory (for instance called
 a terminal (this assumes that you downloaded the tarballs to the 
 <code>~/Downloads</code> directory):<br><br>
 <code>$ mkdir ~/ttk</code><br>
-<code>$ mv ~/Downloads/ParaView-v5.11.1.tar.gz ~/ttk/</code><br>
-<code>$ mv ~/Downloads/ttk-1.2.0.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ParaView-v5.10.1.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ttk-1.1.0.tar.gz ~/ttk/</code><br>
 <code>$ cd ~/ttk</code><br>
-<code>$ tar xvzf ParaView-v5.11.1.tar.gz</code><br>
-<code>$ tar xvzf ttk-1.2.0.tar.gz</code><br><br>
+<code>$ tar xvzf ParaView-v5.10.1.tar.gz</code><br>
+<code>$ tar xvzf ttk-1.1.0.tar.gz</code><br><br>
 You can delete the tarballs after the source trees have been decompressed by 
 entering the following commands:<br><br>
-<code>$ rm ParaView-v5.11.1.tar.gz</code><br>
-<code>$ rm ttk-1.2.0.tar.gz</code><br><br>
+<code>$ rm ParaView-v5.10.1.tar.gz</code><br>
+<code>$ rm ttk-1.1.0.tar.gz</code><br><br>
 </p>
 
 <p><h3>4. Patching the ParaView source tree</h3>
@@ -328,8 +330,8 @@ This step is
 optional. 
 To proceed, go to 
 the patch directory and apply it as follows:<br><br>
-<code>$ cd ~/ttk/ttk-1.2.0/paraview/patch</code><br>
-<code>$ ./patch-paraview-5.11.1.sh ~/ttk/ParaView-v5.11.1/</code><br><br>
+<code>$ cd ~/ttk/ttk-1.1.0/paraview/patch</code><br>
+<code>$ ./patch-paraview-5.10.1.sh ~/ttk/ParaView-v5.10.1/</code><br><br>
 </p>
 
 
@@ -342,7 +344,7 @@ the patch directory and apply it as follows:<br><br>
 <h4>a) Configuration</h4>
 To enter the configuration menu of ParaView's build, enter the following 
 commands:<br><br>
-<code>$ cd ~/ttk/ParaView-v5.11.1/</code><br>
+<code>$ cd ~/ttk/ParaView-v5.10.1/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ ccmake ..</code> (on homebrew cmake there is no <code>cmake-gui</code>, 
@@ -352,8 +354,9 @@ href="https://cmake.org/download/">https://cmake.org/download/</a>)<br><br>
 Then, press 'c' to configure and we'll check/edit some CMake flags (you may
 have to press 't' to find them):<br>
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code> (should be the
-default, if not add it as a flag below)<br>
-<code>&nbsp;&middot;&nbsp;Python3_EXECUTABLE</code> should indicate the correct binary path for python by default.  Unlike in previous TTK build instructions, you do not have to set <code>PARAVIEW_ENABLE_PYTHON</code> or verify that <code>PARAVIEW_PYTHON_VERSION=3</code><br>
+default)<br>
+<code>&nbsp;&middot;&nbsp;PARAVIEW_USE_PYTHON=ON</code> (should be the
+default, and you can verify that the version is by checking that <code>PARAVIEW_PYTHON_VERSION=3</code>)<br>
 <br>
 
 You can also enable optional pieces, including:
@@ -368,22 +371,19 @@ You can also enable optional pieces, including:
 
 <h5>(ii) SMP implementation:</h5>
 
-At this time, we do not recommend building ParaView 5.11.1 with OpenMP implementations, even though TTK can take advantage of OpenMP for some of its features.  The homebrew packages for libomp does appear to not be easily supported by the ParaView build chain for MacOSX.  TBB, however, is supported (but not necessary).  To enable TBB for ParaView:<br>
-
-<code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=TBB</code><br>
-<code>&nbsp;&middot;&nbsp;VTKm_ENABLE_TBB=ON</code><br>
-
+At this time, we do not recommend building ParaView 5.10.1 with OpenMP or TBB implementations, even though TTK can take advantage of OpenMP for some of its features.  The homebrew packages for libomp and tbb appear to not be directly supported by the ParaView build chain, necessitating building additional elements from source.
 <br><br>
 
 After specifying the above options, press 'c' to configure (wait a minute) and then press 't' for advanced mode to double check the above paths and/or fill in any flags that did not appear the first time.  You may need to press 'c' again, which fills in some more paths.  Once cmake is finished configuring, you should finalize everything by pressing 'g' to generate and exit.<br><br>
 
 <br/><br/>
 
-If you prefer to just run <code>cmake</code> as opposed to <code>ccmake</code> or <code>cmake-gui</code>, the following summarizes possible installations:
+If you prefer to just run <code>cmake</code> as opposed to <code>ccmake</code> or <code>cmake-gui</code>, the following summarizes two possible installations:
 
 <h5>Basic (No Optional Dependencies)</h5>
 <code>$ cmake \<br>
 -DCMAKE_BUILD_TYPE=Release \<br>
+-DPARAVIEW_ENABLE_PYTHON=ON \<br>
 ..
 </code><br>
 
@@ -391,16 +391,8 @@ If you prefer to just run <code>cmake</code> as opposed to <code>ccmake</code> o
 <h5>(i) ParaView + OSPRay</h5>
 <code>$ cmake \<br>
 -DCMAKE_BUILD_TYPE=Release \<br>
+-DPARAVIEW_ENABLE_PYTHON=ON \<br>
 -DPARAVIEW_ENABLE_RAYTRACING=ON \<br>
-..
-</code><br>
-
-<h5>(ii) ParaView + OSPRay + TBB</h5>
-<code>$ cmake \<br>
--DCMAKE_BUILD_TYPE=Release \<br>
--DPARAVIEW_ENABLE_RAYTRACING=ON \<br>
--DVTK_SMP_IMPLEMENTATION_TYPE=TBB \<br>
--DVTKm_ENABLE_TBB=ON \<br>
 ..
 </code><br>
 
@@ -424,7 +416,7 @@ To set this environment variable permanently, we recommend editing whatever file
 
 <code>export PV_PLUGIN_PATH="/usr/local/lib/plugins"</code><br><br>
 
-Note that, by default, our installation of ParaView will search for plugins in <code>~/ttk/ParaView-v5.11.1/build/bin/paraview.app/Contents/MacOS/plugins</code>.  And, by default, our installation of pvpython will search fo plugins in <code>~/ttk/ParaView-v5.11.1/build/bin/plugins</code>.  Setting <code>PV_PLUGIN_PATH</code> overrides this so that both can search for TTK in a common location.  If this directory does not exist, you may need to create it as well as <code>/usr/local/scripts</code>.<br/><br/>
+Note that, by default, our installation of ParaView will search for plugins in <code>~/ttk/ParaView-v5.10.1/build/bin/paraview.app/Contents/MacOS/plugins</code>.  And, by default, our installation of pvpython will search fo plugins in <code>~/ttk/ParaView-v5.10.1/build/bin/plugins</code>.  Setting <code>PV_PLUGIN_PATH</code> overrides this so that both can search for TTK in a common location.  If this directory does not exist, you may need to create it as well as <code>/usr/local/scripts</code>.<br/><br/>
 
 Users may want to choose to use a different location that <code>/usr/local/lib/plugins</code>, although this path is consistent with where the Linux installation of TTK installs them.<br><br>
 
@@ -439,7 +431,7 @@ For more information, see <a href="https://www.paraview.org/Wiki/ParaView/Plugin
 <h4><a name="ttkConfig">a)</a> Configuration</h4>
 To enter the configuration menu of TTK's build, enter the following 
 commands:<br><br>
-<code>$ cd ~/ttk/ttk-1.2.0/</code><br>
+<code>$ cd ~/ttk/ttk-1.1.0/</code><br>
 <code>$ mkdir ttk_install</code> (for installing standalone apps)<br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
@@ -448,18 +440,17 @@ commands:<br><br>
 The configuration window opens.  Press 'c' to configure, and you'll see that it 
 cannot yet find ParaView.  First, we'll fix this:<br><br>
 
-<code>&nbsp;&middot;&nbsp;ParaView_DIR=~/ttk/ParaView-v5.11.1/build/</code><br><br>
+<code>&nbsp;&middot;&nbsp;ParaView_DIR=~/ttk/ParaView-v5.10.1/build/</code><br><br>
 
 Press 'c' again to configure (you can ignore any warnings).  Next, change:<br><br>
 
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this should be the default)<br>
-<code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=~/ttk/ttk-1.2.0/ttk_install</code
+<code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=~/ttk/ttk-1.1.0/ttk_install</code
 ><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this is where standalone apps and 
 other TTK components are installed)<br>
 <code>&nbsp;&middot;&nbsp;TTK_INSTALL_PLUGIN_DIR=/usr/local/lib/plugins</code><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(should be the default, this is where ParaView plugins are installed)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this is where ParaView plugins are installed)<br>
 <br>
 
 If you are an advanced user and you do not wish to activate TTK's ParaView 
@@ -488,24 +479,34 @@ generate.<br><br>
 as well by switching the flags associated with each (e.g. 
 TTK_BUILD_PARAVIEW_PLUGINS, TTK_BUILD_STANDALONE_APPS, etc.). -->
 
-If you installed the brew packages for libomp it will
+If you installed the brew packages for libomp and/or embree, both will
 be automatically detected by Cmake.
 
 Note that if you are working with optional dependencies, you may also need to set certain CMake variables, including:
 <ul>
 <li>eigen should be automatically detected.</li>
-<li>embree will be detected, but the version will not match and thus it will not be enabled in TTK.</li>
+<li>embree should be automatically detected.</li>
 <li>graphviz should be automatically detected.</li>
 <li>scikit-learn should be automatically enabled.</li>
-<li>spectra should be automatically detected.</li>
+<li>Depending on where you installed it, to enable Spectra set the variable <code>SPECTRA_INCLUDE_DIR</code> to the <code>include</code> subdirectory of where you installed Spectra.</li>
 <li>sqlite should be automatically detected.</li>
-<li>Depending on where you installed it, you may have to set <code>ZFP_DIR</code> to the directory where you built ZFP and set <code>TTK_ENABLE_ZFP=ON</code>.</li>
+<li>Depending on where you installed it, you may have to set <code>ZFP_DIR</code> to the directory where you built ZFP.</li>
 <li>zlib should be automatically detected.</li>
 </ul>
 <br>
 
 Press 'c' to reconfigure (again takes a few seconds) and then press 'g' to 
 generate.<br><br>
+
+<h5>MacOS using arm-based architectures</h5>
+
+If you are using a newer Mac machine that has an M1 chip in it, your
+platform may not be automatically detected by CMake.  You can adjust
+this by explicitly setting it:<br/><br/>
+
+<code>&nbsp;&middot;&nbsp;-DCMAKE_OSX_ARCHITECTURES=arm64</code><br/></br/>
+
+You will need to do this if you receive errors such as "the clang compiler does not support '-march=native'"<br/><br/>
 
 <br><br>
 
@@ -514,27 +515,13 @@ If you prefer to just run <code>cmake</code> as opposed to <code>ccmake</code>
 or <code>cmake-gui</code>, the following summarizes the two possible 
 installations:<br/>
 
-<h5>(i) TTK with only the automatically detected options</h5>
 <code>$ cmake \<br>
--DParaView_DIR=~/ttk/ParaView-v5.11.1/build/ \<br>
+-DParaView_DIR=~/ttk/ParaView-v5.10.1/build/ \<br>
 -DCMAKE_BUILD_TYPE=Release \<br>
--DCMAKE_INSTALL_PREFIX=~/ttk/ttk-1.2.0/ttk_install \<br>
+-DCMAKE_INSTALL_PREFIX=~/ttk/ttk-1.1.0/ttk_install \<br>
 -DTTK_INSTALL_PLUGIN_DIR=/usr/local/lib/plugins \<br>
 ..
 </code><br>
-
-<h5>(ii) TTK + ZFP</h5>
-<code>$ cmake \<br>
--DParaView_DIR=~/ttk/ParaView-v5.11.1/build/ \<br>
--DCMAKE_BUILD_TYPE=Release \<br>
--DCMAKE_INSTALL_PREFIX=~/ttk/ttk-1.2.0/ttk_install \<br>
--DTTK_INSTALL_PLUGIN_DIR=/usr/local/lib/plugins \<br>
--DZFP_DIR=/Users/josh/git/github/zfp/build \<br>
--DTTK_ENABLE_ZFP=ON \<br>
-..
-</code><br>
-
-
 
 <br><br>
 
@@ -560,9 +547,9 @@ Replacing <code>CMAKE_INSTALL_PREFIX</code> with what we used above.<br><br>
 Finally, to make sure the example data files are included in the right path, 
 you have to manually copy the example data into the ParaView .app as 
 well:<br><br>
-<code>$ cd ~/ttk/ttk-1.2.0/paraview/patch/data</code><br>
-<code>$ mkdir -p ~/ttk/ParaView-v5.11.1/build/bin/paraview.app/Contents/share/paraview-5.11/examples</code><br>
-<code>$ cp * ~/ttk/ParaView-v5.11.1/build/bin/paraview.app/Contents/share/paraview-5.11/examples</code><br>
+<code>$ cd ~/ttk/ttk-1.1.0/paraview/patch/data</code><br>
+<code>$ mkdir -p ~/ttk/ParaView-v5.10.1/build/bin/paraview.app/Contents/share/paraview-5.6/examples</code><br>
+<code>$ cp * ~/ttk/ParaView-v5.10.1/build/bin/paraview.app/Contents/share/paraview-5.6/examples</code><br>
 <br>
 </p>
 
@@ -575,7 +562,7 @@ If you applied all the above steps successfully (including step 4), you can now
 open a terminal and type the following command to load your TTK-patched 
 ParaView:<br><br>
 <code>$ cd 
-~/ttk/ParaView-v5.11.1/build/bin/paraview.app/Contents/MacOS/</code><br><br>
+~/ttk/ParaView-v5.10.1/build/bin/paraview.app/Contents/MacOS/</code><br><br>
 <code>$ ./paraview</code><br><br>
 
 At this point, everything from the standard installation procedure should be accessible.  Congrats!
@@ -603,7 +590,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on July 6, 2023.</p>
+                    Updated on July 21, 2022.</p>
                 </div>
             </div>
         </div>

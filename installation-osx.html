@@ -153,14 +153,14 @@ data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
   
                 
                 Please find below detailed instructions for the 
-installation of TTK under MacOS Catalina.
+binary installation of TTK under MacOS.  These pre-built packages are compiled for <code>x86_64</code> architectures and <code>MacOS 12 (Monterey)</code> using <code>Python 3.11</code>.
 
 
 <p>
 <h3>1. Downloading the packages</h3>
 Please checkout and review our <a href="downloads.html" target="new">download page</a> and download the following packages:<br>
-&nbsp;&middot;&nbsp;<code>ttk-paraview-v5.10.1.pkg</code><br>
-&nbsp;&middot;&nbsp;<code>ttk-1.1.0.pkg</code><br>
+&nbsp;&middot;&nbsp;<code>ttk-paraview-v5.11.1.tar.gz</code><br>
+&nbsp;&middot;&nbsp;<code>ttk-1.2.0.tar.gz</code><br><br>
 
 <p>
 <h3>2. Installing dependencies with Homebrew</h3>
@@ -189,33 +189,43 @@ the following commands (omit the <code>$</code> character):<br><br>
 <code>$ brew install wget libomp mesa glew qt</code><br>
 <code>$ brew install boost graphviz embree</code><br><br>
 
-Optionally, the following optional dependency can be installed with <code>pip</code> (if present on the system):<br>
-<code>$ python -m pip install scikit-learn</code><br>
+
 
 <p>
 <h3>2. ParaView installation</h3>
-To install TTK's version of ParaView, open a terminal and enter 
+Installation by default will place files in <code>/usr/local</code>, however you could install into a different directory and adjust the paths as indicated below.  To install TTK's version of ParaView, open a terminal and enter 
 the following command (omit the <code>$</code> character):<br><br>
-<code>$ sudo installer -pkg ttk-paraview-v5.10.1.pkg -target /</code><br>
+<code>$ mkdir ~/ttk-binary</code><br>
+<code>$ mv ~/Downloads/ttk-paraview-v5.11.1.tar.gz ~/ttk-binary</code><br>
+<code>$ cd ~/ttk-binary</code><br>
+<code>$ tar xzvf ttk-paraview-v5.11.1.tar.gz</code><br>
+<code>$ sudo cp -r ttk-paraview/* /usr/local</code><br><br>
 
 <p>
 <h3>3. TTK installation</h3>
 To install TTK, open a terminal and enter 
 the following command (omit the <code>$</code> character):<br><br>
-<code>$ sudo installer -pkg ttk-1.1.0.pkg -target /</code><br>
+<code>$ mv ~/Downloads/ttk-1.2.0.tar.gz ~/ttk-binary</code><br>
+<code>$ cd ~/ttk-binary</code><br>
+<code>$ tar xzvf ttk-1.2.0.tar.gz</code><br>
+<code>$ sudo cp -r ttk/* /usr/local</code><br><br>
 
 <p>
 <h3>4. Setting up environment variables</h3>
 
 At this point, for an optimal user experience, we recommend users to define the following environment variables (in particular, when using TTK with python).
 This can be done by entering the following commands (omit the <code>$</code> character):<br><br>
-<code>$ echo "export CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:$(brew --prefix qt)/lib/cmake:/Applications/lib/cmake/" >> ~/.zshrc</code><br>
-<code>$ echo "export DYLD_LIBRARY_PATH=${DYLD_LIBRARY_PATH}:/Applications/lib/" >> ~/.zshrc</code><br>
-<code>$ echo "export PATH=${PATH}:/Applications/bin/" >> ~/.zshrc</code><br>
-<code>$ echo "export PV_PLUGIN_PATH=${PV_PLUGIN_PATH}:/Applications/bin/plugins/" 
- >> ~/.zshrc</code><br>
-<code>$ echo "export PYTHONPATH=${PYTHONPATH}:/Applications/lib/python3.8/site-packages/" >> ~/.zshrc</code><br>
+<code>$ echo "export CMAKE_PREFIX_PATH=$(brew --prefix qt@5)/lib/cmake:$CMAKE_PREFIX_PATH" >> ~/.zshrc</code><br>
+<code>$ echo "export PYTHONPATH=${PYTHONPATH}:/usr/local/lib/python3.11/site-packages/" >> ~/.zshrc</code><br>
+<code>$ echo "export PV_PLUGIN_PATH=${PV_PLUGIN_PATH}:/usr/local/lib/plugins/" >> ~/.zshrc</code><br>
+<code>$ echo "export DYLD_LIBRARY_PATH=${DYLD_LIBRARY_PATH}:/usr/local/lib" >> ~/.zshrc</code> (this is only necessary if installed somewhere other than <code>/usr/local</code>, changed to your install directory)<br>
+<code>$ echo "export PATH=${PATH}:/usr/local/bin/" >> ~/.zshrc</code> (this is only necessary if installed somewhere other than <code>/usr/local</code>, changed to your install directory)<br>
 <code>$ source ~/.zshrc</code><br><br>
+
+Optionally, the following optional dependency can be installed with <code>pip</code> (if present on the system):<br>
+<code>$ pvpython -m pip install scikit-learn</code>.  If pvpython is not found or creates an error, this indicates either your <code>PATH</code> or <code>PYTHONPATH</code> variable is not set correctly.<br><br>
+
+
 <!-- Note that if you decided to change the default installation path of ParaView and TTK, you will need in the above commands to replace <code>/usr/local</code> by your custom installation path.  -->
 </p>
 
@@ -249,11 +259,15 @@ and type
 TTK-patched ParaView:<br><br>
 <code>$ paraview</code><br><br> 
 
+If paraview does not load correctly or creates an error, this may indicate either your <code>PATH</code> or <code>DYLD_LIBRARY_PATH</code> variable is not set correctly.  Likewise, for the examples tested below, they might reveal issues with the <code>PV_PLUGIN_PATH</code> variable.<br><br>
+
+When executing downloaded packages from the command line, MacOS will likely trigger a security warning.  To fix, open System Preferences and switch to the <code>Privacy &amp; Security</code> panel.  Under the <code>General</code> tab you should be able to find an option to <code>Allow Anyway</code>.
+
 <!--MacOS users will need to launch the built ParaView 
 binary from the ParaView source tree and load all the TTK plugins with the 
 <a href="http://www.paraview.org/Wiki/ParaView/Plugin_HowTo#Using_Plugins" 
 target="new">ParaView Plugin Manager</a> before continuing.<br>-->
-At this point, you should see the following TTK startup screen:<br> <br>
+If all works, you should see the following TTK startup screen:<br> <br>
 <a href="img/ttkStartup.jpg" target="new">
   <img align='center'width="95%" src="img/ttkStartup.jpg">
 </a>
@@ -308,7 +322,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on Jul. 16, 2022.</p>
+                    Updated on Jul. 11, 2023.</p>
                 </div>
             </div>
         </div>
