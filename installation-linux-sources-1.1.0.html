@@ -164,12 +164,12 @@ Windows installation instructions</a>;
 MacOS installation instructions</a>.<br><br>
 These specific notes describe the installation procedure for a 
 <a 
-href="https://releases.ubuntu.com/jammy/"
+href="http://releases.ubuntu.com/20.04.1/ubuntu-20.04.1-desktop-amd64.iso"
 target="new">
-Ubuntu Linux 22.04</a> operating system (but the process should be very 
+Ubuntu Linux 20.04.1</a> operating system (but the process should be very 
 similar 
 for other Linux distributions).
-<a href="tutorials.html#installation" target="new">A video from our 
+<br><a href="tutorials.html#installation" target="new">A video from our 
 tutorial page</a> 
 also shows how to proceed on a step-by-step basis.<br> <br>
 
@@ -215,23 +215,21 @@ The remainder of these notes
 describe 
 the installation of the 
 <a href="downloads.html" target="new">
-version 1.2.0 of 
+version 1.1.0 of 
 TTK</a> along with the 
 <a 
-href="http://www.paraview.org/download" 
+href="http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.10&type=source&os=all&downloadFile=ParaView-v5.10.1.tar.xz" 
 target="new">
-version 5.11.1 of ParaView</a>. Other versions of either software packages 
+version 5.10.1 of ParaView</a>. Other versions of either software packages 
 may require slight variations in the installation procedure.
 For earlier versions of both software packages, you may want to check out 
 previous versions of our installation notes: <br>
 &nbsp;&middot;&nbsp;
-<a href="installation-linux-sources-1.1.0.html">TTK 1.1.0 with ParaView 5.10.1</a>,<br>
-&nbsp;&middot;&nbsp;
 <a href="installation-linux-sources-1.0.0.html">TTK 1.0.0 with ParaView 5.9.1</a>,<br>
 &nbsp;&middot;&nbsp;
 <a href="installation-linux-sources-0.9.9.html">TTK 0.9.9 with ParaView 5.8.1</a>,<br>
-<!--&nbsp;&middot;&nbsp;
-<a href="installation-0.9.8.html">TTK 0.9.8 with ParaView 5.6.1</a>,<br-->
+&nbsp;&middot;&nbsp;
+<a href="installation-0.9.8.html">TTK 0.9.8 with ParaView 5.6.1</a>,<br>
 <!--&nbsp;&middot;&nbsp;
 <a href="installation-0.9.7.html">TTK 0.9.7 with ParaView 5.6.0</a>,<br>-->
 (...)<br>
@@ -266,7 +264,7 @@ Your browser does not support the video tag.
 target="new">ParaView</a> for its main user interface. Thus, you will first 
 need to download 
 <a 
-href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.10&type=source&os=Sources&downloadFile=ParaView-v5.11.1.tar.xz"
+href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.10&type=source&os=Sources&downloadFile=ParaView-v5.10.1.tar.xz"
 target="new">
 ParaView's source code</a>.
 Note 
@@ -283,7 +281,7 @@ compile ParaView and TTK from source. Please enter the following commands
 (omit the <code>$</code> character) in a terminal to install them (please see 
 the documentation of your package manager if your operating system is not 
 Ubuntu Linux):<br><code><br>
-$ sudo apt-get install cmake-qt-gui libboost-system-dev libopengl-dev<br>
+$ sudo apt-get install cmake-qt-gui libboost-system-dev libpython3.8-dev libxt-dev libxcursor-dev libopengl-dev<br>
 <!-- $ sudo apt-get install libvtk7-dev<br> -->
 <!-- $ sudo apt-get install protobuf-compiler<br> -->
 $ sudo apt-get install qt5-default qttools5-dev libqt5x11extras5-dev
@@ -307,9 +305,9 @@ instructions.<br><br>
 href="http://eigen.tuxfamily.org/">eigen</a> (for scalar field design, version 3.3.7 or later). 
 Under 
 <a
-href="https://releases.ubuntu.com/jammy/"
+href="http://releases.ubuntu.com/20.04.1/ubuntu-20.04.1-desktop-amd64.iso"
 target="new">
-Ubuntu Linux 22.04</a>, enter the following command:
+Ubuntu Linux 20.04.1</a>, enter the following command:
 <code><br><br>
 $ sudo apt-get install libeigen3-dev
 </code><br><br>
@@ -318,20 +316,20 @@ $ sudo apt-get install libeigen3-dev
 href="https://www.graphviz.org/">graphviz</a> (for graph 
 drawing features, version 2.40.1 or later). Under 
 <a
-href="https://releases.ubuntu.com/jammy/"
+href="http://releases.ubuntu.com/20.04.1/ubuntu-20.04.1-desktop-amd64.iso"
 target="new">
-Ubuntu Linux 22.04</a>, enter the following command:
+Ubuntu Linux 20.04.1</a>, enter the following command:
 <code><br><br>
-$ sudo apt-get install libgraphviz-dev
+$ sudo apt-get install graphviz-dev
 </code><br><br>
 &nbsp;&middot;&nbsp;
 <a target="new" 
 href="https://scikit-learn.org/stable/index.html">scikit-learn</a> (for data 
 reduction features, version 0.19.0 or later). Under 
 <a
-href="https://releases.ubuntu.com/jammy/"
+href="http://releases.ubuntu.com/20.04.1/ubuntu-20.04.1-desktop-amd64.iso"
 target="new">
-Ubuntu Linux 22.04</a>, enter the following command:
+Ubuntu Linux 20.04.1</a>, enter the following command:
 <code><br><br>
 $ sudo apt-get install python3-sklearn
 </code><br><br>
@@ -346,23 +344,11 @@ instructions.<br><br>
 features, version 3.24.0 or later).
 Under 
 <a
-href="https://releases.ubuntu.com/jammy/"
+href="http://releases.ubuntu.com/20.04.1/ubuntu-20.04.1-desktop-amd64.iso"
 target="new">
-Ubuntu Linux 22.04</a>, enter the following command:
+Ubuntu Linux 20.04.1</a>, enter the following command:
 <code><br><br>
 $ sudo apt-get install libsqlite3-dev
-</code><br><br>
-&nbsp;&middot;&nbsp;
-<a target="new" href="https://docs.websocketpp.org/">
-  Websocketpp</a> (for remote control 
-features).
-Under
-<a
-href="https://releases.ubuntu.com/jammy/"
-target="new">
-Ubuntu Linux 22.04</a>, enter the following command:
-<code><br><br>
-$ sudo apt-get install libwebsocketpp-dev
 </code><br><br>
 &nbsp;&middot;&nbsp;
 <a href="https://github.com/LLNL/zfp/archive/master.zip" target="new">ZFP</a> 
@@ -375,9 +361,9 @@ instructions.<br><br>
 zlib</a> (for further compression support, version 1.2.11 or later).
 Under 
 <a
-href="https://releases.ubuntu.com/jammy/"
+href="http://releases.ubuntu.com/20.04.1/ubuntu-20.04.1-desktop-amd64.iso"
 target="new">
-Ubuntu Linux 22.04</a>, enter the following command:
+Ubuntu Linux 20.04.1</a>, enter the following command:
 <code><br><br>
 $ sudo apt-get install zlib1g-dev
 </code><br><br>
@@ -385,7 +371,7 @@ $ sudo apt-get install zlib1g-dev
 
 <!--&nbsp;&middot;&nbsp;Other optional dependencies should already be installed by 
 default under <a
-href="https://releases.ubuntu.com/jammy/"
+href="http://releases.ubuntu.com/20.04.1/ubuntu-20.04.1-desktop-amd64.iso"
 target="new">
 Ubuntu Linux</a>, such as:<br>-->
 
@@ -399,7 +385,6 @@ is only recommended for Ubuntu users).
 
 <br><br>-->
 
-<!--
 <h4>Note to Fedora users</h4>
 
 You can install the different required packages as follows:
@@ -412,7 +397,7 @@ $ sudo dnf install qt5-qtx11extras <br>
 $ sudo dnf install cgnslib <br> 
 $ sudo dnf install eigen3-devel <br>
 $ sudo dnf install graphviz-devel 
-</code><br><br>-->
+</code><br><br>
         
 It has also been reported that the following packages may need to be installed 
 under Fedora (as of version 30): 
@@ -430,15 +415,15 @@ under Fedora (as of version 30):
 a terminal (this assumes that you downloaded the tarballs to the 
 <code>~/Downloads</code> directory):<br><br>
 <code>$ mkdir ~/ttk</code><br>
-<code>$ mv ~/Downloads/ParaView-v5.11.1.tar.xz ~/ttk/</code><br>
-<code>$ mv ~/Downloads/ttk-1.2.0.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ParaView-v5.10.1.tar.xz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ttk-1.1.0.tar.gz ~/ttk/</code><br>
 <code>$ cd ~/ttk</code><br>
-<code>$ tar xvJf ParaView-v5.11.1.tar.xz</code><br>
-<code>$ tar xvzf ttk-1.2.0.tar.gz</code><br><br>
+<code>$ tar xvJf ParaView-v5.10.1.tar.xz</code><br>
+<code>$ tar xvzf ttk-1.1.0.tar.gz</code><br><br>
 You can delete the tarballs after the source trees have been decompressed by 
 entering the following commands:<br><br>
-<code>$ rm ParaView-v5.11.1.tar.xz</code><br>
-<code>$ rm ttk-1.2.0.tar.gz</code></p>
+<code>$ rm ParaView-v5.10.1.tar.xz</code><br>
+<code>$ rm ttk-1.1.0.tar.gz</code></p>
                   
                   <p>
                   <h3>4. Patching the ParaView source tree</h3>
@@ -448,9 +433,9 @@ This step is
 optional. 
 To proceed, go to 
 the patch directory and apply it as follows:<br><br>
-<code>$ cd ~/ttk/ttk-1.2.0/paraview/patch</code><br>
-<code>$ ./patch-paraview-5.11.1.sh
- ~/ttk/ParaView-v5.11.1/</code></p>
+<code>$ cd ~/ttk/ttk-1.1.0/paraview/patch</code><br>
+<code>$ ./patch-paraview-5.10.1.sh
+ ~/ttk/ParaView-v5.10.1/</code></p>
 <!-- <code style="color: #ef2929; font-weight: bold;">root #</code> -->
 <!-- <code>emerge --ask&#160;--unmerge  -->
 <!-- sys-kernel/genkernel</code> -->
@@ -461,7 +446,7 @@ the patch directory and apply it as follows:<br><br>
                   <h4>a) Configuration</h4>
                   To enter the configuration menu of ParaView's build, enter 
 the following commands:<br><br>
-<code>$ cd ~/ttk/ParaView-v5.11.1/</code><br>
+<code>$ cd ~/ttk/ParaView-v5.10.1/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
@@ -542,7 +527,7 @@ enter the following command to enable the build of TTK plugins:<br><br>
 <h4>a) Configuration</h4>
 To enter the configuration menu of TTK's build, enter the following 
 commands:<br><br>
-<code>$ cd ~/ttk/ttk-1.2.0/</code><br>
+<code>$ cd ~/ttk/ttk-1.1.0/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
@@ -567,7 +552,7 @@ href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/vtk-c%2B%2B"
 
 If you are an advanced user and you do not even wish  to activate TTK's VTK 
 support, set the CMake variables 
-<!-- NOT NEEDED AFTER RELEASE 1.2.0 -->
+<!-- NOT NEEDED AFTER RELEASE 1.1.0 -->
 <code>TTK_BUILD_STANDALONE_APPS</code> and 
 <!-- END OF NOT NEEDED -->
 <code>TTK_BUILD_VTK_WRAPPERS</code> to <code>OFF</code>.
@@ -613,7 +598,7 @@ default TTK installation path, <code>/usr/local/</code>):<br><br>
 <!--<p>
 If you wish to disable the build and installation of certain TTK components, 
 just comment the corresponding lines in the <code>CMakeLists.txt</code> file at 
-the root of the source tree (<code>~/ttk/ttk-1.2.0/CMakeLists.txt</code> in our 
+the root of the source tree (<code>~/ttk/ttk-1.1.0/CMakeLists.txt</code> in our 
 example) prior to entering the configuration step of TTK's build (<a 
 href="#ttkConfig">section 6.a</a>).
 </p>-->
