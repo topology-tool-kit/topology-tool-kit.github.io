@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../contourTreeAlignment/">
+        <link rel="prev" href="../mergeTreeClustering/">
       
       
-        <link rel="next" href="../dragon/">
+        <link rel="next" href="../mergeTreeFeatureTracking/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>CT bones - TTK Online Example Database</title>
+        <title>Merge Trees via ExTreeM - TTK Online Example Database</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ct-bones" class="md-skip">
+        <a href="#merge-trees-via-extreem" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CT bones
+              Merge Trees via ExTreeM
             
           </span>
         </div>
@@ -400,29 +400,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    CT bones
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ctBones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -431,68 +411,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pipeline-description" class="md-nav__link">
-    Pipeline description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#paraview" class="md-nav__link">
-    ParaView
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python-code" class="md-nav__link">
-    Python code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inputs" class="md-nav__link">
-    Inputs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outputs" class="md-nav__link">
-    Outputs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cpython-api" class="md-nav__link">
-    C++/Python API
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -653,9 +571,29 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../mergeTreeExTreeM/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Merge Trees via ExTreeM
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -664,6 +602,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-description" class="md-nav__link">
+    Pipeline description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paraview" class="md-nav__link">
+    ParaView
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code" class="md-nav__link">
+    Python code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    Inputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpython-api" class="md-nav__link">
+    C++/Python API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1283,20 +1283,15 @@
                   
 
 
-<h1 id="ct-bones">CT bones<a class="headerlink" href="#ct-bones" title="Permanent link">&para;</a></h1>
-<p><img alt="CT bones example Image" src="https://topology-tool-kit.github.io/img/gallery/ctBones.jpg" /></p>
+<h1 id="merge-trees-via-extreem">Merge Trees via ExTreeM<a class="headerlink" href="#merge-trees-via-extreem" title="Permanent link">&para;</a></h1>
+<p><img alt="Merge Tree via ExTreeM example Image" src="https://topology-tool-kit.github.io/img/gallery/mergeTreeExTreeM.jpg" /></p>
 <h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
-<p>This example segments medical image data based on topological persistence.</p>
-<p>First, the <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a> of the data is computed (top right view, above screenshot). </p>
-<p>Then, only the 5 most persistent maxima are selected, corresponding to the toes of the foot.</p>
-<p>Next, the input data is simplified based on the selected persistent features, via <a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a>.</p>
-<p>Next, the <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTree.html">Split tree</a> of the simplified data is computed. </p>
-<p>Finally, the geometry of the bones of the toes is extracted by selecting the regions (in the 3D data) attached to the leaves (<code>RegionType</code> equals 1) of the <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTree.html">Split tree</a> (center view, above screenshot).</p>
-<p>To get a refined segmentation, change the persistence threshold from <code>180</code> down to <code>150</code>. 
-Each toe will be subdivided into two segments, precisely along the joints.</p>
+<p>This example computes the merge tree and the join tree from an electronic density of the Adenine-Thymine molecular complex.</p>
+<p>The ascending and descending segmentations needed for the computation are computed using <a href="https://topology-tool-kit.github.io/doc/html/classttkPathCompression.html">PathCompression</a>. They are computed by their own filter in this example, but generally, they will be computed by the <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTree.html">MergeTree</a> if they don't exist already.</p>
+<p>The python script simply computes the segmentation and saves the geometry of the join and split trees <code>.vtu</code> files.</p>
 <h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
-<p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>paraview<span class="w"> </span>states/ctBones.pvsm
+<p>To reproduce the example in Paraview, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
+<div class="highlight"><pre><span></span><code>paraview<span class="w"> </span>states/mergeTreeExTreeM.pvsm
 </code></pre></div></p>
 <h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1332,94 +1327,56 @@ Each toe will be subdivided into two segments, precisely along the joints.</p>
 <span class="normal">31</span>
 <span class="normal">32</span>
 <span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># state file generated using paraview version 5.10.1</span>
 
+<span class="c1"># uncomment the following three lines to ensure this script works in future versions</span>
+<span class="c1"># import paraview</span>
+<span class="c1"># paraview.compatibility.major = 5</span>
+<span class="c1"># paraview.compatibility.minor = 10</span>
+
+<span class="c1">#### import the simple module from the paraview</span>
 <span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
 
+<span class="c1">#### disable automatic camera reset on &#39;Show&#39;</span>
+
 <span class="c1"># create a new &#39;XML Image Data Reader&#39;</span>
-<span class="n">ctBonesvti</span> <span class="o">=</span> <span class="n">XMLImageDataReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ctBones.vti&quot;</span><span class="p">])</span>
+<span class="n">atvti</span> <span class="o">=</span> <span class="n">XMLImageDataReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;at.vti&quot;</span><span class="p">])</span>
+<span class="n">atvti</span><span class="o">.</span><span class="n">PointArrayStatus</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;density&quot;</span><span class="p">]</span>
 
-<span class="c1"># create a new &#39;Calculator&#39;</span>
-<span class="n">calculator1</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">ctBonesvti</span><span class="p">)</span>
-<span class="n">calculator1</span><span class="o">.</span><span class="n">ResultArrayName</span> <span class="o">=</span> <span class="s2">&quot;Scalars_&quot;</span>
-<span class="n">calculator1</span><span class="o">.</span><span class="n">Function</span> <span class="o">=</span> <span class="s2">&quot;-Scalars_&quot;</span>
+<span class="c1"># create a new &#39;TTK PathCompression&#39;</span>
+<span class="n">tTKPathCompression1</span> <span class="o">=</span> <span class="n">TTKPathCompression</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">atvti</span><span class="p">)</span>
+<span class="n">tTKPathCompression1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;density&quot;</span><span class="p">]</span>
 
-<span class="c1"># create a new &#39;TTK PersistenceDiagram&#39;</span>
-<span class="n">tTKPersistenceDiagram1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">calculator1</span><span class="p">)</span>
-<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;Scalars_&quot;</span><span class="p">]</span>
-<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">Dimensions</span> <span class="o">=</span> <span class="s2">&quot;Selected Dimensions (no infinite pairs)&quot;</span>
-<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">Saddlesaddlediagramdimension1slowest</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># create a new &#39;TTK MergeTree&#39;</span>
+<span class="n">tTKMergeTree1</span> <span class="o">=</span> <span class="n">TTKMergeTree</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPathCompression1</span><span class="p">)</span>
+<span class="n">tTKMergeTree1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;density&quot;</span><span class="p">]</span>
+<span class="n">tTKMergeTree1</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s2">&quot;Split Tree&quot;</span>
+<span class="n">tTKMergeTree1</span><span class="o">.</span><span class="n">Backend</span> <span class="o">=</span> <span class="s2">&quot;ExTreeM (IEEE TVCG 2023)&quot;</span>
 
-<span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">threshold1</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;PairIdentifier&quot;</span><span class="p">]</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">0.0</span>
-<span class="n">threshold1</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mi">999999999</span>
+<span class="c1"># create a new &#39;TTK MergeTree&#39;</span>
+<span class="n">tTKMergeTree2</span> <span class="o">=</span> <span class="n">TTKMergeTree</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPathCompression1</span><span class="p">)</span>
+<span class="n">tTKMergeTree2</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;density&quot;</span><span class="p">]</span>
+<span class="n">tTKMergeTree2</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s2">&quot;Join Tree&quot;</span>
+<span class="n">tTKMergeTree2</span><span class="o">.</span><span class="n">Backend</span> <span class="o">=</span> <span class="s2">&quot;ExTreeM (IEEE TVCG 2023)&quot;</span>
 
-<span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">persistenceThreshold</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">threshold1</span><span class="p">)</span>
-<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;Persistence&quot;</span><span class="p">]</span>
-<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
-<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">180.0</span>
-<span class="n">persistenceThreshold</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mi">999999999</span>
-
-<span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
-<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span>
-    <span class="n">Domain</span><span class="o">=</span><span class="n">calculator1</span><span class="p">,</span> <span class="n">Constraints</span><span class="o">=</span><span class="n">persistenceThreshold</span>
-<span class="p">)</span>
-<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;Scalars_&quot;</span><span class="p">]</span>
-
-<span class="c1"># create a new &#39;TTK Merge and Contour Tree ()&#39;</span>
-<span class="n">tTKMergeandContourTree1</span> <span class="o">=</span> <span class="n">TTKMergeTree</span><span class="p">(</span>
-    <span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span>
-<span class="p">)</span>
-<span class="n">tTKMergeandContourTree1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;Scalars_&quot;</span><span class="p">]</span>
-<span class="n">tTKMergeandContourTree1</span><span class="o">.</span><span class="n">TreeType</span> <span class="o">=</span> <span class="s2">&quot;Join Tree&quot;</span>
-
-<span class="c1"># create a new &#39;Threshold&#39;</span>
-<span class="n">threshold3</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeandContourTree1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-<span class="n">threshold3</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;RegionType&quot;</span><span class="p">]</span>
-<span class="n">threshold3</span><span class="o">.</span><span class="n">ThresholdMethod</span> <span class="o">=</span> <span class="s2">&quot;Between&quot;</span>
-<span class="n">threshold3</span><span class="o">.</span><span class="n">LowerThreshold</span> <span class="o">=</span> <span class="mf">0.0</span>
-<span class="n">threshold3</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">0.0</span>
-
-<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;CTBonesOutputSegmentation.vtu&quot;</span><span class="p">,</span> <span class="n">threshold3</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;splitTree.vtu&quot;</span><span class="p">,</span> <span class="n">proxy</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeTree1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;joinTree.vtu&quot;</span><span class="p">,</span> <span class="n">proxy</span><span class="o">=</span><span class="n">OutputPort</span><span class="p">(</span><span class="n">tTKMergeTree2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
 <p>To run the above Python script, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
-<div class="highlight"><pre><span></span><code>pvpython<span class="w"> </span>python/ctBones.py
+<div class="highlight"><pre><span></span><code>pvpython<span class="w"> </span>python/mergeTreeExTreeM.py
 </code></pre></div></p>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/ctBones.vti">ctBones.vti</a>: a three-dimensional regular grid encoding material density in a medical image (CT scan).</li>
+<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/at.vti">at.vti</a>: A molecular dataset: a three-dimensional regular grid with 1 scalar field, the electronic density in the Adenine Thymine complex.</li>
 </ul>
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>CTBonesOutputSegmentation.vtu</code>: the geometry of the volume of the bones of the toes, as extracted by the analysis pipeline (most persistent super-level set connected components).</li>
+<li><code>joinTree.vtu</code>: the join tree.</li>
+<li><code>splitTree.vtu</code>: the split tree.</li>
 </ul>
 <h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPathCompression.html">PathCompression</a></p>
 <p><a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTree.html">MergeTree</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a></p>
-<p><a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a></p>
 
 
 
