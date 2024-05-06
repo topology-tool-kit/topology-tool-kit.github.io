@@ -1,20 +1,4 @@
 var searchData=
 [
-  ['cf_0',['cf',['../namespacettk_1_1cf.html',1,'ttk']]],
-  ['cta_1',['cta',['../namespacettk_1_1cta.html',1,'ttk']]],
-  ['dcg_2',['dcg',['../namespacettk_1_1dcg.html',1,'ttk']]],
-  ['debug_3',['debug',['../namespacettk_1_1debug.html',1,'ttk']]],
-  ['dijkstra_4',['Dijkstra',['../namespacettk_1_1Dijkstra.html',1,'ttk']]],
-  ['ftm_5',['ftm',['../namespacettk_1_1ftm.html',1,'ttk']]],
-  ['ftr_6',['ftr',['../namespacettk_1_1ftr.html',1,'ttk']]],
-  ['geometry_7',['Geometry',['../namespacettk_1_1Geometry.html',1,'ttk']]],
-  ['intgl_8',['intgl',['../namespacettk_1_1intgl.html',1,'ttk']]],
-  ['laplacian_9',['Laplacian',['../namespacettk_1_1Laplacian.html',1,'ttk']]],
-  ['lts_10',['lts',['../namespacettk_1_1lts.html',1,'ttk']]],
-  ['mth_11',['mth',['../namespacettk_1_1mth.html',1,'ttk']]],
-  ['output_12',['output',['../namespacettk_1_1debug_1_1output.html',1,'ttk::debug']]],
-  ['pcp_13',['pcp',['../namespacettk_1_1pcp.html',1,'ttk']]],
-  ['periodicghosts_14',['periodicGhosts',['../namespacettk_1_1periodicGhosts.html',1,'ttk']]],
-  ['statistics_15',['Statistics',['../namespacettk_1_1Statistics.html',1,'ttk']]],
-  ['ttk_16',['ttk',['../namespacettk.html',1,'']]]
+  ['ripser_0',['ripser',['../namespaceripser.html',1,'']]]
 ];

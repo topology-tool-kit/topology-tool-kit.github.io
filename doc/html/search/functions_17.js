@@ -5,7 +5,7 @@ var searchData=
   ['welcomemsg_2',['welcomeMsg',['../classttk_1_1Debug.html#a60e58144dd48aefae7b38d7dc5ee9d0d',1,'ttk::Debug']]],
   ['willvisit_3',['willVisit',['../classttk_1_1ftr_1_1Propagations.html#a759a81940ee36620516fa0be04cf5c0b',1,'ttk::ftr::Propagations']]],
   ['wrapper_4',['Wrapper',['../classttk_1_1Wrapper.html#a35a4c7995351c96ef358de0a204278ea',1,'ttk::Wrapper']]],
-  ['write_5',['Write',['../classttk_1_1TopologicalCompression.html#a23b06cf7682b980ecaf53f0cba4fa8e3',1,'ttk::TopologicalCompression::Write()'],['../classttkTopologicalCompressionWriter.html#aeedab4685e14241511aa5457f9ff252e',1,'ttkTopologicalCompressionWriter::Write()'],['../classttkTriangulationWriter.html#aee8b4553d420247a465dbeda0b14256c',1,'ttkTriangulationWriter::Write()']]],
+  ['write_5',['write',['../classttk_1_1TopologicalCompression.html#a23b06cf7682b980ecaf53f0cba4fa8e3',1,'ttk::TopologicalCompression::Write()'],['../classttkTopologicalCompressionWriter.html#aeedab4685e14241511aa5457f9ff252e',1,'ttkTopologicalCompressionWriter::Write()'],['../classttkTriangulationWriter.html#aee8b4553d420247a465dbeda0b14256c',1,'ttkTriangulationWriter::Write()']]],
   ['writebin_6',['writeBin',['../ExplicitTriangulation_8cpp.html#a3df3f1b28c6a1ddbac0dd3899f8231b0',1,'ExplicitTriangulation.cpp']]],
   ['writebinarray_7',['writeBinArray',['../ExplicitTriangulation_8cpp.html#aa28137ffe8928778f897c13b7b127fe8',1,'ExplicitTriangulation.cpp']]],
   ['writeboundaries_5f2d_8',['writeBoundaries_2D',['../classttk_1_1MarchingTetrahedra.html#a574c9c449a9645ad5038484039cfbfa4',1,'ttk::MarchingTetrahedra']]],
@@ -14,14 +14,13 @@ var searchData=
   ['writeboundariesdetailed_5f3d_11',['writeBoundariesDetailed_3D',['../classttk_1_1MarchingTetrahedra.html#a3f548dc14a2d25e58d07d79f23ecb2ef',1,'ttk::MarchingTetrahedra']]],
   ['writebytearray_12',['WriteByteArray',['../classttk_1_1TopologicalCompression.html#a4ae48b9d6f8febd2e54e7b7ca72cbcbf',1,'ttk::TopologicalCompression']]],
   ['writecompactsegmentation_13',['WriteCompactSegmentation',['../classttk_1_1TopologicalCompression.html#a2b0b702ecd9c45c42a684e3d15ca778a',1,'ttk::TopologicalCompression']]],
-  ['writedata_14',['WriteData',['../classttkOBJWriter.html#ae498c4005ab0f53d9901bfa53129d744',1,'ttkOBJWriter::WriteData()'],['../classttkOFFWriter.html#a2a7a7ebf7e23129cd35650c1a483f82a',1,'ttkOFFWriter::WriteData()']]],
+  ['writedata_14',['writedata',['../classttkOBJWriter.html#ae498c4005ab0f53d9901bfa53129d744',1,'ttkOBJWriter::WriteData()'],['../classttkOFFWriter.html#a2a7a7ebf7e23129cd35650c1a483f82a',1,'ttkOFFWriter::WriteData()']]],
   ['writemetadata_15',['WriteMetaData',['../classttk_1_1TopologicalCompression.html#aeef12ad3df46fb42a61fb4a2a3459242',1,'ttk::TopologicalCompression']]],
   ['writepersistenceindex_16',['WritePersistenceIndex',['../classttk_1_1TopologicalCompression.html#a5207c162260f45395dd63d7a73e109ad',1,'ttk::TopologicalCompression']]],
   ['writepointer_17',['WritePointer',['../classttkUtils.html#a377341cda2e687ad747945f1338600cb',1,'ttkUtils']]],
   ['writeseparators_5f2d_18',['writeSeparators_2D',['../classttk_1_1MarchingTetrahedra.html#ae857975bcc416b737ac2addf4becdfd5',1,'ttk::MarchingTetrahedra']]],
   ['writeseparators_5f3d_19',['writeSeparators_3D',['../classttk_1_1MarchingTetrahedra.html#af2ca7ac6620ca89581564f1afcd6eb37',1,'ttk::MarchingTetrahedra']]],
-  ['writetofile_20',['writeToFile',['../classttk_1_1FlatJaggedArray.html#ada8261b0b081afa41a9e66083de01ad4',1,'ttk::FlatJaggedArray::writeToFile(const std::string &amp;fName) const'],['../classttk_1_1FlatJaggedArray.html#a4dde820cf877df15caa7e3007568d08f',1,'ttk::FlatJaggedArray::writeToFile(const std::string &amp;fName, const std::vector&lt; std::vector&lt; SimplexId &gt; &gt; &amp;src)'],['../classttk_1_1ExplicitTriangulation.html#a381b8d1ec9476ec884da26e345215d2c',1,'ttk::ExplicitTriangulation::writeToFile()']]],
-  ['writetofile_21',['WriteToFile',['../classttk_1_1TopologicalCompression.html#a6e5a6e0ed37d915c32dc53777a9d386b',1,'ttk::TopologicalCompression']]],
-  ['writetofileascii_22',['writeToFileASCII',['../classttk_1_1ExplicitTriangulation.html#ad80a18bdb900b895221ffb950b8f4534',1,'ttk::ExplicitTriangulation']]],
-  ['writevoidpointer_23',['WriteVoidPointer',['../classttkUtils.html#ad7d6013a865481e647d56af80af88e70',1,'ttkUtils']]]
+  ['writetofile_20',['writetofile',['../classttk_1_1TopologicalCompression.html#a6e5a6e0ed37d915c32dc53777a9d386b',1,'ttk::TopologicalCompression::WriteToFile()'],['../classttk_1_1FlatJaggedArray.html#ada8261b0b081afa41a9e66083de01ad4',1,'ttk::FlatJaggedArray::writeToFile(const std::string &amp;fName) const'],['../classttk_1_1FlatJaggedArray.html#a4dde820cf877df15caa7e3007568d08f',1,'ttk::FlatJaggedArray::writeToFile(const std::string &amp;fName, const std::vector&lt; std::vector&lt; SimplexId &gt; &gt; &amp;src)'],['../classttk_1_1ExplicitTriangulation.html#a381b8d1ec9476ec884da26e345215d2c',1,'ttk::ExplicitTriangulation::writeToFile(std::ofstream &amp;stream) const']]],
+  ['writetofileascii_21',['writeToFileASCII',['../classttk_1_1ExplicitTriangulation.html#ad80a18bdb900b895221ffb950b8f4534',1,'ttk::ExplicitTriangulation']]],
+  ['writevoidpointer_22',['WriteVoidPointer',['../classttkUtils.html#ad7d6013a865481e647d56af80af88e70',1,'ttkUtils']]]
 ];

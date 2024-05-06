@@ -9,5 +9,9 @@ var searchData=
   ['regulargridtriangulation_2ecpp_6',['RegularGridTriangulation.cpp',['../RegularGridTriangulation_8cpp.html',1,'']]],
   ['regulargridtriangulation_2eh_7',['RegularGridTriangulation.h',['../RegularGridTriangulation_8h.html',1,'']]],
   ['ripscomplex_2ecpp_8',['RipsComplex.cpp',['../RipsComplex_8cpp.html',1,'']]],
-  ['ripscomplex_2eh_9',['RipsComplex.h',['../RipsComplex_8h.html',1,'']]]
+  ['ripscomplex_2eh_9',['RipsComplex.h',['../RipsComplex_8h.html',1,'']]],
+  ['ripser_2eh_10',['ripser.h',['../ripser_8h.html',1,'']]],
+  ['ripserpy_2ecpp_11',['ripserpy.cpp',['../ripserpy_8cpp.html',1,'']]],
+  ['ripspersistencediagram_2ecpp_12',['RipsPersistenceDiagram.cpp',['../RipsPersistenceDiagram_8cpp.html',1,'']]],
+  ['ripspersistencediagram_2eh_13',['RipsPersistenceDiagram.h',['../RipsPersistenceDiagram_8h.html',1,'']]]
 ];

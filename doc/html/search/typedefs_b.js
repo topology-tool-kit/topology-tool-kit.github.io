@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['plottype_0',['PlotType',['../classttk_1_1PersistenceCurve.html#ae338bcd61166d54b21ea63f60defbf25',1,'ttk::PersistenceCurve']]],
-  ['point_1',['Point',['../classttk_1_1Quadrangulation.html#a5af484283dd43f33e01086639ed9dfb8',1,'ttk::Quadrangulation']]],
-  ['polarity_2',['polarity',['../namespacettk.html#ae4653b36cd463d51ff690619d26e56da',1,'ttk']]]
+  ['orderededge_0',['orderedEdge',['../namespacettk_1_1ftr.html#a22e0aa72fb4f4ae7665607eb367609de',1,'ttk::ftr']]],
+  ['orderedtriangle_1',['orderedTriangle',['../namespacettk_1_1ftr.html#a26e8706511bc29db623cf867ba736565',1,'ttk::ftr']]]
 ];
