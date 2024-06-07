@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -22,10 +22,10 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.fad675c6.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -63,9 +63,6 @@
     
     <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -122,11 +119,14 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
       
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -783,6 +783,26 @@
   
   
     <li class="md-nav__item">
+      <a href="mergeTreeWAE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merge Tree Wasserstein Auto-Encoder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="morseMolecule/" class="md-nav__link">
         
   
@@ -1028,6 +1048,26 @@
   
   <span class="md-ellipsis">
     Persistence Diagram Distance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="persistenceDiagramWAE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistence Diagram Wasserstein Auto-Encoder
   </span>
   
 
@@ -1571,12 +1611,24 @@
 <td style="text-align: center;"><img alt="ExampleImage" src="https://topology-tool-kit.github.io/img/gallery/clusteringKelvinHelmholtzInstabilities.jpg" /></td>
 </tr>
 <tr>
+<td style="text-align: center;"><a href="persistenceDiagramWAE/">Persistence diagram Wasserstein Auto-Encoding</a></td>
+<td style="text-align: center;"><img alt="ExampleImage" src="https://topology-tool-kit.github.io/img/gallery/persistenceDiagramWAE.jpg" /></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="mergeTreeFeatureTracking/">Merge feature tracking</a></td>
+<td style="text-align: center;"><img alt="ExampleImage" src="https://topology-tool-kit.github.io/img/gallery/mergeTreeFeatureTracking.jpg" /></td>
+</tr>
+<tr>
 <td style="text-align: center;"><a href="mergeTreeClustering/">Merge tree clustering</a></td>
 <td style="text-align: center;"><img alt="ExampleImage" src="https://topology-tool-kit.github.io/img/gallery/mergeTreeClustering.jpg" /></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="mergeTreePGA/">Merge tree principal geodesic analysis</a></td>
 <td style="text-align: center;"><img alt="ExampleImage" src="https://topology-tool-kit.github.io/img/gallery/mergeTreePGA.jpg" /></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="mergeTreeWAE/">Merge tree Wasserstein Auto-Encoding</a></td>
+<td style="text-align: center;"><img alt="ExampleImage" src="https://topology-tool-kit.github.io/img/gallery/mergeTreeWAE.jpg" /></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="contourTreeAlignment/">Contour tree alignment</a></td>
@@ -1702,11 +1754,19 @@
 
 
 
+
+
+
+
+
+
+
                 
               </article>
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
@@ -1735,10 +1795,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy"], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      <script src="assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
   </body>

@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -24,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -65,9 +65,6 @@
     
     <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -124,11 +121,14 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
       
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -767,6 +767,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../mergeTreeWAE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merge Tree Wasserstein Auto-Encoder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../morseMolecule/" class="md-nav__link">
         
   
@@ -1012,6 +1032,26 @@
   
   <span class="md-ellipsis">
     Persistence Diagram Distance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceDiagramWAE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistence Diagram Wasserstein Auto-Encoder
   </span>
   
 
@@ -1381,7 +1421,7 @@
 <p>This example first loads an ensemble of scalar fields inside a cinema database from disk.
 Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTree.html">MergeTree</a> is computed on each scalar field to compute the Split Tree.</p>
 <p>All these trees are passed to <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreePrincipalGeodesics.html">MergeTreePrincipalGeodesics</a> to compute principal geodesic analysis in the metric space of merge trees. </p>
-<p>Then the filter <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreePrincipalGeodesics.html">MergeTreePrincipalGeodesicsDecoding</a> is used to reconstruct the input trees, to sample evenly trees along the principal geodesics and to sample a discrete grid of merge trees of the PGA basis. </p>
+<p>Then the filter <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreePrincipalGeodesicsDecoding.html">MergeTreePrincipalGeodesicsDecoding</a> is used to reconstruct the input trees, to sample evenly trees along the principal geodesics and to sample a discrete grid of merge trees of the PGA basis.</p>
 <p>A distance matrix is then computed with <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTreeDistanceMatrix.html">MergeTreeDistanceMatrix</a> with the trees of the grid. This distance matrix is used as input of <a href="https://topology-tool-kit.github.io/doc/html/classttkDimensionReduction.html">DimensionReduction</a> to compute a MultiDimensional Scaling (MDS), performing a dimensionality reduction in 3D (and 2D with a second DimensionReduction filter) respecting the most the input distance matrix. </p>
 <p>Finally the <a href="https://topology-tool-kit.github.io/doc/html/classttkPointSetToSurface.html">PointSetToSurface</a> and <a href="https://topology-tool-kit.github.io/doc/html/classttkProjectionFromTable.html">ProjectionFromTable</a> are used to create the 3D surface (and the 2D surface). The ProjectionFromTable allows to project the points (reconstructed trees, geodesic trees etc.) to the 3D (or 2D) surface.</p>
 <p>In terms of visualisation, a scalar field of each cluster is displayed with a zoom on their right of the important persistence pairs. The original trees are displayed alongside their reconstruction at their right. The persistence pairs of the trees are colored by ID to see what features they correspond to in the scalar field.</p>
@@ -1504,6 +1544,8 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTre
 <h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>MT-PGA_coef.csv</code>: the coefficients of the input trees corresponding to their coordinates in the PGA basis.</li>
+<li><code>MT-PGA_geodesics.csv</code>: the geodesics of the PGA basis.</li>
+<li><code>MT-PGA_reconstructed_trees.vtm</code>: the reconstructed input trees.</li>
 </ul>
 <h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
 <p><a href="https://topology-tool-kit.github.io/doc/html/classttkBlockAggregator.html">BlockAggregator</a></p>
@@ -1527,11 +1569,19 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTre
 
 
 
+
+
+
+
+
+
+
                 
               </article>
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
@@ -1560,10 +1610,10 @@ Then, the <a href="https://topology-tool-kit.github.io/doc/html/classttkMergeTre
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      <script src="../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
   </body>
