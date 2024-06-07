@@ -1,7 +1,7 @@
 var searchData=
 [
   ['r_5f_0',['r_',['../classttk_1_1PDClustering.html#a1b390801eea5bdd9d81e6aeac33b0183',1,'ttk::PDClustering']]],
-  ['rangearea_5f_1',['rangeArea_',['../classttk_1_1RangeDrivenOctree.html#a420a174767dfa2143a46ffc334dd85e2',1,'ttk::RangeDrivenOctree::rangeArea_()'],['../structttk_1_1ReebSpace_1_1Sheet3.html#a58eea3a1777020effed36089b1ed29b4',1,'ttk::ReebSpace::Sheet3::rangeArea_()']]],
+  ['rangearea_5f_1',['rangearea_',['../classttk_1_1RangeDrivenOctree.html#a420a174767dfa2143a46ffc334dd85e2',1,'ttk::RangeDrivenOctree::rangeArea_'],['../structttk_1_1ReebSpace_1_1Sheet3.html#a58eea3a1777020effed36089b1ed29b4',1,'ttk::ReebSpace::Sheet3::rangeArea_']]],
   ['rangebox_5f_2',['rangeBox_',['../structttk_1_1RangeDrivenOctree_1_1OctreeNode.html#a1ca337da6a931500b82f93588f4420be',1,'ttk::RangeDrivenOctree::OctreeNode']]],
   ['rangemax_5f_3',['rangeMax_',['../classttk_1_1PDFHistograms.html#a99b1ed7307712da2c1be2013c89272d2',1,'ttk::PDFHistograms']]],
   ['rangemin_5f_4',['rangeMin_',['../classttk_1_1PDFHistograms.html#a1a0372252f3b380d38a7187ba7e848d1',1,'ttk::PDFHistograms']]],
@@ -9,15 +9,15 @@ var searchData=
   ['rawfilelength_6',['rawFileLength',['../classttk_1_1TopologicalCompression.html#a257e291050741e3acbd5aa37a66cb65b',1,'ttk::TopologicalCompression']]],
   ['red_7',['RED',['../namespacettk_1_1debug_1_1output.html#a962541c435d7bc128eaef4c6ed35ee1a',1,'ttk::debug::output']]],
   ['reg_8',['reg',['../structttk_1_1ftr_1_1ArcData.html#ad465173c84ff8b2d5482b6200ed6081c',1,'ttk::ftr::ArcData']]],
-  ['region_9',['region',['../structttk_1_1cta_1_1BinaryTree.html#a56acad07a09e32246b53dfc8253bd739',1,'ttk::cta::BinaryTree::region()'],['../structttk_1_1cta_1_1CTEdge.html#a3a1710c22c4b83e22da4b8ff03bb4487',1,'ttk::cta::CTEdge::region()'],['../structttk_1_1cta_1_1AlignmentEdge.html#a0f3c3ca0720413fbb0095cd61b33d1cb',1,'ttk::cta::AlignmentEdge::region()']]],
+  ['region_9',['region',['../structttk_1_1cta_1_1BinaryTree.html#a56acad07a09e32246b53dfc8253bd739',1,'ttk::cta::BinaryTree::region'],['../structttk_1_1cta_1_1CTEdge.html#a3a1710c22c4b83e22da4b8ff03bb4487',1,'ttk::cta::CTEdge::region'],['../structttk_1_1cta_1_1AlignmentEdge.html#a0f3c3ca0720413fbb0095cd61b33d1cb',1,'ttk::cta::AlignmentEdge::region']]],
   ['regionsize_10',['regionSize',['../structttk_1_1ftm_1_1NodeData.html#a12a1dcd9f7f7d3dab7f68010f46c282c',1,'ttk::ftm::NodeData']]],
   ['regionspan_11',['regionSpan',['../structttk_1_1ftm_1_1NodeData.html#a28e910561fe5daecec7cf7ff7860a2bb',1,'ttk::ftm::NodeData']]],
   ['regiontype_12',['regionType',['../structttk_1_1ftr_1_1VertData.html#a0bb2c546fce4cef1bf3bb765f349fe3c',1,'ttk::ftr::VertData']]],
   ['registry_13',['registry',['../classttkTriangulationFactory.html#aad198036bdf1d5cfd8b7fdb107ffdcda',1,'ttkTriangulationFactory']]],
   ['regularnodelist_5f_14',['regularNodeList_',['../classttk_1_1SuperArc.html#a8a6d3e3029d2c3cbcdbbf4f8c4d5f04b',1,'ttk::SuperArc']]],
-  ['reinit_5fprices_5f_15',['reinit_prices_',['../classttk_1_1PersistenceDiagramBarycenter.html#a7fba84509ab60cf65a3b247c0a0e3590',1,'ttk::PersistenceDiagramBarycenter::reinit_prices_()'],['../classttk_1_1PDBarycenter.html#a47a5f042dcf0de6ee322091a0b985b24',1,'ttk::PDBarycenter::reinit_prices_()']]],
+  ['reinit_5fprices_5f_15',['reinit_prices_',['../classttk_1_1PersistenceDiagramBarycenter.html#a7fba84509ab60cf65a3b247c0a0e3590',1,'ttk::PersistenceDiagramBarycenter::reinit_prices_'],['../classttk_1_1PDBarycenter.html#a47a5f042dcf0de6ee322091a0b985b24',1,'ttk::PDBarycenter::reinit_prices_']]],
   ['relaxationiterations_16',['RelaxationIterations',['../classttk_1_1QuadrangulationSubdivision.html#a0878930ab8fd9e3951c7a32ec4d28cd2',1,'ttk::QuadrangulationSubdivision']]],
-  ['removalpercentage_5f_17',['removalPercentage_',['../classttk_1_1MergeTreeTemporalReductionEncoding.html#afa8a78157b31eb5dd3561c651eadb1a4',1,'ttk::MergeTreeTemporalReductionEncoding']]],
+  ['removalpercentage_5f_17',['removalPercentage_',['../classttk_1_1MergeTreeTemporalReduction.html#aac8be6bada438db2fa2fb135f457d483',1,'ttk::MergeTreeTemporalReduction']]],
   ['renderer_5f_18',['renderer_',['../classttkUserInterfaceBase.html#a426b1629f4f4d4f81dc11877591f1b60',1,'ttkUserInterfaceBase']]],
   ['renderwindow_5f_19',['renderWindow_',['../classttkUserInterfaceBase.html#a5b5366e2b2618da8fbd86d44faff2474',1,'ttkUserInterfaceBase']]],
   ['repeat_5f_20',['repeat_',['../classttkUserInterfaceBase.html#aba924ddb5ec0d2df1e78e02a9b10eed7',1,'ttkUserInterfaceBase']]],
@@ -29,6 +29,7 @@ var searchData=
   ['reverseprojection_26',['reverseProjection',['../structttk_1_1SurfaceGeometrySmoother_1_1ProjectionResult.html#a91808c8d493db9f7e003c94bbb853037',1,'ttk::SurfaceGeometrySmoother::ProjectionResult']]],
   ['right_5f_27',['right_',['../classttk_1_1KDTree.html#ada281593b52119ea9c4abaf10869ebdf',1,'ttk::KDTree']]],
   ['rootid_5f_28',['rootId_',['../classttk_1_1RangeDrivenOctree.html#a042373b4af905e220bfcbdb7279d6a5f',1,'ttk::RangeDrivenOctree']]],
-  ['roots_29',['roots',['../structttk_1_1cf_1_1TreeData.html#aaca7865fb8bccab4c32133a4305cb628',1,'ttk::cf::TreeData::roots()'],['../structttk_1_1ftm_1_1TreeData.html#ac665772b3af8c618ef17e4ffd485c442',1,'ttk::ftm::TreeData::roots()']]],
-  ['rowsize_30',['rowSize',['../classttk_1_1AssignmentSolver.html#a17db13c99431c76bd80d545223066114',1,'ttk::AssignmentSolver']]]
+  ['roots_29',['roots',['../structttk_1_1cf_1_1TreeData.html#aaca7865fb8bccab4c32133a4305cb628',1,'ttk::cf::TreeData::roots'],['../structttk_1_1ftm_1_1TreeData.html#ac665772b3af8c618ef17e4ffd485c442',1,'ttk::ftm::TreeData::roots']]],
+  ['rows_30',['rows',['../classcompressed__distance__matrix.html#a7111e7be7801b3b9047eb7e2ab3ba857',1,'compressed_distance_matrix']]],
+  ['rowsize_31',['rowSize',['../classttk_1_1AssignmentSolver.html#a17db13c99431c76bd80d545223066114',1,'ttk::AssignmentSolver']]]
 ];

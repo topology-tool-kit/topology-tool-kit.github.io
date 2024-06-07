@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['valence_0',['valence',['../namespacettk_1_1ftm.html#a83de730e6ef20f9aec861a2f5d6ac179',1,'ttk::ftm::valence()'],['../namespacettk_1_1ftr.html#ab4b9c81cabc70c790dabf443c80c9355',1,'ttk::ftr::valence()']]],
-  ['vertcompfn_1',['VertCompFN',['../namespacettk_1_1ftm.html#a3e053f000e062e447dc4a8b3381958e8',1,'ttk::ftm::VertCompFN()'],['../namespacettk_1_1ftr.html#a255be96fb6d9a2bab40408a573744249',1,'ttk::ftr::VertCompFN()']]],
-  ['vlboundarytype_2',['VLBoundaryType',['../classttk_1_1ApproximateTopology.html#a425ef1968c7834fc608f49c89cead267',1,'ttk::ApproximateTopology::VLBoundaryType()'],['../classttk_1_1MultiresTopology.html#ae1ec51f004389c138bed86c8d71e51d2',1,'ttk::MultiresTopology::VLBoundaryType()'],['../classttk_1_1ProgressiveTopology.html#a7e1eeccaffeb44cc43a0a3bb9a6e8235',1,'ttk::ProgressiveTopology::VLBoundaryType()']]]
+  ['uf_0',['UF',['../namespacettk_1_1ftm.html#ab7cd30efcb2417782df7d413efb3df89',1,'ttk::ftm']]],
+  ['ufdatatype_1',['ufdatatype',['../namespacettk_1_1cf.html#ab2e2a20342ed9d1ab82007a001472255',1,'ttk::cf::ufDataType'],['../namespacettk_1_1ftm.html#aa183a35760a5d6dc4dd84900e9668c03',1,'ttk::ftm::ufDataType']]]
 ];

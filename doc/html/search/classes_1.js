@@ -7,13 +7,13 @@ var searchData=
   ['allocable_4',['Allocable',['../classttk_1_1ftr_1_1Allocable.html',1,'ttk::ftr']]],
   ['approximatetopology_5',['ApproximateTopology',['../classttk_1_1ApproximateTopology.html',1,'ttk']]],
   ['arc_6',['Arc',['../classttk_1_1Arc.html',1,'ttk']]],
-  ['arcdata_7',['ArcData',['../structttk_1_1ftm_1_1ArcData.html',1,'ttk::ftm::ArcData'],['../structttk_1_1ftr_1_1ArcData.html',1,'ttk::ftr::ArcData']]],
-  ['arcregion_8',['ArcRegion',['../classttk_1_1cf_1_1ArcRegion.html',1,'ttk::cf::ArcRegion'],['../classttk_1_1ftm_1_1ArcRegion.html',1,'ttk::ftm::ArcRegion']]],
+  ['arcdata_7',['arcdata',['../structttk_1_1ftm_1_1ArcData.html',1,'ttk::ftm::ArcData'],['../structttk_1_1ftr_1_1ArcData.html',1,'ttk::ftr::ArcData']]],
+  ['arcregion_8',['arcregion',['../classttk_1_1ftm_1_1ArcRegion.html',1,'ttk::ftm::ArcRegion'],['../classttk_1_1cf_1_1ArcRegion.html',1,'ttk::cf::ArcRegion']]],
   ['arraylinkedlist_9',['ArrayLinkedList',['../classttk_1_1ArrayLinkedList.html',1,'ttk']]],
   ['arraypreconditioning_10',['ArrayPreconditioning',['../classttk_1_1ArrayPreconditioning.html',1,'ttk']]],
   ['assignmentauction_11',['AssignmentAuction',['../classttk_1_1AssignmentAuction.html',1,'ttk']]],
   ['assignmentexhaustive_12',['AssignmentExhaustive',['../classttk_1_1AssignmentExhaustive.html',1,'ttk']]],
   ['assignmentmunkres_13',['AssignmentMunkres',['../classttk_1_1AssignmentMunkres.html',1,'ttk']]],
   ['assignmentsolver_14',['AssignmentSolver',['../classttk_1_1AssignmentSolver.html',1,'ttk']]],
-  ['atomicuf_15',['AtomicUF',['../classttk_1_1AtomicUF.html',1,'AtomicUF'],['../classttk_1_1ftm_1_1AtomicUF.html',1,'ttk::ftm::AtomicUF'],['../classttk_1_1ftr_1_1AtomicUF.html',1,'ttk::ftr::AtomicUF']]]
+  ['atomicuf_15',['atomicuf',['../classttk_1_1AtomicUF.html',1,'AtomicUF'],['../classttk_1_1ftm_1_1AtomicUF.html',1,'ttk::ftm::AtomicUF'],['../classttk_1_1ftr_1_1AtomicUF.html',1,'ttk::ftr::AtomicUF']]]
 ];

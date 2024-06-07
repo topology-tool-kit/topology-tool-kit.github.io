@@ -2,7 +2,7 @@ var searchData=
 [
   ['geodesicsdistances_5f_0',['geodesicsDistances_',['../classttk_1_1MergeTreePrincipalGeodesicsDecoding.html#a3b863b528d28e0e4ded1531567c29133',1,'ttk::MergeTreePrincipalGeodesicsDecoding']]],
   ['geom_5fpair_5flength_5f_1',['geom_pair_length_',['../classttk_1_1PersistenceDiagramAuctionActor.html#a4a8b58d6841cd0e45c7e5a1ebf5ffd67',1,'ttk::PersistenceDiagramAuctionActor']]],
-  ['geometrical_5ffactor_5f_2',['geometrical_factor_',['../classttk_1_1PDBarycenter.html#ae58375750db30dcc287ba9577beee84f',1,'ttk::PDBarycenter::geometrical_factor_()'],['../classttk_1_1PDClustering.html#ad85aaf5618c5ae9694e324a0e30b5337',1,'ttk::PDClustering::geometrical_factor_()']]],
+  ['geometrical_5ffactor_5f_2',['geometrical_factor_',['../classttk_1_1PDBarycenter.html#ae58375750db30dcc287ba9577beee84f',1,'ttk::PDBarycenter::geometrical_factor_'],['../classttk_1_1PDClustering.html#ad85aaf5618c5ae9694e324a0e30b5337',1,'ttk::PDClustering::geometrical_factor_']]],
   ['geometricalfactor_5f_3',['geometricalFactor_',['../classttk_1_1PersistenceDiagramAuction.html#ae794d676a72bbbb6b66b4ab5e966342f',1,'ttk::PersistenceDiagramAuction']]],
   ['geometry_5f_4',['geometry_',['../structttk_1_1MorseSmaleComplex_1_1Separatrix.html#adab1b5b664e793842efa890c359fd778',1,'ttk::MorseSmaleComplex::Separatrix']]],
   ['globaldebuglevel_5f_5',['globalDebugLevel_',['../namespacettk.html#afccbedfe5c9266f187f6e15ac1e043e2',1,'ttk']]],

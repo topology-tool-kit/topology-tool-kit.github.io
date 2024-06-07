@@ -6,5 +6,6 @@ var searchData=
   ['equal_3',['EQUAL',['../classttkExtract.html#ab07e7f732d6288785bb6b794df6b4f38a969f331a87d8c958473c32b4d0e61a44',1,'ttkExtract']]],
   ['error_4',['ERROR',['../namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75abb1ca97ec761fc37101737ba0aa2e7c5',1,'ttk::debug']]],
   ['explicit_5',['EXPLICIT',['../classttk_1_1Triangulation.html#a4a9a1c0cd04c930d4dbf972af6eb779fa440806ada035e97a59ec9d2ca6796cb3',1,'ttk::Triangulation']]],
-  ['extremum_5fsaddle_6',['EXTREMUM_SADDLE',['../classttk_1_1lts_1_1LocalizedTopologicalSimplification.html#aa19a4ec156cbbeed339f634e6b5ae65aa89c7b44f2422be5bc685d90d03cf7338',1,'ttk::lts::LocalizedTopologicalSimplification']]]
+  ['extreem_6',['EXTREEM',['../classttkMergeTree.html#a1d4023c888463d7a228d1239e8c689c5aef3a2082da6de45449cbe6e5479f8fc3',1,'ttkMergeTree']]],
+  ['extremum_5fsaddle_7',['EXTREMUM_SADDLE',['../classttk_1_1lts_1_1LocalizedTopologicalSimplification.html#aa19a4ec156cbbeed339f634e6b5ae65aa89c7b44f2422be5bc685d90d03cf7338',1,'ttk::lts::LocalizedTopologicalSimplification']]]
 ];
