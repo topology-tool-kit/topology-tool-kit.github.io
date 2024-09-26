@@ -105,8 +105,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a229cc4aaadc77a80af5ed9735bc82895"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3621faa023fafb45814bf26d3adc9ea5" id="r_a3621faa023fafb45814bf26d3adc9ea5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BoundingVolumeHierarchy.html#a3621faa023fafb45814bf26d3adc9ea5">MollerTrumbore</a> (<a class="el" href="classttk_1_1Ray.html">Ray</a> &amp;ray, const IT v0, const IT v1, const IT v2, const float *vertexCoords) const</td></tr>
 <tr class="separator:a3621faa023fafb45814bf26d3adc9ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ba5f6148348497b1ab84ca81290ba69" id="r_a3ba5f6148348497b1ab84ca81290ba69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BoundingVolumeHierarchy.html#a3ba5f6148348497b1ab84ca81290ba69">intersect</a> (<a class="el" href="classttk_1_1Ray.html">Ray</a> &amp;r, const IT *connectivityList, const float *vertexCoords, int *triangleIndex, float *distance) const</td></tr>
-<tr class="separator:a3ba5f6148348497b1ab84ca81290ba69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9327fc2875ca1c18293ac47a964afd9" id="r_af9327fc2875ca1c18293ac47a964afd9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BoundingVolumeHierarchy.html#af9327fc2875ca1c18293ac47a964afd9">intersect</a> (<a class="el" href="classttk_1_1Ray.html">Ray</a> &amp;r, const IT *connectivityList, const float *vertexCoords, int *triangleIndex, float *distance, std::vector&lt; int &gt; &amp;triangles, std::vector&lt; float &gt; &amp;distances, bool segmentIntersection=false) const</td></tr>
+<tr class="separator:af9327fc2875ca1c18293ac47a964afd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5823c7c7640f8ad3d81a8403dd3cbaf" id="r_ac5823c7c7640f8ad3d81a8403dd3cbaf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BoundingVolumeHierarchy.html#ac5823c7c7640f8ad3d81a8403dd3cbaf">intersect</a> (<a class="el" href="classttk_1_1Ray.html">Ray</a> &amp;r, const IT *connectivityList, const float *vertexCoords, int *triangleIndex, float *distance, bool segmentIntersection=false) const</td></tr>
+<tr class="separator:ac5823c7c7640f8ad3d81a8403dd3cbaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72c3d8ad0a3a778c41a89821fc0fdab1" id="r_a72c3d8ad0a3a778c41a89821fc0fdab1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BoundingVolumeHierarchy.html#a72c3d8ad0a3a778c41a89821fc0fdab1">intersect</a> (<a class="el" href="classttk_1_1Ray.html">Ray</a> &amp;r, const IT *connectivityList, const float *vertexCoords, std::vector&lt; int &gt; &amp;triangles, std::vector&lt; float &gt; &amp;distances, bool segmentIntersection=false) const</td></tr>
+<tr class="separator:a72c3d8ad0a3a778c41a89821fc0fdab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab00ff80729de582a3a02e28ddd74b0b8" id="r_ab00ff80729de582a3a02e28ddd74b0b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1BoundingVolumeHierarchy.html#ab00ff80729de582a3a02e28ddd74b0b8">wasNodeHit</a> (const <a class="el" href="classttk_1_1Ray.html">Ray</a> &amp;r, <a class="el" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html">Node</a> *n) const</td></tr>
 <tr class="separator:ab00ff80729de582a3a02e28ddd74b0b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -290,8 +294,8 @@ template&lt;typename IT &gt; </div>
 
 </div>
 </div>
-<a id="a3ba5f6148348497b1ab84ca81290ba69" name="a3ba5f6148348497b1ab84ca81290ba69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ba5f6148348497b1ab84ca81290ba69">&#9670;&#160;</a></span>intersect()</h2>
+<a id="ac5823c7c7640f8ad3d81a8403dd3cbaf" name="ac5823c7c7640f8ad3d81a8403dd3cbaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5823c7c7640f8ad3d81a8403dd3cbaf">&#9670;&#160;</a></span>intersect() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,7 +333,89 @@ template&lt;typename IT &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>distance</em>&#160;</td>
+          <td class="paramname"><em>distance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>segmentIntersection</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="BoundingVolumeHierarchy_8h_source.html#l00341">341</a> of file <a class="el" href="BoundingVolumeHierarchy_8h_source.html">BoundingVolumeHierarchy.h</a>.</p>
+
+</div>
+</div>
+<a id="af9327fc2875ca1c18293ac47a964afd9" name="af9327fc2875ca1c18293ac47a964afd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9327fc2875ca1c18293ac47a964afd9">&#9670;&#160;</a></span>intersect() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classttk_1_1BoundingVolumeHierarchy.html">ttk::BoundingVolumeHierarchy</a>&lt; IT &gt;::intersect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classttk_1_1Ray.html">Ray</a> &amp;&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IT *&#160;</td>
+          <td class="paramname"><em>connectivityList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float *&#160;</td>
+          <td class="paramname"><em>vertexCoords</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>triangleIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>distance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>triangles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>distances</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>segmentIntersection</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -345,6 +431,70 @@ template&lt;typename IT &gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BoundingVolumeHierarchy_8h_source.html#l00280">280</a> of file <a class="el" href="BoundingVolumeHierarchy_8h_source.html">BoundingVolumeHierarchy.h</a>.</p>
+
+</div>
+</div>
+<a id="a72c3d8ad0a3a778c41a89821fc0fdab1" name="a72c3d8ad0a3a778c41a89821fc0fdab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72c3d8ad0a3a778c41a89821fc0fdab1">&#9670;&#160;</a></span>intersect() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classttk_1_1BoundingVolumeHierarchy.html">ttk::BoundingVolumeHierarchy</a>&lt; IT &gt;::intersect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classttk_1_1Ray.html">Ray</a> &amp;&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IT *&#160;</td>
+          <td class="paramname"><em>connectivityList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float *&#160;</td>
+          <td class="paramname"><em>vertexCoords</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>triangles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>distances</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>segmentIntersection</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="BoundingVolumeHierarchy_8h_source.html#l00353">353</a> of file <a class="el" href="BoundingVolumeHierarchy_8h_source.html">BoundingVolumeHierarchy.h</a>.</p>
 
 </div>
 </div>
@@ -442,7 +592,7 @@ template&lt;typename IT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BoundingVolumeHierarchy_8h_source.html#l00332">332</a> of file <a class="el" href="BoundingVolumeHierarchy_8h_source.html">BoundingVolumeHierarchy.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BoundingVolumeHierarchy_8h_source.html#l00365">365</a> of file <a class="el" href="BoundingVolumeHierarchy_8h_source.html">BoundingVolumeHierarchy.h</a>.</p>
 
 </div>
 </div>
@@ -452,7 +602,7 @@ template&lt;typename IT &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:34 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:21 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

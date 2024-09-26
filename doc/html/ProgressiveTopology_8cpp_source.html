@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_877a2188a9a69f9a9be8a085234e84be.html">base</a></li><li class="navelem"><a class="el" href="dir_43dc917bbbabe3a7097c219df08ecbdd.html">progressiveTopology</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_99ac25909b480f7884325f992ed4da7a.html">progressiveTopology</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -315,9 +315,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="stringliteral">&quot;Resuming computation from resolution level &quot;</span></div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(multiresTriangulation_.DL_to_RL(decimationLevel_))</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    + std::to_string(multiresTriangulation_.DL_to_RL(decimationLevel_))</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    + <span class="stringliteral">&quot; to level &quot;</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    + std::to_string(</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      multiresTriangulation_.DL_to_RL(stoppingDecimationLevel_)));</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  <span class="comment">// lock vertex thread access for firstPropagate</span></div>
@@ -1189,7 +1189,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>  <span class="keywordflow">if</span>(b) {</div>
 <div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>    <span class="keywordflow">if</span>(this-&gt;decimationLevel_ &gt; this-&gt;stoppingDecimationLevel_) {</div>
 <div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>      this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Computation stopped at resolution level &quot;</span></div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>                     + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(multiresTriangulation_.DL_to_RL(</div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>                     + std::to_string(multiresTriangulation_.DL_to_RL(</div>
 <div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>                       this-&gt;decimationLevel_)));</div>
 <div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>    }</div>
 <div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>    this-&gt;stoppingDecimationLevel_ = this-&gt;decimationLevel_;</div>
@@ -1387,7 +1387,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1ProgressiveTopology_html_af839914079921ef8adc0368076ad1fe2"><div class="ttname"><a href="classttk_1_1ProgressiveTopology.html#af839914079921ef8adc0368076ad1fe2">ttk::ProgressiveTopology::computeProgressiveCP</a></div><div class="ttdeci">int computeProgressiveCP(std::vector&lt; std::pair&lt; SimplexId, char &gt; &gt; *criticalPoints, const SimplexId *offsets)</div><div class="ttdef"><b>Definition</b> <a href="ProgressiveTopology_8cpp_source.html#l01201">ProgressiveTopology.cpp:1201</a></div></div>
 <div class="ttc" id="aclassttk_1_1Timer_html"><div class="ttname"><a href="classttk_1_1Timer.html">ttk::Timer</a></div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00007">Timer.h:7</a></div></div>
 <div class="ttc" id="aclassttk_1_1Timer_html_af2b2e58141b9e1cc1f69cf2dc16b3c3a"><div class="ttname"><a href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">ttk::Timer::getElapsedTime</a></div><div class="ttdeci">double getElapsedTime()</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00015">Timer.h:15</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
 <div class="ttc" id="anamespacettk_1_1debug_html_a56f85271ace2268278b51501ca249c75aeda1bc61d9a1bcddb91097bb9395147c"><div class="ttname"><a href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75aeda1bc61d9a1bcddb91097bb9395147c">ttk::debug::Priority::DETAIL</a></div><div class="ttdeci">@ DETAIL</div></div>
 <div class="ttc" id="anamespacettk_1_1debug_html_a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034"><div class="ttname"><a href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">ttk::debug::LineMode::NEW</a></div><div class="ttdeci">@ NEW</div></div>
 <div class="ttc" id="anamespacettk_1_1debug_html_a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7"><div class="ttname"><a href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">ttk::debug::LineMode::REPLACE</a></div><div class="ttdeci">@ REPLACE</div></div>
@@ -1408,7 +1407,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:30 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:18 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

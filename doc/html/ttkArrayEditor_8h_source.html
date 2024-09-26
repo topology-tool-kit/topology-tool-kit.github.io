@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_b5a3b6d63a7e4f975656391b89b6e794.html">vtk</a></li><li class="navelem"><a class="el" href="dir_ed81db0e0e8307110d4eb2547168c075.html">ttkArrayEditor</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_f89e1c10efd0cce563b3613a204c5bfd.html">ttkArrayEditor</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -82,123 +82,123 @@ $(document).ready(function() { init_codefold(0); });
 </div><!--header-->
 <div class="contents">
 <a href="ttkArrayEditor_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// VTK Module</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ttkArrayEditorModule.h&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// VTK includes</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a>&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="ttkMacros_8h.html">ttkMacros.h</a>&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;vtkDataObject.h&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;vtkSmartPointer.h&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">class </span>vtkDataArraySelection;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html">   36</a></span><span class="keyword">class </span>TTKARRAYEDITOR_EXPORT <a class="code hl_class" href="classttkArrayEditor.html">ttkArrayEditor</a> : <span class="keyword">public</span> <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a> {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a896ae4d58fac98140d2712e6121e24f8">   38</a></span>  <span class="keyword">enum class</span> <a class="code hl_enumeration" href="classttkArrayEditor.html#a896ae4d58fac98140d2712e6121e24f8">MODE</a> {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    ADD_ARRAYS_FROM_STRING = 0,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    ADD_ARRAYS_FROM_SOURCE = 1,</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    FILTER_ARRAYS_FROM_SOURCE = 2,</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    EDIT_ARRAY = 3</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  };</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// VTK Module</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;ttkArrayEditorModule.h&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// VTK includes</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a>&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="ttkMacros_8h.html">ttkMacros.h</a>&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;vtkDataObject.h&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;vtkSmartPointer.h&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">class </span>vtkDataArraySelection;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html">   39</a></span><span class="keyword">class </span>TTKARRAYEDITOR_EXPORT <a class="code hl_class" href="classttkArrayEditor.html">ttkArrayEditor</a> : <span class="keyword">public</span> <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a> {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a896ae4d58fac98140d2712e6121e24f8">   41</a></span>  <span class="keyword">enum class</span> <a class="code hl_enumeration" href="classttkArrayEditor.html#a896ae4d58fac98140d2712e6121e24f8">MODE</a> {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    ADD_ARRAYS_FROM_STRING = 0,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    ADD_ARRAYS_FROM_SOURCE = 1,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    FILTER_ARRAYS_FROM_SOURCE = 2,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    EDIT_ARRAY = 3</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  };</div>
 </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  MODE EditorMode{MODE::ADD_ARRAYS_FROM_STRING};</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  std::string DataString{<span class="stringliteral">&quot;&quot;</span>};</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">bool</span> ReplaceExistingArrays{<span class="keyword">true</span>};</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  std::string TargetArrayName;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordtype">int</span> TargetAssociation{2};</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordtype">int</span> TargetArrayType;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keywordtype">int</span> TargetArrayIndexation[2];</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <a class="code hl_class" href="classvtkSmartPointer.html">vtkSmartPointer&lt;vtkDataArraySelection&gt;</a></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    ArraySelections[vtkDataObject::NUMBER_OF_ASSOCIATIONS];</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  MODE EditorMode{MODE::ADD_ARRAYS_FROM_STRING};</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  std::string DataString{<span class="stringliteral">&quot;&quot;</span>};</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordtype">bool</span> ReplaceExistingArrays{<span class="keyword">true</span>};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  std::string TargetArrayName;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordtype">int</span> TargetAssociation{2};</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordtype">int</span> TargetArrayType;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordtype">int</span> TargetArrayIndexation[2];</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a33de98a931d418fadcf652906af0d446">   59</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classttkArrayEditor.html">ttkArrayEditor</a> *<a class="code hl_function" href="classttkArrayEditor.html#a33de98a931d418fadcf652906af0d446">New</a>();</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#aafa5cff334d3697345f3af351609ecbf">   60</a></span>  vtkTypeMacro(<a class="code hl_class" href="classttkArrayEditor.html">ttkArrayEditor</a>, <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a>);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#ad36c13eb9f2c12b081bdccb2b3293c3f">   62</a></span>  <a class="code hl_define" href="ttkMacros_8h.html#a30558d0162e078957ac83a8cd4d2fe3f">ttkSetEnumMacro</a>(EditorMode, <a class="code hl_enumeration" href="classttkArrayEditor.html#a896ae4d58fac98140d2712e6121e24f8">MODE</a>);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#af2704c41c68eeea49700169540f09d1d">   63</a></span>  vtkGetEnumMacro(EditorMode, <a class="code hl_enumeration" href="classttkArrayEditor.html#a896ae4d58fac98140d2712e6121e24f8">MODE</a>);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a98ee0cdba8ba842d29e5ef183442802a">   64</a></span>  vtkSetMacro(TargetAssociation, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a1063aa55c14fc5da88dbfba53760dd29">   65</a></span>  vtkGetMacro(TargetAssociation, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a364ab9c97010f325b684e0d5bf039ead">   66</a></span>  vtkSetMacro(DataString, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a8fc02ad81f2153ad87398adf055edc84">   67</a></span>  vtkGetMacro(DataString, std::string);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a937d271e0223be37d990995e07ff22fc">   68</a></span>  vtkSetMacro(ReplaceExistingArrays, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a7dada129a19a8b705303d7e897652c7e">   69</a></span>  vtkGetMacro(ReplaceExistingArrays, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a059606b035b2a71a6071d25dd934888c">   71</a></span>  vtkSetMacro(TargetArrayName, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a51b892247d8c82bebcb1c6118d9d6d53">   72</a></span>  vtkGetMacro(TargetArrayName, std::string);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a18f35664e6be2a3fe7b690566d603b66">   73</a></span>  vtkSetMacro(TargetArrayType, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#ae3ec785677d0f1e1f74db60564799d45">   74</a></span>  vtkGetMacro(TargetArrayType, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a5ede1b6fcbfc2454621226bd518f0980">   75</a></span>  vtkSetVector2Macro(TargetArrayIndexation, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#acc0773936869efa4942d7b3e5c1771f8">   76</a></span>  vtkGetVector2Macro(TargetArrayIndexation, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  vtkDataArraySelection *GetArraySelection(<span class="keywordtype">int</span> association);</div>
-<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#af963634ae2a2ca564de73a298b40c3e2">   79</a></span>  vtkDataArraySelection *<a class="code hl_function" href="classttkArrayEditor.html#af963634ae2a2ca564de73a298b40c3e2">GetPointDataArraySelection</a>() {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">return</span> this-&gt;GetArraySelection(vtkDataObject::FIELD_ASSOCIATION_POINTS);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  }</div>
-</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <a class="code hl_class" href="classvtkSmartPointer.html">vtkSmartPointer&lt;vtkDataArraySelection&gt;</a></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    ArraySelections[vtkDataObject::NUMBER_OF_ASSOCIATIONS];</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a33de98a931d418fadcf652906af0d446">   62</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classttkArrayEditor.html">ttkArrayEditor</a> *<a class="code hl_function" href="classttkArrayEditor.html#a33de98a931d418fadcf652906af0d446">New</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#aafa5cff334d3697345f3af351609ecbf">   63</a></span>  vtkTypeMacro(<a class="code hl_class" href="classttkArrayEditor.html">ttkArrayEditor</a>, <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#ad36c13eb9f2c12b081bdccb2b3293c3f">   65</a></span>  <a class="code hl_define" href="ttkMacros_8h.html#a30558d0162e078957ac83a8cd4d2fe3f">ttkSetEnumMacro</a>(EditorMode, <a class="code hl_enumeration" href="classttkArrayEditor.html#a896ae4d58fac98140d2712e6121e24f8">MODE</a>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#af2704c41c68eeea49700169540f09d1d">   66</a></span>  vtkGetEnumMacro(EditorMode, <a class="code hl_enumeration" href="classttkArrayEditor.html#a896ae4d58fac98140d2712e6121e24f8">MODE</a>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a98ee0cdba8ba842d29e5ef183442802a">   67</a></span>  vtkSetMacro(TargetAssociation, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a1063aa55c14fc5da88dbfba53760dd29">   68</a></span>  vtkGetMacro(TargetAssociation, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a364ab9c97010f325b684e0d5bf039ead">   69</a></span>  vtkSetMacro(DataString, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a8fc02ad81f2153ad87398adf055edc84">   70</a></span>  vtkGetMacro(DataString, std::string);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a937d271e0223be37d990995e07ff22fc">   71</a></span>  vtkSetMacro(ReplaceExistingArrays, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a7dada129a19a8b705303d7e897652c7e">   72</a></span>  vtkGetMacro(ReplaceExistingArrays, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a059606b035b2a71a6071d25dd934888c">   74</a></span>  vtkSetMacro(TargetArrayName, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a51b892247d8c82bebcb1c6118d9d6d53">   75</a></span>  vtkGetMacro(TargetArrayName, std::string);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a18f35664e6be2a3fe7b690566d603b66">   76</a></span>  vtkSetMacro(TargetArrayType, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#ae3ec785677d0f1e1f74db60564799d45">   77</a></span>  vtkGetMacro(TargetArrayType, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a5ede1b6fcbfc2454621226bd518f0980">   78</a></span>  vtkSetVector2Macro(TargetArrayIndexation, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#acc0773936869efa4942d7b3e5c1771f8">   79</a></span>  vtkGetVector2Macro(TargetArrayIndexation, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  vtkDataArraySelection *GetArraySelection(<span class="keywordtype">int</span> association);</div>
 <div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a04687dbe83ffc4c42c4c2e5402e05c1a">   82</a></span>  vtkDataArraySelection *<a class="code hl_function" href="classttkArrayEditor.html#a04687dbe83ffc4c42c4c2e5402e05c1a">GetCellDataArraySelection</a>() {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">return</span> this-&gt;GetArraySelection(vtkDataObject::FIELD_ASSOCIATION_CELLS);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#af963634ae2a2ca564de73a298b40c3e2">   82</a></span>  vtkDataArraySelection *<a class="code hl_function" href="classttkArrayEditor.html#af963634ae2a2ca564de73a298b40c3e2">GetPointDataArraySelection</a>() {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">return</span> this-&gt;GetArraySelection(vtkDataObject::FIELD_ASSOCIATION_POINTS);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  }</div>
 </div>
 <div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a9c5f2643ab246a011f18258970b33d22">   85</a></span>  vtkDataArraySelection *<a class="code hl_function" href="classttkArrayEditor.html#a9c5f2643ab246a011f18258970b33d22">GetFieldDataArraySelection</a>() {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">return</span> this-&gt;GetArraySelection(vtkDataObject::FIELD_ASSOCIATION_NONE);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a04687dbe83ffc4c42c4c2e5402e05c1a">   85</a></span>  vtkDataArraySelection *<a class="code hl_function" href="classttkArrayEditor.html#a04687dbe83ffc4c42c4c2e5402e05c1a">GetCellDataArraySelection</a>() {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">return</span> this-&gt;GetArraySelection(vtkDataObject::FIELD_ASSOCIATION_CELLS);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  }</div>
 </div>
 <div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a9a00eed7bbdc45882fda7527d6513e89">   88</a></span>  vtkDataArraySelection *<a class="code hl_function" href="classttkArrayEditor.html#a9a00eed7bbdc45882fda7527d6513e89">GetVertexDataArraySelection</a>() {</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">return</span> this-&gt;GetArraySelection(vtkDataObject::FIELD_ASSOCIATION_VERTICES);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a9c5f2643ab246a011f18258970b33d22">   88</a></span>  vtkDataArraySelection *<a class="code hl_function" href="classttkArrayEditor.html#a9c5f2643ab246a011f18258970b33d22">GetFieldDataArraySelection</a>() {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">return</span> this-&gt;GetArraySelection(vtkDataObject::FIELD_ASSOCIATION_NONE);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  }</div>
 </div>
 <div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#abd9c6657c091500f176b21e88536f4a2">   91</a></span>  vtkDataArraySelection *<a class="code hl_function" href="classttkArrayEditor.html#abd9c6657c091500f176b21e88536f4a2">GetEdgeDataArraySelection</a>() {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">return</span> this-&gt;GetArraySelection(vtkDataObject::FIELD_ASSOCIATION_EDGES);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a9a00eed7bbdc45882fda7527d6513e89">   91</a></span>  vtkDataArraySelection *<a class="code hl_function" href="classttkArrayEditor.html#a9a00eed7bbdc45882fda7527d6513e89">GetVertexDataArraySelection</a>() {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">return</span> this-&gt;GetArraySelection(vtkDataObject::FIELD_ASSOCIATION_VERTICES);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  }</div>
 </div>
 <div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a5ff200e67b86f8422a5cc4c7e2e1aa03">   94</a></span>  vtkDataArraySelection *<a class="code hl_function" href="classttkArrayEditor.html#a5ff200e67b86f8422a5cc4c7e2e1aa03">GetRowDataArraySelection</a>() {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">return</span> this-&gt;GetArraySelection(vtkDataObject::FIELD_ASSOCIATION_ROWS);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#abd9c6657c091500f176b21e88536f4a2">   94</a></span>  vtkDataArraySelection *<a class="code hl_function" href="classttkArrayEditor.html#abd9c6657c091500f176b21e88536f4a2">GetEdgeDataArraySelection</a>() {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">return</span> this-&gt;GetArraySelection(vtkDataObject::FIELD_ASSOCIATION_EDGES);</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  }</div>
 </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <a class="code hl_class" href="classttkArrayEditor.html">ttkArrayEditor</a>();</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a31d0bd631e6cda50e741addb3fc541e0">  100</a></span>  <a class="code hl_function" href="classttkArrayEditor.html#a31d0bd631e6cda50e741addb3fc541e0">~ttkArrayEditor</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a9d1bc15e1c75f193d33cf08516082b0e">FillInputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#af12cc495fab5711bb738a7bdef8b52a2">FillOutputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a5ff200e67b86f8422a5cc4c7e2e1aa03">   97</a></span>  vtkDataArraySelection *<a class="code hl_function" href="classttkArrayEditor.html#a5ff200e67b86f8422a5cc4c7e2e1aa03">GetRowDataArraySelection</a>() {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">return</span> this-&gt;GetArraySelection(vtkDataObject::FIELD_ASSOCIATION_ROWS);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  }</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <a class="code hl_class" href="classttkArrayEditor.html">ttkArrayEditor</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classttkArrayEditor.html#a31d0bd631e6cda50e741addb3fc541e0">  103</a></span>  <a class="code hl_function" href="classttkArrayEditor.html#a31d0bd631e6cda50e741addb3fc541e0">~ttkArrayEditor</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">RequestData</a>(vtkInformation *request,</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                  vtkInformationVector **inputVector,</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                  vtkInformationVector *outputVector) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>};</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a9d1bc15e1c75f193d33cf08516082b0e">FillInputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#af12cc495fab5711bb738a7bdef8b52a2">FillOutputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">RequestData</a>(vtkInformation *request,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                  vtkInformationVector **inputVector,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                  vtkInformationVector *outputVector) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>};</div>
 </div>
 <div class="ttc" id="aclassttkAlgorithm_html"><div class="ttname"><a href="classttkAlgorithm.html">ttkAlgorithm</a></div><div class="ttdoc">Baseclass of all VTK filters that wrap ttk modules.</div><div class="ttdef"><b>Definition</b> <a href="ttkAlgorithm_8h_source.html#l00033">ttkAlgorithm.h:34</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a38454ad0e03893665a505e0aa3fafa48"><div class="ttname"><a href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">ttkAlgorithm::RequestData</a></div><div class="ttdeci">virtual int RequestData(vtkInformation *ttkNotUsed(request), vtkInformationVector **ttkNotUsed(inputVectors), vtkInformationVector *ttkNotUsed(outputVector))</div><div class="ttdef"><b>Definition</b> <a href="ttkAlgorithm_8h_source.html#l00423">ttkAlgorithm.h:423</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a9d1bc15e1c75f193d33cf08516082b0e"><div class="ttname"><a href="classttkAlgorithm.html#a9d1bc15e1c75f193d33cf08516082b0e">ttkAlgorithm::FillInputPortInformation</a></div><div class="ttdeci">int FillInputPortInformation(int ttkNotUsed(port), vtkInformation *ttkNotUsed(info)) override</div><div class="ttdef"><b>Definition</b> <a href="ttkAlgorithm_8h_source.html#l00437">ttkAlgorithm.h:437</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_af12cc495fab5711bb738a7bdef8b52a2"><div class="ttname"><a href="classttkAlgorithm.html#af12cc495fab5711bb738a7bdef8b52a2">ttkAlgorithm::FillOutputPortInformation</a></div><div class="ttdeci">int FillOutputPortInformation(int ttkNotUsed(port), vtkInformation *ttkNotUsed(info)) override</div><div class="ttdef"><b>Definition</b> <a href="ttkAlgorithm_8h_source.html#l00452">ttkAlgorithm.h:452</a></div></div>
-<div class="ttc" id="aclassttkArrayEditor_html"><div class="ttname"><a href="classttkArrayEditor.html">ttkArrayEditor</a></div><div class="ttdoc">TTK VTK-filter that edit arrays of a vtkDataObject.</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00036">ttkArrayEditor.h:36</a></div></div>
-<div class="ttc" id="aclassttkArrayEditor_html_a04687dbe83ffc4c42c4c2e5402e05c1a"><div class="ttname"><a href="classttkArrayEditor.html#a04687dbe83ffc4c42c4c2e5402e05c1a">ttkArrayEditor::GetCellDataArraySelection</a></div><div class="ttdeci">vtkDataArraySelection * GetCellDataArraySelection()</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00082">ttkArrayEditor.h:82</a></div></div>
+<div class="ttc" id="aclassttkArrayEditor_html"><div class="ttname"><a href="classttkArrayEditor.html">ttkArrayEditor</a></div><div class="ttdoc">TTK VTK-filter that edit arrays of a vtkDataObject.</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00039">ttkArrayEditor.h:39</a></div></div>
+<div class="ttc" id="aclassttkArrayEditor_html_a04687dbe83ffc4c42c4c2e5402e05c1a"><div class="ttname"><a href="classttkArrayEditor.html#a04687dbe83ffc4c42c4c2e5402e05c1a">ttkArrayEditor::GetCellDataArraySelection</a></div><div class="ttdeci">vtkDataArraySelection * GetCellDataArraySelection()</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00085">ttkArrayEditor.h:85</a></div></div>
 <div class="ttc" id="aclassttkArrayEditor_html_a31d0bd631e6cda50e741addb3fc541e0"><div class="ttname"><a href="classttkArrayEditor.html#a31d0bd631e6cda50e741addb3fc541e0">ttkArrayEditor::~ttkArrayEditor</a></div><div class="ttdeci">~ttkArrayEditor() override</div></div>
 <div class="ttc" id="aclassttkArrayEditor_html_a33de98a931d418fadcf652906af0d446"><div class="ttname"><a href="classttkArrayEditor.html#a33de98a931d418fadcf652906af0d446">ttkArrayEditor::New</a></div><div class="ttdeci">static ttkArrayEditor * New()</div></div>
-<div class="ttc" id="aclassttkArrayEditor_html_a5ff200e67b86f8422a5cc4c7e2e1aa03"><div class="ttname"><a href="classttkArrayEditor.html#a5ff200e67b86f8422a5cc4c7e2e1aa03">ttkArrayEditor::GetRowDataArraySelection</a></div><div class="ttdeci">vtkDataArraySelection * GetRowDataArraySelection()</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00094">ttkArrayEditor.h:94</a></div></div>
-<div class="ttc" id="aclassttkArrayEditor_html_a896ae4d58fac98140d2712e6121e24f8"><div class="ttname"><a href="classttkArrayEditor.html#a896ae4d58fac98140d2712e6121e24f8">ttkArrayEditor::MODE</a></div><div class="ttdeci">MODE</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00038">ttkArrayEditor.h:38</a></div></div>
-<div class="ttc" id="aclassttkArrayEditor_html_a9a00eed7bbdc45882fda7527d6513e89"><div class="ttname"><a href="classttkArrayEditor.html#a9a00eed7bbdc45882fda7527d6513e89">ttkArrayEditor::GetVertexDataArraySelection</a></div><div class="ttdeci">vtkDataArraySelection * GetVertexDataArraySelection()</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00088">ttkArrayEditor.h:88</a></div></div>
-<div class="ttc" id="aclassttkArrayEditor_html_a9c5f2643ab246a011f18258970b33d22"><div class="ttname"><a href="classttkArrayEditor.html#a9c5f2643ab246a011f18258970b33d22">ttkArrayEditor::GetFieldDataArraySelection</a></div><div class="ttdeci">vtkDataArraySelection * GetFieldDataArraySelection()</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00085">ttkArrayEditor.h:85</a></div></div>
-<div class="ttc" id="aclassttkArrayEditor_html_abd9c6657c091500f176b21e88536f4a2"><div class="ttname"><a href="classttkArrayEditor.html#abd9c6657c091500f176b21e88536f4a2">ttkArrayEditor::GetEdgeDataArraySelection</a></div><div class="ttdeci">vtkDataArraySelection * GetEdgeDataArraySelection()</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00091">ttkArrayEditor.h:91</a></div></div>
-<div class="ttc" id="aclassttkArrayEditor_html_af963634ae2a2ca564de73a298b40c3e2"><div class="ttname"><a href="classttkArrayEditor.html#af963634ae2a2ca564de73a298b40c3e2">ttkArrayEditor::GetPointDataArraySelection</a></div><div class="ttdeci">vtkDataArraySelection * GetPointDataArraySelection()</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00079">ttkArrayEditor.h:79</a></div></div>
+<div class="ttc" id="aclassttkArrayEditor_html_a5ff200e67b86f8422a5cc4c7e2e1aa03"><div class="ttname"><a href="classttkArrayEditor.html#a5ff200e67b86f8422a5cc4c7e2e1aa03">ttkArrayEditor::GetRowDataArraySelection</a></div><div class="ttdeci">vtkDataArraySelection * GetRowDataArraySelection()</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00097">ttkArrayEditor.h:97</a></div></div>
+<div class="ttc" id="aclassttkArrayEditor_html_a896ae4d58fac98140d2712e6121e24f8"><div class="ttname"><a href="classttkArrayEditor.html#a896ae4d58fac98140d2712e6121e24f8">ttkArrayEditor::MODE</a></div><div class="ttdeci">MODE</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00041">ttkArrayEditor.h:41</a></div></div>
+<div class="ttc" id="aclassttkArrayEditor_html_a9a00eed7bbdc45882fda7527d6513e89"><div class="ttname"><a href="classttkArrayEditor.html#a9a00eed7bbdc45882fda7527d6513e89">ttkArrayEditor::GetVertexDataArraySelection</a></div><div class="ttdeci">vtkDataArraySelection * GetVertexDataArraySelection()</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00091">ttkArrayEditor.h:91</a></div></div>
+<div class="ttc" id="aclassttkArrayEditor_html_a9c5f2643ab246a011f18258970b33d22"><div class="ttname"><a href="classttkArrayEditor.html#a9c5f2643ab246a011f18258970b33d22">ttkArrayEditor::GetFieldDataArraySelection</a></div><div class="ttdeci">vtkDataArraySelection * GetFieldDataArraySelection()</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00088">ttkArrayEditor.h:88</a></div></div>
+<div class="ttc" id="aclassttkArrayEditor_html_abd9c6657c091500f176b21e88536f4a2"><div class="ttname"><a href="classttkArrayEditor.html#abd9c6657c091500f176b21e88536f4a2">ttkArrayEditor::GetEdgeDataArraySelection</a></div><div class="ttdeci">vtkDataArraySelection * GetEdgeDataArraySelection()</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00094">ttkArrayEditor.h:94</a></div></div>
+<div class="ttc" id="aclassttkArrayEditor_html_af963634ae2a2ca564de73a298b40c3e2"><div class="ttname"><a href="classttkArrayEditor.html#af963634ae2a2ca564de73a298b40c3e2">ttkArrayEditor::GetPointDataArraySelection</a></div><div class="ttdeci">vtkDataArraySelection * GetPointDataArraySelection()</div><div class="ttdef"><b>Definition</b> <a href="ttkArrayEditor_8h_source.html#l00082">ttkArrayEditor.h:82</a></div></div>
 <div class="ttc" id="aclassvtkSmartPointer_html"><div class="ttname"><a href="classvtkSmartPointer.html">vtkSmartPointer</a></div><div class="ttdef"><b>Definition</b> <a href="ttkUtils_8h_source.html#l00026">ttkUtils.h:26</a></div></div>
 <div class="ttc" id="attkAlgorithm_8h_html"><div class="ttname"><a href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a></div></div>
 <div class="ttc" id="attkMacros_8h_html"><div class="ttname"><a href="ttkMacros_8h.html">ttkMacros.h</a></div></div>
@@ -206,7 +206,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:30 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -102,9 +102,9 @@ Inheritance diagram for ttk::dcg::DiscreteGradient:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af0bda371d072cc09aa7c0477aae2a35d" id="r_af0bda371d072cc09aa7c0477aae2a35d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1dcg_1_1DiscreteGradient.html#af0bda371d072cc09aa7c0477aae2a35d">DiscreteGradient</a> ()</td></tr>
 <tr class="separator:af0bda371d072cc09aa7c0477aae2a35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa361dacb8cb006ae1e81cdba2f064595" id="r_aa361dacb8cb006ae1e81cdba2f064595"><td class="memTemplParams" colspan="2">template&lt;typename triangulationType &gt; </td></tr>
-<tr class="memitem:aa361dacb8cb006ae1e81cdba2f064595"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1dcg_1_1DiscreteGradient.html#aa361dacb8cb006ae1e81cdba2f064595">buildGradient</a> (const triangulationType &amp;triangulation, bool bypassCache=false)</td></tr>
-<tr class="separator:aa361dacb8cb006ae1e81cdba2f064595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a830467549ec397ffe744823ec397f5fc" id="r_a830467549ec397ffe744823ec397f5fc"><td class="memTemplParams" colspan="2">template&lt;typename triangulationType &gt; </td></tr>
+<tr class="memitem:a830467549ec397ffe744823ec397f5fc"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1dcg_1_1DiscreteGradient.html#a830467549ec397ffe744823ec397f5fc">buildGradient</a> (const triangulationType &amp;triangulation, bool bypassCache=false, const std::vector&lt; bool &gt; *updateMask=nullptr)</td></tr>
+<tr class="separator:a830467549ec397ffe744823ec397f5fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a533676937187eeb2c5c5966952e55aa0" id="r_a533676937187eeb2c5c5966952e55aa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1dcg_1_1DiscreteGradient.html#a533676937187eeb2c5c5966952e55aa0">setInputScalarField</a> (const void *const data, const size_t mTime)</td></tr>
 <tr class="separator:a533676937187eeb2c5c5966952e55aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9080f908e291e30d4fff5efd996930ac" id="r_a9080f908e291e30d4fff5efd996930ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1dcg_1_1DiscreteGradient.html#a9080f908e291e30d4fff5efd996930ac">preconditionTriangulation</a> (<a class="el" href="classttk_1_1AbstractTriangulation.html">AbstractTriangulation</a> *const data)</td></tr>
@@ -347,8 +347,8 @@ Pierre Guillou <a href="#" onclick="location.href='mai'+'lto:'+'pie'+'rr'+'e.g'+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa361dacb8cb006ae1e81cdba2f064595" name="aa361dacb8cb006ae1e81cdba2f064595"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa361dacb8cb006ae1e81cdba2f064595">&#9670;&#160;</a></span>buildGradient()</h2>
+<a id="a830467549ec397ffe744823ec397f5fc" name="a830467549ec397ffe744823ec397f5fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a830467549ec397ffe744823ec397f5fc">&#9670;&#160;</a></span>buildGradient()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -365,7 +365,13 @@ template&lt;typename triangulationType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bypassCache</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>bypassCache</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; bool &gt; *&#160;</td>
+          <td class="paramname"><em>updateMask</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -405,7 +411,7 @@ template&lt;typename triangulationType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00150">150</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00151">151</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
 
 </div>
 </div>
@@ -438,7 +444,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Detect the presence of a cycle on a edge-triangle path starting from an edge. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01123">1123</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01546">1546</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -483,7 +489,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Return the VPath coming from the given cell. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l00885">885</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01308">1308</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -553,7 +559,7 @@ template&lt;typename triangulationType &gt; </div>
 <pre class="fragment">     Return the VPath coming from the given 1-saddle restricted to the
 </pre><p> 2-separatrice of the 2-saddle. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01004">1004</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01427">1427</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -604,7 +610,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Return the 2-separatrice coming from the given 1-saddle. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01227">1227</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01650">1650</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -667,7 +673,7 @@ template&lt;typename triangulationType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01493">1493</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01916">1916</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -730,7 +736,7 @@ template&lt;typename triangulationType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01556">1556</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01979">1979</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -763,7 +769,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Get the output critical points as a STL vector of cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l00161">161</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l00175">175</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -802,7 +808,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Return the VPath terminating at the given cell. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l00731">731</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01154">1154</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -866,7 +872,7 @@ template&lt;typename triangulationType &gt; </div>
 <pre class="fragment">     Return the VPath terminating at the given 2-saddle restricted to the
 </pre><p> 2-separatrice of the 1-saddle. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l00779">779</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01202">1202</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -917,7 +923,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Return the 2-separatrice terminating at the given 2-saddle. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01164">1164</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01587">1587</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -970,7 +976,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Get the number of cells of the given dimension. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l00202">202</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l00216">216</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -1031,7 +1037,7 @@ template&lt;typename triangulationType &gt; </div>
 <pre class="fragment">     Return the identifier of the cell paired to the cell given by the user
 </pre><p> in the gradient. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l00637">637</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01060">1060</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -1109,7 +1115,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Return true if the given cell is at boundary, false otherwise. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l00624">624</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01047">1047</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -1278,7 +1284,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Preprocess all the required connectivity requests on the triangulation. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00122">122</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00123">123</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
 
 </div>
 </div>
@@ -1311,7 +1317,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Reverse the given ascending VPath. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01292">1292</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01715">1715</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -1350,7 +1356,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Reverse the given ascending VPath restricted on a 2-separatrice. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01400">1400</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01823">1823</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -1383,7 +1389,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Reverse the given descending VPath. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01361">1361</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01784">1784</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -1416,7 +1422,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Reverse the given descending VPath restricted on a 2-separatrice. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01453">1453</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01876">1876</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -1479,7 +1485,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Build the geometric embedding of the given STL vector of cells. The output vectors are modified accordingly. This function needs the following internal pointers to be set: outputCriticalPoints_numberOfPoints_ outputCriticalPoints_points_ inputScalarField_ </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l00086">86</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l00100">100</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -1536,7 +1542,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Detect the critical points and build their geometric embedding. The output vectors are modified accordingly. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l00144">144</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l00158">158</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -1593,7 +1599,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 <p>Build the glyphs representing the discrete gradient vector field. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l01619">1619</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient__Template_8h_source.html#l02042">2042</a> of file <a class="el" href="DiscreteGradient__Template_8h_source.html">DiscreteGradient_Template.h</a>.</p>
 
 </div>
 </div>
@@ -1624,7 +1630,7 @@ template&lt;typename triangulationType &gt; </div>
 <dl class="section pre"><dt>Precondition</dt><dd>For this function to behave correctly in the absence of the VTK wrapper, <a class="el" href="namespacettk.html#a795fd9ff680537ecd096901f4bc133bc" title="Precondition an order array to be consumed by the base layer API.">ttk::preconditionOrderArray()</a> needs to be called to fill the <code>data</code> buffer prior to any computation (the VTK wrapper already includes a mechanism to automatically generate such a preconditioned buffer). </dd></dl>
 <dl class="section see"><dt>See also</dt><dd>examples/c++/main.cpp for an example use. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00171">171</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00172">172</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
 
 </div>
 </div>
@@ -1664,7 +1670,7 @@ template&lt;typename triangulationType &gt; </div>
 <p>Set the input scalar function.</p>
 <p>The first parameter is a pointer to the scalar field buffer (often provided by <a class="el" href="classttkUtils.html#a173a585ba9ac7496e9f9c9f496acde9c">ttkUtils::GetVoidPointer()</a>), the second one is a timestamp representing the last modification time of the scalar field (often provided by vtkObject::GetMTime()). </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00114">114</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00115">115</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
 
 </div>
 </div>
@@ -1693,7 +1699,7 @@ template&lt;typename triangulationType &gt; </div>
 
 <p>Use local storage instead of cache. </p>
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00157">157</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00158">158</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
 
 </div>
 </div>
@@ -1761,7 +1767,7 @@ template&lt;typename triangulationType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00509">509</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00539">539</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
 
 </div>
 </div>
@@ -1785,7 +1791,7 @@ template&lt;typename triangulationType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00518">518</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00548">548</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
 
 </div>
 </div>
@@ -1809,7 +1815,7 @@ template&lt;typename triangulationType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00519">519</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00549">549</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
 
 </div>
 </div>
@@ -1833,7 +1839,7 @@ template&lt;typename triangulationType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00515">515</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00545">545</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
 
 </div>
 </div>
@@ -1857,7 +1863,7 @@ template&lt;typename triangulationType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00513">513</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00543">543</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
 
 </div>
 </div>
@@ -1881,7 +1887,7 @@ template&lt;typename triangulationType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00510">510</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DiscreteGradient_8h_source.html#l00540">540</a> of file <a class="el" href="DiscreteGradient_8h_source.html">DiscreteGradient.h</a>.</p>
 
 </div>
 </div>
@@ -1893,7 +1899,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:36 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:21 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_877a2188a9a69f9a9be8a085234e84be.html">base</a></li><li class="navelem"><a class="el" href="dir_9654a4b92f34640c34ae89bea7750bfe.html">ftmTree</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_5c599a6024b876b5b6f9779e284d62d9.html">ftmTree</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -108,7 +108,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keyword">public</span>:</div>
 <div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classttk_1_1FTMAtomicVector.html#a4697a5e751fb249afbdaa4471e10b436">   30</a></span>    <a class="code hl_function" href="classttk_1_1FTMAtomicVector.html#a4697a5e751fb249afbdaa4471e10b436">FTMAtomicVector</a>(<span class="keyword">const</span> std::size_t initSize = 1, <span class="keyword">const</span> type &amp;dv = type{})</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      : <a class="code hl_namespace" href="namespacestd.html">std</a>::vector&lt;type&gt;(), nextId(0), defaultValue{dv} {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      : std::vector&lt;type&gt;(), nextId(0), defaultValue{dv} {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#ifndef TTK_ENABLE_KAMIKAZE</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="keywordflow">if</span>(!initSize) {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Caution, Atomic vector need a non-0 init size !&quot;</span></div>
@@ -125,7 +125,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">// copy constructor</span></div>
 <div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classttk_1_1FTMAtomicVector.html#a1c183804ae07f31c51b947435cb181ab">   45</a></span>    <a class="code hl_function" href="classttk_1_1FTMAtomicVector.html#a1c183804ae07f31c51b947435cb181ab">FTMAtomicVector</a>(<span class="keyword">const</span> <a class="code hl_class" href="classttk_1_1FTMAtomicVector.html">FTMAtomicVector</a> &amp;other)</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      : <a class="code hl_namespace" href="namespacestd.html">std</a>::vector&lt;type&gt;(other), nextId(other.nextId) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      : std::vector&lt;type&gt;(other), nextId(other.nextId) {</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#ifndef TTK_ENABLE_KAMIKAZE</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <span class="keywordflow">if</span>(!std::vector&lt;type&gt;::size()) {</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_function" href="classttk_1_1FTMAtomicVector.html#ab3e4e0daaab77f487e01dc1bb70d69c1">reserve</a>(1);</div>
@@ -292,13 +292,12 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1FTMAtomicVector_html_ac7ea83b01b82c90095a349a554f78170"><div class="ttname"><a href="classttk_1_1FTMAtomicVector.html#ac7ea83b01b82c90095a349a554f78170">ttk::FTMAtomicVector::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdef"><b>Definition</b> <a href="FTMAtomicVector_8h_source.html#l00146">FTMAtomicVector.h:146</a></div></div>
 <div class="ttc" id="aclassttk_1_1FTMAtomicVector_html_ada8c10465cfe413ba54315c5243477a3"><div class="ttname"><a href="classttk_1_1FTMAtomicVector.html#ada8c10465cfe413ba54315c5243477a3">ttk::FTMAtomicVector::riterator</a></div><div class="ttdeci">typename std::vector&lt; type &gt;::reverse_iterator riterator</div><div class="ttdef"><b>Definition</b> <a href="FTMAtomicVector_8h_source.html#l00154">FTMAtomicVector.h:154</a></div></div>
 <div class="ttc" id="aclassttk_1_1FTMAtomicVector_html_af23d012df16c9ec876ab445cf8f70954"><div class="ttname"><a href="classttk_1_1FTMAtomicVector.html#af23d012df16c9ec876ab445cf8f70954">ttk::FTMAtomicVector::crbegin</a></div><div class="ttdeci">const_riterator crbegin() const</div><div class="ttdef"><b>Definition</b> <a href="FTMAtomicVector_8h_source.html#l00161">FTMAtomicVector.h:161</a></div></div>
-<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00098">ripserpy.cpp:98</a></div></div>
 <div class="ttc" id="anamespacettk_html"><div class="ttname"><a href="namespacettk.html">ttk</a></div><div class="ttdoc">The Topology ToolKit.</div><div class="ttdef"><b>Definition</b> <a href="AbstractTriangulation_8h_source.html#l00051">AbstractTriangulation.h:51</a></div></div>
-<div class="ttc" id="aripserpy_8cpp_html_aef2d8b60edd5a3139a475a06101abcfc"><div class="ttname"><a href="ripserpy_8cpp.html#aef2d8b60edd5a3139a475a06101abcfc">begin</a></div><div class="ttdeci">T begin(std::pair&lt; T, T &gt; &amp;p)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00468">ripserpy.cpp:468</a></div></div>
+<div class="ttc" id="aripserpy_8cpp_html_aef2d8b60edd5a3139a475a06101abcfc"><div class="ttname"><a href="ripserpy_8cpp.html#aef2d8b60edd5a3139a475a06101abcfc">begin</a></div><div class="ttdeci">T begin(std::pair&lt; T, T &gt; &amp;p)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00479">ripserpy.cpp:479</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:28 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:18 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_b5a3b6d63a7e4f975656391b89b6e794.html">vtk</a></li><li class="navelem"><a class="el" href="dir_8df8ff2050a277dcbcc623da7ac52470.html">ttkPersistenceDiagramDistanceMatrix</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_6e0ea346d4b03b6fbd1d3482ad63435b.html">ttkPersistenceDiagramDistanceMatrix</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -200,8 +200,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <span class="comment">// zero-padd column name to keep Row Data columns ordered</span></div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="keyword">const</span> <span class="keyword">auto</span> zeroPad</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    = [](std::string &amp;colName, <span class="keyword">const</span> <span class="keywordtype">size_t</span> numberCols, <span class="keyword">const</span> <span class="keywordtype">size_t</span> colIdx) {</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        std::string <span class="keyword">const</span> max{<a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(numberCols - 1)};</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        std::string <span class="keyword">const</span> cur{<a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(colIdx)};</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        std::string <span class="keyword">const</span> max{std::to_string(numberCols - 1)};</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        std::string <span class="keyword">const</span> cur{std::to_string(colIdx)};</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        std::string <span class="keyword">const</span> zer(max.size() - cur.size(), <span class="charliteral">&#39;0&#39;</span>);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        colName.append(zer).append(cur);</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      };</div>
@@ -272,7 +272,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1Debug_html_afd1938d93be0cf163be78086ed26370e"><div class="ttname"><a href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">ttk::Debug::printErr</a></div><div class="ttdeci">int printErr(const std::string &amp;msg, const debug::LineMode &amp;lineMode=debug::LineMode::NEW, std::ostream &amp;stream=std::cerr) const</div><div class="ttdef"><b>Definition</b> <a href="Debug_8h_source.html#l00149">Debug.h:149</a></div></div>
 <div class="ttc" id="aclassttk_1_1Memory_html"><div class="ttname"><a href="classttk_1_1Memory.html">ttk::Memory</a></div><div class="ttdef"><b>Definition</b> <a href="Os_8h_source.html#l00097">Os.h:97</a></div></div>
 <div class="ttc" id="aclassttk_1_1PersistenceDiagramDistanceMatrix_html_a1bbd2451c2db793667c6968974f2fcbb"><div class="ttname"><a href="classttk_1_1PersistenceDiagramDistanceMatrix.html#a1bbd2451c2db793667c6968974f2fcbb">ttk::PersistenceDiagramDistanceMatrix::execute</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; double &gt; &gt; execute(const std::vector&lt; DiagramType &gt; &amp;intermediateDiagrams, const std::array&lt; size_t, 2 &gt; &amp;nInputs) const</div><div class="ttdef"><b>Definition</b> <a href="PersistenceDiagramDistanceMatrix_8cpp_source.html#l00008">PersistenceDiagramDistanceMatrix.cpp:8</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
 <div class="ttc" id="attkPersistenceDiagramDistanceMatrix_8cpp_html_aa9edc73b89e7aaaba10fc33048616932"><div class="ttname"><a href="ttkPersistenceDiagramDistanceMatrix_8cpp.html#aa9edc73b89e7aaaba10fc33048616932">vtkStandardNewMacro</a></div><div class="ttdeci">vtkStandardNewMacro(ttkPersistenceDiagramDistanceMatrix)</div></div>
 <div class="ttc" id="attkPersistenceDiagramDistanceMatrix_8h_html"><div class="ttname"><a href="ttkPersistenceDiagramDistanceMatrix_8h.html">ttkPersistenceDiagramDistanceMatrix.h</a></div></div>
 <div class="ttc" id="attkPersistenceDiagramUtils_8cpp_html_a7c11449f2d6298e834f375ee569d7246"><div class="ttname"><a href="ttkPersistenceDiagramUtils_8cpp.html#a7c11449f2d6298e834f375ee569d7246">VTUToDiagram</a></div><div class="ttdeci">int VTUToDiagram(ttk::DiagramType &amp;diagram, vtkUnstructuredGrid *vtu, const ttk::Debug &amp;dbg)</div><div class="ttdoc">Converts a Persistence Diagram in the VTK Unstructured Grid format (as generated by the ttkPersistenc...</div><div class="ttdef"><b>Definition</b> <a href="ttkPersistenceDiagramUtils_8cpp_source.html#l00016">ttkPersistenceDiagramUtils.cpp:16</a></div></div>
@@ -280,7 +279,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:31 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

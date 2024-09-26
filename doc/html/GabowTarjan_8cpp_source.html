@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_877a2188a9a69f9a9be8a085234e84be.html">base</a></li><li class="navelem"><a class="el" href="dir_d3dbe6846d0ccd244f4852fb03d886b5.html">bottleneckDistance</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_3ad7e135a9cfc1d857da285e04cf7dd4.html">bottleneckDistance</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -234,7 +234,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    Layers.resize(MaxSize + 1);</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="comment">// Temporarily augment matching.</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Guessing for &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(guessEdge) + <span class="stringliteral">&quot;...&quot;</span>);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Guessing for &quot;</span> + std::to_string(guessEdge) + <span class="stringliteral">&quot;...&quot;</span>);</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    matching = 0;</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    HopcroftKarp(matching);</div>
@@ -316,7 +316,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="classttk_1_1GabowTarjan.html#a61f176bb55e2c3910136d334a90b865e">  228</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classttk_1_1GabowTarjan.html#a61f176bb55e2c3910136d334a90b865e">ttk::GabowTarjan::run</a>(std::vector&lt;MatchingType&gt; &amp;matchings) {</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  <span class="comment">// Compute distance.</span></div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> dist = this-&gt;Distance();</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Computed distance &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(dist));</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Computed distance &quot;</span> + std::to_string(dist));</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  <span class="comment">// Fill matchings.</span></div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  matchings.clear();</div>
@@ -363,13 +363,12 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1GabowTarjan_html_a61f176bb55e2c3910136d334a90b865e"><div class="ttname"><a href="classttk_1_1GabowTarjan.html#a61f176bb55e2c3910136d334a90b865e">ttk::GabowTarjan::run</a></div><div class="ttdeci">int run(std::vector&lt; MatchingType &gt; &amp;matchings)</div><div class="ttdef"><b>Definition</b> <a href="GabowTarjan_8cpp_source.html#l00228">GabowTarjan.cpp:228</a></div></div>
 <div class="ttc" id="aclassttk_1_1GabowTarjan_html_a660a407c4aa49f2e8dbcd912f3d2f70e"><div class="ttname"><a href="classttk_1_1GabowTarjan.html#a660a407c4aa49f2e8dbcd912f3d2f70e">ttk::GabowTarjan::printCurrentMatching</a></div><div class="ttdeci">void printCurrentMatching()</div><div class="ttdef"><b>Definition</b> <a href="GabowTarjan_8cpp_source.html#l00197">GabowTarjan.cpp:197</a></div></div>
 <div class="ttc" id="aclassttk_1_1GabowTarjan_html_ae7838f4aa6055719e4b893fe8f02378e"><div class="ttname"><a href="classttk_1_1GabowTarjan.html#ae7838f4aa6055719e4b893fe8f02378e">ttk::GabowTarjan::Distance</a></div><div class="ttdeci">double Distance()</div><div class="ttdef"><b>Definition</b> <a href="GabowTarjan_8cpp_source.html#l00080">GabowTarjan.cpp:80</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
 <div class="ttc" id="anamespacettk_1_1debug_html_a56f85271ace2268278b51501ca249c75aec1f06e9fb39c4ef0729b3c7c9c8e8cc"><div class="ttname"><a href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75aec1f06e9fb39c4ef0729b3c7c9c8e8cc">ttk::debug::Priority::VERBOSE</a></div><div class="ttdeci">@ VERBOSE</div></div>
 <div class="ttc" id="awelcomeMsg_8inl_html_a8b6ab19fd03996237d7f77610c5e4e1e"><div class="ttname"><a href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a></div><div class="ttdeci">printMsg(debug::output::BOLD+&quot;  | |   | | | . \\                  | | (__| |  / __/| |_| / __/|__   _|&quot;+debug::output::ENDCOLOR, debug::Priority::PERFORMANCE, debug::LineMode::NEW, stream)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:28 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:17 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

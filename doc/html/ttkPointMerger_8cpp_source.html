@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_b5a3b6d63a7e4f975656391b89b6e794.html">vtk</a></li><li class="navelem"><a class="el" href="dir_31d6ae09f39db13be67897a64bda3e25.html">ttkPointMerger</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_05cfb64a465bbd7ff1662f925b30279d.html">ttkPointMerger</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -166,7 +166,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  std::vector&lt;std::vector&lt;SimplexId&gt;&gt; closePoints(vertexNumber);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Computing pointwise distances with &quot;</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                 + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(candidateVertices.size()) + <span class="stringliteral">&quot; candidates&quot;</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                 + std::to_string(candidateVertices.size()) + <span class="stringliteral">&quot; candidates&quot;</span>);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#ifdef TTK_ENABLE_OPENMP</span></div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#pragma omp parallel for num_threads(threadNumber_)</span></div>
@@ -350,8 +350,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>      <span class="keywordflow">if</span>(newVertexIds.size() == 8) {</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        cellId = output-&gt;InsertNextCell(VTK_HEXAHEDRON, idList);</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#a37c8c3e3e723babc48eeaa06b481cc4b">printWrn</a>(<span class="stringliteral">&quot;Ill-defined cell type for cell #&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(i)</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                       + <span class="stringliteral">&quot; (&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(newVertexIds.size())</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#a37c8c3e3e723babc48eeaa06b481cc4b">printWrn</a>(<span class="stringliteral">&quot;Ill-defined cell type for cell #&quot;</span> + std::to_string(i)</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                       + <span class="stringliteral">&quot; (&quot;</span> + std::to_string(newVertexIds.size())</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                       + <span class="stringliteral">&quot; vertices)&quot;</span>);</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>      }</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    }</div>
@@ -388,7 +388,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1Debug_html_a9239e36b0745881da1753f97ad8f0105"><div class="ttname"><a href="classttk_1_1Debug.html#a9239e36b0745881da1753f97ad8f0105">ttk::Debug::setDebugMsgPrefix</a></div><div class="ttdeci">void setDebugMsgPrefix(const std::string &amp;prefix)</div><div class="ttdef"><b>Definition</b> <a href="Debug_8h_source.html#l00364">Debug.h:364</a></div></div>
 <div class="ttc" id="aclassttk_1_1Timer_html"><div class="ttname"><a href="classttk_1_1Timer.html">ttk::Timer</a></div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00007">Timer.h:7</a></div></div>
 <div class="ttc" id="aclassttk_1_1Timer_html_af2b2e58141b9e1cc1f69cf2dc16b3c3a"><div class="ttname"><a href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">ttk::Timer::getElapsedTime</a></div><div class="ttdeci">double getElapsedTime()</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00015">Timer.h:15</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
 <div class="ttc" id="anamespacettk_1_1Geometry_html_ae19d42f035364b21ec88cb65747fe599"><div class="ttname"><a href="namespacettk_1_1Geometry.html#ae19d42f035364b21ec88cb65747fe599">ttk::Geometry::distance</a></div><div class="ttdeci">T distance(const T *p0, const T *p1, const int &amp;dimension=3)</div><div class="ttdef"><b>Definition</b> <a href="Geometry_8cpp_source.html#l00362">Geometry.cpp:362</a></div></div>
 <div class="ttc" id="anamespacettk_html_af0e68dbb0101c35aa1990bffafe71025"><div class="ttname"><a href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">ttk::SimplexId</a></div><div class="ttdeci">int SimplexId</div><div class="ttdoc">Identifier type for simplices of any dimension.</div><div class="ttdef"><b>Definition</b> <a href="DataTypes_8h_source.html#l00022">DataTypes.h:22</a></div></div>
 <div class="ttc" id="attkPointMerger_8cpp_html_adaa14d96e6bbfafa1eb5cf1cab3cb0ff"><div class="ttname"><a href="ttkPointMerger_8cpp.html#adaa14d96e6bbfafa1eb5cf1cab3cb0ff">vtkStandardNewMacro</a></div><div class="ttdeci">vtkStandardNewMacro(ttkPointMerger)</div></div>
@@ -397,7 +396,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:31 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

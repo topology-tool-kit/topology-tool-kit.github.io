@@ -69,11 +69,12 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_877a2188a9a69f9a9be8a085234e84be.html">base</a></li><li class="navelem"><a class="el" href="dir_640aa3ec6e61e9999f33e6d874a91849.html">geometry</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_967e09ec44fc65f538a936c6eb770f12.html">geometry</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
@@ -81,11 +82,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="Debug_8h_source.html">Debug.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="VisitedMask_8h_source.html">VisitedMask.h</a>&gt;</code><br />
 <code>#include &lt;array&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;stack&gt;</code><br />
 </div>
 <p><a href="Geometry_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structttk_1_1Geometry_1_1ProjectionResult.html">ttk::Geometry::ProjectionResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the <a class="el" href="namespacettk_1_1Geometry.html#ae685b51af595131c8556dd3c6ee53ca0">findProjection()</a> result.  <a href="structttk_1_1Geometry_1_1ProjectionResult.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structttk_1_1Geometry_1_1ProjectionInput.html">ttk::Geometry::ProjectionInput</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the <a class="el" href="namespacettk_1_1Geometry.html#ae685b51af595131c8556dd3c6ee53ca0">findProjection()</a> input.  <a href="structttk_1_1Geometry_1_1ProjectionInput.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacettk" id="r_namespacettk"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacettk.html">ttk</a></td></tr>
@@ -205,6 +217,22 @@ Functions</h2></td></tr>
 <tr class="memitem:a85154fcad15b4f1aba5961e892bccb1e" id="r_a85154fcad15b4f1aba5961e892bccb1e"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
 <tr class="memitem:a85154fcad15b4f1aba5961e892bccb1e"><td class="memTemplItemLeft" align="right" valign="top">T1&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">ttk::Geometry::pow</a> (const T1 val, const T2 n)</td></tr>
 <tr class="separator:a85154fcad15b4f1aba5961e892bccb1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c92b3c2c79bd8ac55b6e7a98797fcea" id="r_a4c92b3c2c79bd8ac55b6e7a98797fcea"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4c92b3c2c79bd8ac55b6e7a98797fcea"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#a4c92b3c2c79bd8ac55b6e7a98797fcea">ttk::Geometry::projectOnTrianglePlane</a> (const T *p, const T *a, const T *normTri, T *out)</td></tr>
+<tr class="memdesc:a4c92b3c2c79bd8ac55b6e7a98797fcea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute euclidean projection in a triangle plane.  <br /></td></tr>
+<tr class="separator:a4c92b3c2c79bd8ac55b6e7a98797fcea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6b8261ce1a706e118446f02a7f90d9" id="r_a1b6b8261ce1a706e118446f02a7f90d9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a1b6b8261ce1a706e118446f02a7f90d9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#a1b6b8261ce1a706e118446f02a7f90d9">ttk::Geometry::projectOnEdge</a> (const T *p, const T *a, const T *b, T *out)</td></tr>
+<tr class="memdesc:a1b6b8261ce1a706e118446f02a7f90d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute euclidean projection on a 3D segment.  <br /></td></tr>
+<tr class="separator:a1b6b8261ce1a706e118446f02a7f90d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8417cc145e3c904b72364a04031d74b7" id="r_a8417cc145e3c904b72364a04031d74b7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8417cc145e3c904b72364a04031d74b7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#a8417cc145e3c904b72364a04031d74b7">ttk::Geometry::computeTriangleNormal</a> (const T *a, const T *b, const T *c, T *out)</td></tr>
+<tr class="memdesc:a8417cc145e3c904b72364a04031d74b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute normal vector to triangle.  <br /></td></tr>
+<tr class="separator:a8417cc145e3c904b72364a04031d74b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a032232d656788c5f1548582614f9d" id="r_a74a032232d656788c5f1548582614f9d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename triangulationType &gt; </td></tr>
+<tr class="memitem:a74a032232d656788c5f1548582614f9d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#a74a032232d656788c5f1548582614f9d">ttk::Geometry::getNearestSurfaceVertex</a> (const T *pa, std::vector&lt; T &gt; &amp;dists, const triangulationType &amp;triangulation)</td></tr>
+<tr class="memdesc:a74a032232d656788c5f1548582614f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find nearest vertex on the surface.  <br /></td></tr>
+<tr class="separator:a74a032232d656788c5f1548582614f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bb858056e35747844eff6a4c061a7c9" id="r_a7bb858056e35747844eff6a4c061a7c9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a7bb858056e35747844eff6a4c061a7c9"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#a7bb858056e35747844eff6a4c061a7c9">ttk::Geometry::subtractVectors</a> (const T *a, const T *b, T *out, const int &amp;dimension=3)</td></tr>
 <tr class="separator:a7bb858056e35747844eff6a4c061a7c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -274,6 +302,13 @@ Functions</h2></td></tr>
 <tr class="memitem:ad3b7c13ff301fc8ee72e7dc5b799850c" id="r_ad3b7c13ff301fc8ee72e7dc5b799850c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ad3b7c13ff301fc8ee72e7dc5b799850c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#ad3b7c13ff301fc8ee72e7dc5b799850c">ttk::Geometry::transposeMatrix</a> (const std::vector&lt; std::vector&lt; T &gt; &gt; &amp;a, std::vector&lt; std::vector&lt; T &gt; &gt; &amp;out)</td></tr>
 <tr class="separator:ad3b7c13ff301fc8ee72e7dc5b799850c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb0218f849f945328645acce43f3d383" id="r_adb0218f849f945328645acce43f3d383"><td class="memTemplParams" colspan="2">template&lt;typename triangulationType &gt; </td></tr>
+<tr class="memitem:adb0218f849f945328645acce43f3d383"><td class="memTemplItemLeft" align="right" valign="top">std::array&lt; float, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#adb0218f849f945328645acce43f3d383">ttk::Geometry::computeSurfaceNormalAtPoint</a> (const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> a, const triangulationType &amp;triangulation)</td></tr>
+<tr class="memdesc:adb0218f849f945328645acce43f3d383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute (mean) surface normal at given surface vertex.  <br /></td></tr>
+<tr class="separator:adb0218f849f945328645acce43f3d383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae685b51af595131c8556dd3c6ee53ca0" id="r_ae685b51af595131c8556dd3c6ee53ca0"><td class="memTemplParams" colspan="2">template&lt;typename triangulationType0 , typename triangulationType1 &gt; </td></tr>
+<tr class="memitem:ae685b51af595131c8556dd3c6ee53ca0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structttk_1_1Geometry_1_1ProjectionResult.html">ProjectionResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#ae685b51af595131c8556dd3c6ee53ca0">ttk::Geometry::findProjection</a> (const <a class="el" href="structttk_1_1Geometry_1_1ProjectionInput.html">ProjectionInput</a> &amp;pi, <a class="el" href="structttk_1_1VisitedMask.html">VisitedMask</a> &amp;trianglesTested, std::vector&lt; float &gt; &amp;dists, std::stack&lt; <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> &gt; &amp;trianglesToTest, const bool reverseProjection, const triangulationType0 &amp;triangulationToSmooth, const triangulationType1 &amp;triangulation)</td></tr>
+<tr class="separator:ae685b51af595131c8556dd3c6ee53ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a5b276127c58b30365836bd2e49cb9215" name="a5b276127c58b30365836bd2e49cb9215"></a>
@@ -334,7 +369,7 @@ Functions</h2></td></tr>
 <div class="line">    }                                                                  \</div>
 <div class="line">  }</div>
 <div class="ttc" id="aBaseClass_8h_html_aad3df90e2f81d92bf7a024457cb0fd62"><div class="ttname"><a href="BaseClass_8h.html#aad3df90e2f81d92bf7a024457cb0fd62">ttkNotUsed</a></div><div class="ttdeci">#define ttkNotUsed(x)</div><div class="ttdoc">Mark function/method parameters that are not used in the function body at all.</div><div class="ttdef"><b>Definition</b> <a href="BaseClass_8h_source.html#l00047">BaseClass.h:47</a></div></div>
-<div class="ttc" id="anamespacettk_1_1Geometry_html_ab164c602942731cb38dba9503a70b453"><div class="ttname"><a href="namespacettk_1_1Geometry.html#ab164c602942731cb38dba9503a70b453">ttk::Geometry::powInt</a></div><div class="ttdeci">T powInt(const T val, const int n)</div><div class="ttdef"><b>Definition</b> <a href="Geometry_8h_source.html#l00381">Geometry.h:381</a></div></div>
+<div class="ttc" id="anamespacettk_1_1Geometry_html_ab164c602942731cb38dba9503a70b453"><div class="ttname"><a href="namespacettk_1_1Geometry.html#ab164c602942731cb38dba9503a70b453">ttk::Geometry::powInt</a></div><div class="ttdeci">T powInt(const T val, const int n)</div><div class="ttdef"><b>Definition</b> <a href="Geometry_8h_source.html#l00383">Geometry.h:383</a></div></div>
 </div><!-- fragment -->
 <p>Optimized Power function with lambdas. </p>
 <p>If <a class="el" href="namespacettk_1_1Geometry.html#ab164c602942731cb38dba9503a70b453">ttk::Geometry::powInt</a>, the integer power function, is called in a hot path, the if statements on the integer exponent can limit the performance. This macro helps by extracting the specialized computations for a given integer exponent into lambdas. These lambdas can be passed as arguments to a templated function outside the hot path to bypass the if statements.</p>
@@ -349,14 +384,14 @@ Functions</h2></td></tr>
 </dl>
 <p>c.f. <a class="el" href="classttk_1_1LDistance.html">ttk::LDistance</a> or <a class="el" href="classttk_1_1KDTree.html">ttk::KDTree</a> for example uses. </p>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00428">428</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00430">430</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:32 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

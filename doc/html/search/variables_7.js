@@ -18,8 +18,9 @@ var searchData=
   ['goods_5f_15',['goods_',['../classttk_1_1PersistenceDiagramAuction.html#aa66d5dec1d5ab708d79478e26fff81ab',1,'ttk::PersistenceDiagramAuction']]],
   ['gradient_5f_16',['gradient_',['../classttk_1_1dcg_1_1DiscreteGradient.html#ae5d0f9fd114f9ea2a3a60fc8e0243836',1,'ttk::dcg::DiscreteGradient']]],
   ['gradientcache_5f_17',['gradientCache_',['../classttk_1_1AbstractTriangulation.html#ab878d032c93b28b71ba2247a63ffbe0f',1,'ttk::AbstractTriangulation']]],
-  ['grainsize_18',['grainSize',['../structttk_1_1ftr_1_1TaskChunk.html#a8ea8578625a64ee7d63d2be42263b53c',1,'ttk::ftr::TaskChunk']]],
-  ['green_19',['GREEN',['../namespacettk_1_1debug_1_1output.html#a99e1781e8874b968e8a3537230e2b488',1,'ttk::debug::output']]],
-  ['grey_20',['GREY',['../namespacettk_1_1debug_1_1output.html#a94caebefceb5f78f1d0046992a60bc6c',1,'ttk::debug::output']]],
-  ['griddimensions_5f_21',['gridDimensions_',['../classttk_1_1AbstractTriangulation.html#aadea54b50b3f76b8575fe8a8ca990186',1,'ttk::AbstractTriangulation']]]
+  ['gradientstepsize_5f_18',['gradientStepSize_',['../classttk_1_1MergeTreeAutoencoder.html#a3d3f3b92ef76978371a419e88ef692e9',1,'ttk::MergeTreeAutoencoder']]],
+  ['grainsize_19',['grainSize',['../structttk_1_1ftr_1_1TaskChunk.html#a8ea8578625a64ee7d63d2be42263b53c',1,'ttk::ftr::TaskChunk']]],
+  ['green_20',['GREEN',['../namespacettk_1_1debug_1_1output.html#a99e1781e8874b968e8a3537230e2b488',1,'ttk::debug::output']]],
+  ['grey_21',['GREY',['../namespacettk_1_1debug_1_1output.html#a94caebefceb5f78f1d0046992a60bc6c',1,'ttk::debug::output']]],
+  ['griddimensions_5f_22',['gridDimensions_',['../classttk_1_1AbstractTriangulation.html#aadea54b50b3f76b8575fe8a8ca990186',1,'ttk::AbstractTriangulation']]]
 ];

@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_b5a3b6d63a7e4f975656391b89b6e794.html">vtk</a></li><li class="navelem"><a class="el" href="dir_aedf4a21db1b2c6e71c3a7cab59683b8.html">ttkTriangulationRequest</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_2b2d49f1065c995ae07650ab1834c7b7.html">ttkTriangulationRequest</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -158,8 +158,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<a class="code hl_enumvalue" href="namespacettk_1_1debug.html#af3ebd7fb2185c549f7461a695912a2a1a9ec4c0afd450ceac7adb81c3bcfc9732">ttk::debug::Separator::L1</a>);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>({</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {<span class="stringliteral">&quot;#Threads&quot;</span>, <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(this-&gt;<a class="code hl_variable" href="classttk_1_1BaseClass.html#a3b6d157f3ae3fa7b25d203bb189a58b6">threadNumber_</a>)},</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    {<span class="stringliteral">&quot;#Vertices&quot;</span>, <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(numberOfVertices)},</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {<span class="stringliteral">&quot;#Threads&quot;</span>, std::to_string(this-&gt;<a class="code hl_variable" href="classttk_1_1BaseClass.html#a3b6d157f3ae3fa7b25d203bb189a58b6">threadNumber_</a>)},</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    {<span class="stringliteral">&quot;#Vertices&quot;</span>, std::to_string(numberOfVertices)},</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  });</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keyword">auto</span> addVertex = [&amp;](<span class="keyword">const</span> SimplexId vertexId) {</div>
@@ -285,9 +285,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordflow">switch</span>(this-&gt;SimplexType) {</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classttkTriangulationRequest.html#a65a8a5ce1de67c7260e8543823089b4fa0c3e47aef93a7f244f41ab309a33634b">SIMPLEX::VERTEX</a>:</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="keywordflow">if</span>(si &gt;= numberOfVertices) {</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>          this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#a37c8c3e3e723babc48eeaa06b481cc4b">printWrn</a>(<span class="stringliteral">&quot;Vertex ID &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(si)</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>          this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#a37c8c3e3e723babc48eeaa06b481cc4b">printWrn</a>(<span class="stringliteral">&quot;Vertex ID &quot;</span> + std::to_string(si)</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                         + <span class="stringliteral">&quot; out of bounds (max. &quot;</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                         + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(numberOfVertices) + <span class="stringliteral">&quot;).&quot;</span>);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                         + std::to_string(numberOfVertices) + <span class="stringliteral">&quot;).&quot;</span>);</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        }</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordflow">break</span>;</div>
@@ -296,8 +296,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        triangulation-&gt;preconditionEdges();</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordflow">if</span>(si &gt;= triangulation-&gt;getNumberOfEdges()) {</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>          this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#a37c8c3e3e723babc48eeaa06b481cc4b">printWrn</a>(</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <span class="stringliteral">&quot;Edge ID &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(si) + <span class="stringliteral">&quot; out of bounds (max. &quot;</span></div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(triangulation-&gt;getNumberOfEdges()) + <span class="stringliteral">&quot;).&quot;</span>);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <span class="stringliteral">&quot;Edge ID &quot;</span> + std::to_string(si) + <span class="stringliteral">&quot; out of bounds (max. &quot;</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            + std::to_string(triangulation-&gt;getNumberOfEdges()) + <span class="stringliteral">&quot;).&quot;</span>);</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        }</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="keywordflow">break</span>;</div>
@@ -310,9 +310,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>          = dimensionality == 2 ? triangulation-&gt;getNumberOfCells()</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                                : triangulation-&gt;getNumberOfTriangles();</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="keywordflow">if</span>(si &gt;= numberOfTriangles) {</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>          this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#a37c8c3e3e723babc48eeaa06b481cc4b">printWrn</a>(<span class="stringliteral">&quot;Triangle ID &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(si)</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>          this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#a37c8c3e3e723babc48eeaa06b481cc4b">printWrn</a>(<span class="stringliteral">&quot;Triangle ID &quot;</span> + std::to_string(si)</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                         + <span class="stringliteral">&quot; out of bounds (max. &quot;</span></div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                         + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(numberOfTriangles) + <span class="stringliteral">&quot;).&quot;</span>);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                         + std::to_string(numberOfTriangles) + <span class="stringliteral">&quot;).&quot;</span>);</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        }</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>      } <span class="keywordflow">break</span>;</div>
@@ -321,8 +321,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordflow">if</span>(dimensionality == 3)</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>          <span class="keywordflow">if</span>(si &gt;= triangulation-&gt;getNumberOfCells()) {</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#a37c8c3e3e723babc48eeaa06b481cc4b">printWrn</a>(</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>              <span class="stringliteral">&quot;Tetrahedron ID &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(si) + <span class="stringliteral">&quot; out of bounds (max. &quot;</span></div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>              + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(triangulation-&gt;getNumberOfCells()) + <span class="stringliteral">&quot;).&quot;</span>);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>              <span class="stringliteral">&quot;Tetrahedron ID &quot;</span> + std::to_string(si) + <span class="stringliteral">&quot; out of bounds (max. &quot;</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>              + std::to_string(triangulation-&gt;getNumberOfCells()) + <span class="stringliteral">&quot;).&quot;</span>);</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>          }</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="keywordflow">break</span>;</div>
@@ -727,7 +727,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1Debug_html_afd1938d93be0cf163be78086ed26370e"><div class="ttname"><a href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">ttk::Debug::printErr</a></div><div class="ttdeci">int printErr(const std::string &amp;msg, const debug::LineMode &amp;lineMode=debug::LineMode::NEW, std::ostream &amp;stream=std::cerr) const</div><div class="ttdef"><b>Definition</b> <a href="Debug_8h_source.html#l00149">Debug.h:149</a></div></div>
 <div class="ttc" id="aclassttk_1_1Timer_html"><div class="ttname"><a href="classttk_1_1Timer.html">ttk::Timer</a></div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00007">Timer.h:7</a></div></div>
 <div class="ttc" id="aclassttk_1_1Timer_html_af2b2e58141b9e1cc1f69cf2dc16b3c3a"><div class="ttname"><a href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">ttk::Timer::getElapsedTime</a></div><div class="ttdeci">double getElapsedTime()</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00015">Timer.h:15</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
 <div class="ttc" id="anamespacettk_1_1debug_html_af3ebd7fb2185c549f7461a695912a2a1a9ec4c0afd450ceac7adb81c3bcfc9732"><div class="ttname"><a href="namespacettk_1_1debug.html#af3ebd7fb2185c549f7461a695912a2a1a9ec4c0afd450ceac7adb81c3bcfc9732">ttk::debug::Separator::L1</a></div><div class="ttdeci">@ L1</div></div>
 <div class="ttc" id="anamespacettk_html_af0e68dbb0101c35aa1990bffafe71025"><div class="ttname"><a href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">ttk::SimplexId</a></div><div class="ttdeci">int SimplexId</div><div class="ttdoc">Identifier type for simplices of any dimension.</div><div class="ttdef"><b>Definition</b> <a href="DataTypes_8h_source.html#l00022">DataTypes.h:22</a></div></div>
 <div class="ttc" id="attkTriangulationRequest_8cpp_html_a02f65e880a7388b69c89536519628c04"><div class="ttname"><a href="ttkTriangulationRequest_8cpp.html#a02f65e880a7388b69c89536519628c04">vtkStandardNewMacro</a></div><div class="ttdeci">vtkStandardNewMacro(ttkTriangulationRequest)</div></div>
@@ -737,7 +736,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:31 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -119,11 +119,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8ea4af34d9b9f5b8568411bb93e58880 inherit pub_methods_classttk_1_1DiscreteMorseSandwich"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08591c48c0e5802b71f7197fa7b6083c inherit pub_methods_classttk_1_1DiscreteMorseSandwich" id="r_a08591c48c0e5802b71f7197fa7b6083c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1DiscreteMorseSandwich.html#a08591c48c0e5802b71f7197fa7b6083c">setComputeSadMax</a> (const bool data)</td></tr>
 <tr class="separator:a08591c48c0e5802b71f7197fa7b6083c inherit pub_methods_classttk_1_1DiscreteMorseSandwich"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67c75bd2511de6ce7ff03988957e18ee inherit pub_methods_classttk_1_1DiscreteMorseSandwich" id="r_a67c75bd2511de6ce7ff03988957e18ee"><td class="memTemplParams" colspan="2">template&lt;typename triangulationType &gt; </td></tr>
-<tr class="memitem:a67c75bd2511de6ce7ff03988957e18ee inherit pub_methods_classttk_1_1DiscreteMorseSandwich"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1DiscreteMorseSandwich.html#a67c75bd2511de6ce7ff03988957e18ee">buildGradient</a> (const void *const scalars, const size_t scalarsMTime, const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> *const offsets, const triangulationType &amp;triangulation)</td></tr>
-<tr class="separator:a67c75bd2511de6ce7ff03988957e18ee inherit pub_methods_classttk_1_1DiscreteMorseSandwich"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce82313e7c8d80c38d607671f3e70b7 inherit pub_methods_classttk_1_1DiscreteMorseSandwich" id="r_a8ce82313e7c8d80c38d607671f3e70b7"><td class="memTemplParams" colspan="2">template&lt;typename triangulationType &gt; </td></tr>
+<tr class="memitem:a8ce82313e7c8d80c38d607671f3e70b7 inherit pub_methods_classttk_1_1DiscreteMorseSandwich"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1DiscreteMorseSandwich.html#a8ce82313e7c8d80c38d607671f3e70b7">buildGradient</a> (const void *const scalars, const size_t scalarsMTime, const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> *const offsets, const triangulationType &amp;triangulation, const std::vector&lt; bool &gt; *updateMask=nullptr)</td></tr>
+<tr class="separator:a8ce82313e7c8d80c38d607671f3e70b7 inherit pub_methods_classttk_1_1DiscreteMorseSandwich"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58c531ee10dea7c7e576492956ee032f inherit pub_methods_classttk_1_1DiscreteMorseSandwich" id="r_a58c531ee10dea7c7e576492956ee032f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1DiscreteMorseSandwich.html#a58c531ee10dea7c7e576492956ee032f">setGradient</a> (<a class="el" href="classttk_1_1dcg_1_1DiscreteGradient.html">ttk::dcg::DiscreteGradient</a> &amp;&amp;dg)</td></tr>
-<tr class="memdesc:a58c531ee10dea7c7e576492956ee032f inherit pub_methods_classttk_1_1DiscreteMorseSandwich"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ugly hack to avoid a call to <a class="el" href="classttk_1_1DiscreteMorseSandwich.html#a67c75bd2511de6ce7ff03988957e18ee">buildGradient()</a>  <br /></td></tr>
+<tr class="memdesc:a58c531ee10dea7c7e576492956ee032f inherit pub_methods_classttk_1_1DiscreteMorseSandwich"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ugly hack to avoid a call to <a class="el" href="classttk_1_1DiscreteMorseSandwich.html#a8ce82313e7c8d80c38d607671f3e70b7">buildGradient()</a>  <br /></td></tr>
 <tr class="separator:a58c531ee10dea7c7e576492956ee032f inherit pub_methods_classttk_1_1DiscreteMorseSandwich"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11d4424013c4fb0aff3c02bfae43a7d6 inherit pub_methods_classttk_1_1DiscreteMorseSandwich" id="r_a11d4424013c4fb0aff3c02bfae43a7d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1dcg_1_1DiscreteGradient.html">ttk::dcg::DiscreteGradient</a> &amp;&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1DiscreteMorseSandwich.html#a11d4424013c4fb0aff3c02bfae43a7d6">getGradient</a> ()</td></tr>
 <tr class="separator:a11d4424013c4fb0aff3c02bfae43a7d6 inherit pub_methods_classttk_1_1DiscreteMorseSandwich"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -385,7 +385,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><div class="memdoc">
 
 <p>Compute the persistence generators from the discrete gradient. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classttk_1_1DiscreteMorseSandwich.html#a67c75bd2511de6ce7ff03988957e18ee">buildGradient</a> and <a class="el" href="classttk_1_1DiscreteMorseSandwich.html#a7900da7bfe620b025b139d337fa8378c">preconditionTriangulation</a> should be called prior to this function</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classttk_1_1DiscreteMorseSandwich.html#a8ce82313e7c8d80c38d607671f3e70b7">buildGradient</a> and <a class="el" href="classttk_1_1DiscreteMorseSandwich.html#a7900da7bfe620b025b139d337fa8378c">preconditionTriangulation</a> should be called prior to this function</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">generators</td><td>Persistent generators </td></tr>
@@ -433,7 +433,7 @@ template&lt;typename triangulationType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:36 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:21 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

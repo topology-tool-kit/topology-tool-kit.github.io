@@ -34,8 +34,8 @@ var searchData=
   ['programbase_31',['ProgramBase',['../classttk_1_1ProgramBase.html',1,'ttk']]],
   ['progressivetopology_32',['ProgressiveTopology',['../classttk_1_1ProgressiveTopology.html',1,'ttk']]],
   ['projectionfromtable_33',['ProjectionFromTable',['../classttk_1_1ProjectionFromTable.html',1,'ttk']]],
-  ['projectioninput_34',['ProjectionInput',['../structttk_1_1SurfaceGeometrySmoother_1_1ProjectionInput.html',1,'ttk::SurfaceGeometrySmoother']]],
-  ['projectionresult_35',['ProjectionResult',['../structttk_1_1SurfaceGeometrySmoother_1_1ProjectionResult.html',1,'ttk::SurfaceGeometrySmoother']]],
+  ['projectioninput_34',['ProjectionInput',['../structttk_1_1Geometry_1_1ProjectionInput.html',1,'ttk::Geometry']]],
+  ['projectionresult_35',['ProjectionResult',['../structttk_1_1Geometry_1_1ProjectionResult.html',1,'ttk::Geometry']]],
   ['propagation_36',['propagation',['../classttk_1_1ftr_1_1Propagation.html',1,'ttk::ftr::Propagation'],['../structttk_1_1lts_1_1Propagation.html',1,'ttk::lts::Propagation&lt; IT &gt;']]],
   ['propagations_37',['Propagations',['../classttk_1_1ftr_1_1Propagations.html',1,'ttk::ftr']]]
 ];

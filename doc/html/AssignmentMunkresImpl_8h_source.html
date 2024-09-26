@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_877a2188a9a69f9a9be8a085234e84be.html">base</a></li><li class="navelem"><a class="el" href="dir_66043d03e92e9d94d67e317a0b69f461.html">assignmentSolver</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_5c97830a7157e107c54c8884ae2587ca.html">assignmentSolver</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -104,7 +104,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keywordflow">while</span>(!done) {</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    ++iter;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      <span class="stringliteral">&quot;Step &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(step) + <span class="stringliteral">&quot;, Iteration &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(iter),</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      <span class="stringliteral">&quot;Step &quot;</span> + std::to_string(step) + <span class="stringliteral">&quot;, Iteration &quot;</span> + std::to_string(iter),</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      debug::Priority::DETAIL);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">if</span>(iter &gt; 20 &amp;&amp; (iter % (<span class="keywordtype">int</span>)std::round((<span class="keywordtype">double</span>)maxIter / 5.0) == 0)) {</div>
@@ -117,7 +117,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="comment">// showCostMatrix&lt;dataType&gt;();</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      <span class="comment">// showMaskMatrix();</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Failed to converge after &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(maxIter)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Failed to converge after &quot;</span> + std::to_string(maxIter)</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                     + <span class="stringliteral">&quot; iterations. Aborting.&quot;</span>);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      step = 7;</div>
@@ -212,14 +212,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="keywordflow">if</span>(droppedMinus &gt; 0) {</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      <span class="stringliteral">&quot;Unexpected non-assignable row [minus], dropping optimisation for &quot;</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(droppedMinus) + <span class="stringliteral">&quot; row(s).&quot;</span>,</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        + std::to_string(droppedMinus) + <span class="stringliteral">&quot; row(s).&quot;</span>,</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      debug::Priority::DETAIL);</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  }</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="keywordflow">if</span>(droppedPlus &gt; 0) {</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      <span class="stringliteral">&quot;Unexpected non-assignable row [plus], dropping optimisation for &quot;</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(droppedPlus) + <span class="stringliteral">&quot; row(s).&quot;</span>,</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        + std::to_string(droppedPlus) + <span class="stringliteral">&quot; row(s).&quot;</span>,</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      debug::Priority::DETAIL);</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  }</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
@@ -250,14 +250,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keywordflow">if</span>(droppedMinus &gt; 0) {</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      <span class="stringliteral">&quot;Unexpected non-assignable row [minus], dropping optimisation for &quot;</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(droppedMinus) + <span class="stringliteral">&quot; row(s).&quot;</span>,</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        + std::to_string(droppedMinus) + <span class="stringliteral">&quot; row(s).&quot;</span>,</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>      debug::Priority::DETAIL);</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  }</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <span class="keywordflow">if</span>(droppedPlus &gt; 0) {</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>      <span class="stringliteral">&quot;Unexpected non-assignable row [plus], dropping optimisation for &quot;</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(droppedPlus) + <span class="stringliteral">&quot; row(s).&quot;</span>,</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        + std::to_string(droppedPlus) + <span class="stringliteral">&quot; row(s).&quot;</span>,</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>      debug::Priority::DETAIL);</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  }</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
@@ -641,7 +641,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>        total += C[r][c];</div>
 <div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>      }</div>
 <div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span> </div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Total cost: &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(total));</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Total cost: &quot;</span> + std::to_string(total));</div>
 <div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span> </div>
 <div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>}</div>
@@ -653,13 +653,12 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1AssignmentSolver_html"><div class="ttname"><a href="classttk_1_1AssignmentSolver.html">ttk::AssignmentSolver</a></div><div class="ttdef"><b>Definition</b> <a href="AssignmentSolver_8h_source.html#l00022">AssignmentSolver.h:22</a></div></div>
 <div class="ttc" id="aclassttk_1_1Timer_html"><div class="ttname"><a href="classttk_1_1Timer.html">ttk::Timer</a></div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00007">Timer.h:7</a></div></div>
 <div class="ttc" id="aclassttk_1_1Timer_html_af2b2e58141b9e1cc1f69cf2dc16b3c3a"><div class="ttname"><a href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">ttk::Timer::getElapsedTime</a></div><div class="ttdeci">double getElapsedTime()</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00015">Timer.h:15</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
-<div class="ttc" id="aripserpy_8cpp_html_a3cf380c4e58eeeaf68e4299123eeeefe"><div class="ttname"><a href="ripserpy_8cpp.html#a3cf380c4e58eeeaf68e4299123eeeefe">end</a></div><div class="ttdeci">T end(std::pair&lt; T, T &gt; &amp;p)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00472">ripserpy.cpp:472</a></div></div>
+<div class="ttc" id="aripserpy_8cpp_html_a3cf380c4e58eeeaf68e4299123eeeefe"><div class="ttname"><a href="ripserpy_8cpp.html#a3cf380c4e58eeeaf68e4299123eeeefe">end</a></div><div class="ttdeci">T end(std::pair&lt; T, T &gt; &amp;p)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00483">ripserpy.cpp:483</a></div></div>
 <div class="ttc" id="awelcomeMsg_8inl_html_a8b6ab19fd03996237d7f77610c5e4e1e"><div class="ttname"><a href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a></div><div class="ttdeci">printMsg(debug::output::BOLD+&quot;  | |   | | | . \\                  | | (__| |  / __/| |_| / __/|__   _|&quot;+debug::output::ENDCOLOR, debug::Priority::PERFORMANCE, debug::LineMode::NEW, stream)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:28 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:17 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
