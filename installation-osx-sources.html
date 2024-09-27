@@ -151,9 +151,9 @@ data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
   
-Please find below detailed instructions for the installation of TTK from sources, under 
-MacOS.<br><br>
-
+Please find below generic instructions for the installation of TTK
+from sources, under MacOS.<br><br>
+  
 TTK is also supported on other operating systems:<br>
 &nbsp;&middot;&nbsp;
 <a href="installation-linux-sources.html">
@@ -164,79 +164,51 @@ Linux installation instructions</a> (default target platform);
 Windows installation instructions</a>.<br><br>
 
 
-If you are an advanced user and you do not wish to install ParaView (TTK's 
-main user interface), you 
-still 
-have the possibility to install TTK without ParaView support (although we 
-highly recommend to activate it).<br>
-In that case, simply 
-download TTK as described in section 1, install the dependencies as detailed 
-in 
-section 2 and finally, directly jump to section 6 (<i>"Configuring, building 
-and installing TTK"</i>). <br>
-Examples showing how to use TTK libraries from your 
-own VTK code can be found 
-<a target="new"
-href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/vtk-c%2B%2B"
->on this page</a>.<br><br>
-
-If you are an advanced user and you do not even wish to install VTK, you still 
-have the possibility to install TTK without VTK support (although we 
-highly recommend to activate it).<br>
-In that case, simply download TTK as described in section 1, install the 
-<b>optional</b> dependencies as detailed in 
-section 2 and finally, directly jump to section 6 (<i>"Configuring, building 
-and 
-installing TTK"</i>). <br>
-Examples showing how to use TTK libraries from your own 
-C++ code can be found 
+If you are an advanced user and you do not wish to install ParaView
+(TTK's main user interface), you still have the possibility to install
+TTK without ParaView and VTK support (although we highly recommend to
+activate them).<br>  In that case, simply download TTK as described in
+section 1, install the dependencies as detailed in section 2 and
+finally, directly jump to section 5 (<i>"Installing TTK"</i>). <br>
+Examples showing how to use TTK libraries from your own C++ code can
+be found
 <a target="new"
 href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/c%2B%2B"
 >on this page</a>.<br>
 <br>
 
-<b>Most users will want to activate TTK's ParaView support.</b><br><br>
-
-This page describes installing TTK 1.2.0 on MacOS, using MacOS Ventura 13, and ParaView 5.11.1.  These specific instructions were
-tested with MacOS Ventura 13.1 using an Apple M1 chip. <br><br> 
-
-The key differences from the linux installation involve how 
-ParaView is compiled, installing certain dependencies, and setting up some of 
-the paths for MacOS.  The following assumes that the target is to compile with 
-MacOS clang and uses homebrew for dependencies, including python3.<br><br>
-
-Other versions of earlier software packages 
-may require slight variations in the installation procedure.
-For earlier versions of both software packages, you may want to check out 
-previous versions of our installation notes for MacOS: <br>
-&nbsp;&middot;&nbsp;<a href="installation-osx-sources-1.1.0.html">TTK 1.1.0
-with ParaView 5.10.1 on MacOS BigSur and Monterey</a>.<br>
-&nbsp;&middot;&nbsp;<a href="installation-osx-sources-0.9.9.html">TTK 0.9.9
-with ParaView 5.8.1 on MacOS Mojave (these may also be adapted to TTK
-1.0.0 and MacOS Catalina)</a>.<br>
-&nbsp;&middot;&nbsp;<a href="installation-osx-0.9.8.html">TTK 0.9.8
-with ParaView 5.6.1 on MacOS Mojave</a>.<br>
-(additional instructions for past versions are linked from the above
-pages)
+<b>Most users will want to activate TTK's ParaView support.</b>
 <br><br>
 
-<p><h3>1. Downloads</h3>
-Note: The instructions for this step are identical to those on linux:<br><br>
+<p><h3>0. Disclaimer and troubleshooting</h3>
+Installing software from source can be challenging (in particular under MacOS).
+<br>
 
-TTK builds on top of <a href="http://www.paraview.org" 
+Since build chains can vary quite drastically from one system to another, the instructions below may require adjustments for your system. 
+<br>
+In case of building issues, we recommend to check the following MacOS installation script examples for 
+<a href="https://github.com/topology-tool-kit/ttk-paraview/blob/v5.13.0/.github/workflows/package.yml#L71" target="new">ParaView</a>
+and 
+<a target="new" href="https://github.com/topology-tool-kit/ttk/blob/stable/.github/workflows/package.yml#L176">TTK</a>.
+We use these scripts on a daily basis for building automatically ParaView and TTK under MacOS, for the automatic tests of TTK's continuous integration.
+
+
+
+                <p>
+                  <h3>1. Downloads</h3>
+                  TTK builds on top of <a href="http://www.paraview.org" 
 target="new">ParaView</a> for its main user interface. Thus, you will first 
 need to download 
 <a 
-href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.11&type=source&os=Sources&downloadFile=ParaView-v5.11.1.tar.gz"
+href="http://www.paraview.org/download"
 target="new">
-ParaView 5.11.1's source code</a>.
+ParaView's source code</a>.
 Note 
 that TTK plugins for ParaView will only work with a version of ParaView 
 compiled from source. Thus, if you already installed ParaView with a binary 
 copy, you may need to un-install it before proceeding.
                   Next, download TTK from our <a 
-href="downloads.html">download page</a>.
-</p>
+href="downloads.html">download page</a>.</p>
 
 
 
@@ -258,7 +230,7 @@ This required installing certain vtk dependencies, including pyqt@5,
 glew, etc., which should be handled seamlessly.  Installing vtk will also install hdf5 as a dependency (that ParaView can make use of).  </li>
 </ul>
 Altogether, this required the following sequence of commands:<br><br>
-<code>$ brew install cmake qt@5 python vtk</code><br><br>
+<code>$ brew install cmake qt@5 python vtk boost</code><br><br>
 
 <h4>b) Optional Dependencies</h4>
 
@@ -274,7 +246,7 @@ Using the command: <code>$ brew install libomp</code><br><br>
 
 <h5>(ii) OSPRay/Embree:</h5>
 
-Our continuous integration framework does call <code>$ brew install embree</code>, which with the above environment will install embree 4.1.0.  TTK 1.2.0 is compatible with embree version 3.4 and above, but not 4 or higher, so unfortunately this will disable embree-based features in TTK.  That said, if you also <code>$ brew install ospray</code> (which will install embree as well), you can set <code>PARAVIEW_ENABLE_RAYTRACING</code> at build time as described below.<br/><br/>
+Our continuous integration framework does call <code>$ brew install embree</code>, which with the above environment will install embree 4.1.0.  TTK 1.3.0 is compatible with embree version 3.4 and above, but not 4 or higher, so unfortunately this will disable embree-based features in TTK.  That said, if you also <code>$ brew install ospray</code> (which will install embree as well), you can set <code>PARAVIEW_ENABLE_RAYTRACING</code> at build time as described below.<br/><br/>
 
 
 <h5>(iii) TTK optional dependencies:</h5>
@@ -285,8 +257,12 @@ Finally, in order to enjoy the complete set of TTK features, we also recommend i
 <code>$ brew install eigen</code></li>
 <li><a target="new" href="https://www.graphviz.org/">graphviz</a> (for graph drawing features) tested with version 8.0.5 on homebrew:<br>
 <code>$ brew install graphviz</code></li>
+<li><a target="new" href="https://www.qhull.org/">qhull</a> (for dimension reduction features, version 2020 or later):<br>
+<code>$ brew install qhull</code></li>
 <li><a target="new" href="https://scikit-learn.org/stable/index.html">scikit-learn</a> for Python3 (for data reduction features, version 0.19.0 or later).  Support is still experimental.  We tested with version 1.3.0, installed for python3 with pip3:<br>
-<code>$ pip3 install -U scikit-learn</code></li>
+<code>$ brew install numpy</code><br>
+<code>$ pip3 install -U scikit-learn</code>
+</li>
 <li><a target="new" href="https://spectralib.org">Spectra</a> (for the computation of the eigenfunctions of the Laplace-Beltrami operator) tested with version 1.0.1 on homebrew:<br>
 <code>$ brew install spectra</code></li>
 <li><a href="https://www.sqlite.org/" target="new">sqlite</a> (for cinema query features), tested with version 3.42.0 on homebrew:<br>
@@ -308,15 +284,15 @@ Move the tarballs to a working directory (for instance called
 a terminal (this assumes that you downloaded the tarballs to the 
 <code>~/Downloads</code> directory):<br><br>
 <code>$ mkdir ~/ttk</code><br>
-<code>$ mv ~/Downloads/ParaView-v5.11.1.tar.gz ~/ttk/</code><br>
-<code>$ mv ~/Downloads/ttk-1.2.0.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ParaView-v5.13.0.tar.gz ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ttk-1.3.0.tar.gz ~/ttk/</code><br>
 <code>$ cd ~/ttk</code><br>
-<code>$ tar xvzf ParaView-v5.11.1.tar.gz</code><br>
-<code>$ tar xvzf ttk-1.2.0.tar.gz</code><br><br>
+<code>$ tar xvzf ParaView-v5.13.0.tar.gz</code><br>
+<code>$ tar xvzf ttk-1.3.0.tar.gz</code><br><br>
 You can delete the tarballs after the source trees have been decompressed by 
 entering the following commands:<br><br>
-<code>$ rm ParaView-v5.11.1.tar.gz</code><br>
-<code>$ rm ttk-1.2.0.tar.gz</code><br><br>
+<code>$ rm ParaView-v5.13.0.tar.gz</code><br>
+<code>$ rm ttk-1.3.0.tar.gz</code><br><br>
 </p>
 
 <p><h3>4. Patching the ParaView source tree</h3>
@@ -328,8 +304,8 @@ This step is
 optional. 
 To proceed, go to 
 the patch directory and apply it as follows:<br><br>
-<code>$ cd ~/ttk/ttk-1.2.0/paraview/patch</code><br>
-<code>$ ./patch-paraview-5.11.1.sh ~/ttk/ParaView-v5.11.1/</code><br><br>
+<code>$ cd ~/ttk/ttk-1.3.0/paraview/patch</code><br>
+<code>$ ./patch-paraview-5.13.0.sh ~/ttk/ParaView-v5.13.0/</code><br><br>
 </p>
 
 
@@ -342,7 +318,7 @@ the patch directory and apply it as follows:<br><br>
 <h4>a) Configuration</h4>
 To enter the configuration menu of ParaView's build, enter the following 
 commands:<br><br>
-<code>$ cd ~/ttk/ParaView-v5.11.1/</code><br>
+<code>$ cd ~/ttk/ParaView-v5.13.0/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ ccmake ..</code> (on homebrew cmake there is no <code>cmake-gui</code>, 
@@ -368,7 +344,7 @@ You can also enable optional pieces, including:
 
 <h5>(ii) SMP implementation:</h5>
 
-At this time, we do not recommend building ParaView 5.11.1 with OpenMP implementations, even though TTK can take advantage of OpenMP for some of its features.  The homebrew packages for libomp does appear to not be easily supported by the ParaView build chain for MacOSX.  TBB, however, is supported (but not necessary).  To enable TBB for ParaView:<br>
+At this time, we do not recommend building ParaView 5.13.0 with OpenMP implementations, even though TTK can take advantage of OpenMP for some of its features.  The homebrew packages for libomp does appear to not be easily supported by the ParaView build chain for MacOSX.  TBB, however, is supported (but not necessary).  To enable TBB for ParaView:<br>
 
 <code>&nbsp;&middot;&nbsp;VTK_SMP_IMPLEMENTATION_TYPE=TBB</code><br>
 <code>&nbsp;&middot;&nbsp;VTKm_ENABLE_TBB=ON</code><br>
@@ -424,7 +400,7 @@ To set this environment variable permanently, we recommend editing whatever file
 
 <code>export PV_PLUGIN_PATH="/usr/local/lib/plugins"</code><br><br>
 
-Note that, by default, our installation of ParaView will search for plugins in <code>~/ttk/ParaView-v5.11.1/build/bin/paraview.app/Contents/MacOS/plugins</code>.  And, by default, our installation of pvpython will search fo plugins in <code>~/ttk/ParaView-v5.11.1/build/bin/plugins</code>.  Setting <code>PV_PLUGIN_PATH</code> overrides this so that both can search for TTK in a common location.  If this directory does not exist, you may need to create it as well as <code>/usr/local/scripts</code>.<br/><br/>
+Note that, by default, our installation of ParaView will search for plugins in <code>~/ttk/ParaView-v5.13.0/build/bin/paraview.app/Contents/MacOS/plugins</code>.  And, by default, our installation of pvpython will search fo plugins in <code>~/ttk/ParaView-v5.13.0/build/bin/plugins</code>.  Setting <code>PV_PLUGIN_PATH</code> overrides this so that both can search for TTK in a common location.  If this directory does not exist, you may need to create it as well as <code>/usr/local/scripts</code>.<br/><br/>
 
 Users may want to choose to use a different location that <code>/usr/local/lib/plugins</code>, although this path is consistent with where the Linux installation of TTK installs them.<br><br>
 
@@ -439,7 +415,7 @@ For more information, see <a href="https://www.paraview.org/Wiki/ParaView/Plugin
 <h4><a name="ttkConfig">a)</a> Configuration</h4>
 To enter the configuration menu of TTK's build, enter the following 
 commands:<br><br>
-<code>$ cd ~/ttk/ttk-1.2.0/</code><br>
+<code>$ cd ~/ttk/ttk-1.3.0/</code><br>
 <code>$ mkdir ttk_install</code> (for installing standalone apps)<br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
@@ -448,13 +424,13 @@ commands:<br><br>
 The configuration window opens.  Press 'c' to configure, and you'll see that it 
 cannot yet find ParaView.  First, we'll fix this:<br><br>
 
-<code>&nbsp;&middot;&nbsp;ParaView_DIR=~/ttk/ParaView-v5.11.1/build/</code><br><br>
+<code>&nbsp;&middot;&nbsp;ParaView_DIR=~/ttk/ParaView-v5.13.0/build/</code><br><br>
 
 Press 'c' again to configure (you can ignore any warnings).  Next, change:<br><br>
 
 <code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this should be the default)<br>
-<code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=~/ttk/ttk-1.2.0/ttk_install</code
+<code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=~/ttk/ttk-1.3.0/ttk_install</code
 ><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this is where standalone apps and 
 other TTK components are installed)<br>
@@ -516,18 +492,18 @@ installations:<br/>
 
 <h5>(i) TTK with only the automatically detected options</h5>
 <code>$ cmake \<br>
--DParaView_DIR=~/ttk/ParaView-v5.11.1/build/ \<br>
+-DParaView_DIR=~/ttk/ParaView-v5.13.0/build/ \<br>
 -DCMAKE_BUILD_TYPE=Release \<br>
--DCMAKE_INSTALL_PREFIX=~/ttk/ttk-1.2.0/ttk_install \<br>
+-DCMAKE_INSTALL_PREFIX=~/ttk/ttk-1.3.0/ttk_install \<br>
 -DTTK_INSTALL_PLUGIN_DIR=/usr/local/lib/plugins \<br>
 ..
 </code><br>
 
 <h5>(ii) TTK + ZFP</h5>
 <code>$ cmake \<br>
--DParaView_DIR=~/ttk/ParaView-v5.11.1/build/ \<br>
+-DParaView_DIR=~/ttk/ParaView-v5.13.0/build/ \<br>
 -DCMAKE_BUILD_TYPE=Release \<br>
--DCMAKE_INSTALL_PREFIX=~/ttk/ttk-1.2.0/ttk_install \<br>
+-DCMAKE_INSTALL_PREFIX=~/ttk/ttk-1.3.0/ttk_install \<br>
 -DTTK_INSTALL_PLUGIN_DIR=/usr/local/lib/plugins \<br>
 -DZFP_DIR=/Users/josh/git/github/zfp/build \<br>
 -DTTK_ENABLE_ZFP=ON \<br>
@@ -560,9 +536,9 @@ Replacing <code>CMAKE_INSTALL_PREFIX</code> with what we used above.<br><br>
 Finally, to make sure the example data files are included in the right path, 
 you have to manually copy the example data into the ParaView .app as 
 well:<br><br>
-<code>$ cd ~/ttk/ttk-1.2.0/paraview/patch/data</code><br>
-<code>$ mkdir -p ~/ttk/ParaView-v5.11.1/build/bin/paraview.app/Contents/share/paraview-5.11/examples</code><br>
-<code>$ cp * ~/ttk/ParaView-v5.11.1/build/bin/paraview.app/Contents/share/paraview-5.11/examples</code><br>
+<code>$ cd ~/ttk/ttk-1.3.0/paraview/patch/data</code><br>
+<code>$ mkdir -p ~/ttk/ParaView-v5.13.0/build/bin/paraview.app/Contents/share/paraview-5.11/examples</code><br>
+<code>$ cp * ~/ttk/ParaView-v5.13.0/build/bin/paraview.app/Contents/share/paraview-5.11/examples</code><br>
 <br>
 </p>
 
@@ -575,7 +551,7 @@ If you applied all the above steps successfully (including step 4), you can now
 open a terminal and type the following command to load your TTK-patched 
 ParaView:<br><br>
 <code>$ cd 
-~/ttk/ParaView-v5.11.1/build/bin/paraview.app/Contents/MacOS/</code><br><br>
+~/ttk/ParaView-v5.13.0/build/bin/paraview.app/Contents/MacOS/</code><br><br>
 <code>$ ./paraview</code><br><br>
 
 At this point, everything from the standard installation procedure should be accessible.  Congrats!
@@ -603,7 +579,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on July 6, 2023.</p>
+                    Updated on Sep. 27, 2024.</p>
                 </div>
             </div>
         </div>
