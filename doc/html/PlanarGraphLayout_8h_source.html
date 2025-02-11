@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_877a2188a9a69f9a9be8a085234e84be.html">base</a></li><li class="navelem"><a class="el" href="dir_2be42d2ad6a15fb97fa88c8888a86f6f.html">planarGraphLayout</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_28604c4a6ba7180195ec0de63c48c546.html">planarGraphLayout</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -245,8 +245,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  std::string rankString = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <span class="comment">// lambda functions that generate string representations of nodes</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <span class="keyword">auto</span> sl = [](<span class="keywordtype">size_t</span> s) { <span class="keywordflow">return</span> <span class="stringliteral">&quot;\&quot;s&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(s) + <span class="stringliteral">&quot;\&quot;&quot;</span>; };</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="keyword">auto</span> nl = [](<span class="keywordtype">size_t</span> id) { <span class="keywordflow">return</span> <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(<span class="keywordtype">id</span>); };</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <span class="keyword">auto</span> sl = [](<span class="keywordtype">size_t</span> s) { <span class="keywordflow">return</span> <span class="stringliteral">&quot;\&quot;s&quot;</span> + std::to_string(s) + <span class="stringliteral">&quot;\&quot;&quot;</span>; };</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="keyword">auto</span> nl = [](<span class="keywordtype">size_t</span> id) { <span class="keywordflow">return</span> std::to_string(<span class="keywordtype">id</span>); };</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <span class="comment">// ---------------------------------------------------------------------------</span></div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="comment">// Nodes</span></div>
@@ -258,7 +258,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="comment">// If useSizes then map size to node height</span></div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordflow">if</span>(useSizes)</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>      <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;i : nodeIndices)</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        nodeString += nl(i) + <span class="stringliteral">&quot;[height=&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(sizes[i]) + <span class="stringliteral">&quot;];&quot;</span>;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        nodeString += nl(i) + <span class="stringliteral">&quot;[height=&quot;</span> + std::to_string(sizes[i]) + <span class="stringliteral">&quot;];&quot;</span>;</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  }</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  <span class="comment">// ---------------------------------------------------------------------------</span></div>
@@ -472,8 +472,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>      modeS += <span class="stringliteral">&quot;Levels + &quot;</span>;</div>
 <div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span> </div>
 <div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<a class="code hl_enumvalue" href="namespacettk_1_1debug.html#af3ebd7fb2185c549f7461a695912a2a1a9ec4c0afd450ceac7adb81c3bcfc9732">debug::Separator::L1</a>);</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>({{<span class="stringliteral">&quot;#Nodes&quot;</span>, <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(nPoints)},</div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>                    {<span class="stringliteral">&quot;#Edges&quot;</span>, <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(nEdges)},</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>({{<span class="stringliteral">&quot;#Nodes&quot;</span>, std::to_string(nPoints)},</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>                    {<span class="stringliteral">&quot;#Edges&quot;</span>, std::to_string(nEdges)},</div>
 <div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>                    {<span class="stringliteral">&quot;Mode&quot;</span>, modeS.substr(0, modeS.length() - 3)}});</div>
 <div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<a class="code hl_enumvalue" href="namespacettk_1_1debug.html#af3ebd7fb2185c549f7461a695912a2a1a7e6aa2d53f6ee2b1a34b017fa403cb76">debug::Separator::L2</a>);</div>
 <div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>  }</div>
@@ -577,7 +577,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1PlanarGraphLayout_html_ad96fd51fd530dc46b630aba366098f84"><div class="ttname"><a href="classttk_1_1PlanarGraphLayout.html#ad96fd51fd530dc46b630aba366098f84">ttk::PlanarGraphLayout::extractLevel</a></div><div class="ttdeci">int extractLevel(std::vector&lt; size_t &gt; &amp;nodeIndices, std::vector&lt; size_t &gt; &amp;edgeIndices, const CT *connectivityList, const size_t &amp;nPoints, const size_t &amp;nEdges, const IT &amp;level, const IT *levels) const</div><div class="ttdef"><b>Definition</b> <a href="PlanarGraphLayout_8h_source.html#l00118">PlanarGraphLayout.h:118</a></div></div>
 <div class="ttc" id="aclassttk_1_1Timer_html"><div class="ttname"><a href="classttk_1_1Timer.html">ttk::Timer</a></div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00007">Timer.h:7</a></div></div>
 <div class="ttc" id="aclassttk_1_1Timer_html_af2b2e58141b9e1cc1f69cf2dc16b3c3a"><div class="ttname"><a href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">ttk::Timer::getElapsedTime</a></div><div class="ttdeci">double getElapsedTime()</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00015">Timer.h:15</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
 <div class="ttc" id="anamespacettk_1_1debug_html_a56f85271ace2268278b51501ca249c75aec1f06e9fb39c4ef0729b3c7c9c8e8cc"><div class="ttname"><a href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75aec1f06e9fb39c4ef0729b3c7c9c8e8cc">ttk::debug::Priority::VERBOSE</a></div><div class="ttdeci">@ VERBOSE</div></div>
 <div class="ttc" id="anamespacettk_1_1debug_html_a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7"><div class="ttname"><a href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">ttk::debug::LineMode::REPLACE</a></div><div class="ttdeci">@ REPLACE</div></div>
 <div class="ttc" id="anamespacettk_1_1debug_html_af3ebd7fb2185c549f7461a695912a2a1a7e6aa2d53f6ee2b1a34b017fa403cb76"><div class="ttname"><a href="namespacettk_1_1debug.html#af3ebd7fb2185c549f7461a695912a2a1a7e6aa2d53f6ee2b1a34b017fa403cb76">ttk::debug::Separator::L2</a></div><div class="ttdeci">@ L2</div></div>
@@ -587,7 +586,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:30 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:18 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

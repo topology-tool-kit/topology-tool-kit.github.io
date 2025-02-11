@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_b5a3b6d63a7e4f975656391b89b6e794.html">vtk</a></li><li class="navelem"><a class="el" href="dir_1f99ef0a3c0ead45b1575072a57e92df.html">ttkCinemaImaging</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_6ddac7e3b07f1fff6698aa04e4aa84c1.html">ttkCinemaImaging</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -180,7 +180,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      valuePassCollection-&gt;AddItem(valuePass);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      valuePassNames.push_back(</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        nComponents == 1 ? name : name + <span class="stringliteral">&quot;_&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(c));</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        nComponents == 1 ? name : name + <span class="stringliteral">&quot;_&quot;</span> + std::to_string(c));</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  }</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
@@ -311,7 +311,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Rendering Image (&quot;</span></div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                     + std::string(projectionMode[i] ? <span class="stringliteral">&quot;P&quot;</span> : <span class="stringliteral">&quot;O&quot;</span>) + <span class="stringliteral">&quot;|&quot;</span></div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                     + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(resX) + <span class="stringliteral">&quot;x&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(resY) + <span class="stringliteral">&quot;)&quot;</span>,</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                     + std::to_string(resX) + <span class="stringliteral">&quot;x&quot;</span> + std::to_string(resY) + <span class="stringliteral">&quot;)&quot;</span>,</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                   0, 0, this-&gt;threadNumber_, <a class="code hl_enumvalue" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">ttk::debug::LineMode::REPLACE</a>);</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keywordtype">double</span> camPos[3]{samplingPositions[i * 3], samplingPositions[i * 3 + 1],</div>
@@ -370,7 +370,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Rendering Image (&quot;</span></div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                     + std::string(projectionMode[i] ? <span class="stringliteral">&quot;P&quot;</span> : <span class="stringliteral">&quot;O&quot;</span>) + <span class="stringliteral">&quot;|&quot;</span></div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                     + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(resX) + <span class="stringliteral">&quot;x&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(resY) + <span class="stringliteral">&quot;)&quot;</span>,</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                     + std::to_string(resX) + <span class="stringliteral">&quot;x&quot;</span> + std::to_string(resY) + <span class="stringliteral">&quot;)&quot;</span>,</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                   1, timer.<a class="code hl_function" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>(), this-&gt;threadNumber_);</div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  }</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<a class="code hl_enumvalue" href="namespacettk_1_1debug.html#af3ebd7fb2185c549f7461a695912a2a1a7e6aa2d53f6ee2b1a34b017fa403cb76">ttk::debug::Separator::L2</a>);</div>
@@ -390,7 +390,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1ttkCinemaImagingVTK_html_abe4a7342db5bc696b711df21ffcbce13"><div class="ttname"><a href="classttk_1_1ttkCinemaImagingVTK.html#abe4a7342db5bc696b711df21ffcbce13">ttk::ttkCinemaImagingVTK::ttkCinemaImagingVTK</a></div><div class="ttdeci">ttkCinemaImagingVTK()</div><div class="ttdef"><b>Definition</b> <a href="ttkCinemaImagingVTK_8cpp_source.html#l00031">ttkCinemaImagingVTK.cpp:31</a></div></div>
 <div class="ttc" id="aclassttk_1_1ttkCinemaImagingVTK_html_ad7dc2c2d42f4142d0a2635a2f71ebdd3"><div class="ttname"><a href="classttk_1_1ttkCinemaImagingVTK.html#ad7dc2c2d42f4142d0a2635a2f71ebdd3">ttk::ttkCinemaImagingVTK::setupRenderer</a></div><div class="ttdeci">int setupRenderer(vtkRenderer *renderer, vtkPointSet *object, vtkCamera *camera) const</div><div class="ttdef"><b>Definition</b> <a href="ttkCinemaImagingVTK_8cpp_source.html#l00036">ttkCinemaImagingVTK.cpp:36</a></div></div>
 <div class="ttc" id="aclassvtkSmartPointer_html"><div class="ttname"><a href="classvtkSmartPointer.html">vtkSmartPointer</a></div><div class="ttdef"><b>Definition</b> <a href="ttkUtils_8h_source.html#l00026">ttkUtils.h:26</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
 <div class="ttc" id="anamespacettk_1_1debug_html_a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7"><div class="ttname"><a href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">ttk::debug::LineMode::REPLACE</a></div><div class="ttdeci">@ REPLACE</div></div>
 <div class="ttc" id="anamespacettk_1_1debug_html_af3ebd7fb2185c549f7461a695912a2a1a7e6aa2d53f6ee2b1a34b017fa403cb76"><div class="ttname"><a href="namespacettk_1_1debug.html#af3ebd7fb2185c549f7461a695912a2a1a7e6aa2d53f6ee2b1a34b017fa403cb76">ttk::debug::Separator::L2</a></div><div class="ttdeci">@ L2</div></div>
 <div class="ttc" id="attkCinemaImagingVTK_8h_html"><div class="ttname"><a href="ttkCinemaImagingVTK_8h.html">ttkCinemaImagingVTK.h</a></div></div>
@@ -400,7 +399,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:30 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

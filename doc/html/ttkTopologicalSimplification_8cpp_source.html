@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_b5a3b6d63a7e4f975656391b89b6e794.html">vtk</a></li><li class="navelem"><a class="el" href="dir_ffa6143e7916c3ad8b28e4d9c0be45b4.html">ttkTopologicalSimplification</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_9bd372ccd6cbf34f1c8a21481009ad58.html">ttkTopologicalSimplification</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -90,174 +90,187 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vtkPointData.h&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vtkPointSet.h&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vtkSmartPointer.h&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;<a class="code" href="ttkMacros_8h.html">ttkMacros.h</a>&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;<a class="code" href="ttkTopologicalSimplification_8h.html">ttkTopologicalSimplification.h</a>&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;<a class="code" href="ttkUtils_8h.html">ttkUtils.h</a>&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="ttkTopologicalSimplification_8cpp.html#ae5da42ef38453e490e4b33cbc74141ee">   15</a></span><a class="code hl_function" href="ttkTopologicalSimplification_8cpp.html#ae5da42ef38453e490e4b33cbc74141ee">vtkStandardNewMacro</a>(<a class="code hl_class" href="classttkTopologicalSimplification.html">ttkTopologicalSimplification</a>);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#ad607eca224eb4120393453fa9092f547">   17</a></span><a class="code hl_function" href="classttkTopologicalSimplification.html#ad607eca224eb4120393453fa9092f547">ttkTopologicalSimplification::ttkTopologicalSimplification</a>() {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  this-&gt;SetNumberOfInputPorts(2);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  this-&gt;SetNumberOfOutputPorts(1);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;vtkUnstructuredGrid.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;<a class="code" href="ttkMacros_8h.html">ttkMacros.h</a>&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;<a class="code" href="ttkTopologicalSimplification_8h.html">ttkTopologicalSimplification.h</a>&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="ttkUtils_8h.html">ttkUtils.h</a>&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="ttkTopologicalSimplification_8cpp.html#ae5da42ef38453e490e4b33cbc74141ee">   16</a></span><a class="code hl_function" href="ttkTopologicalSimplification_8cpp.html#ae5da42ef38453e490e4b33cbc74141ee">vtkStandardNewMacro</a>(<a class="code hl_class" href="classttkTopologicalSimplification.html">ttkTopologicalSimplification</a>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#ad607eca224eb4120393453fa9092f547">   18</a></span><a class="code hl_function" href="classttkTopologicalSimplification.html#ad607eca224eb4120393453fa9092f547">ttkTopologicalSimplification::ttkTopologicalSimplification</a>() {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  this-&gt;SetNumberOfInputPorts(2);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  this-&gt;SetNumberOfOutputPorts(1);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
 </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a79f2d3de8330a9ca91022dd74012a3ed">   22</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classttkTopologicalSimplification.html#a79f2d3de8330a9ca91022dd74012a3ed">ttkTopologicalSimplification::FillInputPortInformation</a>(</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keywordtype">int</span> port, vtkInformation *info) {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordflow">if</span>(port == 0) {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    info-&gt;Set(vtkAlgorithm::INPUT_REQUIRED_DATA_TYPE(), <span class="stringliteral">&quot;vtkDataSet&quot;</span>);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(port == 1) {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    info-&gt;Set(vtkAlgorithm::INPUT_REQUIRED_DATA_TYPE(), <span class="stringliteral">&quot;vtkPointSet&quot;</span>);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a79f2d3de8330a9ca91022dd74012a3ed">   23</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classttkTopologicalSimplification.html#a79f2d3de8330a9ca91022dd74012a3ed">ttkTopologicalSimplification::FillInputPortInformation</a>(</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordtype">int</span> port, vtkInformation *info) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keywordflow">if</span>(port == 0) {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    info-&gt;Set(vtkAlgorithm::INPUT_REQUIRED_DATA_TYPE(), <span class="stringliteral">&quot;vtkDataSet&quot;</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(port == 1) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    info-&gt;Set(vtkAlgorithm::INPUT_REQUIRED_DATA_TYPE(), <span class="stringliteral">&quot;vtkUnstructuredGrid&quot;</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
 </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a60822070b888f09936b97de32f5f8169">   34</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classttkTopologicalSimplification.html#a60822070b888f09936b97de32f5f8169">ttkTopologicalSimplification::FillOutputPortInformation</a>(</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keywordtype">int</span> port, vtkInformation *info) {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keywordflow">if</span>(port == 0) {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    info-&gt;Set(<a class="code hl_function" href="classttkAlgorithm.html#a05020adcce11038d31f3cb6474ec2247">ttkAlgorithm::SAME_DATA_TYPE_AS_INPUT_PORT</a>(), 0);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#a60822070b888f09936b97de32f5f8169">   35</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classttkTopologicalSimplification.html#a60822070b888f09936b97de32f5f8169">ttkTopologicalSimplification::FillOutputPortInformation</a>(</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keywordtype">int</span> port, vtkInformation *info) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordflow">if</span>(port == 0) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    info-&gt;Set(<a class="code hl_function" href="classttkAlgorithm.html#a05020adcce11038d31f3cb6474ec2247">ttkAlgorithm::SAME_DATA_TYPE_AS_INPUT_PORT</a>(), 0);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
 </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#aa0a6adfb082205935a80cf52bfe9a690">   43</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classttkTopologicalSimplification.html#aa0a6adfb082205935a80cf52bfe9a690">ttkTopologicalSimplification::RequestData</a>(</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  vtkInformation *<a class="code hl_define" href="BaseClass_8h.html#aad3df90e2f81d92bf7a024457cb0fd62">ttkNotUsed</a>(request),</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  vtkInformationVector **inputVector,</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  vtkInformationVector *outputVector) {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keyword">using </span><a class="code hl_typedef" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">ttk::SimplexId</a>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="comment">// Warning: this needs to be done before the preconditioning.</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordflow">if</span>(!this-&gt;UseLTS) {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    this-&gt;<a class="code hl_function" href="classttk_1_1TopologicalSimplification.html#ad79e4226a151a8f6a5c9c2244370280b">setBackend</a>(<a class="code hl_enumvalue" href="classttk_1_1TopologicalSimplification.html#a5fdb65e983bda659e293b72c7695c356a456d016bd133625e5036aa9a556f2730">BACKEND::LEGACY</a>);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  }</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keyword">const</span> <span class="keyword">auto</span> domain = vtkDataSet::GetData(inputVector[0]);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keyword">const</span> <span class="keyword">auto</span> constraints = vtkPointSet::GetData(inputVector[1]);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keywordflow">if</span>(!domain || !constraints)</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">return</span> !this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Unable to retrieve required input data objects.&quot;</span>);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keyword">auto</span> output = vtkDataSet::GetData(outputVector);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="comment">// triangulation</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keyword">auto</span> triangulation = <a class="code hl_function" href="classttkAlgorithm.html#a7662b80439a93fab5571bc08403a7269">ttkAlgorithm::GetTriangulation</a>(domain);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordflow">if</span>(!triangulation) {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Input triangulation pointer is NULL.&quot;</span>);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  this-&gt;<a class="code hl_function" href="classttk_1_1TopologicalSimplification.html#a3da18dffc6a5fcbb967c14ee49fb06eb">preconditionTriangulation</a>(triangulation);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keywordflow">if</span>(triangulation-&gt;isEmpty()) {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Triangulation allocation problem.&quot;</span>);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  }</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keywordflow">if</span>(!domain) {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Input pointer is NULL.&quot;</span>);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keyword">const</span> <span class="keyword">auto</span> numberOfVertices = domain-&gt;GetNumberOfPoints();</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keywordflow">if</span>(numberOfVertices &lt;= 0) {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Domain has no points.&quot;</span>);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">return</span> -5;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="comment">// domain scalar field</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keyword">const</span> <span class="keyword">auto</span> inputScalars = this-&gt;GetInputArrayToProcess(0, domain);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="keywordflow">if</span>(!inputScalars) {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Input scalar field pointer is null.&quot;</span>);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">return</span> -3;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  }</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="comment">// domain offset field</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keyword">const</span> <span class="keyword">auto</span> inputOrder = this-&gt;<a class="code hl_function" href="classttkAlgorithm.html#ad219024095e1bd95fb0958aa37c5f53d">GetOrderArray</a>(</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    domain, 0, triangulation, <span class="keyword">false</span>, 2, ForceInputOffsetScalarField);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keywordflow">if</span>(!inputOrder) {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Wrong input offset scalar field.&quot;</span>);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  }</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="comment">// create output arrays</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <span class="keyword">auto</span> outputScalars</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    = <a class="code hl_class" href="classvtkSmartPointer.html">vtkSmartPointer&lt;vtkDataArray&gt;::Take</a>(inputScalars-&gt;NewInstance());</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  outputScalars-&gt;DeepCopy(inputScalars);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keyword">auto</span> outputOrder</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    = <a class="code hl_class" href="classvtkSmartPointer.html">vtkSmartPointer&lt;vtkDataArray&gt;::Take</a>(inputOrder-&gt;NewInstance());</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  outputOrder-&gt;DeepCopy(inputOrder);</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="comment">// constraint identifier field</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="keywordtype">int</span> <span class="keyword">const</span> numberOfConstraints = constraints-&gt;GetNumberOfPoints();</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  std::vector&lt;ttk::SimplexId&gt; idSpareStorage{};</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="keyword">auto</span> identifiers = this-&gt;<a class="code hl_function" href="classttkAlgorithm.html#a13258c23420f03123a9a6d7558613437">GetIdentifierArrayPtr</a>(ForceInputVertexScalarField, 1,</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                                                 <a class="code hl_variable" href="namespacettk.html#ad62ae2850f067bd051f2db827afeac9e">ttk::VertexScalarFieldName</a>,</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                                                 constraints, idSpareStorage);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <span class="keywordtype">int</span> ret{};</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <span class="keywordflow">switch</span>(inputScalars-&gt;GetDataType()) {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    vtkTemplateMacro(ret = this-&gt;<a class="code hl_function" href="classttk_1_1TopologicalSimplification.html#a3a3311f49a0ae861d20cd8c70c1b55ad">execute</a>(</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                       ttkUtils::GetPointer&lt;VTK_TT&gt;(inputScalars),</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                       ttkUtils::GetPointer&lt;VTK_TT&gt;(outputScalars), identifiers,</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                       ttkUtils::GetPointer&lt;SimplexId&gt;(inputOrder),</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                       ttkUtils::GetPointer&lt;SimplexId&gt;(outputOrder),</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                       numberOfConstraints, this-&gt;AddPerturbation,</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                       *triangulation-&gt;getData()));</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  }</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <span class="comment">// something wrong in baseCode</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <span class="keywordflow">if</span>(ret) {</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;TopologicalSimplification.execute() error code: &quot;</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                   + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(ret));</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">return</span> -12;</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  }</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  output-&gt;ShallowCopy(domain);</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  output-&gt;GetPointData()-&gt;AddArray(outputOrder);</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  output-&gt;GetPointData()-&gt;AddArray(outputScalars);</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classttkTopologicalSimplification.html#aa0a6adfb082205935a80cf52bfe9a690">   44</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classttkTopologicalSimplification.html#aa0a6adfb082205935a80cf52bfe9a690">ttkTopologicalSimplification::RequestData</a>(</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  vtkInformation *<a class="code hl_define" href="BaseClass_8h.html#aad3df90e2f81d92bf7a024457cb0fd62">ttkNotUsed</a>(request),</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  vtkInformationVector **inputVector,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  vtkInformationVector *outputVector) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keyword">using </span><a class="code hl_typedef" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">ttk::SimplexId</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordflow">if</span>(this-&gt;Method == 0) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    this-&gt;<a class="code hl_function" href="classttk_1_1TopologicalSimplification.html#ad79e4226a151a8f6a5c9c2244370280b">setBackend</a>(<a class="code hl_enumvalue" href="classttk_1_1TopologicalSimplification.html#a5fdb65e983bda659e293b72c7695c356ad73f00aebeafb26d0f4f8869cba3c480">BACKEND::LTS</a>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(this-&gt;Method == 1) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    this-&gt;<a class="code hl_function" href="classttk_1_1TopologicalSimplification.html#ad79e4226a151a8f6a5c9c2244370280b">setBackend</a>(<a class="code hl_enumvalue" href="classttk_1_1TopologicalSimplification.html#a5fdb65e983bda659e293b72c7695c356a456d016bd133625e5036aa9a556f2730">BACKEND::LEGACY</a>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(this-&gt;Method == 2) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    this-&gt;<a class="code hl_function" href="classttk_1_1TopologicalSimplification.html#ad79e4226a151a8f6a5c9c2244370280b">setBackend</a>(<a class="code hl_enumvalue" href="classttk_1_1TopologicalSimplification.html#a5fdb65e983bda659e293b72c7695c356a304917b92bc3dc0953aab8356f74c02c">BACKEND::TO</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keyword">const</span> <span class="keyword">auto</span> domain = vtkDataSet::GetData(inputVector[0]);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keyword">const</span> <span class="keyword">auto</span> constraints = vtkUnstructuredGrid::GetData(inputVector[1]);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordflow">if</span>(!domain || !constraints)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">return</span> !this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Unable to retrieve required input data objects.&quot;</span>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keyword">auto</span> output = vtkDataSet::GetData(outputVector);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="comment">// triangulation</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="keyword">auto</span> triangulation = <a class="code hl_function" href="classttkAlgorithm.html#a7662b80439a93fab5571bc08403a7269">ttkAlgorithm::GetTriangulation</a>(domain);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="keywordflow">if</span>(!triangulation) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Input triangulation pointer is NULL.&quot;</span>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  this-&gt;<a class="code hl_function" href="classttk_1_1TopologicalSimplification.html#a3da18dffc6a5fcbb967c14ee49fb06eb">preconditionTriangulation</a>(triangulation);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="keywordflow">if</span>(triangulation-&gt;isEmpty()) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Triangulation allocation problem.&quot;</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordflow">if</span>(!domain) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Input pointer is NULL.&quot;</span>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keyword">const</span> <span class="keyword">auto</span> numberOfVertices = domain-&gt;GetNumberOfPoints();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keywordflow">if</span>(numberOfVertices &lt;= 0) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Domain has no points.&quot;</span>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">return</span> -5;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="comment">// domain scalar field</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keyword">const</span> <span class="keyword">auto</span> inputScalars = this-&gt;GetInputArrayToProcess(0, domain);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordflow">if</span>(!inputScalars) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Input scalar field pointer is null.&quot;</span>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">return</span> -3;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="comment">// domain offset field</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keyword">const</span> <span class="keyword">auto</span> inputOrder = this-&gt;<a class="code hl_function" href="classttkAlgorithm.html#ad219024095e1bd95fb0958aa37c5f53d">GetOrderArray</a>(</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    domain, 0, triangulation, <span class="keyword">false</span>, 2, ForceInputOffsetScalarField);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">if</span>(!inputOrder) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Wrong input offset scalar field.&quot;</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="comment">// Constraints</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <a class="code hl_typedef" href="namespacettk.html#aab8bba05f97023f08b0a26d1b3598555">ttk::DiagramType</a> constraintDiagram;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="keyword">const</span> <a class="code hl_class" href="classttk_1_1Debug.html">ttk::Debug</a> dbg;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <a class="code hl_function" href="ttkPersistenceDiagramUtils_8cpp.html#a7c11449f2d6298e834f375ee569d7246">VTUToDiagram</a>(constraintDiagram, constraints, dbg);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="comment">// create output arrays</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <span class="keyword">auto</span> outputScalars</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    = <a class="code hl_class" href="classvtkSmartPointer.html">vtkSmartPointer&lt;vtkDataArray&gt;::Take</a>(inputScalars-&gt;NewInstance());</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  outputScalars-&gt;DeepCopy(inputScalars);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <span class="keyword">auto</span> outputOrder</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    = <a class="code hl_class" href="classvtkSmartPointer.html">vtkSmartPointer&lt;vtkDataArray&gt;::Take</a>(inputOrder-&gt;NewInstance());</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  outputOrder-&gt;DeepCopy(inputOrder);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <span class="comment">// constraint identifier field</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <span class="keywordtype">int</span> <span class="keyword">const</span> numberOfConstraints = constraints-&gt;GetNumberOfPoints();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  std::vector&lt;ttk::SimplexId&gt; idSpareStorage{};</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <span class="keyword">auto</span> identifiers = this-&gt;<a class="code hl_function" href="classttkAlgorithm.html#a13258c23420f03123a9a6d7558613437">GetIdentifierArrayPtr</a>(ForceInputVertexScalarField, 1,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                                                 <a class="code hl_variable" href="namespacettk.html#ad62ae2850f067bd051f2db827afeac9e">ttk::VertexScalarFieldName</a>,</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                                                 constraints, idSpareStorage);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="keywordtype">int</span> ret{};</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="keywordflow">switch</span>(inputScalars-&gt;GetDataType()) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    vtkTemplateMacro(ret = this-&gt;<a class="code hl_function" href="classttk_1_1TopologicalSimplification.html#a993ce4dec65c3461fe4fd9db5bcdfdf2">execute</a>(</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                       ttkUtils::GetPointer&lt;VTK_TT&gt;(inputScalars),</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                       ttkUtils::GetPointer&lt;VTK_TT&gt;(outputScalars), identifiers,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                       ttkUtils::GetPointer&lt;SimplexId&gt;(inputOrder),</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                       ttkUtils::GetPointer&lt;SimplexId&gt;(outputOrder),</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                       numberOfConstraints, this-&gt;AddPerturbation,</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                       *triangulation-&gt;getData(), constraintDiagram));</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="comment">// something wrong in baseCode</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <span class="keywordflow">if</span>(ret) {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;TopologicalSimplification.execute() error code: &quot;</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                   + std::to_string(ret));</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordflow">return</span> -12;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  output-&gt;ShallowCopy(domain);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  output-&gt;GetPointData()-&gt;AddArray(outputOrder);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  output-&gt;GetPointData()-&gt;AddArray(outputScalars);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>}</div>
 </div>
 <div class="ttc" id="aBaseClass_8h_html_aad3df90e2f81d92bf7a024457cb0fd62"><div class="ttname"><a href="BaseClass_8h.html#aad3df90e2f81d92bf7a024457cb0fd62">ttkNotUsed</a></div><div class="ttdeci">#define ttkNotUsed(x)</div><div class="ttdoc">Mark function/method parameters that are not used in the function body at all.</div><div class="ttdef"><b>Definition</b> <a href="BaseClass_8h_source.html#l00047">BaseClass.h:47</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a05020adcce11038d31f3cb6474ec2247"><div class="ttname"><a href="classttkAlgorithm.html#a05020adcce11038d31f3cb6474ec2247">ttkAlgorithm::SAME_DATA_TYPE_AS_INPUT_PORT</a></div><div class="ttdeci">static vtkInformationIntegerKey * SAME_DATA_TYPE_AS_INPUT_PORT()</div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a13258c23420f03123a9a6d7558613437"><div class="ttname"><a href="classttkAlgorithm.html#a13258c23420f03123a9a6d7558613437">ttkAlgorithm::GetIdentifierArrayPtr</a></div><div class="ttdeci">ttk::SimplexId * GetIdentifierArrayPtr(const bool &amp;enforceArrayIndex, const int &amp;arrayIndex, const std::string &amp;arrayName, vtkDataSet *const inputData, std::vector&lt; ttk::SimplexId &gt; &amp;spareStorage, const int inputPort=0, const bool printErr=true)</div><div class="ttdef"><b>Definition</b> <a href="ttkAlgorithm_8cpp_source.html#l00368">ttkAlgorithm.cpp:368</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a7662b80439a93fab5571bc08403a7269"><div class="ttname"><a href="classttkAlgorithm.html#a7662b80439a93fab5571bc08403a7269">ttkAlgorithm::GetTriangulation</a></div><div class="ttdeci">ttk::Triangulation * GetTriangulation(vtkDataSet *dataSet)</div><div class="ttdef"><b>Definition</b> <a href="ttkAlgorithm_8cpp_source.html#l00041">ttkAlgorithm.cpp:41</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_ad219024095e1bd95fb0958aa37c5f53d"><div class="ttname"><a href="classttkAlgorithm.html#ad219024095e1bd95fb0958aa37c5f53d">ttkAlgorithm::GetOrderArray</a></div><div class="ttdeci">vtkDataArray * GetOrderArray(vtkDataSet *const inputData, const int scalarArrayIdx, ttk::Triangulation *triangulation, const bool getGlobalOrder=false, const int orderArrayIdx=0, const bool enforceOrderArrayIdx=false)</div><div class="ttdef"><b>Definition</b> <a href="ttkAlgorithm_8cpp_source.html#l00232">ttkAlgorithm.cpp:232</a></div></div>
-<div class="ttc" id="aclassttkTopologicalSimplification_html"><div class="ttname"><a href="classttkTopologicalSimplification.html">ttkTopologicalSimplification</a></div><div class="ttdoc">TTK VTK-filter for the topological simplification of scalar data.</div><div class="ttdef"><b>Definition</b> <a href="ttkTopologicalSimplification_8h_source.html#l00132">ttkTopologicalSimplification.h:134</a></div></div>
-<div class="ttc" id="aclassttkTopologicalSimplification_html_a60822070b888f09936b97de32f5f8169"><div class="ttname"><a href="classttkTopologicalSimplification.html#a60822070b888f09936b97de32f5f8169">ttkTopologicalSimplification::FillOutputPortInformation</a></div><div class="ttdeci">int FillOutputPortInformation(int port, vtkInformation *info) override</div><div class="ttdef"><b>Definition</b> <a href="ttkTopologicalSimplification_8cpp_source.html#l00034">ttkTopologicalSimplification.cpp:34</a></div></div>
-<div class="ttc" id="aclassttkTopologicalSimplification_html_a79f2d3de8330a9ca91022dd74012a3ed"><div class="ttname"><a href="classttkTopologicalSimplification.html#a79f2d3de8330a9ca91022dd74012a3ed">ttkTopologicalSimplification::FillInputPortInformation</a></div><div class="ttdeci">int FillInputPortInformation(int port, vtkInformation *info) override</div><div class="ttdef"><b>Definition</b> <a href="ttkTopologicalSimplification_8cpp_source.html#l00022">ttkTopologicalSimplification.cpp:22</a></div></div>
-<div class="ttc" id="aclassttkTopologicalSimplification_html_aa0a6adfb082205935a80cf52bfe9a690"><div class="ttname"><a href="classttkTopologicalSimplification.html#aa0a6adfb082205935a80cf52bfe9a690">ttkTopologicalSimplification::RequestData</a></div><div class="ttdeci">int RequestData(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector) override</div><div class="ttdef"><b>Definition</b> <a href="ttkTopologicalSimplification_8cpp_source.html#l00043">ttkTopologicalSimplification.cpp:43</a></div></div>
-<div class="ttc" id="aclassttkTopologicalSimplification_html_ad607eca224eb4120393453fa9092f547"><div class="ttname"><a href="classttkTopologicalSimplification.html#ad607eca224eb4120393453fa9092f547">ttkTopologicalSimplification::ttkTopologicalSimplification</a></div><div class="ttdeci">ttkTopologicalSimplification()</div><div class="ttdef"><b>Definition</b> <a href="ttkTopologicalSimplification_8cpp_source.html#l00017">ttkTopologicalSimplification.cpp:17</a></div></div>
+<div class="ttc" id="aclassttkTopologicalSimplification_html"><div class="ttname"><a href="classttkTopologicalSimplification.html">ttkTopologicalSimplification</a></div><div class="ttdoc">TTK VTK-filter for the topological simplification of scalar data.</div><div class="ttdef"><b>Definition</b> <a href="ttkTopologicalSimplification_8h_source.html#l00148">ttkTopologicalSimplification.h:150</a></div></div>
+<div class="ttc" id="aclassttkTopologicalSimplification_html_a60822070b888f09936b97de32f5f8169"><div class="ttname"><a href="classttkTopologicalSimplification.html#a60822070b888f09936b97de32f5f8169">ttkTopologicalSimplification::FillOutputPortInformation</a></div><div class="ttdeci">int FillOutputPortInformation(int port, vtkInformation *info) override</div><div class="ttdef"><b>Definition</b> <a href="ttkTopologicalSimplification_8cpp_source.html#l00035">ttkTopologicalSimplification.cpp:35</a></div></div>
+<div class="ttc" id="aclassttkTopologicalSimplification_html_a79f2d3de8330a9ca91022dd74012a3ed"><div class="ttname"><a href="classttkTopologicalSimplification.html#a79f2d3de8330a9ca91022dd74012a3ed">ttkTopologicalSimplification::FillInputPortInformation</a></div><div class="ttdeci">int FillInputPortInformation(int port, vtkInformation *info) override</div><div class="ttdef"><b>Definition</b> <a href="ttkTopologicalSimplification_8cpp_source.html#l00023">ttkTopologicalSimplification.cpp:23</a></div></div>
+<div class="ttc" id="aclassttkTopologicalSimplification_html_aa0a6adfb082205935a80cf52bfe9a690"><div class="ttname"><a href="classttkTopologicalSimplification.html#aa0a6adfb082205935a80cf52bfe9a690">ttkTopologicalSimplification::RequestData</a></div><div class="ttdeci">int RequestData(vtkInformation *request, vtkInformationVector **inputVector, vtkInformationVector *outputVector) override</div><div class="ttdef"><b>Definition</b> <a href="ttkTopologicalSimplification_8cpp_source.html#l00044">ttkTopologicalSimplification.cpp:44</a></div></div>
+<div class="ttc" id="aclassttkTopologicalSimplification_html_ad607eca224eb4120393453fa9092f547"><div class="ttname"><a href="classttkTopologicalSimplification.html#ad607eca224eb4120393453fa9092f547">ttkTopologicalSimplification::ttkTopologicalSimplification</a></div><div class="ttdeci">ttkTopologicalSimplification()</div><div class="ttdef"><b>Definition</b> <a href="ttkTopologicalSimplification_8cpp_source.html#l00018">ttkTopologicalSimplification.cpp:18</a></div></div>
+<div class="ttc" id="aclassttk_1_1Debug_html"><div class="ttname"><a href="classttk_1_1Debug.html">ttk::Debug</a></div><div class="ttdoc">Minimalist debugging class.</div><div class="ttdef"><b>Definition</b> <a href="Debug_8h_source.html#l00088">Debug.h:88</a></div></div>
 <div class="ttc" id="aclassttk_1_1Debug_html_afd1938d93be0cf163be78086ed26370e"><div class="ttname"><a href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">ttk::Debug::printErr</a></div><div class="ttdeci">int printErr(const std::string &amp;msg, const debug::LineMode &amp;lineMode=debug::LineMode::NEW, std::ostream &amp;stream=std::cerr) const</div><div class="ttdef"><b>Definition</b> <a href="Debug_8h_source.html#l00149">Debug.h:149</a></div></div>
-<div class="ttc" id="aclassttk_1_1TopologicalSimplification_html_a3a3311f49a0ae861d20cd8c70c1b55ad"><div class="ttname"><a href="classttk_1_1TopologicalSimplification.html#a3a3311f49a0ae861d20cd8c70c1b55ad">ttk::TopologicalSimplification::execute</a></div><div class="ttdeci">int execute(const dataType *const inputScalars, dataType *const outputScalars, const SimplexId *const identifiers, const SimplexId *const inputOffsets, SimplexId *const offsets, const SimplexId constraintNumber, const bool addPerturbation, const triangulationType &amp;triangulation)</div><div class="ttdef"><b>Definition</b> <a href="TopologicalSimplification_8h_source.html#l00161">TopologicalSimplification.h:161</a></div></div>
-<div class="ttc" id="aclassttk_1_1TopologicalSimplification_html_a3da18dffc6a5fcbb967c14ee49fb06eb"><div class="ttname"><a href="classttk_1_1TopologicalSimplification.html#a3da18dffc6a5fcbb967c14ee49fb06eb">ttk::TopologicalSimplification::preconditionTriangulation</a></div><div class="ttdeci">int preconditionTriangulation(AbstractTriangulation *triangulation)</div><div class="ttdef"><b>Definition</b> <a href="TopologicalSimplification_8h_source.html#l00131">TopologicalSimplification.h:131</a></div></div>
+<div class="ttc" id="aclassttk_1_1TopologicalSimplification_html_a3da18dffc6a5fcbb967c14ee49fb06eb"><div class="ttname"><a href="classttk_1_1TopologicalSimplification.html#a3da18dffc6a5fcbb967c14ee49fb06eb">ttk::TopologicalSimplification::preconditionTriangulation</a></div><div class="ttdeci">int preconditionTriangulation(AbstractTriangulation *triangulation)</div><div class="ttdef"><b>Definition</b> <a href="TopologicalSimplification_8h_source.html#l00148">TopologicalSimplification.h:148</a></div></div>
+<div class="ttc" id="aclassttk_1_1TopologicalSimplification_html_a5fdb65e983bda659e293b72c7695c356a304917b92bc3dc0953aab8356f74c02c"><div class="ttname"><a href="classttk_1_1TopologicalSimplification.html#a5fdb65e983bda659e293b72c7695c356a304917b92bc3dc0953aab8356f74c02c">ttk::TopologicalSimplification::BACKEND::TO</a></div><div class="ttdeci">@ TO</div></div>
 <div class="ttc" id="aclassttk_1_1TopologicalSimplification_html_a5fdb65e983bda659e293b72c7695c356a456d016bd133625e5036aa9a556f2730"><div class="ttname"><a href="classttk_1_1TopologicalSimplification.html#a5fdb65e983bda659e293b72c7695c356a456d016bd133625e5036aa9a556f2730">ttk::TopologicalSimplification::BACKEND::LEGACY</a></div><div class="ttdeci">@ LEGACY</div></div>
-<div class="ttc" id="aclassttk_1_1TopologicalSimplification_html_ad79e4226a151a8f6a5c9c2244370280b"><div class="ttname"><a href="classttk_1_1TopologicalSimplification.html#ad79e4226a151a8f6a5c9c2244370280b">ttk::TopologicalSimplification::setBackend</a></div><div class="ttdeci">void setBackend(const BACKEND arg)</div><div class="ttdef"><b>Definition</b> <a href="TopologicalSimplification_8h_source.html#l00127">TopologicalSimplification.h:127</a></div></div>
+<div class="ttc" id="aclassttk_1_1TopologicalSimplification_html_a5fdb65e983bda659e293b72c7695c356ad73f00aebeafb26d0f4f8869cba3c480"><div class="ttname"><a href="classttk_1_1TopologicalSimplification.html#a5fdb65e983bda659e293b72c7695c356ad73f00aebeafb26d0f4f8869cba3c480">ttk::TopologicalSimplification::BACKEND::LTS</a></div><div class="ttdeci">@ LTS</div></div>
+<div class="ttc" id="aclassttk_1_1TopologicalSimplification_html_a993ce4dec65c3461fe4fd9db5bcdfdf2"><div class="ttname"><a href="classttk_1_1TopologicalSimplification.html#a993ce4dec65c3461fe4fd9db5bcdfdf2">ttk::TopologicalSimplification::execute</a></div><div class="ttdeci">int execute(const dataType *const inputScalars, dataType *const outputScalars, const SimplexId *const identifiers, const SimplexId *const inputOffsets, SimplexId *const offsets, const SimplexId constraintNumber, const bool addPerturbation, triangulationType &amp;triangulation, const ttk::DiagramType &amp;constraintDiagram={})</div><div class="ttdef"><b>Definition</b> <a href="TopologicalSimplification_8h_source.html#l00226">TopologicalSimplification.h:226</a></div></div>
+<div class="ttc" id="aclassttk_1_1TopologicalSimplification_html_ad79e4226a151a8f6a5c9c2244370280b"><div class="ttname"><a href="classttk_1_1TopologicalSimplification.html#ad79e4226a151a8f6a5c9c2244370280b">ttk::TopologicalSimplification::setBackend</a></div><div class="ttdeci">void setBackend(const BACKEND arg)</div><div class="ttdef"><b>Definition</b> <a href="TopologicalSimplification_8h_source.html#l00144">TopologicalSimplification.h:144</a></div></div>
 <div class="ttc" id="aclassvtkSmartPointer_html"><div class="ttname"><a href="classvtkSmartPointer.html">vtkSmartPointer</a></div><div class="ttdef"><b>Definition</b> <a href="ttkUtils_8h_source.html#l00026">ttkUtils.h:26</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
+<div class="ttc" id="anamespacettk_html_aab8bba05f97023f08b0a26d1b3598555"><div class="ttname"><a href="namespacettk.html#aab8bba05f97023f08b0a26d1b3598555">ttk::DiagramType</a></div><div class="ttdeci">std::vector&lt; PersistencePair &gt; DiagramType</div><div class="ttdoc">Persistence Diagram type as a vector of Persistence pairs.</div><div class="ttdef"><b>Definition</b> <a href="PersistenceDiagramUtils_8h_source.html#l00058">PersistenceDiagramUtils.h:58</a></div></div>
 <div class="ttc" id="anamespacettk_html_ad62ae2850f067bd051f2db827afeac9e"><div class="ttname"><a href="namespacettk.html#ad62ae2850f067bd051f2db827afeac9e">ttk::VertexScalarFieldName</a></div><div class="ttdeci">const char VertexScalarFieldName[]</div><div class="ttdoc">default name for vertex scalar field</div><div class="ttdef"><b>Definition</b> <a href="DataTypes_8h_source.html#l00035">DataTypes.h:35</a></div></div>
 <div class="ttc" id="anamespacettk_html_af0e68dbb0101c35aa1990bffafe71025"><div class="ttname"><a href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">ttk::SimplexId</a></div><div class="ttdeci">int SimplexId</div><div class="ttdoc">Identifier type for simplices of any dimension.</div><div class="ttdef"><b>Definition</b> <a href="DataTypes_8h_source.html#l00022">DataTypes.h:22</a></div></div>
 <div class="ttc" id="attkMacros_8h_html"><div class="ttname"><a href="ttkMacros_8h.html">ttkMacros.h</a></div></div>
+<div class="ttc" id="attkPersistenceDiagramUtils_8cpp_html_a7c11449f2d6298e834f375ee569d7246"><div class="ttname"><a href="ttkPersistenceDiagramUtils_8cpp.html#a7c11449f2d6298e834f375ee569d7246">VTUToDiagram</a></div><div class="ttdeci">int VTUToDiagram(ttk::DiagramType &amp;diagram, vtkUnstructuredGrid *vtu, const ttk::Debug &amp;dbg)</div><div class="ttdoc">Converts a Persistence Diagram in the VTK Unstructured Grid format (as generated by the ttkPersistenc...</div><div class="ttdef"><b>Definition</b> <a href="ttkPersistenceDiagramUtils_8cpp_source.html#l00016">ttkPersistenceDiagramUtils.cpp:16</a></div></div>
 <div class="ttc" id="attkTopologicalSimplification_8cpp_html_ae5da42ef38453e490e4b33cbc74141ee"><div class="ttname"><a href="ttkTopologicalSimplification_8cpp.html#ae5da42ef38453e490e4b33cbc74141ee">vtkStandardNewMacro</a></div><div class="ttdeci">vtkStandardNewMacro(ttkTopologicalSimplification)</div></div>
 <div class="ttc" id="attkTopologicalSimplification_8h_html"><div class="ttname"><a href="ttkTopologicalSimplification_8h.html">ttkTopologicalSimplification.h</a></div></div>
 <div class="ttc" id="attkUtils_8h_html"><div class="ttname"><a href="ttkUtils_8h.html">ttkUtils.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:31 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

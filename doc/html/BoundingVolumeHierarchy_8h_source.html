@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_877a2188a9a69f9a9be8a085234e84be.html">base</a></li><li class="navelem"><a class="el" href="dir_84e23b07ac4a1cabc70a888da11b1169.html">boundingVolumeHierarchy</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_f51c5eb9c26ccdfcbbaaa6540a1be4ca.html">boundingVolumeHierarchy</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -372,119 +372,158 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
 <div class="foldopen" id="foldopen00280" data-start="{" data-end="}">
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno"><a class="line" href="classttk_1_1BoundingVolumeHierarchy.html#a3ba5f6148348497b1ab84ca81290ba69">  280</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classttk_1_1BoundingVolumeHierarchy.html#a3ba5f6148348497b1ab84ca81290ba69">intersect</a>(<a class="code hl_class" href="classttk_1_1Ray.html">Ray</a> &amp;r,</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno"><a class="line" href="classttk_1_1BoundingVolumeHierarchy.html#af9327fc2875ca1c18293ac47a964afd9">  280</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classttk_1_1BoundingVolumeHierarchy.html#af9327fc2875ca1c18293ac47a964afd9">intersect</a>(<a class="code hl_class" href="classttk_1_1Ray.html">Ray</a> &amp;r,</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                   <span class="keyword">const</span> IT *connectivityList,</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                   <span class="keyword">const</span> <span class="keywordtype">float</span> *vertexCoords,</div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                   <span class="keywordtype">int</span> *triangleIndex,</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                   <span class="keywordtype">float</span> *distance)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>      <span class="keywordtype">bool</span> wasHit = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>      <span class="keywordtype">float</span> nearestTriangle = std::numeric_limits&lt;float&gt;::max();</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>      std::stack&lt;Node *&gt; stack;</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>      <a class="code hl_struct" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html">Node</a> *node = &amp;nodes.get()[0];</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="classttk_1_1BoundingVolumeHierarchy.html#ab00ff80729de582a3a02e28ddd74b0b8">wasNodeHit</a>(r, node)) {</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>      }</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      stack.push(node);</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>      <span class="keywordflow">while</span>(stack.size() != 0) {</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        node = stack.top();</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        stack.pop();</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="classttk_1_1BoundingVolumeHierarchy.html#ab00ff80729de582a3a02e28ddd74b0b8">wasNodeHit</a>(r, node)) {</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>          <span class="keywordflow">if</span>(node-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a5edb19db992398c6fc4e210b19851944">numTriangles</a> &gt; 0) {</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; node-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a5edb19db992398c6fc4e210b19851944">numTriangles</a>; i++) {</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>              <span class="keywordtype">bool</span> hasHit = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>              <span class="keywordtype">int</span> <span class="keyword">const</span> triIdx = node-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#adc6450359cc34409ec3b17987685dcd4">indices</a>[i];</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>              IT v0 = connectivityList[triIdx * 3 + 0];</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>              IT v1 = connectivityList[triIdx * 3 + 1];</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>              IT v2 = connectivityList[triIdx * 3 + 2];</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>              v0 *= 3;</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>              v1 *= 3;</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>              v2 *= 3;</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>              hasHit = <a class="code hl_function" href="classttk_1_1BoundingVolumeHierarchy.html#a3621faa023fafb45814bf26d3adc9ea5">MollerTrumbore</a>(r, v0, v1, v2, vertexCoords);</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>              <span class="keywordflow">if</span>(hasHit &amp;&amp; r.<a class="code hl_variable" href="classttk_1_1Ray.html#a1f3552a49c19a137937047b9cb53f65a">distance</a> &lt; nearestTriangle) {</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                *triangleIndex = triIdx;</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                nearestTriangle = r.<a class="code hl_variable" href="classttk_1_1Ray.html#a1f3552a49c19a137937047b9cb53f65a">distance</a>;</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                wasHit = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                *distance = r.<a class="code hl_variable" href="classttk_1_1Ray.html#a1f3552a49c19a137937047b9cb53f65a">distance</a>;</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>              }</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            }</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>          } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            <span class="keywordflow">if</span>(node-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a2b431f396b191a3095c11209183de44a">m_right</a> != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>              stack.push(node-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a2b431f396b191a3095c11209183de44a">m_right</a>.get());</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            }</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>            <span class="keywordflow">if</span>(node-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a163e1b8c3750f4820323c21738ca0263">m_left</a> != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>              stack.push(node-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a163e1b8c3750f4820323c21738ca0263">m_left</a>.get());</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            }</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>          }</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        }</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>      }</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>      <span class="keywordflow">return</span> wasHit;</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    }</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                   <span class="keywordtype">float</span> *distance,</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                   std::vector&lt;int&gt; &amp;triangles,</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                   std::vector&lt;float&gt; &amp;distances,</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                   <span class="keywordtype">bool</span> segmentIntersection = <span class="keyword">false</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>      <span class="keywordtype">bool</span> wasHit = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <span class="keywordtype">float</span> nearestTriangle = std::numeric_limits&lt;float&gt;::max();</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>      std::stack&lt;Node *&gt; stack;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>      <a class="code hl_struct" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html">Node</a> *node = &amp;nodes.get()[0];</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      <span class="keywordflow">if</span>(!<a class="code hl_function" href="classttk_1_1BoundingVolumeHierarchy.html#ab00ff80729de582a3a02e28ddd74b0b8">wasNodeHit</a>(r, node)) {</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>      }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>      stack.push(node);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>      <span class="keywordflow">while</span>(stack.size() != 0) {</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        node = stack.top();</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        stack.pop();</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="classttk_1_1BoundingVolumeHierarchy.html#ab00ff80729de582a3a02e28ddd74b0b8">wasNodeHit</a>(r, node)) {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>          <span class="keywordflow">if</span>(node-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a5edb19db992398c6fc4e210b19851944">numTriangles</a> &gt; 0) {</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; node-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a5edb19db992398c6fc4e210b19851944">numTriangles</a>; i++) {</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>              <span class="keywordtype">bool</span> hasHit = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>              <span class="keywordtype">int</span> <span class="keyword">const</span> triIdx = node-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#adc6450359cc34409ec3b17987685dcd4">indices</a>[i];</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>              IT v0 = connectivityList[triIdx * 3 + 0];</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>              IT v1 = connectivityList[triIdx * 3 + 1];</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>              IT v2 = connectivityList[triIdx * 3 + 2];</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>              v0 *= 3;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>              v1 *= 3;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>              v2 *= 3;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>              hasHit = <a class="code hl_function" href="classttk_1_1BoundingVolumeHierarchy.html#a3621faa023fafb45814bf26d3adc9ea5">MollerTrumbore</a>(r, v0, v1, v2, vertexCoords);</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>              <span class="keywordflow">if</span>(hasHit</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                 and (not segmentIntersection</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                      or (r.<a class="code hl_variable" href="classttk_1_1Ray.html#a1f3552a49c19a137937047b9cb53f65a">distance</a> &gt;= 0 and r.<a class="code hl_variable" href="classttk_1_1Ray.html#a1f3552a49c19a137937047b9cb53f65a">distance</a> &lt;= 1))) {</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                wasHit = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                triangles.emplace_back(triIdx);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                distances.emplace_back(r.<a class="code hl_variable" href="classttk_1_1Ray.html#a1f3552a49c19a137937047b9cb53f65a">distance</a>);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                <span class="keywordflow">if</span>(r.<a class="code hl_variable" href="classttk_1_1Ray.html#a1f3552a49c19a137937047b9cb53f65a">distance</a> &lt; nearestTriangle) {</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                  *triangleIndex = triIdx;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                  nearestTriangle = r.<a class="code hl_variable" href="classttk_1_1Ray.html#a1f3552a49c19a137937047b9cb53f65a">distance</a>;</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                  *distance = r.<a class="code hl_variable" href="classttk_1_1Ray.html#a1f3552a49c19a137937047b9cb53f65a">distance</a>;</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                }</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>              }</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            }</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>          } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            <span class="keywordflow">if</span>(node-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a2b431f396b191a3095c11209183de44a">m_right</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>              stack.push(node-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a2b431f396b191a3095c11209183de44a">m_right</a>.get());</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            }</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            <span class="keywordflow">if</span>(node-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a163e1b8c3750f4820323c21738ca0263">m_left</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>              stack.push(node-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a163e1b8c3750f4820323c21738ca0263">m_left</a>.get());</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            }</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>          }</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        }</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>      }</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      <span class="keywordflow">return</span> wasHit;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    }</div>
 </div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
-<div class="foldopen" id="foldopen00332" data-start="{" data-end="}">
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno"><a class="line" href="classttk_1_1BoundingVolumeHierarchy.html#ab00ff80729de582a3a02e28ddd74b0b8">  332</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classttk_1_1BoundingVolumeHierarchy.html#ab00ff80729de582a3a02e28ddd74b0b8">wasNodeHit</a>(<span class="keyword">const</span> <a class="code hl_class" href="classttk_1_1Ray.html">Ray</a> &amp;r, <a class="code hl_struct" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html">Node</a> *n)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>      <span class="keywordtype">float</span> tmin = (n-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a0bc168784bf4c605dd3c3e499aa65a4c">m_minX</a> - r.<a class="code hl_variable" href="classttk_1_1Ray.html#a77b81e5c64a95ddf3453a3e5cfb0937b">m_origin</a>[0]) / r.<a class="code hl_variable" href="classttk_1_1Ray.html#acd2c311db183c00c3e8c394848052c06">m_direction</a>[0];</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>      <span class="keywordtype">float</span> tmax = (n-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#aab144df7a23d7f1ab78ab3e82a51174c">m_maxX</a> - r.<a class="code hl_variable" href="classttk_1_1Ray.html#a77b81e5c64a95ddf3453a3e5cfb0937b">m_origin</a>[0]) / r.<a class="code hl_variable" href="classttk_1_1Ray.html#acd2c311db183c00c3e8c394848052c06">m_direction</a>[0];</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>      <span class="keywordflow">if</span>(tmin &gt; tmax)</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        std::swap(tmin, tmax);</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>      <span class="keywordtype">float</span> tymin = (n-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a0655119ff062b2aec243d003d4be91c3">m_minY</a> - r.<a class="code hl_variable" href="classttk_1_1Ray.html#a77b81e5c64a95ddf3453a3e5cfb0937b">m_origin</a>[1]) / r.<a class="code hl_variable" href="classttk_1_1Ray.html#acd2c311db183c00c3e8c394848052c06">m_direction</a>[1];</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      <span class="keywordtype">float</span> tymax = (n-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a5c2a1cf468a3f819373df1d1a2b3c8fd">m_maxY</a> - r.<a class="code hl_variable" href="classttk_1_1Ray.html#a77b81e5c64a95ddf3453a3e5cfb0937b">m_origin</a>[1]) / r.<a class="code hl_variable" href="classttk_1_1Ray.html#acd2c311db183c00c3e8c394848052c06">m_direction</a>[1];</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>      <span class="keywordflow">if</span>(tymin &gt; tymax)</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        std::swap(tymin, tymax);</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>      <span class="keywordflow">if</span>((tmin &gt; tymax) || (tymin &gt; tmax))</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      <span class="keywordflow">if</span>(tymin &gt; tmin)</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        tmin = tymin;</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>      <span class="keywordflow">if</span>(tymax &lt; tmax)</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        tmax = tymax;</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>      <span class="keywordtype">float</span> tzmin = (n-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a137e1d09f7ef4efaca8852f4d0c84c3f">m_minZ</a> - r.<a class="code hl_variable" href="classttk_1_1Ray.html#a77b81e5c64a95ddf3453a3e5cfb0937b">m_origin</a>[2]) / r.<a class="code hl_variable" href="classttk_1_1Ray.html#acd2c311db183c00c3e8c394848052c06">m_direction</a>[2];</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>      <span class="keywordtype">float</span> tzmax = (n-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a39dddef0a1f19af521f51c73bb06f6f0">m_maxZ</a> - r.<a class="code hl_variable" href="classttk_1_1Ray.html#a77b81e5c64a95ddf3453a3e5cfb0937b">m_origin</a>[2]) / r.<a class="code hl_variable" href="classttk_1_1Ray.html#acd2c311db183c00c3e8c394848052c06">m_direction</a>[2];</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>      <span class="keywordflow">if</span>(tzmin &gt; tzmax)</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        std::swap(tzmin, tzmax);</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span> </div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>      <span class="keywordflow">if</span>((tmin &gt; tzmax) || (tzmin &gt; tmax))</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>      <span class="keywordflow">if</span>(tzmin &gt; tmin)</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>        tmin = tzmin;</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span> </div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>      <span class="keywordflow">if</span>(tzmax &lt; tmax)</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        tmax = tzmax;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
+<div class="foldopen" id="foldopen00341" data-start="{" data-end="}">
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno"><a class="line" href="classttk_1_1BoundingVolumeHierarchy.html#ac5823c7c7640f8ad3d81a8403dd3cbaf">  341</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classttk_1_1BoundingVolumeHierarchy.html#ac5823c7c7640f8ad3d81a8403dd3cbaf">intersect</a>(<a class="code hl_class" href="classttk_1_1Ray.html">Ray</a> &amp;r,</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                   <span class="keyword">const</span> IT *connectivityList,</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                   <span class="keyword">const</span> <span class="keywordtype">float</span> *vertexCoords,</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                   <span class="keywordtype">int</span> *triangleIndex,</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                   <span class="keywordtype">float</span> *distance,</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                   <span class="keywordtype">bool</span> segmentIntersection = <span class="keyword">false</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>      std::vector&lt;int&gt; triangles;</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      std::vector&lt;float&gt; distances;</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classttk_1_1BoundingVolumeHierarchy.html#af9327fc2875ca1c18293ac47a964afd9">intersect</a>(r, connectivityList, vertexCoords, triangleIndex,</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                       distance, triangles, distances, segmentIntersection);</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    }</div>
+</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="foldopen" id="foldopen00353" data-start="{" data-end="}">
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno"><a class="line" href="classttk_1_1BoundingVolumeHierarchy.html#a72c3d8ad0a3a778c41a89821fc0fdab1">  353</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classttk_1_1BoundingVolumeHierarchy.html#a72c3d8ad0a3a778c41a89821fc0fdab1">intersect</a>(<a class="code hl_class" href="classttk_1_1Ray.html">Ray</a> &amp;r,</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                   <span class="keyword">const</span> IT *connectivityList,</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                   <span class="keyword">const</span> <span class="keywordtype">float</span> *vertexCoords,</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                   std::vector&lt;int&gt; &amp;triangles,</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                   std::vector&lt;float&gt; &amp;distances,</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                   <span class="keywordtype">bool</span> segmentIntersection = <span class="keyword">false</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>      <span class="keywordtype">int</span> triangleIndex;</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>      <span class="keywordtype">float</span> distance;</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classttk_1_1BoundingVolumeHierarchy.html#af9327fc2875ca1c18293ac47a964afd9">intersect</a>(r, connectivityList, vertexCoords, &amp;triangleIndex,</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>                       &amp;distance, triangles, distances, segmentIntersection);</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    }</div>
+</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span> </div>
+<div class="foldopen" id="foldopen00365" data-start="{" data-end="}">
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno"><a class="line" href="classttk_1_1BoundingVolumeHierarchy.html#ab00ff80729de582a3a02e28ddd74b0b8">  365</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classttk_1_1BoundingVolumeHierarchy.html#ab00ff80729de582a3a02e28ddd74b0b8">wasNodeHit</a>(<span class="keyword">const</span> <a class="code hl_class" href="classttk_1_1Ray.html">Ray</a> &amp;r, <a class="code hl_struct" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html">Node</a> *n)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>      <span class="keywordtype">float</span> tmin = (n-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a0bc168784bf4c605dd3c3e499aa65a4c">m_minX</a> - r.<a class="code hl_variable" href="classttk_1_1Ray.html#a77b81e5c64a95ddf3453a3e5cfb0937b">m_origin</a>[0]) / r.<a class="code hl_variable" href="classttk_1_1Ray.html#acd2c311db183c00c3e8c394848052c06">m_direction</a>[0];</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>      <span class="keywordtype">float</span> tmax = (n-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#aab144df7a23d7f1ab78ab3e82a51174c">m_maxX</a> - r.<a class="code hl_variable" href="classttk_1_1Ray.html#a77b81e5c64a95ddf3453a3e5cfb0937b">m_origin</a>[0]) / r.<a class="code hl_variable" href="classttk_1_1Ray.html#acd2c311db183c00c3e8c394848052c06">m_direction</a>[0];</div>
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    }</div>
-</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>      <span class="keywordflow">if</span>(tmin &gt; tmax)</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>        std::swap(tmin, tmax);</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span> </div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    std::shared_ptr&lt;Node&gt; nodes;</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    <span class="keywordtype">float</span> findCentroid(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;v1, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;v2, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;v3) {</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>      <span class="keywordflow">return</span> (v1 + v2 + v3) / 3;</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    }</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>  };</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>      <span class="keywordtype">float</span> tymin = (n-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a0655119ff062b2aec243d003d4be91c3">m_minY</a> - r.<a class="code hl_variable" href="classttk_1_1Ray.html#a77b81e5c64a95ddf3453a3e5cfb0937b">m_origin</a>[1]) / r.<a class="code hl_variable" href="classttk_1_1Ray.html#acd2c311db183c00c3e8c394848052c06">m_direction</a>[1];</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>      <span class="keywordtype">float</span> tymax = (n-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a5c2a1cf468a3f819373df1d1a2b3c8fd">m_maxY</a> - r.<a class="code hl_variable" href="classttk_1_1Ray.html#a77b81e5c64a95ddf3453a3e5cfb0937b">m_origin</a>[1]) / r.<a class="code hl_variable" href="classttk_1_1Ray.html#acd2c311db183c00c3e8c394848052c06">m_direction</a>[1];</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span> </div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>      <span class="keywordflow">if</span>(tymin &gt; tymax)</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        std::swap(tymin, tymax);</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>      <span class="keywordflow">if</span>((tmin &gt; tymax) || (tymin &gt; tmax))</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>      <span class="keywordflow">if</span>(tymin &gt; tmin)</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>        tmin = tymin;</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span> </div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>      <span class="keywordflow">if</span>(tymax &lt; tmax)</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        tmax = tymax;</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span> </div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>      <span class="keywordtype">float</span> tzmin = (n-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a137e1d09f7ef4efaca8852f4d0c84c3f">m_minZ</a> - r.<a class="code hl_variable" href="classttk_1_1Ray.html#a77b81e5c64a95ddf3453a3e5cfb0937b">m_origin</a>[2]) / r.<a class="code hl_variable" href="classttk_1_1Ray.html#acd2c311db183c00c3e8c394848052c06">m_direction</a>[2];</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>      <span class="keywordtype">float</span> tzmax = (n-&gt;<a class="code hl_variable" href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a39dddef0a1f19af521f51c73bb06f6f0">m_maxZ</a> - r.<a class="code hl_variable" href="classttk_1_1Ray.html#a77b81e5c64a95ddf3453a3e5cfb0937b">m_origin</a>[2]) / r.<a class="code hl_variable" href="classttk_1_1Ray.html#acd2c311db183c00c3e8c394848052c06">m_direction</a>[2];</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span> </div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>      <span class="keywordflow">if</span>(tzmin &gt; tzmax)</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>        std::swap(tzmin, tzmax);</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span> </div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>      <span class="keywordflow">if</span>((tmin &gt; tzmax) || (tzmin &gt; tmax))</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span> </div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>      <span class="keywordflow">if</span>(tzmin &gt; tmin)</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>        tmin = tzmin;</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span> </div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>      <span class="keywordflow">if</span>(tzmax &lt; tmax)</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>        tmax = tzmax;</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span> </div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>    }</div>
 </div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>} <span class="comment">// namespace ttk</span></div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>    std::shared_ptr&lt;Node&gt; nodes;</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>    <span class="keywordtype">float</span> findCentroid(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;v1, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;v2, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;v3) {</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>      <span class="keywordflow">return</span> (v1 + v2 + v3) / 3;</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    }</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>  };</div>
+</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>} <span class="comment">// namespace ttk</span></div>
 <div class="ttc" id="aGeometry_8h_html"><div class="ttname"><a href="Geometry_8h.html">Geometry.h</a></div></div>
 <div class="ttc" id="aRay_8h_html"><div class="ttname"><a href="Ray_8h.html">Ray.h</a></div></div>
 <div class="ttc" id="aclassttk_1_1BoundingVolumeHierarchy_html"><div class="ttname"><a href="classttk_1_1BoundingVolumeHierarchy.html">ttk::BoundingVolumeHierarchy</a></div><div class="ttdoc">Acceleration structure for native ray tracer. Based on implementation described in Physically Based R...</div><div class="ttdef"><b>Definition</b> <a href="BoundingVolumeHierarchy_8h_source.html#l00024">BoundingVolumeHierarchy.h:24</a></div></div>
 <div class="ttc" id="aclassttk_1_1BoundingVolumeHierarchy_html_a229cc4aaadc77a80af5ed9735bc82895"><div class="ttname"><a href="classttk_1_1BoundingVolumeHierarchy.html#a229cc4aaadc77a80af5ed9735bc82895">ttk::BoundingVolumeHierarchy::buildTriangleList</a></div><div class="ttdeci">int buildTriangleList(std::vector&lt; Triangle &gt; &amp;triangles, const float *coords, const IT *connectivityList, const size_t &amp;nTriangles)</div><div class="ttdef"><b>Definition</b> <a href="BoundingVolumeHierarchy_8h_source.html#l00207">BoundingVolumeHierarchy.h:207</a></div></div>
 <div class="ttc" id="aclassttk_1_1BoundingVolumeHierarchy_html_a3621faa023fafb45814bf26d3adc9ea5"><div class="ttname"><a href="classttk_1_1BoundingVolumeHierarchy.html#a3621faa023fafb45814bf26d3adc9ea5">ttk::BoundingVolumeHierarchy::MollerTrumbore</a></div><div class="ttdeci">bool MollerTrumbore(Ray &amp;ray, const IT v0, const IT v1, const IT v2, const float *vertexCoords) const</div><div class="ttdef"><b>Definition</b> <a href="BoundingVolumeHierarchy_8h_source.html#l00243">BoundingVolumeHierarchy.h:243</a></div></div>
-<div class="ttc" id="aclassttk_1_1BoundingVolumeHierarchy_html_a3ba5f6148348497b1ab84ca81290ba69"><div class="ttname"><a href="classttk_1_1BoundingVolumeHierarchy.html#a3ba5f6148348497b1ab84ca81290ba69">ttk::BoundingVolumeHierarchy::intersect</a></div><div class="ttdeci">bool intersect(Ray &amp;r, const IT *connectivityList, const float *vertexCoords, int *triangleIndex, float *distance) const</div><div class="ttdef"><b>Definition</b> <a href="BoundingVolumeHierarchy_8h_source.html#l00280">BoundingVolumeHierarchy.h:280</a></div></div>
+<div class="ttc" id="aclassttk_1_1BoundingVolumeHierarchy_html_a72c3d8ad0a3a778c41a89821fc0fdab1"><div class="ttname"><a href="classttk_1_1BoundingVolumeHierarchy.html#a72c3d8ad0a3a778c41a89821fc0fdab1">ttk::BoundingVolumeHierarchy::intersect</a></div><div class="ttdeci">bool intersect(Ray &amp;r, const IT *connectivityList, const float *vertexCoords, std::vector&lt; int &gt; &amp;triangles, std::vector&lt; float &gt; &amp;distances, bool segmentIntersection=false) const</div><div class="ttdef"><b>Definition</b> <a href="BoundingVolumeHierarchy_8h_source.html#l00353">BoundingVolumeHierarchy.h:353</a></div></div>
 <div class="ttc" id="aclassttk_1_1BoundingVolumeHierarchy_html_aa5f7d216a98a424e750cdcd0dc574650"><div class="ttname"><a href="classttk_1_1BoundingVolumeHierarchy.html#aa5f7d216a98a424e750cdcd0dc574650">ttk::BoundingVolumeHierarchy::BoundingVolumeHierarchy</a></div><div class="ttdeci">BoundingVolumeHierarchy(const float *coords, const IT *connectivityList, const size_t &amp;nTriangles)</div><div class="ttdef"><b>Definition</b> <a href="BoundingVolumeHierarchy_8h_source.html#l00097">BoundingVolumeHierarchy.h:97</a></div></div>
-<div class="ttc" id="aclassttk_1_1BoundingVolumeHierarchy_html_ab00ff80729de582a3a02e28ddd74b0b8"><div class="ttname"><a href="classttk_1_1BoundingVolumeHierarchy.html#ab00ff80729de582a3a02e28ddd74b0b8">ttk::BoundingVolumeHierarchy::wasNodeHit</a></div><div class="ttdeci">bool wasNodeHit(const Ray &amp;r, Node *n) const</div><div class="ttdef"><b>Definition</b> <a href="BoundingVolumeHierarchy_8h_source.html#l00332">BoundingVolumeHierarchy.h:332</a></div></div>
+<div class="ttc" id="aclassttk_1_1BoundingVolumeHierarchy_html_ab00ff80729de582a3a02e28ddd74b0b8"><div class="ttname"><a href="classttk_1_1BoundingVolumeHierarchy.html#ab00ff80729de582a3a02e28ddd74b0b8">ttk::BoundingVolumeHierarchy::wasNodeHit</a></div><div class="ttdeci">bool wasNodeHit(const Ray &amp;r, Node *n) const</div><div class="ttdef"><b>Definition</b> <a href="BoundingVolumeHierarchy_8h_source.html#l00365">BoundingVolumeHierarchy.h:365</a></div></div>
 <div class="ttc" id="aclassttk_1_1BoundingVolumeHierarchy_html_ab2456e0710b9e4bba4fbad0649bf122c"><div class="ttname"><a href="classttk_1_1BoundingVolumeHierarchy.html#ab2456e0710b9e4bba4fbad0649bf122c">ttk::BoundingVolumeHierarchy::buildTree</a></div><div class="ttdeci">std::shared_ptr&lt; Node &gt; buildTree(std::vector&lt; Triangle &gt; &amp;triangles, size_t start, size_t end)</div><div class="ttdef"><b>Definition</b> <a href="BoundingVolumeHierarchy_8h_source.html#l00109">BoundingVolumeHierarchy.h:109</a></div></div>
+<div class="ttc" id="aclassttk_1_1BoundingVolumeHierarchy_html_ac5823c7c7640f8ad3d81a8403dd3cbaf"><div class="ttname"><a href="classttk_1_1BoundingVolumeHierarchy.html#ac5823c7c7640f8ad3d81a8403dd3cbaf">ttk::BoundingVolumeHierarchy::intersect</a></div><div class="ttdeci">bool intersect(Ray &amp;r, const IT *connectivityList, const float *vertexCoords, int *triangleIndex, float *distance, bool segmentIntersection=false) const</div><div class="ttdef"><b>Definition</b> <a href="BoundingVolumeHierarchy_8h_source.html#l00341">BoundingVolumeHierarchy.h:341</a></div></div>
 <div class="ttc" id="aclassttk_1_1BoundingVolumeHierarchy_html_ae9c5092363a4bd9f83eab36e144e50e1"><div class="ttname"><a href="classttk_1_1BoundingVolumeHierarchy.html#ae9c5092363a4bd9f83eab36e144e50e1">ttk::BoundingVolumeHierarchy::~BoundingVolumeHierarchy</a></div><div class="ttdeci">~BoundingVolumeHierarchy()=default</div></div>
+<div class="ttc" id="aclassttk_1_1BoundingVolumeHierarchy_html_af9327fc2875ca1c18293ac47a964afd9"><div class="ttname"><a href="classttk_1_1BoundingVolumeHierarchy.html#af9327fc2875ca1c18293ac47a964afd9">ttk::BoundingVolumeHierarchy::intersect</a></div><div class="ttdeci">bool intersect(Ray &amp;r, const IT *connectivityList, const float *vertexCoords, int *triangleIndex, float *distance, std::vector&lt; int &gt; &amp;triangles, std::vector&lt; float &gt; &amp;distances, bool segmentIntersection=false) const</div><div class="ttdef"><b>Definition</b> <a href="BoundingVolumeHierarchy_8h_source.html#l00280">BoundingVolumeHierarchy.h:280</a></div></div>
 <div class="ttc" id="aclassttk_1_1Ray_html"><div class="ttname"><a href="classttk_1_1Ray.html">ttk::Ray</a></div><div class="ttdoc">Data structure for a ray.</div><div class="ttdef"><b>Definition</b> <a href="Ray_8h_source.html#l00011">Ray.h:11</a></div></div>
 <div class="ttc" id="aclassttk_1_1Ray_html_a1f3552a49c19a137937047b9cb53f65a"><div class="ttname"><a href="classttk_1_1Ray.html#a1f3552a49c19a137937047b9cb53f65a">ttk::Ray::distance</a></div><div class="ttdeci">float distance</div><div class="ttdef"><b>Definition</b> <a href="Ray_8h_source.html#l00022">Ray.h:22</a></div></div>
 <div class="ttc" id="aclassttk_1_1Ray_html_a57d5a6c7733de7a3aa0ba7e5880899c1"><div class="ttname"><a href="classttk_1_1Ray.html#a57d5a6c7733de7a3aa0ba7e5880899c1">ttk::Ray::v</a></div><div class="ttdeci">float v</div><div class="ttdef"><b>Definition</b> <a href="Ray_8h_source.html#l00024">Ray.h:24</a></div></div>
@@ -492,10 +531,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1Ray_html_a92b9c9d51666f34d866a6e2e6cb78f73"><div class="ttname"><a href="classttk_1_1Ray.html#a92b9c9d51666f34d866a6e2e6cb78f73">ttk::Ray::u</a></div><div class="ttdeci">float u</div><div class="ttdef"><b>Definition</b> <a href="Ray_8h_source.html#l00023">Ray.h:23</a></div></div>
 <div class="ttc" id="aclassttk_1_1Ray_html_acd2c311db183c00c3e8c394848052c06"><div class="ttname"><a href="classttk_1_1Ray.html#acd2c311db183c00c3e8c394848052c06">ttk::Ray::m_direction</a></div><div class="ttdeci">float * m_direction</div><div class="ttdef"><b>Definition</b> <a href="Ray_8h_source.html#l00020">Ray.h:20</a></div></div>
 <div class="ttc" id="anamespacettk_1_1Geometry_html_a301d5085752cc97050c25225517cc541"><div class="ttname"><a href="namespacettk_1_1Geometry.html#a301d5085752cc97050c25225517cc541">ttk::Geometry::dotProduct</a></div><div class="ttdeci">T dotProduct(const T *vA0, const T *vA1, const T *vB0, const T *vB1)</div><div class="ttdef"><b>Definition</b> <a href="Geometry_8cpp_source.html#l00388">Geometry.cpp:388</a></div></div>
-<div class="ttc" id="anamespacettk_1_1Geometry_html_a7bb858056e35747844eff6a4c061a7c9"><div class="ttname"><a href="namespacettk_1_1Geometry.html#a7bb858056e35747844eff6a4c061a7c9">ttk::Geometry::subtractVectors</a></div><div class="ttdeci">int subtractVectors(const T *a, const T *b, T *out, const int &amp;dimension=3)</div><div class="ttdef"><b>Definition</b> <a href="Geometry_8cpp_source.html#l00538">Geometry.cpp:538</a></div></div>
+<div class="ttc" id="anamespacettk_1_1Geometry_html_a7bb858056e35747844eff6a4c061a7c9"><div class="ttname"><a href="namespacettk_1_1Geometry.html#a7bb858056e35747844eff6a4c061a7c9">ttk::Geometry::subtractVectors</a></div><div class="ttdeci">int subtractVectors(const T *a, const T *b, T *out, const int &amp;dimension=3)</div><div class="ttdef"><b>Definition</b> <a href="Geometry_8cpp_source.html#l00592">Geometry.cpp:592</a></div></div>
 <div class="ttc" id="anamespacettk_1_1Geometry_html_ac2c43b3ab70574d60d886b36da7f2bc2"><div class="ttname"><a href="namespacettk_1_1Geometry.html#ac2c43b3ab70574d60d886b36da7f2bc2">ttk::Geometry::crossProduct</a></div><div class="ttdeci">int crossProduct(const T *vA0, const T *vA1, const T *vB0, const T *vB1, std::array&lt; T, 3 &gt; &amp;crossProduct)</div><div class="ttdef"><b>Definition</b> <a href="Geometry_8cpp_source.html#l00332">Geometry.cpp:332</a></div></div>
 <div class="ttc" id="anamespacettk_html"><div class="ttname"><a href="namespacettk.html">ttk</a></div><div class="ttdoc">The Topology ToolKit.</div><div class="ttdef"><b>Definition</b> <a href="AbstractTriangulation_8h_source.html#l00051">AbstractTriangulation.h:51</a></div></div>
-<div class="ttc" id="aripserpy_8cpp_html_a3cf380c4e58eeeaf68e4299123eeeefe"><div class="ttname"><a href="ripserpy_8cpp.html#a3cf380c4e58eeeaf68e4299123eeeefe">end</a></div><div class="ttdeci">T end(std::pair&lt; T, T &gt; &amp;p)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00472">ripserpy.cpp:472</a></div></div>
+<div class="ttc" id="aripserpy_8cpp_html_a3cf380c4e58eeeaf68e4299123eeeefe"><div class="ttname"><a href="ripserpy_8cpp.html#a3cf380c4e58eeeaf68e4299123eeeefe">end</a></div><div class="ttdeci">T end(std::pair&lt; T, T &gt; &amp;p)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00483">ripserpy.cpp:483</a></div></div>
 <div class="ttc" id="astructttk_1_1BoundingVolumeHierarchy_1_1Node_html"><div class="ttname"><a href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html">ttk::BoundingVolumeHierarchy::Node</a></div><div class="ttdef"><b>Definition</b> <a href="BoundingVolumeHierarchy_8h_source.html#l00026">BoundingVolumeHierarchy.h:26</a></div></div>
 <div class="ttc" id="astructttk_1_1BoundingVolumeHierarchy_1_1Node_html_a0655119ff062b2aec243d003d4be91c3"><div class="ttname"><a href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a0655119ff062b2aec243d003d4be91c3">ttk::BoundingVolumeHierarchy::Node::m_minY</a></div><div class="ttdeci">float m_minY</div><div class="ttdef"><b>Definition</b> <a href="BoundingVolumeHierarchy_8h_source.html#l00062">BoundingVolumeHierarchy.h:62</a></div></div>
 <div class="ttc" id="astructttk_1_1BoundingVolumeHierarchy_1_1Node_html_a0bc168784bf4c605dd3c3e499aa65a4c"><div class="ttname"><a href="structttk_1_1BoundingVolumeHierarchy_1_1Node.html#a0bc168784bf4c605dd3c3e499aa65a4c">ttk::BoundingVolumeHierarchy::Node::m_minX</a></div><div class="ttdeci">float m_minX</div><div class="ttdef"><b>Definition</b> <a href="BoundingVolumeHierarchy_8h_source.html#l00062">BoundingVolumeHierarchy.h:62</a></div></div>
@@ -528,7 +567,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:28 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:17 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_877a2188a9a69f9a9be8a085234e84be.html">base</a></li><li class="navelem"><a class="el" href="dir_36b3132e51c7f94f0801a3cc1310d5e2.html">cinemaImaging</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_875520153cbea4bc0a3950d9322d684b.html">cinemaImaging</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -145,8 +145,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> &amp;nTriangles,</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keyword">const</span> IT *connectivityList)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <a class="code hl_class" href="classttk_1_1Timer.html">ttk::Timer</a> timer;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Initializing Scene (#v:&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(nVertices)</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                   + <span class="stringliteral">&quot;|#t:&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(nTriangles) + <span class="stringliteral">&quot;)&quot;</span>,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Initializing Scene (#v:&quot;</span> + std::to_string(nVertices)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                   + <span class="stringliteral">&quot;|#t:&quot;</span> + std::to_string(nTriangles) + <span class="stringliteral">&quot;)&quot;</span>,</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                 0, 0, <a class="code hl_enumvalue" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">ttk::debug::LineMode::REPLACE</a>);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  scene = rtcNewScene(device);</div>
@@ -188,8 +188,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  rtcCommitScene(scene);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Initializing Scene (#v:&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(nVertices)</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                   + <span class="stringliteral">&quot;|#t:&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(nTriangles) + <span class="stringliteral">&quot;)&quot;</span>,</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Initializing Scene (#v:&quot;</span> + std::to_string(nVertices)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                   + <span class="stringliteral">&quot;|#t:&quot;</span> + std::to_string(nTriangles) + <span class="stringliteral">&quot;)&quot;</span>,</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                 1, timer.<a class="code hl_function" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>());</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>};</div>
@@ -202,14 +202,13 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1CinemaImaging_html"><div class="ttname"><a href="classttk_1_1CinemaImaging.html">ttk::CinemaImaging</a></div><div class="ttdoc">TTK modules that generates images of a dataset.</div><div class="ttdef"><b>Definition</b> <a href="CinemaImaging_8h_source.html#l00027">CinemaImaging.h:27</a></div></div>
 <div class="ttc" id="aclassttk_1_1Timer_html"><div class="ttname"><a href="classttk_1_1Timer.html">ttk::Timer</a></div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00007">Timer.h:7</a></div></div>
 <div class="ttc" id="aclassttk_1_1Timer_html_af2b2e58141b9e1cc1f69cf2dc16b3c3a"><div class="ttname"><a href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">ttk::Timer::getElapsedTime</a></div><div class="ttdeci">double getElapsedTime()</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00015">Timer.h:15</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
 <div class="ttc" id="anamespacettk_1_1debug_html_a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7"><div class="ttname"><a href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">ttk::debug::LineMode::REPLACE</a></div><div class="ttdeci">@ REPLACE</div></div>
 <div class="ttc" id="anamespacettk_html"><div class="ttname"><a href="namespacettk.html">ttk</a></div><div class="ttdoc">The Topology ToolKit.</div><div class="ttdef"><b>Definition</b> <a href="AbstractTriangulation_8h_source.html#l00051">AbstractTriangulation.h:51</a></div></div>
 <div class="ttc" id="awelcomeMsg_8inl_html_a8b6ab19fd03996237d7f77610c5e4e1e"><div class="ttname"><a href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a></div><div class="ttdeci">printMsg(debug::output::BOLD+&quot;  | |   | | | . \\                  | | (__| |  / __/| |_| / __/|__   _|&quot;+debug::output::ENDCOLOR, debug::Priority::PERFORMANCE, debug::LineMode::NEW, stream)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:28 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:17 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -29,6 +29,9 @@ var searchData=
   ['ttktypemacrorrr_26',['ttkTypeMacroRRR',['../ttkMacros_8h.html#a06217bc89b20c237bc236c01efb9d788',1,'ttkMacros.h']]],
   ['ttktypemacrort_27',['ttkTypeMacroRT',['../ttkMacros_8h.html#a8a77a936734e768781058d18f9e6222f',1,'ttkMacros.h']]],
   ['ttktypemacrot_28',['ttkTypeMacroT',['../ttkMacros_8h.html#a4899fbfbff49581a71c4cadfc09ac3bb',1,'ttkMacros.h']]],
-  ['ttkvtktemplatemacro_29',['ttkVtkTemplateMacro',['../ttkMacros_8h.html#acaef27a649bf54f642410dbdf9ebe13a',1,'ttkMacros.h']]],
-  ['ttkvtktemplatemacrocase_30',['ttkVtkTemplateMacroCase',['../ttkMacros_8h.html#a4d14259ca38e86016f20e3a2fd878c47',1,'ttkMacros.h']]]
+  ['ttkvtktemplate2macro_29',['ttkVtkTemplate2Macro',['../ttkMacros_8h.html#a38c1f23b8cbd62830a816dbd9d6fc4e1',1,'ttkMacros.h']]],
+  ['ttkvtktemplate2macrocase1_30',['ttkVtkTemplate2MacroCase1',['../ttkMacros_8h.html#a404670684bc5149bd399db15f4ccbf9f',1,'ttkMacros.h']]],
+  ['ttkvtktemplate2macrocase2_31',['ttkVtkTemplate2MacroCase2',['../ttkMacros_8h.html#a9921af668b88c49b4672424336df2c22',1,'ttkMacros.h']]],
+  ['ttkvtktemplatemacro_32',['ttkVtkTemplateMacro',['../ttkMacros_8h.html#acaef27a649bf54f642410dbdf9ebe13a',1,'ttkMacros.h']]],
+  ['ttkvtktemplatemacrocase_33',['ttkVtkTemplateMacroCase',['../ttkMacros_8h.html#a4d14259ca38e86016f20e3a2fd878c47',1,'ttkMacros.h']]]
 ];

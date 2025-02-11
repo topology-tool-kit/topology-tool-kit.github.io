@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_b5a3b6d63a7e4f975656391b89b6e794.html">vtk</a></li><li class="navelem"><a class="el" href="dir_befae167ece5a4ca145ef80c4e1e2490.html">ttkCinemaDarkroom</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_e3a2ce78563d743521c6d61c31866983.html">ttkCinemaDarkroom</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -267,8 +267,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keywordtype">int</span> *size = this-&gt;RenderWindow-&gt;GetSize();</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="keywordflow">if</span>(size[0] != dim[0] || size[1] != dim[1]) {</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <a class="code hl_class" href="classttk_1_1Timer.html">ttk::Timer</a> timer;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Initializing Renderer (&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(dim[0]) + <span class="stringliteral">&quot;x&quot;</span></div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                     + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(dim[1]) + <span class="stringliteral">&quot;)&quot;</span>,</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Initializing Renderer (&quot;</span> + std::to_string(dim[0]) + <span class="stringliteral">&quot;x&quot;</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                     + std::to_string(dim[1]) + <span class="stringliteral">&quot;)&quot;</span>,</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                   0, 0, 1, <a class="code hl_enumvalue" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">ttk::debug::LineMode::REPLACE</a>);</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    this-&gt;RenderWindow = <a class="code hl_class" href="classvtkSmartPointer.html">vtkSmartPointer&lt;vtkRenderWindow&gt;::New</a>();</div>
@@ -283,8 +283,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    windowAsOGL-&gt;SetSize(dim[0], dim[1]);</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    windowAsOGL-&gt;Initialize();</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Initializing Renderer (&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(dim[0]) + <span class="stringliteral">&quot;x&quot;</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                     + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(dim[1]) + <span class="stringliteral">&quot;)&quot;</span>,</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Initializing Renderer (&quot;</span> + std::to_string(dim[0]) + <span class="stringliteral">&quot;x&quot;</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                     + std::to_string(dim[1]) + <span class="stringliteral">&quot;)&quot;</span>,</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                   1, timer.<a class="code hl_function" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>(), 1);</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  }</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
@@ -302,11 +302,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  <span class="keyword">auto</span> inputArray = this-&gt;GetInputArrayToProcess(arrayIdx, image);</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="keywordflow">if</span>(!inputArray || this-&gt;GetInputArrayAssociation(arrayIdx, image) != 0) {</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Unable to retrieve input point data array &quot;</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                   + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(arrayIdx) + <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                   + std::to_string(arrayIdx) + <span class="stringliteral">&quot;.&quot;</span>);</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  }</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  std::string <span class="keyword">const</span> textureName = <span class="stringliteral">&quot;tex&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(textureIdx);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  std::string <span class="keyword">const</span> textureName = <span class="stringliteral">&quot;tex&quot;</span> + std::to_string(textureIdx);</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  <span class="keyword">auto</span> properties = this-&gt;FullScreenQuadActor-&gt;GetProperty();</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  <span class="comment">// if texture already exists remove it</span></div>
@@ -341,7 +341,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  <span class="keywordtype">int</span> dim[3];</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  image-&gt;GetDimensions(dim);</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="stringliteral">&quot;Rendering (&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(dim[0]) + <span class="stringliteral">&quot;x&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(dim[1]) + <span class="stringliteral">&quot;)&quot;</span>,</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="stringliteral">&quot;Rendering (&quot;</span> + std::to_string(dim[0]) + <span class="stringliteral">&quot;x&quot;</span> + std::to_string(dim[1]) + <span class="stringliteral">&quot;)&quot;</span>,</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    0, 0, 1, <a class="code hl_enumvalue" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">ttk::debug::LineMode::REPLACE</a>);</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  this-&gt;FullScreenQuadActor-&gt;GetShaderProperty()-&gt;SetVertexShaderCode(</div>
@@ -362,7 +362,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  image-&gt;GetPointData()-&gt;SetActiveScalars(buffer-&gt;GetName());</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="stringliteral">&quot;Rendering (&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(dim[0]) + <span class="stringliteral">&quot;x&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(dim[1]) + <span class="stringliteral">&quot;)&quot;</span>,</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="stringliteral">&quot;Rendering (&quot;</span> + std::to_string(dim[0]) + <span class="stringliteral">&quot;x&quot;</span> + std::to_string(dim[1]) + <span class="stringliteral">&quot;)&quot;</span>,</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    1, timer.<a class="code hl_function" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>(), 1);</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  <span class="keywordflow">return</span> 1;</div>
@@ -388,7 +388,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1Timer_html"><div class="ttname"><a href="classttk_1_1Timer.html">ttk::Timer</a></div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00007">Timer.h:7</a></div></div>
 <div class="ttc" id="aclassttk_1_1Timer_html_af2b2e58141b9e1cc1f69cf2dc16b3c3a"><div class="ttname"><a href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">ttk::Timer::getElapsedTime</a></div><div class="ttdeci">double getElapsedTime()</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00015">Timer.h:15</a></div></div>
 <div class="ttc" id="aclassvtkSmartPointer_html"><div class="ttname"><a href="classvtkSmartPointer.html">vtkSmartPointer</a></div><div class="ttdef"><b>Definition</b> <a href="ttkUtils_8h_source.html#l00026">ttkUtils.h:26</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
 <div class="ttc" id="anamespacettk_1_1debug_html_a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7"><div class="ttname"><a href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">ttk::debug::LineMode::REPLACE</a></div><div class="ttdeci">@ REPLACE</div></div>
 <div class="ttc" id="attkCinemaDarkroomShader_8cpp_html_ac79d86a8836d7a00c3aa9bab7ba05a05"><div class="ttname"><a href="ttkCinemaDarkroomShader_8cpp.html#ac79d86a8836d7a00c3aa9bab7ba05a05">vtkStandardNewMacro</a></div><div class="ttdeci">vtkStandardNewMacro(ttkCinemaDarkroomShader)</div></div>
 <div class="ttc" id="attkCinemaDarkroomShader_8h_html"><div class="ttname"><a href="ttkCinemaDarkroomShader_8h.html">ttkCinemaDarkroomShader.h</a></div></div>
@@ -398,7 +397,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:30 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

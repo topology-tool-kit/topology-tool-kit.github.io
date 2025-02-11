@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_877a2188a9a69f9a9be8a085234e84be.html">base</a></li><li class="navelem"><a class="el" href="dir_5f765d720449e444e939ace41f54f69c.html">contourForestsTree</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_35b4cf85d369c4bca58b1c430a7c7508.html">contourForestsTree</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -90,7 +90,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="MergeTree_8h.html">MergeTree.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacestd.html">std</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using namespace </span>std;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacettk.html">ttk</a>;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using namespace </span>cf;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
@@ -101,7 +101,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                     std::shared_ptr&lt;Scalars&gt; scalars,</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                     <a class="code hl_enumeration" href="namespacettk_1_1cf.html#a1e3e9f613b8aa03fe90650f087d34f06">TreeType</a> type,</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                     <a class="code hl_typedef" href="namespacettk_1_1cf.html#a75ea5c320ab59dac7ec66d74b1baacfa">idPartition</a> part)</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  : params_(<a class="code hl_namespace" href="namespacestd.html">std</a>::move(params)), scalars_(<a class="code hl_namespace" href="namespacestd.html">std</a>::move(scalars)) {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  : params_(std::move(params)), scalars_(std::move(scalars)) {</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keywordflow">if</span>(type == <a class="code hl_enumvalue" href="namespacettk_1_1cf.html#a1e3e9f613b8aa03fe90650f087d34f06a9a1afb5df3d74145d53a2b31f13e81be">TreeType::Join</a>) {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#a9239e36b0745881da1753f97ad8f0105">setDebugMsgPrefix</a>(<span class="stringliteral">&quot;JoinTree&quot;</span>);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(type == <a class="code hl_enumvalue" href="namespacettk_1_1cf.html#a1e3e9f613b8aa03fe90650f087d34f06af23a3ce191fe597d0415486bba7f304e">TreeType::Split</a>) {</div>
@@ -1551,7 +1551,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1cf_1_1SuperArc_html_aeb14fe5ca5e39ed92942f976da73c946"><div class="ttname"><a href="classttk_1_1cf_1_1SuperArc.html#aeb14fe5ca5e39ed92942f976da73c946">ttk::cf::SuperArc::getReplacantArcId</a></div><div class="ttdeci">const idSuperArc &amp; getReplacantArcId() const</div><div class="ttdef"><b>Definition</b> <a href="DeprecatedSuperArc_8h_source.html#l00216">DeprecatedSuperArc.h:216</a></div></div>
 <div class="ttc" id="aclassttk_1_1cf_1_1SuperArc_html_aebe11b3630c7c96a63268d3a5d37e78a"><div class="ttname"><a href="classttk_1_1cf_1_1SuperArc.html#aebe11b3630c7c96a63268d3a5d37e78a">ttk::cf::SuperArc::getDownNodeId</a></div><div class="ttdeci">const idNode &amp; getDownNodeId() const</div><div class="ttdef"><b>Definition</b> <a href="DeprecatedSuperArc_8h_source.html#l00112">DeprecatedSuperArc.h:112</a></div></div>
 <div class="ttc" id="aclassttk_1_1cf_1_1SuperArc_html_af56b9dc97339312edebd19069cc059f7"><div class="ttname"><a href="classttk_1_1cf_1_1SuperArc.html#af56b9dc97339312edebd19069cc059f7">ttk::cf::SuperArc::getUpCT</a></div><div class="ttdeci">idPartition getUpCT() const</div><div class="ttdef"><b>Definition</b> <a href="DeprecatedSuperArc_8h_source.html#l00133">DeprecatedSuperArc.h:133</a></div></div>
-<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00098">ripserpy.cpp:98</a></div></div>
 <div class="ttc" id="anamespacettk_1_1cf_html_a1e3e9f613b8aa03fe90650f087d34f06"><div class="ttname"><a href="namespacettk_1_1cf.html#a1e3e9f613b8aa03fe90650f087d34f06">ttk::cf::TreeType</a></div><div class="ttdeci">TreeType</div><div class="ttdef"><b>Definition</b> <a href="DeprecatedDataTypes_8h_source.html#l00076">DeprecatedDataTypes.h:76</a></div></div>
 <div class="ttc" id="anamespacettk_1_1cf_html_a1e3e9f613b8aa03fe90650f087d34f06a2fd10193c197ad4b4d9882f0d9b28ad9"><div class="ttname"><a href="namespacettk_1_1cf.html#a1e3e9f613b8aa03fe90650f087d34f06a2fd10193c197ad4b4d9882f0d9b28ad9">ttk::cf::JoinAndSplit</a></div><div class="ttdeci">@ JoinAndSplit</div><div class="ttdef"><b>Definition</b> <a href="DeprecatedDataTypes_8h_source.html#l00076">DeprecatedDataTypes.h:76</a></div></div>
 <div class="ttc" id="anamespacettk_1_1cf_html_a1e3e9f613b8aa03fe90650f087d34f06a9a1afb5df3d74145d53a2b31f13e81be"><div class="ttname"><a href="namespacettk_1_1cf.html#a1e3e9f613b8aa03fe90650f087d34f06a9a1afb5df3d74145d53a2b31f13e81be">ttk::cf::Join</a></div><div class="ttdeci">@ Join</div><div class="ttdef"><b>Definition</b> <a href="DeprecatedDataTypes_8h_source.html#l00076">DeprecatedDataTypes.h:76</a></div></div>
@@ -1577,7 +1576,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:28 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:18 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

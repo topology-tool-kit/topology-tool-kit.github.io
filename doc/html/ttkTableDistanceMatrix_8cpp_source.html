@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_b5a3b6d63a7e4f975656391b89b6e794.html">vtk</a></li><li class="navelem"><a class="el" href="dir_76e22014849f54d3277ad19ae86ffae5.html">ttkTableDistanceMatrix</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_9dc61d756d32810525e9cf51bba59db2.html">ttkTableDistanceMatrix</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -152,8 +152,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordflow">if</span>(numberOfRows &lt;= 0 || numberOfColumns &lt;= 0) {</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Input matrix has invalid dimensions (rows: &quot;</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                   + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(numberOfRows)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                   + <span class="stringliteral">&quot;, columns: &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(numberOfColumns) + <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                   + std::to_string(numberOfRows)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                   + <span class="stringliteral">&quot;, columns: &quot;</span> + std::to_string(numberOfColumns) + <span class="stringliteral">&quot;)&quot;</span>);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  }</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
@@ -184,8 +184,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="comment">// zero-padd column name to keep Row Data columns ordered</span></div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keyword">const</span> <span class="keyword">auto</span> zeroPad</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    = [](std::string &amp;colName, <span class="keyword">const</span> <span class="keywordtype">size_t</span> numberCols, <span class="keyword">const</span> <span class="keywordtype">size_t</span> colIdx) {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        std::string <span class="keyword">const</span> max{<a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(numberCols - 1)};</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        std::string <span class="keyword">const</span> cur{<a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(colIdx)};</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        std::string <span class="keyword">const</span> max{std::to_string(numberCols - 1)};</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        std::string <span class="keyword">const</span> cur{std::to_string(colIdx)};</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        std::string <span class="keyword">const</span> zer(max.size() - cur.size(), <span class="charliteral">&#39;0&#39;</span>);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        colName.append(zer).append(cur);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      };</div>
@@ -205,8 +205,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  this-&gt;<a class="code hl_function" href="classttk_1_1LDistanceMatrix.html#a4d472c5b8df82d065868423ecf452e56">execute</a>(distanceMatrix, inputPtrs, inputMatrix[0].size());</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Complete (#dimensions: &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(numberOfColumns)</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                   + <span class="stringliteral">&quot;, #points: &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(numberOfRows) + <span class="stringliteral">&quot;)&quot;</span>,</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Complete (#dimensions: &quot;</span> + std::to_string(numberOfColumns)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                   + <span class="stringliteral">&quot;, #points: &quot;</span> + std::to_string(numberOfRows) + <span class="stringliteral">&quot;)&quot;</span>,</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                 1.0, tm.getElapsedTime(), this-&gt;threadNumber_);</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <span class="keywordflow">return</span> 1;</div>
@@ -220,7 +220,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1Debug_html_afd1938d93be0cf163be78086ed26370e"><div class="ttname"><a href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">ttk::Debug::printErr</a></div><div class="ttdeci">int printErr(const std::string &amp;msg, const debug::LineMode &amp;lineMode=debug::LineMode::NEW, std::ostream &amp;stream=std::cerr) const</div><div class="ttdef"><b>Definition</b> <a href="Debug_8h_source.html#l00149">Debug.h:149</a></div></div>
 <div class="ttc" id="aclassttk_1_1LDistanceMatrix_html_a4d472c5b8df82d065868423ecf452e56"><div class="ttname"><a href="classttk_1_1LDistanceMatrix.html#a4d472c5b8df82d065868423ecf452e56">ttk::LDistanceMatrix::execute</a></div><div class="ttdeci">int execute(std::vector&lt; TOut * &gt; &amp;output, const std::vector&lt; const TIn * &gt; &amp;inputs, const size_t nPoints) const</div><div class="ttdef"><b>Definition</b> <a href="LDistanceMatrix_8h_source.html#l00048">LDistanceMatrix.h:48</a></div></div>
 <div class="ttc" id="aclassttk_1_1Timer_html"><div class="ttname"><a href="classttk_1_1Timer.html">ttk::Timer</a></div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00007">Timer.h:7</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
 <div class="ttc" id="attkTableDistanceMatrix_8cpp_html_afe66ce7a511bb29ee37e22f8095d8e1c"><div class="ttname"><a href="ttkTableDistanceMatrix_8cpp.html#afe66ce7a511bb29ee37e22f8095d8e1c">vtkStandardNewMacro</a></div><div class="ttdeci">vtkStandardNewMacro(ttkTableDistanceMatrix)</div></div>
 <div class="ttc" id="attkTableDistanceMatrix_8h_html"><div class="ttname"><a href="ttkTableDistanceMatrix_8h.html">ttkTableDistanceMatrix.h</a></div></div>
 <div class="ttc" id="attkUtils_8h_html"><div class="ttname"><a href="ttkUtils_8h.html">ttkUtils.h</a></div></div>
@@ -228,7 +227,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:31 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

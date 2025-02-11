@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_877a2188a9a69f9a9be8a085234e84be.html">base</a></li><li class="navelem"><a class="el" href="dir_badc0ac8064725adcc90f213b8196bea.html">topologicalCompression</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_f5ed8785cc45355d865cdf64f457f476.html">topologicalCompression</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -128,12 +128,12 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">double</span> <span class="keyword">const</span> value = std::get&lt;0&gt;(tt);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">int</span> <span class="keyword">const</span> sseg = std::get&lt;1&gt;(tt);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span>(seg != sseg) {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>          this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Decompression mismatch (&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(seg) + <span class="stringliteral">&quot;, &quot;</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                         + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(sseg) + <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>          this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Decompression mismatch (&quot;</span> + std::to_string(seg) + <span class="stringliteral">&quot;, &quot;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                         + std::to_string(sseg) + <span class="stringliteral">&quot;)&quot;</span>);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_variable" href="classttk_1_1TopologicalCompression.html#a8dfa4f467d10656178600bbe6edff298">decompressedData_</a>[i] = value;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Could not find &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(seg) + <span class="stringliteral">&quot; index.&quot;</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Could not find &quot;</span> + std::to_string(seg) + <span class="stringliteral">&quot; index.&quot;</span>);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        std::tuple&lt;double, int&gt; tt = *it;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">double</span> <span class="keyword">const</span> value = std::get&lt;0&gt;(tt);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_variable" href="classttk_1_1TopologicalCompression.html#a8dfa4f467d10656178600bbe6edff298">decompressedData_</a>[i] = value;</div>
@@ -329,7 +329,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  }</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  <span class="keywordflow">if</span>(numberOfMisses &gt; 0) {</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    this-&gt;printWrn(<span class="stringliteral">&quot;Missed &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(numberOfMisses) + <span class="stringliteral">&quot; values.&quot;</span>);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    this-&gt;printWrn(<span class="stringliteral">&quot;Missed &quot;</span> + std::to_string(numberOfMisses) + <span class="stringliteral">&quot; values.&quot;</span>);</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  }</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>}</div>
 </div>
@@ -660,7 +660,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(seg &gt;= 0)</div>
 <div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>      affectedSegments[seg] = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>      this-&gt;printErr(<span class="stringliteral">&quot;Negative segment encountered (&quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(i)</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>      this-&gt;printErr(<span class="stringliteral">&quot;Negative segment encountered (&quot;</span> + std::to_string(i)</div>
 <div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>                     + <span class="stringliteral">&quot;)&quot;</span>);</div>
 <div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>    }</div>
 <div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>  }</div>
@@ -674,8 +674,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>  std::sort(empty.begin(), empty.end());</div>
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>  <span class="keywordtype">int</span> indexLast = -1;</div>
 <div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>  <span class="keywordflow">if</span>(oob.size() &gt; empty.size()) {</div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>    this-&gt;printWrn(<span class="stringliteral">&quot;oob size &gt; empty size: &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(oob.size()) + <span class="stringliteral">&quot;, &quot;</span></div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>                   + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(empty.size()));</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>    this-&gt;printWrn(<span class="stringliteral">&quot;oob size &gt; empty size: &quot;</span> + std::to_string(oob.size()) + <span class="stringliteral">&quot;, &quot;</span></div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>                   + std::to_string(empty.size()));</div>
 <div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>    <span class="comment">// Replace</span></div>
 <div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; vertexNumber; ++i) {</div>
@@ -715,7 +715,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>          doneAffecting = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>          <span class="keywordflow">if</span>(doneAffecting) {</div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>            this-&gt;printWrn(<span class="stringliteral">&quot;Hole detected at &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(i)</div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>            this-&gt;printWrn(<span class="stringliteral">&quot;Hole detected at &quot;</span> + std::to_string(i)</div>
 <div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>                           + <span class="stringliteral">&quot;th segment.&quot;</span>);</div>
 <div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>          } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>            indexLast = i;</div>
@@ -849,8 +849,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>  {</div>
 <div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>    <span class="keywordflow">if</span>(indexLast &gt; -1 &amp;&amp; indexLast + 1 != (<span class="keywordtype">int</span>)mapping_.size()) {</div>
 <div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>      this-&gt;printWrn(<span class="stringliteral">&quot;Possible affectation mismatch (&quot;</span></div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>                     + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(indexLast + 1) + <span class="stringliteral">&quot;, &quot;</span></div>
-<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>                     + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(mapping_.size()) + <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>                     + std::to_string(indexLast + 1) + <span class="stringliteral">&quot;, &quot;</span></div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>                     + std::to_string(mapping_.size()) + <span class="stringliteral">&quot;)&quot;</span>);</div>
 <div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>    }</div>
 <div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span> </div>
 <div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>    <span class="keywordtype">int</span> <span class="keyword">const</span> nSegments</div>
@@ -858,7 +858,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>    this-&gt;NbSegments = nSegments;</div>
 <div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>    this-&gt;NbVertices = vertexNumber;</div>
 <div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span> </div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Assigned &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(nSegments) + <span class="stringliteral">&quot; segment(s).&quot;</span>,</div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Assigned &quot;</span> + std::to_string(nSegments) + <span class="stringliteral">&quot; segment(s).&quot;</span>,</div>
 <div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>                   1.0, t1.<a class="code hl_function" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>(), this-&gt;threadNumber_);</div>
 <div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>  }</div>
 <div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span> </div>
@@ -886,17 +886,16 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1TopologicalCompression_html_ac444d8e3048d4dd8381ee288aeaa4a3c"><div class="ttname"><a href="classttk_1_1TopologicalCompression.html#ac444d8e3048d4dd8381ee288aeaa4a3c">ttk::TopologicalCompression::dataExtent_</a></div><div class="ttdeci">int dataExtent_[6]</div><div class="ttdef"><b>Definition</b> <a href="TopologicalCompression_8h_source.html#l00379">TopologicalCompression.h:379</a></div></div>
 <div class="ttc" id="aclassttk_1_1TopologicalCompression_html_ac74ec9af2ca4a59b066b98a15f239b0c"><div class="ttname"><a href="classttk_1_1TopologicalCompression.html#ac74ec9af2ca4a59b066b98a15f239b0c">ttk::TopologicalCompression::CropIntervals</a></div><div class="ttdeci">void CropIntervals(std::vector&lt; std::tuple&lt; dataType, int &gt; &gt; &amp;mappings, std::vector&lt; std::tuple&lt; dataType, int &gt; &gt; &amp;mappingsSortedPerValue, double min, double max, int vertexNumber, double *array, std::vector&lt; int &gt; &amp;Seg) const</div><div class="ttdef"><b>Definition</b> <a href="PersistenceDiagramCompression_8h_source.html#l00186">PersistenceDiagramCompression.h:186</a></div></div>
 <div class="ttc" id="aclassttk_1_1TopologicalCompression_html_ad8fe0d2879d5c6fe058e963aa63242e3"><div class="ttname"><a href="classttk_1_1TopologicalCompression.html#ad8fe0d2879d5c6fe058e963aa63242e3">ttk::TopologicalCompression::mapping_</a></div><div class="ttdeci">std::vector&lt; std::tuple&lt; double, int &gt; &gt; mapping_</div><div class="ttdef"><b>Definition</b> <a href="TopologicalCompression_8h_source.html#l00387">TopologicalCompression.h:387</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
 <div class="ttc" id="anamespacettk_1_1ftm_html_a50fb2f892ab92b84f0d827e3993b5a2ba10deb6520dd5a916547d41d67c161e4b"><div class="ttname"><a href="namespacettk_1_1ftm.html#a50fb2f892ab92b84f0d827e3993b5a2ba10deb6520dd5a916547d41d67c161e4b">ttk::ftm::Join_Split</a></div><div class="ttdeci">@ Join_Split</div><div class="ttdef"><b>Definition</b> <a href="FTMDataTypes_8h_source.html#l00092">FTMDataTypes.h:92</a></div></div>
 <div class="ttc" id="anamespacettk_html_a5f25cd7c7bcfccb8921be56ed19469d5"><div class="ttname"><a href="namespacettk.html#a5f25cd7c7bcfccb8921be56ed19469d5">ttk::sortVertices</a></div><div class="ttdeci">void sortVertices(const size_t nVerts, const scalarType *const scalars, const idType *const offsets, SimplexId *const order, const int nThreads)</div><div class="ttdoc">Sort vertices according to scalars disambiguated by offsets.</div><div class="ttdef"><b>Definition</b> <a href="OrderDisambiguation_8h_source.html#l00020">OrderDisambiguation.h:20</a></div></div>
 <div class="ttc" id="anamespacettk_html_af0e68dbb0101c35aa1990bffafe71025"><div class="ttname"><a href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">ttk::SimplexId</a></div><div class="ttdeci">int SimplexId</div><div class="ttdoc">Identifier type for simplices of any dimension.</div><div class="ttdef"><b>Definition</b> <a href="DataTypes_8h_source.html#l00022">DataTypes.h:22</a></div></div>
-<div class="ttc" id="aripserpy_8cpp_html_a3cf380c4e58eeeaf68e4299123eeeefe"><div class="ttname"><a href="ripserpy_8cpp.html#a3cf380c4e58eeeaf68e4299123eeeefe">end</a></div><div class="ttdeci">T end(std::pair&lt; T, T &gt; &amp;p)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00472">ripserpy.cpp:472</a></div></div>
-<div class="ttc" id="aripserpy_8cpp_html_aef2d8b60edd5a3139a475a06101abcfc"><div class="ttname"><a href="ripserpy_8cpp.html#aef2d8b60edd5a3139a475a06101abcfc">begin</a></div><div class="ttdeci">T begin(std::pair&lt; T, T &gt; &amp;p)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00468">ripserpy.cpp:468</a></div></div>
+<div class="ttc" id="aripserpy_8cpp_html_a3cf380c4e58eeeaf68e4299123eeeefe"><div class="ttname"><a href="ripserpy_8cpp.html#a3cf380c4e58eeeaf68e4299123eeeefe">end</a></div><div class="ttdeci">T end(std::pair&lt; T, T &gt; &amp;p)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00483">ripserpy.cpp:483</a></div></div>
+<div class="ttc" id="aripserpy_8cpp_html_aef2d8b60edd5a3139a475a06101abcfc"><div class="ttname"><a href="ripserpy_8cpp.html#aef2d8b60edd5a3139a475a06101abcfc">begin</a></div><div class="ttdeci">T begin(std::pair&lt; T, T &gt; &amp;p)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00479">ripserpy.cpp:479</a></div></div>
 <div class="ttc" id="awelcomeMsg_8inl_html_a8b6ab19fd03996237d7f77610c5e4e1e"><div class="ttname"><a href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a></div><div class="ttdeci">printMsg(debug::output::BOLD+&quot;  | |   | | | . \\                  | | (__| |  / __/| |_| / __/|__   _|&quot;+debug::output::ENDCOLOR, debug::Priority::PERFORMANCE, debug::LineMode::NEW, stream)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:30 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

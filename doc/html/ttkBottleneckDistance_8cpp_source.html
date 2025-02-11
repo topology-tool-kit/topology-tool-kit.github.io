@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_b5a3b6d63a7e4f975656391b89b6e794.html">vtk</a></li><li class="navelem"><a class="el" href="dir_d607100528795f55c04989bb8c96a9c0.html">ttkBottleneckDistance</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_cc740df76daf42c7c2f2abe529f5cd16.html">ttkBottleneckDistance</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -250,7 +250,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  }</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <span class="keywordflow">if</span>(inputDiags.size() &gt; 2) {</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#a37c8c3e3e723babc48eeaa06b481cc4b">printWrn</a>(<span class="stringliteral">&quot;More than two input diagrams: &quot;</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                   + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(inputDiags.size()));</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                   + std::to_string(inputDiags.size()));</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  }</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="keyword">const</span> <span class="keyword">auto</span> coords0 = vtkFloatArray::SafeDownCast(</div>
@@ -283,7 +283,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  status = this-&gt;<a class="code hl_function" href="classttk_1_1BottleneckDistance.html#a6910867837f6d8b3d860fba067eaf961">execute</a>(diagram0, diagram1, matchings);</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <span class="keywordflow">if</span>(status != 0) {</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Base layer failed with error status &quot;</span></div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                   + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(status));</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                   + std::to_string(status));</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  }</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
@@ -340,7 +340,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1BottleneckDistance_html_ac81bd8050d7ffbdcdbed9fdec120276f"><div class="ttname"><a href="classttk_1_1BottleneckDistance.html#ac81bd8050d7ffbdcdbed9fdec120276f">ttk::BottleneckDistance::distance_</a></div><div class="ttdeci">double distance_</div><div class="ttdef"><b>Definition</b> <a href="BottleneckDistance_8h_source.html#l00056">BottleneckDistance.h:56</a></div></div>
 <div class="ttc" id="aclassttk_1_1Debug_html_a37c8c3e3e723babc48eeaa06b481cc4b"><div class="ttname"><a href="classttk_1_1Debug.html#a37c8c3e3e723babc48eeaa06b481cc4b">ttk::Debug::printWrn</a></div><div class="ttdeci">int printWrn(const std::string &amp;msg, const debug::LineMode &amp;lineMode=debug::LineMode::NEW, std::ostream &amp;stream=std::cerr) const</div><div class="ttdef"><b>Definition</b> <a href="Debug_8h_source.html#l00159">Debug.h:159</a></div></div>
 <div class="ttc" id="aclassttk_1_1Debug_html_afd1938d93be0cf163be78086ed26370e"><div class="ttname"><a href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">ttk::Debug::printErr</a></div><div class="ttdeci">int printErr(const std::string &amp;msg, const debug::LineMode &amp;lineMode=debug::LineMode::NEW, std::ostream &amp;stream=std::cerr) const</div><div class="ttdef"><b>Definition</b> <a href="Debug_8h_source.html#l00149">Debug.h:149</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
 <div class="ttc" id="anamespacettk_html_aab8bba05f97023f08b0a26d1b3598555"><div class="ttname"><a href="namespacettk.html#aab8bba05f97023f08b0a26d1b3598555">ttk::DiagramType</a></div><div class="ttdeci">std::vector&lt; PersistencePair &gt; DiagramType</div><div class="ttdoc">Persistence Diagram type as a vector of Persistence pairs.</div><div class="ttdef"><b>Definition</b> <a href="PersistenceDiagramUtils_8h_source.html#l00058">PersistenceDiagramUtils.h:58</a></div></div>
 <div class="ttc" id="astructttk_1_1CriticalVertex_html_a4b22eb8705d3c335d8619e4ce48a1a41"><div class="ttname"><a href="structttk_1_1CriticalVertex.html#a4b22eb8705d3c335d8619e4ce48a1a41">ttk::CriticalVertex::coords</a></div><div class="ttdeci">std::array&lt; float, 3 &gt; coords</div><div class="ttdef"><b>Definition</b> <a href="PersistenceDiagramUtils_8h_source.html#l00022">PersistenceDiagramUtils.h:22</a></div></div>
 <div class="ttc" id="astructttk_1_1CriticalVertex_html_ab0f21fdf0efe531a48b095485131f5d7"><div class="ttname"><a href="structttk_1_1CriticalVertex.html#ab0f21fdf0efe531a48b095485131f5d7">ttk::CriticalVertex::sfValue</a></div><div class="ttdeci">double sfValue</div><div class="ttdef"><b>Definition</b> <a href="PersistenceDiagramUtils_8h_source.html#l00020">PersistenceDiagramUtils.h:20</a></div></div>
@@ -358,7 +357,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:30 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

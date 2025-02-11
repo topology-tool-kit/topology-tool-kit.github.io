@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_b5a3b6d63a7e4f975656391b89b6e794.html">vtk</a></li><li class="navelem"><a class="el" href="dir_20d0fd6055545da8920aaa56ae709c9c.html">ttkDistanceMatrixDistortion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_e7dbcce5a49d3753e4ed136b2398e8ef.html">ttkDistanceMatrixDistortion</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -178,21 +178,21 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> nColsLow = ScalarFieldsLow.size();</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keywordflow">if</span>(nRowsHigh == 0 || nRowsHigh != nColsHigh) {</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;High input matrix is not a valid square matrix (rows: &quot;</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                   + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(nRowsHigh)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                   + <span class="stringliteral">&quot;, columns: &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(nColsHigh) + <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                   + std::to_string(nRowsHigh)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                   + <span class="stringliteral">&quot;, columns: &quot;</span> + std::to_string(nColsHigh) + <span class="stringliteral">&quot;)&quot;</span>);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  }</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordflow">if</span>(nRowsLow == 0 || nRowsLow != nColsLow) {</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(<span class="stringliteral">&quot;Low input matrix is not a valid square matrix (rows: &quot;</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                   + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(nRowsLow)</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                   + <span class="stringliteral">&quot;, columns: &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(nColsLow) + <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                   + std::to_string(nRowsLow)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                   + <span class="stringliteral">&quot;, columns: &quot;</span> + std::to_string(nColsLow) + <span class="stringliteral">&quot;)&quot;</span>);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  }</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keywordflow">if</span>(nRowsHigh != nRowsLow) {</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">printErr</a>(</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <span class="stringliteral">&quot;High and low input matrices must have same size (rows(high): &quot;</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(nRowsHigh) + <span class="stringliteral">&quot;, rows(low): &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(nRowsLow)</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      + std::to_string(nRowsHigh) + <span class="stringliteral">&quot;, rows(low): &quot;</span> + std::to_string(nRowsLow)</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      + <span class="stringliteral">&quot;)&quot;</span>);</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  }</div>
@@ -244,7 +244,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttkDistanceMatrixDistortion_html_aec0aa617a08ac198d4010964ad0220ac"><div class="ttname"><a href="classttkDistanceMatrixDistortion.html#aec0aa617a08ac198d4010964ad0220ac">ttkDistanceMatrixDistortion::ttkDistanceMatrixDistortion</a></div><div class="ttdeci">ttkDistanceMatrixDistortion()</div><div class="ttdef"><b>Definition</b> <a href="ttkDistanceMatrixDistortion_8cpp_source.html#l00023">ttkDistanceMatrixDistortion.cpp:23</a></div></div>
 <div class="ttc" id="aclassttk_1_1Debug_html_afd1938d93be0cf163be78086ed26370e"><div class="ttname"><a href="classttk_1_1Debug.html#afd1938d93be0cf163be78086ed26370e">ttk::Debug::printErr</a></div><div class="ttdeci">int printErr(const std::string &amp;msg, const debug::LineMode &amp;lineMode=debug::LineMode::NEW, std::ostream &amp;stream=std::cerr) const</div><div class="ttdef"><b>Definition</b> <a href="Debug_8h_source.html#l00149">Debug.h:149</a></div></div>
 <div class="ttc" id="aclassttk_1_1DistanceMatrixDistortion_html_a152e5f1bffb257b4e9de2fcded3c60f2"><div class="ttname"><a href="classttk_1_1DistanceMatrixDistortion.html#a152e5f1bffb257b4e9de2fcded3c60f2">ttk::DistanceMatrixDistortion::execute</a></div><div class="ttdeci">int execute(const std::vector&lt; double * &gt; &amp;highDistMatrix, const std::vector&lt; double * &gt; &amp;lowDistMatrix, double &amp;distortionValue, double *distortionVerticesValues) const</div><div class="ttdef"><b>Definition</b> <a href="DistanceMatrixDistortion_8cpp_source.html#l00011">DistanceMatrixDistortion.cpp:11</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
 <div class="ttc" id="attkDistanceMatrixDistortion_8cpp_html_a1e014d735e8578cf8fbf016b6704dbfc"><div class="ttname"><a href="ttkDistanceMatrixDistortion_8cpp.html#a1e014d735e8578cf8fbf016b6704dbfc">vtkStandardNewMacro</a></div><div class="ttdeci">vtkStandardNewMacro(ttkDistanceMatrixDistortion)</div></div>
 <div class="ttc" id="attkDistanceMatrixDistortion_8cpp_html_a35ba0aea04c78d44a6f8e33b7271ee24"><div class="ttname"><a href="ttkDistanceMatrixDistortion_8cpp.html#a35ba0aea04c78d44a6f8e33b7271ee24">fillWithInputColumns</a></div><div class="ttdeci">void fillWithInputColumns(vtkTable *input, const std::string &amp;regExpStr, std::vector&lt; std::string &gt; &amp;vectToFill)</div><div class="ttdef"><b>Definition</b> <a href="ttkDistanceMatrixDistortion_8cpp_source.html#l00049">ttkDistanceMatrixDistortion.cpp:49</a></div></div>
 <div class="ttc" id="attkDistanceMatrixDistortion_8h_html"><div class="ttname"><a href="ttkDistanceMatrixDistortion_8h.html">ttkDistanceMatrixDistortion.h</a></div></div>
@@ -254,7 +253,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:31 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

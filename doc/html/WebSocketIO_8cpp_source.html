@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_877a2188a9a69f9a9be8a085234e84be.html">base</a></li><li class="navelem"><a class="el" href="dir_57e3658b46cd09708a6d63693f665949.html">webSocketIO</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_c81015331c6c3488a121d86278e0e854.html">webSocketIO</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -138,7 +138,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  this-&gt;portNumber = PortNumber;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Starting Server at Port: &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(this-&gt;portNumber),</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Starting Server at Port: &quot;</span> + std::to_string(this-&gt;portNumber),</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                 0, 0, <a class="code hl_enumvalue" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">ttk::debug::LineMode::REPLACE</a>);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  this-&gt;server.reset();</div>
@@ -165,7 +165,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  });</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  this-&gt;serverThread.detach();</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Starting Server at Port: &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(this-&gt;portNumber),</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(<span class="stringliteral">&quot;Starting Server at Port: &quot;</span> + std::to_string(this-&gt;portNumber),</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                 1, t.<a class="code hl_function" href="classttk_1_1Timer.html#af2b2e58141b9e1cc1f69cf2dc16b3c3a">getElapsedTime</a>());</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordflow">return</span> 1;</div>
@@ -291,11 +291,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keywordtype">float</span> progress = ((float)(this-&gt;nMessages - nRemainingMessages))</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                     / ((<span class="keywordtype">float</span>)(this-&gt;nMessages - 1));</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>      <span class="stringliteral">&quot;Sending &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(this-&gt;nMessages) + <span class="stringliteral">&quot; queued messages&quot;</span>,</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>      <span class="stringliteral">&quot;Sending &quot;</span> + std::to_string(this-&gt;nMessages) + <span class="stringliteral">&quot; queued messages&quot;</span>,</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>      progress, this-&gt;msgTimer.getElapsedTime(), <a class="code hl_enumvalue" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">ttk::debug::LineMode::REPLACE</a>);</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      <span class="stringliteral">&quot;Sending &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(this-&gt;nMessages) + <span class="stringliteral">&quot; queued messages&quot;</span>, 1,</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      <span class="stringliteral">&quot;Sending &quot;</span> + std::to_string(this-&gt;nMessages) + <span class="stringliteral">&quot; queued messages&quot;</span>, 1,</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>      this-&gt;msgTimer.getElapsedTime());</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  }</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
@@ -308,7 +308,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  this-&gt;nMessages = this-&gt;messageQueue.size() + 2;</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  msgTimer.reStart();</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  this-&gt;<a class="code hl_function" href="welcomeMsg_8inl.html#a8b6ab19fd03996237d7f77610c5e4e1e">printMsg</a>(</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="stringliteral">&quot;Sending &quot;</span> + <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(this-&gt;nMessages) + <span class="stringliteral">&quot; queued messages&quot;</span>, 0, 0,</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="stringliteral">&quot;Sending &quot;</span> + std::to_string(this-&gt;nMessages) + <span class="stringliteral">&quot; queued messages&quot;</span>, 0, 0,</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <a class="code hl_enumvalue" href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a560a2dd6f6744646473b3b19e1fe96d7">ttk::debug::LineMode::REPLACE</a>);</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  <span class="keywordflow">if</span>(this-&gt;nMessages &lt; 1) {</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    this-&gt;printWrn(<span class="stringliteral">&quot;Empty message list.&quot;</span>);</div>
@@ -476,7 +476,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassttk_1_1WebSocketIO_html_aaa99b0747c66a57448965307d5197c7f"><div class="ttname"><a href="classttk_1_1WebSocketIO.html#aaa99b0747c66a57448965307d5197c7f">ttk::WebSocketIO::startServer</a></div><div class="ttdeci">int startServer(int PortNumber)</div><div class="ttdef"><b>Definition</b> <a href="WebSocketIO_8cpp_source.html#l00304">WebSocketIO.cpp:304</a></div></div>
 <div class="ttc" id="aclassttk_1_1WebSocketIO_html_aea8044be567f855941af8fd7c4e07927"><div class="ttname"><a href="classttk_1_1WebSocketIO.html#aea8044be567f855941af8fd7c4e07927">ttk::WebSocketIO::getPortNumber</a></div><div class="ttdeci">int getPortNumber()</div><div class="ttdef"><b>Definition</b> <a href="WebSocketIO_8cpp_source.html#l00301">WebSocketIO.cpp:301</a></div></div>
 <div class="ttc" id="aclassttk_1_1WebSocketIO_html_aef3fef71a264946aebd4437782a406f5"><div class="ttname"><a href="classttk_1_1WebSocketIO.html#aef3fef71a264946aebd4437782a406f5">ttk::WebSocketIO::clearMessageQueue</a></div><div class="ttdeci">int clearMessageQueue()</div><div class="ttdef"><b>Definition</b> <a href="WebSocketIO_8cpp_source.html#l00329">WebSocketIO.cpp:329</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
 <div class="ttc" id="anamespacettk_1_1debug_html_a56f85271ace2268278b51501ca249c75aec1f06e9fb39c4ef0729b3c7c9c8e8cc"><div class="ttname"><a href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75aec1f06e9fb39c4ef0729b3c7c9c8e8cc">ttk::debug::Priority::VERBOSE</a></div><div class="ttdeci">@ VERBOSE</div></div>
 <div class="ttc" id="anamespacettk_1_1debug_html_a56f85271ace2268278b51501ca249c75aeda1bc61d9a1bcddb91097bb9395147c"><div class="ttname"><a href="namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75aeda1bc61d9a1bcddb91097bb9395147c">ttk::debug::Priority::DETAIL</a></div><div class="ttdeci">@ DETAIL</div></div>
 <div class="ttc" id="anamespacettk_1_1debug_html_a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034"><div class="ttname"><a href="namespacettk_1_1debug.html#a837252b16e6616225b66baebecd91b82a24d459a81449d7210c8f9a86c2913034">ttk::debug::LineMode::NEW</a></div><div class="ttdeci">@ NEW</div></div>
@@ -486,7 +485,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:30 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

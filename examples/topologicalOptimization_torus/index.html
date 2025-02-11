@@ -1,0 +1,1697 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../topologicalOptimization_pegasus/">
+      
+      
+        <link rel="next" href="../tribute/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>Topological Optimization for Torus Genus Repair - TTK Online Example Database</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#topological-optimization-for-torus-genus-repair" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TTK Online Example Database" class="md-header__button md-logo" aria-label="TTK Online Example Database" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TTK Online Example Database
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Topological Optimization for Torus Genus Repair
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TTK Online Example Database" class="md-nav__button md-logo" aria-label="TTK Online Example Database" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    TTK Online Example Database
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to the TTK Online Example Database!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1manifoldLearning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1-Manifold Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1manifoldLearningCircles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1-Manifold Learning Circles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2manifoldLearning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2-Manifold Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BuiltInExample1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Builtin example 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../builtInExample2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Builtin example 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cinemaIO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CinemaIO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clusteringKelvinHelmholtzInstabilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clustering Kelvin Helmholtz Instabilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compactTriangulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compact Triangulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contourTreeAlignment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contour Tree Alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ctBones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CT bones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dragon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dragon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geometryApproximation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geometry Approximation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harmonicSkeleton/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Harmonic Skeleton
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../imageProcessing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image Processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interactionSites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interaction sites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../karhunenLoveDigits64Dimensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Karhunen-Love Digits 64-Dimensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manifoldCheck/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manifold Check
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mergeTreeClustering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merge Tree Clustering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mergeTreeExTreeM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merge Trees via ExTreeM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mergeTreeFeatureTracking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merge Tree Feature Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mergeTreePGA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merge Tree Principal Geodesic Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mergeTreeTemporalReduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merge Tree Temporal Reduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mergeTreeWAE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merge Tree Wasserstein Auto-Encoder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../morseMolecule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Morse molecule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../morsePersistence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Morse persistence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../morseSmaleQuadrangulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Morse-Smale Quadrangulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../morseSmaleSegmentation_at/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Morse-Smale Segmentation AT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mpiExample/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MPI Example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistence Clustering 0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistence Clustering 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistence Clustering 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistence Clustering 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClustering4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistence Clustering 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceClusteringGallery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistence Clustering Gallery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceDiagramClustering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistence Diagram Clustering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceDiagramDistance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistence Diagram Distance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceDiagramPGA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistence Diagram Principal Geodesic Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceDiagramWAE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistence Diagram Wasserstein Auto-Encoder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceDrivenCompression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistence-Driven Compression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistentGenerators_at/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistent Generators AT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistentGenerators_casting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistent Generators Casting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistentGenerators_darkSky/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistent Generators DarkSky
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistentGenerators_fertility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistent Generators Fertility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistentGenerators_householdAnalysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistent Generators Household Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistentGenerators_periodicPicture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistent Generators Periodic Picture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistentGenerators_skull/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Persistent Generators Skull
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tectonicPuzzle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tectonic Puzzle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timeTracking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Time Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topoMapTeaser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TopoMap Teaser
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topologicalOptimization_darkSky/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Topological Optimization DarkSky
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topologicalOptimization_pegasus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Topological Optimization for Pegasus Genus Repair
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Topological Optimization for Torus Genus Repair
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Topological Optimization for Torus Genus Repair
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paraview" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParaView
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpython-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      C++/Python API
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tribute to Edelsbrunner and Harer's book
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uncertainStartingVortex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uncertain Starting Vortex
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paraview" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParaView
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpython-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      C++/Python API
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="topological-optimization-for-torus-genus-repair">Topological Optimization for Torus Genus Repair<a class="headerlink" href="#topological-optimization-for-torus-genus-repair" title="Permanent link">&para;</a></h1>
+<p><img alt="Topological Optimization Torus example Image" src="https://topology-tool-kit.github.io/img/gallery/topologicalOptimizationTorus.jpg" /></p>
+<h2 id="pipeline-description">Pipeline description<a class="headerlink" href="#pipeline-description" title="Permanent link">&para;</a></h2>
+<p>This toy example simplifies the handle of a torus via the topological optimization of a <a href="https://topology-tool-kit.github.io/doc/html/classttkSignedDistanceField.html">SignedDistanceField</a> to the input surface.</p>
+<p>This processing pipeline first loads the surface.
+Then, it computes a signed distance field to create a scalar field defined on a regular grid using the <a href="https://topology-tool-kit.github.io/doc/html/classttkSignedDistanceField.html">SignedDistanceField</a> module.
+The persistence diagram is computed using the <a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a> module and then it is thresholded to create a target diagram where only the persistence pair with infinite persistence is kept.
+Finally, using the topological optimization backend of <a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a>, the pipeline optimizes the scalar field to remove the handle. This removal is exemplified with the cutting (bottom left) and filling (bottom right) strategies.</p>
+<p>The python script computes the topological optimization and saves the output surfaces (for the cutting and filling strategies).</p>
+<h2 id="paraview">ParaView<a class="headerlink" href="#paraview" title="Permanent link">&para;</a></h2>
+<p>To reproduce the above screenshot, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
+<div class="highlight"><pre><span></span><code>paraview<span class="w"> </span>states/topologicalOptimization_torus.pvsm
+</code></pre></div></p>
+<h2 id="python-code">Python code<a class="headerlink" href="#python-code" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+
+<span class="kn">from</span> <span class="nn">paraview.simple</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># create a new &#39;XML Unstructured Grid Reader&#39;</span>
+<span class="n">torusvtu</span> <span class="o">=</span> <span class="n">XMLUnstructuredGridReader</span><span class="p">(</span><span class="n">FileName</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;torus.vtu&quot;</span><span class="p">])</span>
+
+<span class="c1"># create a new &#39;TTK SignedDistanceField&#39;</span>
+<span class="n">tTKSignedDistanceField1</span> <span class="o">=</span> <span class="n">TTKSignedDistanceField</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">torusvtu</span><span class="p">)</span>
+<span class="n">tTKSignedDistanceField1</span><span class="o">.</span><span class="n">SamplingDimensions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;TTK PersistenceDiagram&#39;</span>
+<span class="n">tTKPersistenceDiagram1</span> <span class="o">=</span> <span class="n">TTKPersistenceDiagram</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKSignedDistanceField1</span><span class="p">)</span>
+<span class="n">tTKPersistenceDiagram1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;signedDistanceField&quot;</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;Threshold&#39;</span>
+<span class="n">threshold2</span> <span class="o">=</span> <span class="n">Threshold</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKPersistenceDiagram1</span><span class="p">)</span>
+<span class="n">threshold2</span><span class="o">.</span><span class="n">Scalars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CELLS&quot;</span><span class="p">,</span> <span class="s2">&quot;IsFinite&quot;</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
+<span class="n">tTKTopologicalSimplification1</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span>
+    <span class="n">Domain</span><span class="o">=</span><span class="n">tTKSignedDistanceField1</span><span class="p">,</span> <span class="n">Constraints</span><span class="o">=</span><span class="n">threshold2</span>
+<span class="p">)</span>
+<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;signedDistanceField&quot;</span><span class="p">]</span>
+<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">Backend</span> <span class="o">=</span> <span class="s2">&quot;Topological Optimization (IEEE VIS 2024)&quot;</span>
+<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">StoppingConditionCoefficient</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">MaximumIterationNumber</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">CancellationPrimitive</span> <span class="o">=</span> <span class="s2">&quot;Cut-only&quot;</span>
+<span class="n">tTKTopologicalSimplification1</span><span class="o">.</span><span class="n">GradientStepSize</span> <span class="o">=</span> <span class="mf">0.9</span>
+
+<span class="c1"># create a new &#39;TTK ScalarFieldSmoother&#39;</span>
+<span class="n">tTKScalarFieldSmoother1</span> <span class="o">=</span> <span class="n">TTKScalarFieldSmoother</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification1</span><span class="p">)</span>
+<span class="n">tTKScalarFieldSmoother1</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;signedDistanceField&quot;</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;Contour&#39;</span>
+<span class="n">contour1</span> <span class="o">=</span> <span class="n">Contour</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKScalarFieldSmoother1</span><span class="p">)</span>
+<span class="n">contour1</span><span class="o">.</span><span class="n">ContourBy</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;signedDistanceField&quot;</span><span class="p">]</span>
+<span class="n">contour1</span><span class="o">.</span><span class="n">Isosurfaces</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span>
+
+<span class="c1"># create a new &#39;TTK TopologicalSimplification&#39;</span>
+<span class="n">tTKTopologicalSimplification2</span> <span class="o">=</span> <span class="n">TTKTopologicalSimplification</span><span class="p">(</span>
+    <span class="n">Domain</span><span class="o">=</span><span class="n">tTKSignedDistanceField1</span><span class="p">,</span> <span class="n">Constraints</span><span class="o">=</span><span class="n">threshold2</span>
+<span class="p">)</span>
+<span class="n">tTKTopologicalSimplification2</span><span class="o">.</span><span class="n">ScalarField</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;signedDistanceField&quot;</span><span class="p">]</span>
+<span class="n">tTKTopologicalSimplification2</span><span class="o">.</span><span class="n">Backend</span> <span class="o">=</span> <span class="s2">&quot;Topological Optimization (IEEE VIS 2024)&quot;</span>
+<span class="n">tTKTopologicalSimplification2</span><span class="o">.</span><span class="n">StoppingConditionCoefficient</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">tTKTopologicalSimplification2</span><span class="o">.</span><span class="n">MaximumIterationNumber</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">tTKTopologicalSimplification2</span><span class="o">.</span><span class="n">CancellationPrimitive</span> <span class="o">=</span> <span class="s2">&quot;Fill-only&quot;</span>
+<span class="n">tTKTopologicalSimplification2</span><span class="o">.</span><span class="n">GradientStepSize</span> <span class="o">=</span> <span class="mf">0.9</span>
+<span class="n">tTKTopologicalSimplification2</span><span class="o">.</span><span class="n">ConstraintAveraging</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># create a new &#39;Contour&#39;</span>
+<span class="n">contour2</span> <span class="o">=</span> <span class="n">Contour</span><span class="p">(</span><span class="n">Input</span><span class="o">=</span><span class="n">tTKTopologicalSimplification2</span><span class="p">)</span>
+<span class="n">contour2</span><span class="o">.</span><span class="n">ContourBy</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POINTS&quot;</span><span class="p">,</span> <span class="s2">&quot;signedDistanceField&quot;</span><span class="p">]</span>
+<span class="n">contour2</span><span class="o">.</span><span class="n">Isosurfaces</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span>
+
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;topoOpt_torus_cut.vtp&quot;</span><span class="p">,</span> <span class="n">contour1</span><span class="p">)</span>
+<span class="n">SaveData</span><span class="p">(</span><span class="s2">&quot;topoOpt_torus_fill.vtp&quot;</span><span class="p">,</span> <span class="n">contour2</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>To run the above Python script, go to your <a href="https://github.com/topology-tool-kit/ttk-data">ttk-data</a> directory and enter the following command:
+<div class="highlight"><pre><span></span><code>pvpython<span class="w"> </span>python/topologicalOptimization_torus.py
+</code></pre></div></p>
+<h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/topology-tool-kit/ttk-data/raw/dev/torus.vtu">torus.vtu</a>: A surface representing a torus.</li>
+</ul>
+<h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>topoOpt_torus_fill.vtp</code>: the repaired surface with the fill strategy.</li>
+<li><code>topoOpt_torus_cut.vtp</code>: the repaired surface with the cut strategy.</li>
+</ul>
+<h2 id="cpython-api">C++/Python API<a class="headerlink" href="#cpython-api" title="Permanent link">&para;</a></h2>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkPersistenceDiagram.html">PersistenceDiagram</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkSignedDistanceField.html">SignedDistanceField</a></p>
+<p><a href="https://topology-tool-kit.github.io/doc/html/classttkTopologicalSimplification.html">TopologicalSimplification</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>

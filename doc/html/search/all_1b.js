@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['y_0',['y',['../structttk_1_1TrackingFromOverlap_1_1Node.html#a30aa61657853a5c96ab4467fe0ed1ca3',1,'ttk::TrackingFromOverlap::Node::y'],['../structttk_1_1periodicGhosts_1_1partialGlobalBound.html#a227b65c1cca7bf1e1e0500a106d714fc',1,'ttk::periodicGhosts::partialGlobalBound::y']]],
-  ['y_5f_1',['y_',['../classttk_1_1PersistenceDiagramAuctionActor.html#a465d9c3322e467b192e8126a3f2be5ba',1,'ttk::PersistenceDiagramAuctionActor']]],
-  ['yellow_2',['YELLOW',['../namespacettk_1_1debug_1_1output.html#a96a461674be37d5784dac53ad8cf5abb',1,'ttk::debug::output']]]
+  ['x_0',['x',['../structttk_1_1TrackingFromOverlap_1_1Node.html#a34ed6962fc1927ca546083e2fd507357',1,'ttk::TrackingFromOverlap::Node::x'],['../structttk_1_1periodicGhosts_1_1partialGlobalBound.html#a0cfd72379c0260b1bcb29445daf4f2e5',1,'ttk::periodicGhosts::partialGlobalBound::x']]],
+  ['x_5f_1',['x_',['../classttk_1_1PersistenceDiagramAuctionActor.html#aad75c7edea7bd9ade4593a19c3925c91',1,'ttk::PersistenceDiagramAuctionActor']]],
+  ['xresolution_5f_2',['xResolution_',['../classttk_1_1SignedDistanceField.html#a83375d7303a97510fc9fbabafd6c8d81',1,'ttk::SignedDistanceField']]]
 ];

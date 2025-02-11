@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Topology ToolKit">
+    <meta name="author" content="The Topology ToolKit">
+    <meta name="keywords" content="TTK, Topology ToolKit, Topological Data 
+Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour 
+tree, persistence diagram, persistence curve, continuous scatterplot, fiber 
+surface, contour forests, jacobi set, mandatory critical points, topological 
+simplification, VTK, ParaView, Python" />
+
+    <title>TTK - the Topology ToolKit - Topological Data Analysis and 
+Visualization</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'
+);
+
+  ga('create', 'UA-88087813-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl =
+  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-88087813-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" 
+data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                TTK Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling 
+-->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="examples/index.html" target="new">Examples</a>
+                    </li>
+                    <li>
+                        <a href="tutorials.html">Videos</a>
+                    </li>
+                    <li>
+                        <a href="downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="installation.html">Installation</a>
+                    </li>
+                    <li>
+                        <a href="documentation.html">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="contribute.html">Contribute</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" 
+      style="background-image: url('img/morseHills.png'">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Topology ToolKit</h1>
+                        <hr class="small">
+                        <span class="subheading">Installation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+  
+                
+                Please find below detailed instructions for the 
+installation of <b>TTK 1.2.0</b> under Windows.<br><br>
+These specific notes describe the installation procedure for Windows 10
+but the process should be  identical for other versions.
+For earlier versions of TTK, please checkout the following instructions:
+<a href="installation-windows-1.1.0.html">TTK 1.1.0</a><br>
+
+
+<p>
+<h3>1. Downloading the packages</h3>
+Please checkout and review our <a href="downloads.html" target="new">download page</a> and download the following packages:<br>
+&nbsp;&middot;&nbsp;<code>ttk-paraview-v5.11.1.exe</code><br>
+&nbsp;&middot;&nbsp;<code>ttk-1.2.0.exe</code><br>
+
+<p>
+<h3>2. Installing dependencies with Anaconda</h3>
+To install TTK's dependencies, we recommand to Windows users to use the 
+<a href="https://anaconda.org/" target="new">
+Anaconda package manager</a>. Please checkout 
+<a href=https://www.anaconda.com/products/individual target="new">
+Anaconda's download page</a> to download and install Anaconda.<br><br>
+
+When installing Anaconda, please make sure 
+<!-- to perform a system wide installation (<code>All Users (requires admin privileges)</code>) and  -->
+to check the box 
+<code>Add Anaconda3 to my PATH environment variable</code> from the installation wizard. If you have already installed Anaconda previously and you do not remember if you checked that box, you will need to make sure to go through our section 
+<a href="#post-installation">Post-installation</a> at the bottom of this page.<br><br>
+
+We will assume in the remainder that you installed Anaconda on your system successfully, under the default directories.
+<!-- <code>C:\ProgramData\Anaconda3</code>. -->
+If you have already installed Anaconda previously and you do not remember in which directory you installed it, 
+you will need to make sure to go through our section 
+<a href="#post-installation">Post-installation</a> at the bottom of this page.
+<br><br>
+
+To install TTK's and ParaView's dependencies, open the Anaconda terminal (<code>Anaconda Prompt</code>) and enter the following commands (omit the <code>></code> character):<br><br>
+<code>> conda install -c anaconda "qt>=5.12" boost</code><br>
+<code>> conda install -c conda-forge eigen spectralib zfp scikit-learn openmp graphviz websocketpp</code><br>
+
+<p>
+<h3>2. ParaView installation</h3>
+In the file explorer, double-click on the <code>ttk-paraview-v5.11.1.exe</code> file to launch TTK-ParaView's installation wizard (and click on the <i>Next</i> buttons to proceed).
+
+<p>
+<h3>3. TTK installation</h3>
+In the file explorer, double-click on the <code>ttk-1.2.0.exe</code> file to launch TTK's installation wizard (and click on the <i>Next</i> buttons to proceed).
+
+<p>
+<h3><a name="post-installation"></a>4. Post-installation custom paths</h3>
+If you have installed Anaconda, ParaView and TTK into their default directories, you can jump directly to the next section.<br><br>
+
+If you have not installed Anaconda, ParaView or TTK into their default directories, you will need to edit a few environment variables (<code>Control Panel</code>, <code>Edit environment variables for your account</code>).
+First, add the following environment variables:
+<br>
+<code>&nbsp;&middot;&nbsp;CONDA_DIR=[Anaconda custom installation directory]</code><br>
+<code>&nbsp;&middot;&nbsp;PV_DIR=[ParaView custom installation directory]</code><br>
+<code>&nbsp;&middot;&nbsp;TTK_DIR=[TTK custom installation directory]</code><br><br>
+Next, append the following strings to the content of the following environment variables:
+<br>
+&nbsp;&middot;&nbsp;Add <code>%TTK_DIR%\lib\cmake;%PV_DIR%\lib\cmake</code> to the variable <code>CMAKE_PREFIX_PATH</code><br>
+&nbsp;&middot;&nbsp;Add <code>%TTK_DIR%\bin;%PV_DIR%\bin</code> to the variable <code>PATH</code><br>
+&nbsp;&middot;&nbsp;Add <code>%TTK_DIR%\bin\plugins</code> to the variable <code>PV_PLUGIN_PATH</code><br>
+&nbsp;&middot;&nbsp;Add <code>%CONDA_DIR%\Lib;%TTK_DIR%\bin\Lib\site-packages;%PV_DIR%\bin\Lib\site-packages</code> to the variable <code>PYTHONPATH</code><br>
+&nbsp;&middot;&nbsp;Add <code>%CONDA_DIR%\Library\plugins</code> to the variable <code>QT_PLUGIN_PATH</code><br>
+
+
+
+
+
+<p>
+<h3>5. Checking your TTK installation</h3>
+If you applied all the above steps successfully, you can now open an <code>Anaconda Prompt</code> and type
+ the following command to load your 
+TTK-patched ParaView:<br><br>
+<code>> paraview</code><br><br> 
+
+<!--MacOS users will need to launch the built ParaView 
+binary from the ParaView source tree and load all the TTK plugins with the 
+<a href="http://www.paraview.org/Wiki/ParaView/Plugin_HowTo#Using_Plugins" 
+target="new">ParaView Plugin Manager</a> before continuing.<br>-->
+At this point, you should see the following TTK startup screen:<br> <br>
+<a href="img/ttkStartup.jpg" target="new">
+  <img align='center'width="95%" src="img/ttkStartup.jpg">
+</a>
+<br><br>
+
+On this screen, clicking on the "Example Visualizations" link should bring you 
+to the TTK built-in example screen:
+<br> <br>
+
+<a href="img/ttkExamples.jpg" target="new">
+  <img align='center'width="95%" src="img/ttkExamples.jpg">
+</a>
+<br><br>
+From there, clicking on one of the three buttons should generate one of the 
+following three visualizations:<br><br>
+
+<a href="img/gallery/builtinExample1.jpg" target="new">
+  <img align='center'width="95%" src="img/gallery/builtinExample1.jpg" >
+</a>
+<br><br>
+
+<a href="img/gallery/builtinExample2.jpg" target="new">
+  <img align='center'width="95%" src="img/gallery/builtinExample2.jpg" >
+</a>
+<br><br>
+
+<a href="img/gallery/builtinExample3.jpg" target="new">
+  <img align='center'width="95%" src="img/gallery/builtinExample3.jpg" >
+</a>
+<br><br>
+
+If this is the case, congratulations!<br> You have just successfully installed 
+TTK on your system!</p>
+
+<p>
+Now, please visit our <a href="tutorials.html">tutorial</a> page to watch video 
+tutorials showing how to use TTK with ParaView with concrete examples and how to 
+use it from your own Python or C++ code or how to extend TTK by writing up your 
+own module!
+</p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">
+                    Contact: <a href="mailto:topology.tool.kit@gmail.com">
+                    topology.tool.kit@gmail.com</a><br>
+                    Updated on Jul. 11, 2023.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

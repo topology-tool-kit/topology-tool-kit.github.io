@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_b5a3b6d63a7e4f975656391b89b6e794.html">vtk</a></li><li class="navelem"><a class="el" href="dir_061389148d99e845061174d741a4a97c.html">ttkPointDataSelector</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_920a414e9dfa61d5b5440ed8eeefe6b4.html">vtk</a></li><li class="navelem"><a class="el" href="dir_4a7c55bea1d230edeeb487b2344a6cb0.html">ttkPointDataSelector</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -82,115 +82,115 @@ $(document).ready(function() { init_codefold(0); });
 </div><!--header-->
 <div class="contents">
 <a href="ttkPointDataSelector_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;array&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;limits&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;vtkDataArraySelection.h&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// VTK Module</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ttkPointDataSelectorModule.h&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">// ttk code includes</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a>&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;vtkDataArraySelection.h&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">class </span>vtkDataSet;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html">   31</a></span><span class="keyword">class </span>TTKPOINTDATASELECTOR_EXPORT <a class="code hl_class" href="classttkPointDataSelector.html">ttkPointDataSelector</a> : <span class="keyword">public</span> <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a5b3c75abc8dd9cd807d61e09957f331a">   34</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classttkPointDataSelector.html">ttkPointDataSelector</a> *<a class="code hl_function" href="classttkPointDataSelector.html#a5b3c75abc8dd9cd807d61e09957f331a">New</a>();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#aa0b6176d3bd51a95bbb270f8f0e929c3">   35</a></span>  vtkTypeMacro(<a class="code hl_class" href="classttkPointDataSelector.html">ttkPointDataSelector</a>, <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// VTK Module</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;ttkPointDataSelectorModule.h&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// ttk code includes</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a>&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">class </span>vtkDataSet;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a4de4e81e93d936b2750ae0893fe35c8b">   37</a></span>  vtkSetMacro(RegexpString, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html">   37</a></span><span class="keyword">class </span>TTKPOINTDATASELECTOR_EXPORT <a class="code hl_class" href="classttkPointDataSelector.html">ttkPointDataSelector</a> : <span class="keyword">public</span> <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a> {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a2dcdb9467e52ca16a63e8f7c3e296388">   39</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkPointDataSelector.html#a2dcdb9467e52ca16a63e8f7c3e296388">SetRangeId</a>(<span class="keywordtype">int</span> data0, <span class="keywordtype">int</span> data1) {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    RangeId[0] = data0;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    RangeId[1] = data1;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    Modified();</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a5b3c75abc8dd9cd807d61e09957f331a">   40</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classttkPointDataSelector.html">ttkPointDataSelector</a> *<a class="code hl_function" href="classttkPointDataSelector.html#a5b3c75abc8dd9cd807d61e09957f331a">New</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#aa0b6176d3bd51a95bbb270f8f0e929c3">   41</a></span>  vtkTypeMacro(<a class="code hl_class" href="classttkPointDataSelector.html">ttkPointDataSelector</a>, <a class="code hl_class" href="classttkAlgorithm.html">ttkAlgorithm</a>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a4de4e81e93d936b2750ae0893fe35c8b">   43</a></span>  vtkSetMacro(RegexpString, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a2dcdb9467e52ca16a63e8f7c3e296388">   45</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkPointDataSelector.html#a2dcdb9467e52ca16a63e8f7c3e296388">SetRangeId</a>(<span class="keywordtype">int</span> data0, <span class="keywordtype">int</span> data1) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    RangeId[0] = data0;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    RangeId[1] = data1;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    Modified();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  }</div>
 </div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a172b74e0608c8b49404c5de231b90c3f">   44</a></span>  <span class="keywordtype">int</span> *<a class="code hl_function" href="classttkPointDataSelector.html#a172b74e0608c8b49404c5de231b90c3f">GetRangeId</a>() {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">return</span> RangeId.data();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  }</div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a172b74e0608c8b49404c5de231b90c3f">   50</a></span>  <span class="keywordtype">int</span> *<a class="code hl_function" href="classttkPointDataSelector.html#a172b74e0608c8b49404c5de231b90c3f">GetRangeId</a>() {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">return</span> RangeId.data();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  }</div>
 </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a6158367eb0ffbb749dff7ff881ddb0d0">   48</a></span>  vtkSetMacro(RenameSelected, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a1777737818a7ef0b799f5f6fa6fda633">   49</a></span>  vtkGetMacro(RenameSelected, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a2442dff227f9485def3c520033f6d30d">   51</a></span>  vtkSetMacro(SelectedFieldName, <span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a36ad026c8e71debb08ef5e1e5ec4d69b">   52</a></span>  vtkGetMacro(SelectedFieldName, std::string);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a00d2ef19d95253e9452297c4ddd931b3">   54</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkPointDataSelector.html#a00d2ef19d95253e9452297c4ddd931b3">AddScalarField</a>(<span class="keyword">const</span> std::string &amp;s) {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    SelectedFields.emplace_back(s);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    Modified();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a6158367eb0ffbb749dff7ff881ddb0d0">   54</a></span>  vtkSetMacro(RenameSelected, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a1777737818a7ef0b799f5f6fa6fda633">   55</a></span>  vtkGetMacro(RenameSelected, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a2442dff227f9485def3c520033f6d30d">   57</a></span>  vtkSetMacro(SelectedFieldName, <span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a36ad026c8e71debb08ef5e1e5ec4d69b">   58</a></span>  vtkGetMacro(SelectedFieldName, std::string);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#a00d2ef19d95253e9452297c4ddd931b3">   60</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkPointDataSelector.html#a00d2ef19d95253e9452297c4ddd931b3">AddScalarField</a>(<span class="keyword">const</span> std::string &amp;s) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    SelectedFields.emplace_back(s);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    Modified();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  }</div>
 </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#aac6510a81e25760057b08b860e1e925f">   59</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkPointDataSelector.html#aac6510a81e25760057b08b860e1e925f">ClearScalarFields</a>() {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    SelectedFields.clear();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    Modified();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#aac6510a81e25760057b08b860e1e925f">   65</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classttkPointDataSelector.html#aac6510a81e25760057b08b860e1e925f">ClearScalarFields</a>() {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    SelectedFields.clear();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    Modified();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  }</div>
 </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#aa3232bc1cb78e960e6f5958838a8d562">   64</a></span>  vtkDataArraySelection *<a class="code hl_function" href="classttkPointDataSelector.html#aa3232bc1cb78e960e6f5958838a8d562">GetRangeIds</a>() {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    vtkDataArraySelection *arr = vtkDataArraySelection::New();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    arr-&gt;SetArraySetting(<span class="stringliteral">&quot;0&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    arr-&gt;SetArraySetting(</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <a class="code hl_function" href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a>(AvailableFields.size() - 1).c_str(), <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">return</span> arr;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classttkPointDataSelector.html#aa3232bc1cb78e960e6f5958838a8d562">   70</a></span>  vtkDataArraySelection *<a class="code hl_function" href="classttkPointDataSelector.html#aa3232bc1cb78e960e6f5958838a8d562">GetRangeIds</a>() {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    vtkDataArraySelection *arr = vtkDataArraySelection::New();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    arr-&gt;SetArraySetting(<span class="stringliteral">&quot;0&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    arr-&gt;SetArraySetting(</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      std::to_string(AvailableFields.size() - 1).c_str(), <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">return</span> arr;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  }</div>
 </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <a class="code hl_class" href="classttkPointDataSelector.html">ttkPointDataSelector</a>();</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a57b93abdbdc547953fabe401474e3a56">RequestInformation</a>(vtkInformation *request,</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                         vtkInformationVector **inputVector,</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                         vtkInformationVector *outputVector) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a9d1bc15e1c75f193d33cf08516082b0e">FillInputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#af12cc495fab5711bb738a7bdef8b52a2">FillOutputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">RequestData</a>(vtkInformation *request,</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                  vtkInformationVector **inputVector,</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                  vtkInformationVector *outputVector) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <a class="code hl_class" href="classttkPointDataSelector.html">ttkPointDataSelector</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a57b93abdbdc547953fabe401474e3a56">RequestInformation</a>(vtkInformation *request,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                         vtkInformationVector **inputVector,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                         vtkInformationVector *outputVector) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordtype">void</span> FillAvailableFields(vtkDataSet *input);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordtype">bool</span> RenameSelected{<span class="keyword">false</span>};</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  std::string SelectedFieldName{<span class="stringliteral">&quot;SelectedField&quot;</span>};</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  std::vector&lt;std::string&gt; SelectedFields{};</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  std::vector&lt;std::string&gt; AvailableFields{};</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  std::string RegexpString{<span class="stringliteral">&quot;.*&quot;</span>};</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  std::array&lt;int, 2&gt; RangeId{0, std::numeric_limits&lt;int&gt;::max()};</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>};</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a9d1bc15e1c75f193d33cf08516082b0e">FillInputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#af12cc495fab5711bb738a7bdef8b52a2">FillOutputPortInformation</a>(<span class="keywordtype">int</span> port, vtkInformation *info) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">RequestData</a>(vtkInformation *request,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                  vtkInformationVector **inputVector,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                  vtkInformationVector *outputVector) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="keywordtype">void</span> FillAvailableFields(vtkDataSet *input);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordtype">bool</span> RenameSelected{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  std::string SelectedFieldName{<span class="stringliteral">&quot;SelectedField&quot;</span>};</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  std::vector&lt;std::string&gt; SelectedFields{};</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  std::vector&lt;std::string&gt; AvailableFields{};</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  std::string RegexpString{<span class="stringliteral">&quot;.*&quot;</span>};</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  std::array&lt;int, 2&gt; RangeId{0, std::numeric_limits&lt;int&gt;::max()};</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>};</div>
 </div>
 <div class="ttc" id="aclassttkAlgorithm_html"><div class="ttname"><a href="classttkAlgorithm.html">ttkAlgorithm</a></div><div class="ttdoc">Baseclass of all VTK filters that wrap ttk modules.</div><div class="ttdef"><b>Definition</b> <a href="ttkAlgorithm_8h_source.html#l00033">ttkAlgorithm.h:34</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a38454ad0e03893665a505e0aa3fafa48"><div class="ttname"><a href="classttkAlgorithm.html#a38454ad0e03893665a505e0aa3fafa48">ttkAlgorithm::RequestData</a></div><div class="ttdeci">virtual int RequestData(vtkInformation *ttkNotUsed(request), vtkInformationVector **ttkNotUsed(inputVectors), vtkInformationVector *ttkNotUsed(outputVector))</div><div class="ttdef"><b>Definition</b> <a href="ttkAlgorithm_8h_source.html#l00423">ttkAlgorithm.h:423</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a57b93abdbdc547953fabe401474e3a56"><div class="ttname"><a href="classttkAlgorithm.html#a57b93abdbdc547953fabe401474e3a56">ttkAlgorithm::RequestInformation</a></div><div class="ttdeci">virtual int RequestInformation(vtkInformation *ttkNotUsed(request), vtkInformationVector **ttkNotUsed(inputVectors), vtkInformationVector *ttkNotUsed(outputVector))</div><div class="ttdef"><b>Definition</b> <a href="ttkAlgorithm_8h_source.html#l00354">ttkAlgorithm.h:354</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_a9d1bc15e1c75f193d33cf08516082b0e"><div class="ttname"><a href="classttkAlgorithm.html#a9d1bc15e1c75f193d33cf08516082b0e">ttkAlgorithm::FillInputPortInformation</a></div><div class="ttdeci">int FillInputPortInformation(int ttkNotUsed(port), vtkInformation *ttkNotUsed(info)) override</div><div class="ttdef"><b>Definition</b> <a href="ttkAlgorithm_8h_source.html#l00437">ttkAlgorithm.h:437</a></div></div>
 <div class="ttc" id="aclassttkAlgorithm_html_af12cc495fab5711bb738a7bdef8b52a2"><div class="ttname"><a href="classttkAlgorithm.html#af12cc495fab5711bb738a7bdef8b52a2">ttkAlgorithm::FillOutputPortInformation</a></div><div class="ttdeci">int FillOutputPortInformation(int ttkNotUsed(port), vtkInformation *ttkNotUsed(info)) override</div><div class="ttdef"><b>Definition</b> <a href="ttkAlgorithm_8h_source.html#l00452">ttkAlgorithm.h:452</a></div></div>
-<div class="ttc" id="aclassttkPointDataSelector_html"><div class="ttname"><a href="classttkPointDataSelector.html">ttkPointDataSelector</a></div><div class="ttdoc">TTK VTK-filter that selects scalar fields on input with shallow copy.</div><div class="ttdef"><b>Definition</b> <a href="ttkPointDataSelector_8h_source.html#l00031">ttkPointDataSelector.h:31</a></div></div>
-<div class="ttc" id="aclassttkPointDataSelector_html_a00d2ef19d95253e9452297c4ddd931b3"><div class="ttname"><a href="classttkPointDataSelector.html#a00d2ef19d95253e9452297c4ddd931b3">ttkPointDataSelector::AddScalarField</a></div><div class="ttdeci">void AddScalarField(const std::string &amp;s)</div><div class="ttdef"><b>Definition</b> <a href="ttkPointDataSelector_8h_source.html#l00054">ttkPointDataSelector.h:54</a></div></div>
-<div class="ttc" id="aclassttkPointDataSelector_html_a172b74e0608c8b49404c5de231b90c3f"><div class="ttname"><a href="classttkPointDataSelector.html#a172b74e0608c8b49404c5de231b90c3f">ttkPointDataSelector::GetRangeId</a></div><div class="ttdeci">int * GetRangeId()</div><div class="ttdef"><b>Definition</b> <a href="ttkPointDataSelector_8h_source.html#l00044">ttkPointDataSelector.h:44</a></div></div>
-<div class="ttc" id="aclassttkPointDataSelector_html_a2dcdb9467e52ca16a63e8f7c3e296388"><div class="ttname"><a href="classttkPointDataSelector.html#a2dcdb9467e52ca16a63e8f7c3e296388">ttkPointDataSelector::SetRangeId</a></div><div class="ttdeci">void SetRangeId(int data0, int data1)</div><div class="ttdef"><b>Definition</b> <a href="ttkPointDataSelector_8h_source.html#l00039">ttkPointDataSelector.h:39</a></div></div>
+<div class="ttc" id="aclassttkPointDataSelector_html"><div class="ttname"><a href="classttkPointDataSelector.html">ttkPointDataSelector</a></div><div class="ttdoc">TTK VTK-filter that selects scalar fields on input with shallow copy.</div><div class="ttdef"><b>Definition</b> <a href="ttkPointDataSelector_8h_source.html#l00037">ttkPointDataSelector.h:37</a></div></div>
+<div class="ttc" id="aclassttkPointDataSelector_html_a00d2ef19d95253e9452297c4ddd931b3"><div class="ttname"><a href="classttkPointDataSelector.html#a00d2ef19d95253e9452297c4ddd931b3">ttkPointDataSelector::AddScalarField</a></div><div class="ttdeci">void AddScalarField(const std::string &amp;s)</div><div class="ttdef"><b>Definition</b> <a href="ttkPointDataSelector_8h_source.html#l00060">ttkPointDataSelector.h:60</a></div></div>
+<div class="ttc" id="aclassttkPointDataSelector_html_a172b74e0608c8b49404c5de231b90c3f"><div class="ttname"><a href="classttkPointDataSelector.html#a172b74e0608c8b49404c5de231b90c3f">ttkPointDataSelector::GetRangeId</a></div><div class="ttdeci">int * GetRangeId()</div><div class="ttdef"><b>Definition</b> <a href="ttkPointDataSelector_8h_source.html#l00050">ttkPointDataSelector.h:50</a></div></div>
+<div class="ttc" id="aclassttkPointDataSelector_html_a2dcdb9467e52ca16a63e8f7c3e296388"><div class="ttname"><a href="classttkPointDataSelector.html#a2dcdb9467e52ca16a63e8f7c3e296388">ttkPointDataSelector::SetRangeId</a></div><div class="ttdeci">void SetRangeId(int data0, int data1)</div><div class="ttdef"><b>Definition</b> <a href="ttkPointDataSelector_8h_source.html#l00045">ttkPointDataSelector.h:45</a></div></div>
 <div class="ttc" id="aclassttkPointDataSelector_html_a5b3c75abc8dd9cd807d61e09957f331a"><div class="ttname"><a href="classttkPointDataSelector.html#a5b3c75abc8dd9cd807d61e09957f331a">ttkPointDataSelector::New</a></div><div class="ttdeci">static ttkPointDataSelector * New()</div></div>
-<div class="ttc" id="aclassttkPointDataSelector_html_aa3232bc1cb78e960e6f5958838a8d562"><div class="ttname"><a href="classttkPointDataSelector.html#aa3232bc1cb78e960e6f5958838a8d562">ttkPointDataSelector::GetRangeIds</a></div><div class="ttdeci">vtkDataArraySelection * GetRangeIds()</div><div class="ttdef"><b>Definition</b> <a href="ttkPointDataSelector_8h_source.html#l00064">ttkPointDataSelector.h:64</a></div></div>
-<div class="ttc" id="aclassttkPointDataSelector_html_aac6510a81e25760057b08b860e1e925f"><div class="ttname"><a href="classttkPointDataSelector.html#aac6510a81e25760057b08b860e1e925f">ttkPointDataSelector::ClearScalarFields</a></div><div class="ttdeci">void ClearScalarFields()</div><div class="ttdef"><b>Definition</b> <a href="ttkPointDataSelector_8h_source.html#l00059">ttkPointDataSelector.h:59</a></div></div>
-<div class="ttc" id="anamespacestd_html_a5d0289afedf04cb2436831f9217e28e4"><div class="ttname"><a href="namespacestd.html#a5d0289afedf04cb2436831f9217e28e4">std::to_string</a></div><div class="ttdeci">std::string to_string(__int128)</div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00099">ripserpy.cpp:99</a></div></div>
+<div class="ttc" id="aclassttkPointDataSelector_html_aa3232bc1cb78e960e6f5958838a8d562"><div class="ttname"><a href="classttkPointDataSelector.html#aa3232bc1cb78e960e6f5958838a8d562">ttkPointDataSelector::GetRangeIds</a></div><div class="ttdeci">vtkDataArraySelection * GetRangeIds()</div><div class="ttdef"><b>Definition</b> <a href="ttkPointDataSelector_8h_source.html#l00070">ttkPointDataSelector.h:70</a></div></div>
+<div class="ttc" id="aclassttkPointDataSelector_html_aac6510a81e25760057b08b860e1e925f"><div class="ttname"><a href="classttkPointDataSelector.html#aac6510a81e25760057b08b860e1e925f">ttkPointDataSelector::ClearScalarFields</a></div><div class="ttdeci">void ClearScalarFields()</div><div class="ttdef"><b>Definition</b> <a href="ttkPointDataSelector_8h_source.html#l00065">ttkPointDataSelector.h:65</a></div></div>
 <div class="ttc" id="attkAlgorithm_8h_html"><div class="ttname"><a href="ttkAlgorithm_8h.html">ttkAlgorithm.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:31 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:19 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -157,16 +157,16 @@ installation of TTK from sources, under Linux (default target platform). <br><br
 TTK is also supported on other operating systems:<br>
 &nbsp;&middot;&nbsp;
 <a href="installation-windows-sources.html">
-Windows installation instructions</a>;
+Windows installation instructions (from source)</a>;
 <br>
 &nbsp;&middot;&nbsp;
 <a href="installation-osx-sources.html">
-MacOS installation instructions</a>.<br><br>
+MacOS installation instructions (from source)</a>.<br><br>
 These specific notes describe the installation procedure for a 
 <a 
-href="https://releases.ubuntu.com/jammy/"
+href="https://releases.ubuntu.com/noble/"
 target="new">
-Ubuntu Linux 22.04</a> operating system (but the process should be very 
+Ubuntu Linux 24.04</a> operating system (but the process should be very 
 similar 
 for other Linux distributions).
 <a href="tutorials.html#installation" target="new">A video from our 
@@ -215,21 +215,21 @@ The remainder of these notes
 describe 
 the installation of the 
 <a href="downloads.html" target="new">
-version 1.2.0 of 
+version 1.3.0 of 
 TTK</a> along with the 
 <a 
 href="http://www.paraview.org/download" 
 target="new">
-version 5.11.1 of ParaView</a>. Other versions of either software packages 
+version 5.13.0 of ParaView</a>. Other versions of either software packages 
 may require slight variations in the installation procedure.
 For earlier versions of both software packages, you may want to check out 
 previous versions of our installation notes: <br>
 &nbsp;&middot;&nbsp;
+<a href="installation-linux-sources-1.2.0.html">TTK 1.2.0 with ParaView 5.11.1</a>,<br>
+&nbsp;&middot;&nbsp;
 <a href="installation-linux-sources-1.1.0.html">TTK 1.1.0 with ParaView 5.10.1</a>,<br>
 &nbsp;&middot;&nbsp;
 <a href="installation-linux-sources-1.0.0.html">TTK 1.0.0 with ParaView 5.9.1</a>,<br>
-&nbsp;&middot;&nbsp;
-<a href="installation-linux-sources-0.9.9.html">TTK 0.9.9 with ParaView 5.8.1</a>,<br>
 <!--&nbsp;&middot;&nbsp;
 <a href="installation-0.9.8.html">TTK 0.9.8 with ParaView 5.6.1</a>,<br-->
 <!--&nbsp;&middot;&nbsp;
@@ -283,10 +283,11 @@ compile ParaView and TTK from source. Please enter the following commands
 (omit the <code>$</code> character) in a terminal to install them (please see 
 the documentation of your package manager if your operating system is not 
 Ubuntu Linux):<br><code><br>
-$ sudo apt-get install cmake-qt-gui ninja-build libboost-system-dev libopengl-dev<br>
-<!-- $ sudo apt-get install libvtk7-dev<br> -->
-<!-- $ sudo apt-get install protobuf-compiler<br> -->
-$ sudo apt-get install qttools5-dev libqt5x11extras5-dev
+$ sudo apt install -y cmake-qt-gui ninja-build libboost-system-dev libopengl-dev libxcursor-dev<br>
+<!-- $ sudo apt install -y libvtk7-dev<br> -->
+<!-- $ sudo apt install -y protobuf-compiler<br> -->
+$ sudo apt install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools qttools5-dev qtxmlpatterns5-dev-tools libqt5x11extras5-dev libqt5svg5-dev 
+qttools5-dev libqt5x11extras5-dev
 libqt5svg5-dev qtxmlpatterns5-dev-tools
 </code><br><br>
 Note that these commands will also trigger the installation of the (numerous) 
@@ -307,33 +308,45 @@ instructions.<br><br>
 href="http://eigen.tuxfamily.org/">eigen</a> (for scalar field design, version 3.3.7 or later). 
 Under 
 <a
-href="https://releases.ubuntu.com/jammy/"
+href="https://releases.ubuntu.com/noble/"
 target="new">
-Ubuntu Linux 22.04</a>, enter the following command:
+Ubuntu Linux 24.04</a>, enter the following command:
 <code><br><br>
-$ sudo apt-get install libeigen3-dev
+$ sudo apt install -y libeigen3-dev
 </code><br><br>
 &nbsp;&middot;&nbsp;
 <a target="new" 
 href="https://www.graphviz.org/">graphviz</a> (for graph 
 drawing features, version 2.40.1 or later). Under 
 <a
-href="https://releases.ubuntu.com/jammy/"
+href="https://releases.ubuntu.com/noble/"
 target="new">
-Ubuntu Linux 22.04</a>, enter the following command:
+Ubuntu Linux 24.04</a>, enter the following command:
 <code><br><br>
-$ sudo apt-get install libgraphviz-dev
+$ sudo apt install -y libgraphviz-dev
 </code><br><br>
+
+&nbsp;&middot;&nbsp;
+<a target="new" 
+href="https://www.qhull.org/">qhull</a> (for dimension reduction features, version 2020 or later). Under 
+<a
+href="https://releases.ubuntu.com/noble/"
+target="new">
+Ubuntu Linux 24.04</a>, enter the following command:
+<code><br><br>
+$ sudo apt install -y libqhull-dev
+</code><br><br>
+
 &nbsp;&middot;&nbsp;
 <a target="new" 
 href="https://scikit-learn.org/stable/index.html">scikit-learn</a> (for data 
 reduction features, version 0.19.0 or later). Under 
 <a
-href="https://releases.ubuntu.com/jammy/"
+href="https://releases.ubuntu.com/noble/"
 target="new">
-Ubuntu Linux 22.04</a>, enter the following command:
+Ubuntu Linux 24.04</a>, enter the following command:
 <code><br><br>
-$ sudo apt-get install python3-sklearn
+$ sudo apt install -y python3-sklearn
 </code><br><br>
 &nbsp;&middot;&nbsp;
 <a href="https://github.com/yixuan/spectra/archive/v0.8.1.tar.gz" target="new">Spectra</a> 
@@ -346,23 +359,31 @@ instructions.<br><br>
 features, version 3.24.0 or later).
 Under 
 <a
-href="https://releases.ubuntu.com/jammy/"
+href="https://releases.ubuntu.com/noble/"
 target="new">
-Ubuntu Linux 22.04</a>, enter the following command:
+Ubuntu Linux 24.04</a>, enter the following command:
 <code><br><br>
-$ sudo apt-get install libsqlite3-dev
+$ sudo apt install -y libsqlite3-dev
 </code><br><br>
+
+&nbsp;&middot;&nbsp;
+<a href="https://pytorch.org/cppdocs/" target="new">libtorch</a> 
+(for neural network support, version 2.2.0 or later). See the 
+<a target=="new" href="https://pytorch.org/cppdocs/">
+following page</a> for installation 
+instructions.<br><br>
+
 &nbsp;&middot;&nbsp;
 <a target="new" href="https://docs.websocketpp.org/">
   Websocketpp</a> (for remote control 
 features).
 Under
 <a
-href="https://releases.ubuntu.com/jammy/"
+href="https://releases.ubuntu.com/noble/"
 target="new">
-Ubuntu Linux 22.04</a>, enter the following command:
+Ubuntu Linux 24.04</a>, enter the following command:
 <code><br><br>
-$ sudo apt-get install libwebsocketpp-dev
+$ sudo apt install -y libwebsocketpp-dev
 </code><br><br>
 &nbsp;&middot;&nbsp;
 <a href="https://github.com/LLNL/zfp/archive/master.zip" target="new">ZFP</a> 
@@ -375,17 +396,17 @@ instructions.<br><br>
 zlib</a> (for further compression support, version 1.2.11 or later).
 Under 
 <a
-href="https://releases.ubuntu.com/jammy/"
+href="https://releases.ubuntu.com/noble/"
 target="new">
-Ubuntu Linux 22.04</a>, enter the following command:
+Ubuntu Linux 24.04</a>, enter the following command:
 <code><br><br>
-$ sudo apt-get install zlib1g-dev
+$ sudo apt install -y zlib1g-dev
 </code><br><br>
 
 
 <!--&nbsp;&middot;&nbsp;Other optional dependencies should already be installed by 
 default under <a
-href="https://releases.ubuntu.com/jammy/"
+href="https://releases.ubuntu.com/noble/"
 target="new">
 Ubuntu Linux</a>, such as:<br>-->
 
@@ -430,15 +451,15 @@ under Fedora (as of version 30):
 a terminal (this assumes that you downloaded the tarballs to the 
 <code>~/Downloads</code> directory):<br><br>
 <code>$ mkdir ~/ttk</code><br>
-<code>$ mv ~/Downloads/ParaView-v5.11.1.zip ~/ttk/</code><br>
-<code>$ mv ~/Downloads/ttk-1.2.0.zip ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ParaView-v5.13.0.zip ~/ttk/</code><br>
+<code>$ mv ~/Downloads/ttk-1.3.0.zip ~/ttk/</code><br>
 <code>$ cd ~/ttk</code><br>
-<code>$ unzip ParaView-v5.11.1.zip</code><br>
-<code>$ unzip ttk-1.2.0.zip</code><br><br>
+<code>$ unzip ParaView-v5.13.0.zip</code><br>
+<code>$ unzip ttk-1.3.0.zip</code><br><br>
 You can delete the tarballs after the source trees have been decompressed by 
 entering the following commands:<br><br>
-<code>$ rm ParaView-v5.11.1.zip</code><br>
-<code>$ rm ttk-1.2.0.zip</code></p>
+<code>$ rm ParaView-v5.13.0.zip</code><br>
+<code>$ rm ttk-1.3.0.zip</code></p>
                   
                   <p>
                   <h3>4. Patching the ParaView source tree</h3>
@@ -448,9 +469,9 @@ This step is
 optional. 
 To proceed, go to 
 the patch directory and apply it as follows:<br><br>
-<code>$ cd ~/ttk/ttk-1.2.0/paraview/patch</code><br>
-<code>$ ./patch-paraview-5.11.1.sh
- ~/ttk/ParaView-v5.11.1/</code></p>
+<code>$ cd ~/ttk/ttk-1.3.0/paraview/patch</code><br>
+<code>$ ./patch-paraview-5.13.0.sh
+ ~/ttk/ParaView-v5.13.0/</code></p>
 <!-- <code style="color: #ef2929; font-weight: bold;">root #</code> -->
 <!-- <code>emerge --ask&#160;--unmerge  -->
 <!-- sys-kernel/genkernel</code> -->
@@ -461,7 +482,7 @@ the patch directory and apply it as follows:<br><br>
                   <h4>a) Configuration</h4>
                   To enter the configuration menu of ParaView's build, enter 
 the following commands:<br><br>
-<code>$ cd ~/ttk/ParaView-v5.11.1/</code><br>
+<code>$ cd ~/ttk/ParaView-v5.13.0/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
@@ -537,7 +558,7 @@ enter the following command to enable the build of TTK plugins:<br><br>
 <h4>a) Configuration</h4>
 To enter the configuration menu of TTK's build, enter the following 
 commands:<br><br>
-<code>$ cd ~/ttk/ttk-1.2.0/</code><br>
+<code>$ cd ~/ttk/ttk-1.3.0/</code><br>
 <code>$ mkdir build</code><br>
 <code>$ cd build</code><br>
 <code>$ cmake-gui ../</code><br><br>
@@ -563,7 +584,7 @@ href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/vtk-c%2B%2B"
 
 If you are an advanced user and you do not even wish  to activate TTK's VTK 
 support, set the CMake variables 
-<!-- NOT NEEDED AFTER RELEASE 1.2.0 -->
+<!-- NOT NEEDED AFTER RELEASE 1.3.0 -->
 <code>TTK_BUILD_STANDALONE_APPS</code> and 
 <!-- END OF NOT NEEDED -->
 <code>TTK_BUILD_VTK_WRAPPERS</code> to <code>OFF</code>.
@@ -609,7 +630,7 @@ default TTK installation path, <code>/usr/local/</code>):<br><br>
 <!--<p>
 If you wish to disable the build and installation of certain TTK components, 
 just comment the corresponding lines in the <code>CMakeLists.txt</code> file at 
-the root of the source tree (<code>~/ttk/ttk-1.2.0/CMakeLists.txt</code> in our 
+the root of the source tree (<code>~/ttk/ttk-1.3.0/CMakeLists.txt</code> in our 
 example) prior to entering the configuration step of TTK's build (<a 
 href="#ttkConfig">section 6.a</a>).
 </p>-->
@@ -622,7 +643,7 @@ Under Ubuntu Linux, this can be done by entering the following commands (omit th
 <code>$ echo "export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib" >> ~/.bashrc</code><br>
 <code>$ echo "export PV_PLUGIN_PATH=${PV_PLUGIN_PATH}:/usr/local/bin/plugins/" 
  >> ~/.bashrc</code><br>
-<code>$ echo "export PYTHONPATH=${PYTHONPATH}:/usr/local/lib/python3.10/site-packages/" >> ~/.bashrc</code><br>
+<code>$ echo "export PYTHONPATH=${PYTHONPATH}:/usr/local/lib/python3.12/site-packages/" >> ~/.bashrc</code><br>
 <code>$ source ~/.bashrc</code><br><br>
 Note that if you decided to change the default installation path of ParaView and TTK, you will need in the above commands to replace <code>/usr/local</code> by your custom installation path. 
 </p>
@@ -700,7 +721,7 @@ own module!
                     <p class="copyright text-muted">
                     Contact: <a href="mailto:topology.tool.kit@gmail.com">
                     topology.tool.kit@gmail.com</a><br>
-                    Updated on Jul. 11, 2023.</p>
+                    Updated on Sep. 26, 2024.</p>
                 </div>
             </div>
         </div>

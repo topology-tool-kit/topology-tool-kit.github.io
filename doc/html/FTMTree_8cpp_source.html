@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e95f0505f10fe743c452f248b03e6623.html">julien</a></li><li class="navelem"><a class="el" href="dir_353ed2a76921a8081801406908650f45.html">Pro</a></li><li class="navelem"><a class="el" href="dir_9547af556e720ee039fa9bad7209644d.html">git</a></li><li class="navelem"><a class="el" href="dir_b711cb5cfe067f8300ff8d8ad2d9c33e.html">github</a></li><li class="navelem"><a class="el" href="dir_a7debfa44c1f3988ed37c3a947faf0d2.html">ttk-tierny</a></li><li class="navelem"><a class="el" href="dir_813316a1cf1ce782fefacbe3ff01922f.html">core</a></li><li class="navelem"><a class="el" href="dir_877a2188a9a69f9a9be8a085234e84be.html">base</a></li><li class="navelem"><a class="el" href="dir_9654a4b92f34640c34ae89bea7750bfe.html">ftmTree</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_b952992678633ce5ff96b3ca450b719d.html">base</a></li><li class="navelem"><a class="el" href="dir_5c599a6024b876b5b6f9779e284d62d9.html">ftmTree</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -85,27 +85,26 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="FTMTree_8h.html">FTMTree.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacestd.html">std</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">using namespace </span>std;</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacettk.html">ttk</a>;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">using namespace </span>ftm;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classttk_1_1ftm_1_1FTMTree.html#ad14b7b5318da2af9f0fdb103939b2386">   20</a></span>FTMTree::FTMTree()</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  : <a class="code hl_class" href="classttk_1_1ftm_1_1FTMTree__CT.html">FTMTree_CT</a>(<a class="code hl_namespace" href="namespacestd.html">std</a>::make_shared&lt;<a class="code hl_struct" href="structttk_1_1ftm_1_1Params.html">Params</a>&gt;(), <a class="code hl_namespace" href="namespacestd.html">std</a>::make_shared&lt;<a class="code hl_struct" href="structttk_1_1ftm_1_1Scalars.html">Scalars</a>&gt;()) {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  : <a class="code hl_class" href="classttk_1_1ftm_1_1FTMTree__CT.html">FTMTree_CT</a>(std::make_shared&lt;<a class="code hl_struct" href="structttk_1_1ftm_1_1Params.html">Params</a>&gt;(), std::make_shared&lt;<a class="code hl_struct" href="structttk_1_1ftm_1_1Scalars.html">Scalars</a>&gt;()) {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  this-&gt;<a class="code hl_function" href="classttk_1_1Debug.html#a9239e36b0745881da1753f97ad8f0105">setDebugMsgPrefix</a>(<span class="stringliteral">&quot;FTMTree&quot;</span>);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
 </div>
 <div class="ttc" id="aFTMTree_8h_html"><div class="ttname"><a href="FTMTree_8h.html">FTMTree.h</a></div></div>
 <div class="ttc" id="aclassttk_1_1Debug_html_a9239e36b0745881da1753f97ad8f0105"><div class="ttname"><a href="classttk_1_1Debug.html#a9239e36b0745881da1753f97ad8f0105">ttk::Debug::setDebugMsgPrefix</a></div><div class="ttdeci">void setDebugMsgPrefix(const std::string &amp;prefix)</div><div class="ttdef"><b>Definition</b> <a href="Debug_8h_source.html#l00364">Debug.h:364</a></div></div>
 <div class="ttc" id="aclassttk_1_1ftm_1_1FTMTree__CT_html"><div class="ttname"><a href="classttk_1_1ftm_1_1FTMTree__CT.html">ttk::ftm::FTMTree_CT</a></div><div class="ttdef"><b>Definition</b> <a href="FTMTree__CT_8h_source.html#l00030">FTMTree_CT.h:30</a></div></div>
-<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition</b> <a href="ripserpy_8cpp_source.html#l00098">ripserpy.cpp:98</a></div></div>
 <div class="ttc" id="anamespacettk_html"><div class="ttname"><a href="namespacettk.html">ttk</a></div><div class="ttdoc">The Topology ToolKit.</div><div class="ttdef"><b>Definition</b> <a href="AbstractTriangulation_8h_source.html#l00051">AbstractTriangulation.h:51</a></div></div>
 <div class="ttc" id="astructttk_1_1ftm_1_1Params_html"><div class="ttname"><a href="structttk_1_1ftm_1_1Params.html">ttk::ftm::Params</a></div><div class="ttdef"><b>Definition</b> <a href="FTMStructures_8h_source.html#l00027">FTMStructures.h:27</a></div></div>
 <div class="ttc" id="astructttk_1_1ftm_1_1Scalars_html"><div class="ttname"><a href="structttk_1_1ftm_1_1Scalars.html">ttk::ftm::Scalars</a></div><div class="ttdef"><b>Definition</b> <a href="FTMStructures_8h_source.html#l00044">FTMStructures.h:44</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:28 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:18 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

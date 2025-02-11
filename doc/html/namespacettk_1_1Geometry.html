@@ -74,11 +74,21 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">ttk::Geometry Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structttk_1_1Geometry_1_1ProjectionInput.html">ProjectionInput</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the <a class="el" href="namespacettk_1_1Geometry.html#ae685b51af595131c8556dd3c6ee53ca0">findProjection()</a> input.  <a href="structttk_1_1Geometry_1_1ProjectionInput.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structttk_1_1Geometry_1_1ProjectionResult.html">ProjectionResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the <a class="el" href="namespacettk_1_1Geometry.html#ae685b51af595131c8556dd3c6ee53ca0">findProjection()</a> result.  <a href="structttk_1_1Geometry_1_1ProjectionResult.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aa209026658abce67ebd88183cf78df5b" id="r_aa209026658abce67ebd88183cf78df5b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -184,6 +194,22 @@ Functions</h2></td></tr>
 <tr class="memitem:a85154fcad15b4f1aba5961e892bccb1e" id="r_a85154fcad15b4f1aba5961e892bccb1e"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
 <tr class="memitem:a85154fcad15b4f1aba5961e892bccb1e"><td class="memTemplItemLeft" align="right" valign="top">T1&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#a85154fcad15b4f1aba5961e892bccb1e">pow</a> (const T1 val, const T2 n)</td></tr>
 <tr class="separator:a85154fcad15b4f1aba5961e892bccb1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c92b3c2c79bd8ac55b6e7a98797fcea" id="r_a4c92b3c2c79bd8ac55b6e7a98797fcea"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4c92b3c2c79bd8ac55b6e7a98797fcea"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#a4c92b3c2c79bd8ac55b6e7a98797fcea">projectOnTrianglePlane</a> (const T *p, const T *a, const T *normTri, T *out)</td></tr>
+<tr class="memdesc:a4c92b3c2c79bd8ac55b6e7a98797fcea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute euclidean projection in a triangle plane.  <br /></td></tr>
+<tr class="separator:a4c92b3c2c79bd8ac55b6e7a98797fcea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6b8261ce1a706e118446f02a7f90d9" id="r_a1b6b8261ce1a706e118446f02a7f90d9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a1b6b8261ce1a706e118446f02a7f90d9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#a1b6b8261ce1a706e118446f02a7f90d9">projectOnEdge</a> (const T *p, const T *a, const T *b, T *out)</td></tr>
+<tr class="memdesc:a1b6b8261ce1a706e118446f02a7f90d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute euclidean projection on a 3D segment.  <br /></td></tr>
+<tr class="separator:a1b6b8261ce1a706e118446f02a7f90d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8417cc145e3c904b72364a04031d74b7" id="r_a8417cc145e3c904b72364a04031d74b7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8417cc145e3c904b72364a04031d74b7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#a8417cc145e3c904b72364a04031d74b7">computeTriangleNormal</a> (const T *a, const T *b, const T *c, T *out)</td></tr>
+<tr class="memdesc:a8417cc145e3c904b72364a04031d74b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute normal vector to triangle.  <br /></td></tr>
+<tr class="separator:a8417cc145e3c904b72364a04031d74b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a032232d656788c5f1548582614f9d" id="r_a74a032232d656788c5f1548582614f9d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename triangulationType &gt; </td></tr>
+<tr class="memitem:a74a032232d656788c5f1548582614f9d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#a74a032232d656788c5f1548582614f9d">getNearestSurfaceVertex</a> (const T *pa, std::vector&lt; T &gt; &amp;dists, const triangulationType &amp;triangulation)</td></tr>
+<tr class="memdesc:a74a032232d656788c5f1548582614f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find nearest vertex on the surface.  <br /></td></tr>
+<tr class="separator:a74a032232d656788c5f1548582614f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bb858056e35747844eff6a4c061a7c9" id="r_a7bb858056e35747844eff6a4c061a7c9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a7bb858056e35747844eff6a4c061a7c9"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#a7bb858056e35747844eff6a4c061a7c9">subtractVectors</a> (const T *a, const T *b, T *out, const int &amp;dimension=3)</td></tr>
 <tr class="separator:a7bb858056e35747844eff6a4c061a7c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,6 +279,13 @@ Functions</h2></td></tr>
 <tr class="memitem:ad3b7c13ff301fc8ee72e7dc5b799850c" id="r_ad3b7c13ff301fc8ee72e7dc5b799850c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ad3b7c13ff301fc8ee72e7dc5b799850c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#ad3b7c13ff301fc8ee72e7dc5b799850c">transposeMatrix</a> (const std::vector&lt; std::vector&lt; T &gt; &gt; &amp;a, std::vector&lt; std::vector&lt; T &gt; &gt; &amp;out)</td></tr>
 <tr class="separator:ad3b7c13ff301fc8ee72e7dc5b799850c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb0218f849f945328645acce43f3d383" id="r_adb0218f849f945328645acce43f3d383"><td class="memTemplParams" colspan="2">template&lt;typename triangulationType &gt; </td></tr>
+<tr class="memitem:adb0218f849f945328645acce43f3d383"><td class="memTemplItemLeft" align="right" valign="top">std::array&lt; float, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#adb0218f849f945328645acce43f3d383">computeSurfaceNormalAtPoint</a> (const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> a, const triangulationType &amp;triangulation)</td></tr>
+<tr class="memdesc:adb0218f849f945328645acce43f3d383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute (mean) surface normal at given surface vertex.  <br /></td></tr>
+<tr class="separator:adb0218f849f945328645acce43f3d383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae685b51af595131c8556dd3c6ee53ca0" id="r_ae685b51af595131c8556dd3c6ee53ca0"><td class="memTemplParams" colspan="2">template&lt;typename triangulationType0 , typename triangulationType1 &gt; </td></tr>
+<tr class="memitem:ae685b51af595131c8556dd3c6ee53ca0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structttk_1_1Geometry_1_1ProjectionResult.html">ProjectionResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacettk_1_1Geometry.html#ae685b51af595131c8556dd3c6ee53ca0">findProjection</a> (const <a class="el" href="structttk_1_1Geometry_1_1ProjectionInput.html">ProjectionInput</a> &amp;pi, <a class="el" href="structttk_1_1VisitedMask.html">VisitedMask</a> &amp;trianglesTested, std::vector&lt; float &gt; &amp;dists, std::stack&lt; <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> &gt; &amp;trianglesToTest, const bool reverseProjection, const triangulationType0 &amp;triangulationToSmooth, const triangulationType1 &amp;triangulation)</td></tr>
+<tr class="separator:ae685b51af595131c8556dd3c6ee53ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a520c2e69475789ddc21484ad197a1160" name="a520c2e69475789ddc21484ad197a1160"></a>
@@ -297,7 +330,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00744">744</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00798">798</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -344,7 +377,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 for success, negative otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00563">563</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00617">617</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -398,7 +431,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 for success, negative otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00556">556</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00610">610</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -451,7 +484,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00636">636</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00690">690</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -594,7 +627,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00031">31</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00033">33</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
 
 </div>
 </div>
@@ -884,6 +917,48 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="adb0218f849f945328645acce43f3d383" name="adb0218f849f945328645acce43f3d383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb0218f849f945328645acce43f3d383">&#9670;&#160;</a></span>computeSurfaceNormalAtPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename triangulationType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; float, 3 &gt; ttk::Geometry::computeSurfaceNormalAtPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const triangulationType &amp;&#160;</td>
+          <td class="paramname"><em>triangulation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute (mean) surface normal at given surface vertex. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>Surface vertex id </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">triangulation</td><td>Mesh </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Mean of surface normals in star of <code>a</code> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00754">754</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
+
+</div>
+</div>
 <a id="aba9051ef69f69a1b31fc1d40cabb7efd" name="aba9051ef69f69a1b31fc1d40cabb7efd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba9051ef69f69a1b31fc1d40cabb7efd">&#9670;&#160;</a></span>computeTriangleAngleFromSides()</h2>
 
@@ -1096,6 +1171,62 @@ template&lt;typename T &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00296">296</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8417cc145e3c904b72364a04031d74b7" name="a8417cc145e3c904b72364a04031d74b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8417cc145e3c904b72364a04031d74b7">&#9670;&#160;</a></span>computeTriangleNormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ttk::Geometry::computeTriangleNormal </td>
+          <td>(</td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute normal vector to triangle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>First triangle vertex coordinates </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>Second triangle vertex coordinates </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>Third triangle vertex coordinates </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>Result </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Triangle unitary normal </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00564">564</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -1328,7 +1459,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00198">198</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00200">200</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
 
 </div>
 </div>
@@ -1552,6 +1683,68 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="ae685b51af595131c8556dd3c6ee53ca0" name="ae685b51af595131c8556dd3c6ee53ca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae685b51af595131c8556dd3c6ee53ca0">&#9670;&#160;</a></span>findProjection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename triangulationType0 , typename triangulationType1 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structttk_1_1Geometry_1_1ProjectionResult.html">ProjectionResult</a> ttk::Geometry::findProjection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structttk_1_1Geometry_1_1ProjectionInput.html">ProjectionInput</a> &amp;&#160;</td>
+          <td class="paramname"><em>pi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structttk_1_1VisitedMask.html">VisitedMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>trianglesTested</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dists</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::stack&lt; <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>trianglesToTest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>reverseProjection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const triangulationType0 &amp;&#160;</td>
+          <td class="paramname"><em>triangulationToSmooth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const triangulationType1 &amp;&#160;</td>
+          <td class="paramname"><em>triangulation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00891">891</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
+
+</div>
+</div>
 <a id="a756915f82a2ba20cf5b300316ddd6dc2" name="a756915f82a2ba20cf5b300316ddd6dc2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a756915f82a2ba20cf5b300316ddd6dc2">&#9670;&#160;</a></span>flattenMultiDimensionalVector()</h2>
 
@@ -1588,7 +1781,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 for success, negative otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00688">688</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00742">742</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -1628,7 +1821,56 @@ template&lt;typename T , typename Container , size_t dim&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 upon success, negative values otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00271">271</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00273">273</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
+
+</div>
+</div>
+<a id="a74a032232d656788c5f1548582614f9d" name="a74a032232d656788c5f1548582614f9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74a032232d656788c5f1548582614f9d">&#9670;&#160;</a></span>getNearestSurfaceVertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename triangulationType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> ttk::Geometry::getNearestSurfaceVertex </td>
+          <td>(</td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>pa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dists</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const triangulationType &amp;&#160;</td>
+          <td class="paramname"><em>triangulation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find nearest vertex on the surface. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pa</td><td>Input point </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dists</td><td>Pre-allocated distances vector </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">triangulation</td><td>Surface triangulation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nearest vertex id on the surface </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00517">517</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
 
 </div>
 </div>
@@ -1667,7 +1909,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00647">647</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00701">701</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -1970,7 +2212,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns true if the vector is null, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00673">673</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00727">727</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -1999,7 +2241,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns true if the vector is null, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00681">681</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00735">735</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2028,7 +2270,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns true if the vector have uniform values, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00665">665</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00719">719</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2211,7 +2453,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00723">723</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00777">777</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2257,7 +2499,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00571">571</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00625">625</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2303,7 +2545,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00581">581</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00635">635</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2342,7 +2584,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00698">698</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00752">752</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2383,7 +2625,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </div><div class="memdoc">
 <p>Compute the power of an arithmetic value (redirect to std::pow with a floating-point exponent and to <a class="el" href="namespacettk_1_1Geometry.html#ab164c602942731cb38dba9503a70b453">Geometry::powInt</a> with an integer exponent) </p>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00454">454</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00456">456</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
 
 </div>
 </div>
@@ -2424,7 +2666,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Compute the integer power of a floating-point value (std::pow is optimised for floating-point exponents) </p>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00381">381</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00383">383</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
 
 </div>
 </div>
@@ -2456,7 +2698,119 @@ template&lt;typename T  = double&gt; </div>
 
 <p>Compute the nth power of ten. </p>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00403">403</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8h_source.html#l00405">405</a> of file <a class="el" href="Geometry_8h_source.html">Geometry.h</a>.</p>
+
+</div>
+</div>
+<a id="a1b6b8261ce1a706e118446f02a7f90d9" name="a1b6b8261ce1a706e118446f02a7f90d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6b8261ce1a706e118446f02a7f90d9">&#9670;&#160;</a></span>projectOnEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ttk::Geometry::projectOnEdge </td>
+          <td>(</td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute euclidean projection on a 3D segment. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>Point to be projected </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>First segment vertex coordinates </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>Second segment vertex coordinates </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>Result </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Projection coordinates </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00550">550</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4c92b3c2c79bd8ac55b6e7a98797fcea" name="a4c92b3c2c79bd8ac55b6e7a98797fcea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c92b3c2c79bd8ac55b6e7a98797fcea">&#9670;&#160;</a></span>projectOnTrianglePlane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ttk::Geometry::projectOnTrianglePlane </td>
+          <td>(</td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>normTri</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute euclidean projection in a triangle plane. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>Point to be projected </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>Triangle vertex coordinates </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">normTri</td><td>Triangle normal vector </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>Result </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Projection coordinates </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00538">538</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2502,7 +2856,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00754">754</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00808">808</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2549,7 +2903,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 for success, negative otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00603">603</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00657">657</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2603,7 +2957,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 for success, negative otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00593">593</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00647">647</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2649,7 +3003,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00734">734</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00788">788</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2696,7 +3050,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 for success, negative otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00548">548</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00602">602</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2750,7 +3104,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 for success, negative otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00538">538</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00592">592</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2789,7 +3143,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00764">764</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00818">818</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2836,7 +3190,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 for success, negative otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00708">708</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00762">762</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2883,7 +3237,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 for success, negative otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00628">628</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00682">682</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
@@ -2937,14 +3291,14 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 for success, negative otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00611">611</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Geometry_8cpp_source.html#l00665">665</a> of file <a class="el" href="Geometry_8cpp_source.html">Geometry.cpp</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:36 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:22 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

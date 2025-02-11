@@ -102,6 +102,7 @@ Inheritance diagram for ttk::TopologicalSimplification:</div>
 Public Types</h2></td></tr>
 <tr class="memitem:a5fdb65e983bda659e293b72c7695c356" id="r_a5fdb65e983bda659e293b72c7695c356"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#a5fdb65e983bda659e293b72c7695c356">BACKEND</a> { <a class="el" href="classttk_1_1TopologicalSimplification.html#a5fdb65e983bda659e293b72c7695c356a456d016bd133625e5036aa9a556f2730">LEGACY</a>
 , <a class="el" href="classttk_1_1TopologicalSimplification.html#a5fdb65e983bda659e293b72c7695c356ad73f00aebeafb26d0f4f8869cba3c480">LTS</a>
+, <a class="el" href="classttk_1_1TopologicalSimplification.html#a5fdb65e983bda659e293b72c7695c356a304917b92bc3dc0953aab8356f74c02c">TO</a>
  }</td></tr>
 <tr class="separator:a5fdb65e983bda659e293b72c7695c356"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -109,9 +110,9 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b3a6f09cc153b636e8cfabdcb1229a5" id="r_a9b3a6f09cc153b636e8cfabdcb1229a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#a9b3a6f09cc153b636e8cfabdcb1229a5">TopologicalSimplification</a> ()</td></tr>
 <tr class="separator:a9b3a6f09cc153b636e8cfabdcb1229a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a3311f49a0ae861d20cd8c70c1b55ad" id="r_a3a3311f49a0ae861d20cd8c70c1b55ad"><td class="memTemplParams" colspan="2">template&lt;typename dataType , typename triangulationType &gt; </td></tr>
-<tr class="memitem:a3a3311f49a0ae861d20cd8c70c1b55ad"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#a3a3311f49a0ae861d20cd8c70c1b55ad">execute</a> (const dataType *const inputScalars, dataType *const outputScalars, const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> *const identifiers, const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> *const inputOffsets, <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> *const offsets, const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> constraintNumber, const bool addPerturbation, const triangulationType &amp;triangulation)</td></tr>
-<tr class="separator:a3a3311f49a0ae861d20cd8c70c1b55ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a993ce4dec65c3461fe4fd9db5bcdfdf2" id="r_a993ce4dec65c3461fe4fd9db5bcdfdf2"><td class="memTemplParams" colspan="2">template&lt;typename dataType , typename triangulationType &gt; </td></tr>
+<tr class="memitem:a993ce4dec65c3461fe4fd9db5bcdfdf2"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#a993ce4dec65c3461fe4fd9db5bcdfdf2">execute</a> (const dataType *const inputScalars, dataType *const outputScalars, const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> *const identifiers, const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> *const inputOffsets, <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> *const offsets, const <a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> constraintNumber, const bool addPerturbation, triangulationType &amp;triangulation, const <a class="el" href="namespacettk.html#aab8bba05f97023f08b0a26d1b3598555">ttk::DiagramType</a> &amp;constraintDiagram={})</td></tr>
+<tr class="separator:a993ce4dec65c3461fe4fd9db5bcdfdf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad79e4226a151a8f6a5c9c2244370280b" id="r_ad79e4226a151a8f6a5c9c2244370280b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#ad79e4226a151a8f6a5c9c2244370280b">setBackend</a> (const <a class="el" href="classttk_1_1TopologicalSimplification.html#a5fdb65e983bda659e293b72c7695c356">BACKEND</a> arg)</td></tr>
 <tr class="separator:ad79e4226a151a8f6a5c9c2244370280b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3da18dffc6a5fcbb967c14ee49fb06eb" id="r_a3da18dffc6a5fcbb967c14ee49fb06eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#a3da18dffc6a5fcbb967c14ee49fb06eb">preconditionTriangulation</a> (<a class="el" href="classttk_1_1AbstractTriangulation.html">AbstractTriangulation</a> *triangulation)</td></tr>
@@ -171,6 +172,46 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a3d97bab65f492682eddfd5b171736690"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6673e1988fd39e0aba60b3e7799a6294" id="r_a6673e1988fd39e0aba60b3e7799a6294"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1lts_1_1LocalizedTopologicalSimplification.html">lts::LocalizedTopologicalSimplification</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#a6673e1988fd39e0aba60b3e7799a6294">ltsObject_</a></td></tr>
 <tr class="separator:a6673e1988fd39e0aba60b3e7799a6294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0d1cbe0f2226a169f30abaed9deb64e" id="r_ad0d1cbe0f2226a169f30abaed9deb64e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classttk_1_1TopologicalOptimization.html">ttk::TopologicalOptimization</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#ad0d1cbe0f2226a169f30abaed9deb64e">topologyOptimizer_</a></td></tr>
+<tr class="separator:ad0d1cbe0f2226a169f30abaed9deb64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfca46e15f54c69638a894fed705f134" id="r_adfca46e15f54c69638a894fed705f134"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#adfca46e15f54c69638a894fed705f134">vertexNumber_</a> {}</td></tr>
+<tr class="separator:adfca46e15f54c69638a894fed705f134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f6d4350a9c314bdb6c1962de2c30f6e" id="r_a6f6d4350a9c314bdb6c1962de2c30f6e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#a6f6d4350a9c314bdb6c1962de2c30f6e">UseFastPersistenceUpdate</a> {true}</td></tr>
+<tr class="separator:a6f6d4350a9c314bdb6c1962de2c30f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a67c9d193cb9a993a2b51be3fd834f8" id="r_a4a67c9d193cb9a993a2b51be3fd834f8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#a4a67c9d193cb9a993a2b51be3fd834f8">FastAssignmentUpdate</a> {true}</td></tr>
+<tr class="separator:a4a67c9d193cb9a993a2b51be3fd834f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3e6f30829275dcab3eed6fdc43803ed" id="r_ac3e6f30829275dcab3eed6fdc43803ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#ac3e6f30829275dcab3eed6fdc43803ed">EpochNumber</a> {1000}</td></tr>
+<tr class="separator:ac3e6f30829275dcab3eed6fdc43803ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a522b90060ef04c0e44cd89b5543988b1" id="r_a522b90060ef04c0e44cd89b5543988b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#a522b90060ef04c0e44cd89b5543988b1">PDCMethod</a> {1}</td></tr>
+<tr class="separator:a522b90060ef04c0e44cd89b5543988b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc9a2648b4afce0b0dc504b4d0a07907" id="r_adc9a2648b4afce0b0dc504b4d0a07907"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#adc9a2648b4afce0b0dc504b4d0a07907">MethodOptimization</a> {0}</td></tr>
+<tr class="separator:adc9a2648b4afce0b0dc504b4d0a07907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8c9c567def11bafd2bf4c1283889f6b" id="r_af8c9c567def11bafd2bf4c1283889f6b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#af8c9c567def11bafd2bf4c1283889f6b">FinePairManagement</a> {0}</td></tr>
+<tr class="separator:af8c9c567def11bafd2bf4c1283889f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe4362c513808606aee2c8744920a177" id="r_afe4362c513808606aee2c8744920a177"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#afe4362c513808606aee2c8744920a177">ChooseLearningRate</a> {false}</td></tr>
+<tr class="separator:afe4362c513808606aee2c8744920a177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff277121e5539a4a522644a69f8265ff" id="r_aff277121e5539a4a522644a69f8265ff"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#aff277121e5539a4a522644a69f8265ff">LearningRate</a> {0.0001}</td></tr>
+<tr class="separator:aff277121e5539a4a522644a69f8265ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a181723f222e5abd5ccab0079900289a3" id="r_a181723f222e5abd5ccab0079900289a3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#a181723f222e5abd5ccab0079900289a3">Alpha</a> {0.5}</td></tr>
+<tr class="separator:a181723f222e5abd5ccab0079900289a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af032dca4ccc1202deb956e878f74b20c" id="r_af032dca4ccc1202deb956e878f74b20c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#af032dca4ccc1202deb956e878f74b20c">CoefStopCondition</a> {0.01}</td></tr>
+<tr class="separator:af032dca4ccc1202deb956e878f74b20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4634b60a1d7d45d46c7a9132d439e40" id="r_ad4634b60a1d7d45d46c7a9132d439e40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#ad4634b60a1d7d45d46c7a9132d439e40">OptimizationWithoutMatching</a> {false}</td></tr>
+<tr class="separator:ad4634b60a1d7d45d46c7a9132d439e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57455736f4f39c5e571672d5449b3e10" id="r_a57455736f4f39c5e571672d5449b3e10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#a57455736f4f39c5e571672d5449b3e10">ThresholdMethod</a> {1}</td></tr>
+<tr class="separator:a57455736f4f39c5e571672d5449b3e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7076ac8590b029fe439e68d4d9e8fca3" id="r_a7076ac8590b029fe439e68d4d9e8fca3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#a7076ac8590b029fe439e68d4d9e8fca3">Threshold</a> {0.01}</td></tr>
+<tr class="separator:a7076ac8590b029fe439e68d4d9e8fca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72eea95d3f5567729a88ad82e57c2b8a" id="r_a72eea95d3f5567729a88ad82e57c2b8a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#a72eea95d3f5567729a88ad82e57c2b8a">LowerThreshold</a> {-1}</td></tr>
+<tr class="separator:a72eea95d3f5567729a88ad82e57c2b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a072a3800bbfd71e361bccc893188f" id="r_ad5a072a3800bbfd71e361bccc893188f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#ad5a072a3800bbfd71e361bccc893188f">UpperThreshold</a> {2}</td></tr>
+<tr class="separator:ad5a072a3800bbfd71e361bccc893188f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf0f9773b8f25be5469f6180e7e7b412" id="r_abf0f9773b8f25be5469f6180e7e7b412"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#abf0f9773b8f25be5469f6180e7e7b412">PairTypeToDelete</a> {1}</td></tr>
+<tr class="separator:abf0f9773b8f25be5469f6180e7e7b412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2cbc52b376c703927a97bdc55038b89" id="r_ac2cbc52b376c703927a97bdc55038b89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#ac2cbc52b376c703927a97bdc55038b89">ConstraintAveraging</a> {true}</td></tr>
+<tr class="separator:ac2cbc52b376c703927a97bdc55038b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff061608beb5064be763ad33f387b98d" id="r_aff061608beb5064be763ad33f387b98d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1TopologicalSimplification.html#aff061608beb5064be763ad33f387b98d">PrintFrequency</a> {10}</td></tr>
+<tr class="separator:aff061608beb5064be763ad33f387b98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classttk_1_1Debug"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classttk_1_1Debug')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classttk_1_1Debug.html">ttk::Debug</a></td></tr>
 <tr class="memitem:a19bb5107152e6974eb9c0faaf30bf155 inherit pro_attribs_classttk_1_1Debug" id="r_a19bb5107152e6974eb9c0faaf30bf155"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classttk_1_1Debug.html#a19bb5107152e6974eb9c0faaf30bf155">debugLevel_</a></td></tr>
 <tr class="separator:a19bb5107152e6974eb9c0faaf30bf155 inherit pro_attribs_classttk_1_1Debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,9 +250,16 @@ Guillaume Favelier <a href="#" onclick="location.href='mai'+'lto:'+'gui'+'ll'+'a
 <p><b>Related</b> <b>publications</b> <br  />
 "Generalized Topological Simplification of Scalar Fields on Surfaces" <br  />
 Julien Tierny, Valerio Pascucci <br  />
-Proc. of IEEE VIS 2012.<br  />
-IEEE Transactions on Visualization and Computer Graphics, 2012.</p>
-<p>"Localized Topological Simplification of Scalar Data" Jonas Lukasczyk, Christoph Garth, Ross Maciejewski, Julien Tierny Proc. of IEEE VIS 2020. IEEE Transactions on Visualization and Computer Graphics</p>
+IEEE Transactions on Visualization and Computer Graphics.<br  />
+Proc. of IEEE VIS 2012.</p>
+<p>"Localized Topological Simplification of Scalar Data" <br  />
+Jonas Lukasczyk, Christoph Garth, Ross Maciejewski, Julien Tierny <br  />
+IEEE Transactions on Visualization and Computer Graphics.<br  />
+Proc. of IEEE VIS 2020.</p>
+<p>"A Practical Solver for Scalar Data Topological Simplification"<br  />
+Mohamed Kissi, Mathieu Pont, Joshua A. Levine, Julien Tierny<br  />
+IEEE Transactions on Visualization and Computer Graphics.<br  />
+Proc. of IEEE VIS 2024.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="ttkTopologicalSimplification_8cpp.html">ttkTopologicalSimplification.cpp</a> for a usage example.</dd></dl>
 <p><b>Online</b> <b>examples:</b> <br  />
 </p><ul>
@@ -253,13 +301,19 @@ IEEE Transactions on Visualization and Computer Graphics, 2012.</p>
 </li>
 <li><a href="https://topology-tool-kit.github.io/examples/tectonicPuzzle/">Tectonic Puzzle example</a> <br  />
 </li>
+<li><a href="https://topology-tool-kit.github.io/examples/topologicalOptimization_darkSky/">Topological Optimization DarkSky</a><br  />
+</li>
+<li><a href="https://topology-tool-kit.github.io/examples/topologicalOptimization_pegasus/">Topological Optimization for Pegasus Genus Repair example</a><br  />
+</li>
+<li><a href="https://topology-tool-kit.github.io/examples/topologicalOptimization_torus/">Topological Optimization for Torus Repair example</a><br  />
+</li>
 <li><a href="https://topology-tool-kit.github.io/examples/tribute/">Tribute example</a> <br  />
 </li>
 <li><a href="https://topology-tool-kit.github.io/examples/uncertainStartingVortex/">Uncertain Starting Vortex example</a> <br  />
  </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00107">107</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00123">123</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a5fdb65e983bda659e293b72c7695c356" name="a5fdb65e983bda659e293b72c7695c356"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5fdb65e983bda659e293b72c7695c356">&#9670;&#160;</a></span>BACKEND</h2>
@@ -283,9 +337,10 @@ IEEE Transactions on Visualization and Computer Graphics, 2012.</p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5fdb65e983bda659e293b72c7695c356a456d016bd133625e5036aa9a556f2730" name="a5fdb65e983bda659e293b72c7695c356a456d016bd133625e5036aa9a556f2730"></a>LEGACY&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5fdb65e983bda659e293b72c7695c356ad73f00aebeafb26d0f4f8869cba3c480" name="a5fdb65e983bda659e293b72c7695c356ad73f00aebeafb26d0f4f8869cba3c480"></a>LTS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5fdb65e983bda659e293b72c7695c356a304917b92bc3dc0953aab8356f74c02c" name="a5fdb65e983bda659e293b72c7695c356a304917b92bc3dc0953aab8356f74c02c"></a>TO&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00111">111</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00127">127</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
 
 </div>
 </div>
@@ -310,8 +365,8 @@ IEEE Transactions on Visualization and Computer Graphics, 2012.</p>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3a3311f49a0ae861d20cd8c70c1b55ad" name="a3a3311f49a0ae861d20cd8c70c1b55ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a3311f49a0ae861d20cd8c70c1b55ad">&#9670;&#160;</a></span>execute()</h2>
+<a id="a993ce4dec65c3461fe4fd9db5bcdfdf2" name="a993ce4dec65c3461fe4fd9db5bcdfdf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a993ce4dec65c3461fe4fd9db5bcdfdf2">&#9670;&#160;</a></span>execute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -363,8 +418,14 @@ template&lt;typename dataType , typename triangulationType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const triangulationType &amp;&#160;</td>
-          <td class="paramname"><em>triangulation</em>&#160;</td>
+          <td class="paramtype">triangulationType &amp;&#160;</td>
+          <td class="paramname"><em>triangulation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacettk.html#aab8bba05f97023f08b0a26d1b3598555">ttk::DiagramType</a> &amp;&#160;</td>
+          <td class="paramname"><em>constraintDiagram</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -374,7 +435,7 @@ template&lt;typename dataType , typename triangulationType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00161">161</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00226">226</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
 
 </div>
 </div>
@@ -402,7 +463,7 @@ template&lt;typename dataType , typename triangulationType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00131">131</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00148">148</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
 
 </div>
 </div>
@@ -430,11 +491,35 @@ template&lt;typename dataType , typename triangulationType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00127">127</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00144">144</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a181723f222e5abd5ccab0079900289a3" name="a181723f222e5abd5ccab0079900289a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a181723f222e5abd5ccab0079900289a3">&#9670;&#160;</a></span>Alpha</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ttk::TopologicalSimplification::Alpha {0.5}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00205">205</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
 <a id="abb09bd065dfa3bd500e3c84c8bf805bb" name="abb09bd065dfa3bd500e3c84c8bf805bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb09bd065dfa3bd500e3c84c8bf805bb">&#9670;&#160;</a></span>backend_</h2>
 
@@ -455,7 +540,175 @@ template&lt;typename dataType , typename triangulationType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00154">154</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00177">177</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="afe4362c513808606aee2c8744920a177" name="afe4362c513808606aee2c8744920a177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe4362c513808606aee2c8744920a177">&#9670;&#160;</a></span>ChooseLearningRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ttk::TopologicalSimplification::ChooseLearningRate {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00201">201</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="af032dca4ccc1202deb956e878f74b20c" name="af032dca4ccc1202deb956e878f74b20c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af032dca4ccc1202deb956e878f74b20c">&#9670;&#160;</a></span>CoefStopCondition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ttk::TopologicalSimplification::CoefStopCondition {0.01}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00209">209</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="ac2cbc52b376c703927a97bdc55038b89" name="ac2cbc52b376c703927a97bdc55038b89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2cbc52b376c703927a97bdc55038b89">&#9670;&#160;</a></span>ConstraintAveraging</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ttk::TopologicalSimplification::ConstraintAveraging {true}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00219">219</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="ac3e6f30829275dcab3eed6fdc43803ed" name="ac3e6f30829275dcab3eed6fdc43803ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3e6f30829275dcab3eed6fdc43803ed">&#9670;&#160;</a></span>EpochNumber</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ttk::TopologicalSimplification::EpochNumber {1000}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00185">185</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="a4a67c9d193cb9a993a2b51be3fd834f8" name="a4a67c9d193cb9a993a2b51be3fd834f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a67c9d193cb9a993a2b51be3fd834f8">&#9670;&#160;</a></span>FastAssignmentUpdate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ttk::TopologicalSimplification::FastAssignmentUpdate {true}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00184">184</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="af8c9c567def11bafd2bf4c1283889f6b" name="af8c9c567def11bafd2bf4c1283889f6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8c9c567def11bafd2bf4c1283889f6b">&#9670;&#160;</a></span>FinePairManagement</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ttk::TopologicalSimplification::FinePairManagement {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00198">198</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="aff277121e5539a4a522644a69f8265ff" name="aff277121e5539a4a522644a69f8265ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff277121e5539a4a522644a69f8265ff">&#9670;&#160;</a></span>LearningRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ttk::TopologicalSimplification::LearningRate {0.0001}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00202">202</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
 
 </div>
 </div>
@@ -479,7 +732,31 @@ template&lt;typename dataType , typename triangulationType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00155">155</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00178">178</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="a72eea95d3f5567729a88ad82e57c2b8a" name="a72eea95d3f5567729a88ad82e57c2b8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72eea95d3f5567729a88ad82e57c2b8a">&#9670;&#160;</a></span>LowerThreshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ttk::TopologicalSimplification::LowerThreshold {-1}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00215">215</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
 
 </div>
 </div>
@@ -503,7 +780,271 @@ template&lt;typename dataType , typename triangulationType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00156">156</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00179">179</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="adc9a2648b4afce0b0dc504b4d0a07907" name="adc9a2648b4afce0b0dc504b4d0a07907"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc9a2648b4afce0b0dc504b4d0a07907">&#9670;&#160;</a></span>MethodOptimization</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ttk::TopologicalSimplification::MethodOptimization {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00193">193</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="ad4634b60a1d7d45d46c7a9132d439e40" name="ad4634b60a1d7d45d46c7a9132d439e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4634b60a1d7d45d46c7a9132d439e40">&#9670;&#160;</a></span>OptimizationWithoutMatching</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ttk::TopologicalSimplification::OptimizationWithoutMatching {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00212">212</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="abf0f9773b8f25be5469f6180e7e7b412" name="abf0f9773b8f25be5469f6180e7e7b412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf0f9773b8f25be5469f6180e7e7b412">&#9670;&#160;</a></span>PairTypeToDelete</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ttk::TopologicalSimplification::PairTypeToDelete {1}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00217">217</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="a522b90060ef04c0e44cd89b5543988b1" name="a522b90060ef04c0e44cd89b5543988b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a522b90060ef04c0e44cd89b5543988b1">&#9670;&#160;</a></span>PDCMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ttk::TopologicalSimplification::PDCMethod {1}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00189">189</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="aff061608beb5064be763ad33f387b98d" name="aff061608beb5064be763ad33f387b98d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff061608beb5064be763ad33f387b98d">&#9670;&#160;</a></span>PrintFrequency</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ttk::TopologicalSimplification::PrintFrequency {10}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00221">221</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="a7076ac8590b029fe439e68d4d9e8fca3" name="a7076ac8590b029fe439e68d4d9e8fca3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7076ac8590b029fe439e68d4d9e8fca3">&#9670;&#160;</a></span>Threshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ttk::TopologicalSimplification::Threshold {0.01}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00214">214</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="a57455736f4f39c5e571672d5449b3e10" name="a57455736f4f39c5e571672d5449b3e10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57455736f4f39c5e571672d5449b3e10">&#9670;&#160;</a></span>ThresholdMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ttk::TopologicalSimplification::ThresholdMethod {1}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00213">213</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="ad0d1cbe0f2226a169f30abaed9deb64e" name="ad0d1cbe0f2226a169f30abaed9deb64e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0d1cbe0f2226a169f30abaed9deb64e">&#9670;&#160;</a></span>topologyOptimizer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classttk_1_1TopologicalOptimization.html">ttk::TopologicalOptimization</a> ttk::TopologicalSimplification::topologyOptimizer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00180">180</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="ad5a072a3800bbfd71e361bccc893188f" name="ad5a072a3800bbfd71e361bccc893188f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a072a3800bbfd71e361bccc893188f">&#9670;&#160;</a></span>UpperThreshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ttk::TopologicalSimplification::UpperThreshold {2}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00216">216</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="a6f6d4350a9c314bdb6c1962de2c30f6e" name="a6f6d4350a9c314bdb6c1962de2c30f6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f6d4350a9c314bdb6c1962de2c30f6e">&#9670;&#160;</a></span>UseFastPersistenceUpdate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ttk::TopologicalSimplification::UseFastPersistenceUpdate {true}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00183">183</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
+
+</div>
+</div>
+<a id="adfca46e15f54c69638a894fed705f134" name="adfca46e15f54c69638a894fed705f134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfca46e15f54c69638a894fed705f134">&#9670;&#160;</a></span>vertexNumber_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacettk.html#af0e68dbb0101c35aa1990bffafe71025">SimplexId</a> ttk::TopologicalSimplification::vertexNumber_ {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TopologicalSimplification_8h_source.html#l00182">182</a> of file <a class="el" href="TopologicalSimplification_8h_source.html">TopologicalSimplification.h</a>.</p>
 
 </div>
 </div>
@@ -514,7 +1055,7 @@ template&lt;typename dataType , typename triangulationType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 07:44:36 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Sep 26 2024 06:50:21 for TTK by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
