@@ -3,7 +3,7 @@ var searchData=
   ['t_5fsne_0',['T_SNE',['../classttk_1_1DimensionReduction.html#a6a100956a51c03aad344ac5a9bc1f59ca0ca40709316e8df4b4b6b40ae3e97809',1,'ttk::DimensionReduction']]],
   ['tetra_1',['TETRA',['../classttkTriangulationRequest.html#a65a8a5ce1de67c7260e8543823089b4facf7ef0d3aa69d147a66c77274e96b48c',1,'ttkTriangulationRequest']]],
   ['to_2',['TO',['../classttk_1_1TopologicalSimplification.html#a5fdb65e983bda659e293b72c7695c356a304917b92bc3dc0953aab8356f74c02c',1,'ttk::TopologicalSimplification']]],
-  ['top_5f2d_3',['top_2d',['../classttk_1_1ImplicitTriangulation.html#afa38645ad04728b9ff0b6fc469acd883a71575aef5c8f1ba4f0ab77ddef2d7e6a',1,'ttk::ImplicitTriangulation::TOP_2D'],['../classttk_1_1PeriodicImplicitTriangulation.html#a58321ed0e98643ae48ad5f7033ea6fbca71575aef5c8f1ba4f0ab77ddef2d7e6a',1,'ttk::PeriodicImplicitTriangulation::TOP_2D']]],
+  ['top_5f2d_3',['TOP_2D',['../classttk_1_1ImplicitTriangulation.html#afa38645ad04728b9ff0b6fc469acd883a71575aef5c8f1ba4f0ab77ddef2d7e6a',1,'ttk::ImplicitTriangulation::TOP_2D'],['../classttk_1_1PeriodicImplicitTriangulation.html#a58321ed0e98643ae48ad5f7033ea6fbca71575aef5c8f1ba4f0ab77ddef2d7e6a',1,'ttk::PeriodicImplicitTriangulation::TOP_2D']]],
   ['top_5fback_5fedge_5f3d_4',['TOP_BACK_EDGE_3D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5dacb1b2a2c327230d5705e10464ec6ca56',1,'ttk::ImplicitTriangulation']]],
   ['top_5fedge_5f2d_5',['TOP_EDGE_2D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5dafe9487fadd75236ba730791478b91ad4',1,'ttk::ImplicitTriangulation']]],
   ['top_5fface_5f3d_6',['TOP_FACE_3D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da9c02f5495ac44ad95f0c0e8c48a4c556',1,'ttk::ImplicitTriangulation']]],
@@ -16,7 +16,9 @@ var searchData=
   ['top_5fright_5fcorner_5f2d_13',['TOP_RIGHT_CORNER_2D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da4180ab3e0d90e6c71c58870bcfc10f27',1,'ttk::ImplicitTriangulation']]],
   ['top_5fright_5fedge_5f3d_14',['TOP_RIGHT_EDGE_3D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5da221db2f8f1849740ad8a06323a395548',1,'ttk::ImplicitTriangulation']]],
   ['top_5fright_5ffront_5fcorner_5f3d_15',['TOP_RIGHT_FRONT_CORNER_3D',['../classttk_1_1ImplicitTriangulation.html#acc012812a21a3d9bc97930973c5d2e5dab4edc55092aa5341aade86f73157003f',1,'ttk::ImplicitTriangulation']]],
-  ['topomap_16',['TOPOMAP',['../classttk_1_1DimensionReduction.html#a6a100956a51c03aad344ac5a9bc1f59ca8dc6b5ff9657b0a30819f490fe8d190d',1,'ttk::DimensionReduction']]],
-  ['triangle_17',['TRIANGLE',['../classttkTriangulationRequest.html#a65a8a5ce1de67c7260e8543823089b4fa9bcd89070cae224dce305f5011659ef4',1,'ttkTriangulationRequest']]],
-  ['ttk_18',['TTK',['../classttkCinemaWriter.html#a8bd244a4df249f8e1721508019492aa4a48493a5b76c4c13d9a0eb514a00fd5b7',1,'ttkCinemaWriter']]]
+  ['topoae_16',['TOPOAE',['../classttk_1_1TopologicalLoss.html#a0a187c28f93cf91ec2601e34d7c9d4eba098893de64bf3000686d03613b872176',1,'ttk::TopologicalLoss']]],
+  ['topoae_5fdim1_17',['TOPOAE_DIM1',['../classttk_1_1TopologicalLoss.html#a0a187c28f93cf91ec2601e34d7c9d4eba3ce876ed3a7e45600073fbfab42e7657',1,'ttk::TopologicalLoss']]],
+  ['topomap_18',['TOPOMAP',['../classttk_1_1DimensionReduction.html#a6a100956a51c03aad344ac5a9bc1f59ca8dc6b5ff9657b0a30819f490fe8d190d',1,'ttk::DimensionReduction']]],
+  ['triangle_19',['TRIANGLE',['../classttkTriangulationRequest.html#a65a8a5ce1de67c7260e8543823089b4fa9bcd89070cae224dce305f5011659ef4',1,'ttkTriangulationRequest']]],
+  ['ttk_20',['TTK',['../classttkCinemaWriter.html#a8bd244a4df249f8e1721508019492aa4a48493a5b76c4c13d9a0eb514a00fd5b7',1,'ttkCinemaWriter']]]
 ];

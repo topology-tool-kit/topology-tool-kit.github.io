@@ -5,6 +5,6 @@ var searchData=
   ['eigenfield_2',['EigenField',['../classttk_1_1EigenField.html',1,'ttk']]],
   ['euclidean_5fdistance_5fmatrix_3',['euclidean_distance_matrix',['../structeuclidean__distance__matrix.html',1,'']]],
   ['explicittriangulation_4',['ExplicitTriangulation',['../classttk_1_1ExplicitTriangulation.html',1,'ttk']]],
-  ['extendedunionfind_5',['extendedunionfind',['../classttk_1_1cf_1_1ExtendedUnionFind.html',1,'ttk::cf::ExtendedUnionFind'],['../classttk_1_1ExtendedUnionFind.html',1,'ExtendedUnionFind']]],
+  ['extendedunionfind_5',['ExtendedUnionFind',['../classttk_1_1cf_1_1ExtendedUnionFind.html',1,'ttk::cf::ExtendedUnionFind'],['../classttk_1_1ExtendedUnionFind.html',1,'ExtendedUnionFind']]],
   ['extreem_6',['ExTreeM',['../classttk_1_1ExTreeM.html',1,'ttk']]]
 ];

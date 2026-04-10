@@ -10,8 +10,12 @@ var searchData=
   ['regulargridtriangulation_2eh_7',['RegularGridTriangulation.h',['../RegularGridTriangulation_8h.html',1,'']]],
   ['ripscomplex_2ecpp_8',['RipsComplex.cpp',['../RipsComplex_8cpp.html',1,'']]],
   ['ripscomplex_2eh_9',['RipsComplex.h',['../RipsComplex_8h.html',1,'']]],
-  ['ripser_2eh_10',['ripser.h',['../ripser_8h.html',1,'']]],
-  ['ripserpy_2ecpp_11',['ripserpy.cpp',['../ripserpy_8cpp.html',1,'']]],
+  ['ripser_2ecpp_10',['ripser.cpp',['../ripser_8cpp.html',1,'']]],
+  ['ripser_2eh_11',['ripser.h',['../ripser_8h.html',1,'']]],
   ['ripspersistencediagram_2ecpp_12',['RipsPersistenceDiagram.cpp',['../RipsPersistenceDiagram_8cpp.html',1,'']]],
-  ['ripspersistencediagram_2eh_13',['RipsPersistenceDiagram.h',['../RipsPersistenceDiagram_8h.html',1,'']]]
+  ['ripspersistencediagram_2eh_13',['RipsPersistenceDiagram.h',['../RipsPersistenceDiagram_8h.html',1,'']]],
+  ['ripspersistencediagramutils_2ecpp_14',['RipsPersistenceDiagramUtils.cpp',['../RipsPersistenceDiagramUtils_8cpp.html',1,'']]],
+  ['ripspersistencediagramutils_2eh_15',['RipsPersistenceDiagramUtils.h',['../RipsPersistenceDiagramUtils_8h.html',1,'']]],
+  ['ripspersistencegenerators_2ecpp_16',['RipsPersistenceGenerators.cpp',['../RipsPersistenceGenerators_8cpp.html',1,'']]],
+  ['ripspersistencegenerators_2eh_17',['RipsPersistenceGenerators.h',['../RipsPersistenceGenerators_8h.html',1,'']]]
 ];

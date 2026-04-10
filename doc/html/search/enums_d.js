@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['treecomponent_0',['treecomponent',['../namespacettk_1_1cf.html#a2226153c86dee1551e7118dff54889de',1,'ttk::cf::TreeComponent'],['../namespacettk_1_1ftm.html#a0195b016aabd2743049628a9e87b03d5',1,'ttk::ftm::TreeComponent']]],
-  ['treetype_1',['treetype',['../classttk_1_1MandatoryCriticalPoints.html#a0e7a766f9a884eadac1826a65ad6f4dd',1,'ttk::MandatoryCriticalPoints::TreeType'],['../namespacettk_1_1cf.html#a1e3e9f613b8aa03fe90650f087d34f06',1,'ttk::cf::TreeType'],['../namespacettk_1_1ftm.html#a50fb2f892ab92b84f0d827e3993b5a2b',1,'ttk::ftm::TreeType']]],
-  ['triangleposition_2',['triangleposition',['../classttk_1_1ImplicitTriangulation.html#afa38645ad04728b9ff0b6fc469acd883',1,'ttk::ImplicitTriangulation::TrianglePosition'],['../classttk_1_1PeriodicImplicitTriangulation.html#a58321ed0e98643ae48ad5f7033ea6fbc',1,'ttk::PeriodicImplicitTriangulation::TrianglePosition']]],
-  ['type_3',['Type',['../classttk_1_1Triangulation.html#a4a9a1c0cd04c930d4dbf972af6eb779f',1,'ttk::Triangulation']]],
-  ['type_5falignmenttree_4',['Type_Alignmenttree',['../namespacettk_1_1cta.html#a43e3bbdcdae1f4bb0fad088209b32db5',1,'ttk::cta']]],
-  ['type_5fnode_5',['Type_Node',['../namespacettk_1_1cta.html#a89f94702477eece94563ef9646169457',1,'ttk::cta']]]
+  ['separator_0',['Separator',['../namespacettk_1_1debug.html#af3ebd7fb2185c549f7461a695912a2a1',1,'ttk::debug']]],
+  ['simplex_1',['SIMPLEX',['../classttkTriangulationRequest.html#a65a8a5ce1de67c7260e8543823089b4f',1,'ttkTriangulationRequest']]],
+  ['simplificationcriterion_2',['SimplificationCriterion',['../classttk_1_1ReebSpace.html#aabfa2a3992fe0b2b1ad851588eb1b1ba',1,'ttk::ReebSpace']]],
+  ['simplifmethod_3',['SimplifMethod',['../namespacettk_1_1cf.html#a27b24c96425b2888bde0185d85821905',1,'ttk::cf::SimplifMethod'],['../namespacettk_1_1ftm.html#a032970813b2edc14cfd2639d3a53620b',1,'ttk::ftm::SimplifMethod']]],
+  ['solvingmethodtype_4',['SolvingMethodType',['../classttk_1_1HarmonicField.html#a8b256505af1539396c0a31981c8bb8f4',1,'ttk::HarmonicField']]],
+  ['solvingmethodusertype_5',['SolvingMethodUserType',['../classttk_1_1HarmonicField.html#a7b1862a1d2f2b355e5db1fcdc45a0d10',1,'ttk::HarmonicField']]],
+  ['strategy_6',['STRATEGY',['../classttk_1_1TopoMap.html#a40596ef2d089a1fbcc224f6dbedf3367',1,'ttk::TopoMap::STRATEGY'],['../classttk_1_1Triangulation.html#a734859e18bc3612ce72a9d4e5aa23891',1,'ttk::Triangulation::STRATEGY']]],
+  ['surface_5fmode_7',['SURFACE_MODE',['../classttk_1_1MarchingTetrahedra.html#a7cd6c8d8cf9121738dbe87041b6ec312',1,'ttk::MarchingTetrahedra']]]
 ];
