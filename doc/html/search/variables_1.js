@@ -50,5 +50,7 @@ var searchData=
   ['area_47',['area',['../structttk_1_1cta_1_1AlignmentEdge.html#a13391e96f0d1d65744b8bca03fb101b0',1,'ttk::cta::AlignmentEdge::area'],['../structttk_1_1cta_1_1BinaryTree.html#a8ef87f26580d9bb2b9bbe70d7135d3f1',1,'ttk::cta::BinaryTree::area'],['../structttk_1_1cta_1_1CTEdge.html#aba04859481d55d1dc8f78828803636d1',1,'ttk::cta::CTEdge::area']]],
   ['arguments_5f_48',['arguments_',['../classttk_1_1CommandLineParser.html#a55732c2151d5c625c7e81426f939ecda',1,'ttk::CommandLineParser']]],
   ['ascending_5f_49',['ascending_',['../structttk_1_1MorseSmaleComplex_1_1OutputManifold.html#a59a759c51afe9b15a22fc73455c1ad1d',1,'ttk::MorseSmaleComplex::OutputManifold::ascending_'],['../structttk_1_1PathCompression_1_1OutputSegmentation.html#a18d8fb31e2832816c9ef9c8e6c8e61ac',1,'ttk::PathCompression::OutputSegmentation::ascending_'],['../structttk_1_1TopologicalSkeleton_1_1OutputManifold.html#a02e910848a2fe0f10c06c7b2cc05a8ad',1,'ttk::TopologicalSkeleton::OutputManifold::ascending_']]],
-  ['assignmentsolverid_5f_50',['assignmentSolverID_',['../classttk_1_1MergeTreeBase.html#a1cbcb1f0afddbe67789cfaa4268763d3',1,'ttk::MergeTreeBase']]]
+  ['assignmentsolverid_5f_50',['assignmentSolverID_',['../classttk_1_1MergeTreeBase.html#a1cbcb1f0afddbe67789cfaa4268763d3',1,'ttk::MergeTreeBase']]],
+  ['ax_51',['ax',['../structttk_1_1TrackingPostProcessing_1_1LinearTrajectory.html#a50365ed23ee7e477879f2ab6e25cef6c',1,'ttk::TrackingPostProcessing::LinearTrajectory']]],
+  ['ay_52',['ay',['../structttk_1_1TrackingPostProcessing_1_1LinearTrajectory.html#a71ed57ba760349c766c3809bb0381b22',1,'ttk::TrackingPostProcessing::LinearTrajectory']]]
 ];

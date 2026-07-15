@@ -27,7 +27,7 @@ var searchData=
   ['with_5fpreconditions_24',['WITH_PRECONDITIONS',['../classttk_1_1Triangulation.html#a734859e18bc3612ce72a9d4e5aa23891a6d751cab4785b24749756380699cb4a8',1,'ttk::Triangulation']]],
   ['withdummyvalue_5f_25',['withDummyValue_',['../classttk_1_1ContinuousScatterPlot.html#a051c6198d735c727c2c393b89266d8d3',1,'ttk::ContinuousScatterPlot']]],
   ['withrangedrivenoctree_5f_26',['withRangeDrivenOctree_',['../classttk_1_1ReebSpace.html#a89a73f090b214b7d15e6a62ec9bc5546',1,'ttk::ReebSpace']]],
-  ['working_5ft_27',['working_t',['../classRipser.html#a1ca7327c26ac50656dbb99b753a99e60',1,'Ripser::working_t'],['../classRipser.html#a1ca7327c26ac50656dbb99b753a99e60',1,'Ripser::simplex_coboundary_enumerator::working_t']]],
+  ['working_5ft_27',['working_t',['../classRipser.html#a8b1d9fc646261535da2f099e01ee7f90',1,'Ripser']]],
   ['wrap_5f_28',['wrap_',['../classttk_1_1PeriodicImplicitTriangulation.html#ab9cbf31060d0d1f85c758b968b0b28f0',1,'ttk::PeriodicImplicitTriangulation']]],
   ['wrapper_29',['Wrapper',['../classttk_1_1Wrapper.html',1,'ttk::Wrapper'],['../classttk_1_1Wrapper.html#a35a4c7995351c96ef358de0a204278ea',1,'ttk::Wrapper::Wrapper()']]],
   ['wrapper_2eh_30',['Wrapper.h',['../Wrapper_8h.html',1,'']]],
