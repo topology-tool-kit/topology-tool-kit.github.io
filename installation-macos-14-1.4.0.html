@@ -153,48 +153,86 @@ data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
   
                 
                 Please find below detailed instructions for the 
-installation of <b>TTK 1.4.0</b> under Windows.<br><br>
-These specific notes describe the installation procedure used by TTK's continuous integration to install and test TTK under Github's virtual machines running Windows 2025.
+binary installation of TTK under MacOS.
+<br><br>
+These specific notes describe the installation procedure used by TTK's continuous integration to install and test TTK under Github's virtual machines running MacOS 14.
+
+
+<!-- These pre-built packages are compiled for <code>arm64</code> architectures and <code>MacOS 14</code> using <code>Python 3.12</code>. -->
+
 
 <p>
 <h3>1. Downloading the packages</h3>
 Please checkout and review our <a href="downloads.html" target="new">download page</a> and download the following packages:<br>
-&nbsp;&middot;&nbsp;<code>ttk-paraview-v6.1.1.exe</code><br>
-&nbsp;&middot;&nbsp;<code>ttk-1.4.0.exe</code><br>
+&nbsp;&middot;&nbsp;<code>ttk-paraview-v6.1.1-macos-14.tar.gz</code><br>
+&nbsp;&middot;&nbsp;<code>ttk-1.4.0-macos-14.tar.gz</code><br><br>
 
 <p>
-<h3>2. Installing dependencies with Anaconda</h3>
-To install TTK's dependencies, we recommand to Windows users to use the 
-<a href="https://anaconda.org/" target="new">
-Anaconda package manager</a>. Please checkout 
-<a href=https://www.anaconda.com/products/individual target="new">
-Anaconda's download page</a> to download and install Anaconda.<br><br>
+<h3>2. Installing dependencies with Homebrew</h3>
+To install TTK's dependencies, we recommand to MacOS users to use the 
+<a href=https://brew.sh/" target="new">
+Homebrew package manager</a>. Please checkout 
+<a href=https://docs.brew.sh/Installation target="new">
+Homebrew's installation page</a> to download and install Homebrew.<br><br>
 
-When installing Anaconda, please make sure 
+<!-- When installing Anaconda, please make sure  -->
 <!-- to perform a system wide installation (<code>All Users (requires admin privileges)</code>) and  -->
-to check the box 
-<code>Add Anaconda3 to my PATH environment variable</code> from the installation wizard. If you have already installed Anaconda previously and you do not remember if you checked that box, you will need to make sure to go through our section 
+<!--to check the box <code>Add Python to Environment variables</code> from the installation wizard. If you have already installed Anaconda previously and you do not remember if you checked that box, you will need to make sure to go through our section 
 <a href="#post-installation">Post-installation</a> at the bottom of this page.<br><br>
 
-We will assume in the remainder that you installed Anaconda on your system successfully, under the default directories.
-<!-- <code>C:\ProgramData\Anaconda3</code>. -->
+We will assume in the remainder that you installed Anaconda on your system successfully, under the directory <code>C:\ProgramData\Anaconda3</code>.
 If you have already installed Anaconda previously and you do not remember in which directory you installed it, 
 you will need to make sure to go through our section 
 <a href="#post-installation">Post-installation</a> at the bottom of this page.
-<br><br>
+<br><br>-->
 
-To install TTK's and ParaView's dependencies, open the Anaconda terminal (<code>Anaconda Prompt</code>) and enter the following commands:<br><br>
-<code>conda install -c conda-forge "qt>=5.12" libboost-devel glew eigen spectralib zfp sqlite scikit-learn graphviz ninja python=3.10 zlib qhull</code><br>
+We will assume in the remainder that you installed Homebrew on your system successfully, under default directories.<br><br>
+
+To install TTK's and ParaView's dependencies, open a terminal and enter 
+the following commands:<br><br>
+<code>brew install --cask xquartz</code><br>
+<code>brew install mesa glew qt@5 ninja libomp</code><br>
+<code>brew install boost cgal eigen graphviz spectra sqlite tbb zlib numpy qhull</code><br><br>
 
 <p>
 <h3>2. ParaView installation</h3>
-In the file explorer, double-click on the <code>ttk-paraview-v6.1.1.exe</code> file to launch TTK-ParaView's installation wizard (and click on the <i>Next</i> buttons to proceed).
+Installation by default will place files in <code>/usr/local</code>, however you could install into a different directory and adjust the paths as indicated below.  To install TTK's version of ParaView, open a terminal and enter 
+the following command:<br><br>
+<code>mkdir ~/ttk-binary</code><br>
+<code>mv ~/Downloads/ttk-paraview-v6.1.1-macos-14-arm64.tar.gz ~/ttk-binary</code><br>
+<code>cd ~/ttk-binary</code><br>
+<code>tar xzvf ttk-paraview-v6.1.1-macos-14-arm64.tar.gz</code><br>
+<code>sudo cp -r ttk-paraview/* /usr/local</code><br><br>
 
 <p>
 <h3>3. TTK installation</h3>
-In the file explorer, double-click on the <code>ttk-1.4.0.exe</code> file to launch TTK's installation wizard (and click on the <i>Next</i> buttons to proceed).
+To install TTK, open a terminal and enter 
+the following command:<br><br>
+<code>mv ~/Downloads/ttk-1.4.0-macos-14-arm64.tar.gz ~/ttk-binary</code><br>
+<code>cd ~/ttk-binary</code><br>
+<code>tar xzvf ttk-1.4.0-macos-14-arm64.tar.gz</code><br>
+<code>sudo cp -r ttk/* /usr/local</code><br><br>
 
 <p>
+<h3>4. Setting up environment variables</h3>
+
+At this point, for an optimal user experience, we recommend users to define the following environment variables (in particular, when using TTK with python).
+This can be done by entering the following commands:<br><br>
+<code>echo "export CMAKE_PREFIX_PATH=$(brew --prefix qt@5)/lib/cmake:$CMAKE_PREFIX_PATH" >> ~/.zshrc</code><br>
+<code>echo "export PYTHONPATH=${PYTHONPATH}:/usr/local/lib/python3.12/site-packages/" >> ~/.zshrc</code><br>
+<code>echo "export PV_PLUGIN_PATH=${PV_PLUGIN_PATH}:/usr/local/lib/plugins/" >> ~/.zshrc</code><br>
+<code>echo "export DYLD_LIBRARY_PATH=${DYLD_LIBRARY_PATH}:/usr/local/lib" >> ~/.zshrc</code> (this is only necessary if installed somewhere other than <code>/usr/local</code>, changed to your install directory)<br>
+<code>echo "export PATH=${PATH}:/usr/local/bin/" >> ~/.zshrc</code> (this is only necessary if installed somewhere other than <code>/usr/local</code>, changed to your install directory)<br>
+<code>source ~/.zshrc</code><br><br>
+
+Optionally, the following optional dependency can be installed with <code>pip</code> (if present on the system):<br>
+<code>pvpython -m pip install scikit-learn</code>.  If pvpython is not found or creates an error, this indicates either your <code>PATH</code> or <code>PYTHONPATH</code> variable is not set correctly.<br><br>
+
+
+<!-- Note that if you decided to change the default installation path of ParaView and TTK, you will need in the above commands to replace <code>/usr/local</code> by your custom installation path.  -->
+</p>
+
+<!--<p>
 <h3><a name="post-installation"></a>4. Post-installation custom paths</h3>
 If you have installed Anaconda, ParaView and TTK into their default directories, you can jump directly to the next section.<br><br>
 
@@ -211,23 +249,28 @@ Next, append the following strings to the content of the following environment v
 &nbsp;&middot;&nbsp;Add <code>%TTK_DIR%\bin\plugins</code> to the variable <code>PV_PLUGIN_PATH</code><br>
 &nbsp;&middot;&nbsp;Add <code>%CONDA_DIR%\Lib;%TTK_DIR%\bin\Lib\site-packages;%PV_DIR%\bin\Lib\site-packages</code> to the variable <code>PYTHONPATH</code><br>
 &nbsp;&middot;&nbsp;Add <code>%CONDA_DIR%\Library\plugins</code> to the variable <code>QT_PLUGIN_PATH</code><br>
-
+ -->
 
 
 
 
 <p>
 <h3>5. Checking your TTK installation</h3>
-If you applied all the above steps successfully, you can now open an <code>Anaconda Prompt</code> and type
+If you applied all the above steps successfully, you can now open a terminal
+and type
  the following command to load your 
 TTK-patched ParaView:<br><br>
 <code>paraview</code><br><br>
+
+If paraview does not load correctly or creates an error, this may indicate either your <code>PATH</code> or <code>DYLD_LIBRARY_PATH</code> variable is not set correctly.  Likewise, for the examples tested below, they might reveal issues with the <code>PV_PLUGIN_PATH</code> variable.<br><br>
+
+When executing downloaded packages from the command line, MacOS will likely trigger a security warning.  To fix, open System Preferences and switch to the <code>Privacy &amp; Security</code> panel.  Under the <code>General</code> tab you should be able to find an option to <code>Allow Anyway</code>.
 
 <!--MacOS users will need to launch the built ParaView 
 binary from the ParaView source tree and load all the TTK plugins with the 
 <a href="http://www.paraview.org/Wiki/ParaView/Plugin_HowTo#Using_Plugins" 
 target="new">ParaView Plugin Manager</a> before continuing.<br>-->
-At this point, you should see the following TTK startup screen:<br> <br>
+If all works, you should see the following TTK startup screen:<br> <br>
 <a href="img/ttkStartup.jpg" target="new">
   <img align='center'width="95%" src="img/ttkStartup.jpg">
 </a>
