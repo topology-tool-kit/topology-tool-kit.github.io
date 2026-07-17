@@ -155,14 +155,7 @@ data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 Please find below generic instructions for the installation of TTK
 from sources, under Windows.<br><br>
 
-TTK is also supported on other operating systems:<br>
-&nbsp;&middot;&nbsp;
-<a href="installation-linux-sources.html">
-Linux installation instructions</a> (default target platform);
-<br>
-&nbsp;&middot;&nbsp;
-<a href="installation-osx-sources.html">
-MacOS installation instructions</a>.<br><br>
+These specific notes describe the installation procedure used by TTK's continuous integration to build, install and test TTK under Github's virtual machines running Windows 2025.
 
 If you are an advanced user and you do not wish to install ParaView
 (TTK's main user interface), you still have the possibility to install
@@ -187,21 +180,20 @@ href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/c%2B%2B"
 <a href="installation-windows-0.9.6.html">TTK 0.9.6 with ParaView
 5.5.2</a>.<br>-->
 <p><h3>0. Disclaimer and troubleshooting</h3>
-Installing software from source can be challenging (in particular under Windows). 
+Installing software from source can be challenging (in particular under Windows).
 <br>
 
-Since build chains can vary quite drastically from one system to another, the instructions below may require adjustments for your system. 
+Since build chains can vary quite drastically from one system to another, the instructions below may require adjustments for your system.
 <br>
-In case of building issues, we recommend to check the following Windows installation script examples for 
-<a href="https://github.com/topology-tool-kit/ttk-paraview/blob/v5.13.0/.github/workflows/package.yml#L122" target="new">ParaView</a>
-and 
-<a target="new" href="https://github.com/topology-tool-kit/ttk/blob/stable/.github/workflows/package.yml#L358">TTK</a>.
+In case of building issues, we recommend to check the following Windows installation script examples for
+<a href="https://github.com/topology-tool-kit/ttk-paraview/blob/v6.1.1/.github/workflows/package.yml" target="new">ParaView</a>
+and
+<a target="new" href="https://github.com/topology-tool-kit/ttk/blob/stable/.github/workflows/package.yml">TTK</a>.
 We use these scripts on a daily basis for building automatically ParaView and TTK under Windows, for the automatic tests of TTK's continuous integration.
 
 <p><h3>1. Installing the dependencies</h3>
 <ul>
-    <li> <a href="https://cmake.org/download" target="new">CMake</a> (tested
-with 3.10.0) </li>
+    <li> <a href="https://cmake.org/download" target="new">CMake</a></li>
     <li> <a href="https://www.anaconda.com/products/individual"
 target="new">Anaconda3</a></li>
 </ul>
@@ -211,7 +203,7 @@ Environment variable" box during the Anaconda installation
 process. This will help TTK to find all its dependencies at build and
 run-time.
 <br>
-Once everything is installed, please open an Anaconda Prompt and type
+Once everything is installed, please open an Anaconda Prompt and type:
 <pre>
 <code>conda install -c conda-forge clangxx=18 qt-main python=3.10</code>
 <code>conda install -c conda-forge eigen glew graphviz libboost-devel llvm-openmp ninja qhull scikit-learn spectralib sqlite zfp zlib</code>
