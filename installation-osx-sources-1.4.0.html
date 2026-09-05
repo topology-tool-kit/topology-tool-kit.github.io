@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Topology ToolKit">
+    <meta name="author" content="The Topology ToolKit">
+    <meta name="keywords" content="TTK, Topology ToolKit, Topological Data 
+Analysis, Visualization, Reeb graph, Reeb Space, Morse-Smale complex, contour 
+tree, persistence diagram, persistence curve, continuous scatterplot, fiber 
+surface, contour forests, jacobi set, mandatory critical points, topological 
+simplification, VTK, ParaView, Python" />
+
+    <title>TTK - the Topology ToolKit - Topological Data Analysis and 
+Visualization</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'
+);
+
+  ga('create', 'UA-88087813-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var pluginUrl =
+  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-88087813-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+      'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End Google Analytics -->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" 
+data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                TTK Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling 
+-->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="examples/index.html" target="new">Examples</a>
+                    </li>
+                    <li>
+                        <a href="tutorials.html">Videos</a>
+                    </li>
+                    <li>
+                        <a href="downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="installation.html">Installation</a>
+                    </li>
+                    <li>
+                        <a href="documentation.html">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="contribute.html">Contribute</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" 
+      style="background-image: url('img/morseHills.png'">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Topology ToolKit</h1>
+                        <hr class="small">
+                        <span class="subheading">MacOS Installation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+  
+Please find below generic instructions for the installation of TTK
+from sources, under MacOS.<br><br>
+
+These specific notes describe the installation procedure used by TTK's continuous integration to build, install and test TTK under Github's virtual machines running MacOS 26.<br><br>
+
+If you are an advanced user and you do not wish to install ParaView
+(TTK's main user interface), you still have the possibility to install
+TTK without ParaView and VTK support (although we highly recommend to
+activate them).<br>  In that case, simply download TTK as described in
+section 1, install the dependencies as detailed in section 2 and
+finally, directly jump to section 5 (<i>"Installing TTK"</i>). <br>
+Examples showing how to use TTK libraries from your own C++ code can
+be found
+<a target="new"
+href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/c%2B%2B"
+>on this page</a>.<br>
+<br>
+
+<b>Most users will want to activate TTK's ParaView support.</b>
+<br><br>
+
+<p><h3>0. Disclaimer and troubleshooting</h3>
+Installing software from source can be challenging (in particular under MacOS).
+<br>
+
+Since build chains can vary quite drastically from one system to another, the instructions below may require adjustments for your system. 
+<br>
+In case of building issues, we recommend to check the following MacOS installation script examples for 
+<a href="https://github.com/topology-tool-kit/ttk-paraview/blob/v6.1.1/.github/workflows/package.yml" target="new">ParaView</a>
+and 
+<a target="new" href="https://github.com/topology-tool-kit/ttk/blob/stable/.github/workflows/package.yml">TTK</a>.
+We use these scripts on a daily basis for building automatically ParaView and TTK under MacOS, for the automatic tests of TTK's continuous integration.
+
+
+
+
+                <p>
+                  <h3>1. Downloads</h3>
+                  TTK builds on top of <a href="http://www.paraview.org" 
+target="new">ParaView</a> for its main user interface. Thus, you will first 
+need to download 
+<a 
+href="http://www.paraview.org/download"
+target="new">
+ParaView's source code</a>.
+Note 
+that TTK plugins for ParaView will only work with a version of ParaView 
+compiled from source. Thus, if you already installed ParaView with a binary 
+copy, you may need to un-install it before proceeding.
+                  Next, download TTK from our <a 
+href="downloads.html">download page</a>.</p>
+
+
+
+<p><h3>2. Installing the dependencies</h3>
+
+Several dependencies will need to be installed in order to 
+compile ParaView and TTK from source. Please enter the following commands 
+ in a terminal to install them using 
+ <a href="https://brew.sh/" target="new">
+ homebrew 
+ </a>:<br><br>
+ <code>brew install --cask xquartz<br></code>
+  <code>brew install mesa glew qt@5 ninja libomp
+ </code><br><br>
+ Note that these commands will also trigger the installation of the (numerous)
+dependencies of these components.</p>
+ 
+<h4>Optional dependencies</h4>
+In order to enjoy the complete set of TTK features, we also recommend to 
+install the following, <i>optional</i> dependencies, with the following command:
+<code><br><br>
+brew install boost cgal eigen graphviz spectra sqlite tbb zlib numpy qhull
+</code><br><br>
+
+
+
+
+<p><h3>3. Preparing the sources</h3>
+Move the tarballs to a working directory (for instance called 
+<code>~/ttk</code>) and decompress them by entering the following commands in 
+a terminal (this assumes that you downloaded the tarballs to the 
+<code>~/Downloads</code> directory):<br><br>
+<code>mkdir ~/ttk</code><br>
+<code>mv ~/Downloads/ParaView-v6.1.1.tar.gz ~/ttk/</code><br>
+<code>mv ~/Downloads/ttk-1.4.0.tar.gz ~/ttk/</code><br>
+<code>cd ~/ttk</code><br>
+<code>tar xvzf ParaView-v6.1.1.tar.gz</code><br>
+<code>tar xvzf ttk-1.4.0.tar.gz</code><br><br>
+You can delete the tarballs after the source trees have been decompressed by 
+entering the following commands:<br><br>
+<code>rm ParaView-v6.1.1.tar.gz</code><br>
+<code>rm ttk-1.4.0.tar.gz</code><br><br>
+</p>
+
+<p><h3>4. Patching the ParaView source tree</h3>
+Note: The instructions for this step are identical to those on linux:<br><br>
+
+In order to enjoy the complete set of TTK features, we 
+recommend at this stage to patch the ParaView source tree. 
+This step is 
+optional. 
+To proceed, go to 
+the patch directory and apply it as follows:<br><br>
+<code>cd ~/ttk/ttk-1.4.0/paraview/patch</code><br>
+<code>./patch-paraview-6.1.1.sh ~/ttk/ParaView-v6.1.1/</code><br><br>
+</p>
+
+
+
+
+
+
+
+<p><h3>5. Configuring, building and installing ParaView</h3>
+<h4>a) Configuration</h4>
+To enter the configuration menu of ParaView's build, enter the following 
+commands:<br><br>
+<code>cd ~/ttk/ParaView-v6.1.1/</code><br>
+<code>mkdir build</code><br>
+<code>cd build</code><br>
+<code>ccmake .. -G Ninja</code> (on homebrew cmake there is no <code>cmake-gui</code>, 
+although you can install this separately from <a 
+href="https://cmake.org/download/">https://cmake.org/download/</a>)<br><br>
+
+Then, press 'c' to configure and we'll check/edit some CMake flags (you may
+have to press 't' to find them):<br>
+<code>&nbsp;&middot;&nbsp;Python3_EXECUTABLE</code> should indicate the correct binary path for python by default.  
+<br><br>
+
+Once the configuration is finished, you may want to enable additional build options (OSPRay, MPI, etc) to your liking (see the 
+<a 
+href="http://www.paraview.org/Wiki/ParaView:
+Build_And_Install#Configure_ParaView_With_CMake"
+target="new">
+ParaView 
+build documentation</a> for further details). Note that certain options require the installation of additional dependencies.<br><br>
+
+Next, trigger the "Generate" action ('g') and close the configuration window when 
+the generation is completed.<br><br>
+
+
+<h4>b) Build</h4>
+Now you can start the compilation process by entering the following command, 
+where <code>N</code> is the number of available cores on your system (this may 
+take a while):<br><br>
+<code>ninja</code><br><br>
+
+<h4>c) Installation</h4>
+Once the build is finished, we recommend that you do <strong>not</strong> use <code>make install</code>.  We will work directly in the build directory for the source tree instead of trying to package up a MacOS .app file in <code>/Applications</code>. <br><br>
+
+Finally, to enable ParaView and pvpython to find the TTK plugins we will build, we recommend setting the environment variable <code>PV_PLUGIN_PATH</code> to be the location where you choose to install TTK.  Note that this is different from past installations where we manually installed TTK in the build directory.  Instead, these instructions will assume that you will install TTK's plugins in <code>/usr/local/lib/plugins</code> (the cmake variable <code>TTK_INSTALL_PLUGIN_DIR</code> will be set accordingly in the next step).<br><br>  
+
+To set this environment variable permanently, we recommend editing whatever file you normally configure these in (e.g. <code>~/.zshenv</code>) and adding the line:<br><br>
+
+<code>export PV_PLUGIN_PATH="/usr/local/lib/plugins"</code><br><br>
+
+Note that, by default, our installation of ParaView will search for plugins in <code>~/ttk/ParaView-v6.1.1/build/bin/paraview.app/Contents/MacOS/plugins</code>.  And, by default, our installation of pvpython will search fo plugins in <code>~/ttk/ParaView-v6.1.1/build/bin/plugins</code>.  Setting <code>PV_PLUGIN_PATH</code> overrides this so that both can search for TTK in a common location.  If this directory does not exist, you may need to create it as well as <code>/usr/local/scripts</code>.<br/><br/>
+
+Users may want to choose to use a different location that <code>/usr/local/lib/plugins</code>, although this path is consistent with where the Linux installation of TTK installs them.<br><br>
+
+For more information, see <a href="https://www.paraview.org/Wiki/ParaView/Plugin_HowTo#Using_Plugins">https://www.paraview.org/Wiki/ParaView/Plugin_HowTo#Using_Plugins</a>.
+
+</p>
+
+
+
+<p>
+<h3>6. Configuring, building and installing TTK</h3>
+<h4><a name="ttkConfig">a)</a> Configuration</h4>
+To enter the configuration menu of TTK's build, enter the following 
+commands:<br><br>
+<code>cd ~/ttk/ttk-1.4.0/</code><br>
+<code>mkdir ttk_install</code> (for installing standalone apps)<br>
+<code>mkdir build</code><br>
+<code>cd build</code><br>
+<code>ccmake .. -G Ninja</code><br><br>
+
+The configuration window opens.  Press 'c' to configure, and if it 
+cannot yet find ParaView, we'll fix this with:<br><br>
+
+<code>&nbsp;&middot;&nbsp;ParaView_DIR=~/ttk/ParaView-v6.1.1/build/</code><br><br>
+
+Press 'c' again to configure (you can ignore any warnings).  Next, change:<br><br>
+
+<code>&nbsp;&middot;&nbsp;CMAKE_BUILD_TYPE=Release</code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this should be the default)<br>
+<code>&nbsp;&middot;&nbsp;CMAKE_INSTALL_PREFIX=~/ttk/ttk-1.4.0/ttk_install</code
+><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this is where standalone apps and 
+other TTK components are installed)<br>
+<code>&nbsp;&middot;&nbsp;TTK_INSTALL_PLUGIN_DIR=/usr/local/lib/plugins</code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(should be the default, this is where ParaView plugins are installed)<br>
+<br>
+
+If you are an advanced user and you do not wish to activate TTK's ParaView 
+support, set the CMake variable <code>TTK_BUILD_PARAVIEW_PLUGINS</code> to 
+<code>OFF</code>.
+Examples showing how to use TTK libraries from your 
+own VTK code can be found 
+<a target="new"
+href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/vtk-c%2B%2B"
+>on this page</a>.<br>
+Press 'c' to reconfigure (again takes a few seconds) and then press 'g' to 
+generate.<br><br>
+
+If you are an advanced user and you do not even wish  to activate TTK's VTK 
+support, set the CMake variable
+<code>TTK_BUILD_VTK_WRAPPERS</code> to <code>OFF</code>.
+Examples showing how to use TTK libraries from your own 
+C++ code can be found 
+<a target="new"
+href="https://github.com/topology-tool-kit/ttk/tree/dev/examples/c%2B%2B"
+>on this page</a>.<br>
+Press 'c' to reconfigure (again takes a few seconds) and then press 'g' to 
+generate.<br><br>
+
+<!--Note that you can enable building certain portions of TTK at this time
+as well by switching the flags associated with each (e.g. 
+TTK_BUILD_PARAVIEW_PLUGINS, TTK_BUILD_STANDALONE_APPS, etc.). -->
+
+Press 'c' to reconfigure (again takes a few seconds) and then press 'g' to 
+generate.<br><br>
+
+<br><br>
+
+
+<h4>b) Build</h4>
+Now you can start the compilation process by entering the following command, 
+where <code>N</code> is the number of available cores on your system:<br><br>
+<code>ninja</code><br><br>
+
+<h4>c) Installation</h4>
+Once the build is finished, enter the following command to install your build 
+of TTK into your ParaView installation:<br><br>
+<code>ninja install</code><br><br>
+
+Note that in addition to copying the TTK plugins to your ParaView installation 
+(<code>TTK_INSTALL_PLUGIN_DIR</code>), the above command also installed a 
+collection of standalone TTK programs to <code>CMAKE_INSTALL_PREFIX</code>.  
+These can be used outside of ParaView, either as command line tools or 
+VTK-based graphical user interfaces. To list them:<br><br>
+<code>ls CMAKE_INSTALL_PREFIX/bin/*Cmd</code><br>
+<code>ls CMAKE_INSTALL_PREFIX/bin/*Gui</code><br><br>
+Replacing <code>CMAKE_INSTALL_PREFIX</code> with what we used above.<br><br>
+
+Finally, to make sure the example data files are included in the right path, 
+you have to manually copy the example data into the ParaView .app as 
+well:<br><br>
+<code>cd ~/ttk/ttk-1.4.0/paraview/patch/data</code><br>
+<code>mkdir -p ~/ttk/ParaView-v6.1.1/build/bin/paraview.app/Contents/share/paraview-5.11/examples</code><br>
+<code>cp * ~/ttk/ParaView-v6.1.1/build/bin/paraview.app/Contents/share/paraview-5.11/examples</code><br>
+<br>
+</p>
+
+
+
+
+<p>
+<h3>7. Checking your TTK installation</h3>
+If you applied all the above steps successfully (including step 4), you can now 
+open a terminal and type the following command to load your TTK-patched 
+ParaView:<br><br>
+<code>cd 
+~/ttk/ParaView-v6.1.1/build/bin/paraview.app/Contents/MacOS/</code><br><br>
+<code>./paraview</code><br><br>
+
+At this point, everything from the standard installation procedure should be accessible.  Congrats!
+</p>
+
+<p>
+Now, please visit our <a href="tutorials.html">tutorial</a> page to watch video 
+tutorials showing how to use TTK with ParaView with concrete examples and how 
+to 
+use it from your own Python or C++ code or how to extend TTK by writing up your 
+own module!
+</p>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">
+                    Contact: <a href="mailto:topology.tool.kit@gmail.com">
+                    topology.tool.kit@gmail.com</a><br>
+                    Updated on Jul. 25, 2026.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

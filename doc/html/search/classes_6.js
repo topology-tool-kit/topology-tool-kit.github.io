@@ -21,5 +21,6 @@ var searchData=
   ['ftratomicvector_3c_20std_3a_3aunique_5fptr_3c_20ttk_3a_3aftr_3a_3apropagation_20_3e_20_3e_18',['FTRAtomicVector&lt; std::unique_ptr&lt; ttk::ftr::Propagation &gt; &gt;',['../classttk_1_1FTRAtomicVector.html',1,'ttk']]],
   ['ftratomicvector_3c_20ttk_3a_3aftr_3a_3anode_20_3e_19',['FTRAtomicVector&lt; ttk::ftr::Node &gt;',['../classttk_1_1FTRAtomicVector.html',1,'ttk']]],
   ['ftratomicvector_3c_20ttk_3a_3aftr_3a_3asuperarc_20_3e_20',['FTRAtomicVector&lt; ttk::ftr::SuperArc &gt;',['../classttk_1_1FTRAtomicVector.html',1,'ttk']]],
-  ['ftrgraph_21',['FTRGraph',['../classttk_1_1ftr_1_1FTRGraph.html',1,'ttk::ftr']]]
+  ['ftrgraph_21',['FTRGraph',['../classttk_1_1ftr_1_1FTRGraph.html',1,'ttk::ftr']]],
+  ['fuserecord_22',['FuseRecord',['../structttk_1_1TrackingPostProcessing_1_1FuseRecord.html',1,'ttk::TrackingPostProcessing']]]
 ];

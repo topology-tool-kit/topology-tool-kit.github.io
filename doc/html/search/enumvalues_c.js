@@ -6,7 +6,7 @@ var searchData=
   ['maximum_3',['Maximum',['../classttk_1_1MandatoryCriticalPoints.html#ab2cf29184e67a40532222ae2a99a2a0ea8321e79c278ec510f63675c040594892',1,'ttk::MandatoryCriticalPoints']]],
   ['maximum_5fsaddle_4',['MAXIMUM_SADDLE',['../classttk_1_1lts_1_1LocalizedTopologicalSimplification.html#aa19a4ec156cbbeed339f634e6b5ae65aa5b649a7517c18c13da55bad3a78d6a1b',1,'ttk::lts::LocalizedTopologicalSimplification']]],
   ['maxnode_5',['maxNode',['../namespacettk_1_1cta.html#a89f94702477eece94563ef9646169457aa1b47f5418c0c45e7ebc1b20994ea6e3',1,'ttk::cta']]],
-  ['mds_6',['MDS',['../classttk_1_1DimensionReduction.html#a6a100956a51c03aad344ac5a9bc1f59ca2851bd653baf31589bc89053c6abb31c',1,'ttk::DimensionReduction']]],
+  ['mds_6',['MDS',['../classttk_1_1DimensionReduction.html#a6a100956a51c03aad344ac5a9bc1f59ca2851bd653baf31589bc89053c6abb31c',1,'ttk::DimensionReduction::MDS'],['../classttk_1_1PersistenceDiagramDictionaryDecoding.html#a610c13916e25c34bbe90c741d5a650fba2851bd653baf31589bc89053c6abb31c',1,'ttk::PersistenceDiagramDictionaryDecoding::MDS']]],
   ['medianvalues_7',['medianValues',['../namespacettk_1_1cta.html#a43e3bbdcdae1f4bb0fad088209b32db5aaf528775009898354da2c9c3ff0d625c',1,'ttk::cta']]],
   ['merged_8',['Merged',['../namespacettk_1_1cf.html#aadd6d4c8140d15715c0daabb81bea559a5c180790674fdd6beb8427f0c99b4c29',1,'ttk::cf::Merged'],['../namespacettk_1_1ftm.html#a9acfb4b623c1ba16422384c20622f5c6a8d596efa83d60f5988fb5511cc120099',1,'ttk::ftm::Merged']]],
   ['middle_9',['Middle',['../namespacettk_1_1ftr.html#a2e5920f0d4b21eb13aa12806de234364ab1ca34f82e83c52b010f86955f264e05',1,'ttk::ftr']]],

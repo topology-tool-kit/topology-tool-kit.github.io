@@ -12,7 +12,7 @@
         <link rel="prev" href="../karhunenLoveDigits64Dimensions/">
       
       
-        <link rel="next" href="../mergeTreeClustering/">
+        <link rel="next" href="../mergeTreeBarycenter_branchMapping/">
       
       
         
@@ -964,6 +964,60 @@
   
   
     <li class="md-nav__item">
+      <a href="../mergeTreeBarycenter_branchMapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Merge Tree Barycenter with Branch Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mergeTreeBarycenter_pathMapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Merge Tree Barycenter with Path Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../mergeTreeClustering/" class="md-nav__link">
         
   
@@ -1458,6 +1512,33 @@
     
   
     Persistence Diagram Clustering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistenceDiagramDictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Persistence Diagram Dictionary
   
 
     
@@ -1990,6 +2071,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../trackingPostProcessing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tracking Post-Processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../tribute/" class="md-nav__link">
         
   
@@ -2367,7 +2475,10 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
 <span class="normal">48</span>
 <span class="normal">49</span>
 <span class="normal">50</span>
-<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">paraview.simple</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># create a new &#39;XML Unstructured Grid Reader&#39;</span>
@@ -2392,7 +2503,10 @@ In a pre-processing, each geometry is tetrahedralized, which is used as input da
 <span class="n">threshold3</span><span class="o">.</span><span class="n">UpperThreshold</span> <span class="o">=</span> <span class="mf">3.0</span>
 
 <span class="c1"># create a new &#39;Generate Ids&#39;</span>
-<span class="n">generateIds1</span> <span class="o">=</span> <span class="n">GenerateIds</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;GenerateIds1&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">threshold3</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">GetParaViewVersion</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">generateIds1</span> <span class="o">=</span> <span class="n">PointAndCellIds</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;GenerateIds1&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">threshold3</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">generateIds1</span> <span class="o">=</span> <span class="n">GenerateIds</span><span class="p">(</span><span class="n">registrationName</span><span class="o">=</span><span class="s2">&quot;GenerateIds1&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="o">=</span><span class="n">threshold3</span><span class="p">)</span>
 <span class="n">generateIds1</span><span class="o">.</span><span class="n">PointIdsArrayName</span> <span class="o">=</span> <span class="s2">&quot;VertexIdentifiers&quot;</span>
 <span class="n">generateIds1</span><span class="o">.</span><span class="n">CellIdsArrayName</span> <span class="o">=</span> <span class="s2">&quot;CellIdentifiers&quot;</span>
 

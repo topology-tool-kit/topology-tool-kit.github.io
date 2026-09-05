@@ -19,8 +19,9 @@ var searchData=
   ['default_16',['DEFAULT',['../classttk_1_1Triangulation.html#a734859e18bc3612ce72a9d4e5aa23891a5b39c8b553c821e7cddc6da64b5bd2ee',1,'ttk::Triangulation']]],
   ['degenerate_17',['Degenerate',['../namespacettk.html#a2e938b4a3e29bf68d64fbb3a86cb55f9a24c813faee6d26cc144bec89a984824d',1,'ttk::Degenerate'],['../namespacettk_1_1ftr.html#ae1efeab53251c5a639c587a4a71e1b12a24c813faee6d26cc144bec89a984824d',1,'ttk::ftr::Degenerate']]],
   ['detail_18',['DETAIL',['../namespacettk_1_1debug.html#a56f85271ace2268278b51501ca249c75aeda1bc61d9a1bcddb91097bb9395147c',1,'ttk::debug']]],
-  ['direct_19',['DIRECT',['../classttk_1_1TopologicalDimensionReduction.html#a1cbf0f385bed9ebe1e243a30e73e6749a4c5d06b02c97731aaa976179c62dcf76',1,'ttk::TopologicalDimensionReduction']]],
-  ['discrete_5fmorse_5fsandwich_20',['DISCRETE_MORSE_SANDWICH',['../classttk_1_1PersistenceDiagram.html#a5ac0f6888163050b6b3799a087882385a6881db055d55652c9f79f1f4676183c9',1,'ttk::PersistenceDiagram']]],
-  ['discrete_5fmorse_5fsandwich_5fmpi_21',['DISCRETE_MORSE_SANDWICH_MPI',['../classttk_1_1PersistenceDiagram.html#a5ac0f6888163050b6b3799a087882385a8d5dfa4858f8cb274fa34771c50c15b4',1,'ttk::PersistenceDiagram']]],
-  ['domainvolume_22',['domainVolume',['../classttk_1_1ReebSpace.html#aabfa2a3992fe0b2b1ad851588eb1b1baa6bd9f2af440533921d75800924949309',1,'ttk::ReebSpace']]]
+  ['dictionary_19',['DICTIONARY',['../classttk_1_1PersistenceDiagramDictionaryDecoding.html#a610c13916e25c34bbe90c741d5a650fba941b306e67df7bda6303f69eef2899fe',1,'ttk::PersistenceDiagramDictionaryDecoding']]],
+  ['direct_20',['DIRECT',['../classttk_1_1TopologicalDimensionReduction.html#a1cbf0f385bed9ebe1e243a30e73e6749a4c5d06b02c97731aaa976179c62dcf76',1,'ttk::TopologicalDimensionReduction']]],
+  ['discrete_5fmorse_5fsandwich_21',['DISCRETE_MORSE_SANDWICH',['../classttk_1_1PersistenceDiagram.html#a5ac0f6888163050b6b3799a087882385a6881db055d55652c9f79f1f4676183c9',1,'ttk::PersistenceDiagram']]],
+  ['discrete_5fmorse_5fsandwich_5fmpi_22',['DISCRETE_MORSE_SANDWICH_MPI',['../classttk_1_1PersistenceDiagram.html#a5ac0f6888163050b6b3799a087882385a8d5dfa4858f8cb274fa34771c50c15b4',1,'ttk::PersistenceDiagram']]],
+  ['domainvolume_23',['domainVolume',['../classttk_1_1ReebSpace.html#aabfa2a3992fe0b2b1ad851588eb1b1baa6bd9f2af440533921d75800924949309',1,'ttk::ReebSpace']]]
 ];

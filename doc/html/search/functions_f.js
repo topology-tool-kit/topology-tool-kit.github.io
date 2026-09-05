@@ -28,7 +28,8 @@ var searchData=
   ['optimalmappingsetprojection_25',['optimalMappingSetProjection',['../classttk_1_1MergeTreePrincipalGeodesics.html#ad576b4be6f03a253a0a045a648aa5421',1,'ttk::MergeTreePrincipalGeodesics']]],
   ['orthogonalcost_26',['orthogonalCost',['../classttk_1_1MergeTreePrincipalGeodesics.html#a885167024274a4b295381c2b22a34ac9',1,'ttk::MergeTreePrincipalGeodesics']]],
   ['orthogonalprojection_27',['orthogonalProjection',['../classttk_1_1MergeTreePrincipalGeodesics.html#a0fda2c87ccb1ac8f75ab337a98d8ca03',1,'ttk::MergeTreePrincipalGeodesics']]],
-  ['outputcentroids_28',['outputCentroids',['../classttkPersistenceDiagramClustering.html#a258c33e8eb1e1e737b473e7b84825fdc',1,'ttkPersistenceDiagramClustering']]],
-  ['outputclustereddiagrams_29',['outputClusteredDiagrams',['../classttkPersistenceDiagramClustering.html#abfac4ebcfb55090d6183a0edeabcd3b5',1,'ttkPersistenceDiagramClustering']]],
-  ['outputmatchings_30',['outputMatchings',['../classttkPersistenceDiagramClustering.html#ac75713512438dd80e0db3d770a29fb03',1,'ttkPersistenceDiagramClustering']]]
+  ['otsuthresholdlocal_28',['otsuThresholdLocal',['../classttk_1_1TrackingPostProcessing.html#af118d91cbe49e2dc9a880e78dde4805a',1,'ttk::TrackingPostProcessing']]],
+  ['outputcentroids_29',['outputCentroids',['../classttkPersistenceDiagramClustering.html#a258c33e8eb1e1e737b473e7b84825fdc',1,'ttkPersistenceDiagramClustering']]],
+  ['outputclustereddiagrams_30',['outputClusteredDiagrams',['../classttkPersistenceDiagramClustering.html#abfac4ebcfb55090d6183a0edeabcd3b5',1,'ttkPersistenceDiagramClustering']]],
+  ['outputmatchings_31',['outputMatchings',['../classttkPersistenceDiagramClustering.html#ac75713512438dd80e0db3d770a29fb03',1,'ttkPersistenceDiagramClustering']]]
 ];
